@@ -1,4 +1,6 @@
-# Tetrad
+# Tetrad [ te-trad ]
+noun: a group or set of four
+
 Blades-style UI
 
 Tetrad is a UI based off of JX720, which is a long defunct skin made for XBMC (XBMC was renamed to Kodi years ago). This project aims to bring it up to date.
