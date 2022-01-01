@@ -72,6 +72,6 @@ Special Thanks:
 
 Team Kodi for continuing to develop the greatest software ever made!
 Jezz_X for the original work done on JX720. 
-Blackbolt for all the graphics work you've done, whether it gets overhauled and replaced or whatever. You started this journey for me many years ago 
+Blackbolt for all the graphics work you've done, whether it gets overhauled and replaced or whatever it doesn't matter. You started this journey for me many years ago 
 with the work you did with Team Blackbolt when you created MC360. Whatever you are doing wherever you are, may peace be with you brother.
 
