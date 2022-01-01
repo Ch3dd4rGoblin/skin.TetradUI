@@ -33,7 +33,7 @@ the new one found in this zip file.
 
 --------
 Credits:
-========
+--------
 
 This project is forked from JX720 - A skin for XBMC "Frodo" designed and developed
 By Jezz_X
