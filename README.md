@@ -46,11 +46,9 @@ TetradUI 1.0 (2022)
 TetradUI Development Team
 ----------------------------------
 
-TetradUI Designed & Developed by
+Project Lead
 -----------------------
     - Ch3dd4rGoblin
-    - bsoriano
-    - Manfeed
     
 Code:
 ---------------------
