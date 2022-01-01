@@ -42,29 +42,26 @@ By Jezz_X
 TetradUI 1.0 (2022)
 -------------------
 
-Designed & Developed by
------------------------
-    - Jezz_X
-    - Ch3dd4rGoblin
-    - bsoriano
-    - Manfeed
-
-
 TetradUI Development Team
 ----------------------------------
 
-Project Lead:
+Original JX720 Designed & Developed by
 -----------------------
+    - Jezz_X
 
+TetradUI Designed & Developed by
+-----------------------
     - Ch3dd4rGoblin
+    - bsoriano
+    - Manfeed
+    
+Code:
+---------------------
+    - bsoriano
 
 Graphics:
 -----------------------
     - Manfeed
-
-Code:
----------------------
-    - bsoriano
 
 ------------------
 Special Thanks:
