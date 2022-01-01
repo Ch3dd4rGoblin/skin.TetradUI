@@ -32,6 +32,7 @@ effects. Make sure you fully delete your TetradUI folder from Kodi/addons/ and t
 the new one found in this zip file.
 
 --------
+
 Credits:
 --------
 
