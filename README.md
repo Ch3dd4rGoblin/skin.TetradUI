@@ -48,15 +48,17 @@ TetradUI Development Team
 
 Project Lead
 -----------------------
-    - Ch3dd4rGoblin
+    - Ch3dd4rGoblin (TeamUI)
     
 Code:
 ---------------------
-    - bsoriano
+    - Jezz_X (JX720 original)
+    - bsoriano (TeamUI)
 
 Graphics:
 -----------------------
-    - Manfeed
+    - Blackbolt (MC360 original)
+    - Manfeed (TeamUI)
 
 ------------------
 Special Thanks:
