@@ -46,10 +46,6 @@ TetradUI 1.0 (2022)
 TetradUI Development Team
 ----------------------------------
 
-Original JX720 Designed & Developed by
------------------------
-    - Jezz_X
-
 TetradUI Designed & Developed by
 -----------------------
     - Ch3dd4rGoblin
