@@ -24,7 +24,7 @@ over go to the Appearance Options and in the Skin selection window, choose Tetra
 You may also install direct from within Kodi's addon manager.
 
 -------------------------------------------------
-Upgrading previous TeetradUI versions to a newer one:
+Upgrading previous TetradUI versions to a newer one:
 =================================================
 
 Do NOT overwrite TetradUI, many files change and leaving old files will result in adverse
