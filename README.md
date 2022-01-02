@@ -32,15 +32,27 @@ effects. Make sure you fully delete your TetradUI folder from Kodi/addons/ and t
 the new one found in this zip file.
 
 --------
-
 Credits:
---------
+========
 
-This project is forked from JX720 - A skin for XBMC "Frodo" designed and developed
+JX720
 By Jezz_X
 -----------------------
 
-TetradUI developed by TeamUI
+Graphics:
+-----------------------
+    - Blackbolt
+
+Code:
+---------------------
+    - Jezz_X
+
+Designed & Developed by
+-----------------------
+    - Jezz_X
+
+TetradUI
+by TeamUI
 ----------------------------------
 
 TetradUI 1.0 (2022)
@@ -52,20 +64,17 @@ Project Lead
     
 Code:
 ---------------------
-    - Jezz_X (JX720 original)
-    - bsoriano 
+    - bsoriano
 
 Graphics:
 -----------------------
-    - Blackbolt (MC360 original)
     - Manfeed 
 
 ------------------
 Special Thanks:
 ==================
 
-Team Kodi for continuing to develop the greatest software ever made!
-Jezz_X for the original work done on JX720. 
+Special thanks to Team Kodi for continuing to develop the greatest software ever made! Jezz_X for the original work done on JX720. 
 Blackbolt for all the graphics work you've done, whether it gets overhauled and replaced or whatever it doesn't matter. You started this journey for me many years ago 
-with the work you did with Team Blackbolt when you created MC360. Whatever you are doing wherever you are, may peace be with you brother.
+with the work you did with Team Blackbolt when you created MC360 and Ellipsis. Whatever you are doing wherever you are, may peace be with you brother.
 
