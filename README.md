@@ -40,11 +40,12 @@ This project is forked from JX720 - A skin for XBMC "Frodo" designed and develop
 By Jezz_X
 -----------------------
 
+TetradUI Development Team
+by TeamUI
+----------------------------------
+
 TetradUI 1.0 (2022)
 -------------------
-
-TetradUI Development Team
-----------------------------------
 
 Project Lead
 -----------------------
