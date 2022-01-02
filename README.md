@@ -48,17 +48,17 @@ TetradUI 1.0 (2022)
 
 Project Lead
 -----------------------
-    - Ch3dd4rGoblin (TeamUI)
+    - Ch3dd4rGoblin
     
 Code:
 ---------------------
     - Jezz_X (JX720 original)
-    - bsoriano (TeamUI)
+    - bsoriano 
 
 Graphics:
 -----------------------
     - Blackbolt (MC360 original)
-    - Manfeed (TeamUI)
+    - Manfeed 
 
 ------------------
 Special Thanks:
