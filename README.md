@@ -1,5 +1,6 @@
 # Tetrad [ te-trad ]
-noun: a group or set of four
+noun: 
+a group or set of four
 
 ------------------------------------------------------------------------
 TetradUI for Kodi
