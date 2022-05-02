@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">52</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>CommonMediaBackground</include>
+		<control type="image">
+			<description>Background</description>
+			<left>25</left>
+			<top>0</top>
+			<width>50</width>
+			<height>720</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>background-overlay-blackwash-left-ws.png</texture>
+		</control>
+		<control type="image">
+			<description>Background</description>
+			<left>65r</left>
+			<top>0</top>
+			<width>50</width>
+			<height>720</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>background-overlay-blackwash-right-ws.png</texture>
+		</control>
+		<control type="image">
+			<description>Background</description>
+			<left>75</left>
+			<top>0</top>
+			<width>1140</width>
+			<height>720</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>background-overlay-blackwash-centertile-ws.png</texture>
+		</control>
+		<control type="group">
+			<include>Window_OpenClose_Animation</include>
+			<control type="group">
+				<left>80</left>
+				<animation effect="fade" delay="500" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
+				<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
+				<control type="label">
+					<description>Header label</description>
+					<left>0</left>
+					<label>$LOCALIZE[20096]</label>
+					<include>HeaderTextCommons</include>
+				</control>
+				<control type="label">
+					<description>Time label</description>
+					<left>1130</left>
+					<include>ClockTextCommons</include>
+				</control>
+				<control type="label">
+					<description>heading label</description>
+					<left>110</left>
+					<top>100</top>
+					<width>900</width>
+					<height>80</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font16</font>
+					<label>31460</label>
+					<textcolor>white</textcolor>
+				</control>
+				<control type="fixedlist" id="52">
+					<left>-203</left>
+					<top>220</top>
+					<width>1280</width>
+					<height>260</height>
+					<onleft>52</onleft>
+					<onright>52</onright>
+					<onup>20</onup>
+					<ondown>20</ondown>
+					<viewtype label="31028">list</viewtype>
+					<pagecontrol>61</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<focusposition>3</focusposition>
+					<orientation>horizontal</orientation>
+					<preloaditems>4</preloaditems>
+					<itemlayout height="260" width="218">
+						<control type="image">
+							<left>2</left>
+							<top>0</top>
+							<width>214</width>
+							<height>250</height>
+							<aspectratio>stretch</aspectratio>
+							<texture border="10">thumb-nofocus.png</texture>
+						</control>
+						<control type="image">
+							<left>12</left>
+							<top>10</top>
+							<width>194</width>
+							<height>194</height>
+							<aspectratio>keep</aspectratio>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="5">black-back.png</bordertexture>
+							<bordersize>2</bordersize>
+						</control>
+					</itemlayout>
+					<focusedlayout height="260" width="218">
+						<control type="image">
+							<left>2</left>
+							<top>0</top>
+							<width>214</width>
+							<height>250</height>
+							<aspectratio>stretch</aspectratio>
+							<texture border="10">thumb-focus.png</texture>
+							<visible>Control.HasFocus(52)</visible>
+						</control>
+						<control type="image">
+							<left>2</left>
+							<top>0</top>
+							<width>214</width>
+							<height>250</height>
+							<aspectratio>stretch</aspectratio>
+							<texture border="10">thumb-nofocus.png</texture>
+							<visible>!Control.HasFocus(52)</visible>
+						</control>
+						<control type="image">
+							<left>12</left>
+							<top>10</top>
+							<width>194</width>
+							<height>194</height>
+							<aspectratio>keep</aspectratio>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="5">black-back.png</bordertexture>
+							<bordersize>2</bordersize>
+						</control>
+						<control type="label">
+							<description>Last Login label</description>
+							<left>106</left>
+							<top>210</top>
+							<width>214</width>
+							<height>30</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>font13</font>
+							<label>$INFO[ListItem.Label]</label>
+							<textcolor>black</textcolor>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="label">
+					<description>Last Login label</description>
+					<left>110</left>
+					<top>500</top>
+					<width>900</width>
+					<height>40</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<label>$INFO[Container(52).ListItem.Label2]</label>
+					<textcolor>white</textcolor>
+				</control>
+			</control>
+		</control>
+		<control type="image">
+			<left>-110</left>
+			<top>-40</top>
+			<width>180</width>
+			<height>800</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>blades-runner-left1.png</texture>
+		</control>
+		<control type="image">
+			<left>65r</left>
+			<top>-40</top>
+			<width>180</width>
+			<height>800</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>blades-runner-right.png</texture>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">450</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<left>730</left>
+		<top>0</top>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" time="100" />
+				<effect type="slide" start="550,0" end="0,0" delay="100" time="400" tween="quadratic" easing="out" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" start="0,0" end="550,0" delay="DialogVisibleFadeAnimationSpeed" time="400" tween="quadratic" easing="in"/>
+				<effect type="fade" start="100" end="0" delay="800" time="100" />
+			</animation>
+			<control type="image">
+				<left>130</left>
+				<top>-40</top>
+				<width>180</width>
+				<height>800</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>blades-runner-right.png</texture>
+			</control>
+			<control type="image">
+				<left>310</left>
+				<top>-40</top>
+				<width>970</width>
+				<height>800</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>blades-runner-right-edge.png</texture>
+			</control>
+			<control type="label" id="411">
+				<description>Header label</description>
+				<left>200</left>
+				<label>1036</label>
+				<include>DialogHeaderTextCommons</include>
+			</control>
+			<control type="image">
+				<left>180</left>
+				<top>70</top>
+				<width>350</width>
+				<height>200</height>
+				<aspectratio align="right">keep</aspectratio>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<texture>$INFO[ListItem.Icon]</texture>
+				<bordertexture border="19,3,19,3">thumb-border.png</bordertexture>
+				<bordersize>18,2,18,2</bordersize>
+			</control>
+			<control type="list" id="450">
+				<left>180</left>
+				<top>280</top>
+				<width>350</width>
+				<height>360</height>
+				<onup>450</onup>
+				<onleft>Dialog.Close(Favourites)</onleft>
+				<onright>450</onright>
+				<ondown>450</ondown>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="45">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>350</width>
+						<height>45</height>
+						<texture border="10">list-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<left>10</left>
+						<top>0</top>
+						<width>330</width>
+						<height>45</height>
+						<font>font12_title</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<selectedcolor>selected</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="45">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>350</width>
+						<height>45</height>
+						<visible>!Control.HasFocus(450)</visible>
+						<texture border="3">list-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>350</width>
+						<height>45</height>
+						<visible>Control.HasFocus(450)</visible>
+						<texture border="3">list-focus.png</texture>
+					</control>
+					<control type="label">
+						<left>10</left>
+						<top>0</top>
+						<width>330</width>
+						<height>45</height>
+						<font>font12_title</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>black</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<info>ListItem.Label</info>
+						<visible>Control.HasFocus(450)</visible>
+					</control>
+					<control type="label">
+						<left>10</left>
+						<top>0</top>
+						<width>330</width>
+						<height>45</height>
+						<font>font12_title</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<info>ListItem.Label</info>
+						<visible>!Control.HasFocus(450)</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="label">
+				<description>Page label</description>
+				<left>520</left>
+				<top>670</top>
+				<width>350</width>
+				<height>30</height>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>white</textcolor>
+				<label>($INFO[Container(450).NumItems]) $LOCALIZE[31200] - $LOCALIZE[31201] ($INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages])</label>
+			</control>
+		</control>
+	</controls>
+</window>

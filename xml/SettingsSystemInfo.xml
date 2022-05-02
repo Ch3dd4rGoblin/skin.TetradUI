@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>95</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include condition="!Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
+		<control type="group">
+			<visible>!Window.Previous(Weather) + !Window.Previous(Videos) + !Window.Previous(MusicFiles) + !Window.Previous(MusicLibrary) + !Window.Previous(Pictures) + !Window.Previous(Programs)</visible>
+			<include>CommonSystemBackground</include>
+		</control>
+		<control type="group">
+			<visible>Window.Previous(Weather)</visible>
+			<include>CommonWeatherBackground</include>
+		</control>
+		<control type="group">
+			<visible>Window.Previous(Programs)</visible>
+			<include>CommonAppsBackground</include>
+		</control>
+		<control type="group">
+			<visible>Window.Previous(Videos) | Window.Previous(MusicFiles) | Window.Previous(MusicLibrary) | Window.Previous(Pictures)</visible>
+			<include>CommonMediaBackground</include>
+		</control>
+		<include condition="Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
+
+		<control type="group">
+			<visible>!Window.Previous(Weather) + !Window.Previous(Videos) + !Window.Previous(MusicFiles) + !Window.Previous(MusicLibrary) + !Window.Previous(Pictures) + !Window.Previous(Programs)</visible>
+			<include>CommonSystemBlackwash</include>
+		</control>
+		<control type="group">
+			<visible>Window.Previous(Weather)</visible>
+			<include>CommonWeatherBlackwash</include>
+		</control>
+		<control type="group">
+			<visible>Window.Previous(Programs)</visible>
+			<include>CommonAppsBlackwash</include>
+		</control>
+		<control type="group">
+			<visible>Window.Previous(Videos) | Window.Previous(MusicFiles) | Window.Previous(MusicLibrary) | Window.Previous(Pictures)</visible>
+			<include>CommonMediaBlackwash</include>
+		</control>
+		<control type="group">
+			<left>130</left>
+			<animation effect="fade" delay="500" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
+			<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
+			<control type="label" id="40">
+				<description>Header label</description>
+				<left>0</left>
+				<label />
+				<include>HeaderTextCommons</include>
+			</control>
+			<control type="grouplist" id="9000">
+				<left>0</left>
+				<top>120</top>
+				<itemgap>-2</itemgap>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<control type="button" id="95">
+					<description>Button Default Values</description>
+					<height>50</height>
+					<width>200</width>
+					<textcolor>white</textcolor>
+					<texturefocus border="10">button-focus.png</texturefocus>
+					<texturenofocus border="10">button-nofocus.png</texturenofocus>
+					<align>left</align>
+					<label>20037</label>
+				</control>
+				<control type="button" id="94">
+					<description>Button Storage</description>
+					<height>50</height>
+					<width>200</width>
+					<textcolor>white</textcolor>
+					<texturefocus border="10">button-focus.png</texturefocus>
+					<texturenofocus border="10">button-nofocus.png</texturenofocus>
+					<align>left</align>
+					<label>13277</label>
+				</control>
+				<control type="button" id="96">
+					<description>Button Network</description>
+					<height>50</height>
+					<width>200</width>
+					<textcolor>white</textcolor>
+					<texturefocus border="10">button-focus.png</texturefocus>
+					<texturenofocus border="10">button-nofocus.png</texturenofocus>
+					<align>left</align>
+					<label>13279</label>
+				</control>
+				<control type="button" id="97">
+					<description>Button Video</description>
+					<height>50</height>
+					<width>200</width>
+					<textcolor>white</textcolor>
+					<texturefocus border="10">button-focus.png</texturefocus>
+					<texturenofocus border="10">button-nofocus.png</texturenofocus>
+					<align>left</align>
+					<label>13280</label>
+				</control>
+				<control type="button" id="98">
+					<description>Button Hardware</description>
+					<height>50</height>
+					<width>200</width>
+					<textcolor>white</textcolor>
+					<texturefocus border="10">button-focus.png</texturefocus>
+					<texturenofocus border="10">button-nofocus.png</texturenofocus>
+					<align>left</align>
+					<label>13281</label>
+				</control>
+			</control>
+			<control type="group">
+				<left>220</left>
+				<top>120</top>
+				<control type="label" id="2">
+					<description>Label 2</description>
+					<left>0</left>
+					<top>0</top>
+					<width>840</width>
+					<label />
+					<font>font13</font>
+				</control>
+				<control type="label" id="3">
+					<description>Label 3</description>
+					<left>0</left>
+					<top>40</top>
+					<width>840</width>
+					<label />
+					<font>font13</font>
+				</control>
+				<control type="label" id="4">
+					<description>Label 4</description>
+					<left>0</left>
+					<top>80</top>
+					<width>840</width>
+					<label />
+					<font>font13</font>
+				</control>
+				<control type="label" id="5">
+					<description>Label 5</description>
+					<left>0</left>
+					<top>120</top>
+					<width>840</width>
+					<label />
+					<font>font13</font>
+				</control>
+				<control type="label" id="6">
+					<description>Label 6</description>
+					<left>0</left>
+					<top>160</top>
+					<width>840</width>
+					<label />
+					<font>font13</font>
+				</control>
+				<control type="label" id="7">
+					<description>Label 7</description>
+					<left>0</left>
+					<top>200</top>
+					<width>840</width>
+					<label />
+					<font>font13</font>
+				</control>
+				<control type="label" id="8">
+					<description>Label 8</description>
+					<left>0</left>
+					<top>240</top>
+					<width>840</width>
+					<label />
+					<font>font13</font>
+				</control>
+				<control type="label" id="9">
+					<description>Label 9</description>
+					<left>0</left>
+					<top>280</top>
+					<width>840</width>
+					<label />
+					<font>font13</font>
+				</control>
+				<control type="label" id="10">
+					<description>Label 10</description>
+					<left>0</left>
+					<top>320</top>
+					<width>840</width>
+					<label />
+					<font>font13</font>
+				</control>
+				<control type="label" id="11">
+					<description>Label 11</description>
+					<left>0</left>
+					<top>360</top>
+					<width>840</width>
+					<label />
+					<font>font13</font>
+				</control>
+			</control>
+			<control type="group">
+				<left>130</left>
+				<top>540</top>
+				<animation effect="slide" start="0,0" end="-100,0" time="200" condition="Player.HasAudio">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-100,0" time="200" condition="Player.HasVideo + VideoPlayer.Content(Movies)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-160,0" time="200" condition="Player.HasVideo + !VideoPlayer.Content(Movies)">Conditional</animation>
+				<control type="label" id="52">
+					<description>XBMC XBE BUILD Version</description>
+					<left>930</left>
+					<top>0</top>
+					<width>910</width>
+					<label>144</label>
+					<textcolor>orange</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>right</align>
+					<font>font12</font>
+				</control>
+				<control type="group">
+					<left>600</left>
+					<top>30</top>
+					<control type="label">
+						<description>CPU Text</description>
+						<left>0</left>
+						<top>0</top>
+						<width>600</width>
+						<height>25</height>
+						<label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<font>font12</font>
+					</control>
+					<control type="progress">
+						<description>CPU BAR</description>
+						<left>10</left>
+						<top>7</top>
+						<width>320</width>
+						<height>12</height>
+						<info>System.CPUUsage</info>
+					</control>
+					<control type="label">
+						<description>Memory Text</description>
+						<left>0</left>
+						<top>30</top>
+						<width>600</width>
+						<height>25</height>
+						<label>$LOCALIZE[31304]: $INFO[system.memory(used.percent)]</label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<font>font12</font>
+					</control>
+					<control type="progress">
+						<description>Memory BAR</description>
+						<left>10</left>
+						<top>37</top>
+						<width>320</width>
+						<height>12</height>
+						<info>system.memory(used)</info>
+					</control>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<visible>!Window.Previous(Weather) + !Window.Previous(Videos) + !Window.Previous(MusicFiles) + !Window.Previous(MusicLibrary) + !Window.Previous(Pictures) + !Window.Previous(Programs)</visible>
+			<include>SettingsToSubBlades</include>
+		</control>
+		<control type="group">
+			<visible>Window.Previous(Weather)</visible>
+			<include>WeatherToSubBlades</include>
+		</control>
+		<control type="group">
+			<visible>Window.Previous(Programs)</visible>
+			<include>AppsToSubBlades</include>
+		</control>
+		<control type="group">
+			<visible>Window.Previous(Videos) | Window.Previous(MusicFiles) | Window.Previous(MusicLibrary) | Window.Previous(Pictures)</visible>
+			<include>MediaToSubBlades</include>
+		</control>
+		<include>Common_Now_Playing</include>
+	</controls>
+</window>

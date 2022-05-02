@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<include>dialogeffect</include>
+	<coordinates>
+		<system>0</system>
+		<left>1175</left>
+		<top>5</top>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<description>Speaker Icon</description>
+			<left>0</left>
+			<top>0</top>
+			<width>55</width>
+			<height>55</height>
+			<aspectratio>keep</aspectratio>
+			<texture>icon-mute.png</texture>
+		</control>
+	</controls>
+</window>

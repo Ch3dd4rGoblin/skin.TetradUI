@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>1000</defaultcontrol>
+	<include>dialogeffect</include>
+	<coordinates>
+		<system>1</system>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
+	<controls>
+		<control type="image" id="997">
+			<description>background top image</description>
+			<left>0</left>
+			<top>-45</top>
+			<width>380</width>
+			<height>45</height>
+			<texture border="40,0,45,0">context_menu_top.png</texture>
+		</control>
+		<control type="image" id="999">
+			<description>background image</description>
+			<left>0</left>
+			<top>0</top>
+			<width>380</width>
+			<texture border="40,0,45,0">context_menu_middle.png</texture>
+		</control>
+		<control type="image" id="998">
+			<description>background bottom image</description>
+			<left>0</left>
+			<width>380</width>
+			<height>55</height>
+			<texture border="40,0,45,0">context_menu_bottom.png</texture>
+		</control>
+		<control type="button" id="1000">
+			<description>button template</description>
+			<left>35</left>
+			<top>0</top>
+			<width>305</width>
+			<height>40</height>
+			<align>center</align>
+			<textcolor>white</textcolor>
+			<focusedcolor>orange</focusedcolor>
+			<shadowcolor>black</shadowcolor>
+			<texturefocus border="10">context-button-focus.png</texturefocus>
+			<texturenofocus />
+		</control>
+	</controls>
+</window>
