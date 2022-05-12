@@ -217,7 +217,7 @@
 			</control>
 			<control type="label">
 				<description>Duration Label</description>
-				<left>380</left>
+				<left>280</left>
 				<top>15</top>
 				<width>100</width>
 				<height>16</height>

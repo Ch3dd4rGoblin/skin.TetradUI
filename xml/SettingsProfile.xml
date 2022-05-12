@@ -40,6 +40,15 @@
 					<texture>divider.png</texture>
 				</control>
 				<control type="image">
+					<description>Button Seperator</description>
+					<left>30</left>
+					<top>98</top>
+					<width>310</width>
+					<height>2</height>
+					<texture>divider.png</texture>
+					<visible>!System.HasLoginScreen</visible> 
+				</control>
+				<control type="image">
 					<description>Login Screen Push Button Highlight</description>
 					<texture>systemhomebutton-0.png</texture>
 					<visible>Control.HasFocus(4)</visible>
@@ -50,6 +59,19 @@
 					<texture>systemhomebutton-0-shadow.png</texture>
 					<animation effect="fade" delay="100" time="175">Visible</animation>
 					<visible>Control.HasFocus(4)</visible>
+					<include>WeatherButtonHighlightCommonValues</include>
+				</control>
+				<control type="image">
+					<description>Login Screen Push Button Highlight</description>
+					<texture>systemhomebutton-1.png</texture>
+					<visible>Control.HasFocus(5)</visible>
+					<include>WeatherButtonHighlightCommonValues</include>
+				</control>
+				<control type="image">
+					<description>Login Screen Push Button Shadow</description>
+					<texture>systemhomebutton-1-shadow.png</texture>
+					<animation effect="fade" delay="100" time="175">Visible</animation>
+					<visible>Control.HasFocus(5)</visible>
 					<include>WeatherButtonHighlightCommonValues</include>
 				</control>
 				<control type="radiobutton" id="4">
@@ -71,9 +93,34 @@
 					<label>20096</label>
 					<onleft>2</onleft>
 					<onright>2</onright>
+					<onup>5</onup>
+					<ondown>5</ondown>
+					<pulseonselect>no</pulseonselect>
+				</control>
+				<control type="button" id="5">
+					<description>autologin</description>
+					<left>40</left>
+					<top>51</top>
+					<width>43</width>
+					<height>43</height>
+					<aligny>center</aligny>
+					<textoffsetx>70</textoffsetx>
+					<textwidth>300</textwidth>
+					<textcolor>white2</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<shadowcolor />
+					<texturefocus>button_icons/icon-xbmc.png</texturefocus>
+					<texturenofocus>button_icons/icon-xbmc.png</texturenofocus>
+					<radioposx>265</radioposx>
+					<font>font16</font>
+					<label>31554</label>
+					<!--<label2>$INFO[System.ProfileAutoLogin]</label2>-->
+					<onleft>2</onleft>
+					<onright>2</onright>
 					<onup>4</onup>
 					<ondown>4</ondown>
 					<pulseonselect>no</pulseonselect>
+					<enable>!Window.IsVisible(ProfileSettings) + !System.HasLoginScreen</enable>
 				</control>
 			</control>
 			<control type="panel" id="2">
@@ -111,7 +158,6 @@
 						<height>25</height>
 						<font>font13</font>
 						<aligny>center</aligny>
-						<selectedcolor>orange</selectedcolor>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -122,11 +168,10 @@
 						<height>25</height>
 						<font>font10</font>
 						<aligny>center</aligny>
-						<selectedcolor>orange</selectedcolor>
 						<textcolor>grey2</textcolor>
 						<align>left</align>
 						<label>$LOCALIZE[31303]</label>
-						<visible>!IsEmpty(ListItem.Label2)</visible>
+						<visible>!String.IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
 						<left>100</left>
@@ -135,7 +180,6 @@
 						<height>25</height>
 						<font>font12</font>
 						<aligny>center</aligny>
-						<selectedcolor>orange</selectedcolor>
 						<textcolor>grey2</textcolor>
 						<align>left</align>
 						<label>$INFO[ListItem.Label2]</label>
@@ -164,7 +208,6 @@
 						<font>font13</font>
 						<aligny>center</aligny>
 						<textcolor>black</textcolor>
-						<selectedcolor>orange</selectedcolor>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -175,11 +218,10 @@
 						<height>25</height>
 						<font>font10</font>
 						<aligny>center</aligny>
-						<selectedcolor>orange</selectedcolor>
 						<textcolor>black</textcolor>
 						<align>left</align>
 						<label>$LOCALIZE[31303]</label>
-						<visible>!IsEmpty(ListItem.Label2)</visible>
+						<visible>!String.IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
 						<left>100</left>
@@ -188,7 +230,6 @@
 						<height>25</height>
 						<font>font12</font>
 						<aligny>center</aligny>
-						<selectedcolor>orange</selectedcolor>
 						<textcolor>black</textcolor>
 						<align>left</align>
 						<label>$INFO[ListItem.Label2]</label>

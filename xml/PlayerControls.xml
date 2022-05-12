@@ -285,7 +285,7 @@
 				<onright>601</onright>
 				<onup>300</onup>
 				<ondown>200</ondown>
-				<onclick>XBMC.PlayerControl(Previous)</onclick>
+				<onclick>PlayerControl(Previous)</onclick>
 			</control>
 			<control type="button" id="601">
 				<left>40</left>
@@ -299,7 +299,7 @@
 				<onright>603</onright>
 				<onup>300</onup>
 				<ondown>200</ondown>
-				<onclick>XBMC.PlayerControl(Rewind)</onclick>
+				<onclick>PlayerControl(Rewind)</onclick>
 			</control>
 			<control type="togglebutton" id="603">
 				<left>80</left>
@@ -316,7 +316,7 @@
 				<onright>602</onright>
 				<onup>300</onup>
 				<ondown>200</ondown>
-				<onclick>XBMC.PlayerControl(Play)</onclick>
+				<onclick>PlayerControl(Play)</onclick>
 			</control>
 			<control type="button" id="602">
 				<left>120</left>
@@ -331,7 +331,7 @@
 				<onup>300</onup>
 				<ondown>200</ondown>
 				<onclick>down</onclick>
-				<onclick>XBMC.PlayerControl(Stop)</onclick>
+				<onclick>PlayerControl(Stop)</onclick>
 			</control>
 			<control type="button" id="604">
 				<left>160</left>
@@ -345,7 +345,7 @@
 				<onright>605</onright>
 				<onup>300</onup>
 				<ondown>200</ondown>
-				<onclick>XBMC.PlayerControl(Forward)</onclick>
+				<onclick>PlayerControl(Forward)</onclick>
 			</control>
 			<control type="button" id="605">
 				<left>200</left>
@@ -359,7 +359,7 @@
 				<onright>606</onright>
 				<onup>300</onup>
 				<ondown>200</ondown>
-				<onclick>XBMC.PlayerControl(Next)</onclick>
+				<onclick>PlayerControl(Next)</onclick>
 			</control>
 			<control type="button" id="606">
 				<left>240</left>
@@ -373,7 +373,7 @@
 				<onright>607</onright>
 				<onup>300</onup>
 				<ondown>200</ondown>
-				<onclick>XBMC.PlayerControl(record)</onclick>
+				<onclick>PlayerControl(record)</onclick>
 				<enable>Player.CanRecord</enable>
 				<animation effect="fade" start="100" end="30" time="100" condition="!Player.CanRecord">Conditional</animation>
 			</control>
@@ -385,7 +385,7 @@
 				<label />
 				<texturefocus />
 				<texturenofocus />
-				<onclick>XBMC.PlayerControl(Repeat)</onclick>
+				<onclick>PlayerControl(Repeat)</onclick>
 				<onleft>606</onleft>
 				<onright>608</onright>
 				<onup>100</onup>
@@ -456,7 +456,7 @@
 				<usealttexture>Playlist.IsRandom</usealttexture>
 				<alttexturefocus>OSDRandomOnFO.png</alttexturefocus>
 				<alttexturenofocus>OSDRandomOnNF.png</alttexturenofocus>
-				<onclick>XBMC.PlayerControl(Random)</onclick>
+				<onclick>PlayerControl(Random)</onclick>
 				<onleft>607</onleft>
 				<onright>600</onright>
 				<onup>100</onup>

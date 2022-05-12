@@ -33,7 +33,6 @@
 				<top>0</top>
 				<width>50</width>
 				<height>720</height>
-				<aspectratio>stretch</aspectratio>
 				<texture>background-overlay-blackwash-left-ws.png</texture>
 			</control>
 			<control type="image">
@@ -42,7 +41,6 @@
 				<top>0</top>
 				<width>50</width>
 				<height>720</height>
-				<aspectratio>stretch</aspectratio>
 				<texture>background-overlay-blackwash-right-ws.png</texture>
 			</control>
 			<control type="image">
@@ -51,7 +49,6 @@
 				<top>0</top>
 				<width>970</width>
 				<height>720</height>
-				<aspectratio>stretch</aspectratio>
 				<texture>background-overlay-blackwash-centertile-ws.png</texture>
 			</control>
 		</control>
@@ -66,102 +63,30 @@
 				<label>31010</label>
 				<include>HeaderTextCommons</include>
 			</control>
-			<control type="label">
-				<description>Time label</description>
-				<left>930</left>
-				<include>ClockTextCommons</include>
-			</control>
+			<include content="ClockTextCommons">
+				<param name="left" value="540" />
+			</include>
 			<control type="group">
 				<left>20</left>
 				<top>75</top>
 				<include>WeatherCard</include>
 			</control>
 			<control type="group">
-				<left>510</left>
-				<top>100</top>
-				<control type="label">
-					<description>date label</description>
-					<left>0</left>
-					<top>0</top>
-					<width>380</width>
-					<height>30</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>font12</font>
-					<textcolor>white2</textcolor>
-					<label>$INFO[System.Date]</label>
-				</control>
-				<control type="image">
-					<description>Logo</description>
-					<left>0</left>
-					<top>30</top>
-					<width>380</width>
-					<height>70</height>
-					<aspectratio>keep</aspectratio>
-					<texture>xbmc_logo.png</texture>
-				</control>
-				<control type="image">
-					<description>Logo Mirror</description>
-					<left>0</left>
-					<top>90</top>
-					<width>380</width>
-					<height>70</height>
-					<aspectratio>keep</aspectratio>
-					<texture diffuse="diffuse_mirror2.png" flipy="true">xbmc_logo.png</texture>
-				</control>
-				<control type="image">
-					<description>Logo Shadow</description>
-					<left>0</left>
-					<top>100</top>
-					<width>380</width>
-					<height>16</height>
-					<texture>home_logoshadow.png</texture>
-				</control>
-			</control>
-			<control type="group">
 				<top>225</top>
-				<control type="image">
-					<description>Button Highlight</description>
-					<texture>homebutton-$INFO[Container(9000).Position].png</texture>
-					<visible>Control.HasFocus(9000)</visible>
-					<include>HomeButtonHighlightCommonValues</include>
-				</control>
-				<control type="image">
-					<description>Button Shadow</description>
-					<texture>homebutton-$INFO[Container(9000).Position]-shadow.png</texture>
-					<animation effect="fade" delay="100" time="175">visible</animation>
-					<visible>Control.HasFocus(9000) + !Container(9000).OnNext + !Container(9000).OnPrevious</visible>
-					<include>HomeButtonHighlightCommonValues</include>
-				</control>
-				<control type="image">
-					<description>Button Seperator</description>
-					<left>35</left>
-					<top>0</top>
-					<width>380</width>
-					<height>2</height>
-					<texture>divider.png</texture>
-				</control>
 				<control type="list" id="9000">
-					<left>0</left>
-					<top>0</top>
 					<width>450</width>
 					<height>314</height>
 					<onleft>1</onleft>
-					<onright>2</onright>
-					<onup>15</onup>
-					<ondown>15</ondown>
+					<onright condition="Control.IsVisible(501)">501</onright>
+					<onright condition="!Control.IsVisible(501)">2</onright>
+					<onup condition="System.GetBool(LookAndFeel.EnableRSSFeeds)">15</onup>
+					<onup condition="!System.GetBool(LookAndFeel.EnableRSSFeeds)">9000</onup>
+					<ondown condition="System.GetBool(LookAndFeel.EnableRSSFeeds)">15</ondown>
+					<ondown condition="!System.GetBool(LookAndFeel.EnableRSSFeeds)">9000</ondown>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>60</pagecontrol>
 					<scrolltime>200</scrolltime>
 					<itemlayout height="52" width="450">
-						<control type="image">
-							<description>Button Seperator</description>
-							<left>35</left>
-							<top>52</top>
-							<width>380</width>
-							<height>2</height>
-							<texture>divider.png</texture>
-						</control>
 						<control type="image">
 							<description>Icon</description>
 							<left>50</left>
@@ -185,12 +110,14 @@
 					</itemlayout>
 					<focusedlayout height="52" width="450">
 						<control type="image">
-							<description>Button Seperator</description>
-							<left>35</left>
-							<top>52</top>
-							<width>380</width>
-							<height>2</height>
-							<texture>divider.png</texture>
+							<description>Button focus</description>
+							<left>30</left>
+							<width>397</width>
+							<height>50</height>
+							<texture>button.png</texture>
+							<animation effect="slide" start="0,-52" time="200" tween="sine" easing="out" condition="Container(9000).OnNext" reversible="false">Focus</animation>
+							<animation effect="slide" start="0,52" time="200" tween="sine" easing="out" condition="Container(9000).OnPrevious" reversible="false">Focus</animation>
+							<animation effect="fade" start="100" end="70" time="200" condition="!Control.HasFocus(9000)">Conditional</animation>
 						</control>
 						<control type="image">
 							<description>Icon</description>
@@ -208,7 +135,7 @@
 							<height>50</height>
 							<font>font30</font>
 							<aligny>center</aligny>
-							<textcolor>black</textcolor>
+							<textcolor>white</textcolor>
 							<selectedcolor>orange</selectedcolor>
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
@@ -244,45 +171,45 @@
 						</control>
 					</focusedlayout>
 					<content>
-						<item>
+						<item id="1">
 							<label>3</label>
 							<onclick>ActivateWindow(Videos)</onclick>
 							<icon>button_icons/icon-videos.png</icon>
 							<visible>!Skin.HasSetting(MediaBlade_HideVideos)</visible>
 						</item>
-						<item>
+						<item id="2">
 							<label>342</label>
 							<onclick>ActivateWindow(Videos,movietitles,return)</onclick>
 							<icon>button_icons/icon-movies.png</icon>
 							<visible>Library.HasContent(Movies)</visible>
-							<visible>!Skin.HasSetting(MediaBlade_HideMovies)</visible>
+							<visible>Library.HasContent(Movies) + !Skin.HasSetting(MediaBlade_HideMovies)</visible>
 						</item>
-						<item>
+						<item id="3">
 							<label>20343</label>
 							<onclick>ActivateWindow(Videos,tvshowtitles,return)</onclick>
 							<icon>button_icons/icon-tv.png</icon>
 							<visible>Library.HasContent(TVShows)</visible>
-							<visible>!Skin.HasSetting(MediaBlade_HideTVShows)</visible>
+							<visible>Library.HasContent(TVShows) + !Skin.HasSetting(MediaBlade_HideTVShows)</visible>
 						</item>
-						<item>
+						<item id="4">
 							<label>$INFO[Skin.String(MediaBlade_NameSmartPlaylist1)]</label>
 							<onclick>ActivateWindow(Videos,$INFO[Skin.String(MediaBlade_LinkSmartPlaylist1)],return)</onclick>
 							<icon>button_icons/icon-playlistvideo.png</icon>
 							<visible>Skin.HasSetting(MediaBlade_ShowSmartPlaylist1)</visible>
 						</item>
-						<item>
+						<item id="5">
 							<label>$INFO[Skin.String(MediaBlade_NameSmartPlaylist2)]</label>
 							<onclick>ActivateWindow(Videos,$INFO[Skin.String(MediaBlade_LinkSmartPlaylist2)],return)</onclick>
 							<icon>button_icons/icon-playlistvideo.png</icon>
 							<visible>Skin.HasSetting(MediaBlade_ShowSmartPlaylist2)</visible>
 						</item>
-						<item>
+						<item id="6">
 							<label>2</label>
 							<onclick>ActivateWindow(Music)</onclick>
 							<icon>button_icons/icon-music.png</icon>
-							<visible>!Skin.HasSetting(MediaBlade_HideMusic)</visible>
+							<visible>Library.HasContent(Music) + !Skin.HasSetting(MediaBlade_HideMusic)</visible>
 						</item>
-						<item>
+						<item id="7">
 							<label>1</label>
 							<onclick>ActivateWindow(Pictures)</onclick>
 							<icon>button_icons/icon-pictures.png</icon>
@@ -290,8 +217,29 @@
 						</item>
 					</content>
 				</control>
+				<include content="HomeWidget">
+					<param name="visible" value="Library.HasContent(Movies) + Container(9000).HasFocus(2)" />
+					<param name="left" value="460" />
+					<param name="label" value="20382" />
+					<param name="id" value="501" />
+					<param name="onleft" value="9000" />
+					<param name="onright" value="502" />
+					<param name="content" value="videodb://movies/titles/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22playcount%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%220%22%7D%5D%7D%2C%22type%22%3A%22movies%22%7D" />
+					<param name="sortby" value="dateadded" />
+				</include>
+				<include content="HomeWidget">
+					<param name="visible" value="Library.HasContent(Movies) + Container(9000).HasFocus(2)" />
+					<param name="left" value="685" />
+					<param name="label" value="31542" />
+					<param name="id" value="502" />
+					<param name="onleft" value="501" />
+					<param name="onright" value="2" />
+					<param name="content" value="videodb://movies/titles/?xsp=%7b%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22inprogress%22%2c%22operator%22%3a%22true%22%2c%22value%22%3a%5b%5d%7d%5d%7d%2c%22type%22%3a%22movies%22%7d" />
+					<param name="sortby" value="lastplayed" />
+				</include>
 			</control>
-			<include>CommonDVDTray</include>
+			<include condition="System.GetBool(LookAndFeel.EnableRSSFeeds)">CommonRSSFeed</include>
+			<!--<include>TetradUILogo</include>-->
 		</control>
 
 		<control type="button" id="1">
@@ -343,7 +291,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 			<control type="image">
@@ -362,7 +310,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 			<control type="image">
@@ -381,7 +329,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 			<!-- Right side -->
@@ -409,7 +357,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 		</control>
@@ -442,7 +390,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 			<control type="image">
@@ -461,7 +409,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 			<!-- Right side -->
@@ -489,7 +437,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 			<control type="image">
@@ -510,7 +458,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 				<visible>Control.HasFocus(1)</visible>
 				<animation effect="fade" time="HomeBladeAnimationSpeed">visible</animation>
@@ -545,7 +493,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 			<control type="image">
@@ -564,7 +512,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 			<control type="image">
@@ -583,7 +531,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 			<control type="image">
@@ -604,7 +552,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 				<visible>Control.HasFocus(2)</visible>
 				<animation effect="fade" time="HomeBladeAnimationSpeed">visible</animation>

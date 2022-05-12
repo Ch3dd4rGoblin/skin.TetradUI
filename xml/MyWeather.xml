@@ -59,11 +59,9 @@
 				<label>31013</label>
 				<include>HeaderTextCommons</include>
 			</control>
-			<control type="label">
-				<description>Time label</description>
-				<left>930</left>
-				<include>ClockTextCommons</include>
-			</control>
+			<include content="ClockTextCommons">
+				<param name="left" value="540" />
+			</include>
 			<control type="group" id="9000">
 				<left>-30</left>
 				<top>120</top>
@@ -238,7 +236,7 @@
 					<label>5</label>
 					<texturefocus>button_icons/icon-xbmc.png</texturefocus>
 					<texturenofocus>button_icons/icon-xbmc.png</texturenofocus>
-					<onclick>ActivateWindow(MyWeatherSettings)</onclick>
+					<onclick>ActivateWindow(ServiceSettings,weather)</onclick>
 					<onup>2</onup>
 					<ondown>3</ondown>
 					<include>WeatherButtonCommonValues</include>
@@ -255,12 +253,12 @@
 				<textcolor>grey</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<align>center</align>
-				<visible>IsEmpty(Weather.Plugin)</visible>
+				<visible>String.IsEmpty(Weather.Plugin)</visible>
 			</control>
 			<control type="group">
 				<left>340</left>
 				<top>110</top>
-				<visible>!Skin.HasSetting(WeatherUseForecast) + !IsEmpty(Weather.Plugin)</visible>
+				<visible>!Skin.HasSetting(WeatherUseForecast) + !String.IsEmpty(Weather.Plugin)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>weather location label</description>
@@ -422,7 +420,7 @@
 				</control>
 				<control type="label">
 					<description>current feels like Value</description>
-					<left>160</left>
+					<left>300</left>
 					<top>320</top>
 					<height>35</height>
 					<width>420</width>
@@ -435,7 +433,7 @@
 				</control>
 				<control type="label">
 					<description>current dew Value</description>
-					<left>160</left>
+					<left>300</left>
 					<top>350</top>
 					<height>35</height>
 					<width>420</width>
@@ -448,7 +446,7 @@
 				</control>
 				<control type="label">
 					<description>current humidity Value</description>
-					<left>160</left>
+					<left>300</left>
 					<top>380</top>
 					<height>35</height>
 					<width>420</width>
@@ -461,7 +459,7 @@
 				</control>
 				<control type="label">
 					<description>current UV Index Value</description>
-					<left>160</left>
+					<left>300</left>
 					<top>410</top>
 					<height>35</height>
 					<width>420</width>
@@ -474,7 +472,7 @@
 				</control>
 				<control type="label">
 					<description>current Wind Value</description>
-					<left>160</left>
+					<left>300</left>
 					<top>440</top>
 					<height>35</height>
 					<width>420</width>
@@ -489,7 +487,7 @@
 			<control type="group">
 				<left>340</left>
 				<top>140</top>
-				<visible>Skin.HasSetting(WeatherUseForecast) + !IsEmpty(Weather.Plugin)</visible>
+				<visible>Skin.HasSetting(WeatherUseForecast) + !String.IsEmpty(Weather.Plugin)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>weather location label</description>
@@ -897,6 +895,7 @@
 					</control>
 				</control>
 			</control>
+			<!--<include>TetradUILogo</include>-->
 		</control>
 
 
@@ -940,7 +939,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 			<!-- Right side -->
@@ -968,7 +967,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 			<control type="image">
@@ -987,7 +986,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 			<control type="image">
@@ -1006,7 +1005,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 		</control>
@@ -1039,7 +1038,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 			<control type="image">
@@ -1060,7 +1059,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 				<visible>Control.HasFocus(1)</visible>
 				<animation effect="fade" time="HomeBladeAnimationSpeed">visible</animation>
@@ -1090,7 +1089,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 			<control type="image">
@@ -1109,7 +1108,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 		</control>

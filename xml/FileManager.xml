@@ -114,7 +114,6 @@
 						<height>35</height>
 						<font>font13</font>
 						<aligny>center</aligny>
-						<selectedcolor>orange</selectedcolor>
 						<align>left</align>
 						<info>ListItem.Label</info>
 					</control>
@@ -125,7 +124,6 @@
 						<height>35</height>
 						<font>font12</font>
 						<aligny>center</aligny>
-						<selectedcolor>orange</selectedcolor>
 						<textcolor>grey2</textcolor>
 						<align>right</align>
 						<info>ListItem.Label2</info>
@@ -162,7 +160,6 @@
 						<height>35</height>
 						<font>font13</font>
 						<aligny>center</aligny>
-						<selectedcolor>orange</selectedcolor>
 						<align>left</align>
 						<info>ListItem.Label</info>
 					</control>
@@ -173,7 +170,6 @@
 						<height>35</height>
 						<font>font12</font>
 						<aligny>center</aligny>
-						<selectedcolor>orange</selectedcolor>
 						<textcolor>grey2</textcolor>
 						<align>right</align>
 						<info>ListItem.Label2</info>
@@ -269,7 +265,6 @@
 						<height>35</height>
 						<font>font13</font>
 						<aligny>center</aligny>
-						<selectedcolor>orange</selectedcolor>
 						<align>left</align>
 						<info>ListItem.Label</info>
 					</control>
@@ -280,7 +275,6 @@
 						<height>35</height>
 						<font>font12</font>
 						<aligny>center</aligny>
-						<selectedcolor>orange</selectedcolor>
 						<textcolor>grey2</textcolor>
 						<align>right</align>
 						<info>ListItem.Label2</info>
@@ -317,7 +311,6 @@
 						<height>35</height>
 						<font>font13</font>
 						<aligny>center</aligny>
-						<selectedcolor>orange</selectedcolor>
 						<align>left</align>
 						<info>ListItem.Label</info>
 					</control>
@@ -328,7 +321,6 @@
 						<height>35</height>
 						<font>font12</font>
 						<aligny>center</aligny>
-						<selectedcolor>orange</selectedcolor>
 						<textcolor>grey2</textcolor>
 						<align>right</align>
 						<info>ListItem.Label2</info>

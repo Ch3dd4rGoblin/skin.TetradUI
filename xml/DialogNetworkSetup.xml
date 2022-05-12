@@ -47,7 +47,7 @@
 			<onleft>10</onleft>
 			<onright>10</onright>
 		</control>
-		<control type="button" id="11">
+		<control type="edit" id="11">
 			<description>Server Address Button</description>
 			<left>50</left>
 			<top>145</top>
@@ -87,7 +87,7 @@
 			<height>5</height>
 			<texture>separator.png</texture>
 		</control>
-		<control type="button" id="16">
+		<control type="edit" id="16">
 			<description>Remote path Button</description>
 			<left>50</left>
 			<top>210</top>
@@ -103,7 +103,7 @@
 			<onright>16</onright>
 			<ondown>13</ondown>
 		</control>
-		<control type="button" id="13">
+		<control type="edit" id="13">
 			<description>Port Button</description>
 			<left>50</left>
 			<top>255</top>
@@ -126,7 +126,7 @@
 			<height>5</height>
 			<texture>separator.png</texture>
 		</control>
-		<control type="button" id="14">
+		<control type="edit" id="14">
 			<description>Username Button</description>
 			<left>50</left>
 			<top>320</top>
@@ -142,7 +142,7 @@
 			<onright>14</onright>
 			<ondown>15</ondown>
 		</control>
-		<control type="button" id="15">
+		<control type="edit" id="15">
 			<description>Password Button</description>
 			<left>50</left>
 			<top>365</top>

@@ -43,7 +43,7 @@
 				<top>70</top>
 				<width>350</width>
 				<height>200</height>
-				<aspectratio align="right">keep</aspectratio>
+				<aspectratio align="center">keep</aspectratio>
 				<fadetime>IconCrossfadeTime</fadetime>
 				<texture>$INFO[ListItem.Icon]</texture>
 				<bordertexture border="19,3,19,3">thumb-border.png</bordertexture>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <fonts>
-	<fontset id="Default" idloc="31390" unicode="true">
+	<fontset id="Default" idloc="31390">
 		<font>
 			<name>font10</name>
 			<filename>MC360.ttf</filename>
@@ -38,7 +38,7 @@
 			<style>bold</style>
 		</font>
 	</fontset>
-	<fontset id="Arial" idloc="31391" unicode="true">
+	<fontset id="Arial" idloc="31391">
 		<font>
 			<name>font10</name>
 			<filename>Arial.ttf</filename>

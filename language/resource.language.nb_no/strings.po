@@ -1,7 +1,7 @@
 # Kodi Media Center language file
-# Addon Name: JX 720
-# Addon id: skin.jx720
-# Addon Provider: Jezz_X, Gade
+# Addon Name: TetradUI
+# Addon id: skin.tetradui
+# Addon Provider: Jezz_X, TeamUI
 msgid ""
 msgstr ""
 "Project-Id-Version: Kodi Addons\n"
@@ -181,8 +181,8 @@ msgid "Power off"
 msgstr "SlÃ¥ av"
 
 msgctxt "#31307"
-msgid "Quit XBMC"
-msgstr "Avslutt XBMC"
+msgid "Quit Kodi"
+msgstr "Avslutt Kodi"
 
 msgctxt "#31308"
 msgid "IP:"
@@ -249,8 +249,8 @@ msgid "Arrange Pictures settings, Including:[CR][CR]* Slideshows[CR]* Thumbnails
 msgstr "Arranger bilde instillinger, Inkludert:[CR][CR]* Fremvisninger[CR]* Miniatyrbilder"
 
 msgctxt "#31460"
-msgid "Welcome to XBMC[CR]Please choose your profile and log in"
-msgstr "Velkommen til XBMC[CR]Vennligst velg din profil for Ã¥ logge deg inn"
+msgid "Welcome to Kodi[CR]Please choose your profile and log in"
+msgstr "Velkommen til Kodi[CR]Vennligst velg din profil for Ã¥ logge deg inn"
 
 msgctxt "#31480"
 msgid "[COLOR=orange][B]WARNING[/B] !![/COLOR][CR]Hiding all buttons will cause Navigation issues when switching between blades.  Having more than 6 buttons visible at once will also cause weird animation and scrolling effects"

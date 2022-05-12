@@ -2,6 +2,7 @@
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
+	<views>50,52,53,54,55</views>
 	<controls>
 		<include condition="!Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
 		<control type="group">
@@ -24,7 +25,7 @@
 			<control type="group">
 				<left>0</left>
 				<top>110</top>
-				<include>ListViewCommons</include> <!-- View ID 51 -->
+				<include>ListViewCommons</include> <!-- View ID 50 -->
 				<include>ThumbnailView</include> <!-- View ID 52 -->
 				<include>WideIconView</include> <!-- View ID  53 -->
 				<include>PosterWrapView</include> <!-- View ID 54 -->
@@ -45,8 +46,8 @@
 		</control>
 		<control type="group" id="9000">
 			<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
-			<animation effect="slide" time="SideMenuSlideOutTime" start="0,0" end="300,0">Focus</animation>
-			<animation effect="slide" delay="SideMenuSlideOutTime" time="SideMenuSlideOutTime" start="300,0" end="0,0">UnFocus</animation>
+			<animation effect="slide" time="SideMenuSlideOutTime" start="0,0" end="300,0" condition="ControlGroup(9000).HasFocus" reversible="false">Conditional</animation>
+			<animation effect="slide" time="SideMenuSlideOutTime" start="300,0" end="0,0" delay="SideMenuSlideOutTime" condition="!ControlGroup(9000).HasFocus" reversible="false">Conditional</animation>
 			<left>-300</left>
 			<top>0</top>
 			<control type="image">
@@ -163,7 +164,6 @@
 				</control>
 				<control type="radiobutton" id="20">
 					<description>Filter Advanced</description>
-					<!-- ADDED BY GADE! -->
 					<left>8</left>
 					<top>160</top>
 					<include>ButtonCommonValues</include>
@@ -186,28 +186,6 @@
 					<onright>50</onright>
 					<onup condition="Control.IsVisible(19)">19</onup>
 					<onup condition="!Control.IsVisible(19)">20</onup>
-					<ondown>17</ondown>
-				</control>
-				<control type="radiobutton" id="17">
-					<description>Flatten</description>
-					<left>8</left>
-					<top>240</top>
-					<include>ButtonCommonValues</include>
-					<label>20411</label>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<onup>16</onup>
-					<ondown>7</ondown>
-				</control>
-				<control type="radiobutton" id="7">
-					<description>Stack toggle</description>
-					<left>6</left>
-					<top>280</top>
-					<include>ButtonCommonValues</include>
-					<label>346</label>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<onup>17</onup>
 					<ondown>11</ondown>
 				</control>
 				<control type="radiobutton" id="11">
@@ -216,12 +194,12 @@
 					<top>320</top>
 					<include>ButtonCommonValues</include>
 					<label>20336</label>
-					<onclick>xbmc.mastermode</onclick>
+					<onclick>MasterMode</onclick>
 					<selected>system.ismaster</selected>
 					<visible>System.HasLocks</visible>
 					<onleft>50</onleft>
 					<onright>50</onright>
-					<onup>7</onup>
+					<onup>16</onup>
 					<ondown>610</ondown>
 				</control>
 				<control type="button" id="610">

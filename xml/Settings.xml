@@ -60,34 +60,11 @@
 				<label>31012</label>
 				<include>HeaderTextCommons</include>
 			</control>
-			<control type="label">
-				<description>Time label</description>
-				<left>930</left>
-				<include>ClockTextCommons</include>
-			</control>
+			<include content="ClockTextCommons">
+				<param name="left" value="540" />
+			</include>
 			<control type="group">
 				<top>130</top>
-				<control type="image">
-					<description>Button Highlight</description>
-					<texture>systemhomebutton-$INFO[Container(9000).Position].png</texture>
-					<visible>Control.HasFocus(9000)</visible>
-					<include>SystemButtonHighlightCommonValues</include>
-				</control>
-				<control type="image">
-					<description>Button Shadow</description>
-					<texture>systemhomebutton-$INFO[Container(9000).Position]-shadow.png</texture>
-					<animation effect="fade" delay="100" time="175">visible</animation>
-					<visible>Control.HasFocus(9000) + !Container(9000).OnNext + !Container(9000).OnPrevious</visible>
-					<include>SystemButtonHighlightCommonValues</include>
-				</control>
-				<control type="image">
-					<description>Button Seperator</description>
-					<left>45</left>
-					<top>0</top>
-					<width>380</width>
-					<height>2</height>
-					<texture>divider.png</texture>
-				</control>
 				<control type="list" id="9000">
 					<left>0</left>
 					<top>0</top>
@@ -101,14 +78,6 @@
 					<pagecontrol>60</pagecontrol>
 					<scrolltime>200</scrolltime>
 					<itemlayout height="45" width="450">
-						<control type="image">
-							<description>Button Seperator</description>
-							<left>45</left>
-							<top>45</top>
-							<width>380</width>
-							<height>2</height>
-							<texture>divider.png</texture>
-						</control>
 						<control type="image">
 							<description>Icon</description>
 							<left>50</left>
@@ -132,12 +101,15 @@
 					</itemlayout>
 					<focusedlayout height="45" width="450">
 						<control type="image">
-							<description>Button Seperator</description>
-							<left>45</left>
-							<top>45</top>
-							<width>380</width>
-							<height>2</height>
-							<texture>divider.png</texture>
+							<description>Button focus</description>
+							<left>30</left>
+							<top>1</top>
+							<width>397</width>
+							<height>45</height>
+							<texture>button.png</texture>
+							<animation effect="slide" start="0,-45" time="200" tween="sine" easing="out" condition="Container(9000).OnNext" reversible="false">Focus</animation>
+							<animation effect="slide" start="0,45" time="200" tween="sine" easing="out" condition="Container(9000).OnPrevious" reversible="false">Focus</animation>
+							<animation effect="fade" start="100" end="70" time="200" condition="!Control.HasFocus(9000)">Conditional</animation>
 						</control>
 						<control type="image">
 							<description>Icon</description>
@@ -155,7 +127,7 @@
 							<height>42</height>
 							<font>font30</font>
 							<aligny>center</aligny>
-							<textcolor>black</textcolor>
+							<textcolor>white</textcolor>
 							<selectedcolor>orange</selectedcolor>
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
@@ -192,37 +164,25 @@
 					</focusedlayout>
 					<content>
 						<item>
-							<label>480</label>
+							<label>14206</label>
 							<label2>31400</label2>
-							<onclick>ActivateWindow(AppearanceSettings)</onclick>
+							<onclick>ActivateWindow(InterfaceSettings)</onclick>
 							<icon>button_icons/icon-appearance.png</icon>
 						</item>
 						<item>
-							<label>1212</label>
+							<label>14200</label>
 							<label2>31408</label2>
-							<onclick>ActivateWindow(VideosSettings)</onclick>
+							<onclick>ActivateWindow(PlayerSettings)</onclick>
 							<icon>button_icons/icon-videos.png</icon>
 						</item>
 						<item>
-							<label>1211</label>
+							<label>14211</label>
 							<label2>31409</label2>
-							<onclick>ActivateWindow(MusicSettings)</onclick>
+							<onclick>ActivateWindow(MediaSettings)</onclick>
 							<icon>button_icons/icon-music.png</icon>
 						</item>
 						<item>
-							<label>1213</label>
-							<label2>31410</label2>
-							<onclick>ActivateWindow(PicturesSettings)</onclick>
-							<icon>button_icons/icon-pictures.png</icon>
-						</item>
-						<item>
-							<label>8</label>
-							<label2>31402</label2>
-							<onclick>ActivateWindow(WeatherSettings)</onclick>
-							<icon>button_icons/icon-weather.png</icon>
-						</item>
-						<item>
-							<label>705</label>
+							<label>14036</label>
 							<label2>31403</label2>
 							<onclick>ActivateWindow(ServiceSettings)</onclick>
 							<icon>button_icons/icon-network.png</icon>
@@ -266,6 +226,7 @@
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
+			<!--<include>TetradUILogo</include>-->
 		</control>
 		<control type="group">
 			<left>115r</left>
@@ -366,7 +327,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 			<control type="image">
@@ -385,7 +346,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 			<control type="image">
@@ -404,7 +365,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 			<control type="image">
@@ -423,7 +384,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 			<!-- Right side -->
@@ -464,7 +425,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 			<control type="image">
@@ -483,7 +444,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 			<control type="image">
@@ -504,7 +465,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 				<visible>Control.HasFocus(1)</visible>
 				<animation effect="fade" time="HomeBladeAnimationSpeed">visible</animation>
@@ -534,7 +495,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 		</control>

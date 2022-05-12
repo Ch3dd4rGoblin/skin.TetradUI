@@ -1,7 +1,7 @@
 # Kodi Media Center language file
-# Addon Name: JX 720
-# Addon id: skin.jx720
-# Addon Provider: Jezz_X, Gade
+# Addon Name: TetradUI
+# Addon id: skin.tetradui
+# Addon Provider: Jezz_X, TeamUI
 msgid ""
 msgstr ""
 "Project-Id-Version: Kodi Addons\n"
@@ -40,6 +40,8 @@ msgctxt "#31006"
 msgid "Media"
 msgstr ""
 
+# empty strings from id 31007 to 31009
+
 msgctxt "#31010"
 msgid "Media"
 msgstr ""
@@ -59,6 +61,8 @@ msgstr ""
 msgctxt "#31014"
 msgid "Video Bookmarks"
 msgstr ""
+
+# empty strings from id 31015 to 31019
 
 msgctxt "#31020"
 msgid "Weather Conditions"
@@ -88,6 +92,8 @@ msgctxt "#31026"
 msgid "Current"
 msgstr ""
 
+# empty strings from id 31027 to 31099
+
 msgctxt "#31100"
 msgid "Video - Files"
 msgstr ""
@@ -99,6 +105,8 @@ msgstr ""
 msgctxt "#31102"
 msgid "Power Options"
 msgstr ""
+
+# empty strings from id 31103 to 31199
 
 msgctxt "#31200"
 msgid "Items"
@@ -115,6 +123,8 @@ msgstr ""
 msgctxt "#31203"
 msgid "PLAYER OPTIONS"
 msgstr ""
+
+# empty strings from id 31204 to 31229
 
 msgctxt "#31230"
 msgid "Playing"
@@ -144,6 +154,8 @@ msgctxt "#31236"
 msgid "End Time:"
 msgstr ""
 
+# empty strings from id 31237 to 31249
+
 msgctxt "#31250"
 msgid "Poster Big"
 msgstr ""
@@ -152,13 +164,7 @@ msgctxt "#31251"
 msgid "Thumb Info"
 msgstr ""
 
-msgctxt "#31300"
-msgid "No Optical Media Detected, click to Open/Close tray"
-msgstr ""
-
-msgctxt "#31301"
-msgid "Play : "
-msgstr ""
+# empty strings from id 31252 to 31301
 
 msgctxt "#31302"
 msgid "Working"
@@ -181,7 +187,7 @@ msgid "Power off"
 msgstr ""
 
 msgctxt "#31307"
-msgid "Quit XBMC"
+msgid "Quit Kodi"
 msgstr ""
 
 msgctxt "#31308"
@@ -208,6 +214,8 @@ msgctxt "#31313"
 msgid "No Weather addon enabled go to Settings\Weather to enable weather forecast"
 msgstr ""
 
+# empty strings from id 31314 to 31389
+
 msgctxt "#31390"
 msgid "Skin default"
 msgstr ""
@@ -215,6 +223,8 @@ msgstr ""
 msgctxt "#31391"
 msgid "Arial based (best for Non-English)"
 msgstr ""
+
+# empty strings from id 31392 to 31399
 
 msgctxt "#31400"
 msgid "Edit your Display settings, Including:[CR][CR]* Skin Selection[CR]* View Options[CR]* Screensaver[CR]* Date & Time"
@@ -260,13 +270,19 @@ msgctxt "#31410"
 msgid "Arrange Pictures settings, Including:[CR][CR]* Slideshows[CR]* Thumbnails"
 msgstr ""
 
+# empty strings from id 31411 to 31458
+
 msgctxt "#31460"
-msgid "Welcome to XBMC[CR]Please choose your profile and log in"
+msgid "Welcome to Kodi[CR]Please choose your profile and log in"
 msgstr ""
+
+# empty strings from id 31461 to 31479
 
 msgctxt "#31480"
 msgid "[COLOR=orange][B]WARNING[/B] !![/COLOR][CR]Hiding all buttons will cause Navigation issues when switching between blades.  Having more than 6 buttons visible at once will also cause weird animation and scrolling effects"
 msgstr ""
+
+# empty strings from id 31481 to 31499
 
 msgctxt "#31500"
 msgid "General"
@@ -283,6 +299,20 @@ msgstr ""
 msgctxt "#31503"
 msgid "Apps Blade"
 msgstr ""
+
+msgctxt "#31504"
+msgid "Change mode"
+msgstr ""
+
+msgctxt "#31505"
+msgid "Watch as 2D"
+msgstr ""
+
+msgctxt "#31506"
+msgid "Local subtitle available"
+msgstr ""
+
+# empty strings from id 31507 to 31519
 
 msgctxt "#31520"
 msgid "Show now playing video in the background"
@@ -304,13 +334,19 @@ msgctxt "#31524"
 msgid "Don't blend background with fanart,visualization,video"
 msgstr ""
 
+# empty strings from id 31525 to 31539
+
 msgctxt "#31540"
 msgid "Set Default Lyric fetching add-on for Music OSD"
 msgstr ""
 
-msgctxt "#31541"
-msgid "Set Default Subtitle fetching add-on for Video OSD"
+# empty string with id 31543
+
+msgctxt "#31542"
+msgid "In progress"
 msgstr ""
+
+# empty strings from id 31543 to 31549
 
 msgctxt "#31550"
 msgid "Window default buttons"
@@ -324,3 +360,10 @@ msgctxt "#31552"
 msgid "Window custom add-on shortcuts"
 msgstr ""
 
+msgctxt "#31553"
+msgid "Settings level"
+msgstr ""
+
+msgctxt "#31554"
+msgid "Autologin"
+msgstr ""

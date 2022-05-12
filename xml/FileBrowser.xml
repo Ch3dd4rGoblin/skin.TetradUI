@@ -148,7 +148,6 @@
 							<font>font13</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<selectedcolor>orange</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
 					</itemlayout>
@@ -176,7 +175,6 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<textcolor>black</textcolor>
-							<selectedcolor>orange</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
 					</focusedlayout>
@@ -215,7 +213,6 @@
 							<font>font13</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<selectedcolor>orange</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
 					</itemlayout>
@@ -243,7 +240,6 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<textcolor>black</textcolor>
-							<selectedcolor>orange</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
 					</focusedlayout>

@@ -69,7 +69,6 @@
 						<font>font12</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<selectedcolor>orange</selectedcolor>
 						<info>ListItem.Label</info>
 					</control>
 				</itemlayout>
@@ -99,7 +98,6 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>black</textcolor>
-						<selectedcolor>orange</selectedcolor>
 						<info>ListItem.Label</info>
 						<visible>Control.HasFocus(10)</visible>
 					</control>
@@ -112,7 +110,6 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>white</textcolor>
-						<selectedcolor>orange</selectedcolor>
 						<info>ListItem.Label</info>
 						<visible>!Control.HasFocus(10)</visible>
 					</control>

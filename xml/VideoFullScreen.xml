@@ -3,7 +3,7 @@
 	<controls>
 		<!-- media infos -->
 		<control type="group" id="1">
-			<visible>[Player.ShowInfo | Window.IsActive(VideoOSD)] + ![Window.IsVisible(VideoBookmarks) | Window.IsVisible(VideoOSDSettings.xml) | Window.IsVisible(124) | Window.IsVisible(125)]</visible>
+			<visible>[Player.ShowInfo | Window.IsActive(VideoOSD)] + ![Window.IsVisible(VideoBookmarks) | Window.IsVisible(DialogSettings.xml) | Window.IsVisible(124) | Window.IsVisible(125)]</visible>
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<control type="image" id="1">
 				<left>0</left>
@@ -142,27 +142,10 @@
 						<textcolor>orange</textcolor>
 						<scroll>true</scroll>
 					</control>
-					<control type="image" id="1">
-						<description>Video Resolution Image</description>
-						<width>50</width>
-						<height>35</height>
-						<aspectratio align="center">keep</aspectratio>
-						<texture>$INFO[VideoPlayer.VideoResolution,flagging/video/,.png]</texture>
-					</control>
-					<control type="image" id="1">
-						<description>Audio Codec Image</description>
-						<width>75</width>
-						<height>35</height>
-						<aspectratio align="center">keep</aspectratio>
-						<texture>$INFO[VideoPlayer.AudioCodec,flagging/audio/,.png]</texture>
-					</control>
-					<control type="image" id="1">
-						<description>Audio Channels Image</description>
-						<width>50</width>
-						<height>35</height>
-						<aspectratio align="center">keep</aspectratio>
-						<texture>$INFO[VideoPlayer.AudioChannels,flagging/audio/,.png]</texture>
-					</control>
+					<include>VideoPlayerVideoCodecFlagging</include>
+					<include>VideoPlayerAudioCodecFlagging</include>
+					<include>VideoPlayerVideoTypeHackFlaggingConditions</include>
+					<include>VideoPlayerAspectCodecFlagging</include>
 				</control>
 				<control type="label" id="1">
 					<left>0</left>
@@ -202,7 +185,7 @@
 					<texturebg border="6,0,6,0">progress_back_2.png</texturebg>
 				</control>
 				<control type="label" id="1">
-					<left>920</left>
+					<left>820</left>
 					<top>0</top>
 					<width>100</width>
 					<height>40</height>
@@ -223,7 +206,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1280</width>
-				<height>140</height>
+				<height>155</height>
 				<colordiffuse>AAFFFFFF</colordiffuse>
 				<texture>black-back.png</texture>
 			</control>
@@ -254,7 +237,7 @@
 				<left>50</left>
 				<top>85</top>
 				<width>1180</width>
-				<height>30</height>
+				<height>45</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font12</font>

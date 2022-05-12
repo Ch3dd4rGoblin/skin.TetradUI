@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<default type="image">
-		<left>0</left>
-		<top>0</top>
 		<texture />
 		<colorkey>0</colorkey>
 	</default>
@@ -12,6 +10,7 @@
 		<label />
 		<font>font13</font>
 		<textcolor>white</textcolor>
+		<selectedcolor>orange</selectedcolor>
 	</default>
 	<default type="fadelabel">
 		<left>80</left>

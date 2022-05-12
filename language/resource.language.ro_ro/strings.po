@@ -1,7 +1,7 @@
 # Kodi Media Center language file
-# Addon Name: JX 720
-# Addon id: skin.jx720
-# Addon Provider: Jezz_X, Gade
+# Addon Name: TetradUI
+# Addon id: skin.tetradui
+# Addon Provider: Jezz_X, TeamUI
 msgid ""
 msgstr ""
 "Project-Id-Version: Kodi Addons\n"
@@ -181,8 +181,8 @@ msgid "Power off"
 msgstr "Ãnchide"
 
 msgctxt "#31307"
-msgid "Quit XBMC"
-msgstr "Ãnchide XBMC"
+msgid "Quit Kodi"
+msgstr "Ãnchide Kodi"
 
 msgctxt "#31308"
 msgid "IP:"
@@ -249,7 +249,7 @@ msgid "Arrange Pictures settings, Including:[CR][CR]* Slideshows[CR]* Thumbnails
 msgstr "ConfigureazÄ setari foto, inclusiv:[CR][CR]* Slideshows[CR]* Pictograme"
 
 msgctxt "#31460"
-msgid "Welcome to XBMC[CR]Please choose your profile and log in"
+msgid "Welcome to Kodi[CR]Please choose your profile and log in"
 msgstr "Bun venit[CR]AlegeÅ£i profilul Åi autentificaÅ£i-vÄ"
 
 msgctxt "#31480"

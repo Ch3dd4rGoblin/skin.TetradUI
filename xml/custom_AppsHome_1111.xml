@@ -66,57 +66,13 @@
 				<label>31011</label>
 				<include>HeaderTextCommons</include>
 			</control>
-			<control type="label">
-				<description>Time label</description>
-				<left>930</left>
-				<include>ClockTextCommons</include>
-			</control>
+			<include content="ClockTextCommons">
+				<param name="left" value="540" />
+			</include>
 			<control type="group">
 				<left>20</left>
 				<top>75</top>
 				<include>SystemCard</include>
-			</control>
-			<control type="group">
-				<left>510</left>
-				<top>100</top>
-				<control type="label">
-					<description>date label</description>
-					<left>0</left>
-					<top>0</top>
-					<width>380</width>
-					<height>30</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>font12</font>
-					<textcolor>white2</textcolor>
-					<label>$INFO[System.Date]</label>
-				</control>
-				<control type="image">
-					<description>Logo</description>
-					<left>0</left>
-					<top>30</top>
-					<width>380</width>
-					<height>70</height>
-					<aspectratio>keep</aspectratio>
-					<texture>xbmc_logo.png</texture>
-				</control>
-				<control type="image">
-					<description>Logo Mirror</description>
-					<left>0</left>
-					<top>90</top>
-					<width>380</width>
-					<height>70</height>
-					<aspectratio>keep</aspectratio>
-					<texture diffuse="diffuse_mirror2.png" flipy="true">xbmc_logo.png</texture>
-				</control>
-				<control type="image">
-					<description>Logo Shadow</description>
-					<left>0</left>
-					<top>100</top>
-					<width>380</width>
-					<height>16</height>
-					<texture>home_logoshadow.png</texture>
-				</control>
 			</control>
 			<control type="group">
 				<top>225</top>
@@ -133,14 +89,6 @@
 					<visible>Control.HasFocus(9000) + !Container(9000).OnNext + !Container(9000).OnPrevious</visible>
 					<include>HomeButtonHighlightCommonValues</include>
 				</control>
-				<control type="image">
-					<description>Button Seperator</description>
-					<left>35</left>
-					<top>0</top>
-					<width>380</width>
-					<height>2</height>
-					<texture>divider.png</texture>
-				</control>
 				<control type="list" id="9000">
 					<left>0</left>
 					<top>0</top>
@@ -148,20 +96,14 @@
 					<height>314</height>
 					<onleft>1</onleft>
 					<onright>2</onright>
-					<onup>15</onup>
-					<ondown>15</ondown>
+					<onup condition="System.GetBool(LookAndFeel.EnableRSSFeeds)">15</onup>
+					<onup condition="!System.GetBool(LookAndFeel.EnableRSSFeeds)">9000</onup>
+					<ondown condition="System.GetBool(LookAndFeel.EnableRSSFeeds)">15</ondown>
+					<ondown condition="!System.GetBool(LookAndFeel.EnableRSSFeeds)">9000</ondown>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>60</pagecontrol>
 					<scrolltime>200</scrolltime>
 					<itemlayout height="52" width="450">
-						<control type="image">
-							<description>Button Seperator</description>
-							<left>35</left>
-							<top>52</top>
-							<width>380</width>
-							<height>2</height>
-							<texture>divider.png</texture>
-						</control>
 						<control type="image">
 							<description>Icon</description>
 							<left>50</left>
@@ -178,20 +120,11 @@
 							<font>font30</font>
 							<aligny>center</aligny>
 							<textcolor>white2</textcolor>
-							<selectedcolor>orange</selectedcolor>
 							<align>left</align>
 							<info>ListItem.Label</info>
 						</control>
 					</itemlayout>
 					<focusedlayout height="52" width="450">
-						<control type="image">
-							<description>Button Seperator</description>
-							<left>35</left>
-							<top>52</top>
-							<width>380</width>
-							<height>2</height>
-							<texture>divider.png</texture>
-						</control>
 						<control type="image">
 							<description>Icon</description>
 							<left>50</left>
@@ -209,7 +142,6 @@
 							<font>font30</font>
 							<aligny>center</aligny>
 							<textcolor>black</textcolor>
-							<selectedcolor>orange</selectedcolor>
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
 							<animation effect="slide" end="ButtonSlideBackDistance,0" time="ButtonSlideBackTime" reversible="false">focus</animation>
@@ -223,7 +155,6 @@
 							<font>font30</font>
 							<aligny>center</aligny>
 							<textcolor>white</textcolor>
-							<selectedcolor>orange</selectedcolor>
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
 							<visible>!Control.HasFocus(9000)</visible>
@@ -271,7 +202,8 @@
 					</content>
 				</control>
 			</control>
-			<include>CommonDVDTray</include>
+			<include condition="System.GetBool(LookAndFeel.EnableRSSFeeds)">CommonRSSFeed</include>
+			<!--<include>TetradUILogo</include>-->
 		</control>
 
 		<control type="button" id="1">
@@ -324,7 +256,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 			<control type="image">
@@ -343,7 +275,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 			<!-- Right side -->
@@ -371,7 +303,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 			<control type="image">
@@ -390,7 +322,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 		</control>
@@ -423,7 +355,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 			<control type="image">
@@ -442,7 +374,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 			<control type="image">
@@ -463,7 +395,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 				<visible>Control.HasFocus(2)</visible>
 				<animation effect="fade" time="HomeBladeAnimationSpeed">visible</animation>
@@ -493,7 +425,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 		</control>
@@ -526,7 +458,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 			<!-- Right side -->
@@ -554,7 +486,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 			<control type="image">
@@ -573,7 +505,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 			</control>
 			<control type="image">
@@ -594,7 +526,7 @@
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>
-				<aligny>center</aligny>
+				<aligny>top</aligny>
 				<angle>270</angle>
 				<visible>Control.HasFocus(1)</visible>
 				<animation effect="fade" time="HomeBladeAnimationSpeed">visible</animation>

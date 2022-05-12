@@ -43,11 +43,9 @@
 					<label>$LOCALIZE[20096]</label>
 					<include>HeaderTextCommons</include>
 				</control>
-				<control type="label">
-					<description>Time label</description>
-					<left>1130</left>
-					<include>ClockTextCommons</include>
-				</control>
+				<include content="ClockTextCommons">
+					<param name="left" value="1130" />
+				</include>
 				<control type="label">
 					<description>heading label</description>
 					<left>110</left>
@@ -126,9 +124,9 @@
 						</control>
 						<control type="label">
 							<description>Last Login label</description>
-							<left>106</left>
+							<left>18</left>
 							<top>210</top>
-							<width>214</width>
+							<width>182</width>
 							<height>30</height>
 							<align>center</align>
 							<aligny>center</aligny>

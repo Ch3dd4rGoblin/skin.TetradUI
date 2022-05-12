@@ -46,12 +46,12 @@
 				<left>0</left>
 				<top>115</top>
 				<width>250</width>
-				<height>500</height>
+				<height>400</height>
 				<itemgap>-2</itemgap>
 				<onleft>5</onleft>
 				<onright>5</onright>
-				<onup>3</onup>
-				<ondown>3</ondown>
+				<onup>20</onup>
+				<ondown>20</ondown>
 			</control>
 			<control type="grouplist" id="5">
 				<description>control area</description>
@@ -66,6 +66,30 @@
 				<onup>5</onup>
 				<ondown>5</ondown>
 			</control>
+			<control type="label">
+				<top>515</top>
+				<left>15</left>
+				<width>250</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<label>31553</label>
+			</control>
+			<control type="button" id="20">
+				<description>Settings Level Button</description>
+				<left>0</left>
+				<top>565</top>
+				<height>50</height>
+				<width>250</width>
+				<textcolor>white</textcolor>
+				<texturefocus border="10">button-focus.png</texturefocus>
+				<texturenofocus border="10">button-nofocus.png</texturenofocus>
+				<label>10037</label>
+				<onclick>SettingsLevelChange</onclick>
+				<align>left</align>
+				<onup>3</onup>
+				<onleft>5</onleft>
+				<onright>5</onright>
+			</control>
 			<control type="spincontrol" id="90">
 				<description>Next page button</description>
 				<left>1000</left>
@@ -74,13 +98,22 @@
 				<font>font13</font>
 				<onleft>5</onleft>
 				<onright>3</onright>
-				<ondown>90</ondown>
-				<onup>90</onup>
+				<ondown>5</ondown>
+				<onup>5</onup>
 				<textcolor>white2</textcolor>
 				<showonepage>false</showonepage>
 				<animation effect="slide" start="0,0" end="-100,0" time="200" condition="Player.HasAudio">Conditional</animation>
 				<animation effect="slide" start="0,0" end="-100,0" time="200" condition="Player.HasVideo + VideoPlayer.Content(Movies)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="-160,0" time="200" condition="Player.HasVideo + !VideoPlayer.Content(Movies)">Conditional</animation>
+			</control>
+			<control type="textbox" id="6">
+				<left>5</left>
+				<top>659</top>
+				<height>55</height>
+				<width>500</width>
+				<font>font10</font>
+				<textcolor>grey2</textcolor>
+				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 			</control>
 		</control>
 
@@ -107,7 +140,7 @@
 			<visible>Window.Previous(Videos) | Window.Previous(MusicFiles) | Window.Previous(MusicLibrary) | Window.Previous(Pictures)</visible>
 			<include>MediaToSubBlades</include>
 		</control>
-
+		
 		<control type="button" id="10">
 			<description>Default Category Button</description>
 			<left>0</left>
@@ -163,6 +196,20 @@
 			<spinposx>10</spinposx>
 			<aligny>center</aligny>
 			<reverse>yes</reverse>
+			<pulseonselect>no</pulseonselect>
+		</control>
+		<control type="sliderex" id="13">
+			<description>Default SpinControlex</description>
+			<left>0</left>
+			<top>0</top>
+			<height>45</height>
+			<texturefocus border="10">list-focus.png</texturefocus>
+			<texturenofocus />
+			<font>font13</font>
+			<focusedcolor>black</focusedcolor>
+			<disabledcolor>disabled</disabledcolor>
+			<textoffsetx>10</textoffsetx>
+			<aligny>center</aligny>
 			<pulseonselect>no</pulseonselect>
 		</control>
 		<include>Common_Now_Playing</include>

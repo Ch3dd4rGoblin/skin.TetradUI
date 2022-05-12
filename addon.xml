@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="skin.tetradui" version="0.0.1" name="TetradUI" provider-name="Jezz_X, Gade">
+<addon id="skin.tetradui" version="0.0.4" name="TetradUI" provider-name="Jezz_X, TeamUI">
   <requires>
     <import addon="xbmc.gui" version="5.15.00" />
   </requires>
@@ -26,10 +26,8 @@
       <screenshot>resources/screenshot-09.jpg</screenshot>
       <screenshot>resources/screenshot-10.jpg</screenshot>
     </assets>
-    <news>[B]0.0.1[/B][CR]- Initial version</news>
-    <description lang="en_GB">A re-think of the design of the original xbox 360 dashboard and Teamblackbolt mc360 skin (most main graphics originally by team blackbolt).[CR]Did you like the original xbox 360 dashboard? then this skin is for you it retains the original 4 "blade" look but has had the original 360 guide removed and replaced with less screen real estate hogging windows that follow the standard XBMC layout as well as many changes to bring it up to a more modern looking XBMC skin</description>
-    <description lang="fr_FR">Une interprétation du design de l'interface originale de la xbox 360 et du thème mc360 de Teamblackbolt (la plupart des graphiques sont de la team blackbolt).[CR]Aimiez-vous l'interface originale de la xbox 360? Alors ce thème est pour vous. Il conserve l'aspect "volet" original mais l'orientation 360 originale a été remplacée par moins d'écrans et respecte ainsi l'esprit XBMC, de même que plusieurs modifications apportées pour en faire thème à l'aspect plus moderne.</description>
-    <summary lang="en_GB">Re-think of the Original xbox 360 Dashboard by Jezz_X</summary>
-    <summary lang="fr_FR">Interprétation de l'interface originale de la xbox 360 par Jezz_X</summary>
+    <news>[B]0.0.4[/B][CR]- Helix version</news>
+    <description lang="en_GB">TetradUI is a skin add-on for Kodi media center. TetradUI is based on JX720 by Jezz_X.[CR]This add-on was created by TeamUI.</description>
+    <summary lang="en_GB">TetradUI is a skin Addon for Kodi media center</summary>
   </extension>
 </addon>

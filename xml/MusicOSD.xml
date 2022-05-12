@@ -116,7 +116,7 @@
 				<font />
 				<texturefocus />
 				<texturenofocus />
-				<onclick>XBMC.PlayerControl(Repeat)</onclick>
+				<onclick>PlayerControl(Repeat)</onclick>
 				<onleft>605</onleft>
 				<onright>607</onright>
 				<onup>606</onup>
@@ -188,7 +188,7 @@
 				<usealttexture>Playlist.IsRandom</usealttexture>
 				<alttexturefocus>OSDRandomOnFO.png</alttexturefocus>
 				<alttexturenofocus>OSDRandomOnNF.png</alttexturenofocus>
-				<onclick>XBMC.PlayerControl(Random)</onclick>
+				<onclick>PlayerControl(Random)</onclick>
 				<onleft>606</onleft>
 				<onright>701</onright>
 				<onup>607</onup>
@@ -216,11 +216,11 @@
 				<onup>701</onup>
 				<ondown>701</ondown>
 				<onclick>Close</onclick>
-				<onclick>XBMC.RunScript($INFO[Skin.String(LyricScript_Path)])</onclick>
+				<onclick>RunScript($INFO[Skin.String(LyricScript_Path)])</onclick>
 				<altclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</altclick>
 				<altclick>Close</altclick>
-				<altclick>XBMC.RunScript($INFO[Skin.String(LyricScript_Path)])</altclick>
-				<usealttexture>IsEmpty(Skin.String(LyricScript_Path))</usealttexture>
+				<altclick>RunScript($INFO[Skin.String(LyricScript_Path)])</altclick>
+				<usealttexture>String.IsEmpty(Skin.String(LyricScript_Path))</usealttexture>
 			</control>
 			<control type="button" id="500">
 				<left>45</left>
@@ -279,7 +279,7 @@
 				<onright>600</onright>
 				<onup>704</onup>
 				<ondown>704</ondown>
-				<onclick>XBMC.PlayerControl(record)</onclick>
+				<onclick>PlayerControl(record)</onclick>
 				<enable>Player.CanRecord</enable>
 				<animation effect="fade" start="100" end="50" time="100" condition="!Player.CanRecord">Conditional</animation>
 			</control>

@@ -72,7 +72,7 @@
 				<ondown>17</ondown>
 			</control>
 		</control>
-		<control type="button" id="17">
+		<control type="edit" id="17">
 			<description>Value Button</description>
 			<left>50</left>
 			<top>190</top>

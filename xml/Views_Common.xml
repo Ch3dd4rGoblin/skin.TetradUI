@@ -84,7 +84,7 @@
 				<width>420</width>
 				<height>440</height>
 				<aspectratio>keep</aspectratio>
-				<texture background="true">$INFO[Listitem.Icon]</texture>
+				<texture background="true">$VAR[ListItemPosterVar]</texture>
 				<bordertexture border="19,3,19,3">thumb-border.png</bordertexture>
 				<bordersize>18,2,18,2</bordersize>
 				<fadetime>IconCrossfadeTime</fadetime>
@@ -128,14 +128,14 @@
 					<top>6</top>
 					<width>168</width>
 					<height>128</height>
-					<texture background="true">$INFO[Listitem.Icon]</texture>
+					<texture background="true">$VAR[ListItemPosterVar]</texture>
 					<bordertexture>black-back.png</bordertexture>
 					<bordersize>1</bordersize>
 				</control>
 				<control type="label">
-					<left>90</left>
+					<left>8</left>
 					<top>130</top>
-					<width>168</width>
+					<width>164</width>
 					<height>25</height>
 					<font>font10</font>
 					<textcolor>grey2</textcolor>
@@ -166,14 +166,14 @@
 					<top>6</top>
 					<width>168</width>
 					<height>128</height>
-					<texture background="true">$INFO[Listitem.Icon]</texture>
+					<texture background="true">$VAR[ListItemPosterVar]</texture>
 					<bordertexture>black-back.png</bordertexture>
 					<bordersize>1</bordersize>
 				</control>
 				<control type="label">
-					<left>90</left>
+					<left>8</left>
 					<top>130</top>
-					<width>168</width>
+					<width>164</width>
 					<height>25</height>
 					<font>font10</font>
 					<textcolor>black</textcolor>
@@ -206,14 +206,14 @@
 					<width>142</width>
 					<height>200</height>
 					<aspectratio>keep</aspectratio>
-					<texture background="true">$INFO[Listitem.Icon]</texture>
+					<texture background="true">$VAR[ListItemPosterVar]</texture>
 					<bordertexture>black-back.png</bordertexture>
 					<bordersize>1</bordersize>
 				</control>
 				<control type="label">
-					<left>77</left>
+					<left>8</left>
 					<top>206</top>
-					<width>142</width>
+					<width>138</width>
 					<height>25</height>
 					<font>font10</font>
 					<textcolor>grey2</textcolor>
@@ -246,14 +246,14 @@
 					<width>142</width>
 					<height>200</height>
 					<aspectratio>keep</aspectratio>
-					<texture background="true">$INFO[Listitem.Icon]</texture>
+					<texture background="true">$VAR[ListItemPosterVar]</texture>
 					<bordertexture>black-back.png</bordertexture>
 					<bordersize>1</bordersize>
 				</control>
 				<control type="label">
-					<left>77</left>
+					<left>8</left>
 					<top>206</top>
-					<width>142</width>
+					<width>138</width>
 					<height>25</height>
 					<font>font10</font>
 					<textcolor>black</textcolor>
@@ -301,7 +301,7 @@
 					<top>7</top>
 					<width>500</width>
 					<height>95</height>
-					<texture background="true">$INFO[Listitem.Icon]</texture>
+					<texture background="true">$VAR[ListItemPosterVar]</texture>
 					<bordertexture>black-back.png</bordertexture>
 					<bordersize>1</bordersize>
 				</control>
@@ -351,7 +351,7 @@
 					<top>7</top>
 					<width>500</width>
 					<height>95</height>
-					<texture background="true">$INFO[Listitem.Icon]</texture>
+					<texture background="true">$VAR[ListItemPosterVar]</texture>
 					<bordertexture>black-back.png</bordertexture>
 					<bordersize>1</bordersize>
 				</control>
@@ -443,7 +443,7 @@
 					<aspectratio>stretch</aspectratio>
 					<bordertexture border="10">thumb-nofocus.png</bordertexture>
 					<bordersize>10</bordersize>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<texture background="true">$VAR[ListItemPosterVar]</texture>
 				</control>
 				<control type="image">
 					<left>170</left>
@@ -463,7 +463,7 @@
 					<aspectratio>stretch</aspectratio>
 					<bordertexture border="10">thumb-focus.png</bordertexture>
 					<bordersize>10</bordersize>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<texture background="true">$VAR[ListItemPosterVar]</texture>
 					<animation reversible="false" effect="zoom" start="0,0,218,310" end="-30,-30,278,370" time="200">focus</animation>
 					<animation reversible="false" effect="zoom" end="0,0,218,310" start="-30,-30,278,370" time="200">unfocus</animation>
 				</control>
@@ -508,14 +508,14 @@
 					<top>6</top>
 					<width>168</width>
 					<height>128</height>
-					<texture background="true">$INFO[Listitem.Icon]</texture>
+					<texture background="true">$VAR[ListItemPosterVar]</texture>
 					<bordertexture>black-back.png</bordertexture>
 					<bordersize>1</bordersize>
 				</control>
 				<control type="label">
-					<left>90</left>
+					<left>8</left>
 					<top>130</top>
-					<width>168</width>
+					<width>164</width>
 					<height>25</height>
 					<font>font10</font>
 					<textcolor>grey2</textcolor>
@@ -546,14 +546,14 @@
 					<top>6</top>
 					<width>168</width>
 					<height>128</height>
-					<texture background="true">$INFO[Listitem.Icon]</texture>
+					<texture background="true">$VAR[ListItemPosterVar]</texture>
 					<bordertexture>black-back.png</bordertexture>
 					<bordersize>1</bordersize>
 				</control>
 				<control type="label">
-					<left>90</left>
+					<left>8</left>
 					<top>130</top>
-					<width>168</width>
+					<width>164</width>
 					<height>25</height>
 					<font>font10</font>
 					<textcolor>black</textcolor>
@@ -586,14 +586,14 @@
 					<width>142</width>
 					<height>200</height>
 					<aspectratio>keep</aspectratio>
-					<texture background="true">$INFO[Listitem.Icon]</texture>
+					<texture background="true">$VAR[ListItemPosterVar]</texture>
 					<bordertexture>black-back.png</bordertexture>
 					<bordersize>1</bordersize>
 				</control>
 				<control type="label">
-					<left>77</left>
+					<left>8</left>
 					<top>206</top>
-					<width>142</width>
+					<width>138</width>
 					<height>25</height>
 					<font>font10</font>
 					<textcolor>grey2</textcolor>
@@ -626,14 +626,14 @@
 					<width>142</width>
 					<height>200</height>
 					<aspectratio>keep</aspectratio>
-					<texture background="true">$INFO[Listitem.Icon]</texture>
+					<texture background="true">$VAR[ListItemPosterVar]</texture>
 					<bordertexture>black-back.png</bordertexture>
 					<bordersize>1</bordersize>
 				</control>
 				<control type="label">
-					<left>77</left>
+					<left>8</left>
 					<top>206</top>
-					<width>142</width>
+					<width>138</width>
 					<height>25</height>
 					<font>font10</font>
 					<textcolor>black</textcolor>

@@ -28,38 +28,17 @@
 			<textcolor>orange</textcolor>
 			<shadowcolor>black</shadowcolor>
 		</control>
-		<control type="label" id="2">
-			<description>dialog line 1</description>
+		<control type="textbox" id="9">
+			<description>text</description>
+			<!-- ADDED BY GADE! -->
 			<left>50</left>
 			<top>110</top>
 			<width>600</width>
-			<height>25</height>
-			<label />
+			<height>85</height>
 			<align>center</align>
 			<aligny>center</aligny>
 			<font>font12</font>
-		</control>
-		<control type="label" id="3">
-			<description>dialog line 2</description>
-			<left>50</left>
-			<top>140</top>
-			<width>600</width>
-			<height>25</height>
-			<label />
-			<align>center</align>
-			<aligny>center</aligny>
-			<font>font12</font>
-		</control>
-		<control type="label" id="4">
-			<description>dialog line 3</description>
-			<left>50</left>
-			<top>170</top>
-			<width>600</width>
-			<height>25</height>
-			<label />
-			<align>center</align>
-			<aligny>center</aligny>
-			<font>font12</font>
+			<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 		</control>
 		<control type="button" id="10">
 			<description>OK button</description>

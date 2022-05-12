@@ -18,7 +18,7 @@
 				<height>650</height>
 				<texture border="50,100,50,50">Dialog.png</texture>
 			</control>
-			<control type="label">
+			<control type="label" id="2">
 				<description>heading label</description>
 				<left>50</left>
 				<top>50</top>
@@ -27,13 +27,13 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font16</font>
-				<label>$INFO[Window.Property(heading)]</label>
+				<label />
 				<textcolor>orange</textcolor>
 			</control>
 			<control type="group">
 				<left>50</left>
 				<top>100</top>
-				<control type="image" id="2">
+				<control type="image" id="101">
 					<description>profile image</description>
 					<left>0</left>
 					<top>0</top>
@@ -55,7 +55,7 @@
 					<textcolor>grey</textcolor>
 					<label>$LOCALIZE[20093]</label>
 				</control>
-				<control type="label" id="1000">
+				<control type="label" id="102">
 					<description>profile name Value</description>
 					<left>200</left>
 					<top>30</top>
@@ -74,7 +74,7 @@
 					<textcolor>grey</textcolor>
 					<label>$LOCALIZE[20070]</label>
 				</control>
-				<control type="label" id="1001">
+				<control type="label" id="103">
 					<description>profile directory Value</description>
 					<left>200</left>
 					<top>110</top>
