@@ -10,7 +10,7 @@ About TetradUI
 
 TetradUI is a Graphical User Interface for Kodi media center, a open-source application available on multiple platforms.
 
-The aim with TetradUI is to resurrect the classic blades-style user interface found in the original Xbox360 dashboard and also in the works of Team Blackbolt and Jezz_X with projects MC360 and JX720 respectively. TetradUI is a fork of JX720 by Jezz_X.
+The aim with TetradUI is to create a fresh modern homage of the classic blades-style UI found in the original Xbox360 dashboard. Also seen in the works of Team Blackbolt and Jezz_X with projects MC360 and JX720 respectively. TetradUI is based from JX720 by Jezz_X.
 
 --------
 Credits:
@@ -32,6 +32,7 @@ Graphics
 -----------------------
     - Manfeed
     - Ch3dd4rGoblin
+    - Gade
 
 ---------------------------
 Original Graphics and Code
