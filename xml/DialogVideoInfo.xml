@@ -36,37 +36,8 @@
 				<control type="label">
 					<description>Title label Normal</description>
 					<left>200</left>
-					<label>20159</label>
+					<label>$VAR[DialogVideoInfoTitleLabel]</label>
 					<include>DialogHeaderTextCommons</include>
-					<visible>!container.content(movies) + !container.content(tvshows) + !container.content(episodes) + !container.content(musicvideos)</visible>
-				</control>
-				<control type="label">
-					<description>Title label Movies</description>
-					<left>200</left>
-					<label>13346</label>
-					<include>DialogHeaderTextCommons</include>
-					<visible>container.content(movies)</visible>
-				</control>
-				<control type="label">
-					<description>Title label TV Shows</description>
-					<left>200</left>
-					<label>20351</label>
-					<include>DialogHeaderTextCommons</include>
-					<visible>container.content(tvshows)</visible>
-				</control>
-				<control type="label">
-					<description>Title label Episode</description>
-					<left>200</left>
-					<label>20352</label>
-					<include>DialogHeaderTextCommons</include>
-					<visible>container.content(episodes)</visible>
-				</control>
-				<control type="label">
-					<description>Title label Music Videos</description>
-					<left>200</left>
-					<label>20393</label>
-					<include>DialogHeaderTextCommons</include>
-					<visible>container.content(musicvideos)</visible>
 				</control>
 				<control type="group">
 					<visible>Control.HasFocus(12)</visible>
@@ -123,7 +94,6 @@
 							<onright>9000</onright>
 							<onup>9000</onup>
 							<ondown>9000</ondown>
-							
 							<scrolltime>200</scrolltime>
 							<itemlayout height="30" width="750">
 								<control type="label">
@@ -689,15 +659,16 @@
 								<texture fallback="DefaultActor.png">$INFO[ListItem.Icon]</texture>
 								<bordertexture border="19,3,19,3">thumb-border.png</bordertexture>
 								<bordersize>17,1,17,1</bordersize>
+								<aspectratio aligny="top">scale</aspectratio>
 							</control>
 							<control type="textbox">
 								<left>110</left>
-								<top>10</top>
+								<top>16</top>
 								<width>380</width>
 								<height>75</height>
 								<font>font13</font>
 								<align>left</align>
-								<label>$INFO[ListItem.Label]</label>
+								<label>$INFO[ListItem.Label][CR][COLOR=grey]$INFO[ListItem.Label2][/COLOR]</label>
 							</control>
 						</itemlayout>
 						<focusedlayout height="100" width="500">
@@ -716,16 +687,17 @@
 								<texture fallback="DefaultActor.png">$INFO[ListItem.Icon]</texture>
 								<bordertexture border="19,3,19,3">thumb-border.png</bordertexture>
 								<bordersize>17,1,17,1</bordersize>
+								<aspectratio aligny="top">scale</aspectratio>
 							</control>
 							<control type="textbox">
 								<left>110</left>
-								<top>10</top>
+								<top>16</top>
 								<width>380</width>
 								<height>75</height>
 								<font>font13</font>
 								<align>left</align>
 								<textcolor>black</textcolor>
-								<label>$INFO[ListItem.Label]</label>
+								<label>$INFO[ListItem.Label][CR][COLOR=black2]$INFO[ListItem.Label2][/COLOR]</label>
 							</control>
 						</focusedlayout>
 					</control>

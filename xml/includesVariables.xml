@@ -20,4 +20,33 @@
 		<value condition="!String.IsEmpty(Player.Art(thumb))">$INFO[Player.Art(thumb)]</value>
 		<value>$INFO[Player.Icon]</value>
 	</variable>
+	<variable name="SeekBarLabels">
+		<value condition="Player.Caching">$LOCALIZE[31234] $INFO[Player.CacheLevel]%</value>
+		<value condition="!String.IsEmpty(Player.SeekStepSize)">$LOCALIZE[773] $INFO[Player.SeekStepSize]</value>
+		<value condition="!String.IsEmpty(Player.SeekOffset) + Player.DisplayAfterSeek">$LOCALIZE[773] $INFO[Player.SeekOffset]</value>
+		<value condition="Player.Paused">$LOCALIZE[31231]</value>
+		<value condition="Player.Forwarding2x">$LOCALIZE[31232] x2</value>
+		<value condition="Player.Forwarding4x">$LOCALIZE[31232] x4</value>
+		<value condition="Player.Forwarding8x">$LOCALIZE[31232] x8</value>
+		<value condition="Player.Forwarding16x">$LOCALIZE[31232] x16</value>
+		<value condition="Player.Forwarding32x">$LOCALIZE[31232] x32</value>
+		<value condition="Player.Rewinding2x">$LOCALIZE[31233] x2</value>
+		<value condition="Player.Rewinding4x">$LOCALIZE[31233] x4</value>
+		<value condition="Player.Rewinding8x">$LOCALIZE[31233] x8</value>
+		<value condition="Player.Rewinding16x">$LOCALIZE[31233] x16</value>
+		<value condition="Player.Rewinding32x">$LOCALIZE[31233] x32</value>
+		<value condition="Player.IsTempo">$LOCALIZE[31229] $INFO[Player.PlaySpeed]</value>
+		<value>$LOCALIZE[31230]</value>
+	</variable>
+	<variable name="TimeLabels">
+		<value condition="Player.Seeking">$INFO[Player.SeekTime]</value>
+		<value>$INFO[VideoPlayer.Time]</value>
+	</variable>
+	<variable name="DialogVideoInfoTitleLabel">
+		<value condition="Container.Content(Movies)">$LOCALIZE[13346]</value>
+		<value condition="Container.Content(TVShows)">$LOCALIZE[20351]</value>
+		<value condition="Container.Content(Episodes)">$LOCALIZE[20352]</value>
+		<value condition="Container.Content(MusicVideos)">$LOCALIZE[20393]</value>
+		<value>$LOCALIZE[20159]</value>
+	</variable>
 </includes>

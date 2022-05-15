@@ -155,62 +155,37 @@
 		</control>
 		<control type="button" id="7">
 			<description>Default Button</description>
-			<left>0</left>
-			<top>0</top>
-			<height>45</height>
-			<font>font13</font>
-			<textcolor>white</textcolor>
-			<focusedcolor>black</focusedcolor>
-			<textoffsetx>10</textoffsetx>
-			<texturefocus border="10">list-focus.png</texturefocus>
-			<texturenofocus />
-			<pulseonselect>no</pulseonselect>
+			<include>SettingsButtonCommonValues</include>
 		</control>
 		<control type="radiobutton" id="8">
 			<description>Default RadioButton</description>
-			<left>0</left>
-			<top>0</top>
-			<height>45</height>
-			<font>font13</font>
-			<textcolor>white</textcolor>
-			<focusedcolor>black</focusedcolor>
-			<texturefocus border="10">list-focus.png</texturefocus>
-			<texturenofocus />
-			<textoffsetx>10</textoffsetx>
+			<include>SettingsButtonCommonValues</include>
 			<radioposx>750</radioposx>
-			<pulseonselect>no</pulseonselect>
 		</control>
 		<control type="spincontrolex" id="9">
 			<description>Default SpinControlex</description>
-			<left>0</left>
-			<top>0</top>
-			<height>45</height>
-			<texturefocus border="10">list-focus.png</texturefocus>
-			<texturenofocus />
-			<font>font13</font>
-			<textcolor>white</textcolor>
-			<focusedcolor>black</focusedcolor>
+			<include>SettingsButtonCommonValues</include>
 			<focusedcolor2>black</focusedcolor2>
-			<disabledcolor>disabled</disabledcolor>
-			<textoffsetx>10</textoffsetx>
 			<spinposx>10</spinposx>
+		</control>
+		<control type="edit" id="12">
+			<description>Default Edit</description>
+			<include>SettingsButtonCommonValues</include>
 			<aligny>center</aligny>
-			<reverse>yes</reverse>
-			<pulseonselect>no</pulseonselect>
 		</control>
 		<control type="sliderex" id="13">
 			<description>Default SpinControlex</description>
-			<left>0</left>
-			<top>0</top>
-			<height>45</height>
-			<texturefocus border="10">list-focus.png</texturefocus>
-			<texturenofocus />
-			<font>font13</font>
-			<focusedcolor>black</focusedcolor>
-			<disabledcolor>disabled</disabledcolor>
-			<textoffsetx>10</textoffsetx>
+			<include>SettingsButtonCommonValues</include>
 			<aligny>center</aligny>
-			<pulseonselect>no</pulseonselect>
+		</control>
+		<control type="label" id="14">
+			<description>Separator label</description>
+			<label />
+			<height>45</height>
+			<font>font13</font>
+			<align>center</align>
+			<aligny>center</aligny>
+			<textcolor>orange</textcolor>
 		</control>
 		<include>Common_Now_Playing</include>
 	</controls>

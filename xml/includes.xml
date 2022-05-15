@@ -178,6 +178,14 @@
 		<texturenofocus border="10">button-nofocus.png</texturenofocus>
 		<label />
 	</include>
+	<include name="SettingsButtonCommonValues">
+		<height>45</height>
+		<font>font13</font>
+		<focusedcolor>black</focusedcolor>
+		<textoffsetx>10</textoffsetx>
+		<texturefocus border="10">list-focus.png</texturefocus>
+		<texturenofocus />
+	</include>
 	<include name="CommonPlayerControls">
 		<control type="label">
 			<description>Player Controls Label</description>

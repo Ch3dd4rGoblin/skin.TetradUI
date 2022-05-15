@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="122">
-	<defaultcontrol>2</defaultcontrol>
+	<defaultcontrol>5</defaultcontrol>
 	<coordinates>
 		<system>1</system>
 		<left>290</left>
@@ -18,7 +18,7 @@
 			<texture border="50,100,50,50">Dialog.png</texture>
 			<animation effect="fade" start="90" end="90" time="0" condition="Window.IsVisible(Visualisation)">Conditional</animation>
 		</control>
-		<control type="label" id="3">
+		<control type="label" id="2">
 			<description>heading label</description>
 			<left>50</left>
 			<top>50</top>
@@ -41,15 +41,13 @@
 			<font>font16</font>
 			<textcolor>white</textcolor>
 		</control>
-		<control type="list" id="2">
+		<control type="list" id="5">
 			<left>50</left>
 			<top>100</top>
 			<width>600</width>
 			<height>450</height>
 			<onleft>60</onleft>
 			<onright>60</onright>
-			<onup>2</onup>
-			<ondown>2</ondown>
 			<pagecontrol>60</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<itemlayout height="45">
@@ -77,7 +75,7 @@
 					<top>0</top>
 					<width>600</width>
 					<height>45</height>
-					<visible>!Control.HasFocus(2)</visible>
+					<visible>!Control.HasFocus(5)</visible>
 					<texture border="10">list-nofocus.png</texture>
 				</control>
 				<control type="image">
@@ -85,7 +83,7 @@
 					<top>0</top>
 					<width>600</width>
 					<height>45</height>
-					<visible>Control.HasFocus(2)</visible>
+					<visible>Control.HasFocus(5)</visible>
 					<texture border="10">list-focus.png</texture>
 				</control>
 				<control type="label">
@@ -98,7 +96,7 @@
 					<aligny>center</aligny>
 					<textcolor>black</textcolor>
 					<info>ListItem.Label</info>
-					<visible>Control.HasFocus(2)</visible>
+					<visible>Control.HasFocus(5)</visible>
 				</control>
 				<control type="label">
 					<left>10</left>
@@ -110,7 +108,7 @@
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>
 					<info>ListItem.Label</info>
-					<visible>!Control.HasFocus(2)</visible>
+					<visible>!Control.HasFocus(5)</visible>
 				</control>
 			</focusedlayout>
 		</control>
@@ -120,9 +118,9 @@
 			<top>557</top>
 			<subtype>page</subtype>
 			<font />
-			<onleft>2</onleft>
-			<onright>2</onright>
-			<ondown>2</ondown>
+			<onleft>5</onleft>
+			<onright>5</onright>
+			<ondown>5</ondown>
 			<onup>60</onup>
 			<textcolor>white</textcolor>
 			<showonepage>true</showonepage>
@@ -138,7 +136,7 @@
 			<aligny>center</aligny>
 			<scroll>true</scroll>
 			<textcolor>white</textcolor>
-			<label>$LOCALIZE[31201] ($INFO[Container(2).CurrentPage]/$INFO[Container(2).NumPages])</label>
+			<label>$LOCALIZE[31201] ($INFO[Container(5).CurrentPage]/$INFO[Container(5).NumPages])</label>
 		</control>
 	</controls>
 </window>

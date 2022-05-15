@@ -44,21 +44,13 @@
 			<description>Default Button</description>
 			<left>0</left>
 			<top>0</top>
-			<height>45</height>
-			<font>font12</font>
-			<focusedcolor>black</focusedcolor>
-			<texturefocus border="10">list-focus.png</texturefocus>
-			<texturenofocus border="10">list-nofocus.png</texturenofocus>
+			<incude>DialogButtonCommonValues</incude>
 		</control>
 		<control type="radiobutton" id="8">
 			<description>Default RadioButton</description>
 			<left>0</left>
 			<top>0</top>
-			<height>45</height>
-			<font>font12</font>
-			<focusedcolor>black</focusedcolor>
-			<texturefocus border="10">list-focus.png</texturefocus>
-			<texturenofocus border="10">list-nofocus.png</texturenofocus>
+			<incude>DialogButtonCommonValues</incude>
 			<textureradioon>radiobutton-focus.png</textureradioon>
 			<textureradiooff>radiobutton-nofocus.png</textureradiooff>
 		</control>
@@ -66,20 +58,22 @@
 			<description>Default SpinControlex</description>
 			<left>0</left>
 			<top>0</top>
-			<height>45</height>
-			<texturefocus border="10">list-focus.png</texturefocus>
-			<texturenofocus border="10">list-nofocus.png</texturenofocus>
-			<font>font12</font>
-			<focusedcolor>black</focusedcolor>
-			<disabledcolor>disabled</disabledcolor>
-			<aligny>center</aligny>
-			<reverse>yes</reverse>
+			<incude>DialogButtonCommonValues</incude>
 		</control>
 		<control type="image" id="11">
 			<description>separator image</description>
 			<width>350</width>
 			<height>5</height>
 			<texture>separator.png</texture>
+		</control>
+		<control type="label" id="14">
+			<description>Separator label</description>
+			<label />
+			<height>25</height>
+			<font>font12</font>
+			<align>center</align>
+			<aligny>bottom</aligny>
+			<textcolor>blue</textcolor>
 		</control>
 		<control type="button" id="28">
 			<description>Ok Button</description>
