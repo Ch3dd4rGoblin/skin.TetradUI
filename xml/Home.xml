@@ -2,7 +2,6 @@
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<previouswindow>home</previouswindow>
-	<allowoverlay>no</allowoverlay>	
 	<animation effect="fade" start="100" end="100" time="30" condition="Control.HasFocus(1)">WindowClose</animation>
 	<animation effect="fade" start="100" end="100" time="30" condition="Control.HasFocus(2)">WindowClose</animation>
 	<controls>

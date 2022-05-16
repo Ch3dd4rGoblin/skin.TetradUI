@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">8</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
 	<controls>
 		<control type="group">
 			<visible>!Window.IsVisible(FileBrowser)</visible>
@@ -759,6 +758,11 @@
 						<description>Get Art</description>
 						<include>InfoDialogButtonCommonValues</include>
 						<label>13511</label>
+					</control>
+					<control type="button" id="7">
+						<description>Set my rating</description>
+						<include>InfoDialogButtonCommonValues</include>
+						<label>38023</label>
 					</control>
 					<control type="button" id="11">
 						<description>Play Trailer</description>

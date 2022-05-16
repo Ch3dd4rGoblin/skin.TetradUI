@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<allowoverlay>no</allowoverlay>	
 	<previouswindow>Settings</previouswindow>
 	<animation effect="fade" start="100" end="100" time="30" condition="Control.HasFocus(1)">WindowClose</animation>
 	<animation effect="fade" start="100" end="100" time="30" condition="Control.HasFocus(2)">WindowClose</animation>
@@ -197,6 +196,12 @@
 							<label>$LOCALIZE[13200]</label>
 							<label2>31405</label2>
 							<onclick>ActivateWindow(Profiles)</onclick>
+							<icon>button_icons/icon-profile.png</icon>
+						</item>
+						<item>
+							<label>$LOCALIZE[10050]</label>
+							<label2>31405</label2>
+							<onclick>ActivateWindow(Eventlog)</onclick>
 							<icon>button_icons/icon-profile.png</icon>
 						</item>
 						<item>

@@ -2,6 +2,13 @@
 <includes>
 	<include name="VideoCodecFlagging">
 		<control type="image">
+			<description>Collection</description>
+			<width>80</width>
+			<height>35</height>
+			<texture colordiffuse="ddffffff">flagging/videocodec/collection.png</texture>
+			<visible>ListItem.IsCollection</visible>
+		</control>
+		<control type="image">
 			<description>Video rez Image</description>
 			<width>80</width>
 			<height>35</height>
@@ -141,27 +148,25 @@
 		</control>
 		<control type="group">
 			<description>Year</description>
-			<width>90</width>
-			<height>35</height>
 			<visible>!String.IsEmpty(ListItem.Year)</visible>
+			<animation effect="fade" end="80" condition="true">Conditional</animation>
+			<width>80</width>
 			<control type="image">
 				<description>Year back</description>
-				<left>0</left>
-				<top>0</top>
-				<width>90</width>
+				<width>80</width>
 				<height>35</height>
-				<texture border="5">flagging/blank.png</texture>
+				<texture>flagging/blank.png</texture>
 			</control>
 			<control type="label">
 				<description>Year</description>
 				<left>10</left>
-				<top>8</top>
-				<width>70</width>
-				<height>19</height>
+				<top>-1</top>
+				<width>60</width>
+				<height>35</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>font12</font>
-				<textcolor>blue</textcolor>
+				<font>font8</font>
+				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Year]</label>
 			</control>
 		</control>
@@ -169,23 +174,24 @@
 			<description>Rating</description>
 			<width>120</width>
 			<height>35</height>
-			<visible>!String.IsEmpty(ListItem.StarRating)</visible>
+			<visible>!String.IsEmpty(ListItem.Rating)</visible>
 			<control type="image">
 				<description>Rating back</description>
 				<left>0</left>
 				<top>0</top>
-				<width>110</width>
+				<width>100</width>
 				<height>35</height>
-				<texture border="5">flagging/blank.png</texture>
+				<texture>flagging/blank.png</texture>
+				<animation effect="fade" end="80" condition="true">Conditional</animation>
 			</control>
 			<control type="image">
 				<description>Rating</description>
-				<left>5</left>
+				<left>7</left>
 				<top>5</top>
-				<width>100</width>
+				<width>86</width>
 				<height>25</height>
 				<aspectratio>keep</aspectratio>
-				<texture fallback="flagging/starrating/rating0.png">$INFO[ListItem.StarRating,flagging/starrating/]</texture>
+				<texture>$VAR[StarRating]</texture>
 			</control>
 		</control>
 	</include>

@@ -1,3 +1,6 @@
+[B]Version 0.0.6[/B]
+- Jarvis version
+
 [B]Version 0.0.5[/B]
 - Isengard version
 

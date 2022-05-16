@@ -73,6 +73,8 @@
 		<top>126</top>
 		<textureup>sortup-nofocus.png</textureup>
 		<texturedown>sortdown-nofocus.png</texturedown>
+		<textureupdisabled colordiffuse="60FFFFFF">sortup-nofocus.png</textureupdisabled>
+		<texturedowndisabled colordiffuse="60FFFFFF">sortdown-nofocus.png</texturedowndisabled>
 		<textureupfocus>sortup-focus.png</textureupfocus>
 		<texturedownfocus>sortdown-focus.png</texturedownfocus>
 		<align>right</align>
@@ -98,6 +100,8 @@
 		<texturenofocus />
 		<textureup>sortup-nofocus.png</textureup>
 		<texturedown>sortdown-nofocus.png</texturedown>
+		<textureupdisabled colordiffuse="60FFFFFF">sortup-nofocus.png</textureupdisabled>
+		<texturedowndisabled colordiffuse="60FFFFFF">sortdown-nofocus.png</texturedowndisabled>
 		<textureupfocus>sortup-focus.png</textureupfocus>
 		<texturedownfocus>sortdown-focus.png</texturedownfocus>
 		<font>font12</font>
@@ -117,6 +121,8 @@
 		<radioheight>24</radioheight>
 		<textureradiofocus>check-box.png</textureradiofocus>
 		<textureradionofocus>check-boxNF.png</textureradionofocus>
+		<textureradioondisabled colordiffuse="60FFFFFF">check-box.png</textureradioondisabled>
+		<textureradiooffdisabled colordiffuse="60FFFFFF">check-boxNF.png</textureradiooffdisabled>
 		<texturefocus>button-focus.png</texturefocus>
 		<texturenofocus>button-nofocus.png</texturenofocus>
 		<label>215</label>

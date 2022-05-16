@@ -27,7 +27,7 @@
 			<textcolor>orange</textcolor>
 			<shadowcolor>black</shadowcolor>
 		</control>
-		<control type="label" id="3">
+		<control type="label" id="4">
 			<description>List label</description>
 			<left>50</left>
 			<top>100</top>

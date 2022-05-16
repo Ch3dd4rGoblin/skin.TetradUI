@@ -264,7 +264,9 @@
 				<onright>704</onright>
 				<onup>703</onup>
 				<ondown>703</ondown>
-				<onclick>ActivateWindow(122)</onclick>
+				<onclick>ActivateWindow(VisualisationPresetList)</onclick>
+				<animation effect="fade" start="100" end="50" time="100" condition="!Visualisation.HasPresets">Conditional</animation>
+				<enable>Visualisation.HasPresets</enable>
 			</control>
 			<control type="button" id="704">
 				<left>180</left>

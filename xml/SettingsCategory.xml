@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>3</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
 	<controls>
 		<include condition="!Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
 		<control type="group">
@@ -15,7 +14,7 @@
 		<include condition="Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
 
 		<control type="group">
-			<visible>!Window.Previous(Weather) + !Window.Previous(Videos) + !Window.Previous(MusicFiles) + !Window.Previous(MusicLibrary) + !Window.Previous(Pictures) + !Window.Previous(Programs)</visible>
+			<visible>!Window.Previous(Weather) + !Window.Previous(Videos) + !Window.Previous(Music) + !Window.Previous(Pictures) + !Window.Previous(Programs)</visible>
 			<include>CommonSystemBlackwash</include>
 		</control>
 		<control type="group">
@@ -27,7 +26,7 @@
 			<include>CommonAppsBlackwash</include>
 		</control>
 		<control type="group">
-			<visible>Window.Previous(Videos) | Window.Previous(MusicFiles) | Window.Previous(MusicLibrary) | Window.Previous(Pictures)</visible>
+			<visible>Window.Previous(Videos) | Window.Previous(Music) | Window.Previous(Pictures)</visible>
 			<include>CommonMediaBlackwash</include>
 		</control>
 
@@ -125,7 +124,7 @@
 
 
 		<control type="group">
-			<visible>!Window.Previous(Weather) + !Window.Previous(Videos) + !Window.Previous(MusicFiles) + !Window.Previous(MusicLibrary) + !Window.Previous(Pictures) + !Window.Previous(Programs)</visible>
+			<visible>!Window.Previous(Weather) + !Window.Previous(Videos) + !Window.Previous(Music) + !Window.Previous(Pictures) + !Window.Previous(Programs)</visible>
 			<include>SettingsToSubBlades</include>
 		</control>
 		<control type="group">
@@ -137,7 +136,7 @@
 			<include>AppsToSubBlades</include>
 		</control>
 		<control type="group">
-			<visible>Window.Previous(Videos) | Window.Previous(MusicFiles) | Window.Previous(MusicLibrary) | Window.Previous(Pictures)</visible>
+			<visible>Window.Previous(Videos) | Window.Previous(Music) | Window.Previous(Pictures)</visible>
 			<include>MediaToSubBlades</include>
 		</control>
 		

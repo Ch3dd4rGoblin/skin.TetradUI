@@ -49,4 +49,17 @@
 		<value condition="Container.Content(MusicVideos)">$LOCALIZE[20393]</value>
 		<value>$LOCALIZE[20159]</value>
 	</variable>
+	<variable name="StarRating">
+		<value condition="Integer.IsLess(ListItem.Rating,1)">flagging/starrating/0.png</value>
+		<value condition="Integer.IsLess(ListItem.Rating,2)">flagging/starrating/1.png</value>
+		<value condition="Integer.IsLess(ListItem.Rating,3)">flagging/starrating/2.png</value>
+		<value condition="Integer.IsLess(ListItem.Rating,4)">flagging/starrating/3.png</value>
+		<value condition="Integer.IsLess(ListItem.Rating,5)">flagging/starrating/4.png</value>
+		<value condition="Integer.IsLess(ListItem.Rating,6)">flagging/starrating/5.png</value>
+		<value condition="Integer.IsLess(ListItem.Rating,7)">flagging/starrating/6.png</value>
+		<value condition="Integer.IsLess(ListItem.Rating,8)">flagging/starrating/7.png</value>
+		<value condition="Integer.IsLess(ListItem.Rating,9)">flagging/starrating/8.png</value>
+		<value condition="Integer.IsLess(ListItem.Rating,10)">flagging/starrating/9.png</value>
+		<value>flagging/starrating/10.png</value>
+	</variable>
 </includes>

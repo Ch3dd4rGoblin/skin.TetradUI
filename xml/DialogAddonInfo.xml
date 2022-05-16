@@ -384,14 +384,6 @@
 						<include>InfoDialogButtonCommonValues</include>
 						<label>39024</label>
 					</control>
-					<!--
-					<control type="button" id="10">
-						<description>Changelog button</description>
-						<width>148</width>
-						<include>InfoDialogButtonCommonValues</include>
-						<label>24036</label>
-					</control>
-					-->
 				</control>
 			</control>
 		</control>

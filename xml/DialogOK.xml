@@ -30,7 +30,6 @@
 		</control>
 		<control type="textbox" id="9">
 			<description>text</description>
-			<!-- ADDED BY GADE! -->
 			<left>50</left>
 			<top>110</top>
 			<width>600</width>
