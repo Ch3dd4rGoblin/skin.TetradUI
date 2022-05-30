@@ -74,19 +74,6 @@
 			</control>
 			<control type="group">
 				<top>225</top>
-				<control type="image">
-					<description>Button Highlight</description>
-					<texture>homebutton-$INFO[Container(9000).Position].png</texture>
-					<visible>Control.HasFocus(9000)</visible>
-					<include>HomeButtonHighlightCommonValues</include>
-				</control>
-				<control type="image">
-					<description>Button Shadow</description>
-					<texture>homebutton-$INFO[Container(9000).Position]-shadow.png</texture>
-					<animation effect="fade" delay="100" time="175">visible</animation>
-					<visible>Control.HasFocus(9000) + !Container(9000).OnNext + !Container(9000).OnPrevious</visible>
-					<include>HomeButtonHighlightCommonValues</include>
-				</control>
 				<control type="list" id="9000">
 					<left>0</left>
 					<top>0</top>
@@ -124,6 +111,16 @@
 					</itemlayout>
 					<focusedlayout height="52" width="450">
 						<control type="image">
+							<description>Button focus</description>
+							<left>30</left>
+							<width>397</width>
+							<height>50</height>
+							<texture>button.png</texture>
+							<animation effect="slide" start="0,-52" time="200" tween="sine" easing="out" condition="Container(9000).OnNext" reversible="false">Focus</animation>
+							<animation effect="slide" start="0,52" time="200" tween="sine" easing="out" condition="Container(9000).OnPrevious" reversible="false">Focus</animation>
+							<animation effect="fade" start="100" end="70" time="200" condition="!Control.HasFocus(9000)">Conditional</animation>
+						</control>
+						<control type="image">
 							<description>Icon</description>
 							<left>50</left>
 							<top>6</top>
@@ -139,23 +136,10 @@
 							<height>50</height>
 							<font>font30</font>
 							<aligny>center</aligny>
-							<textcolor>black</textcolor>
-							<align>left</align>
-							<label>$INFO[ListItem.Label]</label>
-							<animation effect="slide" end="ButtonSlideBackDistance,0" time="ButtonSlideBackTime" reversible="false">focus</animation>
-							<visible>Control.HasFocus(9000)</visible>
-						</control>
-						<control type="label">
-							<left>120</left>
-							<top>0</top>
-							<width>330</width>
-							<height>50</height>
-							<font>font30</font>
-							<aligny>center</aligny>
 							<textcolor>white</textcolor>
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>!Control.HasFocus(9000)</visible>
+							<animation effect="slide" end="ButtonSlideBackDistance,0" time="ButtonSlideBackTime" reversible="false">focus</animation>
 						</control>
 						<control type="image">
 							<description>Button shine animation</description>

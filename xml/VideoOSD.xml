@@ -9,13 +9,13 @@
 	</coordinates>
 	<controls>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(DialogSettings.xml) | Window.IsVisible(VideoBookmarks)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(DialogSettings.xml) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(1101)">Conditional</animation>
 			<control type="grouplist" id="100">
 				<left>325</left>
 				<top>670</top>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
-				<onleft>705</onleft>
+				<onleft>707</onleft>
 				<onright>706</onright>
 				<control type="button" id="600">
 					<left>0</left>
@@ -89,9 +89,9 @@
 				</control>
 			</control>
 			<control type="grouplist">
-				<left>985</left>
+				<left>940</left>
 				<top>670</top>
-				<width>270</width>
+				<width>315</width>
 				<align>right</align>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
@@ -106,6 +106,8 @@
 					<font />
 					<texturefocus>OSDStereoscopicFO.png</texturefocus>
 					<texturenofocus>OSDStereoscopicNF.png</texturenofocus>
+					<onclick>SetProperty(settingslist_content,3d,home)</onclick>
+					<onclick>SetProperty(settingslist_header,$LOCALIZE[36501],home)</onclick>
 					<onclick>ActivateWindow(1101)</onclick>
 					<enable>VideoPlayer.IsStereoscopic</enable>
 					<animation effect="fade" start="100" end="0" time="75" condition="!VideoPlayer.IsStereoscopic">Conditional</animation>
@@ -165,6 +167,20 @@
 					<texturenofocus>OSDDvdNF.png</texturenofocus>
 					<onclick>PlayerControl(ShowVideoMenu)</onclick>
 					<enable>VideoPlayer.HasMenu</enable>
+					<animation effect="fade" start="100" end="50" time="100" condition="!VideoPlayer.HasMenu">Conditional</animation>
+				</control>
+				<control type="button" id="707">
+					<left>180</left>
+					<top>0</top>
+					<width>45</width>
+					<height>45</height>
+					<label>5</label>
+					<font />
+					<texturefocus>OSDPresetSettingsFO.png</texturefocus>
+					<texturenofocus>OSDPresetSettingsNF.png</texturenofocus>
+					<onclick>SetProperty(settingslist_content,settings,home)</onclick>
+					<onclick>SetProperty(settingslist_header,$LOCALIZE[5],home)</onclick>
+					<onclick>ActivateWindow(1101)</onclick>
 					<animation effect="fade" start="100" end="50" time="100" condition="!VideoPlayer.HasMenu">Conditional</animation>
 				</control>
 			</control>

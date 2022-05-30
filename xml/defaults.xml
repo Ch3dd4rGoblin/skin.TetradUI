@@ -151,6 +151,7 @@
 		<texturesliderbar>osd_slider_bg.png</texturesliderbar>
 		<textureslidernib>slider_nibFO.png</textureslidernib>
 		<textureslidernibfocus>slider_nibFO.png</textureslidernibfocus>
+		<orientation>horizontal</orientation>
 	</default>
 	<default type="sliderex">
 		<textcolor>white</textcolor>

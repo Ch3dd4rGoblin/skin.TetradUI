@@ -155,12 +155,6 @@
 							<onclick>InhibitIdleShutdown(false)</onclick>
 							<visible>System.HasShutdown + System.IsInhibit</visible>
 						</item>
-						<item>
-							<label>130</label>
-							<onclick>Dialog.Close(shutdownmenu)</onclick>
-							<onclick>ActivateWindow(systeminfo)</onclick>
-							<visible>System.LoggedOn</visible>
-						</item>
 					</content>
 				</control>
 			</control>

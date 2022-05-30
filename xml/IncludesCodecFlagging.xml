@@ -146,54 +146,14 @@
 			<texture>flagging/audiocodec/ogg.png</texture>
 			<visible>String.EndsWith(ListItem.Filename,.ogg)</visible>
 		</control>
-		<control type="group">
-			<description>Year</description>
-			<visible>!String.IsEmpty(ListItem.Year)</visible>
-			<animation effect="fade" end="80" condition="true">Conditional</animation>
-			<width>80</width>
-			<control type="image">
-				<description>Year back</description>
-				<width>80</width>
-				<height>35</height>
-				<texture>flagging/blank.png</texture>
-			</control>
-			<control type="label">
-				<description>Year</description>
-				<left>10</left>
-				<top>-1</top>
-				<width>60</width>
-				<height>35</height>
-				<align>center</align>
-				<aligny>center</aligny>
-				<font>font8</font>
-				<textcolor>white</textcolor>
-				<label>$INFO[ListItem.Year]</label>
-			</control>
-		</control>
-		<control type="group">
-			<description>Rating</description>
-			<width>120</width>
-			<height>35</height>
-			<visible>!String.IsEmpty(ListItem.Rating)</visible>
-			<control type="image">
-				<description>Rating back</description>
-				<left>0</left>
-				<top>0</top>
-				<width>100</width>
-				<height>35</height>
-				<texture>flagging/blank.png</texture>
-				<animation effect="fade" end="80" condition="true">Conditional</animation>
-			</control>
-			<control type="image">
-				<description>Rating</description>
-				<left>7</left>
-				<top>5</top>
-				<width>86</width>
-				<height>25</height>
-				<aspectratio>keep</aspectratio>
-				<texture>$VAR[StarRating]</texture>
-			</control>
-		</control>
+		<include content="CodecFlaggingImage">
+			<param name="visible" value="!String.IsEmpty(ListItem.Year)" />
+			<param name="info" value="$INFO[ListItem.Year]" />
+		</include>
+		<include content="CodecFlaggingRating">
+			<param name="visible" value="!String.IsEmpty(ListItem.Rating)" />
+			<param name="info" value="$VAR[StarRating]" />
+		</include>
 	</include>
 	<include name="VideoPlayerVideoCodecFlagging">
 		<control type="image" id="1">

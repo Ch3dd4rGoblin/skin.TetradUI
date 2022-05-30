@@ -3,7 +3,7 @@
 	<controls>
 		<!-- media infos -->
 		<control type="group" id="1">
-			<visible>[Player.ShowInfo | Window.IsActive(VideoOSD)] + ![Window.IsVisible(VideoBookmarks) | Window.IsVisible(DialogSettings.xml) | Window.IsVisible(124) | Window.IsVisible(125)]</visible>
+			<visible>[Player.ShowInfo | Window.IsActive(VideoOSD) | !String.IsEmpty(Player.SeekNumeric)] + ![Window.IsVisible(VideoBookmarks) | Window.IsVisible(DialogSettings.xml) | Window.IsVisible(124) | Window.IsVisible(125) | Window.IsVisible(1101)]</visible>
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<control type="image" id="1">
 				<left>0</left>
@@ -94,36 +94,9 @@
 					<height>25</height>
 					<align>left</align>
 					<font>font12</font>
-					<label>$INFO[VideoPlayer.Studio]</label>
+					<label>$VAR[VideoFullScreenLabel]</label>
 					<textcolor>grey2</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<visible>VideoPlayer.Content(Movies)</visible>
-				</control>
-				<control type="label" id="1">
-					<description>TV Show label</description>
-					<left>20</left>
-					<top>30</top>
-					<width>910</width>
-					<height>25</height>
-					<align>left</align>
-					<font>font12</font>
-					<label>$INFO[VideoPlayer.TVShowTitle] ($INFO[VideoPlayer.Season]x$INFO[VideoPlayer.Episode])</label>
-					<textcolor>grey2</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<visible>VideoPlayer.Content(Episodes)</visible>
-				</control>
-				<control type="label" id="1">
-					<description>Music Info label</description>
-					<left>20</left>
-					<top>30</top>
-					<width>910</width>
-					<height>25</height>
-					<align>left</align>
-					<font>font12</font>
-					<label>$INFO[VideoPlayer.Artist] $INFO[VideoPlayer.Album, - ]</label>
-					<textcolor>grey2</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<visible>VideoPlayer.Content(MusicVideos)</visible>
 				</control>
 				<control type="grouplist" id="1">
 					<left>20</left>
@@ -193,6 +166,17 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<label>$INFO[Player.Duration(hh:mm:ss)]</label>
+				</control>
+				<control type="label" id="1">
+					<left>100</left>
+					<top>50</top>
+					<width>720</width>
+					<height>40</height>
+					<font>font13</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[Player.SeekNumeric(hh:mm:ss)]</label>
+					<visible>!String.IsEmpty(Player.SeekNumeric)</visible>
 				</control>
 			</control>
 		</control>

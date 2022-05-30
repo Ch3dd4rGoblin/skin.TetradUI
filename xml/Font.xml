@@ -2,6 +2,11 @@
 <fonts>
 	<fontset id="Default" idloc="31390">
 		<font>
+			<name>font6</name>
+			<filename>MC360.ttf</filename>
+			<size>13</size>
+		</font>
+		<font>
 			<name>font8</name>
 			<filename>MC360.ttf</filename>
 			<size>16</size>
@@ -44,6 +49,11 @@
 		</font>
 	</fontset>
 	<fontset id="Arial" idloc="31391">
+		<font>
+			<name>font6</name>
+			<filename>Arial.ttf</filename>
+			<size>11</size>
+		</font>
 		<font>
 			<name>font8</name>
 			<filename>Arial.ttf</filename>

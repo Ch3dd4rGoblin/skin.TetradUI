@@ -773,7 +773,7 @@
 				<shadowcolor>black</shadowcolor>
 				<align>left</align>
 				<aligny>center</aligny>
-				<label>$INFO[ListItem.Property(Addon.Name)]</label>
+				<label>$INFO[ListItem.AddonName]</label>
 				<scrollout>false</scrollout>
 				<pauseatend>2000</pauseatend>
 			</control>
@@ -784,7 +784,7 @@
 				<width>350</width>
 				<height>410</height>
 				<font>font12</font>
-				<label>$INFO[ListItem.Property(Addon.Description)]</label>
+				<label>$INFO[ListItem.AddonDescription]</label>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<align>justify</align>

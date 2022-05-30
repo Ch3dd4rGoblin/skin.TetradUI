@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">99</defaultcontrol>
+	<defaultcontrol always="true">3</defaultcontrol>
 	<previouswindow>Weather</previouswindow>
 	<animation effect="fade" start="100" end="100" time="30" condition="Control.HasFocus(1)">WindowClose</animation>
 	<animation effect="fade" start="100" end="100" time="30" condition="Control.HasFocus(2)">WindowClose</animation>
@@ -61,127 +61,60 @@
 			<include content="ClockTextCommons">
 				<param name="left" value="540" />
 			</include>
-			<control type="group" id="9000">
-				<left>-30</left>
+			<control type="grouplist" id="9000">
+				<left>10</left>
 				<top>120</top>
-				<control type="image">
-					<description>Button Seperator</description>
-					<left>30</left>
-					<top>1</top>
-					<width>310</width>
-					<height>2</height>
-					<texture>divider.png</texture>
-				</control>
-				<control type="image">
-					<description>Button Seperator</description>
-					<left>30</left>
-					<top>49</top>
-					<width>310</width>
-					<height>2</height>
-					<texture>divider.png</texture>
-				</control>
-				<control type="image">
-					<description>Button Seperator</description>
-					<left>30</left>
-					<top>97</top>
-					<width>310</width>
-					<height>2</height>
-					<texture>divider.png</texture>
-				</control>
-				<control type="image">
-					<description>Button Seperator</description>
-					<left>30</left>
-					<top>145</top>
-					<width>310</width>
-					<height>2</height>
-					<texture>divider.png</texture>
-				</control>
-				<control type="image">
-					<description>Button Seperator</description>
-					<left>30</left>
-					<top>193</top>
-					<width>310</width>
-					<height>2</height>
-					<texture>divider.png</texture>
-				</control>
-				<control type="image">
-					<description>Location Push Button Highlight</description>
-					<texture>systemhomebutton-0.png</texture>
-					<visible>Control.HasFocus(3)</visible>
-					<include>WeatherButtonHighlightCommonValues</include>
-				</control>
-				<control type="image">
-					<description>Location Push Button Shadow</description>
-					<texture>systemhomebutton-0-shadow.png</texture>
-					<animation effect="fade" delay="100" time="175">Visible</animation>
-					<visible>Control.HasFocus(3)</visible>
-					<include>WeatherButtonHighlightCommonValues</include>
-				</control>
-				<control type="image">
-					<description>Location Push Button Icon</description>
-					<left>40</left>
-					<top>4</top>
-					<width>43</width>
-					<height>43</height>
-					<texture>button_icons/icon-xbmc.png</texture>
-					<animation effect="slide" end="ButtonSlideBackDistance,0" time="ButtonSlideBackTime" reversible="false" condition="Control.HasFocus(3)">Conditional</animation>
-				</control>
-				<control type="label">
-					<description>Location Push Button Label Unfocus</description>
-					<left>110</left>
-					<top>6</top>
-					<width>300</width>
-					<height>43</height>
-					<label>Location</label>
-					<textcolor>white2</textcolor>
-					<shadowcolor />
-					<font>font30</font>
-					<visible>!Control.HasFocus(3)</visible>
-				</control>
-				<control type="label">
-					<description>Location Push Button Label Focus</description>
-					<left>110</left>
-					<top>6</top>
-					<width>300</width>
-					<height>43</height>
-					<label>Location</label>
-					<textcolor>black</textcolor>
-					<shadowcolor />
-					<font>font30</font>
-					<visible>Control.HasFocus(3)</visible>
-					<animation effect="slide" end="ButtonSlideBackDistance,0" time="ButtonSlideBackTime" reversible="false">visible</animation>
-				</control>
-				<control type="spincontrol" id="3">
-					<description>weather location select</description>
-					<align>right</align>
-					<left>270</left>
-					<top>10</top>
-					<font />
-					<reverse>yes</reverse>
-					<onup>4</onup>
-					<ondown>99</ondown>
-					<onleft>noop</onleft>
-					<onright>1</onright>
-					<textoffsety>-12</textoffsety>
-					<disabledcolor>grey</disabledcolor>
-					<animation effect="slide" end="ButtonSlideBackDistance,0" time="ButtonSlideBackTime" reversible="false">focus</animation>
-				</control>
-				<control type="image">
-					<description>Refresh Push Button Highlight</description>
-					<texture>systemhomebutton-1.png</texture>
-					<visible>Control.HasFocus(99)</visible>
-					<include>WeatherButtonHighlightCommonValues</include>
-				</control>
-				<control type="image">
-					<description>Refresh Push Button Shadow</description>
-					<texture>systemhomebutton-1-shadow.png</texture>
-					<animation effect="fade" delay="100" time="175">Visible</animation>
-					<visible>Control.HasFocus(99)</visible>
-					<include>WeatherButtonHighlightCommonValues</include>
+				<itemgap>7</itemgap>
+				<orientation>vertical</orientation>
+				<control type="group" id="9001">
+					<height>49</height>
+					<control type="image">
+						<description>Location Push Button Icon</description>
+						<top>4</top>
+						<width>43</width>
+						<height>43</height>
+						<texture>button_icons/icon-xbmc.png</texture>
+						<animation effect="slide" end="ButtonSlideBackDistance,0" time="ButtonSlideBackTime" reversible="false" condition="Control.HasFocus(3)">Conditional</animation>
+					</control>
+					<control type="label">
+						<description>Location Push Button Label Unfocus</description>
+						<left>70</left>
+						<top>6</top>
+						<width>300</width>
+						<height>43</height>
+						<label>Location</label>
+						<textcolor>white2</textcolor>
+						<shadowcolor />
+						<font>font30</font>
+						<visible>!Control.HasFocus(3)</visible>
+					</control>
+					<control type="label">
+						<description>Location Push Button Label Focus</description>
+						<left>70</left>
+						<top>6</top>
+						<width>300</width>
+						<height>43</height>
+						<label>Location</label>
+						<textcolor>white</textcolor>
+						<shadowcolor />
+						<font>font30</font>
+						<visible>Control.HasFocus(3)</visible>
+						<animation effect="slide" end="ButtonSlideBackDistance,0" time="ButtonSlideBackTime" reversible="false">visible</animation>
+					</control>
+					<control type="spincontrol" id="3">
+						<description>weather location select</description>
+						<align>right</align>
+						<left>230</left>
+						<top>10</top>
+						<font />
+						<onup>4</onup>
+						<ondown>99</ondown>
+						<onright>1</onright>
+						<animation effect="slide" end="ButtonSlideBackDistance,0" time="ButtonSlideBackTime" reversible="false">focus</animation>
+					</control>
 				</control>
 				<control type="radiobutton" id="99">
 					<description>Forecast/Current Highlight Button</description>
-					<top>52</top>
 					<label>31022</label>
 					<altlabel>31026</altlabel>
 					<texturefocus>button_icons/icon-weather.png</texturefocus>
@@ -189,57 +122,36 @@
 					<selected>Skin.HasSetting(WeatherUseForecast)</selected>
 					<onclick>Skin.ToggleSetting(WeatherUseForecast)</onclick>
 					<radioposx>265</radioposx>
-					<onup>3</onup>
-					<ondown>2</ondown>
+					<onup>9001</onup>
 					<include>WeatherButtonCommonValues</include>
-				</control>
-				<control type="image">
-					<description>Refresh Push Button Highlight</description>
-					<texture>systemhomebutton-2.png</texture>
-					<visible>Control.HasFocus(2)</visible>
-					<include>WeatherButtonHighlightCommonValues</include>
-				</control>
-				<control type="image">
-					<description>Refresh Push Button Shadow</description>
-					<texture>systemhomebutton-2-shadow.png</texture>
-					<animation effect="fade" delay="100" time="175">Visible</animation>
-					<visible>Control.HasFocus(2)</visible>
-					<include>WeatherButtonHighlightCommonValues</include>
 				</control>
 				<control type="button" id="2">
 					<description>Refresh Push Button</description>
-					<top>100</top>
 					<label />
 					<texturefocus>button_icons/icon-refresh.png</texturefocus>
 					<texturenofocus>button_icons/icon-refresh.png</texturenofocus>
-					<onup>99</onup>
-					<ondown>4</ondown>
 					<include>WeatherButtonCommonValues</include>
-				</control>
-				<control type="image">
-					<description>Settings Push Button Highlight</description>
-					<texture>systemhomebutton-3.png</texture>
-					<visible>Control.HasFocus(4)</visible>
-					<include>WeatherButtonHighlightCommonValues</include>
-				</control>
-				<control type="image">
-					<description>Refresh Push Button Shadow</description>
-					<texture>systemhomebutton-3-shadow.png</texture>
-					<animation effect="fade" delay="100" time="175">Visible</animation>
-					<visible>Control.HasFocus(4)</visible>
-					<include>WeatherButtonHighlightCommonValues</include>
 				</control>
 				<control type="button" id="4">
 					<description>Settings Push Button</description>
-					<top>148</top>
 					<label>5</label>
 					<texturefocus>button_icons/icon-xbmc.png</texturefocus>
 					<texturenofocus>button_icons/icon-xbmc.png</texturenofocus>
 					<onclick>ActivateWindow(ServiceSettings,weather)</onclick>
-					<onup>2</onup>
-					<ondown>3</ondown>
+					<ondown>9001</ondown>
 					<include>WeatherButtonCommonValues</include>
 				</control>
+			</control>
+			<control type="image">
+				<description>Button focus</description>
+				<top>120</top>
+				<left>-5</left>
+				<width>320</width>
+				<height>50</height>
+				<texture>button.png</texture>
+				<animation effect="slide" end="0,52" time="200" easing="out" condition="Control.HasFocus(99)">Conditional</animation>
+				<animation effect="slide" end="0,102" time="200" easing="out" condition="Control.HasFocus(2)">Conditional</animation>
+				<animation effect="slide" end="0,152" time="200" easing="out" condition="Control.HasFocus(4)">Conditional</animation>
 			</control>
 			<control type="textbox" id="400">
 				<description>No weather warning</description>

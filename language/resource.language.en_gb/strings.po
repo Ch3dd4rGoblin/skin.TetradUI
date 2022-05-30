@@ -124,7 +124,79 @@ msgctxt "#31203"
 msgid "PLAYER OPTIONS"
 msgstr ""
 
-# empty strings from id 31204 to 31227
+# empty strings from id 31204 to 31209
+
+msgctxt "#31210"
+msgid "Contributors"
+msgstr ""
+
+msgctxt "#31211"
+msgid "Rendering speed"
+msgstr ""
+
+msgctxt "#31212"
+msgid "Memory used"
+msgstr ""
+
+msgctxt "#31213"
+msgid "Hardware decoding"
+msgstr ""
+
+msgctxt "#31214"
+msgid "Pixel format"
+msgstr ""
+
+msgctxt "#31215"
+msgid "Frames per second"
+msgstr ""
+
+msgctxt "#31216"
+msgid "aspect ratio"
+msgstr ""
+
+msgctxt "#31217"
+msgid "Decoder"
+msgstr ""
+
+msgctxt "#31218"
+msgid "Codec"
+msgstr ""
+
+msgctxt "#31219"
+msgid "Video process information"
+msgstr ""
+
+msgctxt "#31220"
+msgid "Audio process information"
+msgstr ""
+
+msgctxt "#31221"
+msgid "Location"
+msgstr ""
+
+msgctxt "#31222"
+msgid "Play speed"
+msgstr ""
+
+msgctxt "#31223"
+msgid "Select Resolution"
+msgstr ""
+
+msgctxt "#31224"
+msgid "Select Program"
+msgstr ""
+
+msgctxt "#31225"
+msgid "Toggle subtitle"
+msgstr ""
+
+msgctxt "#31226"
+msgid "Toggle audio stream"
+msgstr ""
+
+msgctxt "#31227"
+msgid "available"
+msgstr ""
 
 msgctxt "#31228"
 msgid "Order"

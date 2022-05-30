@@ -202,7 +202,13 @@
 							<label>$LOCALIZE[10050]</label>
 							<label2>31405</label2>
 							<onclick>ActivateWindow(Eventlog)</onclick>
-							<icon>button_icons/icon-profile.png</icon>
+							<icon>button_icons/icon-eventlog.png</icon>
+						</item>
+						<item>
+							<label>$LOCALIZE[138]</label>
+							<label2>31405</label2>
+							<onclick>ActivateWindow(systeminfo)</onclick>
+							<icon>button_icons/icon-systeminfo.png</icon>
 						</item>
 						<item>
 							<label>20077</label>

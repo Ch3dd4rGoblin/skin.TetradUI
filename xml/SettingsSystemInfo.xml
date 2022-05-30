@@ -103,6 +103,18 @@
 					<align>left</align>
 					<label>13281</label>
 				</control>
+				<control type="button" id="100">
+					<description>Button Privacy Policy</description>
+					<height>50</height>
+					<width>200</width>
+					<textcolor>white</textcolor>
+					<texturefocus border="10">button-focus.png</texturefocus>
+					<texturenofocus border="10">button-nofocus.png</texturenofocus>
+					<align>left</align>
+					<label>12389</label>
+					<onright>60</onright>
+					<onleft>60</onleft>
+				</control>
 			</control>
 			<control type="group">
 				<left>220</left>
@@ -187,6 +199,44 @@
 					<label />
 					<font>font13</font>
 				</control>
+				<control type="textbox" id="30">
+					<description>Label 30</description>
+					<left>0</left>
+					<top>0</top>
+					<width>840</width>
+					<height>355</height>
+					<label />
+					<font>font13</font>
+					<pagecontrol>60</pagecontrol>
+					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+				</control>
+			</control>
+			<control type="group">
+				<visible>Control.IsVisible(30)</visible>
+				<control type="label">
+					<description>Privacy Policy Page Count</description>
+					<top>490</top>
+					<left>790</left>
+					<width>200</width>
+					<height>35</height>
+					<label>$INFO[Container(30).CurrentPage, $LOCALIZE[31201] (]$INFO[Container(30).NumPages,/,)]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>grey2</textcolor>
+				</control>
+				<control type="spincontrol" id="60">
+					<description>Next page button</description>
+					<top>490</top>
+					<left>1000</left>
+					<subtype>page</subtype>
+					<font />
+					<onleft>100</onleft>
+					<onright>100</onright>
+					<onup>100</onup>
+					<textcolor>white</textcolor>
+					<showonepage>true</showonepage>
+				</control>
 			</control>
 			<control type="group">
 				<left>130</left>
@@ -195,8 +245,8 @@
 				<animation effect="slide" start="0,0" end="-100,0" time="200" condition="Player.HasVideo + VideoPlayer.Content(Movies)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="-160,0" time="200" condition="Player.HasVideo + !VideoPlayer.Content(Movies)">Conditional</animation>
 				<control type="label" id="52">
-					<description>Kodi XBE BUILD Version</description>
-					<left>930</left>
+					<description>Kodi BUILD Version</description>
+					<left>20</left>
 					<top>0</top>
 					<width>910</width>
 					<label>144</label>
@@ -206,7 +256,6 @@
 					<font>font12</font>
 				</control>
 				<control type="group">
-					<left>600</left>
 					<top>30</top>
 					<control type="label">
 						<description>CPU Text</description>
@@ -223,7 +272,7 @@
 					</control>
 					<control type="progress">
 						<description>CPU BAR</description>
-						<left>10</left>
+						<left>610</left>
 						<top>7</top>
 						<width>320</width>
 						<height>12</height>
@@ -244,7 +293,7 @@
 					</control>
 					<control type="progress">
 						<description>Memory BAR</description>
-						<left>10</left>
+						<left>610</left>
 						<top>37</top>
 						<width>320</width>
 						<height>12</height>

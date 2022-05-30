@@ -54,7 +54,7 @@
 				<label>21433</label>
 				<textcolor>grey2</textcolor>
 			</control>
-			<control type="edit" id="12">
+			<control type="button" id="12">
 				<description>Name Button</description>
 				<left>50</left>
 				<top>180</top>

@@ -42,12 +42,47 @@
 		<value condition="Player.Seeking">$INFO[Player.SeekTime]</value>
 		<value>$INFO[VideoPlayer.Time]</value>
 	</variable>
-	<variable name="DialogVideoInfoTitleLabel">
-		<value condition="Container.Content(Movies)">$LOCALIZE[13346]</value>
-		<value condition="Container.Content(TVShows)">$LOCALIZE[20351]</value>
-		<value condition="Container.Content(Episodes)">$LOCALIZE[20352]</value>
-		<value condition="Container.Content(MusicVideos)">$LOCALIZE[20393]</value>
+	<variable name="VideoFullScreenLabel">
+		<value condition="VideoPlayer.Content(Movies)">$INFO[VideoPlayer.Studio]</value>
+		<value condition="VideoPlayer.Content(Episodes)">$INFO[VideoPlayer.TVShowTitle] ($INFO[VideoPlayer.Season]x$INFO[VideoPlayer.Episode])</value>
+		<value condition="VideoPlayer.Content(MusicVideos)">$INFO[VideoPlayer.Artist] $INFO[VideoPlayer.Album, - ]</value>
+	</variable>
+	<variable name="DialogInfoTitleLabel">
+		<value condition="String.IsEqual(ListItem.DBTYPE,movie)">$LOCALIZE[13346]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,tvshow)">$LOCALIZE[20351]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,episode)">$LOCALIZE[20352]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,musicvideo)">$LOCALIZE[20393]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,album)">$LOCALIZE[13351]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,artist)">$LOCALIZE[21891]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,song)">$LOCALIZE[658]</value>
 		<value>$LOCALIZE[20159]</value>
+	</variable>
+	<variable name="DialogMusicInfoTitleValue">
+		<value condition="String.IsEqual(ListItem.DBTYPE,album)">$INFO[Listitem.Album]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,artist)">$INFO[Listitem.Artist]</value>
+		<value>$INFO[Listitem.Title]</value>
+	</variable>
+	<variable name="DialogMusicInfoButton9002Label1">
+		<value condition="String.IsEqual(ListItem.DBTYPE,artist)">$LOCALIZE[132]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,album) + !Integer.IsEqual(Container(50).NumItems,0)">$LOCALIZE[182]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,album)">$LOCALIZE[21821]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,song) + !Integer.IsEqual(Container(50).NumItems,0)">$LOCALIZE[31210]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,song)">$LOCALIZE[569]</value>
+	</variable>
+	<variable name="DialogMusicInfoButton9002Label2">
+		<value condition="String.IsEqual(ListItem.DBTYPE,artist)">$LOCALIZE[21887]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,album)">$LOCALIZE[21821]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,song)">$LOCALIZE[569]</value>
+	</variable>
+	<variable name="DialogMusicInfoTextbox">
+		<value condition="Container.Content(Artists) + !String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
+		<value condition="Container.Content(Albums) + !String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
+		<value condition="Container.Content(Songs) + !String.IsEmpty(ListItem.Comment)">$INFO[ListItem.Comment]</value>
+		<value>$LOCALIZE[10005]</value>
+	</variable>
+	<variable name="ActiveVideoPlayerSubtitleLanguage">
+		<value condition="VideoPlayer.SubtitlesEnabled">[B]$INFO[VideoPlayer.SubtitlesLanguage][/B]</value>
+		<value>[B]$LOCALIZE[1223][/B]</value>
 	</variable>
 	<variable name="StarRating">
 		<value condition="Integer.IsLess(ListItem.Rating,1)">flagging/starrating/0.png</value>
@@ -61,5 +96,56 @@
 		<value condition="Integer.IsLess(ListItem.Rating,9)">flagging/starrating/8.png</value>
 		<value condition="Integer.IsLess(ListItem.Rating,10)">flagging/starrating/9.png</value>
 		<value>flagging/starrating/10.png</value>
+	</variable>
+	<variable name="PlayerStarRating">
+		<value condition="Player.HasVideo + Integer.IsLess(VideoPlayer.Rating,1)">flagging/starrating/0.png</value>
+		<value condition="Player.HasVideo + Integer.IsLess(VideoPlayer.Rating,2)">flagging/starrating/1.png</value>
+		<value condition="Player.HasVideo + Integer.IsLess(VideoPlayer.Rating,3)">flagging/starrating/2.png</value>
+		<value condition="Player.HasVideo + Integer.IsLess(VideoPlayer.Rating,4)">flagging/starrating/3.png</value>
+		<value condition="Player.HasVideo + Integer.IsLess(VideoPlayer.Rating,5)">flagging/starrating/4.png</value>
+		<value condition="Player.HasVideo + Integer.IsLess(VideoPlayer.Rating,6)">flagging/starrating/5.png</value>
+		<value condition="Player.HasVideo + Integer.IsLess(VideoPlayer.Rating,7)">flagging/starrating/6.png</value>
+		<value condition="Player.HasVideo + Integer.IsLess(VideoPlayer.Rating,8)">flagging/starrating/7.png</value>
+		<value condition="Player.HasVideo + Integer.IsLess(VideoPlayer.Rating,9)">flagging/starrating/8.png</value>
+		<value condition="Player.HasVideo + Integer.IsLess(VideoPlayer.Rating,10)">flagging/starrating/9.png</value>
+		<value condition="Player.HasVideo">flagging/starrating/10.png</value>
+		<value condition="Player.HasAudio + Integer.IsLess(MusicPlayer.Rating,1)">flagging/starrating/0.png</value>
+		<value condition="Player.HasAudio + Integer.IsLess(MusicPlayer.Rating,2)">flagging/starrating/1.png</value>
+		<value condition="Player.HasAudio + Integer.IsLess(MusicPlayer.Rating,3)">flagging/starrating/2.png</value>
+		<value condition="Player.HasAudio + Integer.IsLess(MusicPlayer.Rating,4)">flagging/starrating/3.png</value>
+		<value condition="Player.HasAudio + Integer.IsLess(MusicPlayer.Rating,5)">flagging/starrating/4.png</value>
+		<value condition="Player.HasAudio + Integer.IsLess(MusicPlayer.Rating,6)">flagging/starrating/5.png</value>
+		<value condition="Player.HasAudio + Integer.IsLess(MusicPlayer.Rating,7)">flagging/starrating/6.png</value>
+		<value condition="Player.HasAudio + Integer.IsLess(MusicPlayer.Rating,8)">flagging/starrating/7.png</value>
+		<value condition="Player.HasAudio + Integer.IsLess(MusicPlayer.Rating,9)">flagging/starrating/8.png</value>
+		<value condition="Player.HasAudio + Integer.IsLess(MusicPlayer.Rating,10)">flagging/starrating/9.png</value>
+		<value condition="Player.HasAudio">flagging/starrating/10.png</value>
+	</variable>
+	<variable name="videohwdecoder">
+		<value condition="Player.Process(videohwdecoder)">$LOCALIZE[13281]</value>
+		<value>$LOCALIZE[13419]</value>
+	</variable>
+	<variable name="DialogSelectContainerInfo">
+		<value condition="Control.IsVisible(3)">$LOCALIZE[31201] ($INFO[Container(3).CurrentPage]/$INFO[Container(3).NumPages])</value>
+		<value>$LOCALIZE[31201] ($INFO[Container(6).CurrentPage]/$INFO[Container(6).NumPages])</value>
+	</variable>
+	<variable name="DialogAddonInfoButton9001Label">
+		<value condition="String.IsEmpty(Skin.String(DialogAddonInfoButton9001)) + !String.IsEmpty(ListItem.AddonNews)">$LOCALIZE[29941]</value>
+		<value condition="!Integer.IsEqual(Container(50).NumItems,0) + [[String.IsEmpty(Skin.String(DialogAddonInfoButton9001)) + String.IsEmpty(ListItem.AddonNews)] | String.IsEqual(Skin.String(DialogAddonInfoButton9001),news)]">$LOCALIZE[20008]</value>
+		<value>$LOCALIZE[21821]</value>
+	</variable>
+	<variable name="DialogAddonInfoButton9001Onclick">
+		<value condition="String.IsEmpty(Skin.String(DialogAddonInfoButton9001)) + !String.IsEmpty(ListItem.AddonNews)">Skin.SetString(DialogAddonInfoButton9001,news)</value>
+		<value condition="!Integer.IsEqual(Container(50).NumItems,0) + [[String.IsEmpty(Skin.String(DialogAddonInfoButton9001)) + String.IsEmpty(ListItem.AddonNews)] | String.IsEqual(Skin.String(DialogAddonInfoButton9001),news)]">Skin.SetString(DialogAddonInfoButton9001,screenshots)</value>
+		<value>Skin.Reset(DialogAddonInfoButton9001)</value>
+	</variable>
+	<variable name="DialogAddonInfoDescriptionNewsToggle">
+		<value condition="String.IsEqual(Skin.String(DialogAddonInfoButton9001),news)">$INFO[ListItem.AddonNews]</value>
+		<value>$INFO[ListItem.AddonDescription]</value>
+	</variable>
+	<variable name="DialogAddonInfoContainerInfo">
+		<value condition="Control.IsVisible(400)">$LOCALIZE[31201] ($INFO[Container(400).CurrentPage]/$INFO[Container(400).NumPages])</value>
+		<value condition="Control.IsVisible(401)">$LOCALIZE[31201] ($INFO[Container(401).CurrentPage]/$INFO[Container(401).NumPages])</value>
+		<value condition="Control.IsVisible(50)">$LOCALIZE[31201] ($INFO[Container(50).CurrentPage]/$INFO[Container(50).NumPages])</value>
 	</variable>
 </includes>

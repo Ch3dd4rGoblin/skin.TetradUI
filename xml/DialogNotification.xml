@@ -9,7 +9,7 @@
 	<controls>
 		<control type="group">
 			<left>440</left>
-			<top>100r</top>
+			<top>620</top>
 			<control type="image">
 				<description>background</description>
 				<left>0</left>

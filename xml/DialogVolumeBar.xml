@@ -22,7 +22,18 @@
 				<height>40</height>
 				<aspectratio>keep</aspectratio>
 				<texture>volumelogo.png</texture>
-				<visible>!Window.IsVisible(Mutebug)</visible>
+				<visible>!Player.Muted</visible>
+				<include>VisibleFadeEffect</include>
+			</control>
+			<control type="image">
+				<description>Lite Volume Logo</description>
+				<left>300</left>
+				<top>10</top>
+				<width>40</width>
+				<height>40</height>
+				<aspectratio>keep</aspectratio>
+				<texture>icon-mute.png</texture>
+				<visible>Player.Muted</visible>
 				<include>VisibleFadeEffect</include>
 			</control>
 			<control type="progress" id="1">

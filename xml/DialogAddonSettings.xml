@@ -3,7 +3,7 @@
 	<defaultcontrol>5</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<left>165</left>
+		<left>62.5</left>
 		<top>30</top>
 	</coordinates>
 	<include>dialogeffect</include>
@@ -12,7 +12,7 @@
 			<description>background image</description>
 			<left>0</left>
 			<top>0</top>
-			<width>950</width>
+			<width>1155</width>
 			<height>660</height>
 			<texture border="50,100,50,50">Dialog.png</texture>
 			<animation effect="fade" start="90" end="90" time="0" condition="Window.IsVisible(Visualisation)">Conditional</animation>
@@ -21,7 +21,7 @@
 			<description>Heading label</description>
 			<left>50</left>
 			<top>50</top>
-			<width>850</width>
+			<width>1055</width>
 			<height>30</height>
 			<align>center</align>
 			<font>font16</font>
@@ -31,72 +31,76 @@
 		</control>
 		<control type="grouplist" id="3">
 			<description>Button area</description>
-			<left>700</left>
+			<left>50</left>
 			<top>100</top>
 			<width>200</width>
-			<height>370</height>
+			<height>450</height>
 			<itemgap>0</itemgap>
-			<onup>30</onup>
-			<ondown>28</ondown>
-			<onleft>5</onleft>
+			<onup>20</onup>
+			<ondown>20</ondown>
+			<onleft>9001</onleft>
 			<onright>5</onright>
+		</control>
+		<control type="button" id="20">
+			<left>50</left>
+			<top>550</top>
+			<include>DialogButton2CommonValues</include>
+			<onclick>SettingsLevelChange</onclick>
+			<onup>3</onup>
+			<ondown>3</ondown>
+			<onleft>9001</onleft>
+			<onright>60</onright>
 		</control>
 		<control type="grouplist" id="5">
 			<description>control area</description>
-			<left>50</left>
+			<left>260</left>
 			<top>100</top>
 			<width>635</width>
 			<height>450</height>
 			<itemgap>0</itemgap>
 			<pagecontrol>60</pagecontrol>
-			<onup>5</onup>
-			<ondown>5</ondown>
-			<onleft>60</onleft>
-			<onright>3</onright>
+			<onup>60</onup>
+			<ondown>60</ondown>
+			<onleft>3</onleft>
+			<onright>9001</onright>
 		</control>
 		<control type="spincontrol" id="60">
 			<description>Next page Spinner</description>
-			<left>50</left>
+			<left>640</left>
 			<top>575</top>
 			<subtype>page</subtype>
-			<textoffsetx>-110</textoffsetx>
+			<textoffsetx>80</textoffsetx>
+			<textoffsety>3</textoffsety>
+			<textwidth>200</textwidth>
 			<font>font12</font>
-			<onleft>5</onleft>
-			<onright>5</onright>
-			<ondown>60</ondown>
+			<align>left</align>
+			<onleft>20</onleft>
+			<onright>9001</onright>
 			<onup>5</onup>
 			<textcolor>white</textcolor>
 			<showonepage>false</showonepage>
 		</control>
-		<control type="group" id="9001">
-			<left>700</left>
-			<top>470</top>
+		<control type="grouplist" id="9001">
+			<left>905</left>
+			<top>100</top>
+			<orientation>vertical</orientation>
+			<itemgap>0</itemgap>
+			<onleft>5</onleft>
+			<onright>3</onright>
 			<control type="button" id="28">
 				<left>0</left>
 				<top>0</top>
 				<include>DialogButton2CommonValues</include>
-				<onleft>60</onleft>
-				<onright>5</onright>
-				<onup>3</onup>
-				<ondown>29</ondown>
 			</control>
 			<control type="button" id="29">
 				<left>0</left>
 				<top>45</top>
 				<include>DialogButton2CommonValues</include>
-				<onleft>60</onleft>
-				<onright>5</onright>
-				<onup>28</onup>
-				<ondown>30</ondown>
 			</control>
 			<control type="button" id="30">
 				<left>0</left>
 				<top>90</top>
 				<include>DialogButton2CommonValues</include>
-				<onleft>60</onleft>
-				<onright>5</onright>
-				<onup>29</onup>
-				<ondown>3</ondown>
 			</control>
 		</control>
 
@@ -134,18 +138,13 @@
 			<aligny>center</aligny>
 			<include>DialogButtonCommonValues</include>
 		</control>
-		<control type="image" id="11">
-			<description>Default Seperator</description>
-			<height>5</height>
-			<texture>separator.png</texture>
-		</control>
 		<control type="label" id="14">
 			<description>Separator label</description>
 			<label />
-			<height>25</height>
+			<height>45</height>
 			<font>font12</font>
 			<align>center</align>
-			<aligny>bottom</aligny>
+			<aligny>center</aligny>
 			<textcolor>blue</textcolor>
 		</control>
 	</controls>

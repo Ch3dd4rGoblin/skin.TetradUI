@@ -3,8 +3,8 @@
 	<defaultcontrol>11</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<left>440</left>
-		<top>40</top>
+		<left>420</left>
+		<top>7</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
@@ -12,7 +12,7 @@
 			<left>0</left>
 			<top>0</top>
 			<width>400</width>
-			<height>90</height>
+			<height>85</height>
 			<texture border="20,20,20,30">Dialog2.png</texture>
 		</control>
 		<control type="label" id="10">
@@ -20,27 +20,25 @@
 			<left>20</left>
 			<top>15</top>
 			<width>180</width>
-			<height>20</height>
+			<height>16</height>
 			<align>left</align>
-			<aligny>center</aligny>
 			<font>font12</font>
 			<textcolor>white</textcolor>
 		</control>
 		<control type="label" id="12">
 			<description>Slider Value</description>
-			<left>380</left>
+			<left>200</left>
 			<top>15</top>
 			<width>180</width>
-			<height>20</height>
+			<height>16</height>
 			<align>right</align>
-			<aligny>center</aligny>
 			<font>font12</font>
 			<textcolor>white</textcolor>
 		</control>
 		<control type="slider" id="11">
 			<description>Slider</description>
 			<left>20</left>
-			<top>45</top>
+			<top>42</top>
 			<width>360</width>
 			<height>15</height>
 			<texturesliderbar>osd_slider_bg_2.png</texturesliderbar>

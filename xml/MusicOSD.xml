@@ -10,7 +10,7 @@
 	<controls>
 		<control type="group" id="100">
 			<left>325</left>
-			<top>50r</top>
+			<top>670</top>
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
 			<control type="button" id="600">
@@ -190,19 +190,33 @@
 				<alttexturenofocus>OSDRandomOnNF.png</alttexturenofocus>
 				<onclick>PlayerControl(Random)</onclick>
 				<onleft>606</onleft>
-				<onright>701</onright>
+				<onright>705</onright>
 				<onup>607</onup>
 				<ondown>607</ondown>
 			</control>
 		</control>
-		<control type="group">
-			<left>250r</left>
-			<top>50r</top>
+		<control type="grouplist">
+			<left>985</left>
+			<top>670</top>
+			<width>270</width>
+			<align>right</align>
+			<itemgap>0</itemgap>
+			<orientation>horizontal</orientation>
 			<animation effect="fade" time="200">VisibleChange</animation>
+			<onleft>607</onleft>
+			<onright>600</onright>
 			<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
+			<control type="button" id="705">
+				<width>45</width>
+				<height>45</height>
+				<label>563</label>
+				<font/>
+				<font />
+				<texturefocus>OSDRateFO.png</texturefocus>
+				<texturenofocus>OSDRateNF.png</texturenofocus>
+				<onclick>setrating</onclick>
+			</control>
 			<control type="togglebutton" id="701">
-				<left>0</left>
-				<top>0</top>
 				<width>45</width>
 				<height>45</height>
 				<label>31128</label>
@@ -211,10 +225,6 @@
 				<texturenofocus>OSDLyricsNF.png</texturenofocus>
 				<alttexturefocus>OSDLyricsFO.png</alttexturefocus>
 				<alttexturenofocus>OSDLyricsNF.png</alttexturenofocus>
-				<onleft>607</onleft>
-				<onright>500</onright>
-				<onup>701</onup>
-				<ondown>701</ondown>
 				<onclick>Close</onclick>
 				<onclick>RunScript($INFO[Skin.String(LyricScript_Path)])</onclick>
 				<altclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</altclick>
@@ -223,64 +233,40 @@
 				<usealttexture>String.IsEmpty(Skin.String(LyricScript_Path))</usealttexture>
 			</control>
 			<control type="button" id="500">
-				<left>45</left>
-				<top>0</top>
 				<width>45</width>
 				<height>45</height>
 				<label>12006</label>
 				<font />
 				<texturefocus>OSDVizFO.png</texturefocus>
 				<texturenofocus>OSDVizNF.png</texturenofocus>
-				<onleft>701</onleft>
-				<onright>702</onright>
-				<onup>500</onup>
-				<ondown>500</ondown>
 			</control>
 			<control type="button" id="702">
-				<left>90</left>
-				<top>0</top>
 				<width>45</width>
 				<height>45</height>
 				<label>$LOCALIZE[250] $LOCALIZE[21417]</label>
 				<font />
 				<texturefocus>OSDPresetSettingsFO.png</texturefocus>
 				<texturenofocus>OSDPresetSettingsNF.png</texturenofocus>
-				<onleft>500</onleft>
-				<onright>703</onright>
-				<onup>702</onup>
-				<ondown>702</ondown>
 				<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
 			</control>
 			<control type="button" id="703">
-				<left>135</left>
-				<top>0</top>
 				<width>45</width>
 				<height>45</height>
 				<label>31048</label>
 				<font />
 				<texturefocus>OSDPreFO.png</texturefocus>
 				<texturenofocus>OSDPreNF.png</texturenofocus>
-				<onleft>702</onleft>
-				<onright>704</onright>
-				<onup>703</onup>
-				<ondown>703</ondown>
 				<onclick>ActivateWindow(VisualisationPresetList)</onclick>
 				<animation effect="fade" start="100" end="50" time="100" condition="!Visualisation.HasPresets">Conditional</animation>
 				<enable>Visualisation.HasPresets</enable>
 			</control>
 			<control type="button" id="704">
-				<left>180</left>
-				<top>0</top>
 				<width>45</width>
 				<height>45</height>
 				<label>264</label>
 				<font />
 				<texturefocus>OSDRecordFO.png</texturefocus>
 				<texturenofocus>OSDRecordNF.png</texturenofocus>
-				<onleft>703</onleft>
-				<onright>600</onright>
-				<onup>704</onup>
-				<ondown>704</ondown>
 				<onclick>PlayerControl(record)</onclick>
 				<enable>Player.CanRecord</enable>
 				<animation effect="fade" start="100" end="50" time="100" condition="!Player.CanRecord">Conditional</animation>

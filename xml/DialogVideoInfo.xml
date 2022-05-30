@@ -35,7 +35,7 @@
 				<control type="label">
 					<description>Title label Normal</description>
 					<left>200</left>
-					<label>$VAR[DialogVideoInfoTitleLabel]</label>
+					<label>$VAR[DialogInfoTitleLabel]</label>
 					<include>DialogHeaderTextCommons</include>
 				</control>
 				<control type="group">
