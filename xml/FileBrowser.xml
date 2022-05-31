@@ -126,8 +126,6 @@
 					<scrolltime>200</scrolltime>
 					<itemlayout height="45" width="645">
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
 							<width>645</width>
 							<height>45</height>
 							<texture border="10">list-nofocus.png</texture>
@@ -141,7 +139,6 @@
 						</control>
 						<control type="label">
 							<left>55</left>
-							<top>0</top>
 							<width>580</width>
 							<height>45</height>
 							<font>font13</font>
@@ -152,8 +149,6 @@
 					</itemlayout>
 					<focusedlayout height="45" width="645">
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
 							<width>645</width>
 							<height>45</height>
 							<texture border="10">list-focus.png</texture>
@@ -167,7 +162,6 @@
 						</control>
 						<control type="label">
 							<left>55</left>
-							<top>0</top>
 							<width>580</width>
 							<height>45</height>
 							<font>font13</font>
@@ -191,8 +185,6 @@
 					<scrolltime>200</scrolltime>
 					<itemlayout height="45" width="645">
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
 							<width>645</width>
 							<height>45</height>
 							<texture border="10">list-nofocus.png</texture>
@@ -206,7 +198,6 @@
 						</control>
 						<control type="label">
 							<left>55</left>
-							<top>0</top>
 							<width>580</width>
 							<height>45</height>
 							<font>font13</font>
@@ -217,8 +208,6 @@
 					</itemlayout>
 					<focusedlayout height="45" width="645">
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
 							<width>645</width>
 							<height>45</height>
 							<texture border="10">list-focus.png</texture>
@@ -232,7 +221,6 @@
 						</control>
 						<control type="label">
 							<left>55</left>
-							<top>0</top>
 							<width>580</width>
 							<height>45</height>
 							<font>font13</font>

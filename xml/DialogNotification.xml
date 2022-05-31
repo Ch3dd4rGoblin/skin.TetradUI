@@ -12,8 +12,6 @@
 			<top>620</top>
 			<control type="image">
 				<description>background</description>
-				<left>0</left>
-				<top>0</top>
 				<width>400</width>
 				<height>90</height>
 				<texture border="20,20,20,30">Dialog2.png</texture>

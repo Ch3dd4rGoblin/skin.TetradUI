@@ -43,7 +43,6 @@
 			<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 			<control type="label" id="40">
 				<description>Header label</description>
-				<left>0</left>
 				<label />
 				<include>HeaderTextCommons</include>
 			</control>
@@ -121,15 +120,12 @@
 				<top>120</top>
 				<control type="label" id="2">
 					<description>Label 2</description>
-					<left>0</left>
-					<top>0</top>
 					<width>840</width>
 					<label />
 					<font>font13</font>
 				</control>
 				<control type="label" id="3">
 					<description>Label 3</description>
-					<left>0</left>
 					<top>40</top>
 					<width>840</width>
 					<label />
@@ -137,7 +133,6 @@
 				</control>
 				<control type="label" id="4">
 					<description>Label 4</description>
-					<left>0</left>
 					<top>80</top>
 					<width>840</width>
 					<label />
@@ -145,7 +140,6 @@
 				</control>
 				<control type="label" id="5">
 					<description>Label 5</description>
-					<left>0</left>
 					<top>120</top>
 					<width>840</width>
 					<label />
@@ -153,7 +147,6 @@
 				</control>
 				<control type="label" id="6">
 					<description>Label 6</description>
-					<left>0</left>
 					<top>160</top>
 					<width>840</width>
 					<label />
@@ -161,7 +154,6 @@
 				</control>
 				<control type="label" id="7">
 					<description>Label 7</description>
-					<left>0</left>
 					<top>200</top>
 					<width>840</width>
 					<label />
@@ -169,7 +161,6 @@
 				</control>
 				<control type="label" id="8">
 					<description>Label 8</description>
-					<left>0</left>
 					<top>240</top>
 					<width>840</width>
 					<label />
@@ -177,7 +168,6 @@
 				</control>
 				<control type="label" id="9">
 					<description>Label 9</description>
-					<left>0</left>
 					<top>280</top>
 					<width>840</width>
 					<label />
@@ -185,7 +175,6 @@
 				</control>
 				<control type="label" id="10">
 					<description>Label 10</description>
-					<left>0</left>
 					<top>320</top>
 					<width>840</width>
 					<label />
@@ -193,7 +182,6 @@
 				</control>
 				<control type="label" id="11">
 					<description>Label 11</description>
-					<left>0</left>
 					<top>360</top>
 					<width>840</width>
 					<label />
@@ -201,8 +189,6 @@
 				</control>
 				<control type="textbox" id="30">
 					<description>Label 30</description>
-					<left>0</left>
-					<top>0</top>
 					<width>840</width>
 					<height>355</height>
 					<label />
@@ -247,7 +233,6 @@
 				<control type="label" id="52">
 					<description>Kodi BUILD Version</description>
 					<left>20</left>
-					<top>0</top>
 					<width>910</width>
 					<label>144</label>
 					<textcolor>orange</textcolor>
@@ -259,8 +244,6 @@
 					<top>30</top>
 					<control type="label">
 						<description>CPU Text</description>
-						<left>0</left>
-						<top>0</top>
 						<width>600</width>
 						<height>25</height>
 						<label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
@@ -280,7 +263,6 @@
 					</control>
 					<control type="label">
 						<description>Memory Text</description>
-						<left>0</left>
 						<top>30</top>
 						<width>600</width>
 						<height>25</height>

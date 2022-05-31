@@ -23,7 +23,6 @@
 			<control type="image">
 				<description>Background</description>
 				<left>205</left>
-				<top>0</top>
 				<width>50</width>
 				<height>720</height>
 				<aspectratio>stretch</aspectratio>
@@ -32,7 +31,6 @@
 			<control type="image">
 				<description>Background</description>
 				<left>55r</left>
-				<top>0</top>
 				<width>50</width>
 				<height>720</height>
 				<aspectratio>stretch</aspectratio>
@@ -41,7 +39,6 @@
 			<control type="image">
 				<description>Background</description>
 				<left>255</left>
-				<top>0</top>
 				<width>970</width>
 				<height>720</height>
 				<aspectratio>stretch</aspectratio>
@@ -55,7 +52,6 @@
 			<animation effect="fade" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
 			<control type="label">
 				<description>Header label</description>
-				<left>0</left>
 				<label>31012</label>
 				<include>HeaderTextCommons</include>
 			</control>
@@ -87,7 +83,6 @@
 						</control>
 						<control type="label">
 							<left>120</left>
-							<top>0</top>
 							<width>330</width>
 							<height>42</height>
 							<font>font30</font>
@@ -121,7 +116,6 @@
 						</control>
 						<control type="label">
 							<left>120</left>
-							<top>0</top>
 							<width>330</width>
 							<height>42</height>
 							<font>font30</font>
@@ -135,7 +129,6 @@
 						</control>
 						<control type="label">
 							<left>120</left>
-							<top>0</top>
 							<width>330</width>
 							<height>42</height>
 							<font>font30</font>
@@ -228,7 +221,6 @@
 				<control type="textbox">
 					<description>Item Description</description>
 					<left>500</left>
-					<top>0</top>
 					<width>370</width>
 					<height>470</height>
 					<font>font16</font>
@@ -245,8 +237,6 @@
 			<animation effect="slide" start="100,0" end="0,0" time="HomeBladeAnimationSpeed">WindowOpen</animation>
 			<visible>!Window.Next(Home)</visible>
 			<control type="image">
-				<left>0</left>
-				<top>0</top>
 				<width>74</width>
 				<height>256</height>
 				<aspectratio>stretch</aspectratio>
@@ -255,7 +245,6 @@
 			<control type="button" id="10">
 				<description>Shutdown Button</description>
 				<left>5</left>
-				<top>0</top>
 				<width>64</width>
 				<height>128</height>
 				<texturenofocus />
@@ -303,7 +292,6 @@
 		<control type="button" id="1">
 			<description>Blank Blade Slide Right</description>
 			<left>-80</left>
-			<top>0</top>
 			<width>160</width>
 			<height>720</height>
 			<texturefocus>blades-blank-left.png</texturefocus>
@@ -323,7 +311,6 @@
 				<texture>blades-runner-left.png</texture>
 			</control>
 			<control type="image">
-				<left>0</left>
 				<top>-40</top>
 				<width>115</width>
 				<height>800</height>
@@ -421,7 +408,6 @@
 				<texture>blades-runner-left.png</texture>
 			</control>
 			<control type="image">
-				<left>0</left>
 				<top>-40</top>
 				<width>115</width>
 				<height>800</height>

@@ -1,3 +1,9 @@
+[B]Version 0.0.8[/B]
+- Leia version
+
+[B]Version 0.0.7[/B]
+- Krypton version
+
 [B]Version 0.0.6[/B]
 - Jarvis version
 

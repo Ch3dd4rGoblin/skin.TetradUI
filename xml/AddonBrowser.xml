@@ -30,7 +30,6 @@
 			<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 			<control type="label">
 				<description>Header label</description>
-				<left>0</left>
 				<label fallback="24001">$INFO[Container.Property(RepoName)]$INFO[Container.Property(AddonCategory), - ]</label>
 				<include>HeaderTextCommons</include>
 			</control>
@@ -49,7 +48,6 @@
 			<left>-300</left>
 			<top>0</top>
 			<control type="image">
-				<left>0</left>
 				<top>-40</top>
 				<width>160</width>
 				<height>800</height>
@@ -74,7 +72,6 @@
 				<animation effect="fade" start="100" end="0" delay="0" time="SideMenuSlideOutTime">Hidden</animation>
 				<control type="label">
 					<description>Header Label</description>
-					<left>0</left>
 					<top>-40</top>
 					<width>220</width>
 					<height>20</height>
@@ -87,8 +84,6 @@
 				</control>
 				<control type="button" id="2">
 					<description>View As button</description>
-					<left>0</left>
-					<top>0</top>
 					<include>ButtonCommonValues</include>
 					<onleft>50</onleft>
 					<onright>50</onright>

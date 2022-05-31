@@ -29,7 +29,6 @@
 			<control type="image">
 				<description>Background</description>
 				<left>155</left>
-				<top>0</top>
 				<width>50</width>
 				<height>720</height>
 				<texture>background-overlay-blackwash-left-ws.png</texture>
@@ -37,7 +36,6 @@
 			<control type="image">
 				<description>Background</description>
 				<left>105r</left>
-				<top>0</top>
 				<width>50</width>
 				<height>720</height>
 				<texture>background-overlay-blackwash-right-ws.png</texture>
@@ -45,7 +43,6 @@
 			<control type="image">
 				<description>Background</description>
 				<left>205</left>
-				<top>0</top>
 				<width>970</width>
 				<height>720</height>
 				<texture>background-overlay-blackwash-centertile-ws.png</texture>
@@ -58,7 +55,6 @@
 			<animation effect="fade" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
 			<control type="label">
 				<description>Header label</description>
-				<left>0</left>
 				<label>31010</label>
 				<include>HeaderTextCommons</include>
 			</control>
@@ -96,7 +92,6 @@
 						</control>
 						<control type="label">
 							<left>120</left>
-							<top>0</top>
 							<width>330</width>
 							<height>52</height>
 							<font>font30</font>
@@ -128,7 +123,6 @@
 						</control>
 						<control type="label">
 							<left>120</left>
-							<top>0</top>
 							<width>330</width>
 							<height>50</height>
 							<font>font30</font>
@@ -228,7 +222,6 @@
 		<control type="button" id="1">
 			<description>Blank Blade Slide Right</description>
 			<left>-80</left>
-			<top>0</top>
 			<width>160</width>
 			<height>720</height>
 			<texturefocus>blades-blank-left.png</texturefocus>
@@ -239,7 +232,6 @@
 		<control type="button" id="2">
 			<description>Blank Blade Slide Left</description>
 			<left>80r</left>
-			<top>0</top>
 			<width>160</width>
 			<height>720</height>
 			<texturefocus>blades-blank-right.png</texturefocus>
@@ -259,7 +251,6 @@
 				<texture>blades-runner-left.png</texture>
 			</control>
 			<control type="image">
-				<left>0</left>
 				<top>-40</top>
 				<width>115</width>
 				<height>800</height>
@@ -358,7 +349,6 @@
 				<texture>blades-runner-left.png</texture>
 			</control>
 			<control type="image">
-				<left>0</left>
 				<top>-40</top>
 				<width>115</width>
 				<height>800</height>
@@ -461,7 +451,6 @@
 				<texture>blades-runner-left.png</texture>
 			</control>
 			<control type="image">
-				<left>0</left>
 				<top>-40</top>
 				<width>115</width>
 				<height>800</height>

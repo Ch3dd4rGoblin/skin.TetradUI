@@ -36,7 +36,6 @@
 			<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 			<control type="label">
 				<description>Header label</description>
-				<left>0</left>
 				<label>$LOCALIZE[5] - $INFO[Control.GetLabel(2)]</label>
 				<include>HeaderTextCommons</include>
 			</control>
@@ -75,7 +74,6 @@
 			</control>
 			<control type="button" id="20">
 				<description>Settings Level Button</description>
-				<left>0</left>
 				<top>565</top>
 				<height>50</height>
 				<width>250</width>
@@ -142,8 +140,6 @@
 		
 		<control type="button" id="10">
 			<description>Default Category Button</description>
-			<left>0</left>
-			<top>0</top>
 			<height>50</height>
 			<width>250</width>
 			<textcolor>white</textcolor>

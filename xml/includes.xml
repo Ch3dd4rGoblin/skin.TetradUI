@@ -50,7 +50,6 @@
 		<shadowcolor />
 		<font>font30</font>
 		<pulseonselect>no</pulseonselect>
-		<onleft>noop</onleft>
 		<onright>1</onright>
 		<animation effect="slide" end="ButtonSlideBackDistance,0" time="ButtonSlideBackTime" reversible="false">focus</animation>
 	</include>
@@ -327,8 +326,6 @@
 	<include name="WeatherCard">
 		<control type="image">
 			<description>GamerCard Background</description>
-			<left>0</left>
-			<top>0</top>
 			<width>430</width>
 			<height>160</height>
 			<aspectratio>stretch</aspectratio>
@@ -336,7 +333,6 @@
 		</control>
 		<control type="image">
 			<description>Button shine animation</description>
-			<left>0</left>
 			<top>12</top>
 			<width>60</width>
 			<height>32</height>
@@ -427,8 +423,6 @@
 	<include name="SystemCard">
 		<control type="image">
 			<description>GamerCard Background</description>
-			<left>0</left>
-			<top>0</top>
 			<width>430</width>
 			<height>160</height>
 			<aspectratio>stretch</aspectratio>
@@ -436,7 +430,6 @@
 		</control>
 		<control type="image">
 			<description>Button shine animation</description>
-			<left>0</left>
 			<top>12</top>
 			<width>60</width>
 			<height>32</height>
@@ -733,8 +726,6 @@
 					<animation effect="slide" start="0,0" end="-50,0" time="SubBladeFadeInDelay" condition="!Window.IsVisible(1111) + Window.Next(Weather)">WindowClose</animation>
 					<control type="image">
 						<description>Background Image for Menu</description>
-						<left>0</left>
-						<top>0</top>
 						<width>440</width>
 						<height>70</height>
 						<texture border="35,0,35,0">top_menu_back2.png</texture>
@@ -751,7 +742,6 @@
 					<control type="fadelabel">
 						<description>Now Playing title</description>
 						<left>60</left>
-						<top>0</top>
 						<width>355</width>
 						<height>20</height>
 						<align>right</align>
@@ -807,8 +797,6 @@
 					<top>72r</top>
 					<control type="image">
 						<description>Background Image for Menu</description>
-						<left>0</left>
-						<top>0</top>
 						<width>440</width>
 						<height>70</height>
 						<texture border="35,0,35,0">top_menu_back2.png</texture>
@@ -824,7 +812,6 @@
 					<control type="fadelabel">
 						<description>Now Playing title</description>
 						<left>60</left>
-						<top>0</top>
 						<width>355</width>
 						<height>20</height>
 						<align>right</align>
@@ -890,8 +877,6 @@
 					<animation effect="slide" start="0,0" end="-50,0" time="SubBladeFadeInDelay" condition="!Window.IsVisible(1111) + Window.Next(Weather)">WindowClose</animation>
 					<control type="image">
 						<description>Background Image for Menu</description>
-						<left>0</left>
-						<top>0</top>
 						<width>440</width>
 						<height>70</height>
 						<texture border="35,0,35,0">top_menu_back2.png</texture>
@@ -908,7 +893,6 @@
 					<control type="fadelabel">
 						<description>Now Playing Artist Album</description>
 						<left>60</left>
-						<top>0</top>
 						<width>355</width>
 						<height>20</height>
 						<align>right</align>
@@ -962,15 +946,12 @@
 	</include>
 	
 	<include name="DialogPlayerProcessInfoLabel">
-		<left>0</left>
-		<top>0</top>
 		<font>font8</font>
 		<width>140</width>
 		<textcolor>grey2</textcolor>
 	</include>
 	<include name="DialogPlayerProcessInfoLabelValue">
 		<left>150</left>
-		<top>0</top>
 		<font>font8</font>
 		<width>210</width>
 		<textcolor>white</textcolor>
@@ -1008,8 +989,6 @@
 			<width>100</width>
 			<control type="image">
 				<description>Rating back</description>
-				<left>0</left>
-				<top>0</top>
 				<width>100</width>
 				<height>35</height>
 				<texture>flagging/blank.png</texture>
@@ -1029,7 +1008,6 @@
 	
 	<include name="FullscreenMusicInfo">
 		<control type="image">
-			<left>0</left>
 			<top>-150</top>
 			<width>1280</width>
 			<height>256</height>
@@ -1077,7 +1055,6 @@
 			<label>$INFO[System.Time]</label>
 		</control>
 		<control type="image">
-			<left>0</left>
 			<top>230r</top>
 			<width>1280</width>
 			<height>230</height>
@@ -1099,8 +1076,6 @@
 			<top>175r</top>
 			<control type="label" id="1">
 				<description>Heading label</description>
-				<left>0</left>
-				<top>0</top>
 				<width>910</width>
 				<height>25</height>
 				<align>left</align>
@@ -1170,7 +1145,6 @@
 				</include>
 			</control>
 			<control type="label">
-				<left>0</left>
 				<top>120</top>
 				<width>910</width>
 				<height>25</height>
@@ -1188,8 +1162,6 @@
 			<left>330</left>
 			<top>85r</top>
 			<control type="label">
-				<left>0</left>
-				<top>0</top>
 				<width>100</width>
 				<height>40</height>
 				<font>font13</font>
@@ -1208,7 +1180,6 @@
 			</control>
 			<control type="label">
 				<left>820</left>
-				<top>0</top>
 				<width>100</width>
 				<height>40</height>
 				<font>font13</font>

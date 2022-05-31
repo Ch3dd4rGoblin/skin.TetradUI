@@ -14,8 +14,6 @@
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
 			<control type="button" id="600">
-				<left>0</left>
-				<top>0</top>
 				<width>45</width>
 				<height>45</height>
 				<label>210</label>
@@ -30,7 +28,6 @@
 			</control>
 			<control type="button" id="601">
 				<left>45</left>
-				<top>0</top>
 				<width>45</width>
 				<height>45</height>
 				<label>31354</label>
@@ -45,7 +42,6 @@
 			</control>
 			<control type="togglebutton" id="602">
 				<left>90</left>
-				<top>0</top>
 				<width>45</width>
 				<height>45</height>
 				<label>31351</label>
@@ -64,7 +60,6 @@
 			</control>
 			<control type="button" id="603">
 				<left>135</left>
-				<top>0</top>
 				<width>45</width>
 				<height>45</height>
 				<label>31352</label>
@@ -79,7 +74,6 @@
 			</control>
 			<control type="button" id="604">
 				<left>180</left>
-				<top>0</top>
 				<width>45</width>
 				<height>45</height>
 				<label>31353</label>
@@ -94,7 +88,6 @@
 			</control>
 			<control type="button" id="605">
 				<left>225</left>
-				<top>0</top>
 				<width>45</width>
 				<height>45</height>
 				<label>209</label>
@@ -109,7 +102,6 @@
 			</control>
 			<control type="button" id="606">
 				<left>270</left>
-				<top>0</top>
 				<width>45</width>
 				<height>45</height>
 				<label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
@@ -124,7 +116,6 @@
 			</control>
 			<control type="image">
 				<left>270</left>
-				<top>0</top>
 				<width>45</width>
 				<height>45</height>
 				<texture>OSDRepeatNF.png</texture>
@@ -133,7 +124,6 @@
 			</control>
 			<control type="image">
 				<left>270</left>
-				<top>0</top>
 				<width>45</width>
 				<height>45</height>
 				<texture>OSDRepeatFO.png</texture>
@@ -142,7 +132,6 @@
 			</control>
 			<control type="image">
 				<left>270</left>
-				<top>0</top>
 				<width>45</width>
 				<height>45</height>
 				<texture>OSDRepeatOneNF.png</texture>
@@ -151,7 +140,6 @@
 			</control>
 			<control type="image">
 				<left>270</left>
-				<top>0</top>
 				<width>45</width>
 				<height>45</height>
 				<texture>OSDRepeatOneFO.png</texture>
@@ -160,7 +148,6 @@
 			</control>
 			<control type="image">
 				<left>270</left>
-				<top>0</top>
 				<width>45</width>
 				<height>45</height>
 				<texture>OSDRepeatAllNF.png</texture>
@@ -169,7 +156,6 @@
 			</control>
 			<control type="image">
 				<left>270</left>
-				<top>0</top>
 				<width>45</width>
 				<height>45</height>
 				<texture>OSDRepeatAllFO.png</texture>
@@ -178,7 +164,6 @@
 			</control>
 			<control type="togglebutton" id="607">
 				<left>315</left>
-				<top>0</top>
 				<width>45</width>
 				<height>45</height>
 				<label>$LOCALIZE[590]$INFO[Playlist.Random, : ]</label>
@@ -267,9 +252,9 @@
 				<font />
 				<texturefocus>OSDRecordFO.png</texturefocus>
 				<texturenofocus>OSDRecordNF.png</texturenofocus>
-				<onclick>PlayerControl(record)</onclick>
-				<enable>Player.CanRecord</enable>
-				<animation effect="fade" start="100" end="50" time="100" condition="!Player.CanRecord">Conditional</animation>
+				<onclick>PVR.ToggleRecordPlayingChannel</onclick>
+				<enable>PVR.CanRecordPlayingChannel</enable>
+				<animation effect="fade" start="100" end="50" time="100" condition="!PVR.CanRecordPlayingChannel">Conditional</animation>
 			</control>
 		</control>
 	</controls>

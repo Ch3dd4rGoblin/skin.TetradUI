@@ -5,22 +5,16 @@
 		<colorkey>0</colorkey>
 	</default>
 	<default type="label">
-		<left>80</left>
-		<top>60</top>
 		<label />
 		<font>font13</font>
 		<textcolor>white</textcolor>
 		<selectedcolor>orange</selectedcolor>
 	</default>
 	<default type="fadelabel">
-		<left>80</left>
-		<top>60</top>
 		<font>font13</font>
 		<textcolor>white</textcolor>
 	</default>
 	<default type="button">
-		<left>300</left>
-		<top>200</top>
 		<width>340</width>
 		<height>42</height>
 		<texturefocus>button-focus.png</texturefocus>
@@ -33,8 +27,6 @@
 		<pulseonselect>no</pulseonselect>
 	</default>
 	<default type="togglebutton">
-		<left>140</left>
-		<top>167</top>
 		<width>30</width>
 		<height>30</height>
 		<texturefocus>sortup-focus.png</texturefocus>
@@ -48,8 +40,6 @@
 		<pulseonselect>no</pulseonselect>
 	</default>
 	<default type="textbox">
-		<left>220</left>
-		<top>220</top>
 		<width>410</width>
 		<height>215</height>
 		<textcolor>white</textcolor>
@@ -60,8 +50,6 @@
 		<font>font13</font>
 	</default>
 	<default type="progress">
-		<left>0</left>
-		<top>0</top>
 		<texturebg border="6,0,6,0">progress_back.png</texturebg>
 		<lefttexture />
 		<midtexture border="6,0,6,0">progress_front.png</midtexture>
@@ -69,8 +57,6 @@
 		<overlaytexture />
 	</default>
 	<default type="spincontrol">
-		<left>330</left>
-		<top>126</top>
 		<textureup>sortup-nofocus.png</textureup>
 		<texturedown>sortdown-nofocus.png</texturedown>
 		<textureupdisabled colordiffuse="60FFFFFF">sortup-nofocus.png</textureupdisabled>
@@ -90,8 +76,6 @@
 		<pulseonselect>no</pulseonselect>
 	</default>
 	<default type="spincontrolex">
-		<left>530</left>
-		<top>160</top>
 		<width>300</width>
 		<height>42</height>
 		<spinwidth>30</spinwidth>
@@ -113,8 +97,6 @@
 		<pulseonselect>no</pulseonselect>
 	</default>
 	<default type="radiobutton">
-		<left>300</left>
-		<top>200</top>
 		<width>340</width>
 		<height>42</height>
 		<radiowidth>24</radiowidth>
@@ -135,8 +117,6 @@
 	</default>
 	<default type="edit">
 		<description>Name Button</description>
-		<left>0</left>
-		<top>0</top>
 		<width>300</width>
 		<height>45</height>
 		<textoffsetx>15</textoffsetx>
@@ -162,14 +142,10 @@
 		<textureslidernibfocus>slider_nibFO.png</textureslidernibfocus>
 	</default>
 	<default type="mover">
-		<left>60</left>
-		<top>192</top>
 		<texturefocus>button-focus.png</texturefocus>
 		<texturenofocus>button-nofocus.png</texturenofocus>
 	</default>
 	<default type="resize">
-		<left>60</left>
-		<top>192</top>
 		<texturefocus>button-focus.png</texturefocus>
 		<texturenofocus>button-nofocus.png</texturenofocus>
 	</default>

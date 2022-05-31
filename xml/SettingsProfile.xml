@@ -15,7 +15,6 @@
 			<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 			<control type="label">
 				<description>Header label</description>
-				<left>0</left>
 				<label>$LOCALIZE[10034]</label>
 				<include>HeaderTextCommons</include>
 			</control>
@@ -25,7 +24,6 @@
 				<control type="radiobutton" id="4">
 					<description>enable login screen</description>
 					<top>4</top>
-					<left>0</left>
 					<width>43</width>
 					<height>43</height>
 					<aligny>center</aligny>
@@ -48,7 +46,6 @@
 				<control type="button" id="5">
 					<description>autologin</description>
 					<top>51</top>
-					<left>0</left>
 					<width>43</width>
 					<height>43</height>
 					<aligny>center</aligny>
@@ -96,8 +93,6 @@
 				<orientation>vertical</orientation>
 				<itemlayout height="92" width="370">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>370</width>
 						<height>90</height>
 						<texture>wide-thumb-nofocus.png</texture>
@@ -145,8 +140,6 @@
 				</itemlayout>
 				<focusedlayout height="92" width="370">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>370</width>
 						<height>90</height>
 						<texture>wide-thumb-focus.png</texture>
@@ -219,22 +212,19 @@
 			</control>
 			<control type="label">
 				<description>Page Count Label Focus</description>
-				<left>-10</left>
+				<left>-310</left>
 				<top>5</top>
-				<width>500</width>
+				<width>300</width>
 				<height>20</height>
 				<font>font12</font>
-				<textcolor>orange</textcolor>
+				<textcolor>white</textcolor>
 				<scroll>false</scroll>
 				<align>right</align>
 				<aligny>center</aligny>
-				<label>($INFO[Container(2).NumItems]) $LOCALIZE[31200] - $LOCALIZE[31201] ($INFO[Container(2).CurrentPage]/$INFO[Container(2).NumPages])</label>
-				<visible>Control.HasFocus(60)</visible>
+				<label>$INFO[Container(2).NumItems] $LOCALIZE[31200] - $LOCALIZE[31201] $INFO[Container(2).CurrentPage]/$INFO[Container(2).NumPages]</label>
 			</control>
 			<control type="spincontrol" id="60">
 				<description>Next page button</description>
-				<left>0</left>
-				<top>0</top>
 				<subtype>page</subtype>
 				<font />
 				<onleft>2</onleft>

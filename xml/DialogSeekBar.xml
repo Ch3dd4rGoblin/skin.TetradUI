@@ -14,8 +14,6 @@
 			<animation effect="slide" start="0,0" end="-180,0" time="200" condition="Window.IsVisible(BusyDialog)">conditional</animation>
 			<control type="image">
 				<description>Media Overlay Image</description>
-				<left>0</left>
-				<top>0</top>
 				<width>400</width>
 				<height>85</height>
 				<texture border="20,20,20,30">Dialog2.png</texture>

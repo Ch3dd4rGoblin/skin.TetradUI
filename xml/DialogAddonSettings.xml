@@ -10,8 +10,6 @@
 	<controls>
 		<control type="image">
 			<description>background image</description>
-			<left>0</left>
-			<top>0</top>
 			<width>1155</width>
 			<height>660</height>
 			<texture border="50,100,50,50">Dialog.png</texture>
@@ -88,18 +86,12 @@
 			<onleft>5</onleft>
 			<onright>3</onright>
 			<control type="button" id="28">
-				<left>0</left>
-				<top>0</top>
 				<include>DialogButton2CommonValues</include>
 			</control>
 			<control type="button" id="29">
-				<left>0</left>
-				<top>45</top>
 				<include>DialogButton2CommonValues</include>
 			</control>
 			<control type="button" id="30">
-				<left>0</left>
-				<top>90</top>
 				<include>DialogButton2CommonValues</include>
 			</control>
 		</control>

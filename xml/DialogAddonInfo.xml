@@ -72,13 +72,11 @@
 					<top>120</top>
 					<control type="label">
 						<description>ID txt</description>
-						<top>0</top>
 						<label>$LOCALIZE[560]:</label>
 						<include>InfoDialogLabelTextCommons</include>
 					</control>
 					<control type="label">
 						<description>ID Value</description>
-						<top>0</top>
 						<label>$INFO[ListItem.Property(Addon.ID)]</label>
 						<include>InfoDialogLabelValueCommons</include>
 					</control>
@@ -267,8 +265,6 @@
 					<visible>String.IsEqual(Skin.String(DialogAddonInfoButton9001),screenshots)</visible>
 					<itemlayout width="250" height="165">
 						<control type="image">
-							<top>0</top>
-							<left>0</left>
 							<width>268</width>
 							<height>151</height>
 							<texture background="true" fallback="DefaultPicture.png">$INFO[Listitem.Icon]</texture>
@@ -279,8 +275,6 @@
 					</itemlayout>
 					<focusedlayout width="250" height="165">
 						<control type="image">
-							<top>0</top>
-							<left>0</left>
 							<width>268</width>
 							<height>151</height>
 							<texture background="true" fallback="DefaultPicture.png">$INFO[Listitem.Icon]</texture>

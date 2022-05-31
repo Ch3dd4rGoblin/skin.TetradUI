@@ -10,8 +10,6 @@
 	<controls>
 		<control type="image">
 			<description>Dialog Back</description>
-			<left>0</left>
-			<top>0</top>
 			<width>810</width>
 			<height>470</height>
 			<texture border="50,100,50,50">Dialog.png</texture>
@@ -51,15 +49,12 @@
 			<scrolltime>200</scrolltime>
 			<itemlayout height="45">
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
 					<width>500</width>
 					<height>45</height>
 					<texture border="10">list-nofocus.png</texture>
 				</control>
 				<control type="label">
 					<left>10</left>
-					<top>0</top>
 					<width>490</width>
 					<height>45</height>
 					<font>font13</font>
@@ -72,16 +67,12 @@
 			</itemlayout>
 			<focusedlayout height="45">
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
 					<width>500</width>
 					<height>45</height>
 					<visible>!Control.HasFocus(10)</visible>
 					<texture border="10">list-nofocus.png</texture>
 				</control>
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
 					<width>500</width>
 					<height>45</height>
 					<visible>Control.hasfocus(14) | Control.HasFocus(10)</visible>
@@ -89,7 +80,6 @@
 				</control>
 				<control type="label">
 					<left>10</left>
-					<top>0</top>
 					<width>490</width>
 					<height>45</height>
 					<font>font13</font>
@@ -102,7 +92,6 @@
 				</control>
 				<control type="label">
 					<left>10</left>
-					<top>0</top>
 					<width>490</width>
 					<height>45</height>
 					<font>font13</font>
@@ -120,8 +109,6 @@
 			<top>140</top>
 			<control type="button" id="11">
 				<description>Change Set Button</description>
-				<left>0</left>
-				<top>0</top>
 				<width>200</width>
 				<height>45</height>
 				<align>center</align>
@@ -135,7 +122,6 @@
 			</control>
 			<control type="button" id="13">
 				<description>Add Button</description>
-				<left>0</left>
 				<top>45</top>
 				<width>200</width>
 				<height>45</height>
@@ -151,7 +137,6 @@
 			</control>
 			<control type="button" id="14">
 				<description>Remove Button</description>
-				<left>0</left>
 				<top>90</top>
 				<width>200</width>
 				<height>45</height>
@@ -171,8 +156,6 @@
 			<top>375</top>
 			<control type="button" id="18">
 				<description>Ok Button</description>
-				<left>0</left>
-				<top>0</top>
 				<width>200</width>
 				<height>45</height>
 				<align>center</align>
@@ -189,7 +172,6 @@
 			<control type="button" id="19">
 				<description>Cancel Button</description>
 				<left>210</left>
-				<top>0</top>
 				<width>200</width>
 				<height>45</height>
 				<align>center</align>

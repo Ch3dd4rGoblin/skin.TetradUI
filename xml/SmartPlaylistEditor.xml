@@ -12,8 +12,6 @@
 			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(SmartPlaylistRule)">Conditional</animation>
 			<control type="image">
 				<description>background image</description>
-				<left>0</left>
-				<top>0</top>
 				<width>800</width>
 				<height>705</height>
 				<texture border="50,100,50,50">Dialog.png</texture>
@@ -93,15 +91,12 @@
 				<ondown>16</ondown>
 				<itemlayout width="565" height="40">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>540</width>
 						<height>45</height>
 						<texture border="10">list-nofocus.png</texture>
 					</control>
 					<control type="label">
 						<left>10</left>
-						<top>0</top>
 						<width>520</width>
 						<height>45</height>
 						<aligny>center</aligny>
@@ -111,16 +106,12 @@
 				</itemlayout>
 				<focusedlayout width="565" height="40">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>540</width>
 						<height>45</height>
 						<texture border="10">list-focus.png</texture>
 						<visible>Control.HasFocus(10)</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>540</width>
 						<height>45</height>
 						<texture border="10">list-nofocus.png</texture>
@@ -128,7 +119,6 @@
 					</control>
 					<control type="label">
 						<left>10</left>
-						<top>0</top>
 						<width>520</width>
 						<height>45</height>
 						<aligny>center</aligny>
@@ -139,7 +129,6 @@
 					</control>
 					<control type="label">
 						<left>10</left>
-						<top>0</top>
 						<width>520</width>
 						<height>45</height>
 						<aligny>center</aligny>
@@ -301,8 +290,6 @@
 				<top>605</top>
 				<control type="button" id="20">
 					<description>Ok Button</description>
-					<left>0</left>
-					<top>0</top>
 					<width>200</width>
 					<height>45</height>
 					<align>center</align>
@@ -317,7 +304,6 @@
 				<control type="button" id="21">
 					<description>Cancel Button</description>
 					<left>210</left>
-					<top>0</top>
 					<width>200</width>
 					<height>45</height>
 					<align>center</align>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>50</defaultcontrol>
+	<views>50</views>
 	<controls>
 		<include condition="!Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
 		<control type="group">
@@ -16,7 +17,6 @@
 			<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 			<control type="label">
 				<description>Header label</description>
-				<left>0</left>
 				<label>$LOCALIZE[10503]</label>
 				<include>HeaderTextCommons</include>
 			</control>
@@ -89,8 +89,6 @@
 				<scrolltime>200</scrolltime>
 				<itemlayout height="40">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>540</width>
 						<height>45</height>
 						<texture border="10">button-nofocus.png</texture>
@@ -126,16 +124,12 @@
 				</itemlayout>
 				<focusedlayout height="40">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>540</width>
 						<height>45</height>
 						<visible>!Control.HasFocus(50)</visible>
 						<texture border="10">button-nofocus.png</texture>
 					</control>
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>540</width>
 						<height>45</height>
 						<visible>Control.HasFocus(50)</visible>
@@ -236,8 +230,6 @@
 				<scrolltime>200</scrolltime>
 				<itemlayout height="40">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>540</width>
 						<height>45</height>
 						<texture border="10">button-nofocus.png</texture>
@@ -273,16 +265,12 @@
 				</itemlayout>
 				<focusedlayout height="40">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>540</width>
 						<height>45</height>
 						<visible>!Control.HasFocus(100)</visible>
 						<texture border="10">button-nofocus.png</texture>
 					</control>
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>540</width>
 						<height>45</height>
 						<visible>Control.HasFocus(100)</visible>

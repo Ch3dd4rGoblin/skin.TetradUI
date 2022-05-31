@@ -10,8 +10,6 @@
 	<controls>
 		<control type="image">
 			<description>background image</description>
-			<left>0</left>
-			<top>0</top>
 			<width>340</width>
 			<height>440</height>
 			<texture border="50,100,50,50">Dialog.png</texture>
@@ -51,8 +49,6 @@
 			<top>150</top>
 			<control type="button" id="11">
 				<description>1 button</description>
-				<left>0</left>
-				<top>0</top>
 				<width>60</width>
 				<height>60</height>
 				<font>font13</font>
@@ -70,7 +66,6 @@
 			<control type="button" id="12">
 				<description>2 button</description>
 				<left>60</left>
-				<top>0</top>
 				<width>60</width>
 				<height>60</height>
 				<font>font13</font>
@@ -88,7 +83,6 @@
 			<control type="button" id="13">
 				<description>3 button</description>
 				<left>120</left>
-				<top>0</top>
 				<width>60</width>
 				<height>60</height>
 				<font>font13</font>
@@ -106,7 +100,6 @@
 			<control type="button" id="23">
 				<description>Backspace button</description>
 				<left>180</left>
-				<top>0</top>
 				<width>60</width>
 				<height>120</height>
 				<textwidth>94</textwidth>
@@ -125,7 +118,6 @@
 			</control>
 			<control type="button" id="14">
 				<description>4 button</description>
-				<left>0</left>
 				<top>60</top>
 				<width>60</width>
 				<height>60</height>
@@ -179,7 +171,6 @@
 			</control>
 			<control type="button" id="17">
 				<description>7 button</description>
-				<left>0</left>
 				<top>120</top>
 				<width>60</width>
 				<height>60</height>
@@ -253,7 +244,6 @@
 			</control>
 			<control type="button" id="20">
 				<description>prev button</description>
-				<left>0</left>
 				<top>180</top>
 				<width>60</width>
 				<height>60</height>

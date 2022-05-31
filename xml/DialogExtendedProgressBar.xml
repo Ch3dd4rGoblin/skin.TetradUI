@@ -12,8 +12,6 @@
 		<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(FullscreenVideo) | Window.IsVisible(Visualisation)">conditional</animation>
 			<control type="image">
 				<description>Dialog Back</description>
-				<left>0</left>
-				<top>0</top>
 				<width>520</width>
 				<height>85</height>
 				<texture border="20,20,20,30">Dialog2.png</texture>

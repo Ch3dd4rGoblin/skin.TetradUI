@@ -8,8 +8,6 @@
 			<top>0</top>
 			<control type="image" id="0">
 				<description>popup volume dialog background</description>
-				<left>0</left>
-				<top>0</top>
 				<width>400</width>
 				<height>300</height>
 				<texture>shadowtopcorner.png</texture>

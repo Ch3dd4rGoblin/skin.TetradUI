@@ -6,7 +6,6 @@
 		<control type="image">
 			<description>Background</description>
 			<left>25</left>
-			<top>0</top>
 			<width>50</width>
 			<height>720</height>
 			<aspectratio>stretch</aspectratio>
@@ -15,7 +14,6 @@
 		<control type="image">
 			<description>Background</description>
 			<left>65r</left>
-			<top>0</top>
 			<width>50</width>
 			<height>720</height>
 			<aspectratio>stretch</aspectratio>
@@ -24,7 +22,6 @@
 		<control type="image">
 			<description>Background</description>
 			<left>75</left>
-			<top>0</top>
 			<width>1140</width>
 			<height>720</height>
 			<aspectratio>stretch</aspectratio>
@@ -38,7 +35,6 @@
 				<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 				<control type="label">
 					<description>Header label</description>
-					<left>0</left>
 					<label>$LOCALIZE[20096]</label>
 					<include>HeaderTextCommons</include>
 				</control>
@@ -75,7 +71,6 @@
 					<itemlayout height="260" width="218">
 						<control type="image">
 							<left>2</left>
-							<top>0</top>
 							<width>214</width>
 							<height>250</height>
 							<aspectratio>stretch</aspectratio>
@@ -95,7 +90,6 @@
 					<focusedlayout height="260" width="218">
 						<control type="image">
 							<left>2</left>
-							<top>0</top>
 							<width>214</width>
 							<height>250</height>
 							<aspectratio>stretch</aspectratio>
@@ -104,7 +98,6 @@
 						</control>
 						<control type="image">
 							<left>2</left>
-							<top>0</top>
 							<width>214</width>
 							<height>250</height>
 							<aspectratio>stretch</aspectratio>

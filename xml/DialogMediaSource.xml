@@ -13,8 +13,6 @@
 			<include>VisibleFadeEffect</include>
 			<control type="image">
 				<description>background image</description>
-				<left>0</left>
-				<top>0</top>
 				<width>860</width>
 				<height>540</height>
 				<texture border="50,100,50,50">Dialog.png</texture>
@@ -55,15 +53,12 @@
 				<scrolltime>200</scrolltime>
 				<itemlayout height="45">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>550</width>
 						<height>45</height>
 						<texture border="10">list-nofocus.png</texture>
 					</control>
 					<control type="label">
 						<left>10</left>
-						<top>0</top>
 						<width>530</width>
 						<height>45</height>
 						<font>font12</font>
@@ -74,16 +69,12 @@
 				</itemlayout>
 				<focusedlayout height="45">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>550</width>
 						<height>45</height>
 						<texture border="10">list-nofocus.png</texture>
 						<visible>!Control.HasFocus(10)</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>550</width>
 						<height>45</height>
 						<texture border="10">list-focus.png</texture>
@@ -91,7 +82,6 @@
 					</control>
 					<control type="label">
 						<left>10</left>
-						<top>0</top>
 						<width>530</width>
 						<height>45</height>
 						<font>font12</font>
@@ -103,7 +93,6 @@
 					</control>
 					<control type="label">
 						<left>10</left>
-						<top>0</top>
 						<width>530</width>
 						<height>45</height>
 						<font>font12</font>
@@ -120,8 +109,6 @@
 				<top>140</top>
 				<control type="button" id="11">
 					<description>Browse Button</description>
-					<left>0</left>
-					<top>0</top>
 					<width>190</width>
 					<height>45</height>
 					<label>1024</label>
@@ -137,7 +124,6 @@
 				</control>
 				<control type="button" id="13">
 					<description>Add Path Button</description>
-					<left>0</left>
 					<top>45</top>
 					<width>190</width>
 					<height>45</height>
@@ -154,7 +140,6 @@
 				</control>
 				<control type="button" id="14">
 					<description>Remove Path Button</description>
-					<left>0</left>
 					<top>90</top>
 					<width>190</width>
 					<height>45</height>
@@ -213,7 +198,6 @@
 				<control type="button" id="18">
 					<description>Ok Button</description>
 					<left>210</left>
-					<top>0</top>
 					<width>200</width>
 					<height>45</height>
 					<align>center</align>
@@ -230,7 +214,6 @@
 				<control type="button" id="19">
 					<description>Cancel Button</description>
 					<left>420</left>
-					<top>0</top>
 					<width>200</width>
 					<height>45</height>
 					<align>center</align>
@@ -246,7 +229,6 @@
 				</control>
 				<control type="button" id="20">
 					<description>Set Content Button</description>
-					<left>0</left>
 					<top>135</top>
 					<width>200</width>
 					<height>45</height>

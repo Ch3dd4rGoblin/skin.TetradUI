@@ -61,15 +61,12 @@
 				<scrolltime>200</scrolltime>
 				<itemlayout height="45">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>350</width>
 						<height>45</height>
 						<texture border="10">list-nofocus.png</texture>
 					</control>
 					<control type="label">
 						<left>10</left>
-						<top>0</top>
 						<width>330</width>
 						<height>45</height>
 						<font>font12_title</font>
@@ -81,16 +78,12 @@
 				</itemlayout>
 				<focusedlayout height="45">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>350</width>
 						<height>45</height>
 						<visible>!Control.HasFocus(450)</visible>
 						<texture border="3">list-nofocus.png</texture>
 					</control>
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>350</width>
 						<height>45</height>
 						<visible>Control.HasFocus(450)</visible>
@@ -98,7 +91,6 @@
 					</control>
 					<control type="label">
 						<left>10</left>
-						<top>0</top>
 						<width>330</width>
 						<height>45</height>
 						<font>font12_title</font>
@@ -111,7 +103,6 @@
 					</control>
 					<control type="label">
 						<left>10</left>
-						<top>0</top>
 						<width>330</width>
 						<height>45</height>
 						<font>font12_title</font>

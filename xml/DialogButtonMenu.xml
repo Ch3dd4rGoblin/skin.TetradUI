@@ -56,7 +56,6 @@
 					<itemlayout height="50">
 						<control type="label">
 							<left>25</left>
-							<top>0</top>
 							<width>290</width>
 							<height>47</height>
 							<font>font16</font>
@@ -78,7 +77,6 @@
 						</control>
 						<control type="label">
 							<left>25</left>
-							<top>0</top>
 							<width>290</width>
 							<height>47</height>
 							<font>font16</font>

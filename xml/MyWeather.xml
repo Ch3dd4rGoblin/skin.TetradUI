@@ -23,7 +23,6 @@
 			<control type="image">
 				<description>Background</description>
 				<left>55</left>
-				<top>0</top>
 				<width>50</width>
 				<height>720</height>
 				<aspectratio>stretch</aspectratio>
@@ -32,7 +31,6 @@
 			<control type="image">
 				<description>Background</description>
 				<left>205r</left>
-				<top>0</top>
 				<width>50</width>
 				<height>720</height>
 				<aspectratio>stretch</aspectratio>
@@ -41,7 +39,6 @@
 			<control type="image">
 				<description>Background</description>
 				<left>105</left>
-				<top>0</top>
 				<width>970</width>
 				<height>720</height>
 				<aspectratio>stretch</aspectratio>
@@ -54,7 +51,6 @@
 			<animation effect="fade" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
 			<control type="label">
 				<description>Header label</description>
-				<left>0</left>
 				<label>31013</label>
 				<include>HeaderTextCommons</include>
 			</control>
@@ -174,7 +170,6 @@
 				<control type="label">
 					<description>weather location label</description>
 					<left>590</left>
-					<top>0</top>
 					<width>800</width>
 					<height>45</height>
 					<font>font13</font>
@@ -193,7 +188,6 @@
 				</control>
 				<control type="image">
 					<description>current weather icon</description>
-					<left>0</left>
 					<top>40</top>
 					<height>230</height>
 					<width>230</width>
@@ -258,7 +252,6 @@
 				</control>
 				<control type="image">
 					<description>Divider</description>
-					<left>0</left>
 					<top>300</top>
 					<width>580</width>
 					<height>2</height>
@@ -402,7 +395,6 @@
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>weather location label</description>
-					<left>0</left>
 					<top>-35</top>
 					<width>580</width>
 					<height>20</height>
@@ -415,7 +407,6 @@
 				</control>
 				<control type="image">
 					<description>Divider</description>
-					<left>0</left>
 					<top>-5</top>
 					<width>580</width>
 					<height>2</height>
@@ -423,12 +414,8 @@
 				</control>
 				<control type="group">
 					<description>day 0</description>
-					<left>0</left>
-					<top>0</top>
 					<control type="label">
 						<description>Day label</description>
-						<left>0</left>
-						<top>0</top>
 						<width>420</width>
 						<height>35</height>
 						<font>font16</font>
@@ -441,7 +428,6 @@
 					<control type="image">
 						<description>day icon</description>
 						<left>440</left>
-						<top>0</top>
 						<height>110</height>
 						<width>110</width>
 						<info>Window.Property(Day0.OutlookIcon)</info>
@@ -513,7 +499,6 @@
 				</control>
 				<control type="image">
 					<description>Divider</description>
-					<left>0</left>
 					<top>115</top>
 					<width>580</width>
 					<height>2</height>
@@ -521,12 +506,9 @@
 				</control>
 				<control type="group">
 					<description>day 1</description>
-					<left>0</left>
 					<top>120</top>
 					<control type="label">
 						<description>Day label</description>
-						<left>0</left>
-						<top>0</top>
 						<width>420</width>
 						<height>35</height>
 						<font>font16</font>
@@ -539,7 +521,6 @@
 					<control type="image">
 						<description>day icon</description>
 						<left>440</left>
-						<top>0</top>
 						<height>110</height>
 						<width>110</width>
 						<info>Window.Property(Day1.OutlookIcon)</info>
@@ -611,7 +592,6 @@
 				</control>
 				<control type="image">
 					<description>Divider</description>
-					<left>0</left>
 					<top>235</top>
 					<width>580</width>
 					<height>2</height>
@@ -619,12 +599,9 @@
 				</control>
 				<control type="group">
 					<description>day 2</description>
-					<left>0</left>
 					<top>240</top>
 					<control type="label">
 						<description>Day label</description>
-						<left>0</left>
-						<top>0</top>
 						<width>420</width>
 						<height>35</height>
 						<font>font16</font>
@@ -637,7 +614,6 @@
 					<control type="image">
 						<description>day icon</description>
 						<left>440</left>
-						<top>0</top>
 						<height>110</height>
 						<width>110</width>
 						<info>Window.Property(Day2.OutlookIcon)</info>
@@ -709,7 +685,6 @@
 				</control>
 				<control type="image">
 					<description>Divider</description>
-					<left>0</left>
 					<top>355</top>
 					<width>580</width>
 					<height>2</height>
@@ -717,12 +692,9 @@
 				</control>
 				<control type="group">
 					<description>day 3</description>
-					<left>0</left>
 					<top>360</top>
 					<control type="label">
 						<description>Day label</description>
-						<left>0</left>
-						<top>0</top>
 						<width>420</width>
 						<height>35</height>
 						<font>font16</font>
@@ -735,7 +707,6 @@
 					<control type="image">
 						<description>day icon</description>
 						<left>440</left>
-						<top>0</top>
 						<height>110</height>
 						<width>110</width>
 						<info>Window.Property(Day3.OutlookIcon)</info>
@@ -813,7 +784,6 @@
 		<control type="button" id="1">
 			<description>Blank Blade Slide Left</description>
 			<left>80r</left>
-			<top>0</top>
 			<width>160</width>
 			<height>720</height>
 			<texturefocus>blades-blank-right.png</texturefocus>
@@ -835,7 +805,6 @@
 				<texture>blades-runner-left.png</texture>
 			</control>
 			<control type="image">
-				<left>0</left>
 				<top>-40</top>
 				<width>115</width>
 				<height>800</height>
@@ -934,7 +903,6 @@
 				<texture>blades-runner-left.png</texture>
 			</control>
 			<control type="image">
-				<left>0</left>
 				<top>-40</top>
 				<width>115</width>
 				<height>800</height>

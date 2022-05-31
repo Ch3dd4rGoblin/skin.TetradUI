@@ -16,13 +16,11 @@
 			<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 			<control type="label">
 				<description>Header label</description>
-				<left>0</left>
 				<label>$LOCALIZE[20077]</label>
 				<include>HeaderTextCommons</include>
 			</control>
 			<control type="textbox">
 				<description>textarea</description>
-				<left>0</left>
 				<top>380</top>
 				<width>250</width>
 				<height>250</height>
@@ -506,8 +504,6 @@
 						<left>0</left>
 						<top>0</top>
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
 							<width>370</width>
 							<height>280</height>
 							<colordiffuse>BBFFFFFF</colordiffuse>
@@ -579,8 +575,6 @@
 						<left>390</left>
 						<top>0</top>
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
 							<width>370</width>
 							<height>280</height>
 							<colordiffuse>BBFFFFFF</colordiffuse>
@@ -652,8 +646,6 @@
 						<left>0</left>
 						<top>290</top>
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
 							<width>370</width>
 							<height>280</height>
 							<colordiffuse>BBFFFFFF</colordiffuse>
@@ -725,8 +717,6 @@
 						<left>390</left>
 						<top>290</top>
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
 							<width>370</width>
 							<height>280</height>
 							<colordiffuse>BBFFFFFF</colordiffuse>

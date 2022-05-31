@@ -77,7 +77,6 @@
 						<control type="image">
 							<description>Cover image</description>
 							<left>-15</left>
-							<top>0</top>
 							<width>300</width>
 							<height>435</height>
 							<texture background="true">$INFO[Listitem.Icon]</texture>
@@ -97,8 +96,6 @@
 							<scrolltime>200</scrolltime>
 							<itemlayout height="30" width="750">
 								<control type="label">
-									<left>0</left>
-									<top>0</top>
 									<width>160</width>
 									<height>30</height>
 									<font>font12</font>
@@ -109,7 +106,6 @@
 								</control>
 								<control type="label">
 									<left>175</left>
-									<top>0</top>
 									<width>565</width>
 									<height>30</height>
 									<font>font12</font>
@@ -121,16 +117,12 @@
 							</itemlayout>
 							<focusedlayout height="30" width="750">
 								<control type="image">
-									<left>0</left>
-									<top>0</top>
 									<width>750</width>
 									<height>33</height>
 									<visible>Control.HasFocus(49)</visible>
 									<texture border="10">list-focus.png</texture>
 								</control>
 								<control type="label">
-									<left>0</left>
-									<top>0</top>
 									<width>160</width>
 									<height>30</height>
 									<font>font12</font>
@@ -141,7 +133,6 @@
 								</control>
 								<control type="label">
 									<left>175</left>
-									<top>0</top>
 									<width>565</width>
 									<height>30</height>
 									<font>font12</font>
@@ -155,55 +146,46 @@
 								<item>
 									<label>$LOCALIZE[557]:</label>
 									<label2>$INFO[ListItem.Artist]</label2>
-									<onclick>noop</onclick>
 									<visible>!String.IsEmpty(ListItem.Artist)</visible>
 								</item>
 								<item>
 									<label>$LOCALIZE[515]:</label>
 									<label2>$INFO[ListItem.Genre]</label2>
-									<onclick>noop</onclick>
 									<visible>!String.IsEmpty(ListItem.Genre)</visible>
 								</item>
 								<item>
 									<label>$LOCALIZE[563]:</label>
 									<label2>$INFO[ListItem.Rating]</label2>
-									<onclick>noop</onclick>
 									<visible>!String.IsEmpty(ListItem.Rating)</visible>
 								</item>
 								<item>
 									<label>$LOCALIZE[175]:</label>
 									<label2>$INFO[ListItem.Property(Album_Mood)]</label2>
-									<onclick>noop</onclick>
 									<visible>!String.IsEmpty(ListItem.Property(Album_Mood))</visible>
 								</item>
 								<item>
 									<label>$LOCALIZE[176]:</label>
 									<label2>$INFO[ListItem.Property(Album_Style)]</label2>
-									<onclick>noop</onclick>
 									<visible>!String.IsEmpty(ListItem.Property(Album_Style))</visible>
 								</item>
 								<item>
 									<label>$LOCALIZE[21895]:</label>
 									<label2>$INFO[ListItem.Property(Album_Theme)]</label2>
-									<onclick>noop</onclick>
 									<visible>!String.IsEmpty(ListItem.Property(Album_Theme))</visible>
 								</item>
 								<item>
 									<label>146</label>
 									<label2>$INFO[ListItem.Property(Album_Type)]</label2>
-									<onclick>noop</onclick>
 									<visible>!String.IsEmpty(ListItem.Property(Album_Type))</visible>
 								</item>
 								<item>
 									<label>$LOCALIZE[21899]:</label>
 									<label2>$INFO[ListItem.Property(Album_Label)]</label2>
-									<onclick>noop</onclick>
 									<visible>!String.IsEmpty(ListItem.Property(Album_Label))</visible>
 								</item>
 								<item>
 									<label>$LOCALIZE[562]:</label>
 									<label2>$INFO[ListItem.Year]</label2>
-									<onclick>noop</onclick>
 									<visible>!String.IsEmpty(ListItem.Year)</visible>
 								</item>
 							</content>
@@ -216,7 +198,6 @@
 						<control type="image">
 							<description>Cover image</description>
 							<left>-15</left>
-							<top>0</top>
 							<width>300</width>
 							<height>435</height>
 							<texture background="true">$INFO[Listitem.Icon]</texture>
@@ -236,8 +217,6 @@
 							<scrolltime>200</scrolltime>
 							<itemlayout height="30" width="750">
 								<control type="label">
-									<left>0</left>
-									<top>0</top>
 									<width>160</width>
 									<height>30</height>
 									<font>font12</font>
@@ -248,7 +227,6 @@
 								</control>
 								<control type="label">
 									<left>175</left>
-									<top>0</top>
 									<width>565</width>
 									<height>30</height>
 									<font>font12</font>
@@ -260,16 +238,12 @@
 							</itemlayout>
 							<focusedlayout height="30" width="750">
 								<control type="image">
-									<left>0</left>
-									<top>0</top>
 									<width>750</width>
 									<height>33</height>
 									<visible>Control.HasFocus(49)</visible>
 									<texture border="10">list-focus.png</texture>
 								</control>
 								<control type="label">
-									<left>0</left>
-									<top>0</top>
 									<width>160</width>
 									<height>30</height>
 									<font>font12</font>
@@ -280,7 +254,6 @@
 								</control>
 								<control type="label">
 									<left>175</left>
-									<top>0</top>
 									<width>565</width>
 									<height>30</height>
 									<font>font12</font>
@@ -294,55 +267,46 @@
 								<item>
 									<label>$LOCALIZE[21893]:</label>
 									<label2>$INFO[ListItem.Property(Artist_Born)]</label2>
-									<onclick>noop</onclick>
 									<visible>!String.IsEmpty(ListItem.Property(Artist_Born))</visible>
 								</item>
 								<item>
 									<label>$LOCALIZE[21894]:</label>
 									<label2>$INFO[ListItem.Property(Artist_Formed)]</label2>
-									<onclick>noop</onclick>
 									<visible>!String.IsEmpty(ListItem.Property(Artist_Formed))</visible>
 								</item>
 								<item>
 									<label>$LOCALIZE[515]:</label>
 									<label2>$INFO[ListItem.Genre]</label2>
-									<onclick>noop</onclick>
 									<visible>!String.IsEmpty(ListItem.Genre)</visible>
 								</item>
 								<item>
 									<label>$LOCALIZE[175]:</label>
 									<label2>$INFO[ListItem.Property(Artist_Mood)]</label2>
-									<onclick>noop</onclick>
 									<visible>!String.IsEmpty(ListItem.Property(Artist_Mood))</visible>
 								</item>
 								<item>
 									<label>$LOCALIZE[176]:</label>
 									<label2>$INFO[ListItem.Property(Artist_Style)]</label2>
-									<onclick>noop</onclick>
 									<visible>!String.IsEmpty(ListItem.Property(Artist_Style))</visible>
 								</item>
 								<item>
 									<label>$LOCALIZE[21892]:</label>
 									<label2>$INFO[ListItem.Property(Artist_Instrument)]</label2>
-									<onclick>noop</onclick>
 									<visible>!String.IsEmpty(ListItem.Property(Artist_Instrument))</visible>
 								</item>
 								<item>
 									<label>$LOCALIZE[21897]:</label>
 									<label2>$INFO[ListItem.Property(Artist_Died)]</label2>
-									<onclick>noop</onclick>
 									<visible>!String.IsEmpty(ListItem.Property(Artist_Died))</visible>
 								</item>
 								<item>
 									<label>$LOCALIZE[21896]:</label>
 									<label2>$INFO[ListItem.Property(Artist_Disbanded)]</label2>
-									<onclick>noop</onclick>
 									<visible>!String.IsEmpty(ListItem.Property(Artist_Disbanded))</visible>
 								</item>
 								<item>
 									<label>$LOCALIZE[21898]:</label>
 									<label2>$INFO[ListItem.Property(Artist_YearsActive)]</label2>
-									<onclick>noop</onclick>
 									<visible>!String.IsEmpty(ListItem.Property(Artist_YearsActive))</visible>
 								</item>
 							</content>
@@ -355,7 +319,6 @@
 						<control type="image">
 							<description>Cover image</description>
 							<left>-15</left>
-							<top>0</top>
 							<width>300</width>
 							<height>435</height>
 							<texture background="true">$INFO[Listitem.Icon]</texture>
@@ -375,8 +338,6 @@
 							<scrolltime>200</scrolltime>
 							<itemlayout height="30" width="750">
 								<control type="label">
-									<left>0</left>
-									<top>0</top>
 									<width>160</width>
 									<height>30</height>
 									<font>font12</font>
@@ -387,7 +348,6 @@
 								</control>
 								<control type="label">
 									<left>175</left>
-									<top>0</top>
 									<width>565</width>
 									<height>30</height>
 									<font>font12</font>
@@ -399,16 +359,12 @@
 							</itemlayout>
 							<focusedlayout height="30" width="750">
 								<control type="image">
-									<left>0</left>
-									<top>0</top>
 									<width>750</width>
 									<height>33</height>
 									<visible>Control.HasFocus(49)</visible>
 									<texture border="10">list-focus.png</texture>
 								</control>
 								<control type="label">
-									<left>0</left>
-									<top>0</top>
 									<width>160</width>
 									<height>30</height>
 									<font>font12</font>
@@ -419,7 +375,6 @@
 								</control>
 								<control type="label">
 									<left>175</left>
-									<top>0</top>
 									<width>565</width>
 									<height>30</height>
 									<font>font12</font>
@@ -433,35 +388,29 @@
 								<item>
 									<label>$LOCALIZE[557]:</label>
 									<label2>$INFO[ListItem.Artist]</label2>
-									<onclick>noop</onclick>
 								</item>
 								<item>
 									<label>$LOCALIZE[558]:</label>
 									<label2 fallback="161">$INFO[ListItem.Album]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label2>
-									<onclick>noop</onclick>
 								</item>
 								<item>
 									<label>$LOCALIZE[515]:</label>
 									<label2>$INFO[ListItem.Genre]</label2>
-									<onclick>noop</onclick>
 									<visible>!String.IsEmpty(ListItem.Genre)</visible>
 								</item>
 								<item>
 									<label>$LOCALIZE[562]:</label>
 									<label2>$INFO[ListItem.Year]</label2>
-									<onclick>noop</onclick>
 									<visible>!String.IsEmpty(ListItem.Year)</visible>
 								</item>
 								<item>
 									<label>$LOCALIZE[554]:</label>
 									<label2>$INFO[ListItem.TrackNumber]</label2>
-									<onclick>noop</onclick>
 									<visible>!String.IsEmpty(ListItem.TrackNumber)</visible>
 								</item>
 								<item>
 									<label>$LOCALIZE[563]:</label>
 									<label2>$INFO[ListItem.Rating]</label2>
-									<onclick>noop</onclick>
 									<visible>!String.IsEmpty(ListItem.Rating)</visible>
 								</item>
 							</content>
@@ -496,14 +445,11 @@
 					<visible>Skin.HasSetting(MusicInfo9002Toggle)</visible>
 					<itemlayout height="100" width="500" condition="Container.Content(Artists)">
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
 							<width>500</width>
 							<height>95</height>
 							<texture>wide-thumb-nofocus.png</texture>
 						</control>
 						<control type="image">
-							<left>0</left>
 							<top>5</top>
 							<width>100</width>
 							<height>85</height>
@@ -523,14 +469,11 @@
 					</itemlayout>
 					<focusedlayout height="100" width="500" condition="Container.Content(Artists)">
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
 							<width>500</width>
 							<height>95</height>
 							<texture>wide-thumb-focus.png</texture>
 						</control>
 						<control type="image">
-							<left>0</left>
 							<top>5</top>
 							<width>100</width>
 							<height>85</height>
@@ -551,14 +494,11 @@
 					</focusedlayout>
 					<itemlayout height="100" width="500" condition="Container.Content(Albums)">
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
 							<width>500</width>
 							<height>95</height>
 							<texture>wide-thumb-nofocus.png</texture>
 						</control>
 						<control type="image">
-							<left>0</left>
 							<top>5</top>
 							<width>100</width>
 							<height>85</height>
@@ -578,14 +518,11 @@
 					</itemlayout>
 					<focusedlayout height="100" width="500" condition="Container.Content(Albums)">
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
 							<width>500</width>
 							<height>95</height>
 							<texture>wide-thumb-focus.png</texture>
 						</control>
 						<control type="image">
-							<left>0</left>
 							<top>5</top>
 							<width>100</width>
 							<height>85</height>

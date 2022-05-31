@@ -16,7 +16,6 @@
 			<itemlayout height="40" width="615">
 				<control type="label">
 					<left>10</left>
-					<top>0</top>
 					<width>520</width>
 					<height>36</height>
 					<font>font13</font>
@@ -28,7 +27,6 @@
 				</control>
 				<control type="label">
 					<left>605</left>
-					<top>0</top>
 					<width>400</width>
 					<height>36</height>
 					<font>font13</font>
@@ -42,15 +40,12 @@
 			</itemlayout>
 			<focusedlayout height="40" width="615">
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
 					<width>615</width>
 					<height>40</height>
 					<texture border="10">list-focus.png</texture>
 				</control>
 				<control type="label">
 					<left>10</left>
-					<top>0</top>
 					<width>520</width>
 					<height>36</height>
 					<font>font13</font>
@@ -62,7 +57,6 @@
 				</control>
 				<control type="label">
 					<left>605</left>
-					<top>0</top>
 					<width>400</width>
 					<height>36</height>
 					<font>font13</font>
@@ -79,8 +73,6 @@
 			<top>20</top>
 			<visible>Control.IsVisible(50)</visible>
 			<control type="image">
-				<left>0</left>
-				<top>0</top>
 				<width>420</width>
 				<height>440</height>
 				<aspectratio>keep</aspectratio>
@@ -396,7 +388,6 @@
 			<top>-35</top>
 			<visible>Control.IsVisible(54)</visible>
 			<control type="label">
-				<left>0</left>
 				<top>10</top>
 				<width>1060</width>
 				<height>20</height>
@@ -408,7 +399,6 @@
 			</control>
 			<control type="textbox" id="400">
 				<description>textarea</description>
-				<left>0</left>
 				<top>420</top>
 				<width>1060</width>
 				<height>90</height>
@@ -436,8 +426,6 @@
 			<preloaditems>4</preloaditems>
 			<itemlayout height="310" width="218">
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
 					<width>218</width>
 					<height>310</height>
 					<aspectratio>stretch</aspectratio>
@@ -456,8 +444,6 @@
 			</itemlayout>
 			<focusedlayout height="310" width="218">
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
 					<width>218</width>
 					<height>310</height>
 					<aspectratio>stretch</aspectratio>
@@ -657,8 +643,6 @@
 			<top>10</top>
 			<visible>Control.IsVisible(55) + ![Container.Content(Movies) | Container.Content(Episodes) | Container.Content(Albums) | Container.Content(Artists) | Container.Content(Addons) | Container.Content(LiveTV)]</visible>
 			<control type="fadelabel">
-				<left>0</left>
-				<top>0</top>
 				<width>350</width>
 				<height>20</height>
 				<font>font16</font>
@@ -672,7 +656,6 @@
 			</control>
 			<control type="textbox" id="400">
 				<description>textarea</description>
-				<left>0</left>
 				<top>40</top>
 				<width>350</width>
 				<height>410</height>
@@ -688,8 +671,6 @@
 			<top>10</top>
 			<visible>Control.IsVisible(55) + Container.Content(Movies)</visible>
 			<control type="fadelabel">
-				<left>0</left>
-				<top>0</top>
 				<width>420</width>
 				<height>20</height>
 				<font>font16</font>
@@ -703,7 +684,6 @@
 			</control>
 			<control type="textbox" id="400">
 				<description>textarea</description>
-				<left>0</left>
 				<top>40</top>
 				<width>420</width>
 				<height>410</height>
@@ -719,8 +699,6 @@
 			<top>10</top>
 			<visible>Control.IsVisible(55) + Container.Content(Episodes)</visible>
 			<control type="fadelabel">
-				<left>0</left>
-				<top>0</top>
 				<width>350</width>
 				<height>20</height>
 				<font>font13</font>
@@ -733,7 +711,6 @@
 				<pauseatend>2000</pauseatend>
 			</control>
 			<control type="fadelabel">
-				<left>0</left>
 				<top>35</top>
 				<width>350</width>
 				<height>20</height>
@@ -748,7 +725,6 @@
 			</control>
 			<control type="textbox" id="400">
 				<description>textarea</description>
-				<left>0</left>
 				<top>70</top>
 				<width>350</width>
 				<height>380</height>
@@ -764,8 +740,6 @@
 			<top>10</top>
 			<visible>Control.IsVisible(55) + Container.Content(Addons)</visible>
 			<control type="fadelabel">
-				<left>0</left>
-				<top>0</top>
 				<width>350</width>
 				<height>20</height>
 				<font>font16</font>
@@ -779,7 +753,6 @@
 			</control>
 			<control type="textbox" id="400">
 				<description>textarea</description>
-				<left>0</left>
 				<top>40</top>
 				<width>350</width>
 				<height>410</height>
@@ -795,8 +768,6 @@
 			<top>10</top>
 			<visible>Control.IsVisible(55) + Container.Content(Albums)</visible>
 			<control type="fadelabel">
-				<left>0</left>
-				<top>0</top>
 				<width>350</width>
 				<height>20</height>
 				<font>font16</font>
@@ -810,7 +781,6 @@
 			</control>
 			<control type="textbox" id="400">
 				<description>textarea</description>
-				<left>0</left>
 				<top>40</top>
 				<width>350</width>
 				<height>410</height>
@@ -826,8 +796,6 @@
 			<top>10</top>
 			<visible>Control.IsVisible(55) + Container.Content(Artists)</visible>
 			<control type="fadelabel">
-				<left>0</left>
-				<top>0</top>
 				<width>350</width>
 				<height>20</height>
 				<font>font16</font>
@@ -841,7 +809,6 @@
 			</control>
 			<control type="textbox" id="400">
 				<description>textarea</description>
-				<left>0</left>
 				<top>40</top>
 				<width>350</width>
 				<height>410</height>
@@ -857,8 +824,6 @@
 			<top>10</top>
 			<visible>Control.IsVisible(55) + Container.Content(LiveTV)</visible>
 			<control type="fadelabel">
-				<left>0</left>
-				<top>0</top>
 				<width>350</width>
 				<height>20</height>
 				<font>font13</font>
@@ -871,7 +836,6 @@
 				<pauseatend>2000</pauseatend>
 			</control>
 			<control type="fadelabel">
-				<left>0</left>
 				<top>35</top>
 				<width>350</width>
 				<height>20</height>
@@ -886,7 +850,6 @@
 			</control>
 			<control type="textbox" id="400">
 				<description>textarea</description>
-				<left>0</left>
 				<top>70</top>
 				<width>350</width>
 				<height>380</height>

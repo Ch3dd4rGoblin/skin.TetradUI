@@ -9,16 +9,12 @@
 	<controls>
 		<control type="image" id="1">
 			<description>Pointer Image</description>
-			<left>0</left>
-			<top>0</top>
 			<width>30</width>
 			<height>30</height>
 			<texture>pointer-nofocus.png</texture>
 		</control>
 		<control type="image" id="2">
 			<description>Pointer Focus Image</description>
-			<left>0</left>
-			<top>0</top>
 			<width>30</width>
 			<height>30</height>
 			<texture>pointer-focus.png</texture>
@@ -33,8 +29,6 @@
 		</control>
 		<control type="image" id="4">
 			<description>Pointer Click Image</description>
-			<left>0</left>
-			<top>0</top>
 			<width>30</width>
 			<height>30</height>
 			<texture>calibrate-topleft-focus.png</texture>

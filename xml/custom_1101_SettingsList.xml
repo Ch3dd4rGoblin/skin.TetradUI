@@ -42,8 +42,6 @@
 					<usecontrolcoords>true</usecontrolcoords>
 					<visible>String.IsEqual(window(home).Property(settingslist_content),3d)</visible>
 					<control type="radiobutton" id="9011">
-						<left>0</left>
-						<top>0</top>
 						<width>600</width>
 						<include>DialogButtonCommonValues</include>
 						<label>$LOCALIZE[24022]</label>
@@ -51,8 +49,6 @@
 						<selected>Integer.IsGreater(System.StereoscopicMode,0)</selected>
 					</control>
 					<control type="button" id="9012">
-						<left>0</left>
-						<top>0</top>
 						<width>600</width>
 						<include>DialogButtonCommonValues</include>
 						<label>$LOCALIZE[31504]</label>
@@ -60,8 +56,6 @@
 						<onclick>StereoMode</onclick>
 					</control>
 					<control type="radiobutton" id="9013">
-						<left>0</left>
-						<top>0</top>
 						<width>600</width>
 						<include>DialogButtonCommonValues</include>
 						<label>$LOCALIZE[31505]</label>
@@ -79,8 +73,6 @@
 					<usecontrolcoords>true</usecontrolcoords>
 					<visible>String.IsEqual(window(home).Property(settingslist_content),settings)</visible>
 					<control type="button" id="9021">
-						<left>0</left>
-						<top>0</top>
 						<width>600</width>
 						<include>DialogButtonCommonValues</include>
 						<label>$LOCALIZE[36560]</label>
@@ -88,8 +80,6 @@
 						<visible>System.HasCMS</visible>
 					</control>
 					<control type="button" id="9022">
-						<left>0</left>
-						<top>0</top>
 						<width>600</width>
 						<include>DialogButtonCommonValues</include>
 						<label>$LOCALIZE[31226]</label>
@@ -98,8 +88,6 @@
 						<visible>Integer.IsGreater(VideoPlayer.AudioStreamCount,1)</visible>
 					</control>
 					<control type="button" id="9023">
-						<left>0</left>
-						<top>0</top>
 						<width>600</width>
 						<include>DialogButtonCommonValues</include>
 						<label>31225</label>
@@ -108,8 +96,6 @@
 						<onclick condition="!VideoPlayer.HasSubtitles">ActivateWindow(osdsubtitlesettings)</onclick>
 					</control>
 					<control type="button" id="9024">
-						<left>0</left>
-						<top>0</top>
 						<width>600</width>
 						<include>DialogButtonCommonValues</include>
 						<label>31224</label>
@@ -117,8 +103,6 @@
 						<visible>Player.HasPrograms</visible>
 					</control>
 					<control type="button" id="9025">
-						<left>0</left>
-						<top>0</top>
 						<width>600</width>
 						<include>DialogButtonCommonValues</include>
 						<label>31223</label>
@@ -126,8 +110,6 @@
 						<visible>Player.HasResolutions</visible>
 					</control>
 					<control type="button" id="9026">
-						<left>0</left>
-						<top>0</top>
 						<width>600</width>
 						<include>DialogButtonCommonValues</include>
 						<label>31222</label>

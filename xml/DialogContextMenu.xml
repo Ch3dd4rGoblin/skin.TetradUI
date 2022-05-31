@@ -10,7 +10,6 @@
 	<controls>
 		<control type="image" id="999">
 			<description>background image</description>
-			<left>0</left>
 			<top>-45</top>
 			<width>380</width>
 			<height max="720">auto</height>
@@ -27,7 +26,6 @@
 		<control type="button" id="1000">
 			<description>button template</description>
 			<left>35</left>
-			<top>0</top>
 			<width>305</width>
 			<height>40</height>
 			<align>center</align>

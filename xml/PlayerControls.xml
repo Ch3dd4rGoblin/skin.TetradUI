@@ -10,8 +10,6 @@
 	</coordinates>
 	<controls>
 		<control type="image">
-			<left>0</left>
-			<top>0</top>
 			<width>600</width>
 			<height>300</height>
 			<texture border="50,100,50,50">Dialog.png</texture>
@@ -22,7 +20,6 @@
 			<visible>Player.HasAudio</visible>
 			<control type="image">
 				<description>Cover image</description>
-				<left>0</left>
 				<top>10</top>
 				<width>160</width>
 				<height>130</height>
@@ -94,7 +91,6 @@
 				<visible>VideoPlayer.Content(Movies)</visible>
 				<control type="image">
 					<description>Cover image</description>
-					<left>0</left>
 					<top>5</top>
 					<width>140</width>
 					<height>145</height>
@@ -162,7 +158,6 @@
 				<visible>!VideoPlayer.Content(Movies)</visible>
 				<control type="image">
 					<description>Cover image</description>
-					<left>0</left>
 					<top>10</top>
 					<width>200</width>
 					<height>130</height>
@@ -174,7 +169,6 @@
 				</control>
 				<control type="image">
 					<description>Cover image</description>
-					<left>0</left>
 					<top>10</top>
 					<width>200</width>
 					<height>130</height>
@@ -274,8 +268,6 @@
 			<left>50</left>
 			<top>210</top>
 			<control type="button" id="600">
-				<left>0</left>
-				<top>0</top>
 				<width>40</width>
 				<height>40</height>
 				<label />
@@ -289,7 +281,6 @@
 			</control>
 			<control type="button" id="601">
 				<left>40</left>
-				<top>0</top>
 				<width>40</width>
 				<height>40</height>
 				<label />
@@ -303,7 +294,6 @@
 			</control>
 			<control type="togglebutton" id="603">
 				<left>80</left>
-				<top>0</top>
 				<width>40</width>
 				<height>40</height>
 				<label />
@@ -320,7 +310,6 @@
 			</control>
 			<control type="button" id="602">
 				<left>120</left>
-				<top>0</top>
 				<width>40</width>
 				<height>40</height>
 				<label />
@@ -335,7 +324,6 @@
 			</control>
 			<control type="button" id="604">
 				<left>160</left>
-				<top>0</top>
 				<width>40</width>
 				<height>40</height>
 				<label />
@@ -349,7 +337,6 @@
 			</control>
 			<control type="button" id="605">
 				<left>200</left>
-				<top>0</top>
 				<width>40</width>
 				<height>40</height>
 				<label />
@@ -363,7 +350,6 @@
 			</control>
 			<control type="button" id="606">
 				<left>240</left>
-				<top>0</top>
 				<width>40</width>
 				<height>40</height>
 				<label />
@@ -373,13 +359,12 @@
 				<onright>607</onright>
 				<onup>300</onup>
 				<ondown>200</ondown>
-				<onclick>PlayerControl(record)</onclick>
-				<enable>Player.CanRecord</enable>
-				<animation effect="fade" start="100" end="30" time="100" condition="!Player.CanRecord">Conditional</animation>
+				<onclick>PVR.ToggleRecordPlayingChannel</onclick>
+				<enable>PVR.CanRecordPlayingChannel</enable>
+				<animation effect="fade" start="100" end="30" time="100" condition="!PVR.CanRecordPlayingChannel">Conditional</animation>
 			</control>
 			<control type="button" id="607">
 				<left>415</left>
-				<top>0</top>
 				<width>40</width>
 				<height>40</height>
 				<label />
@@ -393,7 +378,6 @@
 			</control>
 			<control type="image">
 				<left>415</left>
-				<top>0</top>
 				<width>40</width>
 				<height>40</height>
 				<texture>OSDRepeatNF.png</texture>
@@ -402,7 +386,6 @@
 			</control>
 			<control type="image">
 				<left>415</left>
-				<top>0</top>
 				<width>40</width>
 				<height>40</height>
 				<texture>OSDRepeatFO.png</texture>
@@ -411,7 +394,6 @@
 			</control>
 			<control type="image">
 				<left>415</left>
-				<top>0</top>
 				<width>40</width>
 				<height>40</height>
 				<texture>OSDRepeatOneNF.png</texture>
@@ -420,7 +402,6 @@
 			</control>
 			<control type="image">
 				<left>415</left>
-				<top>0</top>
 				<width>40</width>
 				<height>40</height>
 				<texture>OSDRepeatOneFO.png</texture>
@@ -429,7 +410,6 @@
 			</control>
 			<control type="image">
 				<left>415</left>
-				<top>0</top>
 				<width>40</width>
 				<height>40</height>
 				<texture>OSDRepeatAllNF.png</texture>
@@ -438,7 +418,6 @@
 			</control>
 			<control type="image">
 				<left>415</left>
-				<top>0</top>
 				<width>40</width>
 				<height>40</height>
 				<texture>OSDRepeatAllFO.png</texture>
@@ -447,7 +426,6 @@
 			</control>
 			<control type="togglebutton" id="608">
 				<left>455</left>
-				<top>0</top>
 				<width>40</width>
 				<height>40</height>
 				<label />

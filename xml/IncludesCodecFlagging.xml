@@ -253,8 +253,6 @@
 			<visible>!String.IsEmpty(ListItem.Date)</visible>
 			<control type="image">
 				<description>Date back</description>
-				<left>0</left>
-				<top>0</top>
 				<width>150</width>
 				<height>40</height>
 				<texture border="5">flagging/blank.png</texture>
@@ -279,8 +277,6 @@
 			<visible>!String.IsEmpty(ListItem.PictureResolution)</visible>
 			<control type="image">
 				<description>Rating back</description>
-				<left>0</left>
-				<top>0</top>
 				<width>150</width>
 				<height>40</height>
 				<texture border="5">flagging/blank.png</texture>

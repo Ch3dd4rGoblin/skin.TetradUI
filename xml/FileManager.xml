@@ -16,7 +16,6 @@
 			<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 			<control type="label">
 				<description>Header label</description>
-				<left>0</left>
 				<label>$LOCALIZE[7]</label>
 				<include>HeaderTextCommons</include>
 			</control>
@@ -93,8 +92,6 @@
 				<scrolltime>200</scrolltime>
 				<itemlayout height="40">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>540</width>
 						<height>45</height>
 						<texture border="10">button-nofocus.png</texture>
@@ -130,16 +127,12 @@
 				</itemlayout>
 				<focusedlayout height="40">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>540</width>
 						<height>45</height>
 						<visible>!Control.HasFocus(20)</visible>
 						<texture border="10">button-nofocus.png</texture>
 					</control>
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>540</width>
 						<height>45</height>
 						<visible>Control.HasFocus(20)</visible>
@@ -244,8 +237,6 @@
 				<scrolltime>200</scrolltime>
 				<itemlayout height="40">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>540</width>
 						<height>45</height>
 						<texture border="10">button-nofocus.png</texture>
@@ -281,16 +272,12 @@
 				</itemlayout>
 				<focusedlayout height="40">
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>540</width>
 						<height>45</height>
 						<visible>!Control.HasFocus(21)</visible>
 						<texture border="10">button-nofocus.png</texture>
 					</control>
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>540</width>
 						<height>45</height>
 						<visible>Control.HasFocus(21)</visible>
