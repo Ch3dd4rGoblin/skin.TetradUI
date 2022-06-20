@@ -62,7 +62,8 @@ After this, you will automatically receive the latest development versions of Te
 [SCREENSHOTS](url placeholder)  
 <br>
 
-## CREDITS: TeamUI
+## CREDITS: 
+TeamUI:
 [Gade](https://forum.kodi.tv/member.php?action=profile&uid=152411)
 [Manfeed](https://forum.kodi.tv/member.php?action=profile&uid=81541)
 [Ch3dd4rGoblin](https://forum.kodi.tv/member.php?action=profile&uid=465378)
