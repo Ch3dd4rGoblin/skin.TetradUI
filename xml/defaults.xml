@@ -5,7 +5,6 @@
 		<colorkey>0</colorkey>
 	</default>
 	<default type="label">
-		<label />
 		<font>font13</font>
 		<textcolor>white</textcolor>
 		<selectedcolor>orange</selectedcolor>
@@ -21,6 +20,7 @@
 		<texturenofocus>button-nofocus.png</texturenofocus>
 		<font>font13</font>
 		<textcolor>white</textcolor>
+		<focusedcolor>white</focusedcolor>
 		<disabledcolor>disabled</disabledcolor>
 		<textoffsetx>15</textoffsetx>
 		<aligny>center</aligny>
@@ -34,6 +34,7 @@
 		<alttexturefocus>sortdown-focus.png</alttexturefocus>
 		<alttexturenofocus>sortdown-nofocus.png</alttexturenofocus>
 		<textcolor>white</textcolor>
+		<focusedcolor>white</focusedcolor>
 		<aligny>center</aligny>
 		<font>font13</font>
 		<disabledcolor>disabled</disabledcolor>
@@ -69,6 +70,7 @@
 		<font>font12</font>
 		<reverse>yes</reverse>
 		<textcolor>white</textcolor>
+		<focusedcolor>white</focusedcolor>
 		<disabledcolor>disabled</disabledcolor>
 		<subtype>text</subtype>
 		<textoffsetx>15</textoffsetx>
@@ -90,6 +92,7 @@
 		<texturedownfocus>sortdown-focus.png</texturedownfocus>
 		<font>font12</font>
 		<textcolor>white</textcolor>
+		<focusedcolor>white</focusedcolor>
 		<disabledcolor>disabled</disabledcolor>
 		<textoffsetx>15</textoffsetx>
 		<aligny>center</aligny>
@@ -107,9 +110,9 @@
 		<textureradiooffdisabled colordiffuse="60FFFFFF">check-boxNF.png</textureradiooffdisabled>
 		<texturefocus>button-focus.png</texturefocus>
 		<texturenofocus>button-nofocus.png</texturenofocus>
-		<label>215</label>
 		<font>font13</font>
 		<textcolor>white</textcolor>
+		<focusedcolor>white</focusedcolor>
 		<disabledcolor>disabled</disabledcolor>
 		<textoffsetx>15</textoffsetx>
 		<aligny>center</aligny>
@@ -120,8 +123,8 @@
 		<width>300</width>
 		<height>45</height>
 		<textoffsetx>15</textoffsetx>
-		<label />
 		<textcolor>white</textcolor>
+		<focusedcolor>white</focusedcolor>
 		<disabledcolor>disabled</disabledcolor>
 		<font>font12</font>
 		<texturefocus>button-focus.png</texturefocus>
@@ -135,6 +138,7 @@
 	</default>
 	<default type="sliderex">
 		<textcolor>white</textcolor>
+		<focusedcolor>white</focusedcolor>
 		<disabledcolor>disabled</disabledcolor>
 		<textoffsetx>15</textoffsetx>
 		<texturesliderbar>osd_slider_bg.png</texturesliderbar>
@@ -148,5 +152,9 @@
 	<default type="resize">
 		<texturefocus>button-focus.png</texturefocus>
 		<texturenofocus>button-nofocus.png</texturenofocus>
+	</default>
+	<default type="ranges">
+		<height>12</height>
+		<texturebg border="6,0,6,0">progress_back_2.png</texturebg>
 	</default>
 </includes>

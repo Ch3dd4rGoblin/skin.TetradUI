@@ -8,30 +8,8 @@
 	</coordinates>
 	<controls>
 		<control type="group">
-			<animation type="WindowOpen">
-				<effect type="fade" start="0" end="100" time="100" />
-				<effect type="slide" start="550,0" end="0,0" delay="100" time="400" tween="quadratic" easing="out" />
-			</animation>
-			<animation type="WindowClose">
-				<effect type="slide" start="0,0" end="550,0" delay="DialogVisibleFadeAnimationSpeed" time="400" tween="quadratic" easing="in"/>
-				<effect type="fade" start="100" end="0" delay="800" time="100" />
-			</animation>
-			<control type="image">
-				<left>130</left>
-				<top>-40</top>
-				<width>180</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-runner-right.png</texture>
-			</control>
-			<control type="image">
-				<left>310</left>
-				<top>-40</top>
-				<width>970</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-runner-right-edge.png</texture>
-			</control>
+			<include>BladesRunnerRightAnimation1</include>
+			<include>BladesRunnerRight</include>
 			<control type="label" id="411">
 				<description>Header label</description>
 				<left>200</left>
@@ -94,38 +72,23 @@
 						<width>330</width>
 						<height>45</height>
 						<font>font12_title</font>
-						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>black</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<info>ListItem.Label</info>
-						<visible>Control.HasFocus(450)</visible>
-					</control>
-					<control type="label">
-						<left>10</left>
-						<width>330</width>
-						<height>45</height>
-						<font>font12_title</font>
-						<align>left</align>
-						<aligny>center</aligny>
-						<textcolor>white</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<info>ListItem.Label</info>
-						<visible>!Control.HasFocus(450)</visible>
 					</control>
 				</focusedlayout>
 			</control>
 			<control type="label">
 				<description>Page label</description>
-				<left>520</left>
+				<left>170</left>
 				<top>670</top>
 				<width>350</width>
 				<height>30</height>
 				<align>right</align>
 				<aligny>center</aligny>
 				<font>font12</font>
-				<textcolor>white</textcolor>
-				<label>($INFO[Container(450).NumItems]) $LOCALIZE[31200] - $LOCALIZE[31201] ($INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages])</label>
+				<textcolor>grey2</textcolor>
+				<label>$INFO[Container(450).NumItems] $LOCALIZE[31200] - $LOCALIZE[31201] $INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages]</label>
 			</control>
 		</control>
 	</controls>

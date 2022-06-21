@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">9000</defaultcontrol>
+	<defaultcontrol always="true">9050</defaultcontrol>
 	<previouswindow>Settings</previouswindow>
 	<animation effect="fade" start="100" end="100" time="30" condition="Control.HasFocus(1)">WindowClose</animation>
 	<animation effect="fade" start="100" end="100" time="30" condition="Control.HasFocus(2)">WindowClose</animation>
@@ -20,28 +20,26 @@
 <!-- Blackwash Background -->
 		<control type="group">
 			<animation effect="slide" end="-50,0" time="0" condition="Control.HasFocus(1)">Conditional</animation>
+			<top>-95</top>
 			<control type="image">
 				<description>Background</description>
-				<left>205</left>
-				<width>50</width>
-				<height>720</height>
-				<aspectratio>stretch</aspectratio>
+				<left>191</left>
+				<width>68</width>
+				<height>910</height>
 				<texture>background-overlay-blackwash-left-ws.png</texture>
 			</control>
 			<control type="image">
 				<description>Background</description>
 				<left>55r</left>
-				<width>50</width>
-				<height>720</height>
-				<aspectratio>stretch</aspectratio>
+				<width>68</width>
+				<height>910</height>
 				<texture>background-overlay-blackwash-right-ws.png</texture>
 			</control>
 			<control type="image">
 				<description>Background</description>
-				<left>255</left>
-				<width>970</width>
-				<height>720</height>
-				<aspectratio>stretch</aspectratio>
+				<left>259</left>
+				<width>966</width>
+				<height>910</height>
 				<texture>background-overlay-blackwash-centertile-ws.png</texture>
 			</control>
 		</control>
@@ -50,9 +48,10 @@
 			<left>280</left>
 			<visible>!Control.HasFocus(1) + !Control.HasFocus(2)</visible>
 			<animation effect="fade" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
+			<include>HomeLogoButton</include>
 			<control type="label">
 				<description>Header label</description>
-				<label>31012</label>
+				<label>14209</label>
 				<include>HeaderTextCommons</include>
 			</control>
 			<include content="ClockTextCommons">
@@ -67,7 +66,7 @@
 					<height>452</height>
 					<onleft>1</onleft>
 					<onright>10</onright>
-					<onup>9000</onup>
+					<onup>9050</onup>
 					<ondown>9000</ondown>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>60</pagecontrol>
@@ -103,7 +102,9 @@
 							<texture>button.png</texture>
 							<animation effect="slide" start="0,-45" time="200" tween="sine" easing="out" condition="Container(9000).OnNext" reversible="false">Focus</animation>
 							<animation effect="slide" start="0,45" time="200" tween="sine" easing="out" condition="Container(9000).OnPrevious" reversible="false">Focus</animation>
-							<animation effect="fade" start="100" end="70" time="200" condition="!Control.HasFocus(9000)">Conditional</animation>
+							<animation effect="fade" start="100" end="25" time="200" condition="!Control.HasFocus(9000)">Conditional</animation>
+							<include>VisibleFadeEffect</include>
+							<visible>!Control.HasFocus(9050)</visible>
 						</control>
 						<control type="image">
 							<description>Icon</description>
@@ -193,13 +194,13 @@
 						</item>
 						<item>
 							<label>$LOCALIZE[10050]</label>
-							<label2>31405</label2>
+							<label2>31402</label2>
 							<onclick>ActivateWindow(Eventlog)</onclick>
 							<icon>button_icons/icon-eventlog.png</icon>
 						</item>
 						<item>
 							<label>$LOCALIZE[138]</label>
-							<label2>31405</label2>
+							<label2>31410</label2>
 							<onclick>ActivateWindow(systeminfo)</onclick>
 							<icon>button_icons/icon-systeminfo.png</icon>
 						</item>
@@ -208,13 +209,6 @@
 							<label2>31406</label2>
 							<onclick>ActivateWindow(SkinSettings)</onclick>
 							<icon>button_icons/icon-skin.png</icon>
-						</item>
-						<item>
-							<label>13005</label>
-							<label2>31407</label2>
-							<onclick>ActivateWindow(ShutdownMenu)</onclick>
-							<icon>button_icons/icon-power.png</icon>
-							<visible>false</visible>
 						</item>
 					</content>
 				</control>
@@ -229,7 +223,7 @@
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
-			<!--<include>TetradUILogo</include>-->
+			<include condition="System.GetBool(LookAndFeel.EnableRSSFeeds)">CommonRSSFeed</include>
 		</control>
 		<control type="group">
 			<left>115r</left>
@@ -289,44 +283,22 @@
 			</control>
 		</control>
 
-		<control type="button" id="1">
-			<description>Blank Blade Slide Right</description>
-			<left>-80</left>
-			<width>160</width>
-			<height>720</height>
-			<texturefocus>blades-blank-left.png</texturefocus>
-			<onfocus>ActivateWindow(Home)</onfocus>
-			<animation effect="slide" end="1280,0" time="HomeBladeAnimationSpeed">focus</animation>
-			<hitrect x="-10" y="-10" w="1" h="1" />
-		</control>
+		<include content="BlankBladeSlideRight">
+			<param name="id" value="1" />
+			<param name="action" value="ActivateWindow(Home)" />
+		</include>
 		<control type="group">
 			<visible>!Control.HasFocus(1)</visible>
 			<!-- Left side -->
-			<control type="image">
-				<left>-110</left>
-				<top>-40</top>
-				<width>180</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-runner-left.png</texture>
-			</control>
-			<control type="image">
-				<top>-40</top>
-				<width>115</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-size1-left-NF.png</texture>
-			</control>
+			<include content="BladesImagesLeft">
+				<param name="texture" value="blades-size1-left-NF.png" />
+			</include>
 			<control type="label">
 				<description>weather Label</description>
 				<label>31004</label>
 				<left>90</left>
 				<top>210</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<include>BladesLabelLeft</include>
 			</control>
 			<control type="image">
 				<left>50</left>
@@ -339,13 +311,9 @@
 			<control type="label">
 				<description>Apps Label</description>
 				<label>31002</label>
-				<left>140</left>
+				<left>142</left>
 				<top>200</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<include>BladesLabelLeft</include>
 			</control>
 			<control type="image">
 				<left>100</left>
@@ -358,13 +326,9 @@
 			<control type="label">
 				<description>Media Label</description>
 				<label>31001</label>
-				<left>190</left>
+				<left>188</left>
 				<top>190</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<include>BladesLabelLeft</include>
 			</control>
 			<control type="image">
 				<left>150</left>
@@ -377,13 +341,10 @@
 			<control type="label">
 				<description>System Label</description>
 				<label>31003</label>
-				<left>240</left>
+				<left>238</left>
 				<top>170</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<width>200</width>
+				<include>BladesLabelLeft</include>
 			</control>
 			<!-- Right side -->
 			<control type="image">
@@ -399,31 +360,15 @@
 		<control type="group">
 			<visible>Control.HasFocus(1)</visible>
 			<!-- Left side -->
-			<control type="image">
-				<left>-110</left>
-				<top>-40</top>
-				<width>180</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-runner-left.png</texture>
-			</control>
-			<control type="image">
-				<top>-40</top>
-				<width>115</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-size2-left-NF.png</texture>
-			</control>
+			<include content="BladesImagesLeft">
+				<param name="texture" value="blades-size2-left-NF.png" />
+			</include>
 			<control type="label">
 				<description>weather Label</description>
 				<label>31004</label>
 				<left>90</left>
 				<top>200</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<include>BladesLabelLeft</include>
 			</control>
 			<control type="image">
 				<left>50</left>
@@ -438,11 +383,7 @@
 				<label>31002</label>
 				<left>140</left>
 				<top>190</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<include>BladesLabelLeft</include>
 			</control>
 			<control type="image">
 				<left>100</left>
@@ -457,45 +398,26 @@
 			<control type="label">
 				<description>Media Label</description>
 				<label>31001</label>
-				<left>190</left>
+				<left>188</left>
 				<top>170</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<include>BladesLabelLeft</include>
 				<visible>Control.HasFocus(1)</visible>
 				<animation effect="fade" time="HomeBladeAnimationSpeed">visible</animation>
 			</control>
 			<!-- Right side -->
-			<control type="image">
-				<left>65r</left>
-				<top>-40</top>
-				<width>180</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-runner-right.png</texture>
-			</control>
-			<control type="image">
-				<left>115r</left>
-				<top>-40</top>
-				<width>115</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-size3-right-NF.png</texture>
-			</control>
+			<include content="BladesImagesRight">
+				<param name="texture" value="blades-size3-right-NF.png" />
+			</include>
 			<control type="label">
 				<description>System Label</description>
 				<label>31003</label>
-				<left>50r</left>
+				<left>48r</left>
 				<top>190</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<width>200</width>
+				<include>BladesLabelRight</include>
 			</control>
 		</control>
 		<include>Common_Now_Playing</include>
+		<include>BackgroundDim</include>
 	</controls>	
 </window>

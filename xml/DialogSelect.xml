@@ -46,7 +46,7 @@
 				<height>450</height>
 				<onup>3</onup>
 				<ondown>3</ondown>
-				<onleft>5</onleft>
+				<onleft>9001</onleft>
 				<onright>61</onright>
 				<pagecontrol>61</pagecontrol>
 				<scrolltime>200</scrolltime>
@@ -61,7 +61,6 @@
 						<width>530</width>
 						<height>45</height>
 						<font>font12</font>
-						<align>left</align>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
 					</control>
@@ -84,22 +83,9 @@
 						<width>530</width>
 						<height>45</height>
 						<font>font12</font>
-						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>black</textcolor>
 						<info>ListItem.Label</info>
 						<visible>Control.HasFocus(3)</visible>
-					</control>
-					<control type="label">
-						<left>10</left>
-						<width>530</width>
-						<height>45</height>
-						<font>font12</font>
-						<align>left</align>
-						<aligny>center</aligny>
-						<textcolor>white</textcolor>
-						<info>ListItem.Label</info>
-						<visible>!Control.HasFocus(3)</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -132,7 +118,6 @@
 						<width>490</width>
 						<height>45</height>
 						<font>font12</font>
-						<align>left</align>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
 					</control>
@@ -162,22 +147,8 @@
 						<width>490</width>
 						<height>45</height>
 						<font>font12</font>
-						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>black</textcolor>
 						<info>ListItem.Label</info>
-						<visible>Control.HasFocus(6)</visible>
-					</control>
-					<control type="label">
-						<left>50</left>
-						<width>490</width>
-						<height>45</height>
-						<font>font12</font>
-						<align>left</align>
-						<aligny>center</aligny>
-						<textcolor>white</textcolor>
-						<info>ListItem.Label</info>
-						<visible>!Control.HasFocus(6)</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -236,9 +207,9 @@
 				<top>567</top>
 				<subtype>page</subtype>
 				<font />
-				<onleft condition="Control.IsVisible(3)">3</onleft>
+				<onleft condition="Control.IsVisible(3)">9001</onleft>
 				<onleft condition="Control.IsVisible(6)">6</onleft>
-				<onright>5</onright>
+				<onright>9001</onright>
 				<onup condition="Control.IsVisible(3)">3</onup>
 				<onup condition="Control.IsVisible(6)">6</onup>
 				<textcolor>white</textcolor>
@@ -263,30 +234,30 @@
 				<height>135</height>
 				<itemgap>0</itemgap>
 				<onleft>61</onleft>
-				<onright>6</onright>
-				<onup>6</onup>
+				<onright condition="Control.IsVisible(3)">61</onright>
+				<onright condition="Control.IsVisible(6)">6</onright>
+				<onup condition="Control.IsVisible(3)">3</onup>
+				<onup condition="Control.IsVisible(6)">6</onup>
 				<orientation>vertical</orientation>
 				<animation effect="slide" end="0,45" condition="!Control.IsVisible(8)">Conditional</animation>
 				<animation effect="slide" end="0,45" condition="!Control.IsVisible(5)">Conditional</animation>
+				<animation effect="slide" end="-560,7" condition="Control.IsVisible(3)">Conditional</animation>
 				<control type="button" id="8">
 					<description>Optional button</description>
 					<label />
 					<textcolor>grey2</textcolor>
-					<focusedcolor>white</focusedcolor>
 					<include>DialogButton2CommonValues</include>
 				</control>
 				<control type="button" id="5">
 					<description>Manual button</description>
 					<label />
 					<textcolor>grey2</textcolor>
-					<focusedcolor>white</focusedcolor>
 					<include>DialogButton2CommonValues</include>
 				</control>
 				<control type="button" id="7">
 					<description>Cancel button</description>
 					<label />
 					<textcolor>grey2</textcolor>
-					<focusedcolor>white</focusedcolor>
 					<include>DialogButton2CommonValues</include>
 				</control>
 			</control>

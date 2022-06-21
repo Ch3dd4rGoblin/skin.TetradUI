@@ -16,7 +16,7 @@
 				<height>85</height>
 				<texture border="20,20,20,30">Dialog2.png</texture>
 			</control>
-			<control type="label" id="401">
+			<control type="label" id="30">
 				<description>Caption Label</description>
 				<left>25</left>
 				<top>15</top>
@@ -27,7 +27,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 			</control>
-			<control type="label" id="405">
+			<control type="label" id="31">
 				<description>Current Title Label</description>
 				<left>25</left>
 				<top>33</top>
@@ -37,7 +37,7 @@
 				<haspath>yes</haspath>
 				<font>font10</font>
 			</control>
-			<control type="progress" id="404">
+			<control type="progress" id="32">
 				<description>progress control</description>
 				<left>25</left>
 				<top>55</top>

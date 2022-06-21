@@ -5,30 +5,8 @@
 	<controls>
 		<control type="group">
 			<visible>!Window.IsVisible(FileBrowser)</visible>
-			<animation type="WindowOpen">
-				<effect type="fade" start="0" end="100" time="100" />
-				<effect type="slide" start="1095,0" end="0,0" delay="100" time="500" tween="quadratic" easing="out" />
-			</animation>
-			<animation type="WindowClose">
-				<effect type="slide" start="0,0" end="1095,0" delay="DialogVisibleFadeAnimationSpeed" time="500" tween="quadratic" easing="in"/>
-				<effect type="fade" start="100" end="0" delay="800" time="100" />
-			</animation>
-			<control type="image">
-				<left>130</left>
-				<top>-40</top>
-				<width>180</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-runner-right.png</texture>
-			</control>
-			<control type="image">
-				<left>310</left>
-				<top>-40</top>
-				<width>970</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-runner-right-edge.png</texture>
-			</control>
+			<include>BladesRunnerRightAnimation2</include>
+			<include>BladesRunnerRight</include>
 
 			<control type="group">
 				<animation effect="fade" delay="600" time="DialogVisibleFadeAnimationSpeed">WindowOpen</animation>
@@ -109,7 +87,6 @@
 									<width>565</width>
 									<height>30</height>
 									<font>font12</font>
-									<align>left</align>
 									<aligny>center</aligny>
 									<scroll>true</scroll>
 									<info>ListItem.Label2</info>
@@ -128,7 +105,7 @@
 									<font>font12</font>
 									<align>right</align>
 									<aligny>center</aligny>
-									<textcolor>black</textcolor>
+									<textcolor>grey2</textcolor>
 									<info>ListItem.Label</info>
 								</control>
 								<control type="label">
@@ -136,9 +113,7 @@
 									<width>565</width>
 									<height>30</height>
 									<font>font12</font>
-									<align>left</align>
 									<aligny>center</aligny>
-									<textcolor>black</textcolor>
 									<info>ListItem.Label2</info>
 								</control>
 							</focusedlayout>
@@ -155,8 +130,8 @@
 								</item>
 								<item>
 									<label>$LOCALIZE[563]:</label>
-									<label2>$INFO[ListItem.Rating]</label2>
-									<visible>!String.IsEmpty(ListItem.Rating)</visible>
+									<label2>$VAR[RatingType]</label2>
+									<visible>![String.IsEmpty(ListItem.Rating) + String.IsEmpty(ListItem.UserRating)]</visible>
 								</item>
 								<item>
 									<label>$LOCALIZE[175]:</label>
@@ -230,7 +205,6 @@
 									<width>565</width>
 									<height>30</height>
 									<font>font12</font>
-									<align>left</align>
 									<aligny>center</aligny>
 									<scroll>true</scroll>
 									<info>ListItem.Label2</info>
@@ -249,7 +223,7 @@
 									<font>font12</font>
 									<align>right</align>
 									<aligny>center</aligny>
-									<textcolor>black</textcolor>
+									<textcolor>grey2</textcolor>
 									<info>ListItem.Label</info>
 								</control>
 								<control type="label">
@@ -257,9 +231,7 @@
 									<width>565</width>
 									<height>30</height>
 									<font>font12</font>
-									<align>left</align>
 									<aligny>center</aligny>
-									<textcolor>black</textcolor>
 									<info>ListItem.Label2</info>
 								</control>
 							</focusedlayout>
@@ -351,7 +323,6 @@
 									<width>565</width>
 									<height>30</height>
 									<font>font12</font>
-									<align>left</align>
 									<aligny>center</aligny>
 									<scroll>true</scroll>
 									<info>ListItem.Label2</info>
@@ -370,7 +341,7 @@
 									<font>font12</font>
 									<align>right</align>
 									<aligny>center</aligny>
-									<textcolor>black</textcolor>
+									<textcolor>grey2</textcolor>
 									<info>ListItem.Label</info>
 								</control>
 								<control type="label">
@@ -378,9 +349,7 @@
 									<width>565</width>
 									<height>30</height>
 									<font>font12</font>
-									<align>left</align>
 									<aligny>center</aligny>
-									<textcolor>black</textcolor>
 									<info>ListItem.Label2</info>
 								</control>
 							</focusedlayout>
@@ -410,8 +379,8 @@
 								</item>
 								<item>
 									<label>$LOCALIZE[563]:</label>
-									<label2>$INFO[ListItem.Rating]</label2>
-									<visible>!String.IsEmpty(ListItem.Rating)</visible>
+									<label2>$VAR[RatingType]</label2>
+									<visible>![String.IsEmpty(ListItem.Rating) + String.IsEmpty(ListItem.UserRating)]</visible>
 								</item>
 							</content>
 						</control>
@@ -443,102 +412,54 @@
 					<scrolltime>200</scrolltime>
 					<orientation>vertical</orientation>
 					<visible>Skin.HasSetting(MusicInfo9002Toggle)</visible>
-					<itemlayout height="100" width="500" condition="Container.Content(Artists)">
+					<itemlayout height="100" width="500">
 						<control type="image">
 							<width>500</width>
-							<height>95</height>
-							<texture>wide-thumb-nofocus.png</texture>
+							<height>98</height>
+							<texture border="8">button-dialog-nofocus.png</texture>
 						</control>
 						<control type="image">
-							<top>5</top>
-							<width>100</width>
-							<height>85</height>
+							<top>10</top>
+							<left>-2</left>
+							<width>101</width>
+							<height>77</height>
 							<texture fallback="DefaultAudio.png">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="19,3,19,3">thumb-border.png</bordertexture>
-							<bordersize>17,1,17,1</bordersize>
+							<bordertexture border="14,0,14,0">thumb-border.png</bordertexture>
+							<bordersize>12,0,12,0</bordersize>
+							<aspectratio aligny="top">scale</aspectratio>
 						</control>
 						<control type="textbox">
-							<left>110</left>
-							<top>10</top>
-							<width>380</width>
+							<left>97</left>
+							<top>18</top>
+							<width>393</width>
 							<height>75</height>
 							<font>font13</font>
-							<align>left</align>
-							<label>$INFO[ListItem.Label]</label>
+							<label>[COLOR=blue][B]$INFO[ListItem.TrackNumber,, - ][/B][/COLOR]$INFO[ListItem.Label][CR]$INFO[ListItem.Duration]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="100" width="500" condition="Container.Content(Artists)">
+					<focusedlayout height="100" width="500">
 						<control type="image">
 							<width>500</width>
-							<height>95</height>
-							<texture>wide-thumb-focus.png</texture>
+							<height>98</height>
+							<texture border="8">button-dialog-focus.png</texture>
 						</control>
 						<control type="image">
-							<top>5</top>
-							<width>100</width>
-							<height>85</height>
+							<top>10</top>
+							<left>-2</left>
+							<width>101</width>
+							<height>77</height>
 							<texture fallback="DefaultAudio.png">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="19,3,19,3">thumb-border.png</bordertexture>
-							<bordersize>17,1,17,1</bordersize>
+							<bordertexture border="14,0,14,0">thumb-border.png</bordertexture>
+							<bordersize>12,0,12,0</bordersize>
+							<aspectratio aligny="top">scale</aspectratio>
 						</control>
 						<control type="textbox">
-							<left>110</left>
-							<top>10</top>
-							<width>380</width>
+							<left>97</left>
+							<top>18</top>
+							<width>393</width>
 							<height>75</height>
 							<font>font13</font>
-							<align>left</align>
-							<textcolor>black</textcolor>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-					</focusedlayout>
-					<itemlayout height="100" width="500" condition="Container.Content(Albums)">
-						<control type="image">
-							<width>500</width>
-							<height>95</height>
-							<texture>wide-thumb-nofocus.png</texture>
-						</control>
-						<control type="image">
-							<top>5</top>
-							<width>100</width>
-							<height>85</height>
-							<texture fallback="DefaultAudio.png">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="19,3,19,3">thumb-border.png</bordertexture>
-							<bordersize>17,1,17,1</bordersize>
-						</control>
-						<control type="textbox">
-							<left>110</left>
-							<top>10</top>
-							<width>380</width>
-							<height>75</height>
-							<font>font13</font>
-							<align>left</align>
-							<label>[COLOR=blue][B]$INFO[ListItem.TrackNumber][/B][/COLOR] - $INFO[ListItem.Label][CR]$INFO[ListItem.Duration]</label>
-						</control>
-					</itemlayout>
-					<focusedlayout height="100" width="500" condition="Container.Content(Albums)">
-						<control type="image">
-							<width>500</width>
-							<height>95</height>
-							<texture>wide-thumb-focus.png</texture>
-						</control>
-						<control type="image">
-							<top>5</top>
-							<width>100</width>
-							<height>85</height>
-							<texture fallback="DefaultAudio.png">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="19,3,19,3">thumb-border.png</bordertexture>
-							<bordersize>17,1,17,1</bordersize>
-						</control>
-						<control type="textbox">
-							<left>110</left>
-							<top>10</top>
-							<width>380</width>
-							<height>75</height>
-							<font>font13</font>
-							<align>left</align>
-							<textcolor>black</textcolor>
-							<label>[COLOR=blue][B]$INFO[ListItem.TrackNumber][/B][/COLOR] - $INFO[ListItem.Label][CR]$INFO[ListItem.Duration]</label>
+							<label>[COLOR=blue][B]$INFO[ListItem.TrackNumber,, - ][/B][/COLOR]$INFO[ListItem.Label][CR]$INFO[ListItem.Duration]</label>
 						</control>
 					</focusedlayout>
 				</control>
@@ -554,6 +475,17 @@
 					<onup>50</onup>
 					<textcolor>grey2</textcolor>
 					<showonepage>false</showonepage>
+				</control>
+				<control type="grouplist">
+					<description>Media Codec Flagging Images</description>
+					<visible>![Container.Content(Albums) | Container.Content(Artists)]</visible>
+					<left>640r</left>
+					<top>20</top>
+					<width>620</width>
+					<itemgap>5</itemgap>
+					<align>right</align>
+					<orientation>horizontal</orientation>
+					<include>AudioTypeHackFlaggingConditions</include>
 				</control>
 				<control type="grouplist" id="9000">
 					<left>200</left>
@@ -579,8 +511,8 @@
 					<control type="togglebutton" id="9002">
 						<description>Tracks / Review / Comment</description>
 						<width>172</width>
-						<alttexturefocus border="4,6,4,8">button-focus.png</alttexturefocus>
-						<alttexturenofocus border="4,6,4,8">button-nofocus.png</alttexturenofocus>
+						<alttexturefocus border="4,6,4,8">button-dialog-focus.png</alttexturefocus>
+						<alttexturenofocus border="4,6,4,8">button-dialog-nofocus.png</alttexturenofocus>
 						<include>InfoDialogButtonCommonValues</include>
 						<label>$VAR[DialogMusicInfoButton9002Label1]</label>
 						<altlabel>$VAR[DialogMusicInfoButton9002Label2]</altlabel>

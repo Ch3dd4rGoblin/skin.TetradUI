@@ -16,11 +16,11 @@
 				<texture border="20,20,20,30">Dialog2.png</texture>
 			</control>
 			<control type="grouplist">
-				<left>20</left>
-				<top>18</top>
+				<left>10</left>
+				<top>20</top>
 				<width>160</width>
 				<height>50</height>
-				<itemgap>10</itemgap>
+				<itemgap>20</itemgap>
 				<orientation>horizontal</orientation>
 				<align>center</align>
 				<control type="image">
@@ -39,11 +39,6 @@
 					<aligny>center</aligny>
 					<label>31302</label>
 					<textcolor>orange</textcolor>
-				</control>
-				<control type="progress" id="10">
-					<description>Progressbar</description>
-					<!-- ADDED BY GADE! -->
-					<height>12</height>
 				</control>
 			</control>
 		</control>

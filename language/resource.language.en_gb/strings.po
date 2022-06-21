@@ -16,6 +16,14 @@ msgstr ""
 "Language: en_GB\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+msgctxt "Addon Summary"
+msgid "TetradUI is a skin Addon for Kodi media center"
+msgstr ""
+
+msgctxt "Addon Description"
+msgid "TetradUI is a skin add-on for Kodi media center. TetradUI is based on JX720 by Jezz_X.[CR]This add-on was created by TeamUI."
+msgstr ""
+
 msgctxt "#31001"
 msgid "media"
 msgstr ""
@@ -36,33 +44,17 @@ msgctxt "#31005"
 msgid "Apps"
 msgstr ""
 
-msgctxt "#31006"
-msgid "Media"
-msgstr ""
-
-# empty strings from id 31007 to 31009
+# empty strings from id 31006 to 31009
 
 msgctxt "#31010"
-msgid "Media"
+msgid "TetradUI is a passion project made by TeamUI.[CR]It's a big project and it takes a [I]lot[/I] of effort to develop and maintain.[CR]Consider scanning this QR and make a donation to help keep this project healthy.[CR]Any amount helps greatly and is much appreciated."
 msgstr ""
 
 msgctxt "#31011"
 msgid "Applications"
 msgstr ""
 
-msgctxt "#31012"
-msgid "System Settings"
-msgstr ""
-
-msgctxt "#31013"
-msgid "Weather Forecast"
-msgstr ""
-
-msgctxt "#31014"
-msgid "Video Bookmarks"
-msgstr ""
-
-# empty strings from id 31015 to 31019
+# empty strings from id 31012 to 31019
 
 msgctxt "#31020"
 msgid "Weather Conditions"
@@ -244,7 +236,15 @@ msgctxt "#31251"
 msgid "Thumb Info"
 msgstr ""
 
-# empty strings from id 31252 to 31301
+# empty strings from id 31252 to 31299
+
+msgctxt "#31300"
+msgid "Please setup a music source!"
+msgstr ""
+
+msgctxt "#31301"
+msgid "Please setup[CR]movie and tv show sources!"
+msgstr ""
 
 msgctxt "#31302"
 msgid "Working"
@@ -291,10 +291,26 @@ msgid "Set Button Icon"
 msgstr ""
 
 msgctxt "#31313"
-msgid "No Weather addon enabled go to Settings\Weather to enable weather forecast"
+msgid "No Weather add-on enabled go to Settings/Weather to enable weather forecast"
 msgstr ""
 
-# empty strings from id 31314 to 31389
+msgctxt "#31314"
+msgid "Hide widgets"
+msgstr ""
+
+msgctxt "#31315"
+msgid "Install add-ons"
+msgstr ""
+
+msgctxt "#31316"
+msgid "Search add-ons"
+msgstr ""
+
+msgctxt "#31317"
+msgid "Center top logo button"
+msgstr ""
+
+# empty strings from id 31318 to 31389
 
 msgctxt "#31390"
 msgid "Skin default"
@@ -307,47 +323,43 @@ msgstr ""
 # empty strings from id 31392 to 31399
 
 msgctxt "#31400"
-msgid "Edit your Display settings, Including:[CR][CR]* Skin Selection[CR]* View Options[CR]* Screensaver[CR]* Date & Time"
+msgid "Edit your display settings, including:[CR][CR]* Skin selection[CR]* View options[CR]* Screensaver[CR]* Date & time"
 msgstr ""
 
-msgctxt "#31401"
-msgid "-"
-msgstr ""
+# empty string with id 31401
 
 msgctxt "#31402"
-msgid "Choose Weather Display, Including:[CR][CR]* 3 Cities[CR]* Wind Speed[CR]* Temperature"
+msgid "Watch and manage the logging of Kodi events, including:[CR][CR]* Failed video library scraping[CR]* Add-on updates[CR]* PVR activities"
 msgstr ""
 
 msgctxt "#31403"
-msgid "Configure Network and sharing settings, Including:[CR][CR]* Proxy & DNS[CR]* Samba File Sharing[CR]* UPNP Server[CR]* Web Server[CR]* External App Control"
+msgid "Configure network and sharing settings, including:[CR][CR]* Proxy & DNS[CR]* Samba file sharing[CR]* UPNP server[CR]* Web server[CR]* External app control"
 msgstr ""
 
 msgctxt "#31404"
-msgid "Important System Settings, Including:[CR][CR]* Hardware[CR]* Power Saving[CR]* Input Devices[CR]* Master User Locking"
+msgid "Important system settings, including:[CR][CR]* Hardware[CR]* Power saving[CR]* Input devices[CR]* Master user locking"
 msgstr ""
 
 msgctxt "#31405"
-msgid "Manage User Profiles, Including:[CR][CR]* Creating Profiles[CR]* Deleting Profiles[CR]* Changing User Settings"
+msgid "Manage user profiles, including:[CR][CR]* Creating profiles[CR]* Deleting profiles[CR]* Changing user settings"
 msgstr ""
 
 msgctxt "#31406"
-msgid "Change Skin Specific Settings, Including:[CR][CR]* Window Backgrounds[CR]* Media View Options[CR]* Other Misc Options"
+msgid "Change skin specific settings, including:[CR][CR]* Window backgrounds[CR]* Media view options[CR]* Image packs[CR]* Other misc. options"
 msgstr ""
 
-msgctxt "#31407"
-msgid "-"
-msgstr ""
+# empty string with id 31407
 
 msgctxt "#31408"
-msgid "Configure Video settings, Including:[CR][CR]* Library Options[CR]* Hardware Acceleration[CR]* Subtitles[CR]* DVD Playback"
+msgid "Configure player settings, including:[CR][CR]* Library options[CR]* Hardware acceleration[CR]* Subtitles[CR]* DVD playback"
 msgstr ""
 
 msgctxt "#31409"
-msgid "Configure Audio settings, Including:[CR][CR]* Visualisations[CR]* Playlists[CR]* CD Ripping[CR]* Karaoke"
+msgid "Configure media settings, including:[CR][CR]* Library options[CR]* File management[CR]* Videos, music, pictures options"
 msgstr ""
 
 msgctxt "#31410"
-msgid "Arrange Pictures settings, Including:[CR][CR]* Slideshows[CR]* Thumbnails"
+msgid "Information on Kodi and your hardware, including:[CR][CR]* Storage[CR]* Network[CR]* Video[CR]* Hardware"
 msgstr ""
 
 # empty strings from id 31411 to 31458
@@ -359,25 +371,31 @@ msgstr ""
 # empty strings from id 31461 to 31479
 
 msgctxt "#31480"
-msgid "[COLOR=orange][B]WARNING[/B] !![/COLOR][CR]Hiding all buttons will cause Navigation issues when switching between blades.  Having more than 6 buttons visible at once will also cause weird animation and scrolling effects"
+msgid "[COLOR=orange][B]WARNING[/B] !![/COLOR][CR]Hiding all buttons will cause Navigation issues when switching between blades."
 msgstr ""
 
-# empty strings from id 31481 to 31499
-
-msgctxt "#31500"
-msgid "General"
+msgctxt "#31481"
+msgid "These add-ons will improve the features and overall experience of the skin."
 msgstr ""
+
+# empty strings from id 31482 to 31498
+
+msgctxt "#31499"
+msgid "Not installed"
+msgstr ""
+
+# empty string with id 31500
 
 msgctxt "#31501"
-msgid "Backgrounds"
+msgid "Featured"
 msgstr ""
 
 msgctxt "#31502"
-msgid "Media Blade"
+msgid "Blades"
 msgstr ""
 
 msgctxt "#31503"
-msgid "Apps Blade"
+msgid "Image packs"
 msgstr ""
 
 msgctxt "#31504"
@@ -392,7 +410,23 @@ msgctxt "#31506"
 msgid "Local subtitle available"
 msgstr ""
 
-# empty strings from id 31507 to 31519
+msgctxt "#31507"
+msgid "Search local library"
+msgstr ""
+
+msgctxt "#31508"
+msgid "Search YouTube"
+msgstr ""
+
+msgctxt "#31509"
+msgid "Search add-ons"
+msgstr ""
+
+msgctxt "#31510"
+msgid "Video playlist"
+msgstr ""
+
+# empty strings from id 31511 to 31519
 
 msgctxt "#31520"
 msgid "Show now playing video in the background"
@@ -414,7 +448,19 @@ msgctxt "#31524"
 msgid "Don't blend background with fanart,visualization,video"
 msgstr ""
 
-# empty strings from id 31525 to 31539
+msgctxt "#31525"
+msgid "Select rating"
+msgstr ""
+
+# empty strings from id 31526 to 31537
+
+msgctxt "#31538"
+msgid "About"
+msgstr ""
+
+msgctxt "#31539"
+msgid "Supported add-ons"
+msgstr ""
 
 msgctxt "#31540"
 msgid "Set Default Lyric fetching add-on for Music OSD"
@@ -426,11 +472,23 @@ msgctxt "#31542"
 msgid "In progress"
 msgstr ""
 
-# empty strings from id 31543 to 31549
-
-msgctxt "#31550"
-msgid "Window default buttons"
+msgctxt "#31543"
+msgid "In cinemas"
 msgstr ""
+
+msgctxt "#31544"
+msgid "Upcoming movies"
+msgstr ""
+
+msgctxt "#31545"
+msgid "Unwatched movies"
+msgstr ""
+
+msgctxt "#31546"
+msgid "Random movies"
+msgstr ""
+
+# empty strings from id 31547 to 31550
 
 msgctxt "#31551"
 msgid "Window custom smart playlist shortcuts"

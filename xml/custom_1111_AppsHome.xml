@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1111">
-	<defaultcontrol always="true">9000</defaultcontrol>
+	<defaultcontrol always="true">9050</defaultcontrol>
 	<animation effect="fade" start="100" end="100" time="30" condition="Control.HasFocus(1)">WindowClose</animation>
 	<animation effect="fade" start="100" end="100" time="30" condition="Control.HasFocus(2)">WindowClose</animation>
 	<controls>
@@ -25,28 +25,26 @@
 		<control type="group">
 			<animation effect="slide" end="-50,0" time="0" condition="Control.HasFocus(1)">Conditional</animation>
 			<animation effect="slide" end="50,0" time="0" condition="Control.HasFocus(2)">Conditional</animation>
+			<top>-95</top>
 			<control type="image">
 				<description>Background</description>
-				<left>105</left>
-				<width>50</width>
-				<height>720</height>
-				<aspectratio>stretch</aspectratio>
+				<left>91</left>
+				<width>68</width>
+				<height>910</height>
 				<texture>background-overlay-blackwash-left-ws.png</texture>
 			</control>
 			<control type="image">
 				<description>Background</description>
 				<left>155r</left>
-				<width>50</width>
-				<height>720</height>
-				<aspectratio>stretch</aspectratio>
+				<width>68</width>
+				<height>910</height>
 				<texture>background-overlay-blackwash-right-ws.png</texture>
 			</control>
 			<control type="image">
 				<description>Background</description>
-				<left>155</left>
-				<width>970</width>
-				<height>720</height>
-				<aspectratio>stretch</aspectratio>
+				<left>159</left>
+				<width>966</width>
+				<height>910</height>
 				<texture>background-overlay-blackwash-centertile-ws.png</texture>
 			</control>
 		</control>
@@ -55,6 +53,7 @@
 			<left>180</left>
 			<visible>!Control.HasFocus(1) + !Control.HasFocus(2)</visible>
 			<animation effect="fade" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
+			<include>HomeLogoButton</include>
 			<control type="label">
 				<description>Header label</description>
 				<label>31011</label>
@@ -64,23 +63,14 @@
 				<param name="left" value="540" />
 			</include>
 			<control type="group">
-				<left>20</left>
-				<top>75</top>
-				<include>SystemCard</include>
-			</control>
-			<control type="group">
-				<top>225</top>
+				<top>130</top>
 				<control type="list" id="9000">
-					<left>0</left>
-					<top>0</top>
 					<width>450</width>
 					<height>314</height>
 					<onleft>1</onleft>
-					<onright>2</onright>
-					<onup condition="System.GetBool(LookAndFeel.EnableRSSFeeds)">15</onup>
-					<onup condition="!System.GetBool(LookAndFeel.EnableRSSFeeds)">9000</onup>
-					<ondown condition="System.GetBool(LookAndFeel.EnableRSSFeeds)">15</ondown>
-					<ondown condition="!System.GetBool(LookAndFeel.EnableRSSFeeds)">9000</ondown>
+					<onright condition="Container(9000).HasFocus(1)">9100</onright>
+					<onright condition="!Container(9000).HasFocus(1)">2</onright>
+					<onup>9050</onup>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>60</pagecontrol>
 					<scrolltime>200</scrolltime>
@@ -88,7 +78,7 @@
 						<control type="image">
 							<description>Icon</description>
 							<left>50</left>
-							<top>6</top>
+							<top>4</top>
 							<width>43</width>
 							<height>43</height>
 							<texture>$INFO[ListItem.Icon]</texture>
@@ -96,7 +86,7 @@
 						<control type="label">
 							<left>120</left>
 							<width>330</width>
-							<height>52</height>
+							<height>45</height>
 							<font>font30</font>
 							<aligny>center</aligny>
 							<textcolor>white2</textcolor>
@@ -113,12 +103,13 @@
 							<texture>button.png</texture>
 							<animation effect="slide" start="0,-52" time="200" tween="sine" easing="out" condition="Container(9000).OnNext" reversible="false">Focus</animation>
 							<animation effect="slide" start="0,52" time="200" tween="sine" easing="out" condition="Container(9000).OnPrevious" reversible="false">Focus</animation>
-							<animation effect="fade" start="100" end="70" time="200" condition="!Control.HasFocus(9000)">Conditional</animation>
+							<animation effect="fade" start="100" end="25" time="200" condition="!Control.HasFocus(9000)">Conditional</animation>
+							<visible>!Control.HasFocus(9050)</visible>
 						</control>
 						<control type="image">
 							<description>Icon</description>
 							<left>50</left>
-							<top>6</top>
+							<top>4</top>
 							<width>43</width>
 							<height>43</height>
 							<texture>$INFO[ListItem.Icon]</texture>
@@ -127,7 +118,7 @@
 						<control type="label">
 							<left>120</left>
 							<width>330</width>
-							<height>50</height>
+							<height>45</height>
 							<font>font30</font>
 							<aligny>center</aligny>
 							<textcolor>white</textcolor>
@@ -151,25 +142,19 @@
 						</control>
 					</focusedlayout>
 					<content>
-						<item>
-							<label>0</label>
-							<onclick>ActivateWindow(Programs,addons,return)</onclick>
+						<item id="1">
+							<label>24001</label>
+							<onclick>ActivateWindow(AddonBrowser,root)</onclick>
 							<icon>button_icons/icon-apps.png</icon>
-							<visible>!Skin.HasSetting(AppsBlade_HidePrograms)</visible>
-						</item>
-						<item>
-							<label>31025</label>
-							<onclick>ActivateWindow(AddonBrowser)</onclick>
-							<icon>button_icons/icon-addon.png</icon>
 							<visible>!Skin.HasSetting(AppsBlade_HideAddons)</visible>
 						</item>
-						<item>
+						<item id="2">
 							<label>7</label>
 							<onclick>ActivateWindow(Filemanager)</onclick>
 							<icon>button_icons/icon-xbmc.png</icon>
 							<visible>!Skin.HasSetting(AppsBlade_HideFilemanager)</visible>
 						</item>
-						<item>
+						<item id="3">
 							<label>1036</label>
 							<onclick>ActivateWindow(Favourites)</onclick>
 							<icon>button_icons/icon-favourites.png</icon>
@@ -177,60 +162,147 @@
 						</item>
 					</content>
 				</control>
+				<control type="list" id="9100">
+					<left>475</left>
+					<width>450</width>
+					<height>238</height>
+					<onleft>9000</onleft>
+					<onright>2</onright>
+					<onup>9050</onup>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>60</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<visible>Container(9000).HasFocus(1)</visible>
+					<itemlayout height="34" width="450">
+						<control type="image">
+							<description>Icon</description>
+							<left>40</left>
+							<top>1</top>
+							<width>32</width>
+							<height>32</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="label">
+							<left>100</left>
+							<width>340</width>
+							<height>32</height>
+							<font>font13</font>
+							<aligny>center</aligny>
+							<textcolor>white2</textcolor>
+							<align>left</align>
+							<info>ListItem.Label</info>
+						</control>
+					</itemlayout>
+					<focusedlayout height="34" width="450">
+						<control type="image">
+							<description>Button focus</description>
+							<left>20</left>
+							<width>397</width>
+							<height>34</height>
+							<texture>button.png</texture>
+							<animation effect="slide" start="0,-34" time="200" tween="sine" easing="out" condition="Container(9100).OnNext" reversible="false">Focus</animation>
+							<animation effect="slide" start="0,34" time="200" tween="sine" easing="out" condition="Container(9100).OnPrevious" reversible="false">Focus</animation>
+							<animation effect="fade" start="100" end="0" time="200" condition="!Control.HasFocus(9100)">Conditional</animation>
+						</control>
+						<control type="image">
+							<description>Icon</description>
+							<left>40</left>
+							<top>1</top>
+							<width>32</width>
+							<height>32</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<animation effect="slide" end="ButtonSlideBackDistance,0" time="ButtonSlideBackTime" reversible="false">focus</animation>
+						</control>
+						<control type="label">
+							<left>100</left>
+							<width>340</width>
+							<height>32</height>
+							<font>font13</font>
+							<aligny>center</aligny>
+							<textcolor>white</textcolor>
+							<align>left</align>
+							<label>$INFO[ListItem.Label]</label>
+							<animation effect="slide" end="ButtonSlideBackDistance,0" time="ButtonSlideBackTime" reversible="false">focus</animation>
+						</control>
+						<control type="image">
+							<description>Button shine animation</description>
+							<top>1</top>
+							<width>80</width>
+							<height>32</height>
+							<texture>shine-animation.png</texture>
+							<visible>System.IdleTime(5) + Control.HasFocus(9100)</visible>
+							<animation type="visible" reversible="false">
+								<effect type="fade" start="0" end="100" time="200"/>
+								<effect type="fade" start="100" end="0" delay="800" time="200"/>
+								<effect type="slide" start="0,0" end="350,0" delay="0" time="1000"/>
+							</animation>
+						</control>
+					</focusedlayout>
+					<content>
+						<item>
+							<label>1037</label>
+							<onclick>ActivateWindow(Videos,Addons,Return)</onclick>
+							<icon>defaultaddonvideo.png</icon>
+						</item>
+						<item>
+							<label>1038</label>
+							<onclick>ActivateWindow(Music,Addons,Return)</onclick>
+							<icon>DefaultAddonMusic.png</icon>
+						</item>
+						<item>
+							<label>1039</label>
+							<onclick>ActivateWindow(Pictures,Addons,Return)</onclick>
+							<icon>DefaultAddonPicture.png</icon>
+						</item>
+						<item>
+							<label>1043</label>
+							<onclick>ActivateWindow(Programs,Addons,Return)</onclick>
+							<icon>DefaultAddonProgram.png</icon>
+						</item>
+						<item>
+							<label>10040</label>
+							<onclick>ActivateWindow(addonbrowser,root)</onclick>
+							<icon>DefaultAddon.png</icon>
+						</item>
+						<item>
+							<label>31316</label>
+							<onclick>ActivateWindow(addonbrowser,addons://search/,return)</onclick>
+							<icon>DefaultAddonsSearch.png</icon>
+						</item>
+						<item>
+							<label>20244</label>
+							<onclick>ActivateWindow(programs,androidapp://sources/apps/,return)</onclick>
+							<icon>DefaultAddon.png</icon>
+							<visible>System.Platform.Android</visible>
+						</item>
+					</content>
+				</control>
+				<include>SystemCard</include>
 			</control>
 			<include condition="System.GetBool(LookAndFeel.EnableRSSFeeds)">CommonRSSFeed</include>
-			<!--<include>TetradUILogo</include>-->
 		</control>
 
-		<control type="button" id="1">
-			<description>Blank Blade Slide Right</description>
-			<left>-80</left>
-			<width>160</width>
-			<height>720</height>
-			<texturefocus>blades-blank-left.png</texturefocus>
-			<onfocus>ActivateWindow(weather)</onfocus>
-			<animation effect="slide" end="1280,0" time="HomeBladeAnimationSpeed">focus</animation>
-			<hitrect x="-10" y="-10" w="1" h="1" />
-		</control>
-		<control type="button" id="2">
-			<description>Blank Blade Slide Left</description>
-			<left>80r</left>
-			<width>160</width>
-			<height>720</height>
-			<texturefocus>blades-blank-right.png</texturefocus>
-			<onfocus>ActivateWindow(home)</onfocus>
-			<animation effect="slide" end="-1280,0" time="HomeBladeAnimationSpeed">focus</animation>
-			<hitrect x="-10" y="-10" w="1" h="1" />
-		</control>
+		<include content="BlankBladeSlideRight">
+			<param name="id" value="1" />
+			<param name="action" value="ActivateWindow(Weather)" />
+		</include>
+		<include content="BlankBladeSlideLeft">
+			<param name="id" value="2" />
+			<param name="action" value="ActivateWindow(Home)" />
+		</include>
 
 		<control type="group">
 			<visible>!Control.HasFocus(1) + !Control.HasFocus(2)</visible>
 			<!-- Left side -->
-			<control type="image">
-				<left>-110</left>
-				<top>-40</top>
-				<width>180</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-runner-left.png</texture>
-			</control>
-			<control type="image">
-				<top>-40</top>
-				<width>115</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-size3-left-NF.png</texture>
-			</control>
+			<include content="BladesImagesLeft">
+				<param name="texture" value="blades-size3-left-NF.png" />
+			</include>
 			<control type="label">
 				<description>weather Label</description>
 				<label>31004</label>
-				<left>90</left>
+				<left>88</left>
 				<top>190</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<include>BladesLabelLeft</include>
 			</control>
 			<control type="image">
 				<left>50</left>
@@ -245,39 +317,19 @@
 				<label>31002</label>
 				<left>140</left>
 				<top>170</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<include>BladesLabelLeft</include>
 			</control>
 			<!-- Right side -->
-			<control type="image">
-				<left>65r</left>
-				<top>-40</top>
-				<width>180</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-runner-right.png</texture>
-			</control>
-			<control type="image">
-				<left>115r</left>
-				<top>-40</top>
-				<width>115</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-size2-right-NF.png</texture>
-			</control>
+			<include content="BladesImagesRight">
+				<param name="texture" value="blades-size2-right-NF.png" />
+			</include>
 			<control type="label">
 				<description>System Label</description>
 				<label>31003</label>
-				<left>50r</left>
+				<left>48r</left>
 				<top>200</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<width>200</width>
+				<include>BladesLabelRight</include>
 			</control>
 			<control type="image">
 				<left>165r</left>
@@ -290,13 +342,9 @@
 			<control type="label">
 				<description>Media Label</description>
 				<label>31001</label>
-				<left>100r</left>
+				<left>99r</left>
 				<top>190</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<include>BladesLabelRight</include>
 			</control>
 		</control>
 
@@ -304,31 +352,15 @@
 			<description>Media Blades</description>
 			<visible>Control.HasFocus(2)</visible>
 			<!-- Left side -->
-			<control type="image">
-				<left>-110</left>
-				<top>-40</top>
-				<width>180</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-runner-left.png</texture>
-			</control>
-			<control type="image">
-				<top>-40</top>
-				<width>115</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-size2-left-NF.png</texture>
-			</control>
+			<include content="BladesImagesLeft">
+				<param name="texture" value="blades-size2-left-NF.png" />
+			</include>
 			<control type="label">
 				<description>weather Label</description>
 				<label>31004</label>
 				<left>90</left>
 				<top>200</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<include>BladesLabelLeft</include>
 			</control>
 			<control type="image">
 				<left>50</left>
@@ -343,11 +375,7 @@
 				<label>31002</label>
 				<left>140</left>
 				<top>190</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<include>BladesLabelLeft</include>
 			</control>
 			<control type="image">
 				<left>100</left>
@@ -362,43 +390,23 @@
 			<control type="label">
 				<description>Media Label</description>
 				<label>31001</label>
-				<left>190</left>
+				<left>188</left>
 				<top>170</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<include>BladesLabelLeft</include>
 				<visible>Control.HasFocus(2)</visible>
 				<animation effect="fade" time="HomeBladeAnimationSpeed">visible</animation>
 			</control>
 			<!-- Right side -->
-			<control type="image">
-				<left>65r</left>
-				<top>-40</top>
-				<width>180</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-runner-right.png</texture>
-			</control>
-			<control type="image">
-				<left>115r</left>
-				<top>-40</top>
-				<width>115</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-size3-right-NF.png</texture>
-			</control>
+			<include content="BladesImagesRight">
+				<param name="texture" value="blades-size3-right-NF.png" />
+			</include>
 			<control type="label">
 				<description>System Label</description>
 				<label>31003</label>
-				<left>50r</left>
+				<left>48r</left>
 				<top>190</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<width>200</width>
+				<include>BladesLabelRight</include>
 			</control>
 		</control>
 
@@ -406,59 +414,27 @@
 			<description>Weather Blades</description>
 			<visible>Control.HasFocus(1)</visible>
 			<!-- Left side -->
-			<control type="image">
-				<left>-110</left>
-				<top>-40</top>
-				<width>180</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-runner-left.png</texture>
-			</control>
-			<control type="image">
-				<top>-40</top>
-				<width>115</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-size4-header.png</texture>
-			</control>
+			<include content="BladesImagesLeft">
+				<param name="texture" value="blades-size4-header.png" />
+			</include>
 			<control type="label">
 				<description>Weather Label</description>
 				<label>31004</label>
-				<left>90</left>
+				<left>88</left>
 				<top>170</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<include>BladesLabelLeft</include>
 			</control>
 			<!-- Right side -->
-			<control type="image">
-				<left>65r</left>
-				<top>-40</top>
-				<width>180</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-runner-right.png</texture>
-			</control>
-			<control type="image">
-				<left>115r</left>
-				<top>-40</top>
-				<width>115</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-size1-right-NF.png</texture>
-			</control>
+			<include content="BladesImagesRight">
+				<param name="texture" value="blades-size1-right-NF.png" />
+			</include>
 			<control type="label">
 				<description>System Label</description>
 				<label>31003</label>
-				<left>50r</left>
+				<left>48r</left>
 				<top>210</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<width>200</width>
+				<include>BladesLabelRight</include>
 			</control>
 			<control type="image">
 				<left>165r</left>
@@ -471,13 +447,9 @@
 			<control type="label">
 				<description>Media Label</description>
 				<label>31001</label>
-				<left>100r</left>
+				<left>99r</left>
 				<top>200</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<include>BladesLabelRight</include>
 			</control>
 			<control type="image">
 				<left>215r</left>
@@ -492,17 +464,14 @@
 			<control type="label">
 				<description>Apps Label</description>
 				<label>31002</label>
-				<left>150r</left>
+				<left>148r</left>
 				<top>190</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<include>BladesLabelRight</include>
 				<visible>Control.HasFocus(1)</visible>
 				<animation effect="fade" time="HomeBladeAnimationSpeed">visible</animation>
 			</control>
 		</control>
 		<include>Common_Now_Playing</include>
+		<include>BackgroundDim</include>
 	</controls>	
 </window>

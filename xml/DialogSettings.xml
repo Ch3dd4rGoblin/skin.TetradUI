@@ -99,11 +99,11 @@
 			</control>
 			<control type="grouplist" id="9001">
 				<top>570</top>
-				<left>50</left>
-				<width>600</width>
+				<left>47</left>
+				<width>606</width>
 				<align>center</align>
 				<orientation>horizontal</orientation>
-				<itemgap>0</itemgap>
+				<itemgap>2</itemgap>
 				<onup>5</onup>
 				<ondown>5</ondown>
 				<control type="button" id="28">

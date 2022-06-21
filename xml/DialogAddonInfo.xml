@@ -4,34 +4,12 @@
 	<onunload>Skin.Reset(DialogAddonInfoButton9001)</onunload>
 	<controls>
 		<control type="group">
-			<animation type="WindowOpen">
-				<effect type="fade" start="0" end="100" time="100" />
-				<effect type="slide" start="1095,0" end="0,0" delay="100" time="500" tween="quadratic" easing="out" />
-			</animation>
-			<animation type="WindowClose">
-				<effect type="slide" start="0,0" end="1095,0" delay="DialogVisibleFadeAnimationSpeed" time="500" tween="quadratic" easing="in"/>
-				<effect type="fade" start="100" end="0" delay="800" time="100" />
-			</animation>
+			<include>BladesRunnerRightAnimation2</include>
 			<animation type="conditional" condition="Window.IsActive(AddonSettings)">
 				<effect type="slide" start="0,0" end="1095,0" delay="DialogVisibleFadeAnimationSpeed" time="500" tween="quadratic" easing="in"/>
 				<effect type="fade" start="100" end="0" delay="800" time="100" />
 			</animation>
-			<control type="image">
-				<left>130</left>
-				<top>-40</top>
-				<width>180</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-runner-right.png</texture>
-			</control>
-			<control type="image">
-				<left>310</left>
-				<top>-40</top>
-				<width>970</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-runner-right-edge.png</texture>
-			</control>
+			<include>BladesRunnerRight</include>
 
 			<control type="group">
 				<animation effect="fade" delay="600" time="DialogVisibleFadeAnimationSpeed">WindowOpen</animation>

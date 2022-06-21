@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">9000</defaultcontrol>
+	<defaultcontrol always="true">9050</defaultcontrol>
 	<previouswindow>home</previouswindow>
+	<onload>SetProperty(RefreshList,1,Home)</onload>
 	<animation effect="fade" start="100" end="100" time="30" condition="Control.HasFocus(1)">WindowClose</animation>
 	<animation effect="fade" start="100" end="100" time="30" condition="Control.HasFocus(2)">WindowClose</animation>
 	<controls>
@@ -26,25 +27,26 @@
 		<control type="group">
 			<animation effect="slide" end="-50,0" time="0" condition="Control.HasFocus(1)">Conditional</animation>
 			<animation effect="slide" end="50,0" time="0" condition="Control.HasFocus(2)">Conditional</animation>
+			<top>-95</top>
 			<control type="image">
 				<description>Background</description>
-				<left>155</left>
-				<width>50</width>
-				<height>720</height>
+				<left>141</left>
+				<width>68</width>
+				<height>910</height>
 				<texture>background-overlay-blackwash-left-ws.png</texture>
 			</control>
 			<control type="image">
 				<description>Background</description>
 				<left>105r</left>
-				<width>50</width>
-				<height>720</height>
+				<width>68</width>
+				<height>910</height>
 				<texture>background-overlay-blackwash-right-ws.png</texture>
 			</control>
 			<control type="image">
 				<description>Background</description>
-				<left>205</left>
-				<width>970</width>
-				<height>720</height>
+				<left>209</left>
+				<width>966</width>
+				<height>910</height>
 				<texture>background-overlay-blackwash-centertile-ws.png</texture>
 			</control>
 		</control>
@@ -53,39 +55,36 @@
 			<left>230</left>
 			<visible>!Control.HasFocus(1) + !Control.HasFocus(2)</visible>
 			<animation effect="fade" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
+			<include>HomeLogoButton</include>
 			<control type="label">
 				<description>Header label</description>
-				<label>31010</label>
+				<label>14211</label>
 				<include>HeaderTextCommons</include>
 			</control>
 			<include content="ClockTextCommons">
 				<param name="left" value="540" />
 			</include>
 			<control type="group">
-				<left>20</left>
-				<top>75</top>
-				<include>WeatherCard</include>
-			</control>
-			<control type="group">
-				<top>225</top>
+				<top>130</top>
 				<control type="list" id="9000">
 					<width>450</width>
 					<height>314</height>
-					<onleft>1</onleft>
-					<onright condition="Control.IsVisible(501)">501</onright>
-					<onright condition="!Control.IsVisible(501)">2</onright>
-					<onup condition="System.GetBool(LookAndFeel.EnableRSSFeeds)">15</onup>
-					<onup condition="!System.GetBool(LookAndFeel.EnableRSSFeeds)">9000</onup>
-					<ondown condition="System.GetBool(LookAndFeel.EnableRSSFeeds)">15</ondown>
-					<ondown condition="!System.GetBool(LookAndFeel.EnableRSSFeeds)">9000</ondown>
+					<onleft condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(2)">501</onleft>
+					<onleft condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(3)">505</onleft>
+					<onleft condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(6)">509</onleft>
+					<onleft condition="!Skin.HasSetting(Blades_HideWidgets) | ![Container(9000).HasFocus(2) + Container(9000).HasFocus(3) + Container(9000).HasFocus(6)]">1</onleft>
+					<onright>9100</onright>
+					<onup>9050</onup>
+					<ondown>9050</ondown>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>60</pagecontrol>
 					<scrolltime>200</scrolltime>
+					<animation effect="slide" end="0,-30" condition="Integer.IsGreater(Container(9000).NumItems,5)">Conditional</animation>
 					<itemlayout height="52" width="450">
 						<control type="image">
 							<description>Icon</description>
 							<left>50</left>
-							<top>6</top>
+							<top>4</top>
 							<width>43</width>
 							<height>43</height>
 							<texture>$INFO[ListItem.Icon]</texture>
@@ -93,7 +92,7 @@
 						<control type="label">
 							<left>120</left>
 							<width>330</width>
-							<height>52</height>
+							<height>45</height>
 							<font>font30</font>
 							<aligny>center</aligny>
 							<textcolor>white2</textcolor>
@@ -110,12 +109,13 @@
 							<texture>button.png</texture>
 							<animation effect="slide" start="0,-52" time="200" tween="sine" easing="out" condition="Container(9000).OnNext" reversible="false">Focus</animation>
 							<animation effect="slide" start="0,52" time="200" tween="sine" easing="out" condition="Container(9000).OnPrevious" reversible="false">Focus</animation>
-							<animation effect="fade" start="100" end="70" time="200" condition="!Control.HasFocus(9000)">Conditional</animation>
+							<animation effect="fade" start="100" end="25" time="200" condition="!Control.HasFocus(9000)">Conditional</animation>
+							<visible>!Control.HasFocus(9050)</visible>
 						</control>
 						<control type="image">
 							<description>Icon</description>
 							<left>50</left>
-							<top>6</top>
+							<top>4</top>
 							<width>43</width>
 							<height>43</height>
 							<texture>$INFO[ListItem.Icon]</texture>
@@ -124,7 +124,7 @@
 						<control type="label">
 							<left>120</left>
 							<width>330</width>
-							<height>50</height>
+							<height>45</height>
 							<font>font30</font>
 							<aligny>center</aligny>
 							<textcolor>white</textcolor>
@@ -150,7 +150,7 @@
 					<content>
 						<item id="1">
 							<label>3</label>
-							<onclick>ActivateWindow(Videos)</onclick>
+							<onclick>ActivateWindow(Videos,return)</onclick>
 							<icon>button_icons/icon-videos.png</icon>
 							<visible>!Skin.HasSetting(MediaBlade_HideVideos)</visible>
 						</item>
@@ -158,33 +158,32 @@
 							<label>342</label>
 							<onclick>ActivateWindow(Videos,movietitles,return)</onclick>
 							<icon>button_icons/icon-movies.png</icon>
-							<visible>Library.HasContent(Movies)</visible>
 							<visible>Library.HasContent(Movies) + !Skin.HasSetting(MediaBlade_HideMovies)</visible>
 						</item>
 						<item id="3">
 							<label>20343</label>
 							<onclick>ActivateWindow(Videos,tvshowtitles,return)</onclick>
 							<icon>button_icons/icon-tv.png</icon>
-							<visible>Library.HasContent(TVShows)</visible>
 							<visible>Library.HasContent(TVShows) + !Skin.HasSetting(MediaBlade_HideTVShows)</visible>
 						</item>
 						<item id="4">
 							<label>$INFO[Skin.String(MediaBlade_NameSmartPlaylist1)]</label>
 							<onclick>ActivateWindow(Videos,$INFO[Skin.String(MediaBlade_LinkSmartPlaylist1)],return)</onclick>
-							<icon>button_icons/icon-playlistvideo.png</icon>
+							<icon>button_icons/icon-videos.png</icon>
 							<visible>Skin.HasSetting(MediaBlade_ShowSmartPlaylist1)</visible>
 						</item>
 						<item id="5">
 							<label>$INFO[Skin.String(MediaBlade_NameSmartPlaylist2)]</label>
 							<onclick>ActivateWindow(Videos,$INFO[Skin.String(MediaBlade_LinkSmartPlaylist2)],return)</onclick>
-							<icon>button_icons/icon-playlistvideo.png</icon>
+							<icon>button_icons/icon-videos.png</icon>
 							<visible>Skin.HasSetting(MediaBlade_ShowSmartPlaylist2)</visible>
 						</item>
 						<item id="6">
 							<label>2</label>
-							<onclick>ActivateWindow(Music)</onclick>
+							<onclick condition="!Library.HasContent(Music)">ActivateWindow(Music,sources://music/,return)</onclick>
+							<onclick condition="Library.HasContent(Music)">ActivateWindow(Music,return)</onclick>
 							<icon>button_icons/icon-music.png</icon>
-							<visible>Library.HasContent(Music) + !Skin.HasSetting(MediaBlade_HideMusic)</visible>
+							<visible>!Skin.HasSetting(MediaBlade_HideMusic)</visible>
 						</item>
 						<item id="7">
 							<label>1</label>
@@ -194,79 +193,360 @@
 						</item>
 					</content>
 				</control>
-				<include content="HomeWidget">
+				<control type="list" id="9100">
+					<left>475</left>
+					<width>450</width>
+					<height>204</height>
+					<onleft>9000</onleft>
+					<onright condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(2)">501</onright>
+					<onright condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(3)">505</onright>
+					<onright condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(6)">509</onright>
+					<onright condition="Skin.HasSetting(Blades_HideWidgets) | ![Container(9000).HasFocus(2) + Container(9000).HasFocus(3) + Container(9000).HasFocus(6)]">2</onright>
+					<onup>9050</onup>
+					<ondown condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(2)">501</ondown>
+					<ondown condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(3)">505</ondown>
+					<ondown condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(6)">509</ondown>
+					<ondown condition="Skin.HasSetting(Blades_HideWidgets) | ![Container(9000).HasFocus(2) + Container(9000).HasFocus(3) + Container(9000).HasFocus(6)]">9100</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>60</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<animation effect="slide" end="0,-30" condition="Integer.IsGreater(Container(9000).NumItems,5)">Conditional</animation>
+					<itemlayout height="34" width="450">
+						<control type="image">
+							<description>Icon</description>
+							<left>40</left>
+							<top>1</top>
+							<width>32</width>
+							<height>32</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="label">
+							<left>100</left>
+							<width>340</width>
+							<height>32</height>
+							<font>font13</font>
+							<aligny>center</aligny>
+							<textcolor>white2</textcolor>
+							<align>left</align>
+							<info>ListItem.Label</info>
+						</control>
+					</itemlayout>
+					<focusedlayout height="34" width="450">
+						<control type="image">
+							<description>Button focus</description>
+							<left>20</left>
+							<width>397</width>
+							<height>34</height>
+							<texture>button.png</texture>
+							<animation effect="slide" start="0,-34" time="200" tween="sine" easing="out" condition="Container(9100).OnNext" reversible="false">Focus</animation>
+							<animation effect="slide" start="0,34" time="200" tween="sine" easing="out" condition="Container(9100).OnPrevious" reversible="false">Focus</animation>
+							<animation effect="fade" start="100" end="0" time="200" condition="!Control.HasFocus(9100)">Conditional</animation>
+						</control>
+						<control type="image">
+							<description>Icon</description>
+							<left>40</left>
+							<top>1</top>
+							<width>32</width>
+							<height>32</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<animation effect="slide" end="ButtonSlideBackDistance,0" time="ButtonSlideBackTime" reversible="false">focus</animation>
+						</control>
+						<control type="label">
+							<left>100</left>
+							<width>340</width>
+							<height>32</height>
+							<font>font13</font>
+							<aligny>center</aligny>
+							<textcolor>white</textcolor>
+							<align>left</align>
+							<label>$INFO[ListItem.Label]</label>
+							<animation effect="slide" end="ButtonSlideBackDistance,0" time="ButtonSlideBackTime" reversible="false">focus</animation>
+						</control>
+						<control type="image">
+							<description>Button shine animation</description>
+							<top>1</top>
+							<width>80</width>
+							<height>32</height>
+							<texture>shine-animation.png</texture>
+							<visible>System.IdleTime(5) + Control.HasFocus(9100)</visible>
+							<animation type="visible" reversible="false">
+								<effect type="fade" start="0" end="100" time="200"/>
+								<effect type="fade" start="100" end="0" delay="800" time="200"/>
+								<effect type="slide" start="0,0" end="350,0" delay="0" time="1000"/>
+							</animation>
+						</control>
+					</focusedlayout>
+					<content>
+						<item>
+							<label>1214</label>
+							<onclick condition="Container(9000).HasFocus(1)">ActivateWindow(Videos,Files,Return)</onclick>
+							<onclick condition="Container(9000).HasFocus(6)">ActivateWindow(Music,sources://music/,Return)</onclick>
+							<icon>DefaultFile.png</icon>
+							<visible>Container(9000).HasFocus(1) | [Container(9000).HasFocus(6) + !Library.HasContent(Music)]</visible>
+						</item>
+						<item>
+							<label>14022</label>
+							<onclick condition="Container(9000).HasFocus(1)">ActivateWindow(Videos,Return)</onclick>
+							<onclick condition="Container(9000).HasFocus(6)">ActivateWindow(Music,Return)</onclick>
+							<icon>DefaultVideo.png</icon>
+							<visible>Container(9000).HasFocus(1) | [Container(9000).HasFocus(6) + Library.HasContent(Music)]</visible>
+						</item>
+						<item>
+							<label>20389</label>
+							<onclick condition="Library.HasContent(MusicVideos)">ActivateWindow(Videos,videodb://musicvideos/titles/,Return)</onclick>
+							<onclick condition="!Library.HasContent(MusicVideos)">ActivateWindow(Videos,sources://video/,return)</onclick>
+							<icon>DefaultMusicVideos.png</icon>
+							<visible>Container(9000).HasFocus(1)</visible>
+						</item>
+						<item>
+							<label>132</label>
+							<onclick>ActivateWindow(Music,musicdb://albums/,Return)</onclick>
+							<icon>DefaultMusicAlbums.png</icon>
+							<visible>Container(9000).HasFocus(6)</visible>
+						</item>
+						<item>
+							<label>134</label>
+							<onclick>ActivateWindow(Music,musicdb://songs/,Return)</onclick>
+							<icon>DefaultMusicSongs.png</icon>
+							<visible>Container(9000).HasFocus(6)</visible>
+						</item>
+						<item>
+							<label>133</label>
+							<onclick>ActivateWindow(Music,musicdb://artists/,Return)</onclick>
+							<icon>DefaultMusicArtists.png</icon>
+							<visible>Container(9000).HasFocus(6)</visible>
+						</item>
+						<item>
+							<label>136</label>
+							<onclick condition="Container(9000).HasFocus(1)">ActivateWindow(Videos,Playlists,Return)</onclick>
+							<onclick condition="Container(9000).HasFocus(6)">ActivateWindow(Music,special://musicplaylists/,Return)</onclick>
+							<icon>DefaultPlaylist.png</icon>
+							<visible>Container(9000).HasFocus(1) | Container(9000).HasFocus(6)</visible>
+						</item>
+						<item>
+							<label>24001</label>
+							<onclick condition="Container(9000).HasFocus(1)">ActivateWindow(Videos,Addons,Return)</onclick>
+							<onclick condition="Container(9000).HasFocus(6)">ActivateWindow(Music,Addons,Return)</onclick>
+							<onclick condition="Container(9000).HasFocus(7)">ActivateWindow(Pictures,Addons,Return)</onclick>
+							<icon>DefaultAddon.png</icon>
+							<visible>Container(9000).HasFocus(1) | Container(9000).HasFocus(6) | Container(9000).HasFocus(7)</visible>
+						</item>
+						<item>
+							<label>589</label>
+							<onclick>PlayerControl(Partymode(video))</onclick>
+							<icon>DefaultPartyMode.png</icon>
+							<visible>Container(9000).HasFocus(1) + !System.HasMediaDVD</visible>
+						</item>
+						<item>
+							<label>341</label>
+							<onclick>PlayDisc(DVD)</onclick>
+							<icon>DefaultDVDRom.png</icon>
+							<visible>Container(9000).HasFocus(1) + System.HasMediaDVD</visible>
+						</item>
+						<item>
+							<label>135</label>
+							<onclick condition="Container(9000).HasFocus(2)">ActivateWindow(Videos,videodb://movies/genres/,Return)</onclick>
+							<onclick condition="Container(9000).HasFocus(3)">ActivateWindow(Videos,videodb://tvshows/genres/,Return)</onclick>
+							<icon>DefaultGenre.png</icon>
+							<visible>Container(9000).HasFocus(2) | Container(9000).HasFocus(3)</visible>
+						</item>
+						<item>
+							<label>652</label>
+							<onclick condition="Container(9000).HasFocus(2)">ActivateWindow(Videos,videodb://movies/years/,Return)</onclick>
+							<onclick condition="Container(9000).HasFocus(3)">ActivateWindow(Videos,videodb://tvshows/years/,Return)</onclick>
+							<icon>DefaultYear.png</icon>
+							<visible>Container(9000).HasFocus(2) | Container(9000).HasFocus(3)</visible>
+						</item>
+						<item>
+							<label>344</label>
+							<onclick condition="Container(9000).HasFocus(2)">ActivateWindow(Videos,videodb://movies/actors/,Return)</onclick>
+							<onclick condition="Container(9000).HasFocus(3)">ActivateWindow(Videos,videodb://tvshows/actors/,Return)</onclick>
+							<icon>DefaultUser.png</icon>
+							<visible>Container(9000).HasFocus(2) | Container(9000).HasFocus(3)</visible>
+						</item>
+						<item>
+							<label>20348</label>
+							<onclick>ActivateWindow(Videos,videodb://movies/directors/,Return)</onclick>
+							<icon>DefaultDirector.png</icon>
+							<visible>Container(9000).HasFocus(2)</visible>
+						</item>
+						<item>
+							<label>20451</label>
+							<onclick>ActivateWindow(Videos,videodb://movies/countries/,Return)</onclick>
+							<icon>DefaultCountry.png</icon>
+							<visible>Container(9000).HasFocus(2)</visible>
+						</item>
+						<item>
+							<label>20434</label>
+							<onclick>ActivateWindow(Videos,videodb://movies/sets/,Return)</onclick>
+							<icon>DefaultSets.png</icon>
+							<visible>Container(9000).HasFocus(2)</visible>
+						</item>
+						<item>
+							<label>20388</label>
+							<onclick>ActivateWindow(Videos,videodb://tvshows/studios/,Return)</onclick>
+							<icon>DefaultStudios.png</icon>
+							<visible>Container(9000).HasFocus(3)</visible>
+						</item>
+						<item>
+							<label>20387</label>
+							<onclick>ActivateWindow(Videos,videodb://recentlyaddedepisodes/,Return)</onclick>
+							<icon>DefaultRecentlyAddedEpisodes.png</icon>
+							<visible>Container(9000).HasFocus(3)</visible>
+						</item>
+						<item>
+							<label>626</label>
+							<onclick>ActivateWindow(Videos,videodb://inprogresstvshows/,Return)</onclick>
+							<icon>DefaultInProgressShows.png</icon>
+							<visible>Container(9000).HasFocus(3)</visible>
+						</item>
+						<item>
+							<label>10040</label>
+							<onclick>ActivateWindow(addonbrowser,addons://user/xbmc.addon.image/,return)</onclick>
+							<icon>DefaultAddon.png</icon>
+							<visible>Container(9000).HasFocus(7)</visible>
+						</item>
+						<item>
+							<label>31315</label>
+							<onclick>ActivateWindow(addonbrowser,addons://all/xbmc.addon.image/,return)</onclick>
+							<icon>DefaultAddon.png</icon>
+							<visible>Container(9000).HasFocus(7)</visible>
+						</item>
+					</content>
+				</control>
+				<include>MediaInfoCard</include>
+				<include content="HomeWidget" condition="!Skin.HasSetting(Blades_HideWidgets)">
 					<param name="visible" value="Library.HasContent(Movies) + Container(9000).HasFocus(2)" />
-					<param name="left" value="460" />
+					<param name="left" value="40" />
 					<param name="label" value="20382" />
 					<param name="id" value="501" />
+					<param name="thumb" value="$INFO[Container(501).ListItem.Art(poster)]" />
 					<param name="onleft" value="9000" />
 					<param name="onright" value="502" />
+					<param name="target" value="video" />
 					<param name="content" value="videodb://movies/titles/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22playcount%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%220%22%7D%5D%7D%2C%22type%22%3A%22movies%22%7D" />
 					<param name="sortby" value="dateadded" />
 				</include>
-				<include content="HomeWidget">
+				<include content="HomeWidget" condition="!Skin.HasSetting(Blades_HideWidgets)">
 					<param name="visible" value="Library.HasContent(Movies) + Container(9000).HasFocus(2)" />
-					<param name="left" value="685" />
+					<param name="left" value="255" />
 					<param name="label" value="31542" />
 					<param name="id" value="502" />
+					<param name="thumb" value="$INFO[Container(502).ListItem.Art(poster)]" />
 					<param name="onleft" value="501" />
-					<param name="onright" value="2" />
+					<param name="onright" value="503" />
+					<param name="target" value="video" />
 					<param name="content" value="videodb://movies/titles/?xsp=%7b%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22inprogress%22%2c%22operator%22%3a%22true%22%2c%22value%22%3a%5b%5d%7d%5d%7d%2c%22type%22%3a%22movies%22%7d" />
 					<param name="sortby" value="lastplayed" />
 				</include>
+				<include content="HomeWidget" condition="!Skin.HasSetting(Blades_HideWidgets)">
+					<param name="visible" value="Library.HasContent(Movies) + Container(9000).HasFocus(2)" />
+					<param name="left" value="470" />
+					<param name="label" value="$VAR[MovieWidget3Label]" />
+					<param name="id" value="503" />
+					<param name="thumb" value="$INFO[Container(503).ListItem.Art(poster)]" />
+					<param name="onleft" value="502" />
+					<param name="onright" value="504" />
+					<param name="target" value="video" />
+					<param name="content" value="$VAR[MovieWidget3Content]" />
+					<param name="sortby" value="$VAR[MovieWidgetSortby]" />
+				</include>
+				<include content="HomeWidget" condition="!Skin.HasSetting(Blades_HideWidgets)">
+					<param name="visible" value="Library.HasContent(Movies) + Container(9000).HasFocus(2)" />
+					<param name="left" value="685" />
+					<param name="label" value="$VAR[MovieWidget4Label]" />
+					<param name="id" value="504" />
+					<param name="thumb" value="$INFO[Container(504).ListItem.Art(poster)]" />
+					<param name="onleft" value="503" />
+					<param name="onright" value="9000" />
+					<param name="target" value="video" />
+					<param name="content" value="$VAR[MovieWidget4Content]" />
+					<param name="sortby" value="$VAR[MovieWidgetSortby]" />
+				</include>
+				<include content="HomeWidget" condition="!Skin.HasSetting(Blades_HideWidgets)">
+					<param name="visible" value="Library.HasContent(TVShows) + Container(9000).HasFocus(3)" />
+					<param name="left" value="245" />
+					<param name="label" value="20382" />
+					<param name="id" value="505" />
+					<param name="thumb" value="$INFO[Container(505).ListItem.Art(thumb)]" />
+					<param name="onleft" value="9000" />
+					<param name="onright" value="506" />
+					<param name="target" value="video" />
+					<param name="content" value="videodb://tvshows/titles/-1/-1/-1/-1/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22playcount%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%220%22%7D%5D%7D%2C%22type%22%3A%22episodes%22%7D" />
+					<param name="sortby" value="dateadded" />
+				</include>
+				<include content="HomeWidget" condition="!Skin.HasSetting(Blades_HideWidgets)">
+					<param name="visible" value="Library.HasContent(TVShows) + Container(9000).HasFocus(3)" />
+					<param name="left" value="490" />
+					<param name="label" value="31542" />
+					<param name="id" value="506" />
+					<param name="thumb" value="$INFO[Container(506).ListItem.Art(thumb)]" />
+					<param name="onleft" value="505" />
+					<param name="onright" value="9000" />
+					<param name="target" value="video" />
+					<param name="content" value="plugin://script.embuary.helper/?info=getnextup" />
+					<param name="sortby" value="dateadded" />
+				</include>
+				<include content="HomeWidget" condition="!Skin.HasSetting(Blades_HideWidgets)">
+					<param name="visible" value="Library.HasContent(Music) + Container(9000).HasFocus(6)" />
+					<param name="left" value="117" />
+					<param name="label" value="359" />
+					<param name="id" value="509" />
+					<param name="thumb" value="$INFO[Container(509).ListItem.Art(thumb)]" />
+					<param name="onleft" value="9000" />
+					<param name="onright" value="510" />
+					<param name="target" value="music" />
+					<param name="content" value="musicdb://albums/" />
+					<param name="sortby" value="dateadded" />
+				</include>
+				<include content="HomeWidget" condition="!Skin.HasSetting(Blades_HideWidgets)">
+					<param name="visible" value="Library.HasContent(Music) + Container(9000).HasFocus(6)" />
+					<param name="left" value="362.5" />
+					<param name="label" value="517" />
+					<param name="id" value="510" />
+					<param name="thumb" value="$INFO[Container(510).ListItem.Art(thumb)]" />
+					<param name="onleft" value="509" />
+					<param name="onright" value="511" />
+					<param name="target" value="music" />
+					<param name="content" value="musicdb://albums/titles/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22playcount%22%2C%22operator%22%3A%22greaterthan%22%2C%22value%22%3A%220%22%7D%5D%7D%2C%22type%22%3A%22albums%22%7D" />
+					<param name="sortby" value="playcount" />
+				</include>
+				<include content="HomeWidget" condition="!Skin.HasSetting(Blades_HideWidgets)">
+					<param name="visible" value="Library.HasContent(Music) + Container(9000).HasFocus(6)" />
+					<param name="left" value="608" />
+					<param name="label" value="31501" />
+					<param name="id" value="511" />
+					<param name="thumb" value="$INFO[Container(511).ListItem.Art(thumb)]" />
+					<param name="onleft" value="510" />
+					<param name="onright" value="9000" />
+					<param name="target" value="music" />
+					<param name="content" value="$VAR[HomeRandomAlbums]" />
+					<param name="sortby" value="random" />
+				</include>
 			</control>
 			<include condition="System.GetBool(LookAndFeel.EnableRSSFeeds)">CommonRSSFeed</include>
-			<!--<include>TetradUILogo</include>-->
 		</control>
 
-		<control type="button" id="1">
-			<description>Blank Blade Slide Right</description>
-			<left>-80</left>
-			<width>160</width>
-			<height>720</height>
-			<texturefocus>blades-blank-left.png</texturefocus>
-			<onfocus>ActivateWindow(1111)</onfocus>
-			<animation effect="slide" end="1280,0" time="HomeBladeAnimationSpeed">focus</animation>
-			<hitrect x="-10" y="-10" w="1" h="1" />
-		</control>
-		<control type="button" id="2">
-			<description>Blank Blade Slide Left</description>
-			<left>80r</left>
-			<width>160</width>
-			<height>720</height>
-			<texturefocus>blades-blank-right.png</texturefocus>
-			<onfocus>ActivateWindow(Settings)</onfocus>
-			<animation effect="slide" end="-1280,0" time="HomeBladeAnimationSpeed">focus</animation>
-			<hitrect x="-10" y="-10" w="1" h="1" />
-		</control>
+		<include content="BlankBladeSlideRight">
+			<param name="id" value="1" />
+			<param name="action" value="ActivateWindow(1111)" />
+		</include>
+		<include content="BlankBladeSlideLeft">
+			<param name="id" value="2" />
+			<param name="action" value="ActivateWindow(Settings)" />
+		</include>
 		<control type="group">
 			<visible>!Control.HasFocus(1) + !Control.HasFocus(2)</visible>
 			<!-- Left side -->
-			<control type="image">
-				<left>-110</left>
-				<top>-40</top>
-				<width>180</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-runner-left.png</texture>
-			</control>
-			<control type="image">
-				<top>-40</top>
-				<width>115</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-size2-left-NF.png</texture>
-			</control>
+			<include content="BladesImagesLeft">
+				<param name="texture" value="blades-size2-left-NF.png" />
+			</include>
 			<control type="label">
 				<description>weather Label</description>
 				<label>31004</label>
 				<left>90</left>
 				<top>200</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<include>BladesLabelLeft</include>
 			</control>
 			<control type="image">
 				<left>50</left>
@@ -281,11 +561,7 @@
 				<label>31002</label>
 				<left>140</left>
 				<top>190</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<include>BladesLabelLeft</include>
 			</control>
 			<control type="image">
 				<left>100</left>
@@ -298,41 +574,21 @@
 			<control type="label">
 				<description>Media Label</description>
 				<label>31001</label>
-				<left>190</left>
+				<left>188</left>
 				<top>170</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<include>BladesLabelLeft</include>
 			</control>
 			<!-- Right side -->
-			<control type="image">
-				<left>65r</left>
-				<top>-40</top>
-				<width>180</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-runner-right.png</texture>
-			</control>
-			<control type="image">
-				<left>115r</left>
-				<top>-40</top>
-				<width>115</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-size3-right-NF.png</texture>
-			</control>
+			<include content="BladesImagesRight">
+				<param name="texture" value="blades-size3-right-NF.png" />
+			</include>
 			<control type="label">
 				<description>System Label</description>
 				<label>31003</label>
-				<left>50r</left>
+				<left>48r</left>
 				<top>190</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<width>200</width>
+				<include>BladesLabelRight</include>
 			</control>
 		</control>
 
@@ -340,31 +596,15 @@
 			<description>Application Blades</description>
 			<visible>Control.HasFocus(1)</visible>
 			<!-- Left side -->
-			<control type="image">
-				<left>-110</left>
-				<top>-40</top>
-				<width>180</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-runner-left.png</texture>
-			</control>
-			<control type="image">
-				<top>-40</top>
-				<width>115</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-size3-left-NF.png</texture>
-			</control>
+			<include content="BladesImagesLeft">
+				<param name="texture" value="blades-size3-left-NF.png" />
+			</include>
 			<control type="label">
 				<description>weather Label</description>
 				<label>31004</label>
-				<left>90</left>
+				<left>88</left>
 				<top>190</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<include>BladesLabelLeft</include>
 			</control>
 			<control type="image">
 				<left>50</left>
@@ -379,39 +619,19 @@
 				<label>31002</label>
 				<left>140</left>
 				<top>170</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<include>BladesLabelLeft</include>
 			</control>
 			<!-- Right side -->
-			<control type="image">
-				<left>65r</left>
-				<top>-40</top>
-				<width>180</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-runner-right.png</texture>
-			</control>
-			<control type="image">
-				<left>115r</left>
-				<top>-40</top>
-				<width>115</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-size2-right-NF.png</texture>
-			</control>
+			<include content="BladesImagesRight">
+				<param name="texture" value="blades-size2-right-NF.png" />
+			</include>
 			<control type="label">
 				<description>System Label</description>
 				<label>31003</label>
-				<left>50r</left>
+				<left>48r</left>
 				<top>200</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<width>200</width>
+				<include>BladesLabelRight</include>
 			</control>
 			<control type="image">
 				<left>165r</left>
@@ -426,13 +646,9 @@
 			<control type="label">
 				<description>Media Label</description>
 				<label>31001</label>
-				<left>100r</left>
+				<left>99r</left>
 				<top>190</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<include>BladesLabelRight</include>
 				<visible>Control.HasFocus(1)</visible>
 				<animation effect="fade" time="HomeBladeAnimationSpeed">visible</animation>
 			</control>
@@ -442,31 +658,15 @@
 			<description>System Blades</description>
 			<visible>Control.HasFocus(2)</visible>
 			<!-- Left side -->
-			<control type="image">
-				<left>-110</left>
-				<top>-40</top>
-				<width>180</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-runner-left.png</texture>
-			</control>
-			<control type="image">
-				<top>-40</top>
-				<width>115</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-size1-left-NF.png</texture>
-			</control>
+			<include content="BladesImagesLeft">
+				<param name="texture" value="blades-size1-left-NF.png" />
+			</include>
 			<control type="label">
 				<description>weather Label</description>
 				<label>31004</label>
 				<left>90</left>
 				<top>210</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<include>BladesLabelLeft</include>
 			</control>
 			<control type="image">
 				<left>50</left>
@@ -479,13 +679,9 @@
 			<control type="label">
 				<description>Apps Label</description>
 				<label>31002</label>
-				<left>140</left>
+				<left>142</left>
 				<top>200</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<include>BladesLabelLeft</include>
 			</control>
 			<control type="image">
 				<left>100</left>
@@ -498,13 +694,9 @@
 			<control type="label">
 				<description>Media Label</description>
 				<label>31001</label>
-				<left>190</left>
+				<left>188</left>
 				<top>190</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<include>BladesLabelLeft</include>
 			</control>
 			<control type="image">
 				<left>150</left>
@@ -519,13 +711,10 @@
 			<control type="label">
 				<description>System Label</description>
 				<label>31003</label>
-				<left>240</left>
+				<left>238</left>
 				<top>170</top>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>top</aligny>
-				<angle>270</angle>
+				<width>200</width>
+				<include>BladesLabelLeft</include>
 				<visible>Control.HasFocus(2)</visible>
 				<animation effect="fade" time="HomeBladeAnimationSpeed">visible</animation>
 			</control>
@@ -540,5 +729,6 @@
 			</control>
 		</control>
 		<include>Common_Now_Playing</include>
+		<include>BackgroundDim</include>
 	</controls>	
 </window>

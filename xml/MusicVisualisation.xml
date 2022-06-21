@@ -8,6 +8,14 @@
 			<width>1280</width>
 			<height>720</height>
 		</control>
+		<control type="image">
+			<description>Background Fanart</description>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true">$INFO[Player.Art(fanart)]</texture>
+			<visible>!Skin.HasSetting(Back_Fanart) + !Skin.HasSetting(DontBlendBackground)</visible>
+			<animation effect="fade" end="50" condition="true">Conditional</animation>
+		</control>
 		<!-- media infos -->
 		<control type="group">
 			<animation effect="fade" time="200">VisibleChange</animation>

@@ -13,22 +13,7 @@
 			</animation>
 			<animation effect="fade" time="DialogVisibleFadeAnimationSpeed" condition="Window.IsVisible(AddonInformation)">WindowOpen</animation>
 			<animation effect="fade" time="DialogVisibleFadeAnimationSpeed" condition="Window.IsVisible(AddonInformation)">WindowClose</animation>
-			<control type="image">
-				<left>130</left>
-				<top>-40</top>
-				<width>180</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-runner-right.png</texture>
-			</control>
-			<control type="image">
-				<left>310</left>
-				<top>-40</top>
-				<width>970</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-runner-right-edge.png</texture>
-			</control>
+			<include>BladesRunnerRight</include>
 
 			<control type="group">
 				<animation effect="fade" delay="600" time="DialogVisibleFadeAnimationSpeed">WindowOpen</animation>

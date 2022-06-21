@@ -43,15 +43,15 @@
 			<top>200</top>
 			<width>560</width>
 			<height>12</height>
-			<visible>true</visible>
+			<info>System.Progressbar</info>
 		</control>
 		<control type="grouplist" id="9000">
 			<top>225</top>
-			<left>50</left>
-			<width>600</width>
+			<left>47</left>
+			<width>606</width>
 			<align>center</align>
 			<orientation>horizontal</orientation>
-			<itemgap>0</itemgap>
+			<itemgap>2</itemgap>
 			<control type="button" id="11">
 				<description>Ok button</description>
 				<label>107</label>

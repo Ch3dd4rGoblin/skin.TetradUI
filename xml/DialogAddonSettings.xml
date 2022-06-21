@@ -103,8 +103,8 @@
 			<align>center</align>
 			<aligny>center</aligny>
 			<font>font12</font>
-			<texturefocus border="10">button-focus.png</texturefocus>
-			<texturenofocus border="10">button-nofocus.png</texturenofocus>
+			<texturefocus border="10">button-dialog-focus.png</texturefocus>
+			<texturenofocus border="10">button-dialog-nofocus.png</texturenofocus>
 		</control>
 		<control type="button" id="7">
 			<description>Default Button</description>

@@ -108,13 +108,28 @@
 			</control>
 		</control>
 	</include>
+	<variable name="WeatherFanartAddonVar">
+		<value condition="Skin.HasSetting(WeatherFanartAddon.multi)">$INFO[Skin.String(WeatherFanartAddon.path)]$INFO[Window(Weather).Property(Current.FanartCode)]</value>
+		<value condition="!Skin.HasSetting(WeatherFanartAddon.multi)">$INFO[Skin.String(WeatherFanartAddon.path)]$INFO[Window(Weather).Property(Current.FanartCode),,.jpg]</value>
+	</variable>
 	<include name="CommonWeatherBackground">
+		<control type="multiimage">
+			<description>Background Weather</description>
+			<width>1280</width>
+			<height>720</height>
+			<imagepath>$VAR[WeatherFanartAddonVar]</imagepath>
+			<timeperimage>10000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>200</fadetime>
+			<visible>!String.IsEmpty(Skin.String(WeatherFanartAddon.path)) + !String.IsEmpty(Window(Weather).Property(Current.FanartCode))</visible>
+		</control>
 		<control type="image">
 			<description>Background Weather</description>
 			<width>1280</width>
 			<height>720</height>
-			<texture background="true" fallback="special://skin/backgrounds/weather.png">$INFO[Skin.String(Background_Weather)]</texture>
+			<texture background="true" fallback="backgrounds/weather.png">$INFO[Skin.String(Background_Weather)]</texture>
 			<animation effect="fade" start="100" end="60" time="200" condition="[!String.IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(Back_Fanart)] | [Player.HasVideo + !Skin.HasSetting(Back_Video)] | [Player.HasAudio + !Skin.HasSetting(Back_Vis)]">Conditional</animation>
+			<animation effect="fade" start="100" end="40" time="200" condition="!String.IsEmpty(Skin.String(WeatherFanartAddon.path)) + !String.IsEmpty(Window(Weather).Property(Current.FanartCode)) + !Skin.HasSetting(Back_Fanart)">Conditional</animation>
 		</control>
 		<include>RainDropAnimationBackground</include>
 	</include>
@@ -148,45 +163,53 @@
 		</control>
 		<include>RainDropAnimationBackground</include>
 	</include>
+	<include name="CommonMediaBackgrounds">
+		<include condition="!Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
+		<control type="group">
+			<include>CommonMediaBackground</include>
+		</control>
+		<include condition="Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
+		<control type="group">
+			<include>CommonMediaBlackwash</include>
+		</control>
+	</include>
 
 <!-- Blackwash Backgrounds -->
 	<include name="CommonWeatherBlackwash">
+		<top>-95</top>
 		<control type="image">
 			<description>Background</description>
-			<left>55</left>
-			<width>50</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
+			<left>41</left>
+			<width>68</width>
+			<height>910</height>
 			<texture>background-overlay-blackwash-left-ws.png</texture>
 		</control>
 		<control type="image">
 			<description>Background</description>
 			<left>55r</left>
-			<width>50</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
+			<width>68</width>
+			<height>910</height>
 			<texture>background-overlay-blackwash-right-ws.png</texture>
 			<animation effect="slide" start="-150,0" end="0,0" time="HomeBladeAnimationSpeed" condition="Window.Previous(Weather)">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="-150,0" time="HomeBladeAnimationSpeed" condition="Window.Next(Weather)">WindowClose</animation>
 		</control>
 		<control type="image">
 			<description>Background</description>
-			<left>105</left>
-			<width>1120</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
+			<left>109</left>
+			<width>1116</width>
+			<height>910</height>
 			<texture>background-overlay-blackwash-centertile-ws.png</texture>
-			<animation effect="zoom" start="105,0,970,720" end="105,0,1120,720" time="HomeBladeAnimationSpeed" condition="Window.Previous(Weather)">WindowOpen</animation>
-			<animation effect="zoom" start="105,0,1120,720" end="105,0,970,720" time="HomeBladeAnimationSpeed" condition="Window.Next(Weather)">WindowClose</animation>
+			<animation effect="zoom" start="109,0,966,910" end="109,0,1116,910" time="HomeBladeAnimationSpeed" condition="Window.Previous(Weather)">WindowOpen</animation>
+			<animation effect="zoom" start="109,0,1116,910" end="109,0,966,910" time="HomeBladeAnimationSpeed" condition="Window.Next(Weather)">WindowClose</animation>
 		</control>
 	</include>
 	<include name="CommonAppsBlackwash">
+		<top>-95</top>
 		<control type="image">
 			<description>Background</description>
-			<left>55</left>
-			<width>50</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
+			<left>41</left>
+			<width>68</width>
+			<height>910</height>
 			<texture>background-overlay-blackwash-left-ws.png</texture>
 			<animation effect="slide" start="50,0" end="0,0" time="HomeBladeAnimationSpeed" condition="Window.Previous(1111)">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="50,0" time="HomeBladeAnimationSpeed" condition="Window.Next(1111)">WindowClose</animation>
@@ -194,31 +217,29 @@
 		<control type="image">
 			<description>Background</description>
 			<left>55r</left>
-			<width>50</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
+			<width>68</width>
+			<height>910</height>
 			<texture>background-overlay-blackwash-right-ws.png</texture>
 			<animation effect="slide" start="-100,0" end="0,0" time="HomeBladeAnimationSpeed" condition="Window.Previous(1111)">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="-100,0" time="HomeBladeAnimationSpeed" condition="Window.Next(1111)">WindowClose</animation>
 		</control>
 		<control type="image">
 			<description>Background</description>
-			<left>105</left>
-			<width>1120</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
+			<left>109</left>
+			<width>1116</width>
+			<height>910</height>
 			<texture>background-overlay-blackwash-centertile-ws.png</texture>
-			<animation effect="zoom" start="155,0,970,720" end="105,0,1120,720" time="HomeBladeAnimationSpeed" condition="Window.Previous(1111)">WindowOpen</animation>
-			<animation effect="zoom" start="105,0,1120,720" end="155,0,970,720" time="HomeBladeAnimationSpeed" condition="Window.Next(1111)">WindowClose</animation>
+			<animation effect="zoom" start="159,0,966,910" end="109,0,1116,910" time="HomeBladeAnimationSpeed" condition="Window.Previous(1111)">WindowOpen</animation>
+			<animation effect="zoom" start="109,0,1116,910" end="159,0,966,910" time="HomeBladeAnimationSpeed" condition="Window.Next(1111)">WindowClose</animation>
 		</control>
 	</include>
 	<include name="CommonMediaBlackwash">
+		<top>-95</top>
 		<control type="image">
 			<description>Background</description>
-			<left>55</left>
-			<width>50</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
+			<left>41</left>
+			<width>68</width>
+			<height>910</height>
 			<texture>background-overlay-blackwash-left-ws.png</texture>
 			<animation effect="slide" start="100,0" end="0,0" time="HomeBladeAnimationSpeed" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="100,0" time="HomeBladeAnimationSpeed" condition="Window.Next(Home)">WindowClose</animation>
@@ -226,31 +247,29 @@
 		<control type="image">
 			<description>Background</description>
 			<left>55r</left>
-			<width>50</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
+			<width>68</width>
+			<height>910</height>
 			<texture>background-overlay-blackwash-right-ws.png</texture>
 			<animation effect="slide" start="-50,0" end="0,0" time="HomeBladeAnimationSpeed" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="-50,0" time="HomeBladeAnimationSpeed" condition="Window.Next(Home)">WindowClose</animation>
 		</control>
 		<control type="image">
 			<description>Background</description>
-			<left>105</left>
-			<width>1120</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
+			<left>109</left>
+			<width>1116</width>
+			<height>910</height>
 			<texture>background-overlay-blackwash-centertile-ws.png</texture>
-			<animation effect="zoom" start="205,0,970,720" end="105,0,1120,720" time="HomeBladeAnimationSpeed" condition="Window.Previous(Home)">WindowOpen</animation>
-			<animation effect="zoom" start="105,0,1120,720" end="205,0,970,720" time="HomeBladeAnimationSpeed" condition="Window.Next(Home)">WindowClose</animation>
+			<animation effect="zoom" start="209,0,966,910" end="109,0,1116,910" time="HomeBladeAnimationSpeed" condition="Window.Previous(Home)">WindowOpen</animation>
+			<animation effect="zoom" start="109,0,1116,910" end="209,0,966,910" time="HomeBladeAnimationSpeed" condition="Window.Next(Home)">WindowClose</animation>
 		</control>
 	</include>
 	<include name="CommonSystemBlackwash">
+		<top>-95</top>
 		<control type="image">
 			<description>Background</description>
-			<left>55</left>
-			<width>50</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
+			<left>41</left>
+			<width>68</width>
+			<height>910</height>
 			<texture>background-overlay-blackwash-left-ws.png</texture>
 			<animation effect="slide" start="150,0" end="0,0" time="HomeBladeAnimationSpeed" condition="Window.Previous(Settings)">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="150,0" time="HomeBladeAnimationSpeed" condition="Window.Next(Settings)">WindowClose</animation>
@@ -258,20 +277,18 @@
 		<control type="image">
 			<description>Background</description>
 			<left>55r</left>
-			<width>50</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
+			<width>68</width>
+			<height>910</height>
 			<texture>background-overlay-blackwash-right-ws.png</texture>
 		</control>
 		<control type="image">
 			<description>Background</description>
-			<left>105</left>
-			<width>1120</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
+			<left>109</left>
+			<width>1116</width>
+			<height>910</height>
 			<texture>background-overlay-blackwash-centertile-ws.png</texture>
-			<animation effect="zoom" start="255,0,970,720" end="105,0,1120,720" time="HomeBladeAnimationSpeed" condition="Window.Previous(Settings)">WindowOpen</animation>
-			<animation effect="zoom" start="105,0,1120,720" end="255,0,970,720" time="HomeBladeAnimationSpeed" condition="Window.Next(Settings)">WindowClose</animation>
+			<animation effect="zoom" start="259,0,966,910" end="109,0,1116,910" time="HomeBladeAnimationSpeed" condition="Window.Previous(Settings)">WindowOpen</animation>
+			<animation effect="zoom" start="109,0,1116,910" end="259,0,966,910" time="HomeBladeAnimationSpeed" condition="Window.Next(Settings)">WindowClose</animation>
 		</control>
 	</include>
 
@@ -296,13 +313,9 @@
 		<control type="label">
 			<description>Weather Label</description>
 			<label>31004</label>
-			<left>90</left>
+			<left>88</left>
 			<top>170</top>
-			<font>font16</font>
-			<textcolor>black</textcolor>
-			<align>left</align>
-			<aligny>top</aligny>
-			<angle>270</angle>
+			<include>BladesLabelLeft</include>
 		</control>
 		<!-- Right side -->
 		<control type="image">
@@ -334,11 +347,7 @@
 			<label>31003</label>
 			<left>-100r</left>
 			<top>210</top>
-			<font>font16</font>
-			<textcolor>black</textcolor>
-			<align>left</align>
-			<aligny>top</aligny>
-			<angle>270</angle>
+			<include>BladesLabelRight</include>
 			<animation type="WindowOpen" condition="Window.Previous(Weather)">
 				<effect type="slide" start="-150,0" end="-160,0" time="100" />
 				<effect type="slide" start="0,0" end="160,0" delay="100" time="HomeBladeAnimationSpeed" />
@@ -369,11 +378,7 @@
 			<label>31001</label>
 			<left>-50r</left>
 			<top>200</top>
-			<font>font16</font>
-			<textcolor>black</textcolor>
-			<align>left</align>
-			<aligny>top</aligny>
-			<angle>270</angle>
+			<include>BladesLabelRight</include>
 			<animation type="WindowOpen" condition="Window.Previous(Weather)">
 				<effect type="slide" start="-150,0" end="-160,0" time="100" />
 				<effect type="slide" start="0,0" end="160,0" delay="100" time="HomeBladeAnimationSpeed" />
@@ -404,11 +409,7 @@
 			<label>31002</label>
 			<left>0r</left>
 			<top>190</top>
-			<font>font16</font>
-			<textcolor>black</textcolor>
-			<align>left</align>
-			<aligny>top</aligny>
-			<angle>270</angle>
+			<include>BladesLabelRight</include>
 			<animation type="WindowOpen" condition="Window.Previous(Weather)">
 				<effect type="slide" start="-150,0" end="-160,0" time="100" />
 				<effect type="slide" start="0,0" end="160,0" delay="100" time="HomeBladeAnimationSpeed" />
@@ -460,11 +461,7 @@
 			<label>31004</label>
 			<left>40</left>
 			<top>190</top>
-			<font>font16</font>
-			<textcolor>black</textcolor>
-			<align>left</align>
-			<aligny>top</aligny>
-			<angle>270</angle>
+			<include>BladesLabelLeft</include>
 			<animation type="WindowOpen" condition="Window.Previous(1111)">
 				<effect type="slide" start="50,0" end="60,0" time="100" />
 				<effect type="slide" start="0,0" end="-60,0" delay="100" time="HomeBladeAnimationSpeed" />
@@ -503,11 +500,7 @@
 			<label>31002</label>
 			<left>90</left>
 			<top>170</top>
-			<font>font16</font>
-			<textcolor>black</textcolor>
-			<align>left</align>
-			<aligny>top</aligny>
-			<angle>270</angle>
+			<include>BladesLabelLeft</include>
 			<animation type="WindowOpen" condition="Window.Previous(1111)">
 				<effect type="slide" start="50,0" end="60,0" time="100" />
 				<effect type="slide" start="0,0" end="-60,0" delay="100" time="HomeBladeAnimationSpeed" />
@@ -547,11 +540,7 @@
 			<label>31003</label>
 			<left>-50r</left>
 			<top>200</top>
-			<font>font16</font>
-			<textcolor>black</textcolor>
-			<align>left</align>
-			<aligny>top</aligny>
-			<angle>270</angle>
+			<include>BladesLabelRight</include>
 			<animation type="WindowOpen" condition="Window.Previous(1111)">
 				<effect type="slide" start="-100,0" end="-110,0" time="100" />
 				<effect type="slide" start="0,0" end="100,0" delay="100" time="HomeBladeAnimationSpeed" />
@@ -582,11 +571,7 @@
 			<label>31001</label>
 			<left>0r</left>
 			<top>190</top>
-			<font>font16</font>
-			<textcolor>black</textcolor>
-			<align>left</align>
-			<aligny>top</aligny>
-			<angle>270</angle>
+			<include>BladesLabelRight</include>
 			<animation type="WindowOpen" condition="Window.Previous(1111)">
 				<effect type="slide" start="-100,0" end="-110,0" time="100" />
 				<effect type="slide" start="0,0" end="110,0" delay="100" time="HomeBladeAnimationSpeed" />
@@ -638,11 +623,7 @@
 			<label>31004</label>
 			<left>-10</left>
 			<top>200</top>
-			<font>font16</font>
-			<textcolor>black</textcolor>
-			<align>left</align>
-			<aligny>top</aligny>
-			<angle>270</angle>
+			<include>BladesLabelLeft</include>
 			<animation type="WindowOpen" condition="Window.Previous(Home)">
 				<effect type="slide" start="100,0" end="110,0" time="100" />
 				<effect type="slide" start="0,0" end="-110,0" delay="100" time="HomeBladeAnimationSpeed" />
@@ -673,11 +654,7 @@
 			<label>31002</label>
 			<left>40</left>
 			<top>190</top>
-			<font>font16</font>
-			<textcolor>black</textcolor>
-			<align>left</align>
-			<aligny>top</aligny>
-			<angle>270</angle>
+			<include>BladesLabelLeft</include>
 			<animation type="WindowOpen" condition="Window.Previous(Home)">
 				<effect type="slide" start="100,0" end="110,0" time="100" />
 				<effect type="slide" start="0,0" end="-110,0" delay="100" time="HomeBladeAnimationSpeed" />
@@ -714,13 +691,9 @@
 		<control type="label">
 			<description>Media Label</description>
 			<label>31001</label>
-			<left>90</left>
+			<left>88</left>
 			<top>170</top>
-			<font>font16</font>
-			<textcolor>black</textcolor>
-			<align>left</align>
-			<aligny>top</aligny>
-			<angle>270</angle>
+			<include>BladesLabelLeft</include>
 			<animation type="WindowOpen" condition="Window.Previous(Home)">
 				<effect type="slide" start="100,0" end="110,0" time="100" />
 				<effect type="slide" start="0,0" end="-110,0" delay="100" time="HomeBladeAnimationSpeed" />
@@ -760,11 +733,7 @@
 			<label>31003</label>
 			<left>0r</left>
 			<top>190</top>
-			<font>font16</font>
-			<textcolor>black</textcolor>
-			<align>left</align>
-			<aligny>top</aligny>
-			<angle>270</angle>
+			<include>BladesLabelRight</include>
 			<animation type="WindowOpen" condition="Window.Previous(Home)">
 				<effect type="slide" start="-50,0" end="-60,0" time="100" />
 				<effect type="slide" start="0,0" end="60,0" delay="100" time="HomeBladeAnimationSpeed" />
@@ -817,11 +786,7 @@
 			<label>31004</label>
 			<left>-60</left>
 			<top>210</top>
-			<font>font16</font>
-			<textcolor>black</textcolor>
-			<align>left</align>
-			<aligny>top</aligny>
-			<angle>270</angle>
+			<include>BladesLabelLeft</include>
 			<animation type="WindowOpen" condition="Window.Previous(Settings)">
 				<effect type="slide" start="150,0" end="160,0" time="100" />
 				<effect type="slide" start="0,0" end="-160,0" delay="100" time="HomeBladeAnimationSpeed" />
@@ -852,11 +817,7 @@
 			<label>31002</label>
 			<left>-10</left>
 			<top>200</top>
-			<font>font16</font>
-			<textcolor>black</textcolor>
-			<align>left</align>
-			<aligny>top</aligny>
-			<angle>270</angle>
+			<include>BladesLabelLeft</include>
 			<animation type="WindowOpen" condition="Window.Previous(Settings)">
 				<effect type="slide" start="150,0" end="160,0" time="100" />
 				<effect type="slide" start="0,0" end="-160,0" delay="100" time="HomeBladeAnimationSpeed" />
@@ -887,11 +848,7 @@
 			<label>31001</label>
 			<left>40</left>
 			<top>190</top>
-			<font>font16</font>
-			<textcolor>black</textcolor>
-			<align>left</align>
-			<aligny>top</aligny>
-			<angle>270</angle>
+			<include>BladesLabelLeft</include>
 			<animation type="WindowOpen" condition="Window.Previous(Settings)">
 				<effect type="slide" start="150,0" end="160,0" time="100" />
 				<effect type="slide" start="0,0" end="-160,0" delay="100" time="HomeBladeAnimationSpeed" />
@@ -928,13 +885,9 @@
 		<control type="label">
 			<description>System Label</description>
 			<label>31003</label>
-			<left>90</left>
+			<left>88</left>
 			<top>170</top>
-			<font>font16</font>
-			<textcolor>black</textcolor>
-			<align>left</align>
-			<aligny>top</aligny>
-			<angle>270</angle>
+			<include>BladesLabelLeft</include>
 			<animation type="WindowOpen" condition="Window.Previous(Settings)">
 				<effect type="slide" start="150,0" end="160,0" time="100" />
 				<effect type="slide" start="0,0" end="-160,0" delay="100" time="HomeBladeAnimationSpeed" />
@@ -983,5 +936,4 @@
 			<texture>blades-runner-right.png</texture>
 		</control>
 	</include>
-
 </includes>

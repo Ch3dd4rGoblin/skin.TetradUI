@@ -4,72 +4,37 @@
 	<menucontrol>9000</menucontrol>
 	<views>50,52,55</views>
 	<controls>
-		<include condition="!Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
-		<control type="group">
-			<include>CommonMediaBackground</include>
-		</control>
-		<include condition="Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
-		<control type="group">
-			<include>CommonMediaBlackwash</include>
-		</control>
+		<include>CommonMediaBackgrounds</include>
 		<control type="group">
 			<left>130</left>
 			<animation effect="fade" delay="500" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
 			<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 			<control type="label">
 				<description>Header label</description>
-				<label>$LOCALIZE[1]</label>
+				<label>$LOCALIZE[1][COLOR=grey2]$VAR[SortLetterNotificationVar][/COLOR]</label>
 				<include>HeaderTextCommons</include>
 			</control>
 			<control type="group">
-				<left>0</left>
 				<top>110</top>
 				<include>ListViewCommons</include> <!-- View ID 50 -->
 				<include>ThumbnailView</include> <!-- View ID 52 -->
 				<include>ThumbnailInfoView</include> <!-- View ID 55 -->
 			</control>
+			<control type="grouplist">
+				<description>Media Codec Flagging Images</description>
+				<left>-20</left>
+				<top>120r</top>
+				<width>620</width>
+				<itemgap>5</itemgap>
+				<orientation>horizontal</orientation>
+				<include>PictureTypeHackFlaggingConditions</include>
+			</control>
 		</control>
+		<include>BackgroundDim</include>
 		<control type="group" id="9000">
-			<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
-			<animation effect="slide" time="SideMenuSlideOutTime" start="0,0" end="300,0" condition="ControlGroup(9000).HasFocus" reversible="false">Conditional</animation>
-			<animation effect="slide" time="SideMenuSlideOutTime" start="300,0" end="0,0" delay="SideMenuSlideOutTime" condition="!ControlGroup(9000).HasFocus" reversible="false">Conditional</animation>
-			<left>-300</left>
-			<top>0</top>
-			<control type="image">
-				<top>-40</top>
-				<width>160</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<colordiffuse>EFFFFFFF</colordiffuse>
-				<texture>blades-runner-right-edge.png</texture>
-			</control>
-			<control type="image">
-				<left>160</left>
-				<top>-40</top>
-				<width>180</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<colordiffuse>EFFFFFFF</colordiffuse>
-				<texture>blades-runner-left1.png</texture>
-			</control>
+			<include>Container9000BladesRunner</include>
 			<control type="group">
-				<left>100</left>
-				<top>140</top>
-				<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus</visible>
-				<animation effect="fade" start="0" end="100" delay="SideMenuSlideOutTime" time="200">Visible</animation>
-				<animation effect="fade" start="100" end="0" delay="0" time="SideMenuSlideOutTime">Hidden</animation>
-				<control type="label">
-					<description>Header Label</description>
-					<top>-40</top>
-					<width>220</width>
-					<height>20</height>
-					<font>font12</font>
-					<label>31202</label>
-					<textcolor>orange</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<align>left</align>
-					<aligny>center</aligny>
-				</control>
+				<include>Container9000Header</include>
 				<control type="button" id="2">
 					<description>View As button</description>
 					<include>ButtonCommonValues</include>
@@ -80,31 +45,13 @@
 				</control>
 				<control type="togglebutton" id="3">
 					<description>Sort by button</description>
-					<left>2</left>
-					<top>40</top>
+					<include>SortbyButton</include>
 					<include>ButtonCommonValues</include>
-					<alttexturefocus border="4,6,4,8">button-focus.png</alttexturefocus>
-					<alttexturenofocus border="4,6,4,8">button-focus.png</alttexturenofocus>
-					<usealttexture>Control.HasFocus(4)</usealttexture>
-					<label>103</label>
-					<onleft>50</onleft>
-					<onright>4</onright>
-					<onup>2</onup>
 					<ondown>6</ondown>
 				</control>
 				<control type="togglebutton" id="4">
 					<description>Sort asc</description>
-					<left>171</left>
-					<top>40</top>
-					<width>40</width>
-					<height>40</height>
-					<texturefocus>sortup2-focus.png</texturefocus>
-					<texturenofocus>sortup2-nofocus.png</texturenofocus>
-					<alttexturefocus>sortdown2-focus.png</alttexturefocus>
-					<alttexturenofocus>sortdown2-nofocus.png</alttexturenofocus>
-					<onleft>3</onleft>
-					<onright>50</onright>
-					<onup>2</onup>
+					<include>SortAscendingButton</include>
 					<ondown>6</ondown>
 				</control>
 				<control type="button" id="6">
@@ -139,7 +86,7 @@
 					<onright>50</onright>
 					<onup>7</onup>
 					<ondown condition="Control.IsVisible(19)">19</ondown>
-					<ondown condition="!Control.IsVisible(19)">20</ondown>
+					<ondown condition="!Control.IsVisible(19)">9001</ondown>
 				</control>
 				<control type="radiobutton" id="19">
 					<description>Filter</description>
@@ -154,7 +101,7 @@
 					<selected>Container.Filtered</selected>
 					<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
 				</control>
-				<control type="radiobutton" id="20">
+				<control type="radiobutton" id="9001">
 					<description>Filter Advanced</description>
 					<left>8</left>
 					<top>200</top>
@@ -171,7 +118,7 @@
 				<control type="button" id="610">
 					<description>Fake Button to fix Player Controls Navigation</description>
 					<onup condition="Control.IsVisible(19)">19</onup>
-					<onup condition="!Control.IsVisible(19)">20</onup>
+					<onup condition="!Control.IsVisible(19)">9001</onup>
 					<ondown>603</ondown>
 					<visible>false</visible>
 				</control>

@@ -8,30 +8,8 @@
 	</coordinates>
 	<controls>
 		<control type="group">
-			<animation type="WindowOpen">
-				<effect type="fade" start="0" end="100" time="100" />
-				<effect type="slide" start="550,0" end="0,0" delay="100" time="400" tween="quadratic" easing="out" />
-			</animation>
-			<animation type="WindowClose">
-				<effect type="slide" start="0,0" end="550,0" delay="DialogVisibleFadeAnimationSpeed" time="400" tween="quadratic" easing="in"/>
-				<effect type="fade" start="100" end="0" delay="800" time="100" />
-			</animation>
-			<control type="image">
-				<left>130</left>
-				<top>-40</top>
-				<width>180</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-runner-right.png</texture>
-			</control>
-			<control type="image">
-				<left>310</left>
-				<top>-40</top>
-				<width>970</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-runner-right-edge.png</texture>
-			</control>
+			<include>BladesRunnerRightAnimation1</include>
+			<include>BladesRunnerRight</include>
 			<control type="label" id="411">
 				<description>Header label</description>
 				<left>200</left>
@@ -73,7 +51,7 @@
 							<texture>button.png</texture>
 							<animation effect="slide" start="0,-52" time="200" tween="sine" easing="out" condition="Container(2000).OnNext" reversible="false">Focus</animation>
 							<animation effect="slide" start="0,52" time="200" tween="sine" easing="out" condition="Container(2000).OnPrevious" reversible="false">Focus</animation>
-							<animation effect="fade" start="100" end="70" time="200" condition="!Control.HasFocus(2000)">Conditional</animation>
+							<animation effect="fade" start="100" end="25" time="200" condition="!Control.HasFocus(2000)">Conditional</animation>
 						</control>
 						<control type="label">
 							<left>25</left>
@@ -111,6 +89,17 @@
 							<label>31306</label>
 							<onclick>Powerdown()</onclick>
 							<visible>System.CanPowerDown</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[20150]</label>
+							<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
+							<visible>!System.HasAlarm(shutdowntimer)</visible>
+							<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
+						</item>
+						<item>
+							<label>$LOCALIZE[20151] $INFO[System.AlarmPos,(,)]</label>
+							<onclick>CancelAlarm(shutdowntimer)</onclick>
+							<visible>System.HasAlarm(shutdowntimer)</visible>
 						</item>
 						<item>
 							<label>13011</label>

@@ -22,28 +22,14 @@
 			<animation type="WindowClose" condition="[Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]">
 				<effect type="slide" start="0,0" end="-400,0" delay="DialogVisibleFadeAnimationSpeed" time="500" tween="quadratic" easing="in"/>
 			</animation>
-			<control type="image">
-				<left>130</left>
-				<top>-40</top>
-				<width>180</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-runner-right.png</texture>
+			<control type="group">
 				<animation effect="fade" start="90" end="90" time="0" condition="Window.IsVisible(FullscreenVideo) | Window.IsVisible(Visualisation)">conditional</animation>
-			</control>
-			<control type="image">
-				<left>310</left>
-				<top>-40</top>
-				<width>970</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-runner-right-edge.png</texture>
-				<animation effect="fade" start="90" end="90" time="0" condition="Window.IsVisible(FullscreenVideo) | Window.IsVisible(Visualisation)">conditional</animation>
+				<include>BladesRunnerRight</include>
 			</control>
 			<control type="label" id="411">
 				<description>Header label</description>
 				<left>200</left>
-				<label>13351</label>
+				<label />
 				<include>DialogHeaderTextCommons</include>
 			</control>
 			<control type="group">
@@ -52,11 +38,10 @@
 				<animation effect="fade" delay="100" time="DialogVisibleFadeAnimationSpeed">WindowClose</animation>
 				<control type="label" id="412">
 					<description>Path label</description>
-					<left>640</left>
 					<top>55</top>
 					<width>640</width>
 					<height>30</height>
-					<font>font12</font>
+					<font>font10</font>
 					<haspath>true</haspath>
 					<align>right</align>
 					<aligny>center</aligny>
@@ -99,11 +84,11 @@
 					</control>
 				</control>
 				<control type="image">
-					<left>230</left>
-					<top>460</top>
-					<width>420</width>
-					<height>200</height>
-					<texture border="10">thumb-nofocus.png</texture>
+					<left>231</left>
+					<top>461</top>
+					<width>415</width>
+					<height>198</height>
+					<texture border="10">list-nofocus.png</texture>
 				</control>
 				<control type="image">
 					<left>240</left>
@@ -142,7 +127,6 @@
 							<width>580</width>
 							<height>45</height>
 							<font>font13</font>
-							<align>left</align>
 							<aligny>center</aligny>
 							<info>ListItem.Label</info>
 						</control>
@@ -165,9 +149,7 @@
 							<width>580</width>
 							<height>45</height>
 							<font>font13</font>
-							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>black</textcolor>
 							<info>ListItem.Label</info>
 						</control>
 					</focusedlayout>
@@ -201,7 +183,6 @@
 							<width>580</width>
 							<height>45</height>
 							<font>font13</font>
-							<align>left</align>
 							<aligny>center</aligny>
 							<info>ListItem.Label</info>
 						</control>
@@ -224,37 +205,35 @@
 							<width>580</width>
 							<height>45</height>
 							<font>font13</font>
-							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>black</textcolor>
 							<info>ListItem.Label</info>
 						</control>
 					</focusedlayout>
 				</control>
 				<control type="label">
 					<description>Page label</description>
-					<left>650</left>
+					<left>90</left>
 					<top>670</top>
 					<width>560</width>
 					<height>30</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<textcolor>white</textcolor>
+					<textcolor>grey2</textcolor>
 					<font>font12</font>
-					<label>($INFO[Container(450).NumItems]) $LOCALIZE[31200] - $LOCALIZE[31201] ($INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages])</label>
+					<label>$INFO[Container(450).NumItems] $LOCALIZE[31200] - $LOCALIZE[31201] $INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages]</label>
 					<visible>!Control.IsVisible(451)</visible>
 				</control>
 				<control type="label">
 					<description>Page label</description>
-					<left>650</left>
+					<left>90</left>
 					<top>670</top>
 					<width>560</width>
 					<height>30</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<textcolor>white</textcolor>
+					<textcolor>grey2</textcolor>
 					<font>font12</font>
-					<label>($INFO[Container(451).NumItems]) $LOCALIZE[31200] - $LOCALIZE[31201] ($INFO[Container(451).CurrentPage]/$INFO[Container(451).NumPages])</label>
+					<label>$INFO[Container(451).NumItems] $LOCALIZE[31200] - $LOCALIZE[31201] $INFO[Container(451).CurrentPage]/$INFO[Container(451).NumPages]</label>
 					<visible>Control.IsVisible(451)</visible>
 				</control>
 			</control>

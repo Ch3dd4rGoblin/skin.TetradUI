@@ -7,9 +7,10 @@
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<control type="image" id="1">
 				<top>-150</top>
-				<width>1280</width>
+				<left>-2</left>
+				<width>1284</width>
 				<height>256</height>
-				<texture flipy="true">FullscreenNowPlayingBack.png</texture>
+				<texture flipy="true" border="5">FullscreenNowPlayingBack.png</texture>
 			</control>
 			<control type="label" id="1">
 				<description>Chapter Count Header label</description>
@@ -27,22 +28,23 @@
 			</control>
 			<control type="label" id="1">
 				<description>Clock label</description>
-				<left>1250</left>
-				<top>5</top>
-				<width>800</width>
+				<left>30</left>
+				<top>35</top>
+				<width>600</width>
 				<height>25</height>
-				<align>right</align>
 				<aligny>center</aligny>
 				<font>font13</font>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<label>$INFO[System.Time]</label>
+				<animation effect="slide" end="0,-30" condition="!Player.ChapterCount">Conditional</animation>
 			</control>
 			<control type="image" id="1">
 				<top>230r</top>
-				<width>1280</width>
+				<left>-2</left>
+				<width>1284</width>
 				<height>230</height>
-				<texture>FullscreenNowPlayingBack.png</texture>
+				<texture border="5">FullscreenNowPlayingBack.png</texture>
 			</control>
 			<control type="image" id="1">
 				<description>cover image</description>
@@ -50,7 +52,7 @@
 				<top>260r</top>
 				<width>300</width>
 				<height>230</height>
-				<info>VideoPlayer.Cover</info>
+				<texture>$INFO[VideoPlayer.Art(thumb)]</texture>
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<bordertexture border="19,3,19,3">thumb-border.png</bordertexture>
 				<bordersize>17,1,17,1</bordersize>
@@ -62,7 +64,7 @@
 				<top>370r</top>
 				<width>300</width>
 				<height>350</height>
-				<info>VideoPlayer.Cover</info>
+				<texture>$VAR[PosterImageOSD]</texture>
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<bordertexture border="19,3,19,3">thumb-border.png</bordertexture>
 				<bordersize>17,1,17,1</bordersize>
@@ -150,6 +152,17 @@
 					<info>Player.Progress</info>
 					<texturebg border="6,0,6,0">progress_back_2.png</texturebg>
 				</control>
+				<!--
+				<control type="ranges" id="1">
+					<description>Chapters</description>
+					<left>100</left>
+					<top>18</top>
+					<width>720</width>
+					<height>10</height>
+					<info>Player.Chapters</info>
+					<righttexture border="1,0,1,0" colordiffuse="55ffffff">progress_chapter.png</righttexture>
+				</control>
+				-->
 				<control type="label" id="1">
 					<left>820</left>
 					<width>100</width>

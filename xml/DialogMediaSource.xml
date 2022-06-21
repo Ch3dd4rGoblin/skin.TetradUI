@@ -9,7 +9,7 @@
 	<include>dialogeffect</include>
 	<controls>
 		<control type="group">
-			<visible>!Window.IsVisible(FileBrowser)</visible>
+			<visible>![Window.IsVisible(FileBrowser) | Window.IsVisible(VirtualKeyboard)]</visible>
 			<include>VisibleFadeEffect</include>
 			<control type="image">
 				<description>background image</description>
@@ -44,7 +44,7 @@
 			<control type="list" id="10">
 				<left>50</left>
 				<top>140</top>
-				<width>550</width>
+				<width>565</width>
 				<height>180</height>
 				<onup>9001</onup>
 				<onleft>9000</onleft>
@@ -53,54 +53,39 @@
 				<scrolltime>200</scrolltime>
 				<itemlayout height="45">
 					<control type="image">
-						<width>550</width>
+						<width>565</width>
 						<height>45</height>
 						<texture border="10">list-nofocus.png</texture>
 					</control>
 					<control type="label">
 						<left>10</left>
-						<width>530</width>
+						<width>545</width>
 						<height>45</height>
 						<font>font12</font>
-						<align>left</align>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
 					</control>
 				</itemlayout>
 				<focusedlayout height="45">
 					<control type="image">
-						<width>550</width>
+						<width>565</width>
 						<height>45</height>
 						<texture border="10">list-nofocus.png</texture>
 						<visible>!Control.HasFocus(10)</visible>
 					</control>
 					<control type="image">
-						<width>550</width>
+						<width>565</width>
 						<height>45</height>
 						<texture border="10">list-focus.png</texture>
 						<visible>Control.HasFocus(10)</visible>
 					</control>
 					<control type="label">
 						<left>10</left>
-						<width>530</width>
+						<width>545</width>
 						<height>45</height>
 						<font>font12</font>
-						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>black</textcolor>
 						<info>ListItem.Label</info>
-						<visible>Control.HasFocus(10)</visible>
-					</control>
-					<control type="label">
-						<left>10</left>
-						<width>530</width>
-						<height>45</height>
-						<font>font12</font>
-						<align>left</align>
-						<aligny>center</aligny>
-						<textcolor>white</textcolor>
-						<info>ListItem.Label</info>
-						<visible>!Control.HasFocus(10)</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -110,13 +95,8 @@
 				<control type="button" id="11">
 					<description>Browse Button</description>
 					<width>190</width>
-					<height>45</height>
 					<label>1024</label>
-					<font>font12</font>
-					<align>center</align>
-					<aligny>center</aligny>
-					<texturenofocus border="10">button-nofocus.png</texturenofocus>
-					<texturefocus border="10">button-focus.png</texturefocus>
+					<include>DialogButton2CommonValues</include>
 					<onup>18</onup>
 					<onleft>10</onleft>
 					<onright>10</onright>
@@ -126,13 +106,8 @@
 					<description>Add Path Button</description>
 					<top>45</top>
 					<width>190</width>
-					<height>45</height>
 					<label>15019</label>
-					<font>font12</font>
-					<align>center</align>
-					<aligny>center</aligny>
-					<texturenofocus border="10">button-nofocus.png</texturenofocus>
-					<texturefocus border="10">button-focus.png</texturefocus>
+					<include>DialogButton2CommonValues</include>
 					<onup>11</onup>
 					<onleft>10</onleft>
 					<onright>10</onright>
@@ -142,13 +117,8 @@
 					<description>Remove Path Button</description>
 					<top>90</top>
 					<width>190</width>
-					<height>45</height>
 					<label>1210</label>
-					<font>font12</font>
-					<align>center</align>
-					<aligny>center</aligny>
-					<texturenofocus border="10">button-nofocus.png</texturenofocus>
-					<texturefocus border="10">button-focus.png</texturefocus>
+					<include>DialogButton2CommonValues</include>
 					<onup>13</onup>
 					<onleft>10</onleft>
 					<onright>10</onright>
@@ -183,8 +153,6 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label />
-				<focusedcolor>black</focusedcolor>
-				<font>font12</font>
 				<texturefocus border="10">list-focus.png</texturefocus>
 				<texturenofocus border="10">list-nofocus.png</texturenofocus>
 				<onup>10</onup>
@@ -192,55 +160,29 @@
 				<onright>19</onright>
 				<ondown>9001</ondown>
 			</control>
-			<control type="group" id="9001">
-				<left>120</left>
+			<control type="grouplist" id="9001">
+				<left>127</left>
 				<top>440</top>
+				<width>606</width>
+				<align>center</align>
+				<orientation>horizontal</orientation>
+				<itemgap>2</itemgap>
+				<onup>12</onup>
+				<ondown>10</ondown>
 				<control type="button" id="18">
 					<description>Ok Button</description>
-					<left>210</left>
-					<width>200</width>
-					<height>45</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<texturenofocus border="10">button-nofocus.png</texturenofocus>
-					<texturefocus border="10">button-focus.png</texturefocus>
 					<label>186</label>
-					<onup>12</onup>
-					<onleft>20</onleft>
-					<onright>19</onright>
-					<ondown>10</ondown>
-					<animation effect="slide" start="0,0" end="-102,0" time="0" condition="!Control.IsVisible(20)">Conditional</animation>
+					<include>DialogButton2CommonValues</include>
 				</control>
 				<control type="button" id="19">
 					<description>Cancel Button</description>
-					<left>420</left>
-					<width>200</width>
-					<height>45</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<texturenofocus border="10">button-nofocus.png</texturenofocus>
-					<texturefocus border="10">button-focus.png</texturefocus>
 					<label>222</label>
-					<onup>12</onup>
-					<onleft>18</onleft>
-					<onright>20</onright>
-					<ondown>10</ondown>
-					<animation effect="slide" start="0,0" end="-102,0" time="0" condition="!Control.IsVisible(20)">Conditional</animation>
+					<include>DialogButton2CommonValues</include>
 				</control>
 				<control type="button" id="20">
 					<description>Set Content Button</description>
-					<top>135</top>
-					<width>200</width>
-					<height>45</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<texturenofocus border="10">button-nofocus.png</texturenofocus>
-					<texturefocus border="10">button-focus.png</texturefocus>
 					<label>20333</label>
-					<onup>12</onup>
-					<onleft>19</onleft>
-					<onright>18</onright>
-					<ondown>10</ondown>
+					<include>DialogButton2CommonValues</include>
 				</control>
 			</control>
 		</control>

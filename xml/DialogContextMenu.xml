@@ -31,7 +31,6 @@
 			<align>center</align>
 			<textcolor>white</textcolor>
 			<focusedcolor>orange</focusedcolor>
-			<shadowcolor>black</shadowcolor>
 			<texturefocus border="10">context-button-focus.png</texturefocus>
 			<texturenofocus />
 		</control>

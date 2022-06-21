@@ -20,58 +20,36 @@
 			<top>50</top>
 			<width>700</width>
 			<height>30</height>
-			<label>31014</label>
+			<label>10125</label>
 			<align>center</align>
 			<aligny>center</aligny>
 			<font>font16</font>
 			<textcolor>orange</textcolor>
 		</control>
-		<control type="group">
+		<control type="grouplist">
 			<left>65</left>
 			<top>570</top>
+			<orientation>horizontal</orientation>
+			<itemgap>5</itemgap>
+			<onup>11</onup>
+			<ondown>11</ondown>
 			<control type="button" id="2">
 				<description>Create Bookmark button</description>
 				<width>220</width>
-				<height>45</height>
 				<label>294</label>
-				<font>font12</font>
-				<align>center</align>
-				<texturefocus border="10">button-focus.png</texturefocus>
-				<texturenofocus border="10">button-nofocus.png</texturenofocus>
-				<onleft>4</onleft>
-				<onright>3</onright>
-				<onup>11</onup>
-				<ondown>11</ondown>
+				<include>DialogButton2CommonValues</include>
 			</control>
 			<control type="button" id="3">
 				<description>Clear Bookmarks button</description>
-				<left>225</left>
 				<width>220</width>
-				<height>45</height>
 				<label>296</label>
-				<font>font12</font>
-				<align>center</align>
-				<texturefocus border="10">button-focus.png</texturefocus>
-				<texturenofocus border="10">button-nofocus.png</texturenofocus>
-				<onleft>2</onleft>
-				<onright>4</onright>
-				<onup>11</onup>
-				<ondown>11</ondown>
+				<include>DialogButton2CommonValues</include>
 			</control>
 			<control type="button" id="4">
 				<description>Episode Bookmarks button</description>
-				<left>450</left>
 				<width>220</width>
-				<height>45</height>
 				<label>20406</label>
-				<font>font12</font>
-				<align>center</align>
-				<texturefocus border="10">button-focus.png</texturefocus>
-				<texturenofocus border="10">button-nofocus.png</texturenofocus>
-				<onleft>3</onleft>
-				<onright>2</onright>
-				<onup>11</onup>
-				<ondown>11</ondown>
+				<include>DialogButton2CommonValues</include>
 			</control>
 		</control>
 		<control type="image">
@@ -113,7 +91,7 @@
 					<top>1</top>
 					<width>308</width>
 					<height>223</height>
-					<texture border="10">thumb-nofocus.png</texture>
+					<texture border="10">button-dialog-nofocus.png</texture>
 				</control>
 				<control type="image">
 					<left>10</left>
@@ -124,12 +102,11 @@
 					<info>ListItem.Icon</info>
 				</control>
 				<control type="label">
-					<left>155</left>
+					<left>4</left>
 					<top>190</top>
 					<width>300</width>
 					<height>25</height>
 					<font>font12</font>
-					<textcolor>white</textcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, (,)]</label>
@@ -141,7 +118,7 @@
 					<top>1</top>
 					<width>308</width>
 					<height>223</height>
-					<texture border="10">thumb-focus.png</texture>
+					<texture border="10">button-dialog-focus.png</texture>
 				</control>
 				<control type="image">
 					<left>10</left>
@@ -152,12 +129,11 @@
 					<info>ListItem.Icon</info>
 				</control>
 				<control type="label">
-					<left>155</left>
+					<left>4</left>
 					<top>190</top>
 					<width>300</width>
 					<height>25</height>
 					<font>font12</font>
-					<textcolor>black</textcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, (,)]</label>

@@ -4,14 +4,14 @@
 	<coordinates>
 		<system>1</system>
 		<left>240</left>
-		<top>190</top>
+		<top>187</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
 		<control type="image">
 			<description>background image</description>
 			<width>800</width>
-			<height>340</height>
+			<height>346</height>
 			<texture border="50,100,50,50">Dialog.png</texture>
 		</control>
 		<control type="label">
@@ -42,10 +42,9 @@
 				<description>Rule Field</description>
 				<left>50</left>
 				<top>140</top>
-				<width>350</width>
+				<width>348</width>
 				<height>45</height>
 				<font>font3</font>
-				<focusedcolor>black</focusedcolor>
 				<texturefocus border="10">list-focus.png</texturefocus>
 				<texturenofocus border="10">list-nofocus.png</texturenofocus>
 				<onright>16</onright>
@@ -55,12 +54,11 @@
 			</control>
 			<control type="button" id="16">
 				<description>Rule operator</description>
-				<left>400</left>
+				<left>404</left>
 				<top>140</top>
-				<width>350</width>
+				<width>348</width>
 				<height>45</height>
 				<font>font13</font>
-				<focusedcolor>black</focusedcolor>
 				<texturefocus border="10">list-focus.png</texturefocus>
 				<texturenofocus border="10">list-nofocus.png</texturenofocus>
 				<onright>15</onright>
@@ -72,14 +70,13 @@
 		<control type="edit" id="17">
 			<description>Value Button</description>
 			<left>50</left>
-			<top>190</top>
-			<width>550</width>
+			<top>186</top>
+			<width>548</width>
 			<height>45</height>
 			<font>font12</font>
 			<textoffsetx>12</textoffsetx>
 			<textwidth>255</textwidth>
 			<aligny>center</aligny>
-			<focusedcolor>black</focusedcolor>
 			<texturefocus border="10">list-focus.png</texturefocus>
 			<texturenofocus border="10">list-nofocus.png</texturenofocus>
 			<label />
@@ -90,13 +87,12 @@
 		</control>
 		<control type="button" id="20">
 			<description>Browse Button</description>
-			<left>600</left>
-			<top>190</top>
-			<width>150</width>
+			<left>604</left>
+			<top>186</top>
+			<width>148</width>
 			<height>45</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<focusedcolor>black</focusedcolor>
 			<texturefocus border="10">list-focus.png</texturefocus>
 			<texturenofocus border="10">list-nofocus.png</texturenofocus>
 			<label>1024</label>
@@ -106,37 +102,24 @@
 			<onright>17</onright>
 			<ondown>9000</ondown>
 		</control>
-		<control type="group" id="9000">
-			<left>195</left>
-			<top>250</top>
+		<control type="grouplist" id="9000">
+			<left>199</left>
+			<top>246</top>
+			<width>402</width>
+			<align>center</align>
+			<itemgap>2</itemgap>
+			<orientation>horizontal</orientation>
+			<onup>17</onup>
+			<ondown>9001</ondown>
 			<control type="button" id="18">
 				<description>Ok Button</description>
-				<width>200</width>
-				<height>45</height>
-				<align>center</align>
-				<aligny>center</aligny>
-				<texturefocus border="10">button-focus.png</texturefocus>
-				<texturenofocus border="10">button-nofocus.png</texturenofocus>
 				<label>186</label>
-				<onup>17</onup>
-				<onleft>19</onleft>
-				<onright>19</onright>
-				<ondown>9001</ondown>
+				<include>DialogButton2CommonValues</include>
 			</control>
 			<control type="button" id="19">
 				<description>Cancel Button</description>
-				<left>210</left>
-				<width>200</width>
-				<height>45</height>
-				<align>center</align>
-				<aligny>center</aligny>
-				<texturefocus border="10">button-focus.png</texturefocus>
-				<texturenofocus border="10">button-nofocus.png</texturenofocus>
 				<label>222</label>
-				<onup>17</onup>
-				<onleft>18</onleft>
-				<onright>19</onright>
-				<ondown>9001</ondown>
+				<include>DialogButton2CommonValues</include>
 			</control>
 		</control>
 	</controls>

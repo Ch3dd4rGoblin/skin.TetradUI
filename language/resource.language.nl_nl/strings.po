@@ -16,6 +16,14 @@ msgstr ""
 "Language: nl_NL\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+msgctxt "Addon Summary"
+msgid "TetradUI is a skin Addon for Kodi media center"
+msgstr ""
+
+msgctxt "Addon Description"
+msgid "TetradUI is a skin add-on for Kodi media center. TetradUI is based on JX720 by Jezz_X.[CR]This add-on was created by TeamUI."
+msgstr ""
+
 msgctxt "#31001"
 msgid "media"
 msgstr "media"

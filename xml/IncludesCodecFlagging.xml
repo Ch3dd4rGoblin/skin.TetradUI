@@ -13,6 +13,7 @@
 			<width>80</width>
 			<height>35</height>
 			<texture>$INFO[ListItem.VideoResolution,flagging/videoresolution/,.png]</texture>
+			<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 		</control>
 		<control type="image">
 			<description>Common Codec Image</description>
@@ -36,12 +37,14 @@
 			<width>80</width>
 			<height>35</height>
 			<texture>$INFO[ListItem.AudioCodec,flagging/audiocodec/,.png]</texture>
+			<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 		</control>
 		<control type="image">
 			<description>Audio Channels Image</description>
 			<width>80</width>
 			<height>35</height>
 			<texture>$INFO[ListItem.AudioChannels,flagging/audiochannel/,.png]</texture>
+			<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
 		</control>
 	</include>
 	<include name="AspectCodecFlagging">
@@ -50,43 +53,23 @@
 			<width>80</width>
 			<height>35</height>
 			<texture>$INFO[ListItem.VideoAspect,flagging/aspectratio/,.png]</texture>
+			<visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
 		</control>
 	</include>
+	<variable name="VideoCodecImage">
+		<value condition="String.Contains(ListItem.FilenameAndPath,bluray) | String.Contains(ListItem.FilenameAndPath,bdrip) | String.Contains(ListItem.FilenameAndPath,brrip)">flagging/videocodec/bluray.png</value>
+		<value condition="String.Contains(ListItem.FilenameAndPath,hddvd)">flagging/videocodec/hddvd.png</value>
+		<value condition="String.Contains(ListItem.FilenameAndPath,dvd) | String.Contains(ListItem.FileExtension,img) | String.Contains(ListItem.FileExtension,ifo) | String.Contains(ListItem.FileExtension,vob)">flagging/videocodec/dvd.png</value>
+		<value condition="String.Contains(ListItem.FilenameAndPath,pdtv) | String.Contains(ListItem.FilenameAndPath,hdtv) | String.Contains(ListItem.FilenameAndPath,dsr)">flagging/videocodec/tv.png</value>
+		<value condition="String.Contains(ListItem.FilenameAndPath,vhs)">flagging/videocodec/vhs.png</value>
+	</variable>
 	<include name="VideoTypeHackFlaggingConditions">
 		<control type="image">
 			<description>Bluray Image</description>
 			<width>80</width>
 			<height>35</height>
-			<texture>flagging/videocodec/bluray.png</texture>
-			<visible>[String.Contains(ListItem.FilenameAndPath,bluray) | String.Contains(ListItem.FilenameAndPath,bdrip) | String.Contains(ListItem.FilenameAndPath,brrip)] + !Skin.HasSetting(HideFilenameFlagging)</visible>
-		</control>
-		<control type="image">
-			<description>HDDVD Image</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>flagging/videocodec/hddvd.png</texture>
-			<visible>String.Contains(ListItem.FilenameAndPath,hddvd) + !Skin.HasSetting(HideFilenameFlagging)</visible>
-		</control>
-		<control type="image">
-			<description>DVD Image</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>flagging/videocodec/dvd.png</texture>
-			<visible>[String.Contains(ListItem.FilenameAndPath,dvd) + ![String.Contains(ListItem.FilenameAndPath,hddvd) | String.Contains(ListItem.FilenameAndPath,bluray) | String.Contains(ListItem.FilenameAndPath,bdrip)]] + !Skin.HasSetting(HideFilenameFlagging)</visible>
-		</control>
-		<control type="image">
-			<description>TV Types Image</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>flagging/videocodec/tv.png</texture>
-			<visible>[String.Contains(ListItem.FilenameAndPath,pdtv) | String.Contains(ListItem.FilenameAndPath,hdtv) | String.Contains(ListItem.FilenameAndPath,dsr)] + !Skin.HasSetting(HideFilenameFlagging)</visible>
-		</control>
-		<control type="image">
-			<description>VHS Image</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>flagging/videocodec/vhs.png</texture>
-			<visible>String.Contains(ListItem.FilenameAndPath,vhs) + !Skin.HasSetting(HideFilenameFlagging)</visible>
+			<texture>$VAR[VideoCodecImage]</texture>
+			<visible>!String.IsEmpty(ListItem.FilenameAndPath)</visible>
 		</control>
 		<control type="image">
 			<description>3D</description>
@@ -96,62 +79,44 @@
 			<visible>ListItem.IsStereoscopic</visible>
 		</control>
 	</include>
+	<variable name="AudioCodecImage">
+		<value condition="String.EndsWith(ListItem.Filename,.mp3)">flagging/audiocodec/mp3.png</value>
+		<value condition="String.EndsWith(ListItem.Filename,.wma)">flagging/audiocodec/wma.png</value>
+		<value condition="String.EndsWith(ListItem.Filename,.aac) | String.EndsWith(ListItem.Filename,.m4a) | String.EndsWith(ListItem.Filename,.mp4)">flagging/audiocodec/aac.png</value>
+		<value condition="String.EndsWith(ListItem.Filename,.flac)">flagging/audiocodec/flac.png</value>
+		<value condition="String.EndsWith(ListItem.Filename,.ape)">flagging/audiocodec/ape.png</value>
+		<value condition="String.EndsWith(ListItem.Filename,.ogg)">flagging/audiocodec/ogg.png</value>
+	</variable>
 	<include name="AudioTypeHackFlaggingConditions">
 		<control type="image">
-			<description>WAV Image</description>
+			<description>Codec Image</description>
 			<width>80</width>
 			<height>35</height>
-			<texture>flagging/audiocodec/wav.png</texture>
-			<visible>String.EndsWith(ListItem.Filename,.wav)</visible>
+			<texture>$VAR[AudioCodecImage]</texture>
+			<visible>!String.IsEmpty(ListItem.Filename)</visible>
 		</control>
 		<control type="image">
-			<description>MP3 Image</description>
+			<description>Audio Channels Image</description>
 			<width>80</width>
 			<height>35</height>
-			<texture>flagging/audiocodec/mp3.png</texture>
-			<visible>String.EndsWith(ListItem.Filename,.mp3)</visible>
+			<aspectratio align="right">keep</aspectratio>
+			<texture>$INFO[ListItem.MusicChannels,flagging/audiochannel/,.png]</texture>
+			<visible>!String.IsEmpty(ListItem.MusicChannels)</visible>
 		</control>
-		<control type="image">
-			<description>WMA Image</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>flagging/audiocodec/wma.png</texture>
-			<visible>String.EndsWith(ListItem.Filename,.wma)</visible>
-		</control>
-		<control type="image">
-			<description>AAC, MP4 and M4A Image</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>flagging/audiocodec/aac.png</texture>
-			<visible>String.EndsWith(ListItem.Filename,.aac) | String.EndsWith(ListItem.Filename,.m4a) | String.EndsWith(ListItem.Filename,.mp4)</visible>
-		</control>
-		<control type="image">
-			<description>flac Image</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>flagging/audiocodec/flac.png</texture>
-			<visible>String.EndsWith(ListItem.Filename,.flac)</visible>
-		</control>
-		<control type="image">
-			<description>APE Image</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>flagging/audiocodec/ape.png</texture>
-			<visible>String.EndsWith(ListItem.Filename,.ape)</visible>
-		</control>
-		<control type="image">
-			<description>OGG Image</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>flagging/audiocodec/ogg.png</texture>
-			<visible>String.EndsWith(ListItem.Filename,.ogg)</visible>
-		</control>
+		<include content="CodecFlaggingImage">
+			<param name="visible" value="!String.IsEmpty(ListItem.Bitrate)" />
+			<param name="info" value="$INFO[ListItem.Bitrate,, kbps]" />
+		</include>
+		<include content="CodecFlaggingSmallImage">
+			<param name="visible" value="!String.IsEmpty(ListItem.SampleRate)" />
+			<param name="info" value="$INFO[ListItem.SampleRate,, kHz]" />
+		</include>
 		<include content="CodecFlaggingImage">
 			<param name="visible" value="!String.IsEmpty(ListItem.Year)" />
 			<param name="info" value="$INFO[ListItem.Year]" />
 		</include>
 		<include content="CodecFlaggingRating">
-			<param name="visible" value="!String.IsEmpty(ListItem.Rating)" />
+			<param name="visible" value="![String.IsEmpty(ListItem.Rating) + String.IsEmpty(ListItem.UserRating)]" />
 			<param name="info" value="$VAR[StarRating]" />
 		</include>
 	</include>
@@ -161,6 +126,7 @@
 			<width>80</width>
 			<height>35</height>
 			<texture>$INFO[VideoPlayer.VideoResolution,flagging/videoresolution/,.png]</texture>
+			<visible>!String.IsEmpty(VideoPlayer.VideoResolution)</visible>
 		</control>
 		<control type="image" id="1">
 			<description>Common Codec Image</description>
@@ -184,12 +150,14 @@
 			<width>80</width>
 			<height>35</height>
 			<texture>$INFO[VideoPlayer.AudioCodec,flagging/audiocodec/,.png]</texture>
+			<visible>!String.IsEmpty(VideoPlayer.AudioCodec)</visible>
 		</control>
 		<control type="image" id="1">
 			<description>Audio Channels Image</description>
 			<width>80</width>
 			<height>35</height>
 			<texture>$INFO[VideoPlayer.AudioChannels,flagging/audiochannel/,.png]</texture>
+			<visible>!String.IsEmpty(VideoPlayer.AudioChannels)</visible>
 		</control>
 	</include>
 	<include name="VideoPlayerAspectCodecFlagging">
@@ -198,43 +166,23 @@
 			<width>80</width>
 			<height>35</height>
 			<texture>$INFO[VideoPlayer.VideoAspect,flagging/aspectratio/,.png]</texture>
+			<visible>!String.IsEmpty(VideoPlayer.VideoAspect)</visible>
 		</control>
 	</include>
+	<variable name="VideoPlayerCodecImage">
+		<value condition="String.Contains(Player.FilenameAndPath,bluray) | String.Contains(Player.FilenameAndPath,bdrip) | String.Contains(Player.FilenameAndPath,brrip)">flagging/videocodec/bluray.png</value>
+		<value condition="String.Contains(Player.FilenameAndPath,hddvd)">flagging/videocodec/hddvd.png</value>
+		<value condition="String.Contains(Player.FilenameAndPath,dvd) | String.EndsWith(Player.FilenameAndPath,.img) | String.EndsWith(Player.FilenameAndPath,.ifo) | String.EndsWith(Player.FilenameAndPath,.vob)">flagging/videocodec/dvd.png</value>
+		<value condition="String.Contains(Player.FilenameAndPath,pdtv) | String.Contains(Player.FilenameAndPath,hdtv) | String.Contains(Player.FilenameAndPath,dsr)">flagging/videocodec/tv.png</value>
+		<value condition="String.Contains(Player.FilenameAndPath,vhs)">flagging/videocodec/vhs.png</value>
+	</variable>
 	<include name="VideoPlayerVideoTypeHackFlaggingConditions">
 		<control type="image" id="1">
 			<description>Bluray Image</description>
 			<width>80</width>
 			<height>35</height>
-			<texture>flagging/videocodec/bluray.png</texture>
-			<visible>[String.Contains(Player.FilenameAndPath,bluray) | String.Contains(Player.FilenameAndPath,bdrip) | String.Contains(Player.FilenameAndPath,brrip)] + !Skin.HasSetting(HideFilenameFlagging)</visible>
-		</control>
-		<control type="image" id="1">
-			<description>HDDVD Image</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>flagging/videocodec/hddvd.png</texture>
-			<visible>String.Contains(Player.FilenameAndPath,hddvd) + !Skin.HasSetting(HideFilenameFlagging)</visible>
-		</control>
-		<control type="image" id="1">
-			<description>DVD Image</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>flagging/videocodec/dvd.png</texture>
-			<visible>[String.Contains(Player.FilenameAndPath,dvd) + ![String.Contains(Player.FilenameAndPath,hddvd) | String.Contains(Player.FilenameAndPath,bluray) | String.Contains(Player.FilenameAndPath,bdrip)]] + !Skin.HasSetting(HideFilenameFlagging)</visible>
-		</control>
-		<control type="image" id="1">
-			<description>TV Types Image</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>flagging/videocodec/tv.png</texture>
-			<visible>[String.Contains(Player.FilenameAndPath,pdtv) | String.Contains(Player.FilenameAndPath,hdtv) | String.Contains(Player.FilenameAndPath,dsr)] + !Skin.HasSetting(HideFilenameFlagging)</visible>
-		</control>
-		<control type="image" id="1">
-			<description>VHS Image</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>flagging/videocodec/vhs.png</texture>
-			<visible>String.Contains(Player.FilenameAndPath,vhs) + !Skin.HasSetting(HideFilenameFlagging)</visible>
+			<texture>$VAR[VideoPlayerCodecImage]</texture>
+			<visible>!String.IsEmpty(Player.FilenameAndPath)</visible>
 		</control>
 		<control type="image" id="1">
 			<description>3D</description>
@@ -247,50 +195,42 @@
 
 	<include name="PictureTypeHackFlaggingConditions">
 		<control type="group">
-			<description>Date</description>
-			<width>150</width>
-			<height>40</height>
 			<visible>!String.IsEmpty(ListItem.Date)</visible>
+			<animation effect="fade" end="80" condition="true">Conditional</animation>
+			<width>100</width>
 			<control type="image">
-				<description>Date back</description>
-				<width>150</width>
-				<height>40</height>
-				<texture border="5">flagging/blank.png</texture>
+				<width>100</width>
+				<height>35</height>
+				<texture>flagging/blank.png</texture>
 			</control>
 			<control type="label">
-				<description>Runtime</description>
 				<left>10</left>
-				<top>8</top>
-				<width>130</width>
-				<height>22</height>
+				<width>80</width>
+				<height>35</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>font12</font>
-				<textcolor>blue</textcolor>
+				<font>codecflagging</font>
+				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Date]</label>
 			</control>
 		</control>
 		<control type="group">
-			<description>Resolution</description>
-			<width>150</width>
-			<height>40</height>
 			<visible>!String.IsEmpty(ListItem.PictureResolution)</visible>
+			<animation effect="fade" end="80" condition="true">Conditional</animation>
+			<width>100</width>
 			<control type="image">
-				<description>Rating back</description>
-				<width>150</width>
-				<height>40</height>
-				<texture border="5">flagging/blank.png</texture>
+				<width>100</width>
+				<height>35</height>
+				<texture>flagging/blank.png</texture>
 			</control>
 			<control type="label">
-				<description>Runtime</description>
 				<left>10</left>
-				<top>8</top>
-				<width>130</width>
-				<height>22</height>
+				<width>80</width>
+				<height>35</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>font12</font>
-				<textcolor>green</textcolor>
+				<font>codecflagging</font>
+				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.PictureResolution]</label>
 			</control>
 		</control>

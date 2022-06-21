@@ -16,7 +16,7 @@
 			<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 			<control type="label">
 				<description>Header label</description>
-				<label>$LOCALIZE[7]</label>
+				<label>$LOCALIZE[7][COLOR=grey2]$VAR[SortLetterNotificationVar2][/COLOR]</label>
 				<include>HeaderTextCommons</include>
 			</control>
 			<control type="group">
@@ -63,8 +63,8 @@
 				<font>font12</font>
 				<align>left</align>
 				<scroll>true</scroll>
-				<textcolor>white</textcolor>
-				<label>($INFO[Container(20).NumItems]) $LOCALIZE[31200] - $LOCALIZE[31201]  ($INFO[Container(20).CurrentPage]/$INFO[Container(20).NumPages])</label>
+				<textcolor>grey2</textcolor>
+				<label>$INFO[Container(20).NumItems] $LOCALIZE[31200] - $LOCALIZE[31201] $INFO[Container(20).CurrentPage]/$INFO[Container(20).NumPages]</label>
 			</control>
 			<control type="spincontrol" id="30">
 				<description>Next page button</description>
@@ -86,8 +86,6 @@
 				<height>443</height>
 				<onleft>30</onleft>
 				<onright>21</onright>
-				<onup>20</onup>
-				<ondown>20</ondown>
 				<pagecontrol>30</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<itemlayout height="40">
@@ -201,14 +199,14 @@
 			<animation effect="slide" start="0,0" end="-110,0" time="200" condition="Player.HasVideo">Conditional</animation>
 				<control type="label">
 					<description>number of files in right list text label</description>
-					<left>130r</left>
+					<left>665</left>
 					<top>585</top>
 					<width>480</width>
 					<font>font12</font>
 					<align>right</align>
 					<scroll>true</scroll>
-					<textcolor>white</textcolor>
-					<label>($INFO[Container(21).NumItems]) $LOCALIZE[31200] - $LOCALIZE[31201]  ($INFO[Container(21).CurrentPage]/$INFO[Container(21).NumPages])</label>
+					<textcolor>grey2</textcolor>
+					<label>$INFO[Container(21).NumItems] $LOCALIZE[31200] - $LOCALIZE[31201]  $INFO[Container(21).CurrentPage]/$INFO[Container(21).NumPages]</label>
 				</control>
 				<control type="spincontrol" id="31">
 					<description>Next page button</description>
@@ -231,8 +229,6 @@
 				<height>443</height>
 				<onleft>20</onleft>
 				<onright>31</onright>
-				<onup>20</onup>
-				<ondown>20</ondown>
 				<pagecontrol>30</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<itemlayout height="40">
@@ -318,5 +314,6 @@
 			<include>AppsToSubBlades</include>
 		</control>
 		<include>Common_Now_Playing</include>
+		<include>BackgroundDim</include>
 	</controls>
 </window>

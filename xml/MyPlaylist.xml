@@ -4,21 +4,14 @@
 	<menucontrol>9000</menucontrol>
 	<views>50,52</views>
 	<controls>
-		<include condition="!Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
-		<control type="group">
-			<include>CommonMediaBackground</include>
-		</control>
-		<include condition="Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
-		<control type="group">
-			<include>CommonMediaBlackwash</include>
-		</control>
+		<include>CommonMediaBackgrounds</include>
 		<control type="group">
 			<left>130</left>
 			<animation effect="fade" delay="500" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
 			<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 			<control type="label">
 				<description>Header label</description>
-				<label>$LOCALIZE[10517]</label>
+				<label>$VAR[BreadcrumbsPlaylistsVar][COLOR=grey2]$VAR[SortLetterNotificationVar][/COLOR]</label>
 				<include>HeaderTextCommons</include>
 			</control>
 			<control type="group">
@@ -28,47 +21,11 @@
 				<include>ThumbnailView</include> <!-- View ID 52 -->
 			</control>
 		</control>
+		<include>BackgroundDim</include>
 		<control type="group" id="9000">
-			<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
-			<animation effect="slide" time="SideMenuSlideOutTime" start="0,0" end="300,0" condition="ControlGroup(9000).HasFocus" reversible="false">Conditional</animation>
-			<animation effect="slide" time="SideMenuSlideOutTime" start="300,0" end="0,0" delay="SideMenuSlideOutTime" condition="!ControlGroup(9000).HasFocus" reversible="false">Conditional</animation>
-			<left>-300</left>
-			<top>0</top>
-			<control type="image">
-				<top>-40</top>
-				<width>160</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<colordiffuse>EFFFFFFF</colordiffuse>
-				<texture>blades-runner-right-edge.png</texture>
-			</control>
-			<control type="image">
-				<left>160</left>
-				<top>-40</top>
-				<width>180</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<colordiffuse>EFFFFFFF</colordiffuse>
-				<texture>blades-runner-left1.png</texture>
-			</control>
+			<include>Container9000BladesRunner</include>
 			<control type="group">
-				<left>100</left>
-				<top>140</top>
-				<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus</visible>
-				<animation effect="fade" start="0" end="100" delay="SideMenuSlideOutTime" time="200">Visible</animation>
-				<animation effect="fade" start="100" end="0" delay="0" time="SideMenuSlideOutTime">Hidden</animation>
-				<control type="label">
-					<description>Header Label</description>
-					<top>-40</top>
-					<width>220</width>
-					<height>20</height>
-					<font>font12</font>
-					<label>31202</label>
-					<textcolor>orange</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<align>left</align>
-					<aligny>center</aligny>
-				</control>
+				<include>Container9000Header</include>
 				<control type="button" id="2">
 					<description>View As button</description>
 					<include>ButtonCommonValues</include>
