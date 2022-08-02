@@ -12,7 +12,7 @@
 			<width>800</width>
 			<height>670</height>
 			<colordiffuse>EEFFFFFF</colordiffuse>
-			<texture border="50,100,50,50">Dialog.png</texture>
+			<texture border="50,100,50,50">dialogs/Dialog.png</texture>
 		</control>
 		<control type="label">
 			<description>heading label</description>
@@ -91,7 +91,7 @@
 					<top>1</top>
 					<width>308</width>
 					<height>223</height>
-					<texture border="10">button-dialog-nofocus.png</texture>
+					<texture border="10">buttons/button-dialog-nofocus.png</texture>
 				</control>
 				<control type="image">
 					<left>10</left>
@@ -118,7 +118,7 @@
 					<top>1</top>
 					<width>308</width>
 					<height>223</height>
-					<texture border="10">button-dialog-focus.png</texture>
+					<texture border="10">buttons/button-dialog-focus.png</texture>
 				</control>
 				<control type="image">
 					<left>10</left>

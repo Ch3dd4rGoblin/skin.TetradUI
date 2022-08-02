@@ -3,13 +3,9 @@
 	<defaultcontrol always="true">3</defaultcontrol>
 	<controls>
 		<include condition="!Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
-		<control type="group">
-			<include>CommonSystemBackground</include>
-		</control>
+		<include>CommonSystemBackground</include>
 		<include condition="Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
-		<control type="group">
-			<include>CommonSystemBlackwash</include>
-		</control>
+		<include>CommonSystemBlackwash</include>
 		<control type="group">
 			<left>130</left>
 			<animation effect="fade" delay="500" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
@@ -44,8 +40,8 @@
 					<height>50</height>
 					<width>250</width>
 					<textcolor>white</textcolor>
-					<texturefocus border="10">button-focus.png</texturefocus>
-					<texturenofocus border="10">button-nofocus.png</texturenofocus>
+					<texturefocus border="10">buttons/button-focus.png</texturefocus>
+					<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
 					<label>128</label>
 					<onfocus>Skin.SetString(SkinSettings,1)</onfocus>
 				</control>
@@ -54,8 +50,8 @@
 					<height>50</height>
 					<width>250</width>
 					<textcolor>white</textcolor>
-					<texturefocus border="10">button-focus.png</texturefocus>
-					<texturenofocus border="10">button-nofocus.png</texturenofocus>
+					<texturefocus border="10">buttons/button-focus.png</texturefocus>
+					<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
 					<label>31502</label>
 					<onfocus>Skin.SetString(SkinSettings,3)</onfocus>
 				</control>
@@ -64,8 +60,8 @@
 					<height>50</height>
 					<width>250</width>
 					<textcolor>white</textcolor>
-					<texturefocus border="10">button-focus.png</texturefocus>
-					<texturenofocus border="10">button-nofocus.png</texturenofocus>
+					<texturefocus border="10">buttons/button-focus.png</texturefocus>
+					<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
 					<label>31503</label>
 					<onfocus>Skin.SetString(SkinSettings,4)</onfocus>
 				</control>
@@ -74,8 +70,8 @@
 					<height>50</height>
 					<width>250</width>
 					<textcolor>white</textcolor>
-					<texturefocus border="10">button-focus.png</texturefocus>
-					<texturenofocus border="10">button-nofocus.png</texturenofocus>
+					<texturefocus border="10">buttons/button-focus.png</texturefocus>
+					<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
 					<label>33069</label>
 					<onfocus>Skin.SetString(SkinSettings,5)</onfocus>
 				</control>
@@ -84,8 +80,8 @@
 					<height>50</height>
 					<width>250</width>
 					<textcolor>white</textcolor>
-					<texturefocus border="10">button-focus.png</texturefocus>
-					<texturenofocus border="10">button-nofocus.png</texturenofocus>
+					<texturefocus border="10">buttons/button-focus.png</texturefocus>
+					<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
 					<label>24001</label>
 					<onfocus>Skin.SetString(SkinSettings,2)</onfocus>
 				</control>
@@ -94,8 +90,8 @@
 					<height>50</height>
 					<width>250</width>
 					<textcolor>white</textcolor>
-					<texturefocus border="10">button-focus.png</texturefocus>
-					<texturenofocus border="10">button-nofocus.png</texturenofocus>
+					<texturefocus border="10">buttons/button-focus.png</texturefocus>
+					<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
 					<label>31539</label>
 					<onfocus>Skin.SetString(SkinSettings,6)</onfocus>
 				</control>
@@ -104,8 +100,8 @@
 					<height>50</height>
 					<width>250</width>
 					<textcolor>white</textcolor>
-					<texturefocus border="10">button-focus.png</texturefocus>
-					<texturenofocus border="10">button-nofocus.png</texturenofocus>
+					<texturefocus border="10">buttons/button-focus.png</texturefocus>
+					<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
 					<label>31538</label>
 					<onfocus>Skin.SetString(SkinSettings,7)</onfocus>
 				</control>
@@ -151,11 +147,24 @@
 					</control>
 					<control type="radiobutton" id="105">
 						<include>SkinSettingsRadioButtonCommonValues</include>
+						<label>31526</label>
+						<onclick>Skin.ToggleSetting(AnimateFanart)</onclick>
+						<selected>Skin.HasSetting(AnimateFanart)</selected>
+					</control>
+					<control type="radiobutton" id="107">
+						<include>SkinSettingsRadioButtonCommonValues</include>
+						<label>31527</label>
+						<onclick>Skin.ToggleSetting(AnimateMusicPlayingFanart)</onclick>
+						<selected>Skin.HasSetting(AnimateMusicPlayingFanart)</selected>
+						<enable>!Skin.HasSetting(AnimateFanart)</enable>
+					</control>
+					<control type="radiobutton" id="108">
+						<include>SkinSettingsRadioButtonCommonValues</include>
 						<label>31523</label>
 						<onclick>Skin.ToggleSetting(HideRainDrops)</onclick>
 						<selected>Skin.HasSetting(HideRainDrops)</selected>
 					</control>
-					<control type="button" id="106">
+					<control type="button" id="109">
 						<include>SkinSettingsButtonCommonValues</include>
 						<label>$LOCALIZE[31525]: $VAR[RatingTypeLabel]</label>
 						<onclick>Skin.SelectBool(31525, 38018|RatingTypeUser, 571|RatingTypeDefault)</onclick>
@@ -179,6 +188,14 @@
 						<include>SkinSettingsButtonCommonValues</include>
 						<label>$LOCALIZE[31540]$INFO[Skin.String(LyricScript_Path),: [COLOR grey2],[/COLOR]]</label>
 						<onclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</onclick>
+					</control>
+					<control type="radiobutton" id="202">
+						<include>SkinSettingsRadioButtonCommonValues</include>
+						<label>$LOCALIZE[31528]</label>
+						<onclick condition="System.AddonIsEnabled(script.artistslideshow)">Skin.ToggleSetting(EnableArtistSlideshow)</onclick>
+						<onclick condition="!System.HasAddon(script.artistslideshow)">InstallAddon(script.artistslideshow)</onclick>
+						<onclick condition="System.HasAddon(script.artistslideshow) + !System.AddonIsEnabled(script.artistslideshow)">EnableAddon(script.artistslideshow)</onclick>
+						<selected>Skin.HasSetting(EnableArtistSlideshow)</selected>
 					</control>
 				</control>
 
@@ -238,73 +255,42 @@
 						<label>$LOCALIZE[31309]$LOCALIZE[342]</label>
 						<onclick>Skin.ToggleSetting(MediaBlade_HideMovies)</onclick>
 						<selected>Skin.HasSetting(MediaBlade_HideMovies)</selected>
+						<enabled>Library.HasContent(Movies)</enabled>
 					</control>
 					<control type="radiobutton" id="314">
 						<include>SkinSettingsRadioButtonCommonValues</include>
 						<label>$LOCALIZE[31309]$LOCALIZE[20343]</label>
 						<onclick>Skin.ToggleSetting(MediaBlade_HideTVShows)</onclick>
 						<selected>Skin.HasSetting(MediaBlade_HideTVShows)</selected>
+						<enabled>Library.HasContent(TVShows)</enabled>
 					</control>
 					<control type="radiobutton" id="315">
 						<include>SkinSettingsRadioButtonCommonValues</include>
 						<label>$LOCALIZE[31309]$LOCALIZE[2]</label>
 						<onclick>Skin.ToggleSetting(MediaBlade_HideMusic)</onclick>
 						<selected>Skin.HasSetting(MediaBlade_HideMusic)</selected>
+						<enabled>Library.HasContent(Music)</enabled>
 					</control>
 					<control type="radiobutton" id="316">
+						<include>SkinSettingsRadioButtonCommonValues</include>
+						<label>$LOCALIZE[31309]$LOCALIZE[19020]</label>
+						<onclick>Skin.ToggleSetting(MediaBlade_HideTV)</onclick>
+						<selected>Skin.HasSetting(MediaBlade_HideTV)</selected>
+						<enabled>System.HasPVRAddon</enabled>
+					</control>
+					<control type="radiobutton" id="317">
+						<include>SkinSettingsRadioButtonCommonValues</include>
+						<label>$LOCALIZE[31309]$LOCALIZE[19021]</label>
+						<onclick>Skin.ToggleSetting(MediaBlade_HideRadio)</onclick>
+						<selected>Skin.HasSetting(MediaBlade_HideRadio)</selected>
+						<enabled>System.HasPVRAddon</enabled>
+					</control>
+					<control type="radiobutton" id="318">
 						<include>SkinSettingsRadioButtonCommonValues</include>
 						<label>$LOCALIZE[31309]$LOCALIZE[1]</label>
 						<onclick>Skin.ToggleSetting(MediaBlade_HidePictures)</onclick>
 						<selected>Skin.HasSetting(MediaBlade_HidePictures)</selected>
 					</control>
-					<!--
-					<control type="label" id="317">
-						<description>Heading label</description>
-						<width>790</width>
-						<height>30</height>
-						<align>center</align>
-						<font>font13</font>
-						<label>31551</label>
-						<textcolor>orange</textcolor>
-						<shadowcolor>black</shadowcolor>
-					</control>
-					<control type="radiobutton" id="318">
-						<include>SkinSettingsRadioButtonCommonValues</include>
-						<label>$LOCALIZE[31309]$INFO[Skin.String(MediaBlade_NameSmartPlaylist1)]</label>
-						<onclick>Skin.ToggleSetting(MediaBlade_ShowSmartPlaylist1)</onclick>
-						<selected>!Skin.HasSetting(MediaBlade_ShowSmartPlaylist1)</selected>
-					</control>
-					<control type="button" id="319">
-						<include>SkinSettingsButtonCommonValues</include>
-						<label> - $LOCALIZE[31311]</label>
-						<label2>$INFO[Skin.String(MediaBlade_NameSmartPlaylist1)]</label2>
-						<onclick>Skin.SetString(MediaBlade_NameSmartPlaylist1)</onclick>
-					</control>
-					<control type="button" id="320">
-						<include>SkinSettingsButtonCommonValues</include>
-						<label> - $LOCALIZE[31310]</label>
-						<label2>$INFO[Skin.String(MediaBlade_LinkSmartPlaylist1)]</label2>
-						<onclick>Skin.SetFile(MediaBlade_LinkSmartPlaylist1,,special://videoplaylists/)</onclick>
-					</control>
-					<control type="radiobutton" id="321">
-						<include>SkinSettingsRadioButtonCommonValues</include>
-						<label>$LOCALIZE[31309]$INFO[Skin.String(MediaBlade_NameSmartPlaylist2)]</label>
-						<onclick>Skin.ToggleSetting(MediaBlade_ShowSmartPlaylist2)</onclick>
-						<selected>!Skin.HasSetting(MediaBlade_ShowSmartPlaylist2)</selected>
-					</control>
-					<control type="button" id="322">
-						<include>SkinSettingsButtonCommonValues</include>
-						<label> - $LOCALIZE[31311]</label>
-						<label2>$INFO[Skin.String(MediaBlade_NameSmartPlaylist2)]</label2>
-						<onclick>Skin.SetString(MediaBlade_NameSmartPlaylist2)</onclick>
-					</control>
-					<control type="button" id="323">
-						<include>SkinSettingsButtonCommonValues</include>
-						<label> - $LOCALIZE[31310]</label>
-						<label2>$INFO[Skin.String(MediaBlade_LinkSmartPlaylist2)]</label2>
-						<onclick>Skin.SetFile(MediaBlade_LinkSmartPlaylist2,,special://videoplaylists/)</onclick>
-					</control>
-					-->
 					<control type="label" id="331">
 						<description>Heading label</description>
 						<width>790</width>
@@ -332,6 +318,31 @@
 						<label>$LOCALIZE[31309]$LOCALIZE[1036]</label>
 						<onclick>Skin.ToggleSetting(AppsBlade_HideFavourites)</onclick>
 						<selected>Skin.HasSetting(AppsBlade_HideFavourites)</selected>
+					</control>
+					<control type="button" id="336">
+						<include>SkinSettingsButtonCommonValues</include>
+						<label>$LOCALIZE[31228] $NUMBER[1][COLOR grey2]$INFO[system.addontitle(Skin.String(AddonShortcut1)),: ,][/COLOR]</label>
+						<onclick>Skin.SetAddon(AddonShortcut1,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.executable,xbmc.addon.image,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="337">
+						<include>SkinSettingsButtonCommonValues</include>
+						<label>$LOCALIZE[31228] $NUMBER[2][COLOR grey2]$INFO[system.addontitle(Skin.String(AddonShortcut2)),: ,][/COLOR]</label>
+						<onclick>Skin.SetAddon(AddonShortcut2,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.executable,xbmc.addon.image,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="338">
+						<include>SkinSettingsButtonCommonValues</include>
+						<label>$LOCALIZE[31228] $NUMBER[3][COLOR grey2]$INFO[system.addontitle(Skin.String(AddonShortcut3)),: ,][/COLOR]</label>
+						<onclick>Skin.SetAddon(AddonShortcut3,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.executable,xbmc.addon.image,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="339">
+						<include>SkinSettingsButtonCommonValues</include>
+						<label>$LOCALIZE[31228] $NUMBER[4][COLOR grey2]$INFO[system.addontitle(Skin.String(AddonShortcut4)),: ,][/COLOR]</label>
+						<onclick>Skin.SetAddon(AddonShortcut4,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.executable,xbmc.addon.image,kodi.gameclient)</onclick>
+					</control>
+					<control type="button" id="340">
+						<include>SkinSettingsButtonCommonValues</include>
+						<label>$LOCALIZE[31228] $NUMBER[5][COLOR grey2]$INFO[system.addontitle(Skin.String(AddonShortcut5)),: ,][/COLOR]</label>
+						<onclick>Skin.SetAddon(AddonShortcut5,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.executable,xbmc.addon.image,kodi.gameclient)</onclick>
 					</control>
 				</control>
 				
@@ -672,13 +683,21 @@
 					</control>
 					<control type="button" id="605">
 						<include>SkinSettingsButtonCommonValues</include>
+						<label>Artist Slideshow</label>
+						<label2>$VAR[StatusArtistSlideshowVar]</label2>
+						<onclick condition="System.AddonIsEnabled(script.artistslideshow)">Addon.OpenSettings(script.artistslideshow)</onclick>
+						<onclick condition="!System.HasAddon(script.artistslideshow)">InstallAddon(script.artistslideshow)</onclick>
+						<onclick condition="System.HasAddon(script.artistslideshow) + !System.AddonIsEnabled(script.artistslideshow)">EnableAddon(script.artistslideshow)</onclick>
+					</control>
+					<control type="button" id="606">
+						<include>SkinSettingsButtonCommonValues</include>
 						<label>Global Search</label>
 						<label2>$VAR[StatusGlobalSearchVar]</label2>
 						<onclick condition="System.AddonIsEnabled(script.globalsearch)">Addon.OpenSettings(script.globalsearch)</onclick>
 						<onclick condition="!System.HasAddon(script.globalsearch)">InstallAddon(script.globalsearch)</onclick>
 						<onclick condition="System.HasAddon(script.globalsearch) + !System.AddonIsEnabled(script.globalsearch)">EnableAddon(script.globalsearch)</onclick>
 					</control>
-					<control type="button" id="606">
+					<control type="button" id="607">
 						<include>SkinSettingsButtonCommonValues</include>
 						<label>YouTube</label>
 						<label2>$VAR[StatusYouTubeVar]</label2>

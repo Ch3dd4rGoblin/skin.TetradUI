@@ -3,40 +3,15 @@
 	<defaultcontrol>95</defaultcontrol>
 	<controls>
 		<include condition="!Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
-		<control type="group">
-			<visible>!Window.Previous(Weather) + !Window.Previous(Videos) + !Window.Previous(Music) + !Window.Previous(Pictures) + !Window.Previous(Programs)</visible>
-			<include>CommonSystemBackground</include>
-		</control>
-		<control type="group">
-			<visible>Window.Previous(Weather)</visible>
-			<include>CommonWeatherBackground</include>
-		</control>
-		<control type="group">
-			<visible>Window.Previous(Programs)</visible>
-			<include>CommonAppsBackground</include>
-		</control>
-		<control type="group">
-			<visible>Window.Previous(Videos) | Window.Previous(Music) | Window.Previous(Pictures)</visible>
-			<include>CommonMediaBackground</include>
-		</control>
+		<include condition="!Window.Previous(Weather) + !Window.Previous(Videos) + !Window.Previous(Music) + !Window.Previous(Pictures) + !Window.Previous(Programs)">CommonSystemBackground</include>
+		<include condition="Window.Previous(Weather)">CommonWeatherBackground</include>
+		<include condition="Window.Previous(Programs)">CommonAppsBackground</include>
+		<include condition="Window.Previous(Videos) | Window.Previous(Music) | Window.Previous(Pictures)">CommonMediaBackground</include>
 		<include condition="Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
-
-		<control type="group">
-			<visible>!Window.Previous(Weather) + !Window.Previous(Videos) + !Window.Previous(Music) + !Window.Previous(Pictures) + !Window.Previous(Programs)</visible>
-			<include>CommonSystemBlackwash</include>
-		</control>
-		<control type="group">
-			<visible>Window.Previous(Weather)</visible>
-			<include>CommonWeatherBlackwash</include>
-		</control>
-		<control type="group">
-			<visible>Window.Previous(Programs)</visible>
-			<include>CommonAppsBlackwash</include>
-		</control>
-		<control type="group">
-			<visible>Window.Previous(Videos) | Window.Previous(Music) | Window.Previous(Pictures)</visible>
-			<include>CommonMediaBlackwash</include>
-		</control>
+		<include condition="!Window.Previous(Weather) + !Window.Previous(Videos) + !Window.Previous(Music) + !Window.Previous(Pictures) + !Window.Previous(Programs)">CommonSystemBlackwash</include>
+		<include condition="Window.Previous(Weather)">CommonWeatherBlackwash</include>
+		<include condition="Window.Previous(Programs)">CommonAppsBlackwash</include>
+		<include condition="Window.Previous(Videos) | Window.Previous(Music) | Window.Previous(Pictures)">CommonMediaBlackwash</include>
 		<control type="group">
 			<left>130</left>
 			<animation effect="fade" delay="500" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
@@ -55,8 +30,8 @@
 					<height>50</height>
 					<width>200</width>
 					<textcolor>white</textcolor>
-					<texturefocus border="10">button-focus.png</texturefocus>
-					<texturenofocus border="10">button-nofocus.png</texturenofocus>
+					<texturefocus border="10">buttons/button-focus.png</texturefocus>
+					<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
 					<align>left</align>
 					<label>20037</label>
 				</control>
@@ -65,8 +40,8 @@
 					<height>50</height>
 					<width>200</width>
 					<textcolor>white</textcolor>
-					<texturefocus border="10">button-focus.png</texturefocus>
-					<texturenofocus border="10">button-nofocus.png</texturenofocus>
+					<texturefocus border="10">buttons/button-focus.png</texturefocus>
+					<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
 					<align>left</align>
 					<label>13277</label>
 				</control>
@@ -75,8 +50,8 @@
 					<height>50</height>
 					<width>200</width>
 					<textcolor>white</textcolor>
-					<texturefocus border="10">button-focus.png</texturefocus>
-					<texturenofocus border="10">button-nofocus.png</texturenofocus>
+					<texturefocus border="10">buttons/button-focus.png</texturefocus>
+					<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
 					<align>left</align>
 					<label>13279</label>
 				</control>
@@ -85,8 +60,8 @@
 					<height>50</height>
 					<width>200</width>
 					<textcolor>white</textcolor>
-					<texturefocus border="10">button-focus.png</texturefocus>
-					<texturenofocus border="10">button-nofocus.png</texturenofocus>
+					<texturefocus border="10">buttons/button-focus.png</texturefocus>
+					<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
 					<align>left</align>
 					<label>13280</label>
 				</control>
@@ -95,8 +70,8 @@
 					<height>50</height>
 					<width>200</width>
 					<textcolor>white</textcolor>
-					<texturefocus border="10">button-focus.png</texturefocus>
-					<texturenofocus border="10">button-nofocus.png</texturenofocus>
+					<texturefocus border="10">buttons/button-focus.png</texturefocus>
+					<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
 					<align>left</align>
 					<label>13281</label>
 				</control>
@@ -105,8 +80,8 @@
 					<height>50</height>
 					<width>200</width>
 					<textcolor>white</textcolor>
-					<texturefocus border="10">button-focus.png</texturefocus>
-					<texturenofocus border="10">button-nofocus.png</texturenofocus>
+					<texturefocus border="10">buttons/button-focus.png</texturefocus>
+					<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
 					<align>left</align>
 					<label>12389</label>
 					<onright>60</onright>

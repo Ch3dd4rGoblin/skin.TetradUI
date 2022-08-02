@@ -3,7 +3,7 @@
 	<controls>
 		<!-- media infos -->
 		<control type="group" id="1">
-			<visible>[Player.ShowInfo | Window.IsActive(VideoOSD) | !String.IsEmpty(Player.SeekNumeric)] + ![Window.IsVisible(VideoBookmarks) | Window.IsVisible(DialogSettings.xml) | Window.IsVisible(124) | Window.IsVisible(125) | Window.IsVisible(1101)]</visible>
+			<visible>[Player.ShowInfo | Window.IsActive(VideoOSD) | !String.IsEmpty(Player.SeekNumeric)] + ![Window.IsVisible(VideoBookmarks) | Window.IsVisible(DialogSettings.xml) | Window.IsVisible(DialogPVRChannelsOSD.xml) | Window.IsVisible(DialogPVRChannelGuide.xml) | Window.IsVisible(124) | Window.IsVisible(125) | Window.IsVisible(1101)]</visible>
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<control type="image" id="1">
 				<top>-150</top>
@@ -27,9 +27,24 @@
 				<visible>Player.ChapterCount</visible>
 			</control>
 			<control type="label" id="1">
-				<description>Clock label</description>
+				<description>Timeshift Header label</description>
 				<left>30</left>
 				<top>35</top>
+				<width>1000</width>
+				<height>25</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font13</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$LOCALIZE[31247]: $INFO[PVR.TimeshiftCur] (-$INFO[PVR.TimeshiftOffset])</label>
+				<animation effect="slide" end="0,-30" condition="!Player.ChapterCount">Conditional</animation>
+				<visible>VideoPlayer.Content(LiveTV) + PVR.IsTimeShift</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Clock label</description>
+				<left>30</left>
+				<top>65</top>
 				<width>600</width>
 				<height>25</height>
 				<aligny>center</aligny>
@@ -38,6 +53,7 @@
 				<shadowcolor>black</shadowcolor>
 				<label>$INFO[System.Time]</label>
 				<animation effect="slide" end="0,-30" condition="!Player.ChapterCount">Conditional</animation>
+				<animation effect="slide" end="0,-30" condition="![VideoPlayer.Content(LiveTV) + PVR.IsTimeShift]">Conditional</animation>
 			</control>
 			<control type="image" id="1">
 				<top>230r</top>
@@ -52,7 +68,7 @@
 				<top>260r</top>
 				<width>300</width>
 				<height>230</height>
-				<texture>$INFO[VideoPlayer.Art(thumb)]</texture>
+				<texture>$INFO[Player.Art(thumb)]</texture>
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<bordertexture border="19,3,19,3">thumb-border.png</bordertexture>
 				<bordersize>17,1,17,1</bordersize>
@@ -72,7 +88,7 @@
 			</control>
 			<control type="group" id="1">
 				<left>330</left>
-				<top>175r</top>
+				<top>203r</top>
 				<control type="label" id="1">
 					<description>Heading label</description>
 					<width>910</width>
@@ -82,7 +98,7 @@
 					<label>$LOCALIZE[31235]</label>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<animation effect="slide" start="0,0" end="0,25" time="0" condition="!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos)">conditional</animation>
+					<animation effect="slide" start="0,0" end="0,25" time="0" condition="!Pvr.IsPlayingTv + !Pvr.IsPlayingRadio + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos)">conditional</animation>
 				</control>
 				<control type="label" id="1">
 					<description>Studio label</description>
@@ -96,33 +112,35 @@
 					<textcolor>grey2</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
-				<control type="grouplist" id="1">
+				<control type="label" id="1">
 					<left>20</left>
-					<top>60</top>
+					<top>57</top>
+					<width min="10" max="720">auto</width>
+					<height>30</height>
+					<font>font30</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$VAR[PVRVideoPlayerSubLabel]</label>
+					<textcolor>orange</textcolor>
+					<scroll>true</scroll>
+				</control>
+				<control type="grouplist" id="1">
+					<left>18</left>
+					<top>90</top>
 					<width>910</width>
 					<height>35</height>
 					<itemgap>5</itemgap>
 					<orientation>horizontal</orientation>
-					<control type="label" id="1">
-						<width min="10" max="720">auto</width>
-						<height>30</height>
-						<font>font30</font>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>$INFO[VideoPlayer.Title]</label>
-						<textcolor>orange</textcolor>
-						<scroll>true</scroll>
-					</control>
 					<include>VideoPlayerVideoCodecFlagging</include>
 					<include>VideoPlayerAudioCodecFlagging</include>
 					<include>VideoPlayerVideoTypeHackFlaggingConditions</include>
 					<include>VideoPlayerAspectCodecFlagging</include>
 				</control>
 				<control type="label" id="1">
-					<top>120</top>
+					<top>148</top>
 					<width>910</width>
 					<height>25</height>
-					<label>$LOCALIZE[31236] $INFO[Player.FinishTime]</label>
+					<label>$LOCALIZE[31236] $INFO[Player.FinishTime]$INFO[VideoPlayer.NextTitle, - $LOCALIZE[19031]: , ]$INFO[VideoPlayer.NextStartTime,(, - ]$INFO[VideoPlayer.NextEndTime,,)]</label>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font10</font>

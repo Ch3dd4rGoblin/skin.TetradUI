@@ -2,8 +2,6 @@
 <includes>
 	<include name="ListViewCommons">
 		<control type="panel" id="50">
-			<left>0</left>
-			<top>0</top>
 			<width>615</width>
 			<height>480</height>
 			<onleft>9000</onleft>
@@ -40,7 +38,7 @@
 				<control type="image">
 					<width>615</width>
 					<height>40</height>
-					<texture border="10">list-focus.png</texture>
+					<texture border="10">buttons/list-focus.png</texture>
 				</control>
 				<control type="label">
 					<left>10</left>
@@ -85,13 +83,32 @@
 				<aspectratio>keep</aspectratio>
 				<info>Listitem.Overlay</info>
 			</control>
+			<control type="group">
+				<visible>$EXP[AddonLifecycleType]</visible>
+				<include>VisibleFadeEffect</include>
+				<left>16</left>
+				<top>26</top>
+				<control type="image">
+					<width>388</width>
+					<height>388</height>
+					<texture colordiffuse="AAFFFFFF">black-back.png</texture>
+				</control>
+				<control type="textbox">
+					<left>25</left>
+					<top>25</top>
+					<width>338</width>
+					<height>338</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<label>$VAR[AddonLifecycleType]</label>
+				</control>
+			</control>
 		</control>
 	</include>
 	<include name="ThumbnailView">
 		<control type="panel" id="52">
 			<visible>![Window.IsVisible(Videos) + Container.Content(TVShows)]</visible>
-			<left>0</left>
-			<top>0</top>
 			<width>1080</width>
 			<height>480</height>
 			<onleft>9000</onleft>
@@ -107,7 +124,7 @@
 					<left>2</left>
 					<width>176</width>
 					<height>160</height>
-					<texture border="10">list-nofocus.png</texture>
+					<texture border="10">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
 					<left>6</left>
@@ -118,6 +135,27 @@
 					<bordertexture>black-back.png</bordertexture>
 					<bordersize>1</bordersize>
 					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="group">
+					<visible>$EXP[AddonLifecycleType]</visible>
+					<left>27</left>
+					<top>7</top>
+					<control type="image">
+						<width>126</width>
+						<height>126</height>
+						<texture colordiffuse="AAFFFFFF">black-back.png</texture>
+					</control>
+					<control type="textbox">
+						<left>5</left>
+						<top>5</top>
+						<width>116</width>
+						<height>116</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font8</font>
+						<textcolor>grey2</textcolor>
+						<label>$VAR[AddonLifecycleType]</label>
+					</control>
 				</control>
 				<control type="label">
 					<left>8</left>
@@ -145,7 +183,7 @@
 					<left>2</left>
 					<width>176</width>
 					<height>160</height>
-					<texture border="10">list-focus.png</texture>
+					<texture border="10">buttons/list-focus.png</texture>
 				</control>
 				<control type="image">
 					<left>6</left>
@@ -156,6 +194,26 @@
 					<bordertexture>black-back.png</bordertexture>
 					<bordersize>1</bordersize>
 					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="group">
+					<visible>$EXP[AddonLifecycleType]</visible>
+					<left>27</left>
+					<top>7</top>
+					<control type="image">
+						<width>126</width>
+						<height>126</height>
+						<texture colordiffuse="AAFFFFFF">black-back.png</texture>
+					</control>
+					<control type="textbox">
+						<left>5</left>
+						<top>5</top>
+						<width>116</width>
+						<height>116</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font8</font>
+						<label>$VAR[AddonLifecycleType]</label>
+					</control>
 				</control>
 				<control type="label">
 					<left>8</left>
@@ -182,8 +240,7 @@
 					<left>2</left>
 					<width>148</width>
 					<height>240</height>
-					<aspectratio>stretch</aspectratio>
-					<texture border="10">list-nofocus.png</texture>
+					<texture border="10">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
 					<left>6</left>
@@ -221,7 +278,7 @@
 					<left>2</left>
 					<width>148</width>
 					<height>240</height>
-					<texture border="10">list-focus.png</texture>
+					<texture border="10">buttons/list-focus.png</texture>
 				</control>
 				<control type="image">
 					<left>6</left>
@@ -275,7 +332,7 @@
 					<left>2</left>
 					<width>521</width>
 					<height>126</height>
-					<texture border="10">list-nofocus.png</texture>
+					<texture border="10">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
 					<left>9</left>
@@ -326,7 +383,7 @@
 					<top>1</top>
 					<width>519</width>
 					<height>124</height>
-					<texture border="10">list-focus.png</texture>
+					<texture border="10">buttons/list-focus.png</texture>
 				</control>
 				<control type="image">
 					<left>9</left>
@@ -372,7 +429,6 @@
 	</include>
 	<include name="PosterWrapView">
 		<control type="group">
-			<left>0</left>
 			<top>-35</top>
 			<visible>Control.IsVisible(54)</visible>
 			<control type="label">
@@ -419,8 +475,8 @@
 					<left>2</left>
 					<width>214</width>
 					<height>306</height>
-					<aspectratio>stretch</aspectratio>
-					<bordertexture border="10">list-nofocus.png</bordertexture>
+					<aspectratio>scale</aspectratio>
+					<bordertexture border="10">buttons/list-nofocus.png</bordertexture>
 					<bordersize>10</bordersize>
 					<texture background="true">$VAR[ListItemPosterVar]</texture>
 				</control>
@@ -437,7 +493,7 @@
 				<control type="image">
 					<width>218</width>
 					<height>310</height>
-					<aspectratio>stretch</aspectratio>
+					<aspectratio>scale</aspectratio>
 					<bordertexture border="10">thumb-focus.png</bordertexture>
 					<bordersize>10</bordersize>
 					<texture background="true">$VAR[ListItemPosterVar]</texture>
@@ -462,7 +518,7 @@
 					<width>416</width>
 					<height>306</height>
 					<aspectratio aligny="top">scale</aspectratio>
-					<bordertexture border="10">list-nofocus.png</bordertexture>
+					<bordertexture border="10">buttons/list-nofocus.png</bordertexture>
 					<bordersize>10</bordersize>
 					<texture background="true">$VAR[ListItemPosterVar]</texture>
 				</control>
@@ -510,9 +566,9 @@
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 	<variable name="ThumbnailInfoViewPlot">
-		<value condition="Container.Content(Addons)">$INFO[ListItem.AddonDescription]</value>
-		<value condition="Container.Content(Albums)">$INFO[ListItem.Property(Album_Description)]</value>
-		<value condition="Container.Content(Albums)">$INFO[ListItem.Property(Artist_Description)]</value>
+		<value condition="Container.Content(Addons) + !String.IsEmpty(ListItem.AddonDescription)">$INFO[ListItem.AddonDescription]</value>
+		<value condition="Container.Content(Albums) + !String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
+		<value condition="Container.Content(Artists) + !String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
 		<value>$INFO[ListItem.Plot]</value>
 	</variable>
 	<variable name="ThumbnailInfoViewTitle">
@@ -543,8 +599,6 @@
 	</include>
 	<include name="ThumbnailInfoView">
 		<control type="panel" id="55">
-			<left>0</left>
-			<top>0</top>
 			<width>720</width>
 			<height>480</height>
 			<onleft>9000</onleft>
@@ -560,7 +614,7 @@
 					<top>1</top>
 					<width>175</width>
 					<height>158</height>
-					<texture border="10">list-nofocus.png</texture>
+					<texture border="10">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
 					<left>5</left>
@@ -571,6 +625,27 @@
 					<bordertexture>black-back.png</bordertexture>
 					<bordersize>1</bordersize>
 					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="group">
+					<visible>$EXP[AddonLifecycleType]</visible>
+					<left>24</left>
+					<top>9</top>
+					<control type="image">
+						<width>126</width>
+						<height>126</height>
+						<texture colordiffuse="AAFFFFFF">black-back.png</texture>
+					</control>
+					<control type="textbox">
+						<left>5</left>
+						<top>5</top>
+						<width>116</width>
+						<height>116</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font8</font>
+						<textcolor>grey2</textcolor>
+						<label>$VAR[AddonLifecycleType]</label>
+					</control>
 				</control>
 				<control type="label">
 					<left>7</left>
@@ -598,7 +673,7 @@
 					<top>1</top>
 					<width>175</width>
 					<height>158</height>
-					<texture border="10">list-focus.png</texture>
+					<texture border="10">buttons/list-focus.png</texture>
 				</control>
 				<control type="image">
 					<left>5</left>
@@ -609,6 +684,26 @@
 					<bordertexture>black-back.png</bordertexture>
 					<bordersize>1</bordersize>
 					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="group">
+					<visible>$EXP[AddonLifecycleType]</visible>
+					<left>24</left>
+					<top>9</top>
+					<control type="image">
+						<width>126</width>
+						<height>126</height>
+						<texture colordiffuse="AAFFFFFF">black-back.png</texture>
+					</control>
+					<control type="textbox">
+						<left>5</left>
+						<top>5</top>
+						<width>116</width>
+						<height>116</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font8</font>
+						<label>$VAR[AddonLifecycleType]</label>
+					</control>
 				</control>
 				<control type="label">
 					<left>7</left>
@@ -636,7 +731,7 @@
 					<top>3</top>
 					<width>148</width>
 					<height>238</height>
-					<texture border="10">list-nofocus.png</texture>
+					<texture border="10">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
 					<left>6</left>
@@ -676,7 +771,7 @@
 					<top>3</top>
 					<width>148</width>
 					<height>238</height>
-					<texture border="10">list-focus.png</texture>
+					<texture border="10">buttons/list-focus.png</texture>
 				</control>
 				<control type="image">
 					<left>6</left>

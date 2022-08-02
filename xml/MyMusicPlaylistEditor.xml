@@ -4,13 +4,9 @@
 	<views>50</views>
 	<controls>
 		<include condition="!Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
-		<control type="group">
-			<include>CommonMediaBackground</include>
-		</control>
+		<include>CommonMediaBackground</include>
 		<include condition="Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
-		<control type="group">
-			<include>CommonMediaBlackwash</include>
-		</control>
+		<include>CommonMediaBlackwash</include>
 		<control type="group">
 			<left>130</left>
 			<animation effect="fade" delay="500" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
@@ -89,7 +85,7 @@
 					<control type="image">
 						<width>540</width>
 						<height>45</height>
-						<texture border="10">button-nofocus.png</texture>
+						<texture border="10">buttons/button-nofocus.png</texture>
 					</control>
 					<control type="image">
 						<left>15</left>
@@ -125,13 +121,13 @@
 						<width>540</width>
 						<height>45</height>
 						<visible>!Control.HasFocus(50)</visible>
-						<texture border="10">button-nofocus.png</texture>
+						<texture border="10">buttons/button-nofocus.png</texture>
 					</control>
 					<control type="image">
 						<width>540</width>
 						<height>45</height>
 						<visible>Control.HasFocus(50)</visible>
-						<texture border="10">button-focus.png</texture>
+						<texture border="10">buttons/button-focus.png</texture>
 					</control>
 					<control type="image">
 						<left>15</left>
@@ -228,7 +224,7 @@
 					<control type="image">
 						<width>540</width>
 						<height>45</height>
-						<texture border="10">button-nofocus.png</texture>
+						<texture border="10">buttons/button-nofocus.png</texture>
 					</control>
 					<control type="image">
 						<left>15</left>
@@ -264,13 +260,13 @@
 						<width>540</width>
 						<height>45</height>
 						<visible>!Control.HasFocus(100)</visible>
-						<texture border="10">button-nofocus.png</texture>
+						<texture border="10">buttons/button-nofocus.png</texture>
 					</control>
 					<control type="image">
 						<width>540</width>
 						<height>45</height>
 						<visible>Control.HasFocus(100)</visible>
-						<texture border="10">button-focus.png</texture>
+						<texture border="10">buttons/button-focus.png</texture>
 					</control>
 					<control type="image">
 						<left>15</left>

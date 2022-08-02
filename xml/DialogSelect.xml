@@ -14,7 +14,7 @@
 				<description>background image</description>
 				<width>650</width>
 				<height>650</height>
-				<texture border="50,100,50,50">Dialog.png</texture>
+				<texture border="50,100,50,50">dialogs/Dialog.png</texture>
 				<animation effect="fade" start="90" end="90" time="0" condition="Window.IsVisible(Visualisation)">Conditional</animation>
 				<visible>Control.IsVisible(3)</visible>
 			</control>
@@ -22,7 +22,7 @@
 				<description>background image</description>
 				<width>860</width>
 				<height>650</height>
-				<texture border="50,100,50,50">Dialog.png</texture>
+				<texture border="50,100,50,50">dialogs/Dialog.png</texture>
 				<animation effect="fade" start="90" end="90" time="0" condition="Window.IsVisible(Visualisation)">Conditional</animation>
 				<visible>Control.IsVisible(6)</visible>
 			</control>
@@ -54,7 +54,7 @@
 					<control type="image">
 						<width>550</width>
 						<height>45</height>
-						<texture border="10">list-nofocus.png</texture>
+						<texture border="10">buttons/list-nofocus.png</texture>
 					</control>
 					<control type="label">
 						<left>10</left>
@@ -70,13 +70,13 @@
 						<width>550</width>
 						<height>45</height>
 						<visible>!Control.HasFocus(3)</visible>
-						<texture border="10">list-nofocus.png</texture>
+						<texture border="10">buttons/list-nofocus.png</texture>
 					</control>
 					<control type="image">
 						<width>550</width>
 						<height>45</height>
 						<visible>Control.HasFocus(3)</visible>
-						<texture border="10">list-focus.png</texture>
+						<texture border="10">buttons/list-focus.png</texture>
 					</control>
 					<control type="label">
 						<left>10</left>
@@ -104,7 +104,7 @@
 					<control type="image">
 						<width>550</width>
 						<height>45</height>
-						<texture border="10">list-nofocus.png</texture>
+						<texture border="10">buttons/list-nofocus.png</texture>
 					</control>
 					<control type="image">
 						<left>5</left>
@@ -127,13 +127,13 @@
 						<width>550</width>
 						<height>45</height>
 						<visible>!Control.HasFocus(6)</visible>
-						<texture border="10">list-nofocus.png</texture>
+						<texture border="10">buttons/list-nofocus.png</texture>
 					</control>
 					<control type="image">
 						<width>550</width>
 						<height>45</height>
 						<visible>Control.HasFocus(6)</visible>
-						<texture border="10">list-focus.png</texture>
+						<texture border="10">buttons/list-focus.png</texture>
 					</control>
 					<control type="image">
 						<left>5</left>
@@ -245,19 +245,16 @@
 				<control type="button" id="8">
 					<description>Optional button</description>
 					<label />
-					<textcolor>grey2</textcolor>
 					<include>DialogButton2CommonValues</include>
 				</control>
 				<control type="button" id="5">
 					<description>Manual button</description>
 					<label />
-					<textcolor>grey2</textcolor>
 					<include>DialogButton2CommonValues</include>
 				</control>
 				<control type="button" id="7">
 					<description>Cancel button</description>
 					<label />
-					<textcolor>grey2</textcolor>
 					<include>DialogButton2CommonValues</include>
 				</control>
 			</control>

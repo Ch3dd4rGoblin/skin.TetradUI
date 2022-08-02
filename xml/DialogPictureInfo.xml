@@ -12,7 +12,7 @@
 			<description>background image</description>
 			<width>910</width>
 			<height>643</height>
-			<texture border="50,100,50,50">Dialog.png</texture>
+			<texture border="50,100,50,50">dialogs/Dialog.png</texture>
 			<animation effect="fade" start="90" end="90" time="0" condition="Window.IsVisible(Slideshow)">Conditional</animation>
 		</control>
 		<control type="label" id="1">
@@ -42,7 +42,7 @@
 				<control type="image">
 					<width>550</width>
 					<height>45</height>
-					<texture border="10">list-nofocus.png</texture>
+					<texture border="10">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="label">
 					<left>10</left>
@@ -68,13 +68,13 @@
 					<width>550</width>
 					<height>45</height>
 					<visible>!Control.HasFocus(5)</visible>
-					<texture border="10">list-nofocus.png</texture>
+					<texture border="10">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
 					<width>550</width>
 					<height>45</height>
 					<visible>Control.HasFocus(5)</visible>
-					<texture border="10">list-focus.png</texture>
+					<texture border="10">buttons/list-focus.png</texture>
 				</control>
 				<control type="label">
 					<left>10</left>
@@ -120,7 +120,7 @@
 			<aligny>center</aligny>
 			<scroll>true</scroll>
 			<textcolor>grey2</textcolor>
-			<label>$LOCALIZE[31201] ($INFO[Container(5).CurrentPage]/$INFO[Container(5).NumPages])</label>
+			<label>$LOCALIZE[31201] $INFO[Container(5).CurrentPage]/$INFO[Container(5).NumPages]</label>
 		</control>
 		<control type="image">
 			<left>610</left>

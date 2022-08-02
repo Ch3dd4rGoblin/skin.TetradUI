@@ -1,9 +1,55 @@
+[B]Version 1.2.0[/B]
+- Add PVR support
+
+[B]Version 1.1.11[/B]
+- Add add-on shortcuts for Applications window
+
+[B]Version 1.1.10[/B]
+- Add ListItem.AddonLifecycleType / ListItem.AddonLifecycleDesc
+- Fixes for information window animations
+
+[B]Version 1.1.9[/B]
+- Add Russian translation (thanks to vansai)
+
+[B]Version 1.1.8[/B]
+- Fix sub blade backgrounds
+
+[B]Version 1.1.7[/B]
+- Cleanup backgrounds
+- Fix backgrounds from Apps window
+- Update startup.xml
+
+[B]Version 1.1.6[/B]
+- Add skin settings to animate fanart backgrounds
+- Add support for script.artistslideshow
+
+[B]Version 1.1.5[/B]
+- Add missing radiobutton textures
+- Cleanup images
+- Add invalidcolor for edit control
+
+[B]Version 1.1.4[/B]
+- Add music multi disc support
+
+[B]Version 1.1.3[/B]
+- Fix category and submenu focus
+- Fixes for codec flagging
+- Adjustments to sideblade TetradUI logo
+
+[B]Version 1.1.2[/B]
+- Skin settings: hide movies / tv shows / music buttons are disabled if no library content is available
+- Add navigation welcome dialog
+
+[B]Version 1.1.1[/B]
+- Add new media control buttons
+- Recode and update side blade buttons
+
 [B]Version 1.1.0[/B]
 - Add update library / toggle watched buttons in media windows
 - Fix filter button in media windows
 - Add completely new buttons images
 - Rewrite some views
-- Add README.md
+- Add README.md (thanks to Ch3dd4rGoblin)
 - Add screenshots
 
 [B]Version 1.0.1[/B]

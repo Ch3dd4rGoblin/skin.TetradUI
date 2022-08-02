@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">602</defaultcontrol>
+	<onload condition="!Player.PauseEnabled">SetFocus(603)</onload>
 	<include>dialogeffect</include>
 	<coordinates>
 		<system>1</system>
@@ -8,253 +9,254 @@
 		<top>0</top>
 	</coordinates>
 	<controls>
-		<control type="group" id="100">
-			<left>325</left>
-			<top>670</top>
-			<animation effect="fade" time="200">VisibleChange</animation>
-			<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
-			<control type="button" id="600">
-				<width>45</width>
-				<height>45</height>
-				<label>210</label>
-				<font />
-				<texturefocus>OSDPrevTrackFO.png</texturefocus>
-				<texturenofocus>OSDPrevTrackNF.png</texturenofocus>
-				<onleft>704</onleft>
-				<onright>601</onright>
-				<onup>600</onup>
-				<ondown>600</ondown>
-				<onclick>PlayerControl(Previous)</onclick>
+		<control type="group">
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(DialogPVRChannelGuide.xml) | Window.IsVisible(DialogPVRChannelsOSD.xml)">Conditional</animation>
+			<control type="grouplist" id="100">
+				<left>325</left>
+				<top>670</top>
+				<itemgap>0</itemgap>
+				<onleft condition="Control.IsEnabled(703)">703</onleft>
+				<onleft condition="!Control.IsEnabled(703)">702</onleft>
+				<onright condition="Control.IsVisible(708)">708</onright>
+				<onright condition="!Control.IsVisible(708) + Control.IsVisible(709)">709</onright>
+				<onright condition="!Control.IsVisible(708) + !Control.IsVisible(709)">705</onright>
+				<orientation>horizontal</orientation>
+				<control type="button" id="600">
+					<width>45</width>
+					<height>45</height>
+					<label>210</label>
+					<font />
+					<texturefocus>osd/OSDPrevTrackFO.png</texturefocus>
+					<texturenofocus>osd/OSDPrevTrackNF.png</texturenofocus>
+					<onclick>PlayerControl(Previous)</onclick>
+					<enable>Player.ChapterCount | MusicPlayer.HasPrevious | [Player.SeekEnabled + MusicPlayer.Content(livetv)]</enable>
+					<animation effect="fade" start="100" end="50" time="100" condition="![Player.ChapterCount | MusicPlayer.HasPrevious | [Player.SeekEnabled + MusicPlayer.Content(livetv)]]">Conditional</animation>
+				</control>
+				<control type="button" id="601">
+					<width>45</width>
+					<height>45</height>
+					<label>31354</label>
+					<font />
+					<texturefocus>osd/OSDRewindFO.png</texturefocus>
+					<texturenofocus>osd/OSDRewindNF.png</texturenofocus>
+					<onclick>PlayerControl(Rewind)</onclick>
+					<enable>Player.SeekEnabled</enable>
+					<animation effect="fade" start="100" end="50" time="100" condition="!Player.SeekEnabled">Conditional</animation>
+				</control>
+				<control type="togglebutton" id="602">
+					<width>45</width>
+					<height>45</height>
+					<label>31351</label>
+					<altlabel>208</altlabel>
+					<font />
+					<texturefocus>osd/OSDPauseFO.png</texturefocus>
+					<texturenofocus>osd/OSDPauseNF.png</texturenofocus>
+					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+					<alttexturefocus>osd/OSDPlayFO.png</alttexturefocus>
+					<alttexturenofocus>osd/OSDPlayNF.png</alttexturenofocus>
+					<onclick>PlayerControl(Play)</onclick>
+					<enable>Player.PauseEnabled</enable>
+					<animation effect="fade" start="100" end="50" time="100" condition="!Player.PauseEnabled">Conditional</animation>
+				</control>
+				<control type="button" id="603">
+					<width>45</width>
+					<height>45</height>
+					<label>31352</label>
+					<font />
+					<texturefocus>osd/OSDStopFO.png</texturefocus>
+					<texturenofocus>osd/OSDStopNF.png</texturenofocus>
+					<onclick>PlayerControl(Stop)</onclick>
+				</control>
+				<control type="button" id="604">
+					<width>45</width>
+					<height>45</height>
+					<label>31353</label>
+					<font />
+					<texturefocus>osd/OSDForwardFO.png</texturefocus>
+					<texturenofocus>osd/OSDForwardNF.png</texturenofocus>
+					<onclick>PlayerControl(Forward)</onclick>
+					<enable>Player.PauseEnabled</enable>
+					<animation effect="fade" start="100" end="50" time="100" condition="!Player.PauseEnabled">Conditional</animation>
+				</control>
+				<control type="button" id="605">
+					<width>45</width>
+					<height>45</height>
+					<label>209</label>
+					<font />
+					<texturefocus>osd/OSDNextTrackFO.png</texturefocus>
+					<texturenofocus>osd/OSDNextTrackNF.png</texturenofocus>
+					<onclick>PlayerControl(Next)</onclick>
+					<enable>Player.ChapterCount | MusicPlayer.HasNext | PVR.IsTimeShift</enable>
+					<animation effect="fade" start="100" end="50" time="100" condition="![Player.ChapterCount | MusicPlayer.HasNext | PVR.IsTimeShift]">Conditional</animation>
+				</control>
+				<control type="group" id="609">
+					<visible>![MusicPlayer.Content(LiveTV) | MusicPartyMode.Enabled]</visible>
+					<width>45</width>
+					<control type="button" id="606">
+						<width>45</width>
+						<height>45</height>
+						<label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
+						<font />
+						<texturefocus />
+						<texturenofocus />
+						<onclick>PlayerControl(Repeat)</onclick>
+						<onleft>605</onleft>
+						<onright>607</onright>
+					</control>
+					<control type="image">
+						<width>45</width>
+						<height>45</height>
+						<texture>osd/OSDRepeatNF.png</texture>
+						<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+						<visible>!Control.HasFocus(606)</visible>
+					</control>
+					<control type="image">
+						<width>45</width>
+						<height>45</height>
+						<texture>osd/OSDRepeatFO.png</texture>
+						<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+						<visible>Control.HasFocus(606)</visible>
+					</control>
+					<control type="image">
+						<width>45</width>
+						<height>45</height>
+						<texture>osd/OSDRepeatOneNF.png</texture>
+						<visible>Playlist.IsRepeatOne</visible>
+						<visible>!Control.HasFocus(606)</visible>
+					</control>
+					<control type="image">
+						<width>45</width>
+						<height>45</height>
+						<texture>osd/OSDRepeatOneFO.png</texture>
+						<visible>Playlist.IsRepeatOne</visible>
+						<visible>Control.HasFocus(606)</visible>
+					</control>
+					<control type="image">
+						<width>45</width>
+						<height>45</height>
+						<texture>osd/OSDRepeatAllNF.png</texture>
+						<visible>Playlist.IsRepeat</visible>
+						<visible>!Control.HasFocus(606)</visible>
+					</control>
+					<control type="image">
+						<width>45</width>
+						<height>45</height>
+						<texture>osd/OSDRepeatAllFO.png</texture>
+						<visible>Playlist.IsRepeat</visible>
+						<visible>Control.HasFocus(606)</visible>
+					</control>
+				</control>
+				<control type="togglebutton" id="607">
+					<width>45</width>
+					<height>45</height>
+					<label>$LOCALIZE[590]$INFO[Playlist.Random, : ]</label>
+					<font />
+					<texturefocus>osd/OSDRandomOffFO.png</texturefocus>
+					<texturenofocus>osd/OSDRandomOffNF.png</texturenofocus>
+					<usealttexture>Playlist.IsRandom</usealttexture>
+					<alttexturefocus>osd/OSDRandomOnFO.png</alttexturefocus>
+					<alttexturenofocus>osd/OSDRandomOnNF.png</alttexturenofocus>
+					<onclick>PlayerControl(Random)</onclick>
+					<visible>![MusicPlayer.Content(LiveTV) | MusicPartyMode.Enabled]</visible>
+				</control>
+				<control type="togglebutton" id="608">
+					<width>45</width>
+					<height>45</height>
+					<label>264</label>
+					<font />
+					<onclick>PVR.ToggleRecordPlayingChannel</onclick>
+					<texturefocus>osd/OSDRecordFO.png</texturefocus>
+					<texturenofocus>osd/OSDRecordNF.png</texturenofocus>
+					<usealttexture>PVR.IsRecordingPlayingChannel | PVR.IsPlayingActiveRecording</usealttexture>
+					<alttexturefocus>osd/OSDRecord2FO.png</alttexturefocus>
+					<alttexturenofocus>osd/OSDRecord2NF.png</alttexturenofocus>
+					<visible>PVR.CanRecordPlayingChannel + MusicPlayer.Content(livetv)</visible>
+				</control>
 			</control>
-			<control type="button" id="601">
-				<left>45</left>
-				<width>45</width>
-				<height>45</height>
-				<label>31354</label>
-				<font />
-				<texturefocus>OSDRewindFO.png</texturefocus>
-				<texturenofocus>OSDRewindNF.png</texturenofocus>
-				<onleft>600</onleft>
-				<onright>602</onright>
-				<onup>601</onup>
-				<ondown>601</ondown>
-				<onclick>PlayerControl(Rewind)</onclick>
-			</control>
-			<control type="togglebutton" id="602">
-				<left>90</left>
-				<width>45</width>
-				<height>45</height>
-				<label>31351</label>
-				<altlabel>208</altlabel>
-				<font />
-				<texturefocus>OSDPauseFO.png</texturefocus>
-				<texturenofocus>OSDPauseNF.png</texturenofocus>
-				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-				<alttexturefocus>OSDPlayFO.png</alttexturefocus>
-				<alttexturenofocus>OSDPlayNF.png</alttexturenofocus>
-				<onleft>601</onleft>
-				<onright>603</onright>
-				<onup>602</onup>
-				<ondown>602</ondown>
-				<onclick>PlayerControl(Play)</onclick>
-			</control>
-			<control type="button" id="603">
-				<left>135</left>
-				<width>45</width>
-				<height>45</height>
-				<label>31352</label>
-				<font />
-				<texturefocus>OSDStopFO.png</texturefocus>
-				<texturenofocus>OSDStopNF.png</texturenofocus>
-				<onleft>602</onleft>
-				<onright>604</onright>
-				<onup>603</onup>
-				<ondown>603</ondown>
-				<onclick>PlayerControl(Stop)</onclick>
-			</control>
-			<control type="button" id="604">
-				<left>180</left>
-				<width>45</width>
-				<height>45</height>
-				<label>31353</label>
-				<font />
-				<texturefocus>OSDForwardFO.png</texturefocus>
-				<texturenofocus>OSDForwardNF.png</texturenofocus>
-				<onleft>603</onleft>
-				<onright>605</onright>
-				<onup>604</onup>
-				<ondown>604</ondown>
-				<onclick>PlayerControl(Forward)</onclick>
-			</control>
-			<control type="button" id="605">
-				<left>225</left>
-				<width>45</width>
-				<height>45</height>
-				<label>209</label>
-				<font />
-				<texturefocus>OSDNextTrackFO.png</texturefocus>
-				<texturenofocus>OSDNextTrackNF.png</texturenofocus>
-				<onleft>604</onleft>
-				<onright>606</onright>
-				<onup>605</onup>
-				<ondown>605</ondown>
-				<onclick>PlayerControl(Next)</onclick>
-			</control>
-			<control type="button" id="606">
-				<left>270</left>
-				<width>45</width>
-				<height>45</height>
-				<label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
-				<font />
-				<texturefocus />
-				<texturenofocus />
-				<onclick>PlayerControl(Repeat)</onclick>
-				<onleft>605</onleft>
-				<onright>607</onright>
-				<onup>606</onup>
-				<ondown>606</ondown>
-			</control>
-			<control type="image">
-				<left>270</left>
-				<width>45</width>
-				<height>45</height>
-				<texture>OSDRepeatNF.png</texture>
-				<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
-				<visible>!Control.HasFocus(606)</visible>
-			</control>
-			<control type="image">
-				<left>270</left>
-				<width>45</width>
-				<height>45</height>
-				<texture>OSDRepeatFO.png</texture>
-				<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
-				<visible>Control.HasFocus(606)</visible>
-			</control>
-			<control type="image">
-				<left>270</left>
-				<width>45</width>
-				<height>45</height>
-				<texture>OSDRepeatOneNF.png</texture>
-				<visible>Playlist.IsRepeatOne</visible>
-				<visible>!Control.HasFocus(606)</visible>
-			</control>
-			<control type="image">
-				<left>270</left>
-				<width>45</width>
-				<height>45</height>
-				<texture>OSDRepeatOneFO.png</texture>
-				<visible>Playlist.IsRepeatOne</visible>
-				<visible>Control.HasFocus(606)</visible>
-			</control>
-			<control type="image">
-				<left>270</left>
-				<width>45</width>
-				<height>45</height>
-				<texture>OSDRepeatAllNF.png</texture>
-				<visible>Playlist.IsRepeat</visible>
-				<visible>!Control.HasFocus(606)</visible>
-			</control>
-			<control type="image">
-				<left>270</left>
-				<width>45</width>
-				<height>45</height>
-				<texture>OSDRepeatAllFO.png</texture>
-				<visible>Playlist.IsRepeat</visible>
-				<visible>Control.HasFocus(606)</visible>
-			</control>
-			<control type="togglebutton" id="607">
-				<left>315</left>
-				<width>45</width>
-				<height>45</height>
-				<label>$LOCALIZE[590]$INFO[Playlist.Random, : ]</label>
-				<font />
-				<texturefocus>OSDRandomOffFO.png</texturefocus>
-				<texturenofocus>OSDRandomOffNF.png</texturenofocus>
-				<usealttexture>Playlist.IsRandom</usealttexture>
-				<alttexturefocus>OSDRandomOnFO.png</alttexturefocus>
-				<alttexturenofocus>OSDRandomOnNF.png</alttexturenofocus>
-				<onclick>PlayerControl(Random)</onclick>
-				<onleft>606</onleft>
-				<onright>705</onright>
-				<onup>607</onup>
-				<ondown>607</ondown>
-			</control>
-		</control>
-		<control type="grouplist">
-			<left>985</left>
-			<top>670</top>
-			<width>270</width>
-			<align>right</align>
-			<itemgap>0</itemgap>
-			<orientation>horizontal</orientation>
-			<animation effect="fade" time="200">VisibleChange</animation>
-			<onleft>607</onleft>
-			<onright>600</onright>
-			<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
-			<control type="button" id="705">
-				<width>45</width>
-				<height>45</height>
-				<label>563</label>
-				<font/>
-				<font />
-				<texturefocus>OSDRateFO.png</texturefocus>
-				<texturenofocus>OSDRateNF.png</texturenofocus>
-				<onclick>setrating</onclick>
-			</control>
-			<control type="togglebutton" id="701">
-				<width>45</width>
-				<height>45</height>
-				<label>31128</label>
-				<font />
-				<texturefocus>OSDLyricsFO.png</texturefocus>
-				<texturenofocus>OSDLyricsNF.png</texturenofocus>
-				<alttexturefocus>OSDLyricsFO.png</alttexturefocus>
-				<alttexturenofocus>OSDLyricsNF.png</alttexturenofocus>
-				<onclick>Close</onclick>
-				<onclick>RunScript($INFO[Skin.String(LyricScript_Path)])</onclick>
-				<altclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</altclick>
-				<altclick>Close</altclick>
-				<altclick>RunScript($INFO[Skin.String(LyricScript_Path)])</altclick>
-				<usealttexture>String.IsEmpty(Skin.String(LyricScript_Path))</usealttexture>
-			</control>
-			<control type="button" id="500">
-				<width>45</width>
-				<height>45</height>
-				<label>12006</label>
-				<font />
-				<texturefocus>OSDVizFO.png</texturefocus>
-				<texturenofocus>OSDVizNF.png</texturenofocus>
-			</control>
-			<control type="button" id="702">
-				<width>45</width>
-				<height>45</height>
-				<label>$LOCALIZE[250] $LOCALIZE[21417]</label>
-				<font />
-				<texturefocus>OSDPresetSettingsFO.png</texturefocus>
-				<texturenofocus>OSDPresetSettingsNF.png</texturenofocus>
-				<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
-			</control>
-			<control type="button" id="703">
-				<width>45</width>
-				<height>45</height>
-				<label>31048</label>
-				<font />
-				<texturefocus>OSDPreFO.png</texturefocus>
-				<texturenofocus>OSDPreNF.png</texturenofocus>
-				<onclick>ActivateWindow(VisualisationPresetList)</onclick>
-				<animation effect="fade" start="100" end="50" time="100" condition="!Visualisation.HasPresets">Conditional</animation>
-				<enable>Visualisation.HasPresets</enable>
-			</control>
-			<control type="button" id="704">
-				<width>45</width>
-				<height>45</height>
-				<label>264</label>
-				<font />
-				<texturefocus>OSDRecordFO.png</texturefocus>
-				<texturenofocus>OSDRecordNF.png</texturenofocus>
-				<onclick>PVR.ToggleRecordPlayingChannel</onclick>
-				<enable>PVR.CanRecordPlayingChannel</enable>
-				<animation effect="fade" start="100" end="50" time="100" condition="!PVR.CanRecordPlayingChannel">Conditional</animation>
+			<control type="grouplist">
+				<left>985</left>
+				<top>670</top>
+				<width>270</width>
+				<align>right</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<onleft condition="Control.IsVisible(608)">608</onleft>
+				<onleft condition="!Control.IsVisible(608)">607</onleft>
+				<onright>600</onright>
+				<control type="button" id="708">
+					<width>45</width>
+					<height>45</height>
+					<label>31356</label>
+					<font />
+					<texturefocus>osd/OSDChannelListFO.png</texturefocus>
+					<texturenofocus>osd/OSDChannelListNF.png</texturenofocus>
+					<onclick>ActivateWindow(PVROSDChannels)</onclick>
+					<visible>MusicPlayer.Content(livetv)</visible>
+				</control>
+				<control type="button" id="709">
+					<width>45</width>
+					<height>45</height>
+					<label>31356</label>
+					<font />
+					<texturefocus>osd/OSDepgFO.png</texturefocus>
+					<texturenofocus>osd/OSDepgNF.png</texturenofocus>
+					<onclick>ActivateWindow(pvrchannelguide)</onclick>
+					<visible>MusicPlayer.Content(livetv) + MusicPlayer.HasEPG</visible>
+				</control>
+				<control type="button" id="705">
+					<width>45</width>
+					<height>45</height>
+					<label>563</label>
+					<font/>
+					<font />
+					<texturefocus>osd/OSDRateFO.png</texturefocus>
+					<texturenofocus>osd/OSDRateNF.png</texturenofocus>
+					<onclick>setrating</onclick>
+				</control>
+				<control type="togglebutton" id="701">
+					<width>45</width>
+					<height>45</height>
+					<label>31128</label>
+					<font />
+					<texturefocus>osd/OSDLyricsFO.png</texturefocus>
+					<texturenofocus>osd/OSDLyricsNF.png</texturenofocus>
+					<alttexturefocus>osd/OSDLyricsFO.png</alttexturefocus>
+					<alttexturenofocus>osd/OSDLyricsNF.png</alttexturenofocus>
+					<onclick>Close</onclick>
+					<onclick>RunScript($INFO[Skin.String(LyricScript_Path)])</onclick>
+					<altclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</altclick>
+					<altclick>Close</altclick>
+					<altclick>RunScript($INFO[Skin.String(LyricScript_Path)])</altclick>
+					<usealttexture>String.IsEmpty(Skin.String(LyricScript_Path))</usealttexture>
+				</control>
+				<control type="button" id="500">
+					<width>45</width>
+					<height>45</height>
+					<label>12006</label>
+					<font />
+					<texturefocus>osd/OSDVizFO.png</texturefocus>
+					<texturenofocus>osd/OSDVizNF.png</texturenofocus>
+				</control>
+				<control type="button" id="702">
+					<width>45</width>
+					<height>45</height>
+					<label>$LOCALIZE[250] $LOCALIZE[21417]</label>
+					<font />
+					<texturefocus>osd/OSDPresetSettingsFO.png</texturefocus>
+					<texturenofocus>osd/OSDPresetSettingsNF.png</texturenofocus>
+					<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
+				</control>
+				<control type="button" id="703">
+					<width>45</width>
+					<height>45</height>
+					<label>31048</label>
+					<font />
+					<texturefocus>osd/OSDPreFO.png</texturefocus>
+					<texturenofocus>osd/OSDPreNF.png</texturenofocus>
+					<onclick>ActivateWindow(VisualisationPresetList)</onclick>
+					<animation effect="fade" start="100" end="50" time="100" condition="!Visualisation.HasPresets">Conditional</animation>
+					<enable>Visualisation.HasPresets</enable>
+				</control>
 			</control>
 		</control>
 	</controls>

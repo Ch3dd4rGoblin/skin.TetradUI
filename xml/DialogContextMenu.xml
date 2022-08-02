@@ -13,7 +13,7 @@
 			<top>-45</top>
 			<width>380</width>
 			<height max="720">auto</height>
-			<texture border="40,45,45,55">context_menu.png</texture>
+			<texture border="40,45,45,55">dialogs/context_menu.png</texture>
 		</control>
 		<control type="grouplist" id="996">
 			<description>grouplist for context buttons</description>
@@ -31,7 +31,7 @@
 			<align>center</align>
 			<textcolor>white</textcolor>
 			<focusedcolor>orange</focusedcolor>
-			<texturefocus border="10">context-button-focus.png</texturefocus>
+			<texturefocus border="10">buttons/context-button-focus.png</texturefocus>
 			<texturenofocus />
 		</control>
 	</controls>

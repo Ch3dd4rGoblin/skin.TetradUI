@@ -3,14 +3,8 @@
 	<defaultcontrol>3</defaultcontrol>
 	<controls>
 		<include condition="!Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
-		<control type="group">
-			<visible>!Window.Previous(Weather)</visible>
-			<include>CommonSystemBackground</include>
-		</control>
-		<control type="group">
-			<visible>Window.Previous(Weather)</visible>
-			<include>CommonWeatherBackground</include>
-		</control>
+		<include condition="!Window.Previous(Weather)">CommonSystemBackground</include>
+		<include condition="Window.Previous(Weather)">CommonWeatherBackground</include>
 		<include condition="Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
 
 		<control type="group">
@@ -78,8 +72,8 @@
 				<height>50</height>
 				<width>250</width>
 				<textcolor>white</textcolor>
-				<texturefocus border="10">button-focus.png</texturefocus>
-				<texturenofocus border="10">button-nofocus.png</texturenofocus>
+				<texturefocus border="10">buttons/button-focus.png</texturefocus>
+				<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
 				<label>10037</label>
 				<onclick>SettingsLevelChange</onclick>
 				<align>left</align>
@@ -143,8 +137,8 @@
 			<height>50</height>
 			<width>250</width>
 			<textcolor>white</textcolor>
-			<texturefocus border="10">button-focus.png</texturefocus>
-			<texturenofocus border="10">button-nofocus.png</texturenofocus>
+			<texturefocus border="10">buttons/button-focus.png</texturefocus>
+			<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
 			<label />
 			<align>left</align>
 		</control>

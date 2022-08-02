@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">450</defaultcontrol>
+	<include>BladesRunnerRightAnimation1</include>
 	<coordinates>
 		<system>1</system>
 		<left>730</left>
@@ -8,87 +9,90 @@
 	</coordinates>
 	<controls>
 		<control type="group">
-			<include>BladesRunnerRightAnimation1</include>
 			<include>BladesRunnerRight</include>
-			<control type="label" id="411">
-				<description>Header label</description>
-				<left>200</left>
-				<label>1036</label>
-				<include>DialogHeaderTextCommons</include>
-			</control>
-			<control type="image">
-				<left>180</left>
-				<top>70</top>
-				<width>350</width>
-				<height>200</height>
-				<aspectratio align="center">keep</aspectratio>
-				<fadetime>IconCrossfadeTime</fadetime>
-				<texture>$INFO[ListItem.Icon]</texture>
-				<bordertexture border="19,3,19,3">thumb-border.png</bordertexture>
-				<bordersize>18,2,18,2</bordersize>
-			</control>
-			<control type="list" id="450">
-				<left>180</left>
-				<top>280</top>
-				<width>350</width>
-				<height>360</height>
-				<onup>450</onup>
-				<onleft>Dialog.Close(Favourites)</onleft>
-				<onright>450</onright>
-				<ondown>450</ondown>
-				<scrolltime>200</scrolltime>
-				<itemlayout height="45">
-					<control type="image">
-						<width>350</width>
-						<height>45</height>
-						<texture border="10">list-nofocus.png</texture>
-					</control>
-					<control type="label">
-						<left>10</left>
-						<width>330</width>
-						<height>45</height>
-						<font>font12_title</font>
-						<align>left</align>
-						<aligny>center</aligny>
-						<selectedcolor>selected</selectedcolor>
-						<info>ListItem.Label</info>
-					</control>
-				</itemlayout>
-				<focusedlayout height="45">
-					<control type="image">
-						<width>350</width>
-						<height>45</height>
-						<visible>!Control.HasFocus(450)</visible>
-						<texture border="3">list-nofocus.png</texture>
-					</control>
-					<control type="image">
-						<width>350</width>
-						<height>45</height>
-						<visible>Control.HasFocus(450)</visible>
-						<texture border="3">list-focus.png</texture>
-					</control>
-					<control type="label">
-						<left>10</left>
-						<width>330</width>
-						<height>45</height>
-						<font>font12_title</font>
-						<aligny>center</aligny>
-						<selectedcolor>selected</selectedcolor>
-						<info>ListItem.Label</info>
-					</control>
-				</focusedlayout>
-			</control>
-			<control type="label">
-				<description>Page label</description>
-				<left>170</left>
-				<top>670</top>
-				<width>350</width>
-				<height>30</height>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font12</font>
-				<textcolor>grey2</textcolor>
-				<label>$INFO[Container(450).NumItems] $LOCALIZE[31200] - $LOCALIZE[31201] $INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages]</label>
+			<control type="group">
+				<animation effect="fade" delay="600" time="DialogVisibleFadeAnimationSpeed">WindowOpen</animation>
+				<animation effect="fade" delay="100" time="DialogVisibleFadeAnimationSpeed">WindowClose</animation>
+				<control type="label" id="411">
+					<description>Header label</description>
+					<left>200</left>
+					<label>1036</label>
+					<include>DialogHeaderTextCommons</include>
+				</control>
+				<control type="image">
+					<left>180</left>
+					<top>70</top>
+					<width>350</width>
+					<height>200</height>
+					<aspectratio align="center">keep</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<bordertexture border="19,3,19,3">thumb-border.png</bordertexture>
+					<bordersize>18,2,18,2</bordersize>
+				</control>
+				<control type="list" id="450">
+					<left>180</left>
+					<top>280</top>
+					<width>350</width>
+					<height>360</height>
+					<onup>450</onup>
+					<onleft>Dialog.Close(Favourites)</onleft>
+					<onright>450</onright>
+					<ondown>450</ondown>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="45">
+						<control type="image">
+							<width>350</width>
+							<height>45</height>
+							<texture border="10">buttons/list-nofocus.png</texture>
+						</control>
+						<control type="label">
+							<left>10</left>
+							<width>330</width>
+							<height>45</height>
+							<font>font12_title</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<selectedcolor>orange</selectedcolor>
+							<info>ListItem.Label</info>
+						</control>
+					</itemlayout>
+					<focusedlayout height="45">
+						<control type="image">
+							<width>350</width>
+							<height>45</height>
+							<visible>!Control.HasFocus(450)</visible>
+							<texture border="3">buttons/list-nofocus.png</texture>
+						</control>
+						<control type="image">
+							<width>350</width>
+							<height>45</height>
+							<visible>Control.HasFocus(450)</visible>
+							<texture border="3">buttons/list-focus.png</texture>
+						</control>
+						<control type="label">
+							<left>10</left>
+							<width>330</width>
+							<height>45</height>
+							<font>font12_title</font>
+							<aligny>center</aligny>
+							<selectedcolor>orange</selectedcolor>
+							<info>ListItem.Label</info>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="label">
+					<description>Page label</description>
+					<left>170</left>
+					<top>670</top>
+					<width>350</width>
+					<height>30</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>grey2</textcolor>
+					<label>$INFO[Container(450).NumItems] $LOCALIZE[31200] - $LOCALIZE[31201] $INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages]</label>
+				</control>
 			</control>
 		</control>
 	</controls>

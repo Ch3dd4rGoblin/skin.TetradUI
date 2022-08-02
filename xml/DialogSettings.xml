@@ -4,7 +4,7 @@
 	<coordinates>
 		<system>1</system>
 		<left>290</left>
-		<top>30</top>
+		<top>25.5</top>
 	</coordinates>
 	<include>dialogeffect</include>	
 	<controls>
@@ -13,9 +13,9 @@
 			<control type="image">
 				<description>background image</description>
 				<width>700</width>
-				<height>660</height>
+				<height>669</height>
 				<colordiffuse>EEFFFFFF</colordiffuse>
-				<texture border="50,100,50,50">Dialog.png</texture>
+				<texture border="50,100,50,50">dialogs/Dialog.png</texture>
 			</control>
 			<control type="label" id="2">
 				<description>heading label</description>
@@ -41,7 +41,7 @@
 			</control>
 			<control type="image">
 				<left>325</left>
-				<top>525</top>
+				<top>533</top>
 				<width>50</width>
 				<height>50</height>
 				<aspectratio>keep</aspectratio>
@@ -52,10 +52,10 @@
 			<control type="grouplist" id="5">
 				<description>control area</description>
 				<left>50</left>
-				<top>130</top>
+				<top>133</top>
 				<width>600</width>
-				<height>400</height>
-				<itemgap>5</itemgap>
+				<height>405</height>
+				<itemgap>0</itemgap>
 				<onleft>28</onleft>
 				<onright>30</onright>
 				<onup>9001</onup>
@@ -98,7 +98,7 @@
 				<textcolor>blue</textcolor>
 			</control>
 			<control type="grouplist" id="9001">
-				<top>570</top>
+				<top>578</top>
 				<left>47</left>
 				<width>606</width>
 				<align>center</align>

@@ -12,7 +12,7 @@
 			<description>Dialog Back</description>
 			<width>810</width>
 			<height>470</height>
-			<texture border="50,100,50,50">Dialog.png</texture>
+			<texture border="50,100,50,50">dialogs/Dialog.png</texture>
 		</control>
 		<control type="label" id="2">
 			<description>Heading label</description>
@@ -51,7 +51,7 @@
 				<control type="image">
 					<width>500</width>
 					<height>45</height>
-					<texture border="10">list-nofocus.png</texture>
+					<texture border="10">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="label">
 					<left>10</left>
@@ -59,7 +59,7 @@
 					<height>45</height>
 					<font>font13</font>
 					<aligny>center</aligny>
-					<selectedcolor>selected</selectedcolor>
+					<selectedcolor>orange</selectedcolor>
 					<info>ListItem.Label</info>
 				</control>
 			</itemlayout>
@@ -68,13 +68,13 @@
 					<width>500</width>
 					<height>45</height>
 					<visible>!Control.HasFocus(10)</visible>
-					<texture border="10">list-nofocus.png</texture>
+					<texture border="10">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
 					<width>500</width>
 					<height>45</height>
 					<visible>Control.hasfocus(14) | Control.HasFocus(10)</visible>
-					<texture border="10">list-focus.png</texture>
+					<texture border="10">buttons/list-focus.png</texture>
 				</control>
 				<control type="label">
 					<left>10</left>
@@ -82,7 +82,7 @@
 					<height>45</height>
 					<font>font13</font>
 					<aligny>center</aligny>
-					<selectedcolor>selected</selectedcolor>
+					<selectedcolor>orange</selectedcolor>
 					<info>ListItem.Label</info>
 					<visible>![Control.hasfocus(14) + Control.HasFocus(10)]</visible>
 				</control>
@@ -92,7 +92,7 @@
 					<height>45</height>
 					<font>font13</font>
 					<aligny>center</aligny>
-					<selectedcolor>selected</selectedcolor>
+					<selectedcolor>orange</selectedcolor>
 					<info>ListItem.Label</info>
 					<visible>Control.hasfocus(14) | Control.HasFocus(10)</visible>
 				</control>

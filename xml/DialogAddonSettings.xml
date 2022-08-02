@@ -12,7 +12,7 @@
 			<description>background image</description>
 			<width>1155</width>
 			<height>660</height>
-			<texture border="50,100,50,50">Dialog.png</texture>
+			<texture border="50,100,50,50">dialogs/Dialog.png</texture>
 			<animation effect="fade" start="90" end="90" time="0" condition="Window.IsVisible(Visualisation)">Conditional</animation>
 		</control>
 		<control type="label" id="2">
@@ -98,13 +98,7 @@
 
 		<control type="button" id="10">
 			<description>Default Category Button</description>
-			<width>200</width>
-			<height>45</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<font>font12</font>
-			<texturefocus border="10">button-dialog-focus.png</texturefocus>
-			<texturenofocus border="10">button-dialog-nofocus.png</texturenofocus>
+			<include>DialogButton2CommonValues</include>
 		</control>
 		<control type="button" id="7">
 			<description>Default Button</description>

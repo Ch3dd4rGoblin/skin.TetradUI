@@ -15,7 +15,7 @@
 				<description>background image</description>
 				<width>860</width>
 				<height>540</height>
-				<texture border="50,100,50,50">Dialog.png</texture>
+				<texture border="50,100,50,50">dialogs/Dialog.png</texture>
 			</control>
 			<control type="label" id="2">
 				<description>heading label</description>
@@ -55,7 +55,7 @@
 					<control type="image">
 						<width>565</width>
 						<height>45</height>
-						<texture border="10">list-nofocus.png</texture>
+						<texture border="10">buttons/list-nofocus.png</texture>
 					</control>
 					<control type="label">
 						<left>10</left>
@@ -70,13 +70,13 @@
 					<control type="image">
 						<width>565</width>
 						<height>45</height>
-						<texture border="10">list-nofocus.png</texture>
+						<texture border="10">buttons/list-nofocus.png</texture>
 						<visible>!Control.HasFocus(10)</visible>
 					</control>
 					<control type="image">
 						<width>565</width>
 						<height>45</height>
-						<texture border="10">list-focus.png</texture>
+						<texture border="10">buttons/list-focus.png</texture>
 						<visible>Control.HasFocus(10)</visible>
 					</control>
 					<control type="label">
@@ -153,8 +153,8 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label />
-				<texturefocus border="10">list-focus.png</texturefocus>
-				<texturenofocus border="10">list-nofocus.png</texturenofocus>
+				<texturefocus border="10">buttons/list-focus.png</texturefocus>
+				<texturenofocus border="10">buttons/list-nofocus.png</texturenofocus>
 				<onup>10</onup>
 				<onleft>12</onleft>
 				<onright>19</onright>

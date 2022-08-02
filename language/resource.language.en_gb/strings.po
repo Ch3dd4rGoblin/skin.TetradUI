@@ -69,7 +69,7 @@ msgid "Forecast"
 msgstr ""
 
 msgctxt "#31023"
-msgid "Updated :"
+msgid "Updated:"
 msgstr ""
 
 msgctxt "#31024"
@@ -191,7 +191,7 @@ msgid "available"
 msgstr ""
 
 msgctxt "#31228"
-msgid "Order"
+msgid "Add-on shortcut"
 msgstr ""
 
 msgctxt "#31229"
@@ -226,7 +226,57 @@ msgctxt "#31236"
 msgid "End Time:"
 msgstr ""
 
-# empty strings from id 31237 to 31249
+msgctxt "#31237"
+msgid "Welcome to TetradUI"
+msgstr ""
+
+msgctxt "#31238"
+msgid "Navigation is done using the top logo button.[CR]Using the skin setting it can either be placed top left or center.[CR][CR][B]Top logo button[/B][CR]Navigating between the blades is done using [I]left[/I] and [I]right[/I].[CR]Clicking the logo button will open a shortcuts sideblade.[CR][CR][B]Menu lists[/B][CR]If no widgets or submenus are present, you can navigate between the blades using [I]left[/I] and [I]right[/I] from the menu lists.[CR][CR][B]Widgets[/B][CR]If widgets are present, [I]left[/I] from the menu lists will take you to the widgets.[CR][I]Left[/I] or [I]right[/I] will take you back to the menu lists.[CR][CR][B]Submenu lists[/B][CR]If submenus are present, [I]right[/I] from the menu lists will take you there.[CR][I]Left[/I] from the submenus will take you back to the menu and [I]right[/I] will take you to the widgets.[CR]If no widgets are present, [I]right[/I] will switch blade."
+msgstr ""
+
+msgctxt "#31239"
+msgid "Never show again"
+msgstr ""
+
+msgctxt "#31240"
+msgid "Hidden channels"
+msgstr ""
+
+msgctxt "#31241"
+msgid "Navigation"
+msgstr ""
+
+msgctxt "#31242"
+msgid "Available groups"
+msgstr ""
+
+msgctxt "#31243"
+msgid "Hidden channels"
+msgstr ""
+
+msgctxt "#31244"
+msgid "Add group"
+msgstr ""
+
+msgctxt "#31245"
+msgid "Rename group"
+msgstr ""
+
+msgctxt "#31246"
+msgid "Delete group"
+msgstr ""
+
+msgctxt "#31247"
+msgid "Timeshift"
+msgstr ""
+
+msgctxt "#31248"
+msgid "Channel group"
+msgstr ""
+
+msgctxt "#31249"
+msgid "Recently played"
+msgstr ""
 
 msgctxt "#31250"
 msgid "Poster Big"
@@ -348,7 +398,9 @@ msgctxt "#31406"
 msgid "Change skin specific settings, including:[CR][CR]* Window backgrounds[CR]* Media view options[CR]* Image packs[CR]* Other misc. options"
 msgstr ""
 
-# empty string with id 31407
+msgctxt "#31407"
+msgid "Configure PVR settings, including:[CR][CR]* Channels[CR]* Guide[CR]* Playback[CR]* Recordings[CR]* Reminders"
+msgstr ""
 
 msgctxt "#31408"
 msgid "Configure player settings, including:[CR][CR]* Library options[CR]* Hardware acceleration[CR]* Subtitles[CR]* DVD playback"
@@ -452,7 +504,19 @@ msgctxt "#31525"
 msgid "Select rating"
 msgstr ""
 
-# empty strings from id 31526 to 31537
+msgctxt "#31526"
+msgid "Animate all fanart backgrounds"
+msgstr ""
+
+msgctxt "#31527"
+msgid "Animate fanart backgrounds for music playing"
+msgstr ""
+
+msgctxt "#31528"
+msgid "Enable Artist Slideshow fanart backgrounds"
+msgstr ""
+
+# empty strings from id 31529 to 31537
 
 msgctxt "#31538"
 msgid "About"

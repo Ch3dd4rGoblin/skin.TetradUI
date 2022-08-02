@@ -16,8 +16,8 @@
 	<default type="button">
 		<width>340</width>
 		<height>42</height>
-		<texturefocus>button-focus.png</texturefocus>
-		<texturenofocus>button-nofocus.png</texturenofocus>
+		<texturefocus>buttons/button-focus.png</texturefocus>
+		<texturenofocus>buttons/button-nofocus.png</texturenofocus>
 		<font>font13</font>
 		<textcolor>white</textcolor>
 		<focusedcolor>white</focusedcolor>
@@ -82,7 +82,7 @@
 		<height>42</height>
 		<spinwidth>30</spinwidth>
 		<spinheight>30</spinheight>
-		<texturefocus>button-focus.png</texturefocus>
+		<texturefocus>buttons/button-focus.png</texturefocus>
 		<texturenofocus />
 		<textureup>sortup-nofocus.png</textureup>
 		<texturedown>sortdown-nofocus.png</texturedown>
@@ -104,12 +104,16 @@
 		<height>42</height>
 		<radiowidth>24</radiowidth>
 		<radioheight>24</radioheight>
-		<textureradiofocus>check-box.png</textureradiofocus>
-		<textureradionofocus>check-boxNF.png</textureradionofocus>
-		<textureradioondisabled colordiffuse="60FFFFFF">check-box.png</textureradioondisabled>
-		<textureradiooffdisabled colordiffuse="60FFFFFF">check-boxNF.png</textureradiooffdisabled>
-		<texturefocus>button-focus.png</texturefocus>
-		<texturenofocus>button-nofocus.png</texturenofocus>
+		<textureradioonfocus>buttons/check-box.png</textureradioonfocus>
+		<textureradioonnofocus>buttons/check-box.png</textureradioonnofocus>
+		<textureradioofffocus>buttons/check-boxNF.png</textureradioofffocus>
+		<textureradiooffnofocus>buttons/check-boxNF.png</textureradiooffnofocus>
+		<textureradiofocus>buttons/check-box.png</textureradiofocus>
+		<textureradionofocus>buttons/check-boxNF.png</textureradionofocus>
+		<textureradioondisabled colordiffuse="60FFFFFF">buttons/check-box.png</textureradioondisabled>
+		<textureradiooffdisabled colordiffuse="60FFFFFF">buttons/check-boxNF.png</textureradiooffdisabled>
+		<texturefocus>buttons/button-focus.png</texturefocus>
+		<texturenofocus>buttons/button-nofocus.png</texturenofocus>
 		<font>font13</font>
 		<textcolor>white</textcolor>
 		<focusedcolor>white</focusedcolor>
@@ -119,16 +123,16 @@
 		<pulseonselect>no</pulseonselect>
 	</default>
 	<default type="edit">
-		<description>Name Button</description>
 		<width>300</width>
 		<height>45</height>
 		<textoffsetx>15</textoffsetx>
 		<textcolor>white</textcolor>
 		<focusedcolor>white</focusedcolor>
+		<invalidcolor>ffff0000</invalidcolor>
 		<disabledcolor>disabled</disabledcolor>
 		<font>font12</font>
-		<texturefocus>button-focus.png</texturefocus>
-		<texturenofocus>button-nofocus.png</texturenofocus>
+		<texturefocus border="5,10,5,10">buttons/button-focus.png</texturefocus>
+		<texturenofocus border="5,10,5,10">buttons/button-nofocus.png</texturenofocus>
 	</default>
 	<default type="slider">
 		<texturesliderbar>osd_slider_bg.png</texturesliderbar>
@@ -146,12 +150,12 @@
 		<textureslidernibfocus>slider_nibFO.png</textureslidernibfocus>
 	</default>
 	<default type="mover">
-		<texturefocus>button-focus.png</texturefocus>
-		<texturenofocus>button-nofocus.png</texturenofocus>
+		<texturefocus>buttons/button-focus.png</texturefocus>
+		<texturenofocus>buttons/button-nofocus.png</texturenofocus>
 	</default>
 	<default type="resize">
-		<texturefocus>button-focus.png</texturefocus>
-		<texturenofocus>button-nofocus.png</texturenofocus>
+		<texturefocus>buttons/button-focus.png</texturefocus>
+		<texturenofocus>buttons/button-nofocus.png</texturenofocus>
 	</default>
 	<default type="ranges">
 		<height>12</height>

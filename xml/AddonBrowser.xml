@@ -5,24 +5,11 @@
 	<views>50,52,55</views>
 	<controls>
 		<include condition="!Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
-		<control type="group">
-			<visible>![Window.Previous(Videos) | Window.Previous(Music) | Window.Previous(Pictures)]</visible>
-			<include>CommonAppsBackground</include>
-		</control>
-		<control type="group">
-			<visible>Window.Previous(Videos) | Window.Previous(Music) | Window.Previous(Pictures)</visible>
-			<include>CommonMediaBackground</include>
-		</control>
+		<include condition="![Window.Previous(Videos) | Window.Previous(Music) | Window.Previous(Pictures) | Skin.String(SubBladeType,media)]">CommonAppsBackground</include>
+		<include condition="Window.Previous(Videos) | Window.Previous(Music) | Window.Previous(Pictures) | Skin.String(SubBladeType,media)">CommonMediaBackground</include>
 		<include condition="Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
-
-		<control type="group">
-			<visible>![Window.Previous(Videos) | Window.Previous(Music) | Window.Previous(Pictures)]</visible>
-			<include>CommonAppsBlackwash</include>
-		</control>
-		<control type="group">
-			<visible>Window.Previous(Videos) | Window.Previous(Music) | Window.Previous(Pictures)</visible>
-			<include>CommonMediaBlackwash</include>
-		</control>
+		<include condition="![Window.Previous(Videos) | Window.Previous(Music) | Window.Previous(Pictures) | Skin.String(SubBladeType,media)]">CommonAppsBlackwash</include>
+		<include condition="Window.Previous(Videos) | Window.Previous(Music) | Window.Previous(Pictures) | Skin.String(SubBladeType,media)">CommonMediaBlackwash</include>
 
 		<control type="group">
 			<left>130</left>
@@ -44,100 +31,65 @@
 		<include>BackgroundDim</include>
 		<control type="group" id="9000">
 			<include>Container9000BladesRunner</include>
-			<control type="group">
-				<include>Container9000Header</include>
+			<control type="grouplist" id="610">
+				<include content="Container9000Header">
+					<param name="left" value="100" />
+					<param name="top" value="100" />
+				</include>
 				<control type="button" id="2">
 					<description>View As button</description>
 					<include>ButtonCommonValues</include>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<onup>611</onup>
-					<ondown>3</ondown>
 				</control>
-				<control type="togglebutton" id="3">
+				<control type="button" id="3">
 					<description>Sort by button</description>
-					<include>SortbyButton</include>
+					<left>2</left>
+					<label>103</label>
 					<include>ButtonCommonValues</include>
-					<ondown>9</ondown>
 				</control>
 				<control type="togglebutton" id="4">
 					<description>Sort asc</description>
 					<include>SortAscendingButton</include>
-					<ondown>9</ondown>
 				</control>
 				<control type="button" id="9">
 					<description>Check for Updates Button</description>
-					<left>4</left>
-					<top>80</top>
+					<left>7</left>
 					<include>ButtonCommonValues</include>
 					<label>24034</label>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<onup>3</onup>
-					<ondown>6</ondown>
 				</control>
 				<control type="radiobutton" id="6">
 					<description>No notifications</description>
-					<left>6</left>
-					<top>120</top>
+					<left>9</left>
 					<include>ButtonCommonValues</include>
 					<label>25000</label>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<onup>9</onup>
-					<ondown>7</ondown>
 				</control>
 				<control type="radiobutton" id="7">
 					<description>Hide foreign</description>
-					<left>7</left>
-					<top>160</top>
+					<left>8</left>
 					<include>ButtonCommonValues</include>
 					<label>25001</label>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<onup>6</onup>
-					<ondown>8</ondown>
 				</control>
 				<control type="radiobutton" id="8">
 					<description>Show / hide broken add-ons</description>
-					<left>6</left>
-					<top>200</top>
+					<left>7</left>
 					<include>ButtonCommonValues</include>
 					<label>24999</label>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<onup>7</onup>
-					<ondown>5</ondown>
 				</control>
 				<control type="button" id="5">
 					<description>Settings Button</description>
-					<left>4</left>
-					<top>240</top>
+					<left>6</left>
 					<include>ButtonCommonValues</include>
 					<label>10004</label>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<onup>8</onup>
-					<ondown>610</ondown>
 				</control>
-				<control type="button" id="610">
-					<description>Fake Button to fix Player Controls Navigation</description>
-					<onup>5</onup>
-					<ondown>603</ondown>
-					<visible>false</visible>
-				</control>
-				<control type="button" id="611">
-					<description>Fake Button to fix Player Controls Navigation</description>
-					<onup>606</onup>
-					<ondown>2</ondown>
-					<visible>false</visible>
-				</control>
-				<include>CommonPlayerControls</include>
 			</control>
+			<include content="CommonPlayerControls">
+				<param name="left" value="100" />
+				<param name="top" value="140" />
+			</include>
 		</control>
 		<include>AllViewCommonPageControls</include>
 		<control type="group">
-			<include>AppsToSubBlades</include>
+			<include condition="Skin.String(SubBladeType,media)">MediaToSubBlades</include>
+			<include condition="!Skin.String(SubBladeType,media)">AppsToSubBlades</include>
 		</control>
 		<include>Common_Now_Playing</include>
 	</controls>

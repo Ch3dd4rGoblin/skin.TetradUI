@@ -14,7 +14,7 @@
 				<description>background image</description>
 				<width>800</width>
 				<height>705</height>
-				<texture border="50,100,50,50">Dialog.png</texture>
+				<texture border="50,100,50,50">dialogs/Dialog.png</texture>
 			</control>
 			<control type="label" id="2">
 				<description>heading label</description>
@@ -35,8 +35,8 @@
 				<height>45</height>
 				<font>font12</font>
 				<label>467</label>
-				<texturefocus border="10">list-focus.png</texturefocus>
-				<texturenofocus border="10">list-nofocus.png</texturenofocus>
+				<texturefocus border="10">buttons/list-focus.png</texturefocus>
+				<texturenofocus border="10">buttons/list-nofocus.png</texturenofocus>
 				<onright>22</onright>
 				<onleft>22</onleft>
 				<onup>9001</onup>
@@ -59,8 +59,8 @@
 				<height>45</height>
 				<font>font12</font>
 				<aligny>center</aligny>
-				<texturefocus border="10">list-focus.png</texturefocus>
-				<texturenofocus border="10">list-nofocus.png</texturenofocus>
+				<texturefocus border="10">buttons/list-focus.png</texturefocus>
+				<texturenofocus border="10">buttons/list-nofocus.png</texturenofocus>
 				<label />
 				<onup>22</onup>
 				<onleft>12</onleft>
@@ -91,7 +91,7 @@
 					<control type="image">
 						<width>545</width>
 						<height>45</height>
-						<texture border="10">list-nofocus.png</texture>
+						<texture border="10">buttons/list-nofocus.png</texture>
 					</control>
 					<control type="label">
 						<left>10</left>
@@ -106,13 +106,13 @@
 					<control type="image">
 						<width>545</width>
 						<height>45</height>
-						<texture border="10">list-focus.png</texture>
+						<texture border="10">buttons/list-focus.png</texture>
 						<visible>Control.HasFocus(10)</visible>
 					</control>
 					<control type="image">
 						<width>545</width>
 						<height>45</height>
-						<texture border="10">list-nofocus.png</texture>
+						<texture border="10">buttons/list-nofocus.png</texture>
 						<visible>!Control.HasFocus(10)</visible>
 					</control>
 					<control type="label">
@@ -161,8 +161,8 @@
 				<height>45</height>
 				<label>21424</label>
 				<font>font12</font>
-				<texturefocus border="10">list-focus.png</texturefocus>
-				<texturenofocus border="10">list-nofocus.png</texturenofocus>
+				<texturefocus border="10">buttons/list-focus.png</texturefocus>
+				<texturenofocus border="10">buttons/list-nofocus.png</texturenofocus>
 				<onright>16</onright>
 				<onleft>16</onleft>
 				<onup>10</onup>
@@ -176,8 +176,8 @@
 				<height>45</height>
 				<label>21427</label>
 				<font>font12</font>
-				<texturefocus border="10">list-focus.png</texturefocus>
-				<texturenofocus border="10">list-nofocus.png</texturenofocus>
+				<texturefocus border="10">buttons/list-focus.png</texturefocus>
+				<texturenofocus border="10">buttons/list-nofocus.png</texturenofocus>
 				<onright>17</onright>
 				<onleft>17</onleft>
 				<onup>16</onup>
@@ -191,8 +191,8 @@
 				<height>45</height>
 				<label>21429</label>
 				<font>font12</font>
-				<texturefocus border="10">list-focus.png</texturefocus>
-				<texturenofocus border="10">list-nofocus.png</texturenofocus>
+				<texturefocus border="10">buttons/list-focus.png</texturefocus>
+				<texturenofocus border="10">buttons/list-nofocus.png</texturenofocus>
 				<onright>19</onright>
 				<onleft>19</onleft>
 				<onup>17</onup>
@@ -207,8 +207,8 @@
 				<font>font12</font>
 				<label />
 				<align>center</align>
-				<texturefocus border="10">list-focus.png</texturefocus>
-				<texturenofocus border="10">list-nofocus.png</texturenofocus>
+				<texturefocus border="10">buttons/list-focus.png</texturefocus>
+				<texturenofocus border="10">buttons/list-nofocus.png</texturenofocus>
 				<onright>18</onright>
 				<onleft>18</onleft>
 				<onup>17</onup>
@@ -222,8 +222,8 @@
 				<height>45</height>
 				<font>font12</font>
 				<label>21458</label>
-				<texturefocus border="10">list-focus.png</texturefocus>
-				<texturenofocus border="10">list-nofocus.png</texturenofocus>
+				<texturefocus border="10">buttons/list-focus.png</texturefocus>
+				<texturenofocus border="10">buttons/list-nofocus.png</texturenofocus>
 				<onright>24</onright>
 				<onleft>24</onleft>
 				<onup>18</onup>
@@ -237,8 +237,8 @@
 				<height>45</height>
 				<font>font12</font>
 				<align>center</align>
-				<texturefocus border="10">list-focus.png</texturefocus>
-				<texturenofocus border="10">list-nofocus.png</texturenofocus>
+				<texturefocus border="10">buttons/list-focus.png</texturefocus>
+				<texturenofocus border="10">buttons/list-nofocus.png</texturenofocus>
 				<label>21459</label>
 				<onright>18</onright>
 				<onleft>23</onleft>

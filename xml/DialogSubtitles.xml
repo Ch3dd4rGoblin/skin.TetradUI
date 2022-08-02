@@ -11,7 +11,7 @@
 			<description>background image</description>
 			<width>1138</width>
 			<height>650</height>
-			<texture border="50,100,50,50">Dialog.png</texture>
+			<texture border="50,100,50,50">dialogs/Dialog.png</texture>
 		</control>
 		<control type="label" id="100">
 			<description>heading label</description>
@@ -39,7 +39,7 @@
 				<control type="image">
 					<width>834</width>
 					<height>45</height>
-					<texture border="10">list-nofocus.png</texture>
+					<texture border="10">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
 					<left>5</left>
@@ -93,13 +93,13 @@
 				<control type="image">
 					<width>834</width>
 					<height>45</height>
-					<texture border="10">list-focus.png</texture>
+					<texture border="10">buttons/list-focus.png</texture>
 					<visible>Control.HasFocus(120)</visible>
 				</control>
 				<control type="image">
 					<width>834</width>
 					<height>45</height>
-					<texture border="10">list-nofocus.png</texture>
+					<texture border="10">buttons/list-nofocus.png</texture>
 					<visible>!Control.HasFocus(120)</visible>
 				</control>
 				<control type="image">
@@ -163,7 +163,7 @@
 				<control type="image">
 					<width>200</width>
 					<height>45</height>
-					<texture border="10">button-dialog-nofocus.png</texture>
+					<texture border="10">buttons/button-dialog-nofocus.png</texture>
 				</control>
 				<control type="label">
 					<left>15</left>
@@ -179,7 +179,7 @@
 				<control type="image">
 					<width>200</width>
 					<height>45</height>
-					<texture border="10">button-dialog-focus.png</texture>
+					<texture border="10">buttons/button-dialog-focus.png</texture>
 					<animation effect="fade" start="100" end="45" condition="!Control.HasFocus(150)">Conditional</animation>
 				</control>
 				<control type="label">
@@ -226,7 +226,7 @@
 			<aligny>center</aligny>
 			<scroll>true</scroll>
 			<textcolor>white</textcolor>
-			<label>$LOCALIZE[31201] ($INFO[Container(120).CurrentPage]/$INFO[Container(120).NumPages])</label>
+			<label>$LOCALIZE[31201] $INFO[Container(120).CurrentPage]/$INFO[Container(120).NumPages]</label>
 		</control>
 		<control type="image">
 			<left>50</left>

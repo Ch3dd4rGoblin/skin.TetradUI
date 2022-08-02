@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">10</defaultcontrol>
-	<controls>
-		<control type="group">
-			<include>CommonMediaBackground</include>
-		</control>
-		<control type="group">
-			<include>CommonMediaBlackwash</include>
-		</control>
-		<control type="group">
-			<include>MediaToSubBlades</include>
-		</control>
-		<control type="button" id="10">
-			<description>trigger</description>
-			<onfocus>ReplaceWindow(Home)</onfocus>
-			<texturenofocus />
-			<texturefocus />
-			<animation effect="fade" start="0" end="0">Focus</animation>
-		</control>
-	</controls>
+	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
+	<controls />
 </window>

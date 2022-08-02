@@ -11,7 +11,7 @@
 		<control type="image">
 			<width>400</width>
 			<height>85</height>
-			<texture border="20,20,20,30">Dialog2.png</texture>
+			<texture border="20,20,20,30">dialogs/Dialog2.png</texture>
 		</control>
 		<control type="label">
 			<description>Dialog header</description>

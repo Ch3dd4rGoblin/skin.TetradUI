@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1111">
 	<defaultcontrol always="true">9050</defaultcontrol>
+	<onload condision="!String.IsEmpty(SubBladeType))">Skin.Reset(SubBladeType)</onload>
 	<animation effect="fade" start="100" end="100" time="30" condition="Control.HasFocus(1)">WindowClose</animation>
 	<animation effect="fade" start="100" end="100" time="30" condition="Control.HasFocus(2)">WindowClose</animation>
 	<controls>
@@ -67,10 +68,14 @@
 				<control type="list" id="9000">
 					<width>450</width>
 					<height>314</height>
-					<onleft>1</onleft>
+					<onleft condition="![String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4)]">520</onleft>
+					<onleft condition="String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4)">1</onleft>
 					<onright condition="Container(9000).HasFocus(1)">9100</onright>
-					<onright condition="!Container(9000).HasFocus(1)">2</onright>
+					<onright condition="!Container(9000).HasFocus(1) + ![String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4)]">520</onright>
+					<onright condition="!Container(9000).HasFocus(1) + [String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4)]">2</onright>
 					<onup>9050</onup>
+					<ondown condition="![String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4)]">520</ondown>
+					<ondown condition="String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4)">9000</ondown>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>60</pagecontrol>
 					<scrolltime>200</scrolltime>
@@ -100,10 +105,11 @@
 							<left>30</left>
 							<width>397</width>
 							<height>50</height>
-							<texture>button.png</texture>
+							<texture>buttons/button.png</texture>
 							<animation effect="slide" start="0,-52" time="200" tween="sine" easing="out" condition="Container(9000).OnNext" reversible="false">Focus</animation>
 							<animation effect="slide" start="0,52" time="200" tween="sine" easing="out" condition="Container(9000).OnPrevious" reversible="false">Focus</animation>
-							<animation effect="fade" start="100" end="25" time="200" condition="!Control.HasFocus(9000)">Conditional</animation>
+							<animation effect="fade" start="100" end="25" time="200" condition="!Control.HasFocus(9000) + !Control.HasFocus(9050)">Conditional</animation>
+							<animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(9050)">Conditional</animation>
 							<visible>!Control.HasFocus(9050)</visible>
 						</control>
 						<control type="image">
@@ -167,8 +173,11 @@
 					<width>450</width>
 					<height>238</height>
 					<onleft>9000</onleft>
-					<onright>2</onright>
+					<onright condition="![String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4)]">520</onright>
+					<onright condition="String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4)">2</onright>
 					<onup>9050</onup>
+					<ondown condition="![String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4)]">520</ondown>
+					<ondown condition="String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4)">9100</ondown>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>60</pagecontrol>
 					<scrolltime>200</scrolltime>
@@ -199,10 +208,11 @@
 							<left>20</left>
 							<width>397</width>
 							<height>34</height>
-							<texture>button.png</texture>
+							<texture>buttons/button.png</texture>
 							<animation effect="slide" start="0,-34" time="200" tween="sine" easing="out" condition="Container(9100).OnNext" reversible="false">Focus</animation>
 							<animation effect="slide" start="0,34" time="200" tween="sine" easing="out" condition="Container(9100).OnPrevious" reversible="false">Focus</animation>
 							<animation effect="fade" start="100" end="0" time="200" condition="!Control.HasFocus(9100)">Conditional</animation>
+							<visible>!Control.HasFocus(9050)</visible>
 						</control>
 						<control type="image">
 							<description>Icon</description>
@@ -241,16 +251,19 @@
 					<content>
 						<item>
 							<label>1037</label>
+							<onclick>Skin.SetString(SubBladeType,apps)</onclick>
 							<onclick>ActivateWindow(Videos,Addons,Return)</onclick>
 							<icon>defaultaddonvideo.png</icon>
 						</item>
 						<item>
 							<label>1038</label>
+							<onclick>Skin.SetString(SubBladeType,apps)</onclick>
 							<onclick>ActivateWindow(Music,Addons,Return)</onclick>
 							<icon>DefaultAddonMusic.png</icon>
 						</item>
 						<item>
 							<label>1039</label>
+							<onclick>Skin.SetString(SubBladeType,apps)</onclick>
 							<onclick>ActivateWindow(Pictures,Addons,Return)</onclick>
 							<icon>DefaultAddonPicture.png</icon>
 						</item>
@@ -277,7 +290,8 @@
 						</item>
 					</content>
 				</control>
-				<include>SystemCard</include>
+				<include condition="!Skin.String(AddonShortcut1) + !Skin.String(AddonShortcut2) + !Skin.String(AddonShortcut3) + !Skin.String(AddonShortcut4)">SystemCard</include>
+				<include condition="Skin.String(AddonShortcut1) | Skin.String(AddonShortcut2) | Skin.String(AddonShortcut3) | Skin.String(AddonShortcut4)">AddonShortcuts</include>
 			</control>
 			<include condition="System.GetBool(LookAndFeel.EnableRSSFeeds)">CommonRSSFeed</include>
 		</control>
@@ -309,7 +323,6 @@
 				<top>-40</top>
 				<width>115</width>
 				<height>800</height>
-				<aspectratio>stretch</aspectratio>
 				<texture>blades-size4-header.png</texture>
 			</control>
 			<control type="label">
@@ -336,7 +349,6 @@
 				<top>-40</top>
 				<width>115</width>
 				<height>800</height>
-				<aspectratio>stretch</aspectratio>
 				<texture>blades-size3-right-NF.png</texture>
 			</control>
 			<control type="label">
@@ -367,7 +379,6 @@
 				<top>-40</top>
 				<width>115</width>
 				<height>800</height>
-				<aspectratio>stretch</aspectratio>
 				<texture>blades-size3-left-NF.png</texture>
 			</control>
 			<control type="label">
@@ -382,7 +393,6 @@
 				<top>-40</top>
 				<width>115</width>
 				<height>800</height>
-				<aspectratio>stretch</aspectratio>
 				<texture>blades-size4-header.png</texture>
 				<visible>Control.HasFocus(2)</visible>
 				<animation effect="fade" time="HomeBladeAnimationSpeed">visible</animation>
@@ -441,7 +451,6 @@
 				<top>-40</top>
 				<width>115</width>
 				<height>800</height>
-				<aspectratio>stretch</aspectratio>
 				<texture>blades-size2-right-NF.png</texture>
 			</control>
 			<control type="label">
@@ -456,7 +465,6 @@
 				<top>-40</top>
 				<width>115</width>
 				<height>800</height>
-				<aspectratio>stretch</aspectratio>
 				<texture>blades-size3-right-NF.png</texture>
 				<visible>Control.HasFocus(1)</visible>
 				<animation effect="fade" time="HomeBladeAnimationSpeed">visible</animation>

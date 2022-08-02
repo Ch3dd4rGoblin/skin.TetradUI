@@ -24,75 +24,45 @@
 		<include>BackgroundDim</include>
 		<control type="group" id="9000">
 			<include>Container9000BladesRunner</include>
-			<control type="group">
-				<include>Container9000Header</include>
+			<control type="grouplist" id="610">
+				<include content="Container9000Header">
+					<param name="left" value="100" />
+					<param name="top" value="100" />
+				</include>
 				<control type="button" id="2">
 					<description>View As button</description>
 					<include>ButtonCommonValues</include>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<onup>611</onup>
-					<ondown>20</ondown>
 				</control>
 				<control type="radiobutton" id="20">
 					<description>Shuffle button</description>
 					<left>2</left>
-					<top>40</top>
 					<include>ButtonCommonValues</include>
 					<label>191</label>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<onup>2</onup>
-					<ondown>26</ondown>
 				</control>
 				<control type="button" id="26">
 					<description>Repeat button</description>
-					<left>4</left>
-					<top>80</top>
+					<left>5</left>
 					<label />
 					<include>ButtonCommonValues</include>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<onup>20</onup>
-					<ondown>21</ondown>
 				</control>
 				<control type="button" id="21">
 					<description>Save</description>
-					<left>6</left>
-					<top>120</top>
+					<left>7</left>
 					<include>ButtonCommonValues</include>
 					<label>190</label>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<onup>26</onup>
-					<ondown>22</ondown>
 				</control>
 				<control type="button" id="22">
 					<description>Clear button</description>
-					<left>8</left>
-					<top>160</top>
+					<left>9</left>
 					<label>192</label>
 					<onclick>ReplaceWindow(Video)</onclick>
 					<include>ButtonCommonValues</include>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<onup>21</onup>
-					<ondown>610</ondown>
 				</control>
-				<control type="button" id="610">
-					<description>Fake Button to fix Player Controls Navigation</description>
-					<onup>22</onup>
-					<ondown>603</ondown>
-					<visible>false</visible>
-				</control>
-				<control type="button" id="611">
-					<description>Fake Button to fix Player Controls Navigation</description>
-					<onup>606</onup>
-					<ondown>2</ondown>
-					<visible>false</visible>
-				</control>
-				<include>CommonPlayerControls</include>
 			</control>
+			<include content="CommonPlayerControls">
+				<param name="left" value="100" />
+				<param name="top" value="140" />
+			</include>
 		</control>
 		<include>AllViewCommonPageControls</include>
 		<control type="group">

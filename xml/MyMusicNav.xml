@@ -33,62 +33,43 @@
 		<include>BackgroundDim</include>
 		<control type="group" id="9000">
 			<include>Container9000BladesRunner</include>
-			<control type="group">
-				<include>Container9000Header</include>
+			<control type="grouplist" id="610">
+				<include content="Container9000Header">
+					<param name="left" value="100" />
+					<param name="top" value="100" />
+				</include>
 				<control type="button" id="2">
 					<description>View As button</description>
 					<include>ButtonCommonValues</include>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<onup>611</onup>
-					<ondown>3</ondown>
 				</control>
-				<control type="togglebutton" id="3">
+				<control type="button" id="3">
 					<description>Sort by button</description>
-					<include>SortbyButton</include>
+					<left>2</left>
 					<include>ButtonCommonValues</include>
-					<ondown>8</ondown>
 				</control>
 				<control type="togglebutton" id="4">
 					<description>Sort asc</description>
 					<include>SortAscendingButton</include>
-					<ondown>8</ondown>
 				</control>
 				<control type="edit" id="8">
 					<description>Search</description>
-					<left>6</left>
-					<top>80</top>
+					<left>7</left>
 					<label>137</label>
 					<include>ButtonCommonValues</include>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<onup>3</onup>
-					<ondown condition="Control.IsVisible(19)">19</ondown>
-					<ondown condition="!Control.IsVisible(19)">9001</ondown>
 				</control>
 				<control type="radiobutton" id="19">
 					<description>Filter</description>
-					<left>8</left>
-					<top>120</top>
+					<left>9</left>
 					<label>587</label>
 					<include>ButtonCommonValues</include>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<onup>8</onup>
-					<ondown>20</ondown>
 					<selected>Container.Filtered</selected>
 					<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
 				</control>
 				<control type="radiobutton" id="9001">
 					<description>Filter Advanced</description>
-					<left>8</left>
-					<top>120</top>
+					<left>9</left>
 					<label>587</label>
 					<include>ButtonCommonValues</include>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<onup>8</onup>
-					<ondown>20</ondown>
 					<onclick>Filter</onclick>
 					<selected>Container.Filtered</selected>
 					<visible>Container.CanFilterAdvanced</visible>
@@ -96,48 +77,30 @@
 				<control type="togglebutton" id="20">
 					<description>Update library</description>
 					<left>8</left>
-					<top>160</top>
 					<include>ButtonCommonValues</include>
 					<label>$LOCALIZE[653]</label>
 					<altlabel>$LOCALIZE[13353]</altlabel>
-					<alttexturefocus border="4,6,4,8">button-focus.png</alttexturefocus>
-					<alttexturenofocus border="4,6,4,8">button-nofocus.png</alttexturenofocus>
+					<alttexturefocus border="4,6,4,8">buttons/button-focus.png</alttexturefocus>
+					<alttexturenofocus border="4,6,4,8">buttons/button-nofocus.png</alttexturenofocus>
 					<usealttexture>library.isscanningmmusic</usealttexture>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<onup condition="Control.IsVisible(19)">19</onup>
-					<onup condition="!Control.IsVisible(19)">9001</onup>
 					<ondown>16</ondown>
 				</control>
 				<control type="radiobutton" id="16">
 					<description>Partymode</description>
-					<left>8</left>
-					<top>200</top>
+					<left>7</left>
 					<label>589</label>
 					<include>ButtonCommonValues</include>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<onup>20</onup>
-					<ondown>610</ondown>
 				</control>
-				<control type="button" id="610">
-					<description>Fake Button to fix Player Controls Navigation</description>
-					<onup>16</onup>
-					<ondown>603</ondown>
-					<visible>false</visible>
-				</control>
-				<control type="button" id="611">
-					<description>Fake Button to fix Player Controls Navigation</description>
-					<onup>606</onup>
-					<ondown>2</ondown>
-					<visible>false</visible>
-				</control>
-				<include>CommonPlayerControls</include>
 			</control>
+			<include content="CommonPlayerControls">
+				<param name="left" value="100" />
+				<param name="top" value="140" />
+			</include>
 		</control>
 		<include>AllViewCommonPageControls</include>
 		<control type="group">
-			<include>MediaToSubBlades</include>
+			<include condition="Skin.String(SubBladeType,apps)">AppsToSubBlades</include>
+			<include condition="!Skin.String(SubBladeType,apps)">MediaToSubBlades</include>
 		</control>
 		<include>Common_Now_Playing</include>
 	</controls>

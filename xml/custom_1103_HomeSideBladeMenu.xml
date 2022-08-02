@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1103">
 	<defaultcontrol>610</defaultcontrol>
+	<include>BladesRunnerRightAnimation1</include>
 	<coordinates>
 		<system>1</system>
 		<left>730</left>
@@ -8,7 +9,6 @@
 	</coordinates>
 	<controls>
 		<control type="group">
-			<include>BladesRunnerRightAnimation1</include>
 			<include>BladesRunnerRight</include>
 			<animation type="Conditional" condition="![Window.IsActive(Favourites) | Window.IsActive(ShutdownMenu)]">
 				<effect type="fade" start="0" end="100" time="100" />
@@ -55,7 +55,7 @@
 							<description>Button focus</description>
 							<width>340</width>
 							<height>50</height>
-							<texture>button.png</texture>
+							<texture>buttons/button.png</texture>
 							<animation effect="slide" start="0,-52" time="200" tween="sine" easing="out" condition="Container(610).OnNext" reversible="false">Focus</animation>
 							<animation effect="slide" start="0,52" time="200" tween="sine" easing="out" condition="Container(610).OnPrevious" reversible="false">Focus</animation>
 							<animation effect="fade" start="100" end="25" time="200" condition="!Control.HasFocus(610)">Conditional</animation>
@@ -115,11 +115,10 @@
 						</item>
 					</content>
 				</control>
-				<control type="group">
-					<left>20</left>
-					<top>140</top>
-					<include>CommonPlayerControls</include>
-				</control>
+				<include content="CommonPlayerControls">
+					<param name="left" value="20" />
+					<param name="top" value="140" />
+				</include>
 			</control>
 		</control>
 	</controls>

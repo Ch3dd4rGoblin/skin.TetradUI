@@ -88,7 +88,7 @@
 					<top>461</top>
 					<width>415</width>
 					<height>198</height>
-					<texture border="10">list-nofocus.png</texture>
+					<texture border="10">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
 					<left>240</left>
@@ -113,7 +113,7 @@
 						<control type="image">
 							<width>645</width>
 							<height>45</height>
-							<texture border="10">list-nofocus.png</texture>
+							<texture border="10">buttons/list-nofocus.png</texture>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -135,7 +135,7 @@
 						<control type="image">
 							<width>645</width>
 							<height>45</height>
-							<texture border="10">list-focus.png</texture>
+							<texture border="10">buttons/list-focus.png</texture>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -169,7 +169,7 @@
 						<control type="image">
 							<width>645</width>
 							<height>45</height>
-							<texture border="10">list-nofocus.png</texture>
+							<texture border="10">buttons/list-nofocus.png</texture>
 						</control>
 						<control type="image">
 							<left>10</left>
@@ -191,7 +191,7 @@
 						<control type="image">
 							<width>645</width>
 							<height>45</height>
-							<texture border="10">list-focus.png</texture>
+							<texture border="10">buttons/list-focus.png</texture>
 						</control>
 						<control type="image">
 							<left>10</left>

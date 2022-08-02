@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">8</defaultcontrol>
+	<include>BladesRunnerRightAnimation2</include>
 	<controls>
 		<control type="group">
 			<visible>!Window.IsVisible(FileBrowser)</visible>
-			<include>BladesRunnerRightAnimation2</include>
 			<include>BladesRunnerRight</include>
 
 			<control type="group">
@@ -15,21 +15,6 @@
 					<left>200</left>
 					<label>$VAR[DialogInfoTitleLabel]</label>
 					<include>DialogHeaderTextCommons</include>
-				</control>
-				<control type="group">
-					<visible>Control.HasFocus(12)</visible>
-					<include>VisibleFadeEffect</include>
-					<control type="largeimage">
-						<description>Fanart image</description>
-						<left>200</left>
-						<top>110</top>
-						<width>1050</width>
-						<height>500</height>
-						<texture background="true">$INFO[Listitem.Art(fanart)]</texture>
-						<aspectratio>keep</aspectratio>
-						<bordertexture border="19,3,19,3">thumb-border.png</bordertexture>
-						<bordersize>18,2,18,2</bordersize>
-					</control>
 				</control>
 				<control type="label">
 					<description>Video Title value</description>
@@ -45,7 +30,7 @@
 					<font>font30</font>
 				</control>
 				<control type="group">
-					<visible>!Control.HasFocus(12) + !Control.IsVisible(50)</visible>
+					<visible>!Control.IsVisible(50)</visible>
 					<include>VisibleFadeEffect</include>
 					<include>MovieSetContainer</include>
 					<control type="group">
@@ -97,7 +82,7 @@
 									<width>750</width>
 									<height>33</height>
 									<visible>Control.HasFocus(49)</visible>
-									<texture border="10">list-focus.png</texture>
+									<texture border="10">buttons/list-focus.png</texture>
 								</control>
 								<control type="label">
 									<width>160</width>
@@ -224,7 +209,7 @@
 									<width>940</width>
 									<height>33</height>
 									<visible>Control.HasFocus(49)</visible>
-									<texture border="10">list-focus.png</texture>
+									<texture border="10">buttons/list-focus.png</texture>
 								</control>
 								<control type="label">
 									<width>160</width>
@@ -322,7 +307,7 @@
 									<width>650</width>
 									<height>33</height>
 									<visible>Control.HasFocus(49)</visible>
-									<texture border="10">list-focus.png</texture>
+									<texture border="10">buttons/list-focus.png</texture>
 								</control>
 								<control type="label">
 									<width>160</width>
@@ -445,7 +430,7 @@
 									<width>650</width>
 									<height>33</height>
 									<visible>Control.HasFocus(49)</visible>
-									<texture border="10">list-focus.png</texture>
+									<texture border="10">buttons/list-focus.png</texture>
 								</control>
 								<control type="label">
 									<width>160</width>
@@ -505,122 +490,118 @@
 						</control>
 					</control>
 				</control>
-				<control type="group">
-					<visible>!Control.HasFocus(12)</visible>
-					<include>VisibleFadeEffect</include>
-					<control type="textbox" id="400">
-						<description>textarea</description>
-						<left>520</left>
-						<top>450</top>
-						<width>730</width>
-						<height>150</height>
-						<font>font12</font>
-						<label>$INFO[ListItem.Plot]</label>
-						<align>justify</align>
-						<visible>!Control.IsVisible(50) + String.IsEqual(ListItem.DBTYPE,movie)</visible>
-						<pagecontrol>61</pagecontrol>
-					</control>
-					<control type="textbox" id="400">
-						<description>textarea</description>
-						<left>520</left>
-						<top>245</top>
-						<width>730</width>
-						<height>350</height>
-						<font>font12</font>
-						<label>$VAR[MoviePlot]</label>
-						<align>justify</align>
-						<visible>!Control.IsVisible(50) + String.IsEqual(ListItem.DBTYPE,set)</visible>
-						<pagecontrol>61</pagecontrol>
-					</control>
-					<control type="textbox" id="400">
-						<description>textarea</description>
-						<left>220</left>
-						<top>450</top>
-						<width>1000</width>
-						<height>150</height>
-						<font>font12</font>
-						<label>$INFO[ListItem.Plot]</label>
-						<align>justify</align>
-						<visible>!Control.IsVisible(50) + ![String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set)]</visible>
-						<pagecontrol>61</pagecontrol>
-					</control>
-					<control type="panel" id="50">
-						<left>220</left>
-						<top>150</top>
-						<width>1000</width>
-						<height>400</height>
-						<onleft>9000</onleft>
-						<onright>61</onright>
-						<onup>9000</onup>
-						<ondown>9000</ondown>
-						<viewtype label="">list</viewtype>
-						<pagecontrol>61</pagecontrol>
-						<scrolltime>200</scrolltime>
-						<orientation>vertical</orientation>
-						<itemlayout height="100" width="500">
-							<control type="image">
-								<width>495</width>
-								<height>98</height>
-								<texture border="8">button-dialog-nofocus.png</texture>
-							</control>
-							<control type="image">
-								<top>10</top>
-								<left>-2</left>
-								<width>101</width>
-								<height>77</height>
-								<texture fallback="DefaultActor.png">$VAR[ListItemPosterVar]</texture>
-								<bordertexture border="14,0,14,0">thumb-border.png</bordertexture>
-								<bordersize>12,0,12,0</bordersize>
-								<aspectratio aligny="top">scale</aspectratio>
-							</control>
-							<control type="textbox">
-								<left>97</left>
-								<top>18</top>
-								<width>393</width>
-								<height>75</height>
-								<font>font13</font>
-								<label>$INFO[ListItem.Label][CR][COLOR=grey]$INFO[ListItem.Label2][/COLOR]</label>
-							</control>
-						</itemlayout>
-						<focusedlayout height="100" width="500">
-							<control type="image">
-								<width>495</width>
-								<height>98</height>
-								<texture border="8">button-dialog-focus.png</texture>
-							</control>
-							<control type="image">
-								<top>10</top>
-								<left>-2</left>
-								<width>101</width>
-								<height>77</height>
-								<texture fallback="DefaultActor.png">$VAR[ListItemPosterVar]</texture>
-								<bordertexture border="14,0,14,0">thumb-border.png</bordertexture>
-								<bordersize>12,0,12,0</bordersize>
-								<aspectratio aligny="top">scale</aspectratio>
-							</control>
-							<control type="textbox">
-								<left>97</left>
-								<top>18</top>
-								<width>393</width>
-								<height>75</height>
-								<font>font13</font>
-								<label>$INFO[ListItem.Label][CR][COLOR=white2]$INFO[ListItem.Label2][/COLOR]</label>
-							</control>
-						</focusedlayout>
-					</control>
-					<control type="spincontrol" id="61">
-						<description>Next page button</description>
-						<left>100r</left>
-						<top>120r</top>
-						<subtype>page</subtype>
-						<font>font12</font>
-						<onleft>61</onleft>
-						<onright>61</onright>
-						<ondown>9000</ondown>
-						<onup>50</onup>
-						<textcolor>grey2</textcolor>
-						<showonepage>false</showonepage>
-					</control>
+				<control type="textbox" id="400">
+					<description>textarea</description>
+					<left>520</left>
+					<top>450</top>
+					<width>730</width>
+					<height>150</height>
+					<font>font12</font>
+					<label>$INFO[ListItem.Plot]</label>
+					<align>justify</align>
+					<visible>!Control.IsVisible(50) + String.IsEqual(ListItem.DBTYPE,movie)</visible>
+					<pagecontrol>61</pagecontrol>
+				</control>
+				<control type="textbox" id="400">
+					<description>textarea</description>
+					<left>520</left>
+					<top>245</top>
+					<width>730</width>
+					<height>350</height>
+					<font>font12</font>
+					<label>$VAR[MoviePlot]</label>
+					<align>justify</align>
+					<visible>!Control.IsVisible(50) + String.IsEqual(ListItem.DBTYPE,set)</visible>
+					<pagecontrol>61</pagecontrol>
+				</control>
+				<control type="textbox" id="400">
+					<description>textarea</description>
+					<left>220</left>
+					<top>450</top>
+					<width>1000</width>
+					<height>150</height>
+					<font>font12</font>
+					<label>$INFO[ListItem.Plot]</label>
+					<align>justify</align>
+					<visible>!Control.IsVisible(50) + ![String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set)]</visible>
+					<pagecontrol>61</pagecontrol>
+				</control>
+				<control type="panel" id="50">
+					<left>220</left>
+					<top>150</top>
+					<width>1000</width>
+					<height>400</height>
+					<onleft>9000</onleft>
+					<onright>61</onright>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					<viewtype label="">list</viewtype>
+					<pagecontrol>61</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<orientation>vertical</orientation>
+					<itemlayout height="100" width="500">
+						<control type="image">
+							<width>495</width>
+							<height>98</height>
+							<texture border="8">buttons/button-dialog-nofocus.png</texture>
+						</control>
+						<control type="image">
+							<top>10</top>
+							<left>-2</left>
+							<width>101</width>
+							<height>77</height>
+							<texture fallback="DefaultActor.png">$VAR[ListItemPosterVar]</texture>
+							<bordertexture border="14,0,14,0">thumb-border.png</bordertexture>
+							<bordersize>12,0,12,0</bordersize>
+							<aspectratio aligny="top">scale</aspectratio>
+						</control>
+						<control type="textbox">
+							<left>97</left>
+							<top>18</top>
+							<width>393</width>
+							<height>75</height>
+							<font>font13</font>
+							<label>$INFO[ListItem.Label][CR][COLOR=grey]$INFO[ListItem.Label2][/COLOR]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="100" width="500">
+						<control type="image">
+							<width>495</width>
+							<height>98</height>
+							<texture border="8">buttons/button-dialog-focus.png</texture>
+						</control>
+						<control type="image">
+							<top>10</top>
+							<left>-2</left>
+							<width>101</width>
+							<height>77</height>
+							<texture fallback="DefaultActor.png">$VAR[ListItemPosterVar]</texture>
+							<bordertexture border="14,0,14,0">thumb-border.png</bordertexture>
+							<bordersize>12,0,12,0</bordersize>
+							<aspectratio aligny="top">scale</aspectratio>
+						</control>
+						<control type="textbox">
+							<left>97</left>
+							<top>18</top>
+							<width>393</width>
+							<height>75</height>
+							<font>font13</font>
+							<label>$INFO[ListItem.Label][CR][COLOR=white2]$INFO[ListItem.Label2][/COLOR]</label>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="spincontrol" id="61">
+					<description>Next page button</description>
+					<left>100r</left>
+					<top>120r</top>
+					<subtype>page</subtype>
+					<font>font12</font>
+					<onleft>61</onleft>
+					<onright>61</onright>
+					<ondown>9000</ondown>
+					<onup>50</onup>
+					<textcolor>grey2</textcolor>
+					<showonepage>false</showonepage>
 				</control>
 				<control type="grouplist">
 					<description>Media Codec Flagging Images</description>

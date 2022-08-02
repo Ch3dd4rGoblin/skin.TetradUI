@@ -12,7 +12,7 @@
 			<description>background image</description>
 			<width>340</width>
 			<height>440</height>
-			<texture border="50,100,50,50">Dialog.png</texture>
+			<texture border="50,100,50,50">dialogs/Dialog.png</texture>
 		</control>
 		<control type="label" id="1">
 			<description>heading label</description>
@@ -32,7 +32,7 @@
 			<top>100</top>
 			<width>240</width>
 			<height>45</height>
-			<texture border="10">list-nofocus.png</texture>
+			<texture border="10">buttons/list-nofocus.png</texture>
 		</control>
 		<control type="label" id="4">
 			<description>Edit Text</description>
@@ -54,8 +54,8 @@
 				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="12">keyboard-nofocus.png</texturenofocus>
-				<texturefocus border="12">keyboard-focus.png</texturefocus>
+				<texturenofocus border="12">buttons/keyboard-nofocus.png</texturenofocus>
+				<texturefocus border="12">buttons/keyboard-focus.png</texturefocus>
 				<label>12311</label>
 				<onleft>23</onleft>
 				<onright>12</onright>
@@ -71,8 +71,8 @@
 				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="12">keyboard-nofocus.png</texturenofocus>
-				<texturefocus border="12">keyboard-focus.png</texturefocus>
+				<texturenofocus border="12">buttons/keyboard-nofocus.png</texturenofocus>
+				<texturefocus border="12">buttons/keyboard-focus.png</texturefocus>
 				<label>12312</label>
 				<onleft>11</onleft>
 				<onright>13</onright>
@@ -88,8 +88,8 @@
 				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="12">keyboard-nofocus.png</texturenofocus>
-				<texturefocus border="12">keyboard-focus.png</texturefocus>
+				<texturenofocus border="12">buttons/keyboard-nofocus.png</texturenofocus>
+				<texturefocus border="12">buttons/keyboard-focus.png</texturefocus>
 				<label>12313</label>
 				<onleft>12</onleft>
 				<onright>23</onright>
@@ -106,8 +106,8 @@
 				<font>font10</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="12">keyboard-nofocus.png</texturenofocus>
-				<texturefocus border="12">keyboard-focus.png</texturefocus>
+				<texturenofocus border="12">buttons/keyboard-nofocus.png</texturenofocus>
+				<texturefocus border="12">buttons/keyboard-focus.png</texturefocus>
 				<label>20181</label>
 				<angle>270</angle>
 				<onleft>13</onleft>
@@ -124,8 +124,8 @@
 				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="12">keyboard-nofocus.png</texturenofocus>
-				<texturefocus border="12">keyboard-focus.png</texturefocus>
+				<texturenofocus border="12">buttons/keyboard-nofocus.png</texturenofocus>
+				<texturefocus border="12">buttons/keyboard-focus.png</texturefocus>
 				<label>12314</label>
 				<onleft>23</onleft>
 				<onright>15</onright>
@@ -142,8 +142,8 @@
 				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="12">keyboard-nofocus.png</texturenofocus>
-				<texturefocus border="12">keyboard-focus.png</texturefocus>
+				<texturenofocus border="12">buttons/keyboard-nofocus.png</texturenofocus>
+				<texturefocus border="12">buttons/keyboard-focus.png</texturefocus>
 				<label>12315</label>
 				<onleft>14</onleft>
 				<onright>16</onright>
@@ -160,8 +160,8 @@
 				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="12">keyboard-nofocus.png</texturenofocus>
-				<texturefocus border="12">keyboard-focus.png</texturefocus>
+				<texturenofocus border="12">buttons/keyboard-nofocus.png</texturenofocus>
+				<texturefocus border="12">buttons/keyboard-focus.png</texturefocus>
 				<label>12316</label>
 				<onleft>15</onleft>
 				<onright>23</onright>
@@ -177,8 +177,8 @@
 				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="12">keyboard-nofocus.png</texturenofocus>
-				<texturefocus border="12">keyboard-focus.png</texturefocus>
+				<texturenofocus border="12">buttons/keyboard-nofocus.png</texturenofocus>
+				<texturefocus border="12">buttons/keyboard-focus.png</texturefocus>
 				<label>12317</label>
 				<onleft>21</onleft>
 				<onright>18</onright>
@@ -195,8 +195,8 @@
 				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="12">keyboard-nofocus.png</texturenofocus>
-				<texturefocus border="12">keyboard-focus.png</texturefocus>
+				<texturenofocus border="12">buttons/keyboard-nofocus.png</texturenofocus>
+				<texturefocus border="12">buttons/keyboard-focus.png</texturefocus>
 				<label>12318</label>
 				<onleft>17</onleft>
 				<onright>19</onright>
@@ -213,8 +213,8 @@
 				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="12">keyboard-nofocus.png</texturenofocus>
-				<texturefocus border="12">keyboard-focus.png</texturefocus>
+				<texturenofocus border="12">buttons/keyboard-nofocus.png</texturenofocus>
+				<texturefocus border="12">buttons/keyboard-focus.png</texturefocus>
 				<label>12319</label>
 				<onleft>18</onleft>
 				<onright>21</onright>
@@ -232,8 +232,8 @@
 				<font>font10</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="12">keyboard-nofocus.png</texturenofocus>
-				<texturefocus border="12">keyboard-focus.png</texturefocus>
+				<texturenofocus border="12">buttons/keyboard-nofocus.png</texturenofocus>
+				<texturefocus border="12">buttons/keyboard-focus.png</texturefocus>
 				<label>20177</label>
 				<angle>270</angle>
 				<onleft>19</onleft>
@@ -251,8 +251,8 @@
 				<label>&lt;&lt;</label>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="12">keyboard-nofocus.png</texturenofocus>
-				<texturefocus border="12">keyboard-focus.png</texturefocus>
+				<texturenofocus border="12">buttons/keyboard-nofocus.png</texturenofocus>
+				<texturefocus border="12">buttons/keyboard-focus.png</texturefocus>
 				<onleft>21</onleft>
 				<onright>10</onright>
 				<onup>17</onup>
@@ -268,8 +268,8 @@
 				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="12">keyboard-nofocus.png</texturenofocus>
-				<texturefocus border="12">keyboard-focus.png</texturefocus>
+				<texturenofocus border="12">buttons/keyboard-nofocus.png</texturenofocus>
+				<texturefocus border="12">buttons/keyboard-focus.png</texturefocus>
 				<label>12310</label>
 				<onleft>20</onleft>
 				<onright>22</onright>
@@ -287,8 +287,8 @@
 				<label>&gt;&gt;</label>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturenofocus border="12">keyboard-nofocus.png</texturenofocus>
-				<texturefocus border="12">keyboard-focus.png</texturefocus>
+				<texturenofocus border="12">buttons/keyboard-nofocus.png</texturenofocus>
+				<texturefocus border="12">buttons/keyboard-focus.png</texturefocus>
 				<onleft>10</onleft>
 				<onright>21</onright>
 				<onup>19</onup>

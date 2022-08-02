@@ -69,8 +69,7 @@
 							<left>2</left>
 							<width>212</width>
 							<height>250</height>
-							<aspectratio>stretch</aspectratio>
-							<texture border="10">list-nofocus.png</texture>
+							<texture border="10">buttons/list-nofocus.png</texture>
 						</control>
 						<control type="image">
 							<left>12</left>
@@ -88,15 +87,13 @@
 							<left>2</left>
 							<width>212</width>
 							<height>250</height>
-							<aspectratio>stretch</aspectratio>
-							<texture border="10">list-focus.png</texture>
+							<texture border="10">buttons/list-focus.png</texture>
 							<visible>Control.HasFocus(52)</visible>
 						</control>
 						<control type="image">
 							<left>2</left>
 							<width>212</width>
 							<height>250</height>
-							<aspectratio>stretch</aspectratio>
 							<texture border="10">thumb-nofocus.png</texture>
 							<visible>!Control.HasFocus(52)</visible>
 						</control>
@@ -141,7 +138,6 @@
 			<top>-40</top>
 			<width>180</width>
 			<height>800</height>
-			<aspectratio>stretch</aspectratio>
 			<texture>blades-runner-left1.png</texture>
 		</control>
 		<control type="image">
@@ -149,7 +145,6 @@
 			<top>-40</top>
 			<width>180</width>
 			<height>800</height>
-			<aspectratio>stretch</aspectratio>
 			<texture>blades-runner-right.png</texture>
 		</control>
 		<include>BackgroundDim</include>

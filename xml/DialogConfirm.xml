@@ -12,7 +12,7 @@
 			<description>Dialog Back</description>
 			<width>700</width>
 			<height>320</height>
-			<texture border="50,100,50,50">Dialog.png</texture>
+			<texture border="50,100,50,50">dialogs/Dialog.png</texture>
 		</control>
 		<control type="label" id="1">
 			<description>Heading label</description>

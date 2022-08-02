@@ -3,6 +3,8 @@
 	<defaultcontrol always="true">9050</defaultcontrol>
 	<previouswindow>home</previouswindow>
 	<onload>SetProperty(RefreshList,1,Home)</onload>
+	<onload condision="!String.IsEmpty(SubBladeType))">Skin.Reset(SubBladeType)</onload>
+	<onload condition="Window.Previous(startup) + !Skin.HasSetting(DialogFirstRun)">AlarmClock(DialogFirstTime,ActivateWindow(1105),00:03,silent)</onload>
 	<animation effect="fade" start="100" end="100" time="30" condition="Control.HasFocus(1)">WindowClose</animation>
 	<animation effect="fade" start="100" end="100" time="30" condition="Control.HasFocus(2)">WindowClose</animation>
 	<controls>
@@ -72,7 +74,9 @@
 					<onleft condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(2)">501</onleft>
 					<onleft condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(3)">505</onleft>
 					<onleft condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(6)">509</onleft>
-					<onleft condition="!Skin.HasSetting(Blades_HideWidgets) | ![Container(9000).HasFocus(2) + Container(9000).HasFocus(3) + Container(9000).HasFocus(6)]">1</onleft>
+					<onleft condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(8)">513</onleft>
+					<onleft condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(9)">517</onleft>
+					<onleft condition="!Skin.HasSetting(Blades_HideWidgets) | ![Container(9000).HasFocus(2) + Container(9000).HasFocus(3) + Container(9000).HasFocus(6) + Container(9000).HasFocus(8) + Container(9000).HasFocus(9)]">1</onleft>
 					<onright>9100</onright>
 					<onup>9050</onup>
 					<ondown>9050</ondown>
@@ -80,7 +84,7 @@
 					<pagecontrol>60</pagecontrol>
 					<scrolltime>200</scrolltime>
 					<animation effect="slide" end="0,-30" condition="Integer.IsGreater(Container(9000).NumItems,5)">Conditional</animation>
-					<itemlayout height="52" width="450">
+					<itemlayout height="52" width="450" condition="Integer.IsLessOrEqual(Container(9000).NumItems,5)">
 						<control type="image">
 							<description>Icon</description>
 							<left>50</left>
@@ -100,16 +104,17 @@
 							<info>ListItem.Label</info>
 						</control>
 					</itemlayout>
-					<focusedlayout height="52" width="450">
+					<focusedlayout height="52" width="450" condition="Integer.IsLessOrEqual(Container(9000).NumItems,5)">
 						<control type="image">
 							<description>Button focus</description>
 							<left>30</left>
 							<width>397</width>
 							<height>50</height>
-							<texture>button.png</texture>
+							<texture>buttons/button.png</texture>
 							<animation effect="slide" start="0,-52" time="200" tween="sine" easing="out" condition="Container(9000).OnNext" reversible="false">Focus</animation>
 							<animation effect="slide" start="0,52" time="200" tween="sine" easing="out" condition="Container(9000).OnPrevious" reversible="false">Focus</animation>
-							<animation effect="fade" start="100" end="25" time="200" condition="!Control.HasFocus(9000)">Conditional</animation>
+							<animation effect="fade" start="100" end="25" time="200" condition="!Control.HasFocus(9000) + !Control.HasFocus(9050)">Conditional</animation>
+							<animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(9050)">Conditional</animation>
 							<visible>!Control.HasFocus(9050)</visible>
 						</control>
 						<control type="image">
@@ -147,6 +152,74 @@
 							</animation>
 						</control>
 					</focusedlayout>
+					<itemlayout height="42" width="450" condition="Integer.IsGreater(Container(9000).NumItems,5)">
+						<control type="image">
+							<description>Icon</description>
+							<left>50</left>
+							<top>2</top>
+							<width>38</width>
+							<height>38</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="label">
+							<left>120</left>
+							<width>330</width>
+							<height>38</height>
+							<font>font30</font>
+							<aligny>center</aligny>
+							<textcolor>white2</textcolor>
+							<align>left</align>
+							<info>ListItem.Label</info>
+						</control>
+					</itemlayout>
+					<focusedlayout height="42" width="450" condition="Integer.IsGreater(Container(9000).NumItems,5)">
+						<control type="image">
+							<description>Button focus</description>
+							<left>30</left>
+							<width>397</width>
+							<height>42</height>
+							<texture>buttons/button.png</texture>
+							<animation effect="slide" start="0,-42" time="200" tween="sine" easing="out" condition="Container(9000).OnNext" reversible="false">Focus</animation>
+							<animation effect="slide" start="0,42" time="200" tween="sine" easing="out" condition="Container(9000).OnPrevious" reversible="false">Focus</animation>
+							<animation effect="fade" start="100" end="25" time="200" condition="!Control.HasFocus(9000) + !Control.HasFocus(9050)">Conditional</animation>
+							<animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(9050)">Conditional</animation>
+							<visible>!Control.HasFocus(9050)</visible>
+						</control>
+						<control type="image">
+							<description>Icon</description>
+							<left>50</left>
+							<top>2</top>
+							<width>38</width>
+							<height>38</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<animation effect="slide" end="ButtonSlideBackDistance,0" time="ButtonSlideBackTime" reversible="false">focus</animation>
+						</control>
+						<control type="label">
+							<left>120</left>
+							<width>330</width>
+							<height>38</height>
+							<font>font30</font>
+							<aligny>center</aligny>
+							<textcolor>white</textcolor>
+							<align>left</align>
+							<label>$INFO[ListItem.Label]</label>
+							<animation effect="slide" end="ButtonSlideBackDistance,0" time="ButtonSlideBackTime" reversible="false">focus</animation>
+						</control>
+						<control type="image">
+							<description>Button shine animation</description>
+							<left>20</left>
+							<top>5</top>
+							<width>80</width>
+							<height>40</height>
+							<texture>shine-animation.png</texture>
+							<visible>System.IdleTime(5) + Control.HasFocus(9000)</visible>
+							<animation type="visible" reversible="false">
+								<effect type="fade" start="0" end="100" time="200"/>
+								<effect type="fade" start="100" end="0" delay="800" time="200"/>
+								<effect type="slide" start="0,0" end="350,0" delay="0" time="1000"/>
+							</animation>
+						</control>
+					</focusedlayout>
 					<content>
 						<item id="1">
 							<label>3</label>
@@ -166,24 +239,24 @@
 							<icon>button_icons/icon-tv.png</icon>
 							<visible>Library.HasContent(TVShows) + !Skin.HasSetting(MediaBlade_HideTVShows)</visible>
 						</item>
-						<item id="4">
-							<label>$INFO[Skin.String(MediaBlade_NameSmartPlaylist1)]</label>
-							<onclick>ActivateWindow(Videos,$INFO[Skin.String(MediaBlade_LinkSmartPlaylist1)],return)</onclick>
-							<icon>button_icons/icon-videos.png</icon>
-							<visible>Skin.HasSetting(MediaBlade_ShowSmartPlaylist1)</visible>
-						</item>
-						<item id="5">
-							<label>$INFO[Skin.String(MediaBlade_NameSmartPlaylist2)]</label>
-							<onclick>ActivateWindow(Videos,$INFO[Skin.String(MediaBlade_LinkSmartPlaylist2)],return)</onclick>
-							<icon>button_icons/icon-videos.png</icon>
-							<visible>Skin.HasSetting(MediaBlade_ShowSmartPlaylist2)</visible>
-						</item>
 						<item id="6">
 							<label>2</label>
 							<onclick condition="!Library.HasContent(Music)">ActivateWindow(Music,sources://music/,return)</onclick>
 							<onclick condition="Library.HasContent(Music)">ActivateWindow(Music,return)</onclick>
 							<icon>button_icons/icon-music.png</icon>
 							<visible>!Skin.HasSetting(MediaBlade_HideMusic)</visible>
+						</item>
+						<item id="8">
+							<label>19020</label>
+							<onclick>ActivateWindow(TVChannels)</onclick>
+							<icon>button_icons/icon-pvrtv.png</icon>
+							<visible>!Skin.HasSetting(MediaBlade_HideTV) + System.HasPVRAddon</visible>
+						</item>
+						<item id="9">
+							<label>19021</label>
+							<onclick>ActivateWindow(RadioChannels)</onclick>
+							<icon>button_icons/icon-pvrradio.png</icon>
+							<visible>!Skin.HasSetting(MediaBlade_HideRadio) + System.HasPVRAddon</visible>
 						</item>
 						<item id="7">
 							<label>1</label>
@@ -201,12 +274,16 @@
 					<onright condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(2)">501</onright>
 					<onright condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(3)">505</onright>
 					<onright condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(6)">509</onright>
-					<onright condition="Skin.HasSetting(Blades_HideWidgets) | ![Container(9000).HasFocus(2) + Container(9000).HasFocus(3) + Container(9000).HasFocus(6)]">2</onright>
+					<onright condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(8)">513</onright>
+					<onright condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(9)">517</onright>
+					<onright condition="Skin.HasSetting(Blades_HideWidgets) | ![Container(9000).HasFocus(2) + Container(9000).HasFocus(3) + Container(9000).HasFocus(6) + Container(9000).HasFocus(8) + Container(9000).HasFocus(8)]">2</onright>
 					<onup>9050</onup>
 					<ondown condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(2)">501</ondown>
 					<ondown condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(3)">505</ondown>
 					<ondown condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(6)">509</ondown>
-					<ondown condition="Skin.HasSetting(Blades_HideWidgets) | ![Container(9000).HasFocus(2) + Container(9000).HasFocus(3) + Container(9000).HasFocus(6)]">9100</ondown>
+					<ondown condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(8)">513</ondown>
+					<ondown condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(9)">517</ondown>
+					<ondown condition="Skin.HasSetting(Blades_HideWidgets) | ![Container(9000).HasFocus(2) + Container(9000).HasFocus(3) + Container(9000).HasFocus(6) + Container(9000).HasFocus(8) + Container(9000).HasFocus(8)]">9100</ondown>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>60</pagecontrol>
 					<scrolltime>200</scrolltime>
@@ -237,10 +314,11 @@
 							<left>20</left>
 							<width>397</width>
 							<height>34</height>
-							<texture>button.png</texture>
+							<texture>buttons/button.png</texture>
 							<animation effect="slide" start="0,-34" time="200" tween="sine" easing="out" condition="Container(9100).OnNext" reversible="false">Focus</animation>
 							<animation effect="slide" start="0,34" time="200" tween="sine" easing="out" condition="Container(9100).OnPrevious" reversible="false">Focus</animation>
 							<animation effect="fade" start="100" end="0" time="200" condition="!Control.HasFocus(9100)">Conditional</animation>
+							<visible>!Control.HasFocus(9050) + !Control.HasFocus(9000)</visible>
 						</control>
 						<control type="image">
 							<description>Icon</description>
@@ -401,13 +479,57 @@
 							<visible>Container(9000).HasFocus(3)</visible>
 						</item>
 						<item>
+							<label>14301</label>
+							<onclick condition="Container(9000).HasFocus(8)">ActivateWindow(TVChannels)</onclick>
+							<onclick condition="Container(9000).HasFocus(9)">ActivateWindow(RadioChannels)</onclick>
+							<icon>DefaultAddon.png</icon>
+							<visible>Container(9000).HasFocus(8) | Container(9000).HasFocus(9)</visible>
+						</item>
+						<item>
+							<label>22020</label>
+							<onclick condition="Container(9000).HasFocus(8)">ActivateWindow(TVGuide)</onclick>
+							<onclick condition="Container(9000).HasFocus(9)">ActivateWindow(RadioGuide)</onclick>
+							<icon>DefaultAddon.png</icon>
+							<visible>Container(9000).HasFocus(8) | Container(9000).HasFocus(9)</visible>
+						</item>
+						<item>
+							<label>19163</label>
+							<onclick condition="Container(9000).HasFocus(8)">ActivateWindow(TVRecordings)</onclick>
+							<onclick condition="Container(9000).HasFocus(9)">ActivateWindow(RadioRecordings)</onclick>
+							<icon>DefaultAddon.png</icon>
+							<visible>Container(9000).HasFocus(8) | Container(9000).HasFocus(9)</visible>
+						</item>
+						<item>
+							<label>19138</label>
+							<onclick condition="Container(9000).HasFocus(8)">ActivateWindow(TVTimerRules)</onclick>
+							<onclick condition="Container(9000).HasFocus(9)">ActivateWindow(RadioTimerRules)</onclick>
+							<icon>DefaultAddon.png</icon>
+							<visible>Container(9000).HasFocus(8) | Container(9000).HasFocus(9)</visible>
+						</item>
+						<item>
+							<label>19040</label>
+							<onclick condition="Container(9000).HasFocus(8)">ActivateWindow(TVTimers)</onclick>
+							<onclick condition="Container(9000).HasFocus(9)">ActivateWindow(RadioTimers)</onclick>
+							<icon>DefaultAddon.png</icon>
+							<visible>Container(9000).HasFocus(8) | Container(9000).HasFocus(9)</visible>
+						</item>
+						<item>
+							<label>137</label>
+							<onclick condition="Container(9000).HasFocus(8)">ActivateWindow(TVSearch)</onclick>
+							<onclick condition="Container(9000).HasFocus(9)">ActivateWindow(RadioSearch)</onclick>
+							<icon>DefaultAddon.png</icon>
+							<visible>Container(9000).HasFocus(8) | Container(9000).HasFocus(9)</visible>
+						</item>
+						<item>
 							<label>10040</label>
+							<onclick>Skin.SetString(SubBladeType,media)</onclick>
 							<onclick>ActivateWindow(addonbrowser,addons://user/xbmc.addon.image/,return)</onclick>
 							<icon>DefaultAddon.png</icon>
 							<visible>Container(9000).HasFocus(7)</visible>
 						</item>
 						<item>
 							<label>31315</label>
+							<onclick>Skin.SetString(SubBladeType,media)</onclick>
 							<onclick>ActivateWindow(addonbrowser,addons://all/xbmc.addon.image/,return)</onclick>
 							<icon>DefaultAddon.png</icon>
 							<visible>Container(9000).HasFocus(7)</visible>
@@ -523,6 +645,101 @@
 					<param name="content" value="$VAR[HomeRandomAlbums]" />
 					<param name="sortby" value="random" />
 				</include>
+				<include content="HomeWidget" condition="!Skin.HasSetting(Blades_HideWidgets) + System.HasPVRAddon">
+					<param name="visible" value="Container(9000).HasFocus(8)" />
+					<param name="left" value="40" />
+					<param name="label" value="31249" />
+					<param name="id" value="513" />
+					<param name="thumb" value="$INFO[Container(513).ListItem.Icon]" />
+					<param name="onleft" value="9000" />
+					<param name="onright" value="514" />
+					<param name="target" value="tvguide" />
+					<param name="content" value="pvr://channels/tv/*?view=lastplayed" />
+					<param name="sortby" value="lastplayed" />
+				</include>
+				<include content="HomeWidget" condition="!Skin.HasSetting(Blades_HideWidgets) + System.HasPVRAddon">
+					<param name="visible" value="Container(9000).HasFocus(8)" />
+					<param name="left" value="255" />
+					<param name="label" value="19163" />
+					<param name="id" value="514" />
+					<param name="thumb" value="$INFO[Container(514).ListItem.Icon]" />
+					<param name="onleft" value="513" />
+					<param name="onright" value="515" />
+					<param name="target" value="video" />
+					<param name="content" value="pvr://recordings/tv/active?view=flat" />
+					<param name="sortby" value="name" />
+				</include>
+				<include content="HomeWidget" condition="!Skin.HasSetting(Blades_HideWidgets) + System.HasPVRAddon">
+					<param name="visible" value="Container(9000).HasFocus(8)" />
+					<param name="left" value="470" />
+					<param name="label" value="19040" />
+					<param name="id" value="515" />
+					<param name="thumb" value="$INFO[Container(515).ListItem.Icon]" />
+					<param name="onleft" value="514" />
+					<param name="onright" value="516" />
+					<param name="target" value="tvtimers" />
+					<param name="content" value="pvr://timers/tv/timers/?view=hidedisabled" />
+					<param name="sortby" value="name" />
+				</include>
+				<include content="HomeWidget" condition="!Skin.HasSetting(Blades_HideWidgets) + System.HasPVRAddon">
+					<param name="visible" value="Container(9000).HasFocus(8)" />
+					<param name="left" value="685" />
+					<param name="label" value="19019" />
+					<param name="id" value="516" />
+					<param name="thumb" value="$INFO[Container(516).ListItem.Icon]" />
+					<param name="onleft" value="515" />
+					<param name="onright" value="9000" />
+					<param name="target" value="tvguide" />
+					<param name="content" value="pvr://channels/tv/*" />
+					<param name="sortby" value="name" />
+				</include>
+				<include content="HomeWidget" condition="!Skin.HasSetting(Blades_HideWidgets) + System.HasPVRAddon">
+					<param name="visible" value="Container(9000).HasFocus(9)" />
+					<param name="left" value="40" />
+					<param name="label" value="31249" />
+					<param name="id" value="517" />
+					<param name="thumb" value="$INFO[Container(517).ListItem.Icon]" />
+					<param name="onleft" value="9000" />
+					<param name="onright" value="518" />
+					<param name="target" value="radioguide" />
+					<param name="content" value="pvr://channels/radio/*?view=lastplayed" />
+					<param name="sortby" value="lastplayed" />
+				</include>
+				<include content="HomeWidget" condition="!Skin.HasSetting(Blades_HideWidgets) + System.HasPVRAddon">
+					<param name="visible" value="Container(9000).HasFocus(9)" />
+					<param name="left" value="255" />
+					<param name="label" value="19163" />
+					<param name="id" value="518" />
+					<param name="thumb" value="$INFO[Container(518).ListItem.Icon]" />
+					<param name="onleft" value="517" />
+					<param name="onright" value="519" />
+					<param name="content" value="pvr://recordings/radio/active?view=flat" />
+					<param name="sortby" value="name" />
+				</include>
+				<include content="HomeWidget" condition="!Skin.HasSetting(Blades_HideWidgets) + System.HasPVRAddon">
+					<param name="visible" value="Container(9000).HasFocus(9)" />
+					<param name="left" value="470" />
+					<param name="label" value="19040" />
+					<param name="id" value="519" />
+					<param name="thumb" value="$INFO[Container(519).ListItem.Icon]" />
+					<param name="onleft" value="518" />
+					<param name="onright" value="520" />
+					<param name="target" value="radiotimers" />
+					<param name="content" value="pvr://timers/radio/timers/?view=hidedisabled" />
+					<param name="sortby" value="name" />
+				</include>
+				<include content="HomeWidget" condition="!Skin.HasSetting(Blades_HideWidgets) + System.HasPVRAddon">
+					<param name="visible" value="Container(9000).HasFocus(9)" />
+					<param name="left" value="685" />
+					<param name="label" value="19019" />
+					<param name="id" value="520" />
+					<param name="thumb" value="$INFO[Container(520).ListItem.Icon]" />
+					<param name="onleft" value="519" />
+					<param name="onright" value="9000" />
+					<param name="target" value="radioguide" />
+					<param name="content" value="pvr://channels/radio/*" />
+					<param name="sortby" value="name" />
+				</include>
 			</control>
 			<include condition="System.GetBool(LookAndFeel.EnableRSSFeeds)">CommonRSSFeed</include>
 		</control>
@@ -553,7 +770,6 @@
 				<top>-40</top>
 				<width>115</width>
 				<height>800</height>
-				<aspectratio>stretch</aspectratio>
 				<texture>blades-size3-left-NF.png</texture>
 			</control>
 			<control type="label">
@@ -568,7 +784,6 @@
 				<top>-40</top>
 				<width>115</width>
 				<height>800</height>
-				<aspectratio>stretch</aspectratio>
 				<texture>blades-size4-header.png</texture>
 			</control>
 			<control type="label">
@@ -611,7 +826,6 @@
 				<top>-40</top>
 				<width>115</width>
 				<height>800</height>
-				<aspectratio>stretch</aspectratio>
 				<texture>blades-size4-header.png</texture>
 			</control>
 			<control type="label">
@@ -638,7 +852,6 @@
 				<top>-40</top>
 				<width>115</width>
 				<height>800</height>
-				<aspectratio>stretch</aspectratio>
 				<texture>blades-size3-right-NF.png</texture>
 				<visible>Control.HasFocus(1)</visible>
 				<animation effect="fade" time="HomeBladeAnimationSpeed">visible</animation>
@@ -673,7 +886,6 @@
 				<top>-40</top>
 				<width>115</width>
 				<height>800</height>
-				<aspectratio>stretch</aspectratio>
 				<texture>blades-size2-left-NF.png</texture>
 			</control>
 			<control type="label">
@@ -688,7 +900,6 @@
 				<top>-40</top>
 				<width>115</width>
 				<height>800</height>
-				<aspectratio>stretch</aspectratio>
 				<texture>blades-size3-left-NF.png</texture>
 			</control>
 			<control type="label">
@@ -703,7 +914,6 @@
 				<top>-40</top>
 				<width>115</width>
 				<height>800</height>
-				<aspectratio>stretch</aspectratio>
 				<texture>blades-size4-header.png</texture>
 				<visible>Control.HasFocus(2)</visible>
 				<animation effect="fade" time="HomeBladeAnimationSpeed">visible</animation>
@@ -724,7 +934,6 @@
 				<top>-40</top>
 				<width>180</width>
 				<height>800</height>
-				<aspectratio>stretch</aspectratio>
 				<texture>blades-runner-right.png</texture>
 			</control>
 		</control>

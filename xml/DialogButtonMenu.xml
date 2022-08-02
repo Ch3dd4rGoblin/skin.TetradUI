@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>2000</defaultcontrol>
+	<include>BladesRunnerRightAnimation1</include>
 	<coordinates>
 		<system>1</system>
 		<left>730</left>
@@ -8,7 +9,6 @@
 	</coordinates>
 	<controls>
 		<control type="group">
-			<include>BladesRunnerRightAnimation1</include>
 			<include>BladesRunnerRight</include>
 			<control type="label" id="411">
 				<description>Header label</description>
@@ -21,7 +21,6 @@
 				<animation effect="fade" delay="500" time="DialogVisibleFadeAnimationSpeed">WindowOpen</animation>
 				<animation effect="fade" delay="100" time="DialogVisibleFadeAnimationSpeed">WindowClose</animation>
 				<control type="list" id="2000">
-					<left>0</left>
 					<top>140</top>
 					<width>340</width>
 					<height>400</height>
@@ -48,7 +47,7 @@
 							<description>Button focus</description>
 							<width>340</width>
 							<height>50</height>
-							<texture>button.png</texture>
+							<texture>buttons/button.png</texture>
 							<animation effect="slide" start="0,-52" time="200" tween="sine" easing="out" condition="Container(2000).OnNext" reversible="false">Focus</animation>
 							<animation effect="slide" start="0,52" time="200" tween="sine" easing="out" condition="Container(2000).OnPrevious" reversible="false">Focus</animation>
 							<animation effect="fade" start="100" end="25" time="200" condition="!Control.HasFocus(2000)">Conditional</animation>

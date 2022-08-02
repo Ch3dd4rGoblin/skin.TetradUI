@@ -69,7 +69,7 @@
 			<width>80</width>
 			<height>35</height>
 			<texture>$VAR[VideoCodecImage]</texture>
-			<visible>!String.IsEmpty(ListItem.FilenameAndPath)</visible>
+			<visible>String.Contains(ListItem.FilenameAndPath,bluray) | String.Contains(ListItem.FilenameAndPath,bdrip) | String.Contains(ListItem.FilenameAndPath,brrip) | String.Contains(ListItem.FilenameAndPath,hddvd) | String.Contains(ListItem.FilenameAndPath,dvd) | String.Contains(ListItem.FileExtension,img) | String.Contains(ListItem.FileExtension,ifo) | String.Contains(ListItem.FileExtension,vob) | String.Contains(ListItem.FilenameAndPath,pdtv) | String.Contains(ListItem.FilenameAndPath,hdtv) | String.Contains(ListItem.FilenameAndPath,dsr) | String.Contains(ListItem.FilenameAndPath,vhs)</visible>
 		</control>
 		<control type="image">
 			<description>3D</description>
@@ -182,7 +182,7 @@
 			<width>80</width>
 			<height>35</height>
 			<texture>$VAR[VideoPlayerCodecImage]</texture>
-			<visible>!String.IsEmpty(Player.FilenameAndPath)</visible>
+			<visible>String.Contains(Player.FilenameAndPath,bluray) | String.Contains(Player.FilenameAndPath,bdrip) | String.Contains(Player.FilenameAndPath,brrip) | String.Contains(Player.FilenameAndPath,hddvd) | String.Contains(Player.FilenameAndPath,dvd) | String.EndsWith(Player.FilenameAndPath,.img) | String.EndsWith(Player.FilenameAndPath,.ifo) | String.EndsWith(Player.FilenameAndPath,.vob) | String.Contains(Player.FilenameAndPath,pdtv) | String.Contains(Player.FilenameAndPath,hdtv) | String.Contains(Player.FilenameAndPath,dsr) | String.Contains(Player.FilenameAndPath,vhs)</visible>
 		</control>
 		<control type="image" id="1">
 			<description>3D</description>
