@@ -123,29 +123,35 @@
 					<ondown>100</ondown>
 					<control type="radiobutton" id="101">
 						<include>SkinSettingsRadioButtonCommonValues</include>
+						<label>31519</label>
+						<onclick>Skin.ToggleSetting(ShowSplashScreen)</onclick>
+						<selected>Skin.HasSetting(ShowSplashScreen)</selected>
+					</control>
+					<control type="radiobutton" id="102">
+						<include>SkinSettingsRadioButtonCommonValues</include>
 						<label>31520</label>
 						<onclick>Skin.ToggleSetting(Back_Video)</onclick>
 						<selected>!Skin.HasSetting(Back_Video)</selected>
 					</control>
-					<control type="radiobutton" id="102">
+					<control type="radiobutton" id="103">
 						<include>SkinSettingsRadioButtonCommonValues</include>
 						<label>31521</label>
 						<onclick>Skin.ToggleSetting(Back_Vis)</onclick>
 						<selected>!Skin.HasSetting(Back_Vis)</selected>
 					</control>
-					<control type="radiobutton" id="103">
+					<control type="radiobutton" id="104">
 						<include>SkinSettingsRadioButtonCommonValues</include>
 						<label>31522</label>
 						<onclick>Skin.ToggleSetting(Back_Fanart)</onclick>
 						<selected>!Skin.HasSetting(Back_Fanart)</selected>
 					</control>
-					<control type="radiobutton" id="104">
+					<control type="radiobutton" id="105">
 						<include>SkinSettingsRadioButtonCommonValues</include>
 						<label>31524</label>
 						<onclick>Skin.ToggleSetting(DontBlendBackground)</onclick>
 						<selected>Skin.HasSetting(DontBlendBackground)</selected>
 					</control>
-					<control type="radiobutton" id="105">
+					<control type="radiobutton" id="106">
 						<include>SkinSettingsRadioButtonCommonValues</include>
 						<label>31526</label>
 						<onclick>Skin.ToggleSetting(AnimateFanart)</onclick>
@@ -306,6 +312,12 @@
 						<label>$LOCALIZE[31309]$LOCALIZE[24001]</label>
 						<onclick>Skin.ToggleSetting(AppsBlade_HideAddons)</onclick>
 						<selected>Skin.HasSetting(AppsBlade_HideAddons)</selected>
+					</control>
+					<control type="radiobutton" id="333">
+						<include>SkinSettingsRadioButtonCommonValues</include>
+						<label>$LOCALIZE[31309]$LOCALIZE[10821]</label>
+						<onclick>Skin.ToggleSetting(AppsBlade_HideGames)</onclick>
+						<selected>Skin.HasSetting(AppsBlade_HideGames)</selected>
 					</control>
 					<control type="radiobutton" id="334">
 						<include>SkinSettingsRadioButtonCommonValues</include>

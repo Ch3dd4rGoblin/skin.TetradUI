@@ -1,3 +1,33 @@
+[B]Version 1.3.0[/B]
+- Add gaming support
+
+[B]Version 1.2.7[/B]
+- Add skin setting to use splash screen
+
+[B]Version 1.2.6[/B]
+- Fix List view label2
+- Fix slect dialog focus issue
+
+[B]Version 1.2.5[/B]
+- Fix languages
+
+[B]Version 1.2.4[/B]
+- Widget updates and fixes
+
+[B]Version 1.2.3[/B]
+- Add RDS support
+
+[B]Version 1.2.2[/B]
+- Fix widget labels
+- Add Player.Chapters and Player.CutList to seekbar OSD
+- Add cache to progress bar OSD
+- Add slider control to video and music OSD
+- Remove slider control from DialogSeekBar.xml
+
+[B]Version 1.2.1[/B]
+- Fix select dialog buttons and labels
+- Fix TetradUI logo position in Login screen
+
 [B]Version 1.2.0[/B]
 - Add PVR support
 

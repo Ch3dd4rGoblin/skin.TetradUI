@@ -29,7 +29,6 @@
 			<width>305</width>
 			<height>40</height>
 			<align>center</align>
-			<textcolor>white</textcolor>
 			<focusedcolor>orange</focusedcolor>
 			<texturefocus border="10">buttons/context-button-focus.png</texturefocus>
 			<texturenofocus />

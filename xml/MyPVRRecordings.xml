@@ -205,7 +205,7 @@
 			</control>
 			<control type="grouplist">
 				<description>Media Codec Flagging Images</description>
-				<left>-20</left>
+				<left>-10</left>
 				<top>120r</top>
 				<width>620</width>
 				<itemgap>5</itemgap>

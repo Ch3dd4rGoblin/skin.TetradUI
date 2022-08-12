@@ -30,7 +30,7 @@ msgstr "media"
 
 msgctxt "#31002"
 msgid "apps"
-msgstr "aplicaÅ£ii"
+msgstr "aplicaţii"
 
 msgctxt "#31003"
 msgid "system"
@@ -42,7 +42,7 @@ msgstr "meteo"
 
 msgctxt "#31005"
 msgid "Apps"
-msgstr "AplicaÅ£ii"
+msgstr "Aplicaţii"
 
 msgctxt "#31006"
 msgid "Media"
@@ -54,11 +54,11 @@ msgstr "Media"
 
 msgctxt "#31011"
 msgid "Applications"
-msgstr "ApplicaÅ£ii"
+msgstr "Applicaţii"
 
 msgctxt "#31012"
 msgid "System Settings"
-msgstr "SetÄri sistem"
+msgstr "Setări sistem"
 
 msgctxt "#31013"
 msgid "Weather Forecast"
@@ -74,7 +74,7 @@ msgstr "Starea Vremii"
 
 msgctxt "#31021"
 msgid "Current Temp"
-msgstr "Temperatura CurentÄ"
+msgstr "Temperatura Curentă"
 
 msgctxt "#31022"
 msgid "Forecast"
@@ -86,7 +86,7 @@ msgstr "Actualizat :"
 
 msgctxt "#31024"
 msgid "Current Temperature"
-msgstr "Temperatura CurentÄ"
+msgstr "Temperatura Curentă"
 
 msgctxt "#31025"
 msgid "Add-on manager"
@@ -102,27 +102,27 @@ msgstr "Video - File"
 
 msgctxt "#31101"
 msgid "Music - Files"
-msgstr "MuzicÄ - File"
+msgstr "Muzică - File"
 
 msgctxt "#31102"
 msgid "Power Options"
-msgstr "OpÅ£iuni Oprire"
+msgstr "Opţiuni Oprire"
 
 msgctxt "#31200"
 msgid "Items"
-msgstr "FiÅiere"
+msgstr "Fişiere"
 
 msgctxt "#31201"
 msgid "Page"
-msgstr "PaginÄ"
+msgstr "Pagină"
 
 msgctxt "#31202"
 msgid "VIEW OPTIONS"
-msgstr "OPTIUNI AFIÅARE"
+msgstr "OPTIUNI AFIŞARE"
 
 msgctxt "#31203"
 msgid "PLAYER OPTIONS"
-msgstr "OPÅ¢IUNI PLAYER"
+msgstr "OPŢIUNI PLAYER"
 
 msgctxt "#31230"
 msgid "Playing"
@@ -130,19 +130,19 @@ msgstr "Redare"
 
 msgctxt "#31231"
 msgid "Paused"
-msgstr "PauzÄ"
+msgstr "Pauză"
 
 msgctxt "#31232"
 msgid "FF"
-msgstr "ÃNAINTE"
+msgstr "ÎNAINTE"
 
 msgctxt "#31233"
 msgid "RW"
-msgstr "ÃNAPOI"
+msgstr "ÎNAPOI"
 
 msgctxt "#31234"
 msgid "Buffering"
-msgstr "ÃncÄrcare"
+msgstr "Încărcare"
 
 msgctxt "#31235"
 msgid "Now Playing"
@@ -150,7 +150,7 @@ msgstr "Redare"
 
 msgctxt "#31236"
 msgid "End Time:"
-msgstr "OrÄ Ã®ncheiere:"
+msgstr "Oră încheiere:"
 
 msgctxt "#31250"
 msgid "Poster Big"
@@ -162,15 +162,15 @@ msgstr "Info Pictograme"
 
 msgctxt "#31300"
 msgid "No Optical Media Detected, click to Open/Close tray"
-msgstr "Nu existÄ disc optic, apasÄ pentru a deschide/Ã®nchide"
+msgstr "Nu există disc optic, apasă pentru a deschide/închide"
 
 msgctxt "#31301"
 msgid "Play : "
-msgstr "RedÄ : "
+msgstr "Redă : "
 
 msgctxt "#31302"
 msgid "Working"
-msgstr "ProceseazÄ"
+msgstr "Procesează"
 
 msgctxt "#31303"
 msgid "Last logged on"
@@ -182,15 +182,15 @@ msgstr "Utilizare memorie"
 
 msgctxt "#31305"
 msgid "Reset"
-msgstr "ReseteazÄ"
+msgstr "Resetează"
 
 msgctxt "#31306"
 msgid "Power off"
-msgstr "Ãnchide"
+msgstr "Închide"
 
 msgctxt "#31307"
 msgid "Quit Kodi"
-msgstr "Ãnchide Kodi"
+msgstr "Închide Kodi"
 
 msgctxt "#31308"
 msgid "IP:"
@@ -202,19 +202,19 @@ msgstr "Ascunde Buton - "
 
 msgctxt "#31310"
 msgid "Set Smart Playlist Shortcut"
-msgstr "SeteazÄ scurtÄturÄ listÄ redare inteligentÄ"
+msgstr "Setează scurtătură listă redare inteligentă"
 
 msgctxt "#31311"
 msgid "Set Button Label"
-msgstr "SeteazÄ etichetÄ buton"
+msgstr "Setează etichetă buton"
 
 msgctxt "#31312"
 msgid "Set Button Icon"
-msgstr "SeteazÄ iconiÅ£Ä buton"
+msgstr "Setează iconiţă buton"
 
 msgctxt "#31400"
 msgid "Edit your Display settings, Including:[CR][CR]* Skin Selection[CR]* View Options[CR]* Screensaver[CR]* Date & Time"
-msgstr "EditeazÄ setÄri ecran, inclusiv:[CR][CR]* Selectare interfaÅ£Ä[CR]* OpÅ£iuni afiÅare[CR]* Economizor ecran[CR]* Data Åi ora"
+msgstr "Editează setări ecran, inclusiv:[CR][CR]* Selectare interfaţă[CR]* Opţiuni afişare[CR]* Economizor ecran[CR]* Data şi ora"
 
 msgctxt "#31401"
 msgid "-"
@@ -222,23 +222,23 @@ msgstr "-"
 
 msgctxt "#31402"
 msgid "Choose Weather Display, Including:[CR][CR]* 3 Cities[CR]* Wind Speed[CR]* Temperature"
-msgstr "SetÄri ecran meteo, inclusiv:[CR][CR]* 3 OraÅe[CR]* Viteza vÃ¢ntului[CR]* Temperatura"
+msgstr "Setări ecran meteo, inclusiv:[CR][CR]* 3 Oraşe[CR]* Viteza vÃ¢ntului[CR]* Temperatura"
 
 msgctxt "#31403"
 msgid "Configure Network and sharing settings, Including:[CR][CR]* Proxy & DNS[CR]* Samba File Sharing[CR]* UPNP Server[CR]* Web Server[CR]* External App Control"
-msgstr "ConfigureazÄ setarile reÅ£elei, inclusiv:[CR][CR]* Proxy Åi DNS[CR]* Samba File Sharing[CR]* Server UPNP[CR]* Server Web[CR]* Control aplicaÅ£ie externÄ"
+msgstr "Configurează setarile reţelei, inclusiv:[CR][CR]* Proxy şi DNS[CR]* Samba File Sharing[CR]* Server UPNP[CR]* Server Web[CR]* Control aplicaţie externă"
 
 msgctxt "#31404"
 msgid "Important System Settings, Including:[CR][CR]* Hardware[CR]* Power Saving[CR]* Input Devices[CR]* Master User Locking"
-msgstr "SetÄri sistem, inclusiv:[CR][CR]* Hardware[CR]* Econimisire energie[CR]* Periferice[CR]* ParolÄ principalÄ"
+msgstr "Setări sistem, inclusiv:[CR][CR]* Hardware[CR]* Econimisire energie[CR]* Periferice[CR]* Parolă principală"
 
 msgctxt "#31405"
 msgid "Manage User Profiles, Including:[CR][CR]* Creating Profiles[CR]* Deleting Profiles[CR]* Changing User Settings"
-msgstr "GestioneazÄ profile utilizatori, inclusiv:[CR][CR]* Creare profile noi[CR]* Återgere profile[CR]* SchimbÄri setÄri utilizator"
+msgstr "Gestionează profile utilizatori, inclusiv:[CR][CR]* Creare profile noi[CR]* Ştergere profile[CR]* Schimbări setări utilizator"
 
 msgctxt "#31406"
 msgid "Change Skin Specific Settings, Including:[CR][CR]* Window Backgrounds[CR]* Media View Options[CR]* Other Misc Options"
-msgstr "SchimbÄ setÄri interfaÅ£Ä, inclusiv:[CR][CR]* Fundaluri[CR]* OpÅ£iuni afiÅare media[CR]* Diverse opÅ£iuni"
+msgstr "Schimbă setări interfaţă, inclusiv:[CR][CR]* Fundaluri[CR]* Opţiuni afişare media[CR]* Diverse opţiuni"
 
 msgctxt "#31407"
 msgid "-"
@@ -246,23 +246,23 @@ msgstr "-"
 
 msgctxt "#31408"
 msgid "Configure Video settings, Including:[CR][CR]* Library Options[CR]* Hardware Acceleration[CR]* Subtitles[CR]* DVD Playback"
-msgstr "ConfigureazÄ setÄri video, inclusiv:[CR][CR]* OpÅ£iuni mediatecÄ[CR]* Accelerare hardware[CR]* SubtitrÄri[CR]* Redare DVD"
+msgstr "Configurează setări video, inclusiv:[CR][CR]* Opţiuni mediatecă[CR]* Accelerare hardware[CR]* Subtitrări[CR]* Redare DVD"
 
 msgctxt "#31409"
 msgid "Configure Audio settings, Including:[CR][CR]* Visualisations[CR]* Playlists[CR]* CD Ripping[CR]* Karaoke"
-msgstr "ConfigureazÄ setÄri audio, inclusiv:[CR][CR]* VisualizÄri[CR]* Liste redare[CR]* CD Ripping[CR]* Karaoke"
+msgstr "Configurează setări audio, inclusiv:[CR][CR]* Visualizări[CR]* Liste redare[CR]* CD Ripping[CR]* Karaoke"
 
 msgctxt "#31410"
 msgid "Arrange Pictures settings, Including:[CR][CR]* Slideshows[CR]* Thumbnails"
-msgstr "ConfigureazÄ setari foto, inclusiv:[CR][CR]* Slideshows[CR]* Pictograme"
+msgstr "Configurează setari foto, inclusiv:[CR][CR]* Slideshows[CR]* Pictograme"
 
 msgctxt "#31460"
 msgid "Welcome to Kodi[CR]Please choose your profile and log in"
-msgstr "Bun venit[CR]AlegeÅ£i profilul Åi autentificaÅ£i-vÄ"
+msgstr "Bun venit[CR]Alegeţi profilul şi autentificaţi-vă"
 
 msgctxt "#31480"
 msgid "[COLOR=orange][B]WARNING[/B] !![/COLOR][CR]Hiding all buttons will cause Navigation issues when switching between blades.  Having more than 6 buttons visible at once will also cause weird animation and scrolling effects"
-msgstr "[COLOR=orange][B]ATENÅ¢IE[/B] !![/COLOR][CR]Ascunderea tuturor butoanelor va cauza probleme de navigatie la trecerea Ã®ntre lame.  Mai mult de Åase butoane odata va provoca de asemenea animaÅ£ii ciudate"
+msgstr "[COLOR=orange][B]ATENÅ¢IE[/B] !![/COLOR][CR]Ascunderea tuturor butoanelor va cauza probleme de navigatie la trecerea între lame.  Mai mult de şase butoane odata va provoca de asemenea animaţii ciudate"
 
 msgctxt "#31500"
 msgid "General"
@@ -274,39 +274,39 @@ msgstr "Fundaluri"
 
 msgctxt "#31502"
 msgid "Media Blade"
-msgstr "LamÄ Media"
+msgstr "Lamă Media"
 
 msgctxt "#31503"
 msgid "Apps Blade"
-msgstr "LamÄ AplicaÅ£ii"
+msgstr "Lamă Aplicaţii"
 
 msgctxt "#31520"
 msgid "Show now playing video in the background"
-msgstr "AratÄ videoclipul Ã®n fundal"
+msgstr "Arată videoclipul în fundal"
 
 msgctxt "#31521"
 msgid "Show music visualization in the background"
-msgstr "AratÄ vizualizÄri audio Ã®n fundal"
+msgstr "Arată vizualizări audio în fundal"
 
 msgctxt "#31522"
 msgid "Show media specific fanart in the background"
-msgstr "AfiÅeazÄ fanart Ã®n fundal"
+msgstr "Afişează fanart în fundal"
 
 msgctxt "#31523"
 msgid "Hide rain drop animation in the background"
-msgstr "Ascunde animaÅ£ia "stropi de ploaie" din fundal"
+msgstr "Ascunde animaţia \"stropi de ploaie\" din fundal"
 
 msgctxt "#31524"
 msgid "Don't blend background with fanart,visualization,video"
-msgstr "Nu amesteca fundalul cu fanart, video Åi vizualizare"
+msgstr "Nu amesteca fundalul cu fanart, video şi vizualizare"
 
 msgctxt "#31540"
 msgid "Set Default Lyric fetching add-on for Music OSD"
-msgstr "SeteazÄ accesoriu descÄrcare versuri pentru muzicÄ"
+msgstr "Setează accesoriu descărcare versuri pentru muzică"
 
 msgctxt "#31541"
 msgid "Set Default Subtitle fetching add-on for Video OSD"
-msgstr "SeteazÄ accesoriu descÄrcare subtitrÄri pentru video"
+msgstr "Setează accesoriu descărcare subtitrări pentru video"
 
 msgctxt "#31550"
 msgid "Window default buttons"
@@ -314,9 +314,9 @@ msgstr "Butoane default"
 
 msgctxt "#31551"
 msgid "Window custom smart playlist shortcuts"
-msgstr "ScurtÄturi liste redare inteligente"
+msgstr "Scurtături liste redare inteligente"
 
 msgctxt "#31552"
 msgid "Window custom add-on shortcuts"
-msgstr "ScurtÄturi accesorii"
+msgstr "Scurtături accesorii"
 

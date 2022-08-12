@@ -360,7 +360,11 @@ msgctxt "#31317"
 msgid "Center top logo button"
 msgstr ""
 
-# empty strings from id 31318 to 31389
+msgctxt "#31318"
+msgid "RDS"
+msgstr ""
+
+# empty strings from id 31319 to 31389
 
 msgctxt "#31390"
 msgid "Skin default"
@@ -414,13 +418,21 @@ msgctxt "#31410"
 msgid "Information on Kodi and your hardware, including:[CR][CR]* Storage[CR]* Network[CR]* Video[CR]* Hardware"
 msgstr ""
 
-# empty strings from id 31411 to 31458
+msgctxt "#31411"
+msgid "Configure game settings, including:[CR][CR]* Gameplay options[CR]* RetroAchievements management"
+msgstr ""
+
+# empty strings from id 31412 to 31458
 
 msgctxt "#31460"
 msgid "Welcome to Kodi[CR]Please choose your profile and log in"
 msgstr ""
 
-# empty strings from id 31461 to 31479
+msgctxt "#31461"
+msgid "Install add-ons"
+msgstr ""
+
+# empty strings from id 31462 to 31479
 
 msgctxt "#31480"
 msgid "[COLOR=orange][B]WARNING[/B] !![/COLOR][CR]Hiding all buttons will cause Navigation issues when switching between blades."
@@ -478,7 +490,15 @@ msgctxt "#31510"
 msgid "Video playlist"
 msgstr ""
 
-# empty strings from id 31511 to 31519
+# empty strings from id 31511 to 31517
+
+msgctxt "#31518"
+msgid "Game Settings Menu"
+msgstr ""
+
+msgctxt "#31519"
+msgid "Show splash screen"
+msgstr ""
 
 msgctxt "#31520"
 msgid "Show now playing video in the background"

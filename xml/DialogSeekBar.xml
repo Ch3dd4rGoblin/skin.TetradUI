@@ -10,7 +10,7 @@
 	</coordinates>
 	<controls>
 		<control type="group">
-			<animation effect="slide" start="0,0" end="0,10" time="200" condition="Window.IsVisible(FullscreenVideo) | Window.IsVisible(Visualisation)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,10" time="200" condition="Window.IsVisible(FullscreenVideo) | Window.IsVisible(FullscreenGame) | Window.IsVisible(Visualisation)">conditional</animation>
 			<animation effect="slide" start="0,0" end="-180,0" time="200" condition="Window.IsVisible(BusyDialog)">conditional</animation>
 			<control type="image">
 				<description>Media Overlay Image</description>
@@ -53,38 +53,49 @@
 				<align>right</align>
 			</control>
 			<control type="progress">
+				<description>Progressbar cache</description>
+				<left>20</left>
+				<top>46</top>
+				<width>360</width>
+				<height>6</height>
+				<midtexture border="3" colordiffuse="44ffffff">progress_cache.png</midtexture>
+				<info>Player.ProgressCache</info>
+			</control>
+			<control type="progress">
 				<description>Progressbar</description>
 				<left>20</left>
 				<top>45</top>
 				<width>360</width>
 				<height>8</height>
 				<info>Player.Progress</info>
+				<visible>!VideoPlayer.HasEpg</visible>
 			</control>
-			<!--
-			<control type="ranges">
-				<description>Chapters</description>
+			<control type="progress">
+				<description>Progressbar</description>
 				<left>20</left>
 				<top>45</top>
 				<width>360</width>
 				<height>8</height>
-				<info>Player.Chapters</info>
-				<righttexture border="1,0,1,0">progress_chapter_2.png</righttexture>
+				<info>PVR.EpgEventProgress</info>
+				<visible>VideoPlayer.HasEpg</visible>
 			</control>
-			-->
-			<control type="slider" id="401">
-				<description>Seek Slider</description>
+			<control type="ranges">
+				<description>CutList</description>
 				<left>20</left>
-				<top>42</top>
+				<top>46</top>
 				<width>360</width>
-				<height>12</height>
-				<texturesliderbar>seekslider.png</texturesliderbar>
-				<textureslidernib>slider_nibFO.png</textureslidernib>
-				<textureslidernibfocus>slider_nibFO.png</textureslidernibfocus>
-				<visible>true</visible>
-				<onup>1</onup>
-				<ondown>1</ondown>
-				<onleft>1</onleft>
-				<onright>1</onright>
+				<height>2</height>
+				<info>Player.CutList</info>
+				<righttexture border="1">progress_chapter.png</righttexture>
+			</control>
+			<control type="ranges">
+				<description>Chapters</description>
+				<left>20</left>
+				<top>50</top>
+				<width>360</width>
+				<height>2</height>
+				<info>Player.Chapters</info>
+				<righttexture border="1">progress_chapter.png</righttexture>
 			</control>
 		</control>
 	</controls>

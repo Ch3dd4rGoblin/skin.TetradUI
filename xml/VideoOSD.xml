@@ -20,6 +20,8 @@
 				<onright condition="VideoPlayer.Content(livetv)">708</onright>
 				<onright condition="!VideoPlayer.Content(livetv) + Control.IsEnabled(706)">706</onright>
 				<onright condition="!VideoPlayer.Content(livetv) + !Control.IsEnabled(706)">701</onright>
+				<onup>801</onup>
+				<ondown>801</ondown>
 				<control type="button" id="600">
 					<width>45</width>
 					<height>45</height>
@@ -123,6 +125,8 @@
 				<onright condition="Control.IsEnabled(601)">601</onright>
 				<onright condition="Control.IsEnabled(602)">602</onright>
 				<onright condition="!Control.IsEnabled(600) + !Control.IsEnabled(601) + !Control.IsEnabled(602)">603</onright>
+				<onup>801</onup>
+				<ondown>801</ondown>
 				<control type="button" id="708">
 					<width>45</width>
 					<height>45</height>
@@ -218,6 +222,52 @@
 					<onclick>SetProperty(settingslist_content,settings,home)</onclick>
 					<onclick>SetProperty(settingslist_header,$LOCALIZE[5],home)</onclick>
 					<onclick>ActivateWindow(1101)</onclick>
+				</control>
+			</control>
+			<control type="group">
+				<left>430</left>
+				<top>648</top>
+				<control type="slider" id="801">
+					<description>Seek Slider</description>
+					<width>720</width>
+					<height>16</height>
+					<texturesliderbar>seekslider.png</texturesliderbar>
+					<textureslidernib>slider_nibNF.png</textureslidernib>
+					<textureslidernibfocus>slider_nibFO.png</textureslidernibfocus>
+					<visible>true</visible>
+					<onup>100</onup>
+					<ondown>100</ondown>
+					<action>seek</action>
+					<info>Player.Progress</info>
+					<visible>!VideoPlayer.Content(LiveTV)</visible>
+				</control>
+				<control type="slider" id="801">
+					<description>Seek Slider</description>
+					<width>720</width>
+					<height>16</height>
+					<texturesliderbar>seekslider.png</texturesliderbar>
+					<textureslidernib>slider_nibNF.png</textureslidernib>
+					<textureslidernibfocus>slider_nibFO.png</textureslidernibfocus>
+					<visible>true</visible>
+					<onup>100</onup>
+					<ondown>100</ondown>
+					<action>seek</action>
+					<info>PVR.EpgEventProgress</info>
+					<visible>VideoPlayer.HasEpg + VideoPlayer.Content(LiveTV)</visible>
+				</control>
+				<control type="slider" id="801">
+					<description>Seek Slider</description>
+					<width>720</width>
+					<height>16</height>
+					<texturesliderbar>seekslider.png</texturesliderbar>
+					<textureslidernib>slider_nibNF.png</textureslidernib>
+					<textureslidernibfocus>slider_nibFO.png</textureslidernibfocus>
+					<visible>true</visible>
+					<onup>100</onup>
+					<ondown>100</ondown>
+					<action>seek</action>
+					<info>PVR.TimeshiftProgressPlayPos</info>
+					<visible>!VideoPlayer.HasEpg + VideoPlayer.Content(LiveTV)</visible>
 				</control>
 			</control>
 		</control>

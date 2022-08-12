@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
+	<onload condition="Skin.HasSetting(ShowSplashScreen)">SetFocus(9001)</onload>
 	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
-	<controls />
+	<controls>
+		<control type="button" id="9001">
+			<left>2000</left>
+			<onfocus>PlayMedia(special://skin/resources/video/splash.mp4,noresume)</onfocus>
+			<visible>Skin.HasSetting(ShowSplashScreen)</visible>
+		</control>
+	</controls>
 </window>

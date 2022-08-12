@@ -14,7 +14,7 @@
 			<itemlayout height="40" width="615">
 				<control type="label">
 					<left>10</left>
-					<width>520</width>
+					<width>400</width>
 					<height>36</height>
 					<font>font13</font>
 					<aligny>center</aligny>
@@ -23,8 +23,8 @@
 					<info>ListItem.Label</info>
 				</control>
 				<control type="label">
-					<left>605</left>
-					<width>400</width>
+					<left>410</left>
+					<width>195</width>
 					<height>36</height>
 					<font>font13</font>
 					<aligny>center</aligny>
@@ -42,7 +42,7 @@
 				</control>
 				<control type="label">
 					<left>10</left>
-					<width>520</width>
+					<width>400</width>
 					<height>36</height>
 					<font>font13</font>
 					<aligny>center</aligny>
@@ -50,8 +50,8 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="label">
-					<left>605</left>
-					<width>400</width>
+					<left>410</left>
+					<width>195</width>
 					<height>36</height>
 					<font>font13</font>
 					<aligny>center</aligny>
@@ -742,7 +742,6 @@
 					<texture background="true">$VAR[ListItemPosterVar]</texture>
 					<bordertexture>black-back.png</bordertexture>
 					<bordersize>1</bordersize>
-					<aspectratio>scale</aspectratio>
 				</control>
 				<control type="label">
 					<left>8</left>
@@ -782,7 +781,6 @@
 					<texture background="true">$VAR[ListItemPosterVar]</texture>
 					<bordertexture>black-back.png</bordertexture>
 					<bordersize>1</bordersize>
-					<aspectratio>scale</aspectratio>
 				</control>
 				<control type="label">
 					<left>8</left>

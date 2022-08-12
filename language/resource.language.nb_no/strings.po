@@ -38,7 +38,7 @@ msgstr "system"
 
 msgctxt "#31004"
 msgid "weather"
-msgstr "vÃ¦ret"
+msgstr "været"
 
 msgctxt "#31005"
 msgid "Apps"
@@ -62,7 +62,7 @@ msgstr "System Instillinger"
 
 msgctxt "#31013"
 msgid "Weather Forecast"
-msgstr "VÃ¦rmelding"
+msgstr "Værmelding"
 
 msgctxt "#31014"
 msgid "Video Bookmarks"
@@ -70,11 +70,11 @@ msgstr "Video bokmerker"
 
 msgctxt "#31020"
 msgid "Weather Conditions"
-msgstr "vÃ¦r forhold"
+msgstr "Vær forhold"
 
 msgctxt "#31021"
 msgid "Current Temp"
-msgstr "NÃ¥vÃ¦rende Tempratur"
+msgstr "Nåværende Tempratur"
 
 msgctxt "#31022"
 msgid "Forecast"
@@ -86,7 +86,7 @@ msgstr "Oppdatert :"
 
 msgctxt "#31024"
 msgid "Current Temperature"
-msgstr "NÃ¥vÃ¦rende Tempratur"
+msgstr "Nåværende Tempratur"
 
 msgctxt "#31025"
 msgid "Add-on manager"
@@ -94,7 +94,7 @@ msgstr "Add-on behandler"
 
 msgctxt "#31026"
 msgid "Current"
-msgstr "NÃ¥vÃ¦rende"
+msgstr "Nåværende"
 
 msgctxt "#31100"
 msgid "Video - Files"
@@ -106,7 +106,7 @@ msgstr "Musikk - Filer"
 
 msgctxt "#31102"
 msgid "Power Options"
-msgstr "StrÃ¸m Alternativer"
+msgstr "Strøm Alternativer"
 
 msgctxt "#31200"
 msgid "Items"
@@ -146,7 +146,7 @@ msgstr "Buffering"
 
 msgctxt "#31235"
 msgid "Now Playing"
-msgstr "Spiller NÃ¥"
+msgstr "Spiller Nå"
 
 msgctxt "#31236"
 msgid "End Time:"
@@ -162,7 +162,7 @@ msgstr "Miniatyr Info"
 
 msgctxt "#31300"
 msgid "No Optical Media Detected, click to Open/Close tray"
-msgstr "Ingen optiske medier funnet, klikk for Ã¥ Ãpne/Lukke skufen"
+msgstr "Ingen optiske medier funnet, klikk for å Åpne/Lukke skufen"
 
 msgctxt "#31301"
 msgid "Play : "
@@ -174,7 +174,7 @@ msgstr "Arbeider"
 
 msgctxt "#31303"
 msgid "Last logged on"
-msgstr "Sist pÃ¥logget"
+msgstr "Sist pålogget"
 
 msgctxt "#31304"
 msgid "Memory Usage"
@@ -182,11 +182,11 @@ msgstr "Minne forbruk"
 
 msgctxt "#31305"
 msgid "Reset"
-msgstr "Start pÃ¥nytt"
+msgstr "Start pånytt"
 
 msgctxt "#31306"
 msgid "Power off"
-msgstr "SlÃ¥ av"
+msgstr "Slå av"
 
 msgctxt "#31307"
 msgid "Quit Kodi"
@@ -222,7 +222,7 @@ msgstr "-"
 
 msgctxt "#31402"
 msgid "Choose Weather Display, Including:[CR][CR]* 3 Cities[CR]* Wind Speed[CR]* Temperature"
-msgstr "Velg vÃ¦r visning, Inkludert:[CR][CR]* 3 Byer[CR]* Vind Hastighet[CR]* Tempratur"
+msgstr "Velg vær visning, Inkludert:[CR][CR]* 3 Byer[CR]* Vind Hastighet[CR]* Tempratur"
 
 msgctxt "#31403"
 msgid "Configure Network and sharing settings, Including:[CR][CR]* Proxy & DNS[CR]* Samba File Sharing[CR]* UPNP Server[CR]* Web Server[CR]* External App Control"
@@ -230,7 +230,7 @@ msgstr "Konfigurer nettverk og delings instillinger, Inkludert:[CR][CR]* Proxy &
 
 msgctxt "#31404"
 msgid "Important System Settings, Including:[CR][CR]* Hardware[CR]* Power Saving[CR]* Input Devices[CR]* Master User Locking"
-msgstr "Vitkgie System Instillinger, Inkludert:[CR][CR]* Maskinvare[CR]* StrÃ¸m Sparing[CR]* Input Enheter[CR]* Hoved Bruker LÃ¥sning"
+msgstr "Vitkgie System Instillinger, Inkludert:[CR][CR]* Maskinvare[CR]* Strøm Sparing[CR]* Input Enheter[CR]* Hoved Bruker Låsning"
 
 msgctxt "#31405"
 msgid "Manage User Profiles, Including:[CR][CR]* Creating Profiles[CR]* Deleting Profiles[CR]* Changing User Settings"
@@ -258,11 +258,11 @@ msgstr "Arranger bilde instillinger, Inkludert:[CR][CR]* Fremvisninger[CR]* Mini
 
 msgctxt "#31460"
 msgid "Welcome to Kodi[CR]Please choose your profile and log in"
-msgstr "Velkommen til Kodi[CR]Vennligst velg din profil for Ã¥ logge deg inn"
+msgstr "Velkommen til Kodi[CR]Vennligst velg din profil for å logge deg inn"
 
 msgctxt "#31480"
 msgid "[COLOR=orange][B]WARNING[/B] !![/COLOR][CR]Hiding all buttons will cause Navigation issues when switching between blades.  Having more than 6 buttons visible at once will also cause weird animation and scrolling effects"
-msgstr "[COLOR=orange][B]ADVARSEL[/B] !![/COLOR][CR]Ã gjemme alle knapper vil forÃ¥rsake navigasjons problemer nÃ¥r man bytter blader. Ã ha mere enn 6 knapper synlig samtidig vil ogsÃ¥ lage merkelige animasjons og bla effekter"
+msgstr "[COLOR=orange][B]ADVARSEL[/B] !![/COLOR][CR]Å gjemme alle knapper vil forårsake navigasjons problemer når man bytter blader. Å ha mere enn 6 knapper synlig samtidig vil også lage merkelige animasjons og bla effekter"
 
 msgctxt "#31500"
 msgid "General"
@@ -282,7 +282,7 @@ msgstr "Applikasjons Blad"
 
 msgctxt "#31520"
 msgid "Show now playing video in the background"
-msgstr "Vis spilles nÃ¥ i bakgrunnen"
+msgstr "Vis spilles nå i bakgrunnen"
 
 msgctxt "#31521"
 msgid "Show music visualization in the background"
@@ -294,7 +294,7 @@ msgstr "Vis media spesifikk fanart i bakrunnen"
 
 msgctxt "#31523"
 msgid "Hide rain drop animation in the background"
-msgstr "Skjul regndrÃ¥pe animasjon i bakgrunnen"
+msgstr "Skjul regndråpe animasjon i bakgrunnen"
 
 msgctxt "#31524"
 msgid "Don't blend background with fanart,visualization,video"

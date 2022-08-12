@@ -63,7 +63,7 @@
 					<left>0</left>
 					<top>0</top>
 					<width>450</width>
-					<height>452</height>
+					<height>496</height>
 					<onleft>1</onleft>
 					<onright>10</onright>
 					<onup>9050</onup>
@@ -179,6 +179,12 @@
 							<label2>31407</label2>
 							<onclick>ActivateWindow(PVRSettings)</onclick>
 							<icon>button_icons/icon-pvrtv.png</icon>
+						</item>
+						<item>
+							<label>10821</label>
+							<label2>31411</label2>
+							<onclick>ActivateWindow(GameSettings)</onclick>
+							<icon>button_icons/icon-games.png</icon>
 						</item>
 						<item>
 							<label>14036</label>

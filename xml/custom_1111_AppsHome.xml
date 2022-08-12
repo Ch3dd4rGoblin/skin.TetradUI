@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1111">
 	<defaultcontrol always="true">9050</defaultcontrol>
-	<onload condision="!String.IsEmpty(SubBladeType))">Skin.Reset(SubBladeType)</onload>
+	<onload condition="!String.IsEmpty(SubBladeType))">Skin.Reset(SubBladeType)</onload>
 	<animation effect="fade" start="100" end="100" time="30" condition="Control.HasFocus(1)">WindowClose</animation>
 	<animation effect="fade" start="100" end="100" time="30" condition="Control.HasFocus(2)">WindowClose</animation>
 	<controls>
@@ -68,14 +68,14 @@
 				<control type="list" id="9000">
 					<width>450</width>
 					<height>314</height>
-					<onleft condition="![String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4)]">520</onleft>
-					<onleft condition="String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4)">1</onleft>
-					<onright condition="Container(9000).HasFocus(1)">9100</onright>
-					<onright condition="!Container(9000).HasFocus(1) + ![String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4)]">520</onright>
-					<onright condition="!Container(9000).HasFocus(1) + [String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4)]">2</onright>
+					<onleft condition="![String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4))]">520</onleft>
+					<onleft condition="String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4))">1</onleft>
+					<onright condition="Container(9000).HasFocus(1) | Container(9000).HasFocus(2)">9100</onright>
+					<onright condition="![Container(9000).HasFocus(1) | Container(9000).HasFocus(2)] + ![String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4))]">520</onright>
+					<onright condition="![Container(9000).HasFocus(1) | Container(9000).HasFocus(2)] + [String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4))]">2</onright>
 					<onup>9050</onup>
-					<ondown condition="![String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4)]">520</ondown>
-					<ondown condition="String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4)">9000</ondown>
+					<ondown condition="![String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4))]">520</ondown>
+					<ondown condition="String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4))">9000</ondown>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>60</pagecontrol>
 					<scrolltime>200</scrolltime>
@@ -155,12 +155,18 @@
 							<visible>!Skin.HasSetting(AppsBlade_HideAddons)</visible>
 						</item>
 						<item id="2">
+							<label>10821</label>
+							<onclick>ActivateWindow(Games)</onclick>
+							<icon>button_icons/icon-games.png</icon>
+							<visible>!Skin.HasSetting(AppsBlade_HideGames)</visible>
+						</item>
+						<item id="3">
 							<label>7</label>
 							<onclick>ActivateWindow(Filemanager)</onclick>
 							<icon>button_icons/icon-xbmc.png</icon>
 							<visible>!Skin.HasSetting(AppsBlade_HideFilemanager)</visible>
 						</item>
-						<item id="3">
+						<item id="4">
 							<label>1036</label>
 							<onclick>ActivateWindow(Favourites)</onclick>
 							<icon>button_icons/icon-favourites.png</icon>
@@ -173,15 +179,14 @@
 					<width>450</width>
 					<height>238</height>
 					<onleft>9000</onleft>
-					<onright condition="![String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4)]">520</onright>
-					<onright condition="String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4)">2</onright>
+					<onright condition="![String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4))]">520</onright>
+					<onright condition="String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4))">2</onright>
 					<onup>9050</onup>
-					<ondown condition="![String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4)]">520</ondown>
-					<ondown condition="String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4)">9100</ondown>
+					<ondown condition="![String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4))]">520</ondown>
+					<ondown condition="String.IsEmpty(Skin.String(AddonShortcut1)) + String.IsEmpty(Skin.String(AddonShortcut2)) + String.IsEmpty(Skin.String(AddonShortcut3)) + String.IsEmpty(Skin.String(AddonShortcut4))">9100</ondown>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>60</pagecontrol>
 					<scrolltime>200</scrolltime>
-					<visible>Container(9000).HasFocus(1)</visible>
 					<itemlayout height="34" width="450">
 						<control type="image">
 							<description>Icon</description>
@@ -212,7 +217,7 @@
 							<animation effect="slide" start="0,-34" time="200" tween="sine" easing="out" condition="Container(9100).OnNext" reversible="false">Focus</animation>
 							<animation effect="slide" start="0,34" time="200" tween="sine" easing="out" condition="Container(9100).OnPrevious" reversible="false">Focus</animation>
 							<animation effect="fade" start="100" end="0" time="200" condition="!Control.HasFocus(9100)">Conditional</animation>
-							<visible>!Control.HasFocus(9050)</visible>
+							<visible>!Control.HasFocus(9050) + !Control.HasFocus(9000)</visible>
 						</control>
 						<control type="image">
 							<description>Icon</description>
@@ -254,39 +259,58 @@
 							<onclick>Skin.SetString(SubBladeType,apps)</onclick>
 							<onclick>ActivateWindow(Videos,Addons,Return)</onclick>
 							<icon>defaultaddonvideo.png</icon>
+							<visible>Container(9000).HasFocus(1)</visible>
 						</item>
 						<item>
 							<label>1038</label>
 							<onclick>Skin.SetString(SubBladeType,apps)</onclick>
 							<onclick>ActivateWindow(Music,Addons,Return)</onclick>
 							<icon>DefaultAddonMusic.png</icon>
+							<visible>Container(9000).HasFocus(1)</visible>
 						</item>
 						<item>
 							<label>1039</label>
 							<onclick>Skin.SetString(SubBladeType,apps)</onclick>
 							<onclick>ActivateWindow(Pictures,Addons,Return)</onclick>
 							<icon>DefaultAddonPicture.png</icon>
+							<visible>Container(9000).HasFocus(1)</visible>
 						</item>
 						<item>
 							<label>1043</label>
 							<onclick>ActivateWindow(Programs,Addons,Return)</onclick>
 							<icon>DefaultAddonProgram.png</icon>
+							<visible>Container(9000).HasFocus(1)</visible>
+						</item>
+						<item>
+							<label>24001</label>
+							<onclick>ActivateWindow(Games,Addons,Return)</onclick>
+							<icon>DefaultAddon.png</icon>
+							<visible>Container(9000).HasFocus(2)</visible>
 						</item>
 						<item>
 							<label>10040</label>
-							<onclick>ActivateWindow(addonbrowser,root)</onclick>
+							<onclick condition="Container(9000).HasFocus(1)">ActivateWindow(addonbrowser,root)</onclick>
+							<onclick condition="Container(9000).HasFocus(2)">ActivateWindow(addonbrowser,addons://user/category.gameaddons/,return)</onclick>
 							<icon>DefaultAddon.png</icon>
+							<visible>Container(9000).HasFocus(1) | Container(9000).HasFocus(2)</visible>
 						</item>
 						<item>
 							<label>31316</label>
 							<onclick>ActivateWindow(addonbrowser,addons://search/,return)</onclick>
 							<icon>DefaultAddonsSearch.png</icon>
+							<visible>Container(9000).HasFocus(1)</visible>
 						</item>
 						<item>
 							<label>20244</label>
 							<onclick>ActivateWindow(programs,androidapp://sources/apps/,return)</onclick>
 							<icon>DefaultAddon.png</icon>
-							<visible>System.Platform.Android</visible>
+							<visible>Container(9000).HasFocus(1) + System.Platform.Android</visible>
+						</item>
+						<item>
+							<label>31461</label>
+							<onclick>ActivateWindow(addonbrowser,addons://all/category.gameaddons/,return)</onclick>
+							<icon>DefaultAddon.png</icon>
+							<visible>Container(9000).HasFocus(2)</visible>
 						</item>
 					</content>
 				</control>

@@ -119,6 +119,26 @@
 									<visible>![String.IsEmpty(ListItem.Rating) + String.IsEmpty(ListItem.UserRating)]</visible>
 								</item>
 								<item>
+									<label>146</label>
+									<label2>$INFO[ListItem.Property(Album_Type)]</label2>
+									<visible>!String.IsEmpty(ListItem.Property(Album_Type))</visible>
+								</item>
+								<item>
+									<label>$LOCALIZE[14087]:</label>
+									<label2>$INFO[ListItem.TotalDiscs]</label2>
+									<visible>ListItem.IsBoxset + !String.IsEmpty(ListItem.TotalDiscs)</visible>
+								</item>
+								<item>
+									<label>$LOCALIZE[180]:</label>
+									<label2>$INFO[ListItem.Property(Album_Duration)]</label2>
+									<visible>!String.IsEmpty(ListItem.Property(Album_Duration))</visible>
+								</item>
+								<item>
+									<label>$LOCALIZE[562]:</label>
+									<label2>$INFO[ListItem.Year]</label2>
+									<visible>!String.IsEmpty(ListItem.Year)</visible>
+								</item>
+								<item>
 									<label>$LOCALIZE[175]:</label>
 									<label2>$INFO[ListItem.Property(Album_Mood)]</label2>
 									<visible>!String.IsEmpty(ListItem.Property(Album_Mood))</visible>
@@ -131,22 +151,7 @@
 								<item>
 									<label>$LOCALIZE[21895]:</label>
 									<label2>$INFO[ListItem.Property(Album_Theme)]</label2>
-									<visible>!String.IsEmpty(ListItem.Property(Album_Theme))</visible>
-								</item>
-								<item>
-									<label>146</label>
-									<label2>$INFO[ListItem.Property(Album_Type)]</label2>
-									<visible>!String.IsEmpty(ListItem.Property(Album_Type))</visible>
-								</item>
-								<item>
-									<label>$LOCALIZE[14087]:</label>
-									<label2>$INFO[ListItem.TotalDiscs]</label2>
-									<visible>ListItem.IsBoxset + !String.IsEmpty(ListItem.TotalDiscs)</visible>
-								</item>
-								<item>
-									<label>$LOCALIZE[562]:</label>
-									<label2>$INFO[ListItem.Year]</label2>
-									<visible>!String.IsEmpty(ListItem.Year)</visible>
+									<visible>!String.IsEmpty(ListItem.Property(Album_Theme)) + String.IsEmpty(ListItem.Property(Album_Duration))</visible>
 								</item>
 								<item>
 									<label>$LOCALIZE[21899]:</label>

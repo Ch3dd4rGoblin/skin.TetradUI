@@ -25,7 +25,7 @@
 		<!-- media infos -->
 		<control type="group">
 			<animation effect="fade" time="200">VisibleChange</animation>
-			<visible>[Player.ShowInfo | Window.IsActive(MusicOSD) | !String.IsEmpty(Player.SeekNumeric)] + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
+			<visible>[Player.ShowInfo | Window.IsActive(MusicOSD) | !String.IsEmpty(Player.SeekNumeric)] + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(DialogPVRChannelGuide.xml) | Window.IsVisible(DialogPVRChannelsOSD.xml) | Window.IsActive(PVRRadioRDSInfo)]</visible>
 			<include>FullscreenMusicInfo</include>
 		</control>
 	</controls>

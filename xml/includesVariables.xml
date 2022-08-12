@@ -61,6 +61,10 @@
 		<value condition="!String.IsEmpty(Player.Art(thumb))">$INFO[Player.Art(thumb)]</value>
 		<value>$INFO[Player.Icon]</value>
 	</variable>
+	<variable name="MusicVisualisationSubLabel">
+		<value condition="MusicPlayer.HasNext">$LOCALIZE[209]: $INFO[MusicPlayer.offset(1).Artist,, - ]$INFO[MusicPlayer.offset(1).Title]</value>
+		<value condition="RDS.HasRadioText">$LOCALIZE[14304]: $INFO[RDS.GetLine(0)]</value>
+	</variable>
 	<variable name="DialogInfoTitleLabel">
 		<value condition="String.IsEqual(ListItem.DBTYPE,movie)">$LOCALIZE[13346]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,tvshow)">$LOCALIZE[20351]</value>

@@ -63,8 +63,8 @@
 							<info>ListItem.StartTime</info>
 						</control>
 						<control type="label">
-							<left>165</left>
-							<width>525</width>
+							<left>135</left>
+							<width>555</width>
 							<height>45</height>
 							<font>font13</font>
 							<aligny>center</aligny>
@@ -96,8 +96,8 @@
 							<info>ListItem.StartTime</info>
 						</control>
 						<control type="label">
-							<left>165</left>
-							<width>525</width>
+							<left>135</left>
+							<width>555</width>
 							<height>45</height>
 							<font>font13</font>
 							<aligny>center</aligny>

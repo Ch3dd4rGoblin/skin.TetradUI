@@ -3,6 +3,7 @@
 	<include file="defaults.xml" />
 	<include file="IncludesCodecFlagging.xml" />
 	<include file="IncludesCommonWindowBuilding.xml" />
+	<include file="IncludesDialogSelect.xml" />
 	<include file="IncludesVariables.xml" />
 	<include file="Views_Common.xml" />
 
@@ -24,6 +25,7 @@
 	<include name="HomeLogoButton">
 		<control type="group">
 			<animation effect="slide" end="445.5,0" condition="Skin.HasSetting(Blades_CenterLogoButton)">Conditional</animation>
+			<animation effect="slide" end="105,0" condition="Skin.HasSetting(Blades_CenterLogoButton) + Window.IsVisible(LoginScreen)">Conditional</animation>
 			<control type="button" id="9050">
 				<left>-8</left>
 				<top>13</top>
@@ -42,22 +44,6 @@
 				<animation effect="zoom" start="115" end="100" time="100" center="auto">UnFocus</animation>
 			</control>
 		</control>
-	</include>
-	<include name="HomeButtonCommonValues">
-		<left>50</left>
-		<width>43</width>
-		<height>43</height>
-		<aligny>center</aligny>
-		<textoffsetx>70</textoffsetx>
-		<textwidth>330</textwidth>
-		<textcolor>white2</textcolor>
-		<focusedcolor>black</focusedcolor>
-		<shadowcolor />
-		<font>font30</font>
-		<pulseonselect>no</pulseonselect>
-		<onleft>1</onleft>
-		<onright>2</onright>
-		<animation effect="slide" end="ButtonSlideBackDistance,0" time="ButtonSlideBackTime" reversible="false">focus</animation>
 	</include>
 	<include name="BlankBladeSlideLeft">
 		<control type="button" id="$PARAM[id]">
@@ -317,7 +303,7 @@
 			<height>720</height>
 			<texture colordiffuse="77ffffff">black-back.png</texture>
 			<include>VisibleFadeEffect</include>
-			<visible>Window.IsActive(1103) | Window.IsActive(1105) | Window.IsActive(ShutdownMenu) | [!Window.IsVisible(Weather) + ControlGroup(9000).HasFocus] | Window.IsActive(DialogSelect.xml) | Window.IsActive(DialogAddonInfo.xml) | Window.IsActive(DialogAddonSettings.xml) | Window.IsActive(DialogConfirm.xml) | Window.IsActive(DialogContextMenu.xml) | Window.IsActive(DialogFavourites.xml) | Window.IsActive(DialogKeyboard.xml) | Window.IsActive(DialogMediaSource.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogNumeric.xml) | Window.IsActive(DialogPictureInfo.xml) | Window.IsActive(DialogPVRChannelManager.xml) | Window.IsActive(DialogPVRGroupManager.xml) | Window.IsActive(DialogPVRGuideSearch.xml) | Window.IsActive(DialogPVRInfo.xml) | Window.IsActive(DialogSettings.xml) | Window.IsActive(DialogTextViewer.xml) | Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(FileBrowser.xml) | Window.IsActive(SmartPlaylistEditor.xml) | Window.IsActive(SmartPlaylistRule.xml) | Window.IsActive(script-RSS_Editor.xml)</visible>
+			<visible>Window.IsActive(1103) | Window.IsActive(1105) | Window.IsActive(1106) | Window.IsActive(ShutdownMenu) | [!Window.IsVisible(Weather) + ControlGroup(9000).HasFocus] | Window.IsActive(DialogSelect.xml) | Window.IsActive(DialogAddonInfo.xml) | Window.IsActive(DialogAddonSettings.xml) | Window.IsActive(DialogConfirm.xml) | Window.IsActive(DialogContextMenu.xml) | Window.IsActive(DialogFavourites.xml) | Window.IsActive(DialogKeyboard.xml) | Window.IsActive(DialogMediaSource.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogNumeric.xml) | Window.IsActive(DialogPictureInfo.xml) | Window.IsActive(DialogPVRChannelManager.xml) | Window.IsActive(DialogPVRGroupManager.xml) | Window.IsActive(DialogPVRGuideSearch.xml) | Window.IsActive(DialogPVRInfo.xml) | Window.IsActive(DialogSettings.xml) | Window.IsActive(DialogTextViewer.xml) | Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(FileBrowser.xml) | Window.IsActive(GameOSD.xml) | Window.IsActive(SmartPlaylistEditor.xml) | Window.IsActive(SmartPlaylistRule.xml) | Window.IsActive(script-RSS_Editor.xml)</visible>
 		</control>
 	</include>
 	<include name="SortAscendingButton">
@@ -578,22 +564,6 @@
 			<shadowcolor>black</shadowcolor>
 			<visible>![String.IsEmpty(Window(Weather).Property(Hourly.$PARAM[value].WindSpeed)) + String.IsEmpty(Window(Weather).Property(Hourly.$PARAM[value].WindDirection))]</visible>
 		</control>
-	</include>
-	<include name="SystemButtonCommonValues">
-		<left>50</left>
-		<width>40</width>
-		<height>40</height>
-		<aligny>center</aligny>
-		<textoffsetx>70</textoffsetx>
-		<textwidth>330</textwidth>
-		<textcolor>white2</textcolor>
-		<focusedcolor>black</focusedcolor>
-		<shadowcolor />
-		<font>font30</font>
-		<pulseonselect>no</pulseonselect>
-		<onleft>1</onleft>
-		<onright>2</onright>
-		<animation effect="slide" end="ButtonSlideBackDistance,0" time="ButtonSlideBackTime" reversible="false">focus</animation>
 	</include>
 	<include name="HeaderTextCommons">
 		<top>25</top>
@@ -969,7 +939,7 @@
 				<aligny>center</aligny>
 				<font>font12</font>
 				<textcolor>grey</textcolor>
-				<label>$PARAM[label]</label>
+				<label>$PARAM[header]</label>
 				<visible>!Control.HasFocus($PARAM[id])</visible>
 			</control>
 			<control type="label">
@@ -980,7 +950,7 @@
 				<aligny>center</aligny>
 				<font>font12</font>
 				<textcolor>white</textcolor>
-				<label>$PARAM[label]</label>
+				<label>$PARAM[header]</label>
 				<visible>Control.HasFocus($PARAM[id])</visible>
 			</control>
 			<control type="image">
@@ -1014,7 +984,7 @@
 				<font>font10</font>
 				<textcolor>white</textcolor>
 				<align>center</align>
-				<label>$INFO[Container($PARAM[id]).ListItem.Label]</label>
+				<label>$PARAM[label]</label>
 				<visible>!Control.HasFocus($PARAM[id])</visible>
 			</control>
 			<control type="label">
@@ -1025,7 +995,7 @@
 				<textcolor>orange</textcolor>
 				<align>center</align>
 				<scroll>true</scroll>
-				<label>$INFO[Container($PARAM[id]).ListItem.Label]</label>
+				<label>$PARAM[label]</label>
 				<visible>Control.HasFocus($PARAM[id])</visible>
 			</control>
 			<control type="list" id="$PARAM[id]">
@@ -1679,6 +1649,14 @@
 					<param name="visible" value="!String.IsEmpty(MusicPlayer.SampleRate)" />
 					<param name="info" value="$INFO[MusicPlayer.SampleRate,, kHz]" />
 				</include>
+				<control type="image">
+					<description>RDS Image</description>
+					<width>80</width>
+					<height>35</height>
+					<aspectratio align="right">keep</aspectratio>
+					<texture>flagging/rds/rds.png</texture>
+					<visible>RDS.HasRDS</visible>
+				</control>
 				<include content="CodecFlaggingRating">
 					<param name="visible" value="!String.IsEmpty(MusicPlayer.Rating)" />
 					<param name="info" value="$VAR[PlayerStarRating]" />
@@ -1688,13 +1666,13 @@
 				<top>148</top>
 				<width>910</width>
 				<height>25</height>
-				<label>$LOCALIZE[209]: $INFO[MusicPlayer.offset(1).Artist,, - ]$INFO[MusicPlayer.offset(1).Title]</label>
+				<label>$VAR[MusicVisualisationSubLabel]</label>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font10</font>
 				<textcolor>grey</textcolor>
 				<scroll>true</scroll>
-				<visible>MusicPlayer.HasNext + !Window.IsVisible(MusicOSD)</visible>
+				<visible>[MusicPlayer.HasNext | RDS.HasRadioText] + !Window.IsVisible(MusicOSD)</visible>
 				<animation effect="fade" time="200">VisibleChange</animation>
 			</control>
 		</control>
@@ -1708,6 +1686,15 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>$INFO[Player.Time(hh:mm:ss)]</label>
+			</control>
+			<control type="progress">
+				<description>Progressbar cache</description>
+				<left>100</left>
+				<top>18</top>
+				<width>720</width>
+				<height>10</height>
+				<info>Player.ProgressCache</info>
+				<midtexture border="5" colordiffuse="44ffffff">progress_cache.png</midtexture>
 			</control>
 			<control type="progress">
 				<description>Progressbar</description>
@@ -2233,6 +2220,73 @@
 					<info>ListItem.Progress</info>
 				</control>
 			</focusedlayout>
+		</control>
+	</include>
+	<include name="RDSContent">
+		<control type="label">
+			<width>150</width>
+			<height>45</height>
+			<font>font12</font>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textcolor>grey2</textcolor>
+			<info>ListItem.Label</info>
+		</control>
+		<control type="label">
+			<left>155</left>
+			<width>325</width>
+			<height>45</height>
+			<font>font12</font>
+			<aligny>center</aligny>
+			<info>ListItem.Label2</info>
+		</control>
+	</include>
+	<include name="DialogGameControllersPagecontrol">
+		<control type="group">
+			<left>16</left>
+			<top>595</top>
+			<control type="label">
+				<description>Page Count Label NoFocus</description>
+				<width>160</width>
+				<height>45</height>
+				<font>font12</font>
+				<textcolor>grey2</textcolor>
+				<scroll>false</scroll>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>$INFO[Container($PARAM[container_id]).NumItems] $LOCALIZE[31200]</label>
+				<animation effect="slide" end="70,0" condition="!Control.IsVisible($PARAM[pagecontrol_id])">Conditional</animation>
+				<visible>!Control.HasFocus($PARAM[pagecontrol_id]) + !String.IsEqual(Container($PARAM[pagecontrol_id]).NumItems,0)</visible>
+			</control>
+			<control type="label">
+				<description>Page Count Label Focus</description>
+				<width>160</width>
+				<height>45</height>
+				<font>font12</font>
+				<textcolor>orange</textcolor>
+				<scroll>false</scroll>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>$INFO[Container($PARAM[container_id]).NumItems] $LOCALIZE[31200]</label>
+				<animation effect="slide" end="70,0" condition="!Control.IsVisible($PARAM[pagecontrol_id])">Conditional</animation>
+				<visible>Control.HasFocus($PARAM[pagecontrol_id]) + !String.IsEqual(Container($PARAM[pagecontrol_id]).NumItems,0)</visible>
+			</control>
+			<control type="spincontrol" id="$PARAM[pagecontrol_id]">
+				<description>Next page Spinner</description>
+				<top>6</top>
+				<left>170</left>
+				<subtype>page</subtype>
+				<textoffsetx>80</textoffsetx>
+				<textoffsety>3</textoffsety>
+				<font />
+				<align>right</align>
+				<onleft>$PARAM[onleft]</onleft>
+				<onright>$PARAM[onright]</onright>
+				<onup>$PARAM[container_id]</onup>
+				<ondown>$PARAM[container_id]</ondown>
+				<showonepage>false</showonepage>
+				<visible>Container($PARAM[container_id]).HasNext | Container($PARAM[container_id]).HasPrevious</visible>
+			</control>
 		</control>
 	</include>
 </includes>
