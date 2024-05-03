@@ -3,23 +3,24 @@
 	<defaultcontrol>10</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<left>235</left>
-		<top>125</top>
+		<left>352.5</left>
+		<top>187.5</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
 		<control type="image">
 			<description>Dialog Back</description>
-			<width>810</width>
-			<height>470</height>
-			<texture border="50,100,50,50">dialogs/Dialog.png</texture>
+			<width>1215</width>
+			<height>705</height>
+			<texture border="50,150,50,50">dialogs/Dialog.png</texture>
+			<bordersize>19</bordersize>
 		</control>
 		<control type="label" id="2">
 			<description>Heading label</description>
-			<left>50</left>
-			<top>50</top>
-			<width>710</width>
-			<height>30</height>
+			<left>75</left>
+			<top>75</top>
+			<width>1065</width>
+			<height>45</height>
 			<align>center</align>
 			<font>font16</font>
 			<textcolor>orange</textcolor>
@@ -27,59 +28,59 @@
 		</control>
 		<control type="label" id="4">
 			<description>List label</description>
-			<left>50</left>
-			<top>100</top>
-			<width>710</width>
-			<height>30</height>
+			<left>75</left>
+			<top>150</top>
+			<width>1065</width>
+			<height>45</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<font>font12caps</font>
+			<font>font10</font>
 			<textcolor>white</textcolor>
 			<shadowcolor>black</shadowcolor>
 		</control>
 		<control type="list" id="10">
-			<left>50</left>
-			<top>140</top>
-			<width>500</width>
-			<height>225</height>
+			<left>75</left>
+			<top>210</top>
+			<width>750</width>
+			<height>337.5</height>
 			<onup>9001</onup>
 			<onleft>9000</onleft>
 			<onright>9000</onright>
 			<ondown>9001</ondown>
 			<scrolltime>200</scrolltime>
-			<itemlayout height="45">
+			<itemlayout height="67.5">
 				<control type="image">
-					<width>500</width>
-					<height>45</height>
-					<texture border="10">buttons/list-nofocus.png</texture>
+					<width>750</width>
+					<height>65.5</height>
+					<texture border="15">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="label">
-					<left>10</left>
-					<width>490</width>
-					<height>45</height>
+					<left>15</left>
+					<width>735</width>
+					<height>65.5</height>
 					<font>font13</font>
 					<aligny>center</aligny>
 					<selectedcolor>orange</selectedcolor>
 					<info>ListItem.Label</info>
 				</control>
 			</itemlayout>
-			<focusedlayout height="45">
+			<focusedlayout height="67.5">
 				<control type="image">
-					<width>500</width>
-					<height>45</height>
+					<width>750</width>
+					<height>65.5</height>
 					<visible>!Control.HasFocus(10)</visible>
-					<texture border="10">buttons/list-nofocus.png</texture>
+					<texture border="15">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
-					<width>500</width>
-					<height>45</height>
+					<width>750</width>
+					<height>65.5</height>
 					<visible>Control.hasfocus(14) | Control.HasFocus(10)</visible>
-					<texture border="10">buttons/list-focus.png</texture>
+					<texture border="15">buttons/list-focus.png</texture>
 				</control>
 				<control type="label">
-					<left>10</left>
-					<width>490</width>
-					<height>45</height>
+					<left>15</left>
+					<width>735</width>
+					<height>65.5</height>
 					<font>font13</font>
 					<aligny>center</aligny>
 					<selectedcolor>orange</selectedcolor>
@@ -87,9 +88,9 @@
 					<visible>![Control.hasfocus(14) + Control.HasFocus(10)]</visible>
 				</control>
 				<control type="label">
-					<left>10</left>
-					<width>490</width>
-					<height>45</height>
+					<left>15</left>
+					<width>735</width>
+					<height>65.5</height>
 					<font>font13</font>
 					<aligny>center</aligny>
 					<selectedcolor>orange</selectedcolor>
@@ -99,8 +100,8 @@
 			</focusedlayout>
 		</control>
 		<control type="grouplist" id="9000">
-			<left>560</left>
-			<top>140</top>
+			<left>840</left>
+			<top>210</top>
 			<onup>18</onup>
 			<ondown>9001</ondown>
 			<onleft>10</onleft>
@@ -123,11 +124,11 @@
 			</control>
 		</control>
 		<control type="grouplist" id="9001">
-			<left>203</left>
-			<top>375</top>
-			<width>404</width>
+			<left>304.5</left>
+			<top>562.5</top>
+			<width>606</width>
 			<align>center</align>
-			<itemgap>2</itemgap>
+			<itemgap>3</itemgap>
 			<orientation>horizontal</orientation>
 			<onup>9000</onup>
 			<onleft>20</onleft>

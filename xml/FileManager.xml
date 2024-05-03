@@ -2,12 +2,11 @@
 <window>
 	<defaultcontrol>20</defaultcontrol>
 	<controls>
-		<include condition="!Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
+		<include>CommonVideoVizBackground</include>
 		<include>CommonAppsBackground</include>
-		<include condition="Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
 		<include>CommonAppsBlackwash</include>
 		<control type="group">
-			<left>130</left>
+			<left>195</left>
 			<animation effect="fade" delay="500" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
 			<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 			<control type="label">
@@ -17,7 +16,7 @@
 			</control>
 			<control type="group">
 				<left>0</left>
-				<top>110</top>
+				<top>165</top>
 			</control>
 		</control>
 		<control type="group">
@@ -29,9 +28,9 @@
 			</control>
 			<control type="label">
 				<description>current directory text label left noFocus</description>
-				<left>120</left>
-				<top>100</top>
-				<width>540</width>
+				<left>180</left>
+				<top>150</top>
+				<width>810</width>
 				<font>font13</font>
 				<align>center</align>
 				<scroll>true</scroll>
@@ -41,9 +40,9 @@
 			</control>
 			<control type="label">
 				<description>current directory text label left Focus</description>
-				<left>120</left>
-				<top>100</top>
-				<width>540</width>
+				<left>180</left>
+				<top>150</top>
+				<width>810</width>
 				<font>font13</font>
 				<align>center</align>
 				<scroll>true</scroll>
@@ -53,19 +52,30 @@
 			</control>
 			<control type="label">
 				<description>number of files in left list text label</description>
-				<left>190</left>
-				<top>585</top>
-				<width>480</width>
+				<left>285</left>
+				<top>877.5</top>
+				<width>720</width>
 				<font>font12</font>
-				<align>left</align>
 				<scroll>true</scroll>
 				<textcolor>grey2</textcolor>
 				<label>$INFO[Container(20).NumItems] $LOCALIZE[31200] - $LOCALIZE[31201] $INFO[Container(20).CurrentPage]/$INFO[Container(20).NumPages]</label>
+				<visible>!Control.HasFocus(30)</visible>
+			</control>
+			<control type="label">
+				<description>number of files in left list text label focus</description>
+				<left>285</left>
+				<top>877.5</top>
+				<width>720</width>
+				<font>font12</font>
+				<scroll>true</scroll>
+				<textcolor>orange</textcolor>
+				<label>$INFO[Container(20).NumItems] $LOCALIZE[31200] - $LOCALIZE[31201] $INFO[Container(20).CurrentPage]/$INFO[Container(20).NumPages]</label>
+				<visible>Control.HasFocus(30)</visible>
 			</control>
 			<control type="spincontrol" id="30">
 				<description>Next page button</description>
-				<left>110</left>
-				<top>582</top>
+				<left>165</left>
+				<top>873</top>
 				<subtype>page</subtype>
 				<font />
 				<onleft>31</onleft>
@@ -76,42 +86,42 @@
 				<showonepage>true</showonepage>
 			</control>
 			<control type="list" id="20">
-				<left>120</left>
-				<top>130</top>
-				<width>540</width>
-				<height>443</height>
+				<left>180</left>
+				<top>195</top>
+				<width>810</width>
+				<height>664.5</height>
 				<onleft>30</onleft>
 				<onright>21</onright>
 				<pagecontrol>30</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="40">
+				<itemlayout height="60">
 					<control type="image">
-						<width>540</width>
-						<height>45</height>
-						<texture border="10">buttons/button-nofocus.png</texture>
+						<width>810</width>
+						<height>65.5</height>
+						<texture border="15">buttons/button-nofocus.png</texture>
 					</control>
 					<control type="image">
-						<left>15</left>
-						<top>5</top>
-						<width>35</width>
-						<height>35</height>
+						<left>22.5</left>
+						<top>7.5</top>
+						<width>52.5</width>
+						<height>52.5</height>
 						<info>ListItem.Icon</info>
 					</control>
 					<control type="label">
-						<left>65</left>
-						<top>5</top>
-						<width>465</width>
-						<height>35</height>
+						<left>97.5</left>
+						<top>7.5</top>
+						<width>697.5</width>
+						<height>52.5</height>
 						<font>font13</font>
 						<aligny>center</aligny>
 						<align>left</align>
 						<info>ListItem.Label</info>
 					</control>
 					<control type="label">
-						<left>530</left>
-						<top>5</top>
-						<width>200</width>
-						<height>35</height>
+						<left>795</left>
+						<top>7.5</top>
+						<width>300</width>
+						<height>52.5</height>
 						<font>font12</font>
 						<aligny>center</aligny>
 						<textcolor>grey2</textcolor>
@@ -119,41 +129,41 @@
 						<info>ListItem.Label2</info>
 					</control>
 				</itemlayout>
-				<focusedlayout height="40">
+				<focusedlayout height="60">
 					<control type="image">
-						<width>540</width>
-						<height>45</height>
+						<width>810</width>
+						<height>65.5</height>
 						<visible>!Control.HasFocus(20)</visible>
-						<texture border="10">buttons/button-nofocus.png</texture>
+						<texture border="15">buttons/button-nofocus.png</texture>
 					</control>
 					<control type="image">
-						<width>540</width>
-						<height>45</height>
+						<width>810</width>
+						<height>65.5</height>
 						<visible>Control.HasFocus(20)</visible>
-						<texture border="10">buttons/button-focus.png</texture>
+						<texture border="15">buttons/button-focus.png</texture>
 					</control>
 					<control type="image">
-						<left>15</left>
-						<top>5</top>
-						<width>35</width>
-						<height>35</height>
+						<left>22.5</left>
+						<top>7.5</top>
+						<width>52.5</width>
+						<height>52.5</height>
 						<info>ListItem.Icon</info>
 					</control>
 					<control type="label">
-						<left>65</left>
-						<top>5</top>
-						<width>465</width>
-						<height>35</height>
+						<left>97.5</left>
+						<top>7.5</top>
+						<width>697.5</width>
+						<height>52.5</height>
 						<font>font13</font>
 						<aligny>center</aligny>
 						<align>left</align>
 						<info>ListItem.Label</info>
 					</control>
 					<control type="label">
-						<left>530</left>
-						<top>5</top>
-						<width>200</width>
-						<height>35</height>
+						<left>795</left>
+						<top>7.5</top>
+						<width>300</width>
+						<height>52.5</height>
 						<font>font12</font>
 						<aligny>center</aligny>
 						<textcolor>grey2</textcolor>
@@ -168,9 +178,9 @@
 			</control>
 			<control type="label">
 				<description>current directory text label left noFocus</description>
-				<left>670</left>
-				<top>100</top>
-				<width>540</width>
+				<left>1005</left>
+				<top>150</top>
+				<width>810</width>
 				<font>font13</font>
 				<align>center</align>
 				<scroll>true</scroll>
@@ -180,9 +190,9 @@
 			</control>
 			<control type="label">
 				<description>current directory text label left Focus</description>
-				<left>670</left>
-				<top>100</top>
-				<width>540</width>
+				<left>1005</left>
+				<top>150</top>
+				<width>810</width>
 				<font>font13</font>
 				<align>center</align>
 				<scroll>true</scroll>
@@ -191,23 +201,19 @@
 				<visible>Control.HasFocus(21)</visible>
 			</control>
 			<control type="group">
-			<animation effect="slide" start="0,0" end="-110,0" time="200" condition="Player.HasAudio">Conditional</animation>
-			<animation effect="slide" start="0,0" end="-110,0" time="200" condition="Player.HasVideo">Conditional</animation>
-				<control type="label">
-					<description>number of files in right list text label</description>
-					<left>665</left>
-					<top>585</top>
-					<width>480</width>
-					<font>font12</font>
-					<align>right</align>
-					<scroll>true</scroll>
-					<textcolor>grey2</textcolor>
-					<label>$INFO[Container(21).NumItems] $LOCALIZE[31200] - $LOCALIZE[31201]  $INFO[Container(21).CurrentPage]/$INFO[Container(21).NumPages]</label>
-				</control>
+				<animation effect="slide" start="0,0" end="-165,0" time="200" condition="Player.HasAudio">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-165,0" time="200" condition="Player.HasVideo">Conditional</animation>
+				<include content="PageLabel">
+					<param name="left" value="997.5" />
+					<param name="top" value="871.5" />
+					<param name="width" value="720" />
+					<param name="label" value="$INFO[Container(21).NumItems] $LOCALIZE[31200] - $LOCALIZE[31201]  $INFO[Container(21).CurrentPage]/$INFO[Container(21).NumPages]" />
+					<param name="id" value="31" />
+				</include>
 				<control type="spincontrol" id="31">
 					<description>Next page button</description>
-					<left>120r</left>
-					<top>582</top>
+					<left>180r</left>
+					<top>873</top>
 					<subtype>page</subtype>
 					<font />
 					<onleft>21</onleft>
@@ -219,42 +225,42 @@
 				</control>
 			</control>
 			<control type="list" id="21">
-				<left>670</left>
-				<top>130</top>
-				<width>540</width>
-				<height>443</height>
+				<left>1005</left>
+				<top>195</top>
+				<width>810</width>
+				<height>664.5</height>
 				<onleft>20</onleft>
 				<onright>31</onright>
 				<pagecontrol>30</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="40">
+				<itemlayout height="60">
 					<control type="image">
-						<width>540</width>
-						<height>45</height>
-						<texture border="10">buttons/button-nofocus.png</texture>
+						<width>810</width>
+						<height>65.5</height>
+						<texture border="15">buttons/button-nofocus.png</texture>
 					</control>
 					<control type="image">
-						<left>15</left>
-						<top>5</top>
-						<width>35</width>
-						<height>35</height>
+						<left>22.5</left>
+						<top>7.5</top>
+						<width>52.5</width>
+						<height>52.5</height>
 						<info>ListItem.Icon</info>
 					</control>
 					<control type="label">
-						<left>65</left>
-						<top>5</top>
-						<width>465</width>
-						<height>35</height>
+						<left>97.5</left>
+						<top>7.5</top>
+						<width>697.5</width>
+						<height>52.5</height>
 						<font>font13</font>
 						<aligny>center</aligny>
 						<align>left</align>
 						<info>ListItem.Label</info>
 					</control>
 					<control type="label">
-						<left>530</left>
-						<top>5</top>
-						<width>200</width>
-						<height>35</height>
+						<left>795</left>
+						<top>7.5</top>
+						<width>300</width>
+						<height>52.5</height>
 						<font>font12</font>
 						<aligny>center</aligny>
 						<textcolor>grey2</textcolor>
@@ -262,41 +268,41 @@
 						<info>ListItem.Label2</info>
 					</control>
 				</itemlayout>
-				<focusedlayout height="40">
+				<focusedlayout height="60">
 					<control type="image">
-						<width>540</width>
-						<height>45</height>
+						<width>810</width>
+						<height>65.5</height>
 						<visible>!Control.HasFocus(21)</visible>
-						<texture border="10">buttons/button-nofocus.png</texture>
+						<texture border="15">buttons/button-nofocus.png</texture>
 					</control>
 					<control type="image">
-						<width>540</width>
-						<height>45</height>
+						<width>810</width>
+						<height>65.5</height>
 						<visible>Control.HasFocus(21)</visible>
-						<texture border="10">buttons/button-focus.png</texture>
+						<texture border="15">buttons/button-focus.png</texture>
 					</control>
 					<control type="image">
-						<left>15</left>
-						<top>5</top>
-						<width>35</width>
-						<height>35</height>
+						<left>22.5</left>
+						<top>7.5</top>
+						<width>52.5</width>
+						<height>52.5</height>
 						<info>ListItem.Icon</info>
 					</control>
 					<control type="label">
-						<left>65</left>
-						<top>5</top>
-						<width>465</width>
-						<height>35</height>
+						<left>97.5</left>
+						<top>7.5</top>
+						<width>697.5</width>
+						<height>52.5</height>
 						<font>font13</font>
 						<aligny>center</aligny>
 						<align>left</align>
 						<info>ListItem.Label</info>
 					</control>
 					<control type="label">
-						<left>530</left>
-						<top>5</top>
-						<width>200</width>
-						<height>35</height>
+						<left>795</left>
+						<top>7.5</top>
+						<width>300</width>
+						<height>52.5</height>
 						<font>font12</font>
 						<aligny>center</aligny>
 						<textcolor>grey2</textcolor>

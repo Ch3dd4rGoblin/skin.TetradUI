@@ -2,8 +2,8 @@
 <includes>
 	<include name="ListViewCommons">
 		<control type="panel" id="50">
-			<width>615</width>
-			<height>480</height>
+			<width>922.5</width>
+			<height>720</height>
 			<onleft>9000</onleft>
 			<onright>60</onright>
 			<onup>50</onup>
@@ -11,11 +11,11 @@
 			<viewtype label="535">list</viewtype>
 			<pagecontrol>60</pagecontrol>
 			<scrolltime>200</scrolltime>
-			<itemlayout height="40" width="615">
+			<itemlayout height="60" width="922.5">
 				<control type="label">
-					<left>10</left>
-					<width>400</width>
-					<height>36</height>
+					<left>15</left>
+					<width>600</width>
+					<height>54</height>
 					<font>font13</font>
 					<aligny>center</aligny>
 					<selectedcolor>orange</selectedcolor>
@@ -23,9 +23,9 @@
 					<info>ListItem.Label</info>
 				</control>
 				<control type="label">
-					<left>410</left>
-					<width>195</width>
-					<height>36</height>
+					<left>615</left>
+					<width>292.5</width>
+					<height>54</height>
 					<font>font13</font>
 					<aligny>center</aligny>
 					<selectedcolor>orange</selectedcolor>
@@ -34,25 +34,25 @@
 					<info>ListItem.Label2</info>
 				</control>
 			</itemlayout>
-			<focusedlayout height="40" width="615">
+			<focusedlayout height="60" width="922.5">
 				<control type="image">
-					<width>615</width>
-					<height>40</height>
-					<texture border="10">buttons/list-focus.png</texture>
+					<width>922.5</width>
+					<height>60</height>
+					<texture border="15">buttons/list-focus.png</texture>
 				</control>
 				<control type="label">
-					<left>10</left>
-					<width>400</width>
-					<height>36</height>
+					<left>15</left>
+					<width>600</width>
+					<height>54</height>
 					<font>font13</font>
 					<aligny>center</aligny>
 					<selectedcolor>orange</selectedcolor>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="label">
-					<left>410</left>
-					<width>195</width>
-					<height>36</height>
+					<left>615</left>
+					<width>292.5</width>
+					<height>54</height>
 					<font>font13</font>
 					<aligny>center</aligny>
 					<selectedcolor>orange</selectedcolor>
@@ -62,42 +62,41 @@
 			</focusedlayout>
 		</control>
 		<control type="group">
-			<left>640</left>
-			<top>20</top>
+			<left>960</left>
+			<top>30</top>
 			<visible>Control.IsVisible(50)</visible>
 			<control type="image">
-				<width>420</width>
-				<height>440</height>
+				<width>630</width>
+				<height>660</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$VAR[ListItemPosterVar]</texture>
-				<bordertexture border="19,3,19,3">thumb-border.png</bordertexture>
+				<bordertexture border="28.5,4,28.5,4">thumb-border.png</bordertexture>
 				<bordersize>18,2,18,2</bordersize>
 				<fadetime>IconCrossfadeTime</fadetime>
 			</control>
 			<control type="image">
-				<left>480</left>
-				<top>465</top>
-				<width>64</width>
-				<height>64</height>
-				<colordiffuse>FFFFFFFF</colordiffuse>
+				<left>465</left>
+				<top>585</top>
+				<width>72</width>
+				<height>72</height>
 				<aspectratio>keep</aspectratio>
-				<info>Listitem.Overlay</info>
+				<texture>$INFO[ListItem.Overlay]</texture>
 			</control>
 			<control type="group">
 				<visible>$EXP[AddonLifecycleType]</visible>
 				<include>VisibleFadeEffect</include>
-				<left>16</left>
-				<top>26</top>
+				<left>24</left>
+				<top>39</top>
 				<control type="image">
-					<width>388</width>
-					<height>388</height>
+					<width>582</width>
+					<height>582</height>
 					<texture colordiffuse="AAFFFFFF">black-back.png</texture>
 				</control>
 				<control type="textbox">
-					<left>25</left>
-					<top>25</top>
-					<width>338</width>
-					<height>338</height>
+					<left>37.5</left>
+					<top>37.5</top>
+					<width>507</width>
+					<height>507</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font13</font>
@@ -109,8 +108,8 @@
 	<include name="ThumbnailView">
 		<control type="panel" id="52">
 			<visible>![Window.IsVisible(Videos) + Container.Content(TVShows)]</visible>
-			<width>1080</width>
-			<height>480</height>
+			<width>1620</width>
+			<height>720</height>
 			<onleft>9000</onleft>
 			<onright>60</onright>
 			<onup>52</onup>
@@ -119,18 +118,18 @@
 			<pagecontrol>60</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
-			<itemlayout condition="!Container.Content(Movies) + !Container.Content(Seasons)" height="160" width="180">
+			<itemlayout condition="!Container.Content(Movies) + !Container.Content(Seasons)" height="240" width="270">
 				<control type="image">
-					<left>2</left>
-					<width>176</width>
-					<height>160</height>
-					<texture border="10">buttons/list-nofocus.png</texture>
+					<left>3</left>
+					<width>264</width>
+					<height>240</height>
+					<texture border="15">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
-					<left>6</left>
-					<top>6</top>
-					<width>168</width>
-					<height>128</height>
+					<left>9</left>
+					<top>9</top>
+					<width>252</width>
+					<height>192</height>
 					<texture background="true">$VAR[ListItemPosterVar]</texture>
 					<bordertexture>black-back.png</bordertexture>
 					<bordersize>1</bordersize>
@@ -138,18 +137,18 @@
 				</control>
 				<control type="group">
 					<visible>$EXP[AddonLifecycleType]</visible>
-					<left>27</left>
-					<top>7</top>
+					<left>40.5</left>
+					<top>10.5</top>
 					<control type="image">
-						<width>126</width>
-						<height>126</height>
+						<width>189</width>
+						<height>189</height>
 						<texture colordiffuse="AAFFFFFF">black-back.png</texture>
 					</control>
 					<control type="textbox">
-						<left>5</left>
-						<top>5</top>
-						<width>116</width>
-						<height>116</height>
+						<left>7.5</left>
+						<top>7.5</top>
+						<width>174</width>
+						<height>174</height>
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font8</font>
@@ -158,10 +157,10 @@
 					</control>
 				</control>
 				<control type="label">
-					<left>8</left>
-					<top>130</top>
-					<width>164</width>
-					<height>25</height>
+					<left>12</left>
+					<top>195</top>
+					<width>246</width>
+					<height>37.5</height>
 					<font>font10</font>
 					<textcolor>grey2</textcolor>
 					<selectedcolor>orange</selectedcolor>
@@ -170,26 +169,26 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="image">
-					<left>150</left>
-					<top>100</top>
-					<width>25</width>
-					<height>25</height>
+					<left>225</left>
+					<top>150</top>
+					<width>38</width>
+					<height>37.5</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[ListItem.Overlay]</texture>
 				</control>
 			</itemlayout>
-			<focusedlayout condition="!Container.Content(Movies) + !Container.Content(Seasons)" height="160" width="180">
+			<focusedlayout condition="!Container.Content(Movies) + !Container.Content(Seasons)" height="240" width="270">
 				<control type="image">
-					<left>2</left>
-					<width>176</width>
-					<height>160</height>
-					<texture border="10">buttons/list-focus.png</texture>
+					<left>3</left>
+					<width>264</width>
+					<height>240</height>
+					<texture border="15">buttons/list-focus.png</texture>
 				</control>
 				<control type="image">
-					<left>6</left>
-					<top>6</top>
-					<width>168</width>
-					<height>128</height>
+					<left>9</left>
+					<top>9</top>
+					<width>252</width>
+					<height>192</height>
 					<texture background="true">$VAR[ListItemPosterVar]</texture>
 					<bordertexture>black-back.png</bordertexture>
 					<bordersize>1</bordersize>
@@ -197,18 +196,18 @@
 				</control>
 				<control type="group">
 					<visible>$EXP[AddonLifecycleType]</visible>
-					<left>27</left>
-					<top>7</top>
+					<left>40.5</left>
+					<top>10.5</top>
 					<control type="image">
-						<width>126</width>
-						<height>126</height>
+						<width>189</width>
+						<height>189</height>
 						<texture colordiffuse="AAFFFFFF">black-back.png</texture>
 					</control>
 					<control type="textbox">
-						<left>5</left>
-						<top>5</top>
-						<width>116</width>
-						<height>116</height>
+						<left>7.5</left>
+						<top>7.5</top>
+						<width>174</width>
+						<height>174</height>
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font8</font>
@@ -216,10 +215,10 @@
 					</control>
 				</control>
 				<control type="label">
-					<left>8</left>
-					<top>130</top>
-					<width>164</width>
-					<height>25</height>
+					<left>12</left>
+					<top>195</top>
+					<width>246</width>
+					<height>37.5</height>
 					<font>font10</font>
 					<selectedcolor>orange</selectedcolor>
 					<align>center</align>
@@ -227,36 +226,36 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="image">
-					<left>150</left>
-					<top>100</top>
-					<width>25</width>
-					<height>25</height>
+					<left>225</left>
+					<top>150</top>
+					<width>38</width>
+					<height>37.5</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[ListItem.Overlay]</texture>
 				</control>
 			</focusedlayout>
-			<itemlayout condition="Container.Content(Movies) | Container.Content(Seasons)" height="240" width="154">
+			<itemlayout condition="Container.Content(Movies) | Container.Content(Seasons)" height="360" width="231">
 				<control type="image">
-					<left>2</left>
-					<width>148</width>
-					<height>240</height>
-					<texture border="10">buttons/list-nofocus.png</texture>
+					<left>3</left>
+					<width>222</width>
+					<height>360</height>
+					<texture border="15">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
-					<left>6</left>
-					<top>6</top>
-					<width>142</width>
-					<height>200</height>
+					<left>9</left>
+					<top>9</top>
+					<width>213</width>
+					<height>300</height>
 					<aspectratio>keep</aspectratio>
 					<texture background="true">$VAR[ListItemPosterVar]</texture>
 					<bordertexture>black-back.png</bordertexture>
 					<bordersize>1</bordersize>
 				</control>
 				<control type="label">
-					<left>8</left>
-					<top>206</top>
-					<width>138</width>
-					<height>25</height>
+					<left>12</left>
+					<top>309</top>
+					<width>207</width>
+					<height>37.5</height>
 					<font>font10</font>
 					<textcolor>grey2</textcolor>
 					<selectedcolor>orange</selectedcolor>
@@ -265,36 +264,36 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="image">
-					<left>120</left>
-					<top>180</top>
-					<width>25</width>
-					<height>25</height>
+					<left>180</left>
+					<top>270</top>
+					<width>38</width>
+					<height>37.5</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[ListItem.Overlay]</texture>
 				</control>
 			</itemlayout>
-			<focusedlayout  condition="Container.Content(Movies) | Container.Content(Seasons)" height="240" width="154">
+			<focusedlayout condition="Container.Content(Movies) | Container.Content(Seasons)" height="360" width="231">
 				<control type="image">
-					<left>2</left>
-					<width>148</width>
-					<height>240</height>
-					<texture border="10">buttons/list-focus.png</texture>
+					<left>3</left>
+					<width>222</width>
+					<height>360</height>
+					<texture border="15">buttons/list-focus.png</texture>
 				</control>
 				<control type="image">
-					<left>6</left>
-					<top>6</top>
-					<width>142</width>
-					<height>200</height>
+					<left>9</left>
+					<top>9</top>
+					<width>213</width>
+					<height>300</height>
 					<aspectratio>keep</aspectratio>
 					<texture background="true">$VAR[ListItemPosterVar]</texture>
 					<bordertexture>black-back.png</bordertexture>
 					<bordersize>1</bordersize>
 				</control>
 				<control type="label">
-					<left>8</left>
-					<top>206</top>
-					<width>138</width>
-					<height>25</height>
+					<left>12</left>
+					<top>309</top>
+					<width>207</width>
+					<height>37.5</height>
 					<font>font10</font>
 					<selectedcolor>orange</selectedcolor>
 					<align>center</align>
@@ -302,10 +301,10 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="image">
-					<left>120</left>
-					<top>180</top>
-					<width>25</width>
-					<height>25</height>
+					<left>180</left>
+					<top>270</top>
+					<width>38</width>
+					<height>37.5</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[ListItem.Overlay]</texture>
 				</control>
@@ -315,10 +314,10 @@
 	<include name="WideIconView">
 		<control type="panel" id="53">
 			<visible>!Container.Content(Addons) + !Container.Content(Episodes)</visible>
-			<left>10</left>
-			<top>-20</top>
-			<width>1054</width>
-			<height>508</height>
+			<left>15</left>
+			<top>-30</top>
+			<width>1581</width>
+			<height>762</height>
 			<onleft>9000</onleft>
 			<onright>60</onright>
 			<onup>53</onup>
@@ -327,28 +326,28 @@
 			<pagecontrol>60</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
-			<itemlayout height="127" width="527">
+			<itemlayout height="190.5" width="790.5">
 				<control type="image">
-					<left>2</left>
-					<width>521</width>
-					<height>126</height>
-					<texture border="10">buttons/list-nofocus.png</texture>
+					<left>3</left>
+					<width>781.5</width>
+					<height>189</height>
+					<texture border="15">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
-					<left>9</left>
-					<top>7</top>
-					<width>508</width>
-					<height>94</height>
+					<left>13.5</left>
+					<top>10.5</top>
+					<width>762</width>
+					<height>141</height>
 					<texture background="true">$VAR[ListItemBannerVar]</texture>
 					<bordertexture>black-back.png</bordertexture>
 					<bordersize>1</bordersize>
 					<aspectratio>scale</aspectratio>
 				</control>
 				<control type="label">
-					<left>20</left>
-					<top>99</top>
-					<width>327</width>
-					<height>20</height>
+					<left>30</left>
+					<top>148.5</top>
+					<width>490.5</width>
+					<height>30</height>
 					<font>font10</font>
 					<textcolor>white</textcolor>
 					<selectedcolor>orange</selectedcolor>
@@ -357,10 +356,10 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="label">
-					<left>340</left>
-					<top>99</top>
-					<width>167</width>
-					<height>20</height>
+					<left>510</left>
+					<top>148.5</top>
+					<width>250.5</width>
+					<height>30</height>
 					<font>font10</font>
 					<textcolor>white</textcolor>
 					<selectedcolor>orange</selectedcolor>
@@ -369,47 +368,47 @@
 					<label>$INFO[ListItem.Label2]</label>
 				</control>
 				<control type="image">
-					<left>490</left>
-					<top>74</top>
-					<width>25</width>
-					<height>25</height>
+					<left>735</left>
+					<top>111</top>
+					<width>38</width>
+					<height>37.5</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[ListItem.Overlay]</texture>
 				</control>
 			</itemlayout>
-			<focusedlayout height="140" width="520">
+			<focusedlayout height="210" width="780">
 				<control type="image">
-					<left>3</left>
-					<top>1</top>
-					<width>519</width>
-					<height>124</height>
-					<texture border="10">buttons/list-focus.png</texture>
+					<left>4.5</left>
+					<top>1.5</top>
+					<width>778.5</width>
+					<height>186</height>
+					<texture border="15">buttons/list-focus.png</texture>
 				</control>
 				<control type="image">
-					<left>9</left>
-					<top>7</top>
-					<width>508</width>
-					<height>94</height>
+					<left>13.5</left>
+					<top>10.5</top>
+					<width>762</width>
+					<height>141</height>
 					<texture background="true">$VAR[ListItemBannerVar]</texture>
 					<bordertexture>black-back.png</bordertexture>
 					<bordersize>1</bordersize>
 					<aspectratio>scale</aspectratio>
 				</control>
 				<control type="label">
-					<left>20</left>
-					<top>99</top>
-					<width>327</width>
-					<height>20</height>
+					<left>30</left>
+					<top>148.5</top>
+					<width>490.5</width>
+					<height>30</height>
 					<font>font10</font>
 					<selectedcolor>orange</selectedcolor>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="label">
-					<left>340</left>
-					<top>99</top>
-					<width>167</width>
-					<height>20</height>
+					<left>510</left>
+					<top>148.5</top>
+					<width>250.5</width>
+					<height>30</height>
 					<font>font10</font>
 					<selectedcolor>orange</selectedcolor>
 					<align>right</align>
@@ -417,10 +416,10 @@
 					<label>$INFO[ListItem.Label2]</label>
 				</control>
 				<control type="image">
-					<left>490</left>
-					<top>74</top>
-					<width>25</width>
-					<height>25</height>
+					<left>735</left>
+					<top>111</top>
+					<width>38</width>
+					<height>37.5</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[ListItem.Overlay]</texture>
 				</control>
@@ -429,12 +428,12 @@
 	</include>
 	<include name="PosterWrapView">
 		<control type="group">
-			<top>-35</top>
+			<top>-52.5</top>
 			<visible>Control.IsVisible(54)</visible>
 			<control type="label">
-				<top>10</top>
-				<width>1060</width>
-				<height>20</height>
+				<top>15</top>
+				<width>1590</width>
+				<height>30</height>
 				<font>font16</font>
 				<textcolor>orange</textcolor>
 				<align>left</align>
@@ -443,9 +442,9 @@
 			</control>
 			<control type="textbox" id="400">
 				<description>textarea</description>
-				<top>420</top>
-				<width>1060</width>
-				<height>90</height>
+				<top>630</top>
+				<width>1590</width>
+				<height>135</height>
 				<font>font12</font>
 				<label>$VAR[MoviePlot]</label>
 				<textcolor>white</textcolor>
@@ -455,10 +454,10 @@
 		</control>
 		<control type="fixedlist" id="54">
 			<visible>!Container.Content(Addons)</visible>
-			<left>-35</left>
-			<top>40</top>
-			<width>1160</width>
-			<height>400</height>
+			<left>-52</left>
+			<top>60</top>
+			<width>1740</width>
+			<height>600</height>
 			<onleft>54</onleft>
 			<onright>54</onright>
 			<onup>9000</onup>
@@ -469,88 +468,88 @@
 			<focusposition>1</focusposition>
 			<orientation>horizontal</orientation>
 			<preloaditems>4</preloaditems>
-			<itemlayout height="310" width="218" condition="!Container.Content(Episodes)">
+			<itemlayout height="465" width="327" condition="!Container.Content(Episodes)">
 				<control type="image">
-					<top>2</top>
-					<left>2</left>
-					<width>214</width>
-					<height>306</height>
+					<top>3</top>
+					<left>3</left>
+					<width>321</width>
+					<height>459</height>
 					<aspectratio>scale</aspectratio>
-					<bordertexture border="10">buttons/list-nofocus.png</bordertexture>
-					<bordersize>10</bordersize>
+					<bordertexture border="15">buttons/list-nofocus.png</bordertexture>
+					<bordersize>15</bordersize>
 					<texture background="true">$VAR[ListItemPosterVar]</texture>
 				</control>
 				<control type="image">
-					<left>170</left>
-					<top>265</top>
-					<width>35</width>
-					<height>35</height>
+					<left>255</left>
+					<top>397.5</top>
+					<width>52.5</width>
+					<height>52.5</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[ListItem.Overlay]</texture>
 				</control>
 			</itemlayout>
-			<focusedlayout height="310" width="218" condition="!Container.Content(Episodes)">
+			<focusedlayout height="465" width="327" condition="!Container.Content(Episodes)">
 				<control type="image">
-					<width>218</width>
-					<height>310</height>
+					<width>327</width>
+					<height>465</height>
 					<aspectratio>scale</aspectratio>
-					<bordertexture border="10">thumb-focus.png</bordertexture>
-					<bordersize>10</bordersize>
+					<bordertexture border="15">thumb-focus.png</bordertexture>
+					<bordersize>15</bordersize>
 					<texture background="true">$VAR[ListItemPosterVar]</texture>
-					<animation reversible="false" effect="zoom" start="0,0,218,310" end="-30,-30,278,370" time="200">focus</animation>
-					<animation reversible="false" effect="zoom" end="0,0,218,310" start="-30,-30,278,370" time="200">unfocus</animation>
+					<animation reversible="false" effect="zoom" start="0,0,327,465" end="-45,-45,417,555" time="200">focus</animation>
+					<animation reversible="false" effect="zoom" end="0,0,327,465" start="-45,-45,417,555" time="200">unfocus</animation>
 				</control>
 				<control type="image">
-					<left>170</left>
-					<top>265</top>
-					<width>35</width>
-					<height>35</height>
+					<left>255</left>
+					<top>397.5</top>
+					<width>52.5</width>
+					<height>52.5</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[ListItem.Overlay]</texture>
-					<animation effect="slide" start="0,0" end="30,30" time="200">Focus</animation>
-					<animation effect="slide" end="0,0" start="30,30" time="200">UnFocus</animation>
+					<animation effect="slide" start="0,0" end="45,45" time="200">Focus</animation>
+					<animation effect="slide" end="0,0" start="45,45" time="200">UnFocus</animation>
 				</control>
 			</focusedlayout>
-			<itemlayout height="310" width="420" condition="Container.Content(Episodes)">
+			<itemlayout height="465" width="630" condition="Container.Content(Episodes)">
 				<control type="image">
-					<top>2</top>
-					<left>2</left>
-					<width>416</width>
-					<height>306</height>
+					<top>3</top>
+					<left>3</left>
+					<width>624</width>
+					<height>459</height>
 					<aspectratio aligny="top">scale</aspectratio>
-					<bordertexture border="10">buttons/list-nofocus.png</bordertexture>
-					<bordersize>10</bordersize>
+					<bordertexture border="15">buttons/list-nofocus.png</bordertexture>
+					<bordersize>15</bordersize>
 					<texture background="true">$VAR[ListItemPosterVar]</texture>
 				</control>
 				<control type="image">
-					<left>372</left>
-					<top>265</top>
-					<width>35</width>
-					<height>35</height>
+					<left>558</left>
+					<top>397.5</top>
+					<width>52.5</width>
+					<height>52.5</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[ListItem.Overlay]</texture>
 				</control>
 			</itemlayout>
-			<focusedlayout height="310" width="420" condition="Container.Content(Episodes)">
+			<focusedlayout height="465" width="630" condition="Container.Content(Episodes)">
 				<control type="image">
-					<width>420</width>
-					<height>310</height>
+					<width>630</width>
+					<height>465</height>
 					<aspectratio aligny="top">scale</aspectratio>
-					<bordertexture border="10">thumb-focus.png</bordertexture>
-					<bordersize>10</bordersize>
+					<bordertexture border="15">thumb-focus.png</bordertexture>
+					<bordersize>15</bordersize>
 					<texture background="true">$VAR[ListItemPosterVar]</texture>
 					<animation center="auto" effect="zoom" start="100" end="115" time="200">Focus</animation>
 					<animation center="auto" effect="zoom" start="115" end="100" time="200">UnFocus</animation>
 				</control>
 				<control type="image">
-					<left>372</left>
-					<top>265</top>
-					<width>35</width>
-					<height>35</height>
+					<left>558</left>
+					<top>397.5</top>
+					<width>52.5</width>
+					<height>52.5</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[ListItem.Overlay]</texture>
-					<animation effect="slide" start="0,0" end="30,22" time="200">Focus</animation>
-					<animation effect="slide" end="0,0" start="30,22" time="200">UnFocus</animation>
+					<animation effect="slide" start="0,0" end="45,33" time="200">Focus</animation>
+					<animation effect="slide" end="0,0" start="45,33" time="200">UnFocus</animation>
 				</control>
 			</focusedlayout>
 		</control>
@@ -569,6 +568,7 @@
 		<value condition="Container.Content(Addons) + !String.IsEmpty(ListItem.AddonDescription)">$INFO[ListItem.AddonDescription]</value>
 		<value condition="Container.Content(Albums) + !String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
 		<value condition="Container.Content(Artists) + !String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
+		<value condition="Container.Content(Favourites)">$INFO[ListItem.Property(favourite.action),$LOCALIZE[15217]: ,[CR]]$INFO[ListItem.Property(favourite.provider),$LOCALIZE[15225]: ,]</value>
 		<value>$INFO[ListItem.Plot]</value>
 	</variable>
 	<variable name="ThumbnailInfoViewTitle">
@@ -578,17 +578,17 @@
 	<include name="ThumbnailInfoViewPictureContent">
 		<control type="group">
 			<visible>!String.IsEmpty($PARAM[value])</visible>
-			<height>28</height>
+			<height>42</height>
 			<control type="label">
-				<width>140</width>
+				<width>210</width>
 				<font>font12</font>
 				<label>$PARAM[label]</label>
 				<textcolor>grey2</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="label">
-				<left>150</left>
-				<width>2900</width>
+				<left>225</left>
+				<width>4350</width>
 				<font>font12</font>
 				<label>$INFO[$PARAM[value]]</label>
 				<textcolor>white</textcolor>
@@ -599,8 +599,8 @@
 	</include>
 	<include name="ThumbnailInfoView">
 		<control type="panel" id="55">
-			<width>720</width>
-			<height>480</height>
+			<width>1080</width>
+			<height>720</height>
 			<onleft>9000</onleft>
 			<onright>60</onright>
 			<onup>55</onup>
@@ -609,18 +609,18 @@
 			<pagecontrol>60</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
-			<itemlayout condition="!Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Seasons)" height="160" width="180">
+			<itemlayout condition="!Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Seasons)" height="240" width="270">
 				<control type="image">
-					<top>1</top>
-					<width>175</width>
-					<height>158</height>
-					<texture border="10">buttons/list-nofocus.png</texture>
+					<top>1.5</top>
+					<width>262.5</width>
+					<height>237</height>
+					<texture border="15">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
-					<left>5</left>
-					<top>8</top>
-					<width>165</width>
-					<height>128</height>
+					<left>7.5</left>
+					<top>12</top>
+					<width>247.5</width>
+					<height>192</height>
 					<texture background="true">$VAR[ListItemPosterVar]</texture>
 					<bordertexture>black-back.png</bordertexture>
 					<bordersize>1</bordersize>
@@ -628,18 +628,18 @@
 				</control>
 				<control type="group">
 					<visible>$EXP[AddonLifecycleType]</visible>
-					<left>24</left>
-					<top>9</top>
+					<left>36</left>
+					<top>13.5</top>
 					<control type="image">
-						<width>126</width>
-						<height>126</height>
+						<width>189</width>
+						<height>189</height>
 						<texture colordiffuse="AAFFFFFF">black-back.png</texture>
 					</control>
 					<control type="textbox">
-						<left>5</left>
-						<top>5</top>
-						<width>116</width>
-						<height>116</height>
+						<left>7.5</left>
+						<top>7.5</top>
+						<width>174</width>
+						<height>174</height>
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font8</font>
@@ -648,10 +648,10 @@
 					</control>
 				</control>
 				<control type="label">
-					<left>7</left>
-					<top>132</top>
-					<width>161</width>
-					<height>25</height>
+					<left>10.5</left>
+					<top>198</top>
+					<width>241.5</width>
+					<height>37.5</height>
 					<font>font10</font>
 					<textcolor>grey2</textcolor>
 					<selectedcolor>orange</selectedcolor>
@@ -660,26 +660,26 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="image">
-					<left>142</left>
-					<top>108</top>
-					<width>25</width>
-					<height>25</height>
+					<left>213</left>
+					<top>162</top>
+					<width>38</width>
+					<height>37.5</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[ListItem.Overlay]</texture>
 				</control>
 			</itemlayout>
-			<focusedlayout condition="!Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Seasons)" height="160" width="180">
+			<focusedlayout condition="!Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Seasons)" height="240" width="270">
 				<control type="image">
-					<top>1</top>
-					<width>175</width>
-					<height>158</height>
-					<texture border="10">buttons/list-focus.png</texture>
+					<top>1.5</top>
+					<width>262.5</width>
+					<height>237</height>
+					<texture border="15">buttons/list-focus.png</texture>
 				</control>
 				<control type="image">
-					<left>5</left>
-					<top>8</top>
-					<width>165</width>
-					<height>128</height>
+					<left>7.5</left>
+					<top>12</top>
+					<width>247.5</width>
+					<height>192</height>
 					<texture background="true">$VAR[ListItemPosterVar]</texture>
 					<bordertexture>black-back.png</bordertexture>
 					<bordersize>1</bordersize>
@@ -687,18 +687,18 @@
 				</control>
 				<control type="group">
 					<visible>$EXP[AddonLifecycleType]</visible>
-					<left>24</left>
-					<top>9</top>
+					<left>36</left>
+					<top>13.5</top>
 					<control type="image">
-						<width>126</width>
-						<height>126</height>
+						<width>189</width>
+						<height>189</height>
 						<texture colordiffuse="AAFFFFFF">black-back.png</texture>
 					</control>
 					<control type="textbox">
-						<left>5</left>
-						<top>5</top>
-						<width>116</width>
-						<height>116</height>
+						<left>7.5</left>
+						<top>7.5</top>
+						<width>174</width>
+						<height>174</height>
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font8</font>
@@ -706,10 +706,10 @@
 					</control>
 				</control>
 				<control type="label">
-					<left>7</left>
-					<top>132</top>
-					<width>161</width>
-					<height>25</height>
+					<left>10.5</left>
+					<top>198</top>
+					<width>241.5</width>
+					<height>37.5</height>
 					<font>font10</font>
 					<selectedcolor>orange</selectedcolor>
 					<align>center</align>
@@ -717,37 +717,37 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="image">
-					<left>142</left>
-					<top>108</top>
-					<width>25</width>
-					<height>25</height>
+					<left>213</left>
+					<top>162</top>
+					<width>38</width>
+					<height>37.5</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[ListItem.Overlay]</texture>
 				</control>
 			</focusedlayout>
-			<itemlayout condition="Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons)" height="240" width="154">
+			<itemlayout condition="Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons)" height="360" width="231">
 				<control type="image">
-					<left>3</left>
-					<top>3</top>
-					<width>148</width>
-					<height>238</height>
-					<texture border="10">buttons/list-nofocus.png</texture>
+					<left>4.5</left>
+					<top>4.5</top>
+					<width>222</width>
+					<height>357</height>
+					<texture border="15">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
-					<left>6</left>
-					<top>10</top>
-					<width>142</width>
-					<height>200</height>
+					<left>9</left>
+					<top>15</top>
+					<width>213</width>
+					<height>300</height>
 					<aspectratio>keep</aspectratio>
 					<texture background="true">$VAR[ListItemPosterVar]</texture>
 					<bordertexture>black-back.png</bordertexture>
 					<bordersize>1</bordersize>
 				</control>
 				<control type="label">
-					<left>8</left>
-					<top>210</top>
-					<width>138</width>
-					<height>25</height>
+					<left>12</left>
+					<top>315</top>
+					<width>207</width>
+					<height>37.5</height>
 					<font>font10</font>
 					<textcolor>grey2</textcolor>
 					<selectedcolor>orange</selectedcolor>
@@ -756,37 +756,37 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="image">
-					<left>119</left>
-					<top>182</top>
-					<width>25</width>
-					<height>25</height>
+					<left>178.5</left>
+					<top>273</top>
+					<width>38</width>
+					<height>37.5</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[ListItem.Overlay]</texture>
 				</control>
 			</itemlayout>
-			<focusedlayout  condition="Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons)" height="240" width="154">
+			<focusedlayout condition="Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons)" height="360" width="231">
 				<control type="image">
-					<left>3</left>
-					<top>3</top>
-					<width>148</width>
-					<height>238</height>
-					<texture border="10">buttons/list-focus.png</texture>
+					<left>4.5</left>
+					<top>4.5</top>
+					<width>222</width>
+					<height>357</height>
+					<texture border="15">buttons/list-focus.png</texture>
 				</control>
 				<control type="image">
-					<left>6</left>
-					<top>10</top>
-					<width>142</width>
-					<height>200</height>
+					<left>9</left>
+					<top>15</top>
+					<width>213</width>
+					<height>300</height>
 					<aspectratio>keep</aspectratio>
 					<texture background="true">$VAR[ListItemPosterVar]</texture>
 					<bordertexture>black-back.png</bordertexture>
 					<bordersize>1</bordersize>
 				</control>
 				<control type="label">
-					<left>8</left>
-					<top>210</top>
-					<width>138</width>
-					<height>25</height>
+					<left>12</left>
+					<top>315</top>
+					<width>207</width>
+					<height>37.5</height>
 					<font>font10</font>
 					<selectedcolor>orange</selectedcolor>
 					<align>center</align>
@@ -794,22 +794,22 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="image">
-					<left>119</left>
-					<top>182</top>
-					<width>25</width>
-					<height>25</height>
+					<left>178.5</left>
+					<top>273</top>
+					<width>38</width>
+					<height>37.5</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[ListItem.Overlay]</texture>
 				</control>
 			</focusedlayout>
 		</control>
 		<control type="group">
-			<left>730</left>
-			<top>10</top>
+			<left>1095</left>
+			<top>15</top>
 			<visible>Control.IsVisible(55) + ![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(LiveTV) | Window.IsActive(Pictures)]</visible>
 			<control type="fadelabel">
-				<width>350</width>
-				<height>20</height>
+				<width>525</width>
+				<height>30</height>
 				<font>font16</font>
 				<textcolor>orange</textcolor>
 				<shadowcolor>black</shadowcolor>
@@ -821,9 +821,9 @@
 			</control>
 			<control type="textbox" id="400">
 				<description>textarea</description>
-				<top>40</top>
-				<width>350</width>
-				<height>410</height>
+				<top>60</top>
+				<width>525</width>
+				<height>615</height>
 				<font>font12</font>
 				<label>$VAR[ThumbnailInfoViewPlot]</label>
 				<textcolor>white</textcolor>
@@ -832,12 +832,12 @@
 			</control>
 		</control>
 		<control type="group">
-			<left>645</left>
-			<top>10</top>
+			<left>967.5</left>
+			<top>15</top>
 			<visible>Control.IsVisible(55) + [Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons)]</visible>
 			<control type="fadelabel">
-				<width>420</width>
-				<height>20</height>
+				<width>630</width>
+				<height>30</height>
 				<font>font16</font>
 				<textcolor>orange</textcolor>
 				<shadowcolor>black</shadowcolor>
@@ -849,9 +849,9 @@
 			</control>
 			<control type="textbox" id="400">
 				<description>textarea</description>
-				<top>40</top>
-				<width>420</width>
-				<height>410</height>
+				<top>60</top>
+				<width>630</width>
+				<height>615</height>
 				<font>font12</font>
 				<label>$VAR[MoviePlot]</label>
 				<textcolor>white</textcolor>
@@ -861,12 +861,12 @@
 			</control>
 		</control>
 		<control type="group">
-			<left>730</left>
-			<top>10</top>
+			<left>1095</left>
+			<top>15</top>
 			<visible>Control.IsVisible(55) + [Container.Content(Episodes) | Container.Content(LiveTV)]</visible>
 			<control type="fadelabel">
-				<width>350</width>
-				<height>20</height>
+				<width>525</width>
+				<height>30</height>
 				<font>font13</font>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
@@ -877,9 +877,9 @@
 				<pauseatend>2000</pauseatend>
 			</control>
 			<control type="fadelabel">
-				<top>35</top>
-				<width>350</width>
-				<height>20</height>
+				<top>52.5</top>
+				<width>525</width>
+				<height>30</height>
 				<font>font16</font>
 				<textcolor>orange</textcolor>
 				<shadowcolor>black</shadowcolor>
@@ -891,9 +891,9 @@
 			</control>
 			<control type="textbox" id="400">
 				<description>textarea</description>
-				<top>70</top>
-				<width>350</width>
-				<height>380</height>
+				<top>105</top>
+				<width>525</width>
+				<height>570</height>
 				<font>font12</font>
 				<label>$INFO[ListItem.Plot]</label>
 				<textcolor>white</textcolor>
@@ -902,12 +902,12 @@
 			</control>
 		</control>
 		<control type="group">
-			<left>730</left>
-			<top>10</top>
+			<left>1095</left>
+			<top>15</top>
 			<visible>Control.IsVisible(55) + Window.IsActive(Pictures)</visible>
 			<control type="fadelabel">
-				<width>350</width>
-				<height>20</height>
+				<width>525</width>
+				<height>30</height>
 				<font>font16</font>
 				<textcolor>orange</textcolor>
 				<shadowcolor>black</shadowcolor>
@@ -918,8 +918,8 @@
 				<pauseatend>2000</pauseatend>
 			</control>
 			<control type="grouplist">
-				<top>40</top>
-				<height>410</height>
+				<top>60</top>
+				<height>615</height>
 				<itemgap>0</itemgap>
 				<orientation>vertical</orientation>
 				<include content="ThumbnailInfoViewPictureContent">
@@ -1077,9 +1077,9 @@
 			</control>
 			<control type="textbox" id="400">
 				<description>textarea</description>
-				<top>40</top>
-				<width>350</width>
-				<height>410</height>
+				<top>60</top>
+				<width>525</width>
+				<height>615</height>
 				<font>font12</font>
 				<label>$VAR[ThumbnailInfoViewPlot]</label>
 				<textcolor>white</textcolor>

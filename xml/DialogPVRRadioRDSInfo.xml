@@ -4,20 +4,21 @@
 	<include>dialogeffect</include>
 	<controls>
 		<control type="group">
-			<left>88.5</left>
-			<top>57</top>
+			<left>133</left>
+			<top>85.5</top>
 			<control type="image">
 				<description>background image</description>
-				<width>1103</width>
-				<height>606</height>
-				<texture border="50,100,50,50">dialogs/Dialog.png</texture>
+				<width>1654.5</width>
+				<height>909</height>
+				<texture border="50,150,50,50">dialogs/Dialog.png</texture>
+				<bordersize>19</bordersize>
 			</control>
 			<control type="label">
 				<description>heading label</description>
-				<left>50</left>
-				<top>50</top>
-				<width>1003</width>
-				<height>30</height>
+				<left>75</left>
+				<top>75</top>
+				<width>1504</width>
+				<height>45</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font16</font>
@@ -25,114 +26,114 @@
 				<textcolor>orange</textcolor>
 			</control>
 			<control type="grouplist">
-				<left>50</left>
-				<top>100</top>
+				<left>75</left>
+				<top>150</top>
 				<orientation>vertical</orientation>
-				<itemgap>0</itemgap>
+				<itemgap>2</itemgap>
 				<control type="image">
-					<width>500</width>
-					<height>45</height>
-					<texture border="10">buttons/list-nofocus.png</texture>
+					<width>750</width>
+					<height>65.5</height>
+					<texture border="15">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
-					<width>500</width>
-					<height>45</height>
-					<texture border="10">buttons/list-nofocus.png</texture>
+					<width>750</width>
+					<height>65.5</height>
+					<texture border="15">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
-					<width>500</width>
-					<height>45</height>
-					<texture border="10">buttons/list-nofocus.png</texture>
+					<width>750</width>
+					<height>65.5</height>
+					<texture border="15">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
-					<width>500</width>
-					<height>45</height>
-					<texture border="10">buttons/list-nofocus.png</texture>
+					<width>750</width>
+					<height>65.5</height>
+					<texture border="15">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
-					<width>500</width>
-					<height>45</height>
-					<texture border="10">buttons/list-nofocus.png</texture>
+					<width>750</width>
+					<height>65.5</height>
+					<texture border="15">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
-					<width>500</width>
-					<height>45</height>
-					<texture border="10">buttons/list-nofocus.png</texture>
+					<width>750</width>
+					<height>65.5</height>
+					<texture border="15">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
-					<width>500</width>
-					<height>45</height>
-					<texture border="10">buttons/list-nofocus.png</texture>
+					<width>750</width>
+					<height>65.5</height>
+					<texture border="15">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
-					<width>500</width>
-					<height>45</height>
-					<texture border="10">buttons/list-nofocus.png</texture>
+					<width>750</width>
+					<height>65.5</height>
+					<texture border="15">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
-					<width>500</width>
-					<height>45</height>
-					<texture border="10">buttons/list-nofocus.png</texture>
+					<width>750</width>
+					<height>65.5</height>
+					<texture border="15">buttons/list-nofocus.png</texture>
 				</control>
 			</control>
 			<control type="grouplist">
-				<left>553</left>
-				<top>100</top>
+				<left>829.5</left>
+				<top>150</top>
 				<orientation>vertical</orientation>
-				<itemgap>0</itemgap>
+				<itemgap>2</itemgap>
 				<control type="image">
-					<width>500</width>
-					<height>45</height>
-					<texture border="10">buttons/list-nofocus.png</texture>
+					<width>750</width>
+					<height>65.5</height>
+					<texture border="15">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
-					<width>500</width>
-					<height>45</height>
-					<texture border="10">buttons/list-nofocus.png</texture>
+					<width>750</width>
+					<height>65.5</height>
+					<texture border="15">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
-					<width>500</width>
-					<height>45</height>
-					<texture border="10">buttons/list-nofocus.png</texture>
+					<width>750</width>
+					<height>65.5</height>
+					<texture border="15">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
-					<width>500</width>
-					<height>45</height>
-					<texture border="10">buttons/list-nofocus.png</texture>
+					<width>750</width>
+					<height>65.5</height>
+					<texture border="15">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
-					<width>500</width>
-					<height>45</height>
-					<texture border="10">buttons/list-nofocus.png</texture>
+					<width>750</width>
+					<height>65.5</height>
+					<texture border="15">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
-					<width>500</width>
-					<height>45</height>
-					<texture border="10">buttons/list-nofocus.png</texture>
+					<width>750</width>
+					<height>65.5</height>
+					<texture border="15">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
-					<width>500</width>
-					<height>45</height>
-					<texture border="10">buttons/list-nofocus.png</texture>
+					<width>750</width>
+					<height>65.5</height>
+					<texture border="15">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
-					<width>500</width>
-					<height>45</height>
-					<texture border="10">buttons/list-nofocus.png</texture>
+					<width>750</width>
+					<height>65.5</height>
+					<texture border="15">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
-					<width>500</width>
-					<height>45</height>
-					<texture border="10">buttons/list-nofocus.png</texture>
+					<width>750</width>
+					<height>65.5</height>
+					<texture border="15">buttons/list-nofocus.png</texture>
 				</control>
 			</control>
 			<control type="list" id="9001">
-				<left>60</left>
-				<top>100</top>
-				<itemlayout height="45">
+				<left>90</left>
+				<top>150</top>
+				<itemlayout height="67.5">
 					<include>RDSContent</include>
 				</itemlayout>
-				<focusedlayout height="45">
+				<focusedlayout height="67.5">
 					<include>RDSContent</include>
 				</focusedlayout>
 				<content>
@@ -180,12 +181,12 @@
 				</content>
 			</control>
 			<control type="list" id="9002">
-				<left>563</left>
-				<top>100</top>
-				<itemlayout height="45">
+				<left>844</left>
+				<top>150</top>
+				<itemlayout height="67.5">
 					<include>RDSContent</include>
 				</itemlayout>
-				<focusedlayout height="45">
+				<focusedlayout height="67.5">
 					<include>RDSContent</include>
 				</focusedlayout>
 				<content>
@@ -246,8 +247,8 @@
 				</content>
 			</control>
 			<control type="button" id="9000">
-				<left>451.5</left>
-				<top>512</top>
+				<left>677</left>
+				<top>768</top>
 				<textcolor>grey2</textcolor>
 				<label>$LOCALIZE[15067]</label>
 				<include>DialogButton2CommonValues</include>

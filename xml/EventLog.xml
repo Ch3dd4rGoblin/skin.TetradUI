@@ -4,12 +4,11 @@
 	<menucontrol>9000</menucontrol>
 	<views>50</views>
 	<controls>
-		<include condition="!Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
+		<include>CommonVideoVizBackground</include>
 		<include>CommonSystemBackground</include>
-		<include condition="Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
 		<include>CommonSystemBlackwash</include>
 		<control type="group">
-			<left>130</left>
+			<left>195</left>
 			<animation effect="fade" delay="500" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
 			<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 			<control type="label">
@@ -19,9 +18,9 @@
 			</control>
 			<control type="panel" id="50">
 				<left>0</left>
-				<top>110</top>
-				<width>1070</width>
-				<height>480</height>
+				<top>165</top>
+				<width>1605</width>
+				<height>720</height>
 				<onleft>9000</onleft>
 				<onright>60</onright>
 				<onup>50</onup>
@@ -29,21 +28,21 @@
 				<viewtype label="535">list</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="80" width="1070">
+				<itemlayout height="120" width="1605">
 					<control type="image">
-						<left>6</left>
-						<top>6</top>
-						<width>68</width>
-						<height>68</height>
+						<left>9</left>
+						<top>9</top>
+						<width>102</width>
+						<height>102</height>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<bordertexture>black-back.png</bordertexture>
 						<bordersize>1</bordersize>
 					</control>
 					<control type="label">
-						<left>84</left>
-						<top>5</top>
-						<width>525</width>
-						<height>36</height>
+						<left>126</left>
+						<top>7.5</top>
+						<width>787.5</width>
+						<height>54</height>
 						<font>font13</font>
 						<aligny>center</aligny>
 						<selectedcolor>orange</selectedcolor>
@@ -52,10 +51,10 @@
 						<info>ListItem.Label</info>
 					</control>
 					<control type="label">
-						<left>84</left>
-						<top>35</top>
-						<width>525</width>
-						<height>36</height>
+						<left>126</left>
+						<top>52.5</top>
+						<width>787.5</width>
+						<height>54</height>
 						<font>font13</font>
 						<aligny>center</aligny>
 						<textcolor>grey2</textcolor>
@@ -64,10 +63,10 @@
 						<label>$INFO[ListItem.Property(Event.Description)]</label>
 					</control>
 					<control type="label">
-						<left>609</left>
-						<top>5</top>
-						<width>451</width>
-						<height>36</height>
+						<left>913.5</left>
+						<top>7.5</top>
+						<width>676.5</width>
+						<height>54</height>
 						<font>font13</font>
 						<aligny>center</aligny>
 						<selectedcolor>orange</selectedcolor>
@@ -77,46 +76,46 @@
 						<info>ListItem.Label2</info>
 					</control>
 				</itemlayout>
-				<focusedlayout height="80" width="1200">
+				<focusedlayout height="120" width="1800">
 					<control type="image">
-						<width>1070</width>
-						<height>80</height>
-						<texture border="10">buttons/list-focus.png</texture>
+						<width>1605</width>
+						<height>120</height>
+						<texture border="15">buttons/list-focus.png</texture>
 					</control>
 					<control type="image">
-						<left>6</left>
-						<top>6</top>
-						<width>68</width>
-						<height>68</height>
+						<left>9</left>
+						<top>9</top>
+						<width>102</width>
+						<height>102</height>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<bordertexture>black-back.png</bordertexture>
 						<bordersize>1</bordersize>
 					</control>
 					<control type="label">
-						<left>84</left>
-						<top>5</top>
-						<width>525</width>
-						<height>36</height>
+						<left>126</left>
+						<top>7.5</top>
+						<width>787.5</width>
+						<height>54</height>
 						<font>font13</font>
 						<aligny>center</aligny>
 						<selectedcolor>orange</selectedcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<left>84</left>
-						<top>35</top>
-						<width>525</width>
-						<height>36</height>
+						<left>126</left>
+						<top>52.5</top>
+						<width>787.5</width>
+						<height>54</height>
 						<font>font13</font>
 						<aligny>center</aligny>
 						<selectedcolor>orange</selectedcolor>
 						<label>$INFO[ListItem.Property(Event.Description)]</label>
 					</control>
 					<control type="label">
-						<left>609</left>
-						<top>5</top>
-						<width>451</width>
-						<height>36</height>
+						<left>914</left>
+						<top>7.5</top>
+						<width>676.5</width>
+						<height>54</height>
 						<font>font13</font>
 						<aligny>center</aligny>
 						<textcolor>white2</textcolor>
@@ -132,8 +131,8 @@
 			<include>Container9000BladesRunner</include>
 			<control type="grouplist" id="610">
 				<include content="Container9000Header">
-					<param name="left" value="100" />
-					<param name="top" value="100" />
+					<param name="left" value="150" />
+					<param name="top" value="150" />
 				</include>
 				<control type="button" id="21">
 					<description>Level button</description>
@@ -141,31 +140,31 @@
 				</control>
 				<control type="togglebutton" id="4">
 					<description>Order by button</description>
-					<left>2</left>
+					<left>3</left>
 					<include>SortAscendingButton</include>
 				</control>
 				<control type="radiobutton" id="22">
 					<description>Only show current level</description>
-					<left>5</left>
+					<left>7.5</left>
 					<include>ButtonCommonValues</include>
 				</control>
 				<control type="button" id="20">
 					<description>Clear</description>
-					<left>7</left>
+					<left>10.5</left>
 					<include>ButtonCommonValues</include>
 					<label>$LOCALIZE[192]</label>
 				</control>
 				<control type="button" id="612">
 					<description>Settings</description>
-					<left>9</left>
+					<left>13.5</left>
 					<include>ButtonCommonValues</include>
 					<label>$LOCALIZE[5]</label>
 					<onclick>ActivateWindow(systemsettings,logging)</onclick>
 				</control>
 			</control>
 			<include content="CommonPlayerControls">
-				<param name="left" value="100" />
-				<param name="top" value="140" />
+				<param name="left" value="150" />
+				<param name="top" value="210" />
 			</include>
 		</control>
 		<include>AllViewCommonPageControls</include>

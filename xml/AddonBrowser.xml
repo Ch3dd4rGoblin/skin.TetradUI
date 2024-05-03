@@ -4,15 +4,13 @@
 	<menucontrol>9000</menucontrol>
 	<views>50,52,55</views>
 	<controls>
-		<include condition="!Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
+		<include>CommonVideoVizBackground</include>
 		<include condition="![Window.Previous(Videos) | Window.Previous(Music) | Window.Previous(Pictures) | Skin.String(SubBladeType,media)]">CommonAppsBackground</include>
 		<include condition="Window.Previous(Videos) | Window.Previous(Music) | Window.Previous(Pictures) | Skin.String(SubBladeType,media)">CommonMediaBackground</include>
-		<include condition="Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
 		<include condition="![Window.Previous(Videos) | Window.Previous(Music) | Window.Previous(Pictures) | Skin.String(SubBladeType,media)]">CommonAppsBlackwash</include>
 		<include condition="Window.Previous(Videos) | Window.Previous(Music) | Window.Previous(Pictures) | Skin.String(SubBladeType,media)">CommonMediaBlackwash</include>
-
 		<control type="group">
-			<left>130</left>
+			<left>195</left>
 			<animation effect="fade" delay="500" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
 			<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 			<control type="label">
@@ -21,8 +19,7 @@
 				<include>HeaderTextCommons</include>
 			</control>
 			<control type="group">
-				<left>0</left>
-				<top>110</top>
+				<top>165</top>
 				<include>ListViewCommons</include> <!-- View ID 50 -->
 				<include>ThumbnailInfoView</include> <!-- View ID 55 -->
 				<include>ThumbnailView</include> <!-- View ID 52 -->
@@ -33,8 +30,8 @@
 			<include>Container9000BladesRunner</include>
 			<control type="grouplist" id="610">
 				<include content="Container9000Header">
-					<param name="left" value="100" />
-					<param name="top" value="100" />
+					<param name="left" value="150" />
+					<param name="top" value="150" />
 				</include>
 				<control type="button" id="2">
 					<description>View As button</description>
@@ -42,7 +39,7 @@
 				</control>
 				<control type="button" id="3">
 					<description>Sort by button</description>
-					<left>2</left>
+					<left>3</left>
 					<label>103</label>
 					<include>ButtonCommonValues</include>
 				</control>
@@ -52,38 +49,38 @@
 				</control>
 				<control type="button" id="9">
 					<description>Check for Updates Button</description>
-					<left>7</left>
+					<left>10.5</left>
 					<include>ButtonCommonValues</include>
 					<label>24034</label>
 				</control>
 				<control type="radiobutton" id="6">
 					<description>No notifications</description>
-					<left>9</left>
+					<left>13.5</left>
 					<include>ButtonCommonValues</include>
 					<label>25000</label>
 				</control>
 				<control type="radiobutton" id="7">
 					<description>Hide foreign</description>
-					<left>8</left>
+					<left>12</left>
 					<include>ButtonCommonValues</include>
 					<label>25001</label>
 				</control>
 				<control type="radiobutton" id="8">
 					<description>Show / hide broken add-ons</description>
-					<left>7</left>
+					<left>10.5</left>
 					<include>ButtonCommonValues</include>
 					<label>24999</label>
 				</control>
 				<control type="button" id="5">
 					<description>Settings Button</description>
-					<left>6</left>
+					<left>9</left>
 					<include>ButtonCommonValues</include>
 					<label>10004</label>
 				</control>
 			</control>
 			<include content="CommonPlayerControls">
-				<param name="left" value="100" />
-				<param name="top" value="140" />
+				<param name="left" value="150" />
+				<param name="top" value="210" />
 			</include>
 		</control>
 		<include>AllViewCommonPageControls</include>

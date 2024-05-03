@@ -4,22 +4,23 @@
 	<include>dialogeffect</include>
 	<controls>
 		<control type="group">
-			<left>62.5</left>
-			<top>41</top>
+			<left>94</left>
+			<top>61.5</top>
 			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(PVRGroupManager)">Conditional</animation>
 			<control type="image">
 				<description>background image</description>
-				<width>1155</width>
-				<height>638</height>
-				<texture border="50,100,50,50">dialogs/Dialog.png</texture>
+				<width>1732.5</width>
+				<height>957</height>
+				<texture border="50,150,50,50">dialogs/Dialog.png</texture>
+				<bordersize>19</bordersize>
 				<animation effect="fade" start="90" end="90" time="0" condition="Window.IsVisible(Visualisation)">Conditional</animation>
 			</control>
 			<control type="label" id="2">
 				<description>Heading label</description>
-				<left>50</left>
-				<top>50</top>
-				<width>1055</width>
-				<height>30</height>
+				<left>75</left>
+				<top>75</top>
+				<width>1582.5</width>
+				<height>45</height>
 				<align>center</align>
 				<font>font16</font>
 				<label>$VAR[PVRChannelManagerHeader]</label>
@@ -27,11 +28,11 @@
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="grouplist" id="9000">
-				<left>50</left>
-				<top>100</top>
-				<width>300</width>
-				<height>450</height>
-				<itemgap>0</itemgap>
+				<left>75</left>
+				<top>150</top>
+				<width>450</width>
+				<height>675</height>
+				<itemgap>2</itemgap>
 				<onleft>9001</onleft>
 				<onright>20</onright>
 				<control type="radiobutton" id="7">
@@ -48,7 +49,7 @@
 				<control type="button" id="9">
 					<description>Channel logo Button</description>
 					<label>$LOCALIZE[19202]</label>
-					<textwidth>242</textwidth>
+					<textwidth>363</textwidth>
 					<include>DialogButton3CommonValues</include>
 				</control>
 				<control type="radiobutton" id="12">
@@ -70,122 +71,128 @@
 				</control>
 			</control>
 			<control type="image">
-				<left>309</left>
-				<top>197</top>
-				<width>32</width>
-				<height>32</height>
+				<left>463.5</left>
+				<top>295.5</top>
+				<width>48</width>
+				<height>48</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$INFO[Container(20).ListItem.Property(icon)]</texture>
 			</control>
 			<control type="list" id="20">
-				<left>355</left>
-				<top>100</top>
-				<width>446</width>
-				<height>450</height>
+				<left>532.5</left>
+				<top>150</top>
+				<width>669</width>
+				<height>675</height>
 				<onup>60</onup>
 				<ondown>60</ondown>
 				<onleft>9000</onleft>
 				<onright>9001</onright>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="45">
+				<itemlayout height="67.5">
 					<control type="image">
-						<width>446</width>
-						<height>45</height>
-						<texture border="10">buttons/list-nofocus.png</texture>
+						<width>669</width>
+						<height>65.5</height>
+						<texture border="15">buttons/list-nofocus.png</texture>
 					</control>
-					<control type="image">
-						<left>5</left>
-						<top>5</top>
-						<width>35</width>
-						<height>35</height>
-						<aspectratio>keep</aspectratio>
-						<texture fallback="DefaultInProgressShows.png">$INFO[ListItem.Property(icon)]</texture>
-					</control>
-					<control type="label">
-						<left>50</left>
-						<width>370</width>
-						<height>45</height>
-						<font>font12</font>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Property(Number),, - ]$INFO[ListItem.Property(Name)]</label>
-						<visible>!ListItem.Property(Changed)</visible>
-					</control>
-					<control type="label">
-						<left>50</left>
-						<width>370</width>
-						<height>45</height>
-						<font>font12</font>
-						<aligny>center</aligny>
-						<label>[B]$INFO[ListItem.Property(Number),, - ]$INFO[ListItem.Property(Name)][/B]</label>
-						<visible>ListItem.Property(Changed)</visible>
-					</control>
-					<control type="image">
-						<right>0</right>
-						<top>5</top>
-						<width>35</width>
-						<height>35</height>
-						<texture>OverlayLocked.png</texture>
-						<aspectratio>keep</aspectratio>
-						<visible>ListItem.Property(ParentalLocked)</visible>
+					<control type="group">
+						<animation effect="fade" start="100" end="50" time="200" condition="!ListItem.Property(ActiveChannel)">Conditional</animation>
+						<control type="image">
+							<left>7.5</left>
+							<top>7.5</top>
+							<width>52.5</width>
+							<height>52.5</height>
+							<aspectratio>keep</aspectratio>
+							<texture fallback="DefaultInProgressShows.png">$INFO[ListItem.Property(icon)]</texture>
+						</control>
+						<control type="label">
+							<left>75</left>
+							<width>555</width>
+							<height>65.5</height>
+							<font>font12</font>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(Number),, - ]$INFO[ListItem.Property(Name)]</label>
+							<visible>!ListItem.Property(Changed)</visible>
+						</control>
+						<control type="label">
+							<left>75</left>
+							<width>555</width>
+							<height>65.5</height>
+							<font>font12</font>
+							<aligny>center</aligny>
+							<label>[B]$INFO[ListItem.Property(Number),, - ]$INFO[ListItem.Property(Name)][/B]</label>
+							<visible>ListItem.Property(Changed)</visible>
+						</control>
+						<control type="image">
+							<right>0</right>
+							<top>7.5</top>
+							<width>52.5</width>
+							<height>52.5</height>
+							<texture>OverlayLocked.png</texture>
+							<aspectratio>keep</aspectratio>
+							<visible>ListItem.Property(ParentalLocked)</visible>
+						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout height="45">
+				<focusedlayout height="67.5">
 					<control type="image">
-						<width>446</width>
-						<height>45</height>
+						<width>669</width>
+						<height>65.5</height>
 						<visible>!Control.HasFocus(20)</visible>
-						<texture border="10">buttons/list-nofocus.png</texture>
+						<texture border="15">buttons/list-nofocus.png</texture>
 					</control>
 					<control type="image">
-						<width>446</width>
-						<height>45</height>
+						<width>669</width>
+						<height>65.5</height>
 						<visible>Control.HasFocus(20)</visible>
-						<texture border="10">buttons/list-focus.png</texture>
+						<texture border="15">buttons/list-focus.png</texture>
 					</control>
-					<control type="image">
-						<left>5</left>
-						<top>5</top>
-						<width>35</width>
-						<height>35</height>
-						<aspectratio>keep</aspectratio>
-						<texture fallback="DefaultInProgressShows.png">$INFO[ListItem.Property(icon)]</texture>
-					</control>
-					<control type="label">
-						<left>50</left>
-						<width>370</width>
-						<height>45</height>
-						<font>font12</font>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Property(Number),, - ]$INFO[ListItem.Property(Name)]</label>
-						<visible>!ListItem.Property(Changed)</visible>
-					</control>
-					<control type="label">
-						<left>50</left>
-						<width>370</width>
-						<height>45</height>
-						<font>font12</font>
-						<aligny>center</aligny>
-						<label>[B]$INFO[ListItem.Property(Number),, - ]$INFO[ListItem.Property(Name)][/B]</label>
-						<visible>ListItem.Property(Changed)</visible>
-					</control>
-					<control type="image">
-						<right>0</right>
-						<top>5</top>
-						<width>35</width>
-						<height>35</height>
-						<texture>OverlayLocked.png</texture>
-						<aspectratio>keep</aspectratio>
-						<visible>ListItem.Property(ParentalLocked)</visible>
+					<control type="group">
+						<animation effect="fade" start="100" end="50" time="200" condition="!ListItem.Property(ActiveChannel)">Conditional</animation>
+						<control type="image">
+							<left>7.5</left>
+							<top>7.5</top>
+							<width>52.5</width>
+							<height>52.5</height>
+							<aspectratio>keep</aspectratio>
+							<texture fallback="DefaultInProgressShows.png">$INFO[ListItem.Property(icon)]</texture>
+						</control>
+						<control type="label">
+							<left>75</left>
+							<width>555</width>
+							<height>65.5</height>
+							<font>font12</font>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(Number),, - ]$INFO[ListItem.Property(Name)]</label>
+							<visible>!ListItem.Property(Changed)</visible>
+						</control>
+						<control type="label">
+							<left>75</left>
+							<width>555</width>
+							<height>65.5</height>
+							<font>font12</font>
+							<aligny>center</aligny>
+							<label>[B]$INFO[ListItem.Property(Number),, - ]$INFO[ListItem.Property(Name)][/B]</label>
+							<visible>ListItem.Property(Changed)</visible>
+						</control>
+						<control type="image">
+							<right>0</right>
+							<top>7.5</top>
+							<width>52.5</width>
+							<height>52.5</height>
+							<texture>OverlayLocked.png</texture>
+							<aspectratio>keep</aspectratio>
+							<visible>ListItem.Property(ParentalLocked)</visible>
+						</control>
 					</control>
 				</focusedlayout>
 			</control>
 			<control type="grouplist" id="9001">
-				<left>806</left>
-				<top>100</top>
-				<width>635</width>
-				<height>450</height>
-				<itemgap>0</itemgap>
+				<left>1209</left>
+				<top>150</top>
+				<width>952.5</width>
+				<height>675</height>
+				<itemgap>2</itemgap>
 				<onup>6</onup>
 				<ondown>4</ondown>
 				<onleft>20</onleft>
@@ -195,9 +202,9 @@
 					<label>$LOCALIZE[19024]</label>
 					<altlabel>$LOCALIZE[19023]</altlabel>
 					<usealttexture>!String.IsEmpty(Window.Property(IsRadio))</usealttexture>
-					<textoffsetx>15</textoffsetx>
-					<alttexturefocus border="10">buttons/button-dialog-focus.png</alttexturefocus>
-					<alttexturenofocus border="10">buttons/button-dialog-nofocus.png</alttexturenofocus>
+					<textoffsetx>22.5</textoffsetx>
+					<alttexturefocus border="15">buttons/button-dialog-focus.png</alttexturefocus>
+					<alttexturenofocus border="15">buttons/button-dialog-nofocus.png</alttexturenofocus>
 					<align>center</align>
 					<include>DialogButton3CommonValues</include>
 				</control>
@@ -221,10 +228,10 @@
 				</control>
 			</control>
 			<control type="grouplist" id="9001">
-				<top>415</top>
-				<left>806</left>
+				<top>622.5</top>
+				<left>1209</left>
 				<orientation>vertical</orientation>
-				<itemgap>0</itemgap>
+				<itemgap>2</itemgap>
 				<onup>30</onup>
 				<ondown>60</ondown>
 				<onleft>20</onleft>
@@ -246,12 +253,12 @@
 				</control>
 			</control>
 			<control type="group">
-				<left>535</left>
-				<top>550</top>
+				<left>802.5</left>
+				<top>825</top>
 				<control type="label">
 					<description>Page Count Label NoFocus</description>
-					<width>200</width>
-					<height>45</height>
+					<width>300</width>
+					<height>67.5</height>
 					<font>font12</font>
 					<textcolor>grey2</textcolor>
 					<scroll>false</scroll>
@@ -262,8 +269,8 @@
 				</control>
 				<control type="label">
 					<description>Page Count Label Focus</description>
-					<width>200</width>
-					<height>45</height>
+					<width>300</width>
+					<height>67.5</height>
 					<font>font12</font>
 					<textcolor>orange</textcolor>
 					<scroll>false</scroll>
@@ -274,12 +281,12 @@
 				</control>
 				<control type="spincontrol" id="60">
 					<description>Next page Spinner</description>
-					<left>40</left>
-					<top>6</top>
+					<left>60</left>
+					<top>9</top>
 					<subtype>page</subtype>
-					<textoffsetx>80</textoffsetx>
-					<textoffsety>3</textoffsety>
-					<textwidth>200</textwidth>
+					<textoffsetx>120</textoffsetx>
+					<textoffsety>4.5</textoffsety>
+					<textwidth>300</textwidth>
 					<font />
 					<align>left</align>
 					<onleft>20</onleft>

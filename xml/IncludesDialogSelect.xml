@@ -2,81 +2,83 @@
 <includes>
 	<include name="DefaultDialogSelectLayout">
 		<control type="group">
-			<left>315</left>
-			<top>35</top>
-			<animation effect="slide" end="-105,0" condition="Control.IsVisible(6)">Conditional</animation>
+			<left>472.5</left>
+			<top>52.5</top>
+			<animation effect="slide" end="-157.5,0" condition="Control.IsVisible(6)">Conditional</animation>
 			<control type="image">
 				<description>background image</description>
-				<width>650</width>
-				<height>650</height>
-				<texture border="50,100,50,50">dialogs/Dialog.png</texture>
+				<width>975</width>
+				<height>975</height>
+				<texture border="50,150,50,50">dialogs/Dialog.png</texture>
+				<bordersize>19</bordersize>
 				<animation effect="fade" start="90" end="90" time="0" condition="Window.IsVisible(Visualisation)">Conditional</animation>
 				<visible>Control.IsVisible(3)</visible>
 			</control>
 			<control type="image">
 				<description>background image</description>
-				<width>860</width>
-				<height>650</height>
-				<texture border="50,100,50,50">dialogs/Dialog.png</texture>
+				<width>1290</width>
+				<height>975</height>
+				<texture border="50,150,50,50">dialogs/Dialog.png</texture>
+				<bordersize>19</bordersize>
 				<animation effect="fade" start="90" end="90" time="0" condition="Window.IsVisible(Visualisation)">Conditional</animation>
 				<visible>Control.IsVisible(6)</visible>
 			</control>
 			<control type="label" id="1">
 				<description>heading label</description>
-				<left>50</left>
-				<top>50</top>
-				<width>550</width>
-				<height>30</height>
+				<left>75</left>
+				<top>75</top>
+				<width>825</width>
+				<height>45</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font16</font>
 				<label>13406</label>
 				<textcolor>orange</textcolor>
-				<animation effect="slide" end="105,0" condition="Control.IsVisible(6)">Conditional</animation>
+				<animation effect="slide" end="158,0" condition="Control.IsVisible(6)">Conditional</animation>
 			</control>
 			<control type="list" id="3">
-				<left>50</left>
-				<top>100</top>
-				<width>550</width>
-				<height>450</height>
+				<left>75</left>
+				<top>150</top>
+				<width>825</width>
+				<height>675</height>
 				<onup>3</onup>
 				<ondown>3</ondown>
 				<onleft>9001</onleft>
 				<onright>61</onright>
 				<pagecontrol>61</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="45">
+				<itemlayout height="67.5">
 					<control type="image">
-						<width>550</width>
-						<height>45</height>
-						<texture border="10">buttons/list-nofocus.png</texture>
+						<width>825</width>
+						<height>65.5</height>
+						<texture border="15">buttons/list-nofocus.png</texture>
 					</control>
 					<control type="label">
-						<left>10</left>
-						<width>530</width>
-						<height>45</height>
+						<left>15</left>
+						<width>795</width>
+						<height>65.5</height>
 						<font>font12</font>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
 					</control>
 				</itemlayout>
-				<focusedlayout height="45">
+				<focusedlayout height="67.5">
 					<control type="image">
-						<width>550</width>
-						<height>45</height>
+						<width>825</width>
+						<height>65.5</height>
 						<visible>!Control.HasFocus(3)</visible>
-						<texture border="10">buttons/list-nofocus.png</texture>
+						<texture border="15">buttons/list-nofocus.png</texture>
 					</control>
 					<control type="image">
-						<width>550</width>
-						<height>45</height>
+						<width>825</width>
+						<height>65.5</height>
 						<visible>Control.HasFocus(3)</visible>
-						<texture border="10">buttons/list-focus.png</texture>
+						<texture border="15">buttons/list-focus.png</texture>
 					</control>
 					<control type="label">
-						<left>10</left>
-						<width>530</width>
-						<height>45</height>
+						<left>15</left>
+						<width>795</width>
+						<height>65.5</height>
 						<font>font12</font>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
@@ -84,62 +86,62 @@
 				</focusedlayout>
 			</control>
 			<control type="list" id="6">
-				<left>50</left>
-				<top>100</top>
-				<width>550</width>
-				<height>450</height>
+				<left>75</left>
+				<top>150</top>
+				<width>825</width>
+				<height>675</height>
 				<onup>61</onup>
 				<ondown>61</ondown>
 				<onleft>61</onleft>
 				<onright>9011</onright>
 				<pagecontrol>61</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="45">
+				<itemlayout height="67.5">
 					<control type="image">
-						<width>550</width>
-						<height>45</height>
-						<texture border="10">buttons/list-nofocus.png</texture>
+						<width>825</width>
+						<height>65.5</height>
+						<texture border="15">buttons/list-nofocus.png</texture>
 					</control>
 					<control type="image">
-						<left>5</left>
-						<top>5</top>
-						<width>40</width>
-						<height>35</height>
+						<left>7.5</left>
+						<top>7.5</top>
+						<width>60</width>
+						<height>52.5</height>
 						<texture>$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="label">
-						<left>50</left>
-						<width>490</width>
-						<height>45</height>
+						<left>75</left>
+						<width>735</width>
+						<height>65.5</height>
 						<font>font12</font>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
 					</control>
 				</itemlayout>
-				<focusedlayout height="45">
+				<focusedlayout height="67.5">
 					<control type="image">
-						<width>550</width>
-						<height>45</height>
+						<width>825</width>
+						<height>65.5</height>
 						<visible>!Control.HasFocus(6)</visible>
-						<texture border="10">buttons/list-nofocus.png</texture>
+						<texture border="15">buttons/list-nofocus.png</texture>
 					</control>
 					<control type="image">
-						<width>550</width>
-						<height>45</height>
+						<width>825</width>
+						<height>65.5</height>
 						<visible>Control.HasFocus(6)</visible>
-						<texture border="10">buttons/list-focus.png</texture>
+						<texture border="15">buttons/list-focus.png</texture>
 					</control>
 					<control type="image">
-						<left>5</left>
-						<top>5</top>
-						<width>40</width>
-						<height>35</height>
+						<left>7.5</left>
+						<top>7.5</top>
+						<width>60</width>
+						<height>52.5</height>
 						<texture>$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="label">
-						<left>50</left>
-						<width>490</width>
-						<height>45</height>
+						<left>75</left>
+						<width>735</width>
+						<height>65.5</height>
 						<font>font12</font>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
@@ -149,20 +151,20 @@
 			<control type="group">
 				<visible>Control.IsVisible(6)</visible>
 				<control type="image">
-					<left>610</left>
-					<top>100</top>
-					<width>200</width>
-					<height>200</height>
+					<left>915</left>
+					<top>150</top>
+					<width>300</width>
+					<height>300</height>
 					<texture>$INFO[Container(6).ListItem.Icon]</texture>
-					<bordertexture border="3">black-back.png</bordertexture>
-					<bordersize>2</bordersize>
+					<bordertexture border="4">black-back.png</bordertexture>
+					<bordersize>3</bordersize>
 					<aspectratio>keep</aspectratio>
 				</control>
 				<control type="label">
 					<description>Currently Selected Title</description>
-					<left>610</left>
-					<top>308</top>
-					<width>200</width>
+					<left>915</left>
+					<top>462</top>
+					<width>300</width>
 					<font>font12</font>
 					<align>center</align>
 					<scroll>true</scroll>
@@ -171,9 +173,9 @@
 				</control>
 				<control type="label">
 					<description>Currently Selected Version</description>
-					<left>610</left>
-					<top>338</top>
-					<width>200</width>
+					<left>915</left>
+					<top>507</top>
+					<width>300</width>
 					<font>font10</font>
 					<align>center</align>
 					<scroll>true</scroll>
@@ -183,22 +185,22 @@
 				</control>
 				<control type="textbox">
 					<description>Currently Selected Summary</description>
-					<left>610</left>
-					<top>368</top>
-					<width>200</width>
-					<height>100</height>
+					<left>915</left>
+					<top>552</top>
+					<width>300</width>
+					<height>150</height>
 					<font>font10</font>
 					<align>left</align>
 					<textcolor>grey</textcolor>
 					<label>$INFO[Container(6).ListItem.Label2]</label>
 					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
-					<animation effect="slide" end="0,-30" condition="String.IsEmpty(ListItem.AddonVersion)">Conditional</animation>
+					<animation effect="slide" end="0,-45" condition="String.IsEmpty(ListItem.AddonVersion)">Conditional</animation>
 				</control>
 			</control>
 			<control type="spincontrol" id="61">
 				<description>Next page Spinner</description>
-				<left>540</left>
-				<top>567</top>
+				<left>810</left>
+				<top>850.5</top>
 				<subtype>page</subtype>
 				<font />
 				<onleft condition="Control.IsVisible(3)">9001</onleft>
@@ -210,36 +212,15 @@
 				<textcolor>white</textcolor>
 				<showonepage>true</showonepage>
 			</control>
-			<control type="label">
-				<description>number of files/pages in list text label</description>
-				<left>215</left>
-				<top>565</top>
-				<width>320</width>
-				<height>35</height>
-				<font>font12</font>
-				<align>right</align>
-				<aligny>center</aligny>
-				<scroll>true</scroll>
-				<textcolor>grey2</textcolor>
-				<label>$VAR[DialogSelectContainerInfo]</label>
-				<visible>!Control.HasFocus(61)</visible>
-			</control>
-			<control type="label">
-				<description>number of files/pages in list text label focus</description>
-				<left>215</left>
-				<top>565</top>
-				<width>320</width>
-				<height>35</height>
-				<font>font12</font>
-				<align>right</align>
-				<aligny>center</aligny>
-				<scroll>true</scroll>
-				<textcolor>orange</textcolor>
-				<label>$VAR[DialogSelectContainerInfo]</label>
-				<visible>Control.HasFocus(61)</visible>
-			</control>
+			<include content="PageLabel">
+				<param name="left" value="322.5" />
+				<param name="top" value="847.5" />
+				<param name="width" value="480" />
+				<param name="label" value="$VAR[DialogSelectContainerInfo]" />
+				<param name="id" value="61" />
+			</include>
 			<control type="group">
-				<left>2000</left>
+				<left>3000</left>
 				<control type="button" id="8">
 					<onfocus condition="Control.IsVisible(3)">SetFocus(9002)</onfocus>
 					<onfocus condition="Control.IsVisible(6)">SetFocus(9012)</onfocus>
@@ -254,10 +235,10 @@
 				</control>
 			</control>
 			<control type="grouplist" id="9001">
-				<left>50</left>
-				<bottom>28</bottom>
-				<height>135</height>
-				<itemgap>2</itemgap>
+				<left>75</left>
+				<top>834</top>
+				<height>202.5</height>
+				<itemgap>3</itemgap>
 				<onleft>61</onleft>
 				<onright>61</onright>
 				<onup>3</onup>
@@ -286,16 +267,16 @@
 				</control>
 			</control>
 			<control type="grouplist" id="9011">
-				<left>610</left>
-				<bottom>125</bottom>
-				<height>135</height>
+				<left>915</left>
+				<bottom>135</bottom>
+				<height>202.5</height>
 				<itemgap>0</itemgap>
 				<onleft>61</onleft>
 				<onright>6</onright>
 				<onup>6</onup>
 				<orientation>vertical</orientation>
-				<animation effect="slide" end="0,45" condition="!Control.IsVisible(8)">Conditional</animation>
-				<animation effect="slide" end="0,45" condition="!Control.IsVisible(5)">Conditional</animation>
+				<animation effect="slide" end="0,67.5" condition="!Control.IsVisible(8)">Conditional</animation>
+				<animation effect="slide" end="0,67.5" condition="!Control.IsVisible(5)">Conditional</animation>
 				<visible>Control.IsVisible(6)</visible>
 				<control type="button" id="9012">
 					<description>Optional button</description>
@@ -321,44 +302,49 @@
 			</control>
 		</control>
 	</include>
+	<variable name="GameDialogSelectTextbox">
+		<value condition="Window.IsActive(ingamesaves)">$INFO[ListItem.Property(savestate.caption)]</value>
+	</variable>
 	<include name="GameDialogSelectInclude">
 		<control type="group">
-			<left>280</left>
-			<top>51</top>
+			<left>420</left>
+			<top>76.5</top>
 			<control type="image">
-				<width>720</width>
+				<width>1080</width>
 				<height>$PARAM[height]</height>
 				<colordiffuse>EEFFFFFF</colordiffuse>
-				<texture border="50,100,50,50">dialogs/Dialog.png</texture>
+				<texture border="75,150,75,75">dialogs/Dialog.png</texture>
 			</control>
 			<control type="label" id="1">
 				<description>heading label</description>
-				<left>50</left>
-				<top>50</top>
-				<width>620</width>
-				<height>30</height>
+				<left>75</left>
+				<top>75</top>
+				<width>930</width>
+				<height>45</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font16</font>
 				<textcolor>orange</textcolor>
 			</control>
-			<control type="label" id="12">
-				<left>50</left>
-				<top>105</top>
-				<width>620</width>
-				<height>30</height>
+			<control type="textbox" id="12">
+				<left>75</left>
+				<top>157.5</top>
+				<width>930</width>
+				<height>45</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font10</font>
 				<scroll>true</scroll>
 				<textcolor>grey2</textcolor>
-				<visible>Window.IsVisible(gamevideofilter)</visible>
+				<label>$VAR[GameDialogSelectTextbox]</label>
+				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+				<visible>Window.IsVisible(gamevideofilter) | Window.IsActive(ingamesaves)</visible>
 			</control>
 			<control type="panel" id="11">
-				<left>50</left>
+				<left>75</left>
 				<top>$PARAM[panel_top]</top>
-				<width>620</width>
-				<height>450</height>
+				<width>930</width>
+				<height>675</height>
 				<onleft>9011</onleft>
 				<onright condition="Control.IsVisible(60)">60</onright>
 				<onright condition="!Control.IsVisible(60)">9011</onright>
@@ -367,57 +353,78 @@
 				<scrolltime>200</scrolltime>
 				<pagecontrol>60</pagecontrol>
 				<orientation>vertical</orientation>
-				<itemlayout height="225" width="310">
+				<itemlayout height="338" width="465">
 					<control type="image">
-						<left>1</left>
-						<top>1</top>
-						<width>308</width>
-						<height>223</height>
-						<texture border="10">buttons/button-dialog-nofocus.png</texture>
+						<left>1.5</left>
+						<top>1.5</top>
+						<width>462</width>
+						<height>334.5</height>
+						<texture border="15">buttons/button-dialog-nofocus.png</texture>
 					</control>
 					<control type="gamewindow">
-						<left>10</left>
-						<top>10</top>
-						<width>290</width>
-						<height>175</height>
+						<left>15</left>
+						<top>15</top>
+						<width>435</width>
+						<height>262.5</height>
 						<videofilter>$INFO[ListItem.Property(game.videofilter)]</videofilter>
 						<stretchmode>$INFO[ListItem.Property(game.stretchmode)]</stretchmode>
 						<rotation>$INFO[ListItem.Property(game.videorotation)]</rotation>
 						<animation effect="fade" end="50" condition="true">Conditional</animation>
+						<visible>!Window.IsActive(ingamesaves)</visible>
+					</control>
+					<control type="image">
+						<left>15</left>
+						<top>15</top>
+						<width>435</width>
+						<height>262.5</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+						<animation effect="fade" end="50" condition="true">Conditional</animation>
+						<visible>Window.IsActive(ingamesaves)</visible>
 					</control>
 					<control type="label">
-						<left>4</left>
-						<top>190</top>
-						<width>300</width>
-						<height>25</height>
+						<left>6</left>
+						<top>285</top>
+						<width>450</width>
+						<height>37.5</height>
 						<font>font12</font>
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, (,)]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="225" width="310">
+				<focusedlayout height="338" width="465">
 					<control type="image">
-						<left>1</left>
-						<top>1</top>
-						<width>308</width>
-						<height>223</height>
-						<texture border="10">buttons/button-dialog-focus.png</texture>
+						<left>1.5</left>
+						<top>1.5</top>
+						<width>462</width>
+						<height>334</height>
+						<texture border="15">buttons/button-dialog-focus.png</texture>
 					</control>
 					<control type="gamewindow">
-						<left>10</left>
-						<top>10</top>
-						<width>290</width>
-						<height>175</height>
+						<left>15</left>
+						<top>15</top>
+						<width>435</width>
+						<height>262.5</height>
 						<videofilter>$INFO[ListItem.Property(game.videofilter)]</videofilter>
 						<stretchmode>$INFO[ListItem.Property(game.stretchmode)]</stretchmode>
 						<rotation>$INFO[ListItem.Property(game.videorotation)]</rotation>
+						<visible>!Window.IsActive(ingamesaves)</visible>
+					</control>
+					<control type="image">
+						<left>15</left>
+						<top>15</top>
+						<width>435</width>
+						<height>262.5</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>Window.IsActive(ingamesaves)</visible>
 					</control>
 					<control type="label">
-						<left>4</left>
-						<top>190</top>
-						<width>300</width>
-						<height>25</height>
+						<left>6</left>
+						<top>285</top>
+						<width>450</width>
+						<height>37.5</height>
 						<font>font12</font>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -426,7 +433,7 @@
 				</focusedlayout>
 			</control>
 			<control type="button" id="9011">
-				<left>50</left>
+				<left>75</left>
 				<top>$PARAM[button_top]</top>
 				<label>15067</label>
 				<include>DialogButton2CommonValues</include>
@@ -437,11 +444,11 @@
 				<onleft>11</onleft>
 				<ondown>11</ondown>
 				<onup>11</onup>
-				<animation effect="slide" end="210,0" condition="!Control.IsVisible(60)">Conditional</animation>
+				<animation effect="slide" end="315,0" condition="!Control.IsVisible(60)">Conditional</animation>
 			</control>
 			<control type="spincontrol" id="60">
 				<description>Next page Spinner</description>
-				<left>608</left>
+				<left>912</left>
 				<top>$PARAM[spincontrol_top]</top>
 				<subtype>page</subtype>
 				<font />
@@ -455,10 +462,10 @@
 			</control>
 			<control type="label">
 				<description>number of files/pages in list text label</description>
-				<left>283</left>
+				<left>424.5</left>
 				<top>$PARAM[spincontrol_label_top]</top>
-				<width>320</width>
-				<height>35</height>
+				<width>480</width>
+				<height>52.5</height>
 				<font>font12</font>
 				<align>right</align>
 				<aligny>center</aligny>
@@ -469,10 +476,10 @@
 			</control>
 			<control type="label">
 				<description>number of files/pages in list text label focus</description>
-				<left>283</left>
+				<left>424.5</left>
 				<top>$PARAM[spincontrol_label_top]</top>
-				<width>320</width>
-				<height>35</height>
+				<width>480</width>
+				<height>52.5</height>
 				<font>font12</font>
 				<align>right</align>
 				<aligny>center</aligny>
@@ -485,20 +492,192 @@
 	</include>
 	<include name="GameDialogSelectViewLayout">
 		<include content="GameDialogSelectInclude">
-			<param name="height" value="646" />
-			<param name="panel_top" value="100" />
-			<param name="button_top" value="553" />
-			<param name="spincontrol_top" value="567" />
-			<param name="spincontrol_label_top" value="565" />
+			<param name="height" value="969" />
+			<param name="panel_top" value="150" />
+			<param name="button_top" value="829.5" />
+			<param name="spincontrol_top" value="850.5" />
+			<param name="spincontrol_label_top" value="847.5" />
 		</include>
 	</include>
 	<include name="GameDialogSelectFilterLayout">
 		<include content="GameDialogSelectInclude">
-			<param name="height" value="691" />
-			<param name="panel_top" value="145" />
-			<param name="button_top" value="598" />
-			<param name="spincontrol_top" value="612" />
-			<param name="spincontrol_label_top" value="610" />
+			<param name="height" value="1036.5" />
+			<param name="panel_top" value="217.5" />
+			<param name="button_top" value="897" />
+			<param name="spincontrol_top" value="918" />
+			<param name="spincontrol_label_top" value="915" />
 		</include>
+	</include>
+	<include name="GameDialogSelectSaveLayout">
+		<control type="group">
+			<left>315</left>
+			<top>90</top>
+			<control type="image">
+				<description>background image</description>
+				<width>1290</width>
+				<height>900</height>
+				<texture border="75,150,75,75">dialogs/Dialog.png</texture>
+			</control>
+			<control type="label" id="1">
+				<description>heading label</description>
+				<left>75</left>
+				<top>75</top>
+				<width>1140</width>
+				<height>45</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font16</font>
+				<label>13406</label>
+				<textcolor>orange</textcolor>
+			</control>
+			<control type="list" id="6">
+				<left>75</left>
+				<top>150</top>
+				<width>825</width>
+				<height>607.5</height>
+				<onup>61</onup>
+				<ondown>61</ondown>
+				<onleft>61</onleft>
+				<onright>9011</onright>
+				<pagecontrol>61</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="67.5">
+					<control type="image">
+						<width>825</width>
+						<height>65.5</height>
+						<texture border="15">buttons/list-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<left>7.5</left>
+						<top>7.5</top>
+						<width>60</width>
+						<height>52.5</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="label">
+						<left>75</left>
+						<width>735</width>
+						<height>65.5</height>
+						<font>font12</font>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="67.5">
+					<control type="image">
+						<width>825</width>
+						<height>65.5</height>
+						<visible>!Control.HasFocus(6)</visible>
+						<texture border="15">buttons/list-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<width>825</width>
+						<height>65.5</height>
+						<visible>Control.HasFocus(6)</visible>
+						<texture border="15">buttons/list-focus.png</texture>
+					</control>
+					<control type="image">
+						<left>7.5</left>
+						<top>7.5</top>
+						<width>60</width>
+						<height>52.5</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="label">
+						<left>75</left>
+						<width>735</width>
+						<height>65.5</height>
+						<font>font12</font>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="image">
+				<left>915</left>
+				<top>150</top>
+				<width>300</width>
+				<height>300</height>
+				<texture>$INFO[Container(6).ListItem.Icon]</texture>
+				<bordertexture border="4">black-back.png</bordertexture>
+				<bordersize>3</bordersize>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="label">
+				<description>Currently Selected Title</description>
+				<left>915</left>
+				<top>462</top>
+				<width>300</width>
+				<font>font12</font>
+				<align>center</align>
+				<scroll>true</scroll>
+				<textcolor>white</textcolor>
+				<label>[B]$INFO[Container(6).ListItem.Label][/B]</label>
+			</control>
+			<control type="label">
+				<description>Currently Selected Version</description>
+				<left>915</left>
+				<top>507</top>
+				<width>300</width>
+				<font>font10</font>
+				<align>center</align>
+				<scroll>true</scroll>
+				<textcolor>grey2</textcolor>
+				<label>[B]$INFO[Container(6).ListItem.Label2][/B]</label>
+				<visible>!String.IsEmpty(ListItem.Label2)</visible>
+			</control>
+			<control type="textbox" id="12">
+				<description>Currently Selected Summary</description>
+				<left>915</left>
+				<top>552</top>
+				<width>300</width>
+				<height>150</height>
+				<font>font10</font>
+				<align>left</align>
+				<textcolor>grey</textcolor>
+				<label />
+				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+				<animation effect="slide" end="0,-45" condition="String.IsEmpty(ListItem.Label2)">Conditional</animation>
+			</control>
+			<control type="spincontrol" id="61">
+				<description>Next page Spinner</description>
+				<left>810</left>
+				<top>771</top>
+				<subtype>page</subtype>
+				<font />
+				<onleft>6</onleft>
+				<onright>9011</onright>
+				<onup>6</onup>
+				<textcolor>white</textcolor>
+				<showonepage>true</showonepage>
+			</control>
+			<include content="PageLabel">
+				<param name="left" value="322.5" />
+				<param name="top" value="768" />
+				<param name="width" value="480" />
+				<param name="label" value="$LOCALIZE[31201] $INFO[Container(6).CurrentPage]/$INFO[Container(6).NumPages]" />
+				<param name="id" value="61" />
+			</include>
+			<control type="grouplist" id="9011">
+				<left>915</left>
+				<top>690</top>
+				<height>202.5</height>
+				<itemgap>0</itemgap>
+				<onleft>61</onleft>
+				<onright>6</onright>
+				<onup>6</onup>
+				<orientation>vertical</orientation>
+				<control type="button" id="5">
+					<description>Manual button</description>
+					<label />
+					<include>DialogButton2CommonValues</include>
+				</control>
+				<control type="button" id="7">
+					<description>Cancel button</description>
+					<label />
+					<include>DialogButton2CommonValues</include>
+				</control>
+			</control>
+		</control>
 	</include>
 </includes>

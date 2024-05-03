@@ -6,7 +6,7 @@
 noun: a group or set of four
 
 ------------------------------------------------------------------------
-## ABOUT TETRADUI 1.x FOR KODI 19 MATRIX
+## ABOUT TETRADUI 1.x FOR KODI 20 NEXUS
 The aim with TetradUI is to create a fresh modern homage of the classic blades-style UI found in the original Xbox360 dashboard. Also seen in the works of Team Blackbolt and Jezz_X with projects MC360 and JX720 respectively. TetradUI is based from JX720 by Jezz_X.
   
 Created by Jezz_X and TeamUI 
@@ -17,13 +17,13 @@ Created by Jezz_X and TeamUI
 <br>
 
 ## INSTALL:
-TetradUI can be installed through [Gade's Development Repository](https://github.com/gade01/repository.gade/blob/master/leia/repository.gade/repository.gade-2.1.1.zip?raw=true).
+TetradUI can be installed through the official Kodi repository or [Gade's Development Repository](https://github.com/gade01/repository.gade/blob/master/leia/repository.gade/repository.gade-2.1.1.zip?raw=true).
 
 To install this add-on you must do so from the Add-on manager from within Kodi by going to:   
 1. Settings   
 2. Add-ons   
 3. Install from repository   
-4. Gade's add-on repository   
+4. Kodi add-on repository   
 5. Look and feel   
 6. Skins   
 7. TetradUI   
@@ -66,7 +66,9 @@ Recommended Kodi settings when installing the development repository:
 <br>
 
 ## LINKS:
-[Kodi forum (skin support)](url placeholder) 
+[Kodi forum (skin support)](https://forum.kodi.tv/forumdisplay.php?fid=318) 
+
+[Kodi Wiki](https://kodi.wiki/view/Add-on:TetradUI)
 
 [SCREENSHOTS](url placeholder)  
 <br>

@@ -2,11 +2,10 @@
 <window>
 	<defaultcontrol>3</defaultcontrol>
 	<controls>
-		<include condition="!Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
+		<include>CommonVideoVizBackground</include>
 		<include condition="!Window.Previous(Weather)">CommonSystemBackground</include>
 		<include condition="Window.Previous(Weather)">CommonWeatherBackground</include>
-		<include condition="Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
-
+		
 		<control type="group">
 			<visible>!Window.Previous(Weather) + !Window.Previous(Videos) + !Window.Previous(Music) + !Window.Previous(Pictures) + !Window.Previous(Programs)</visible>
 			<include>CommonSystemBlackwash</include>
@@ -23,9 +22,9 @@
 			<visible>Window.Previous(Videos) | Window.Previous(Music) | Window.Previous(Pictures)</visible>
 			<include>CommonMediaBlackwash</include>
 		</control>
-
+		
 		<control type="group">
-			<left>130</left>
+			<left>195</left>
 			<animation effect="fade" delay="500" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
 			<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 			<control type="label">
@@ -36,10 +35,10 @@
 			<control type="grouplist" id="3">
 				<description>button area</description>
 				<left>0</left>
-				<top>115</top>
-				<width>250</width>
-				<height>400</height>
-				<itemgap>-2</itemgap>
+				<top>172.5</top>
+				<width>375</width>
+				<height>600</height>
+				<itemgap>-3</itemgap>
 				<onleft>5</onleft>
 				<onright>5</onright>
 				<onup>20</onup>
@@ -47,11 +46,11 @@
 			</control>
 			<control type="grouplist" id="5">
 				<description>control area</description>
-				<left>270</left>
-				<top>115</top>
-				<width>790</width>
-				<height>480</height>
-				<itemgap>-2</itemgap>
+				<left>405</left>
+				<top>172.5</top>
+				<width>1185</width>
+				<height>720</height>
+				<itemgap>-3</itemgap>
 				<pagecontrol>90</pagecontrol>
 				<onleft>3</onleft>
 				<onright>90</onright>
@@ -59,21 +58,21 @@
 				<ondown>5</ondown>
 			</control>
 			<control type="label">
-				<top>515</top>
-				<left>15</left>
-				<width>250</width>
-				<height>50</height>
+				<top>772.5</top>
+				<left>22.5</left>
+				<width>375</width>
+				<height>75</height>
 				<aligny>center</aligny>
 				<label>31553</label>
 			</control>
 			<control type="button" id="20">
 				<description>Settings Level Button</description>
-				<top>565</top>
-				<height>50</height>
-				<width>250</width>
+				<top>847.5</top>
+				<height>75</height>
+				<width>375</width>
 				<textcolor>white</textcolor>
-				<texturefocus border="10">buttons/button-focus.png</texturefocus>
-				<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
+				<texturefocus border="15">buttons/button-focus.png</texturefocus>
+				<texturenofocus border="15">buttons/button-nofocus.png</texturenofocus>
 				<label>10037</label>
 				<onclick>SettingsLevelChange</onclick>
 				<align>left</align>
@@ -83,8 +82,8 @@
 			</control>
 			<control type="spincontrol" id="90">
 				<description>Next page button</description>
-				<left>1000</left>
-				<top>120r</top>
+				<left>1500</left>
+				<top>180r</top>
 				<subtype>page</subtype>
 				<font>font13</font>
 				<onleft>5</onleft>
@@ -92,29 +91,29 @@
 				<ondown>5</ondown>
 				<onup>5</onup>
 				<textcolor>grey2</textcolor>
+				<focusedcolor>orange</focusedcolor>
 				<showonepage>false</showonepage>
-				<animation effect="slide" start="0,0" end="-100,0" time="200" condition="Player.HasAudio">Conditional</animation>
-				<animation effect="slide" start="0,0" end="-100,0" time="200" condition="Player.HasVideo + VideoPlayer.Content(Movies)">Conditional</animation>
-				<animation effect="slide" start="0,0" end="-160,0" time="200" condition="Player.HasVideo + !VideoPlayer.Content(Movies)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-150,0" time="200" condition="Player.HasAudio">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-150,0" time="200" condition="Player.HasVideo + VideoPlayer.Content(Movies)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-240,0" time="200" condition="Player.HasVideo + !VideoPlayer.Content(Movies)">Conditional</animation>
 			</control>
 			<control type="textbox" id="6">
-				<left>5</left>
-				<top>659</top>
-				<height>55</height>
-				<width>500</width>
+				<left>7.5</left>
+				<top>988.5</top>
+				<height>82.5</height>
+				<width>750</width>
 				<font>font10</font>
 				<textcolor>grey2</textcolor>
 				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 			</control>
 		</control>
-
+		
 		<control type="label" id="2">
 			<description>Title label2</description>
 			<textcolor />
 			<font />
 		</control>
-
-
+		
 		<control type="group">
 			<visible>!Window.Previous(Weather) + !Window.Previous(Videos) + !Window.Previous(Music) + !Window.Previous(Pictures) + !Window.Previous(Programs)</visible>
 			<include>SettingsToSubBlades</include>
@@ -131,14 +130,13 @@
 			<visible>Window.Previous(Videos) | Window.Previous(Music) | Window.Previous(Pictures)</visible>
 			<include>MediaToSubBlades</include>
 		</control>
-		
 		<control type="button" id="10">
 			<description>Default Category Button</description>
-			<height>50</height>
-			<width>250</width>
+			<height>75</height>
+			<width>375</width>
 			<textcolor>white</textcolor>
-			<texturefocus border="10">buttons/button-focus.png</texturefocus>
-			<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
+			<texturefocus border="15">buttons/button-focus.png</texturefocus>
+			<texturenofocus border="15">buttons/button-nofocus.png</texturenofocus>
 			<label />
 			<align>left</align>
 		</control>
@@ -149,7 +147,7 @@
 		<control type="radiobutton" id="8">
 			<description>Default RadioButton</description>
 			<include>SettingsButtonCommonValues</include>
-			<radioposx>750</radioposx>
+			<radioposx>1125</radioposx>
 		</control>
 		<control type="spincontrolex" id="9">
 			<description>Default SpinControlex</description>
@@ -167,10 +165,14 @@
 			<include>SettingsButtonCommonValues</include>
 			<aligny>center</aligny>
 		</control>
+		<control type="colorbutton" id="15">
+			<description>Default Colorbutton</description>
+			<include>SettingsButtonCommonValues</include>
+		</control>
 		<control type="label" id="14">
 			<description>Separator label</description>
 			<label />
-			<height>45</height>
+			<height>65.5</height>
 			<font>font13</font>
 			<align>center</align>
 			<aligny>center</aligny>

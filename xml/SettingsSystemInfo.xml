@@ -2,18 +2,17 @@
 <window>
 	<defaultcontrol>95</defaultcontrol>
 	<controls>
-		<include condition="!Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
+		<include>CommonVideoVizBackground</include>
 		<include condition="!Window.Previous(Weather) + !Window.Previous(Videos) + !Window.Previous(Music) + !Window.Previous(Pictures) + !Window.Previous(Programs)">CommonSystemBackground</include>
 		<include condition="Window.Previous(Weather)">CommonWeatherBackground</include>
 		<include condition="Window.Previous(Programs)">CommonAppsBackground</include>
 		<include condition="Window.Previous(Videos) | Window.Previous(Music) | Window.Previous(Pictures)">CommonMediaBackground</include>
-		<include condition="Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
 		<include condition="!Window.Previous(Weather) + !Window.Previous(Videos) + !Window.Previous(Music) + !Window.Previous(Pictures) + !Window.Previous(Programs)">CommonSystemBlackwash</include>
 		<include condition="Window.Previous(Weather)">CommonWeatherBlackwash</include>
 		<include condition="Window.Previous(Programs)">CommonAppsBlackwash</include>
 		<include condition="Window.Previous(Videos) | Window.Previous(Music) | Window.Previous(Pictures)">CommonMediaBlackwash</include>
 		<control type="group">
-			<left>130</left>
+			<left>195</left>
 			<animation effect="fade" delay="500" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
 			<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 			<control type="label" id="40">
@@ -23,65 +22,65 @@
 			</control>
 			<control type="grouplist" id="9500">
 				<left>0</left>
-				<top>120</top>
-				<itemgap>-2</itemgap>
+				<top>180</top>
+				<itemgap>-3</itemgap>
 				<control type="button" id="95">
 					<description>Button Default Values</description>
-					<height>50</height>
-					<width>200</width>
+					<height>75</height>
+					<width>300</width>
 					<textcolor>white</textcolor>
-					<texturefocus border="10">buttons/button-focus.png</texturefocus>
-					<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
+					<texturefocus border="15">buttons/button-focus.png</texturefocus>
+					<texturenofocus border="15">buttons/button-nofocus.png</texturenofocus>
 					<align>left</align>
 					<label>20037</label>
 				</control>
 				<control type="button" id="94">
 					<description>Button Storage</description>
-					<height>50</height>
-					<width>200</width>
+					<height>75</height>
+					<width>300</width>
 					<textcolor>white</textcolor>
-					<texturefocus border="10">buttons/button-focus.png</texturefocus>
-					<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
+					<texturefocus border="15">buttons/button-focus.png</texturefocus>
+					<texturenofocus border="15">buttons/button-nofocus.png</texturenofocus>
 					<align>left</align>
 					<label>13277</label>
 				</control>
 				<control type="button" id="96">
 					<description>Button Network</description>
-					<height>50</height>
-					<width>200</width>
+					<height>75</height>
+					<width>300</width>
 					<textcolor>white</textcolor>
-					<texturefocus border="10">buttons/button-focus.png</texturefocus>
-					<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
+					<texturefocus border="15">buttons/button-focus.png</texturefocus>
+					<texturenofocus border="15">buttons/button-nofocus.png</texturenofocus>
 					<align>left</align>
 					<label>13279</label>
 				</control>
 				<control type="button" id="97">
 					<description>Button Video</description>
-					<height>50</height>
-					<width>200</width>
+					<height>75</height>
+					<width>300</width>
 					<textcolor>white</textcolor>
-					<texturefocus border="10">buttons/button-focus.png</texturefocus>
-					<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
+					<texturefocus border="15">buttons/button-focus.png</texturefocus>
+					<texturenofocus border="15">buttons/button-nofocus.png</texturenofocus>
 					<align>left</align>
 					<label>13280</label>
 				</control>
 				<control type="button" id="98">
 					<description>Button Hardware</description>
-					<height>50</height>
-					<width>200</width>
+					<height>75</height>
+					<width>300</width>
 					<textcolor>white</textcolor>
-					<texturefocus border="10">buttons/button-focus.png</texturefocus>
-					<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
+					<texturefocus border="15">buttons/button-focus.png</texturefocus>
+					<texturenofocus border="15">buttons/button-nofocus.png</texturenofocus>
 					<align>left</align>
 					<label>13281</label>
 				</control>
 				<control type="button" id="100">
 					<description>Button Privacy Policy</description>
-					<height>50</height>
-					<width>200</width>
+					<height>75</height>
+					<width>300</width>
 					<textcolor>white</textcolor>
-					<texturefocus border="10">buttons/button-focus.png</texturefocus>
-					<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
+					<texturefocus border="15">buttons/button-focus.png</texturefocus>
+					<texturenofocus border="15">buttons/button-nofocus.png</texturenofocus>
 					<align>left</align>
 					<label>12389</label>
 					<onright>60</onright>
@@ -89,81 +88,81 @@
 				</control>
 			</control>
 			<control type="group">
-				<left>220</left>
-				<top>120</top>
+				<left>330</left>
+				<top>180</top>
 				<control type="label" id="2">
 					<description>Label 2</description>
-					<width>840</width>
+					<width>1260</width>
 					<label />
 					<font>font13</font>
 				</control>
 				<control type="label" id="3">
 					<description>Label 3</description>
-					<top>40</top>
-					<width>840</width>
+					<top>60</top>
+					<width>1260</width>
 					<label />
 					<font>font13</font>
 				</control>
 				<control type="label" id="4">
 					<description>Label 4</description>
-					<top>80</top>
-					<width>840</width>
+					<top>120</top>
+					<width>1260</width>
 					<label />
 					<font>font13</font>
 				</control>
 				<control type="label" id="5">
 					<description>Label 5</description>
-					<top>120</top>
-					<width>840</width>
+					<top>180</top>
+					<width>1260</width>
 					<label />
 					<font>font13</font>
 				</control>
 				<control type="label" id="6">
 					<description>Label 6</description>
-					<top>160</top>
-					<width>840</width>
+					<top>240</top>
+					<width>1260</width>
 					<label />
 					<font>font13</font>
 				</control>
 				<control type="label" id="7">
 					<description>Label 7</description>
-					<top>200</top>
-					<width>840</width>
+					<top>300</top>
+					<width>1260</width>
 					<label />
 					<font>font13</font>
 				</control>
 				<control type="label" id="8">
 					<description>Label 8</description>
-					<top>240</top>
-					<width>840</width>
+					<top>360</top>
+					<width>1260</width>
 					<label />
 					<font>font13</font>
 				</control>
 				<control type="label" id="9">
 					<description>Label 9</description>
-					<top>280</top>
-					<width>840</width>
+					<top>420</top>
+					<width>1260</width>
 					<label />
 					<font>font13</font>
 				</control>
 				<control type="label" id="10">
 					<description>Label 10</description>
-					<top>320</top>
-					<width>840</width>
+					<top>480</top>
+					<width>1260</width>
 					<label />
 					<font>font13</font>
 				</control>
 				<control type="label" id="11">
 					<description>Label 11</description>
-					<top>360</top>
-					<width>840</width>
+					<top>540</top>
+					<width>1260</width>
 					<label />
 					<font>font13</font>
 				</control>
 				<control type="textbox" id="30">
 					<description>Label 30</description>
-					<width>840</width>
-					<height>355</height>
+					<width>1260</width>
+					<height>532</height>
 					<label />
 					<font>font13</font>
 					<pagecontrol>60</pagecontrol>
@@ -174,10 +173,10 @@
 				<visible>Control.IsVisible(30)</visible>
 				<control type="label">
 					<description>Privacy Policy Page Count</description>
-					<top>490</top>
-					<left>790</left>
-					<width>200</width>
-					<height>35</height>
+					<top>735</top>
+					<left>1185</left>
+					<width>300</width>
+					<height>52.5</height>
 					<label>$INFO[Container(30).CurrentPage, $LOCALIZE[31201] (]$INFO[Container(30).NumPages,/,)]</label>
 					<align>right</align>
 					<aligny>center</aligny>
@@ -186,8 +185,8 @@
 				</control>
 				<control type="spincontrol" id="60">
 					<description>Next page button</description>
-					<top>490</top>
-					<left>1000</left>
+					<top>735</top>
+					<left>1500</left>
 					<subtype>page</subtype>
 					<font />
 					<onleft>100</onleft>
@@ -198,15 +197,15 @@
 				</control>
 			</control>
 			<control type="group">
-				<left>130</left>
-				<top>540</top>
-				<animation effect="slide" start="0,0" end="-100,0" time="200" condition="Player.HasAudio">Conditional</animation>
-				<animation effect="slide" start="0,0" end="-100,0" time="200" condition="Player.HasVideo + VideoPlayer.Content(Movies)">Conditional</animation>
-				<animation effect="slide" start="0,0" end="-160,0" time="200" condition="Player.HasVideo + !VideoPlayer.Content(Movies)">Conditional</animation>
+				<left>195</left>
+				<top>810</top>
+				<animation effect="slide" start="0,0" end="-150,0" time="200" condition="Player.HasAudio">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-150,0" time="200" condition="Player.HasVideo + VideoPlayer.Content(Movies)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-240,0" time="200" condition="Player.HasVideo + !VideoPlayer.Content(Movies)">Conditional</animation>
 				<control type="label" id="52">
 					<description>Kodi BUILD Version</description>
-					<left>20</left>
-					<width>910</width>
+					<left>30</left>
+					<width>1365</width>
 					<label>144</label>
 					<textcolor>orange</textcolor>
 					<shadowcolor>black</shadowcolor>
@@ -214,11 +213,11 @@
 					<font>font12</font>
 				</control>
 				<control type="group">
-					<top>30</top>
+					<top>45</top>
 					<control type="label">
 						<description>CPU Text</description>
-						<width>600</width>
-						<height>25</height>
+						<width>900</width>
+						<height>37.5</height>
 						<label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -228,17 +227,17 @@
 					</control>
 					<control type="progress">
 						<description>CPU BAR</description>
-						<left>610</left>
-						<top>7</top>
-						<width>320</width>
-						<height>12</height>
+						<left>915</left>
+						<top>10.5</top>
+						<width>480</width>
+						<height>18</height>
 						<info>System.CPUUsage</info>
 					</control>
 					<control type="label">
 						<description>Memory Text</description>
-						<top>30</top>
-						<width>600</width>
-						<height>25</height>
+						<top>45</top>
+						<width>900</width>
+						<height>37.5</height>
 						<label>$LOCALIZE[31304]: $INFO[system.memory(used.percent)]</label>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -248,10 +247,10 @@
 					</control>
 					<control type="progress">
 						<description>Memory BAR</description>
-						<left>610</left>
-						<top>37</top>
-						<width>320</width>
-						<height>12</height>
+						<left>915</left>
+						<top>55.5</top>
+						<width>480</width>
+						<height>18</height>
 						<info>system.memory(used)</info>
 					</control>
 				</control>

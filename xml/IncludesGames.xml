@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="GameDialogControllers">
+		<control type="group">
+			<left>28.5</left>
+			<top>28</top>
+			<control type="image">
+				<description>background image</description>
+				<width>1863</width>
+				<height>1024.5</height>
+				<texture border="50,150,50,50">dialogs/Dialog.png</texture>
+				<bordersize>19</bordersize>
+				<animation effect="fade" start="90" end="90" time="0" condition="Window.IsVisible(Visualisation)">Conditional</animation>
+			</control>
+			<control type="label" id="2">
+				<description>Heading label</description>
+				<left>75</left>
+				<top>75</top>
+				<width>1650</width>
+				<height>45</height>
+				<align>center</align>
+				<font>font16</font>
+				<label>$LOCALIZE[35058]</label>
+				<textcolor>orange</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="group">
+				<left>75</left>
+				<control type="label">
+					<top>150</top>
+					<font>font12</font>
+					<textcolor>blue</textcolor>
+					<width>345</width>
+					<height>65.5</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[35050]</label>
+				</control>
+				<control type="grouplist" id="3">
+					<top>217.5</top>
+					<width>375</width>
+					<height>675</height>
+					<itemgap>2</itemgap>
+					<onup>60</onup>
+					<ondown>60</ondown>
+					<onleft>9000</onleft>
+					<onright>5</onright>
+					<pagecontrol>60</pagecontrol>
+				</control>
+				<control type="button" id="10">
+					<width>375</width>
+					<include>DialogButtonCommonValues</include>
+				</control>
+				<include content="DialogGameControllersPagecontrol">
+					<param name="container_id" value="3" />
+					<param name="pagecontrol_id" value="60" />
+					<param name="onleft" value="3" />
+					<param name="onright" value="61" />
+				</include>
+			</control>
+			<control type="gamecontroller" id="31">
+				<top>217.5</top>
+				<left>457.5</left>
+				<width>495</width>
+				<height>495</height>
+			</control>
+			<control type="textbox" id="32">
+				<top>720</top>
+				<left>480</left>
+				<width>450</width>
+				<height>180</height>
+				<font>font10</font>
+				<textcolor>grey2</textcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+			</control>
+			<control type="group">
+				<left>975</left>
+				<control type="label">
+					<top>150</top>
+					<font>font12</font>
+					<textcolor>blue</textcolor>
+					<width>345</width>
+					<height>65.5</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[35059]</label>
+				</control>
+				<control type="grouplist" id="5">
+					<top>217.5</top>
+					<width>375</width>
+					<height>675</height>
+					<itemgap>2</itemgap>
+					<onup>61</onup>
+					<ondown>61</ondown>
+					<onleft>3</onleft>
+					<onright>9000</onright>
+					<pagecontrol>61</pagecontrol>
+				</control>
+				<control type="button" id="7">
+					<width>375</width>
+					<include>DialogButtonCommonValues</include>
+				</control>
+				<control type="label" id="8">
+					<description>Default Controller Types Label</description>
+					<width>375</width>
+					<height>65.5</height>
+					<font>font12</font>
+					<textcolor>grey</textcolor>
+					<aligny>center</aligny>
+				</control>
+				<control type="image" id="9">
+					<height>65.5</height>
+					<texture />
+				</control>
+				<include content="DialogGameControllersPagecontrol">
+					<param name="container_id" value="5" />
+					<param name="pagecontrol_id" value="61" />
+					<param name="onleft" value="60" />
+					<param name="onright" value="9000" />
+				</include>
+			</control>
+			<control type="grouplist" id="9000">
+				<left>1356</left>
+				<top>217.5</top>
+				<width>435</width>
+				<itemgap>2</itemgap>
+				<onleft>5</onleft>
+				<onright>3</onright>
+				<control type="button" id="18">
+					<description>Ok Button</description>
+					<label>$LOCALIZE[186]</label>
+					<width>435</width>
+					<align>center</align>
+					<include>DialogButton3CommonValues</include>
+				</control>
+				<control type="button" id="19">
+					<description>Reset Button</description>
+					<label>$LOCALIZE[13007]</label>
+					<width>435</width>
+					<align>center</align>
+					<include>DialogButton3CommonValues</include>
+				</control>
+				<control type="button" id="20">
+					<description>Install more controllers Button</description>
+					<label>$LOCALIZE[21452]</label>
+					<width>435</width>
+					<align>center</align>
+					<include>DialogButton3CommonValues</include>
+				</control>
+				<control type="button" id="22">
+					<description>Install all Button</description>
+					<label>$LOCALIZE[35021]</label>
+					<width>435</width>
+					<align>center</align>
+					<include>DialogButton3CommonValues</include>
+				</control>
+				<control type="button" id="21">
+					<description>Fix skipping Button</description>
+					<label>$LOCALIZE[35019]</label>
+					<width>435</width>
+					<align>center</align>
+					<include>DialogButton3CommonValues</include>
+				</control>
+				<control type="button" id="17">
+					<description>Help Button</description>
+					<label>$LOCALIZE[10043]</label>
+					<width>435</width>
+					<align>center</align>
+					<include>DialogButton3CommonValues</include>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="GameDialogPorts">
+		<control type="group">
+			<left>315</left>
+			<top>90</top>
+			<control type="image">
+				<description>background image</description>
+				<width>1290</width>
+				<height>900</height>
+				<texture border="50,150,50,50">dialogs/Dialog.png</texture>
+				<bordersize>19</bordersize>
+			</control>
+			<control type="label" id="2">
+				<description>heading label</description>
+				<left>75</left>
+				<top>75</top>
+				<width>1140</width>
+				<height>45</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font16</font>
+				<label>13406</label>
+				<textcolor>orange</textcolor>
+			</control>
+			<control type="list" id="3">
+				<left>75</left>
+				<top>150</top>
+				<width>825</width>
+				<height>608</height>
+				<onup>61</onup>
+				<ondown>61</ondown>
+				<onleft>61</onleft>
+				<onright>9011</onright>
+				<pagecontrol>61</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="67.5">
+					<control type="image">
+						<width>825</width>
+						<height>65.5</height>
+						<texture border="15">buttons/list-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<left>7.5</left>
+						<top>7.5</top>
+						<width>60</width>
+						<height>52.5</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="label">
+						<left>75</left>
+						<width>735</width>
+						<height>65.5</height>
+						<font>font12</font>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="67.5">
+					<control type="image">
+						<width>825</width>
+						<height>65.5</height>
+						<visible>!Control.HasFocus(3)</visible>
+						<texture border="15">buttons/list-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<width>825</width>
+						<height>65.5</height>
+						<visible>Control.HasFocus(3)</visible>
+						<texture border="15">buttons/list-focus.png</texture>
+					</control>
+					<control type="image">
+						<left>7.5</left>
+						<top>7.5</top>
+						<width>60</width>
+						<height>52.5</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="label">
+						<left>75</left>
+						<width>735</width>
+						<height>65.5</height>
+						<font>font12</font>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="image">
+				<left>915</left>
+				<top>150</top>
+				<width>300</width>
+				<height>300</height>
+				<texture>$INFO[Container(3).ListItem.Icon]</texture>
+				<bordertexture border="4">black-back.png</bordertexture>
+				<bordersize>3</bordersize>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="label">
+				<description>Currently Selected Title</description>
+				<left>915</left>
+				<top>462</top>
+				<width>300</width>
+				<font>font12</font>
+				<align>center</align>
+				<scroll>true</scroll>
+				<textcolor>white</textcolor>
+				<label>[B]$INFO[Container(3).ListItem.Label][/B]</label>
+			</control>
+			<control type="textbox">
+				<description>Currently Selected Summary</description>
+				<left>915</left>
+				<top>507</top>
+				<width>300</width>
+				<height>150</height>
+				<font>font10</font>
+				<align>left</align>
+				<textcolor>grey</textcolor>
+				<label>$INFO[Container(3).ListItem.Label2]</label>
+				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+			</control>
+			<control type="spincontrol" id="61">
+				<description>Next page Spinner</description>
+				<left>810</left>
+				<top>771</top>
+				<subtype>page</subtype>
+				<font />
+				<onleft>3</onleft>
+				<onright>9011</onright>
+				<onup>3</onup>
+				<textcolor>white</textcolor>
+				<showonepage>true</showonepage>
+			</control>
+			<include content="PageLabel">
+				<param name="left" value="322.5" />
+				<param name="top" value="768" />
+				<param name="width" value="480" />
+				<param name="label" value="$LOCALIZE[31201] $INFO[Container(3).CurrentPage]/$INFO[Container(3).NumPages]" />
+				<param name="id" value="61" />
+			</include>
+			<control type="grouplist" id="9011">
+				<left>915</left>
+				<top>690</top>
+				<height>202.5</height>
+				<itemgap>0</itemgap>
+				<onleft>61</onleft>
+				<onright>3</onright>
+				<onup>3</onup>
+				<orientation>vertical</orientation>
+				<control type="button" id="18">
+					<description>OK button</description>
+					<label>$LOCALIZE[186]</label>
+					<include>DialogButton2CommonValues</include>
+				</control>
+				<control type="button" id="19">
+					<description>Reset button</description>
+					<label>$LOCALIZE[13007]</label>
+					<include>DialogButton2CommonValues</include>
+				</control>
+			</control>
+		</control>
+	</include>
+</includes>

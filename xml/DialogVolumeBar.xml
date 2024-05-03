@@ -4,20 +4,20 @@
 	<include>dialogeffect</include>
 	<controls>
 		<control type="group">
-			<left>400r</left>
+			<left>600r</left>
 			<top>0</top>
 			<control type="image" id="0">
 				<description>popup volume dialog background</description>
-				<width>400</width>
-				<height>300</height>
+				<width>600</width>
+				<height>450</height>
 				<texture>shadowtopcorner.png</texture>
 			</control>
 			<control type="image">
 				<description>Lite Volume Logo</description>
-				<left>300</left>
-				<top>10</top>
-				<width>40</width>
-				<height>40</height>
+				<left>450</left>
+				<top>15</top>
+				<width>60</width>
+				<height>60</height>
 				<aspectratio>keep</aspectratio>
 				<texture>volumelogo.png</texture>
 				<visible>!Player.Muted</visible>
@@ -25,10 +25,10 @@
 			</control>
 			<control type="image">
 				<description>Lite Volume Logo</description>
-				<left>300</left>
-				<top>10</top>
-				<width>40</width>
-				<height>40</height>
+				<left>450</left>
+				<top>15</top>
+				<width>60</width>
+				<height>60</height>
 				<aspectratio>keep</aspectratio>
 				<texture>icon-mute.png</texture>
 				<visible>Player.Muted</visible>
@@ -36,10 +36,10 @@
 			</control>
 			<control type="progress" id="1">
 				<description>progress control</description>
-				<left>260</left>
-				<top>40</top>
-				<width>128</width>
-				<height>32</height>
+				<left>390</left>
+				<top>60</top>
+				<width>192</width>
+				<height>48</height>
 				<reveal>true</reveal>
 				<info>Player.Volume</info>
 				<texturebg>volume_background.png</texturebg>

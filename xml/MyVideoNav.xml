@@ -7,7 +7,7 @@
 		<include>CommonMediaBackgrounds</include>
 		<include>MovieSetContainer</include>
 		<control type="group">
-			<left>130</left>
+			<left>195</left>
 			<animation effect="fade" delay="500" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
 			<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 			<control type="label">
@@ -16,7 +16,7 @@
 				<include>HeaderTextCommons</include>
 			</control>
 			<control type="group">
-				<top>110</top>
+				<top>165</top>
 				<include>ListViewCommons</include> <!-- View ID 50 -->
 				<include>ThumbnailView</include> <!-- View ID 52 -->
 				<include>WideIconView</include> <!-- View ID  53 -->
@@ -25,10 +25,10 @@
 			</control>
 			<control type="grouplist">
 				<description>Media Codec Flagging Images</description>
-				<left>-10</left>
-				<top>120r</top>
-				<width>620</width>
-				<itemgap>5</itemgap>
+				<left>-15</left>
+				<top>180r</top>
+				<width>930</width>
+				<itemgap>7.5</itemgap>
 				<orientation>horizontal</orientation>
 				<include>VideoCodecFlagging</include>
 				<include>AudioCodecFlagging</include>
@@ -41,8 +41,8 @@
 			<include>Container9000BladesRunner</include>
 			<control type="grouplist" id="610">
 				<include content="Container9000Header">
-					<param name="left" value="100" />
-					<param name="top" value="100" />
+					<param name="left" value="150" />
+					<param name="top" value="150" />
 				</include>
 				<control type="button" id="2">
 					<description>View As button</description>
@@ -50,7 +50,7 @@
 				</control>
 				<control type="button" id="3">
 					<description>Sort by button</description>
-					<left>2</left>
+					<left>3</left>
 					<label>103</label>
 					<include>ButtonCommonValues</include>
 				</control>
@@ -60,19 +60,19 @@
 				</control>
 				<control type="button" id="10">
 					<description>Watched Toggle</description>
-					<left>7</left>
+					<left>10.5</left>
 					<include>ButtonCommonValues</include>
 					<label />
 				</control>
 				<control type="button" id="8">
 					<description>Search</description>
-					<left>9</left>
+					<left>13.5</left>
 					<include>ButtonCommonValues</include>
 					<label>137</label>
 				</control>
 				<control type="radiobutton" id="19">
 					<description>Filter</description>
-					<left>8</left>
+					<left>12</left>
 					<include>ButtonCommonValues</include>
 					<label>587</label>
 					<selected>Container.Filtered</selected>
@@ -80,7 +80,7 @@
 				</control>
 				<control type="radiobutton" id="9001">
 					<description>Filter Advanced</description>
-					<left>8</left>
+					<left>12</left>
 					<include>ButtonCommonValues</include>
 					<label>587</label>
 					<onclick>Filter</onclick>
@@ -89,23 +89,23 @@
 				</control>
 				<control type="togglebutton" id="20">
 					<description>Update library</description>
-					<left>7</left>
+					<left>10.5</left>
 					<include>ButtonCommonValues</include>
 					<label>$LOCALIZE[653]</label>
 					<altlabel>$LOCALIZE[13353]</altlabel>
-					<alttexturefocus border="4,6,4,8">buttons/button-focus.png</alttexturefocus>
-					<alttexturenofocus border="4,6,4,8">buttons/button-nofocus.png</alttexturenofocus>
+					<alttexturefocus border="6,9,6,12">buttons/button-focus.png</alttexturefocus>
+					<alttexturenofocus border="6,9,6,12">buttons/button-nofocus.png</alttexturenofocus>
 					<usealttexture>library.isscanningvideo</usealttexture>
 				</control>
 				<control type="radiobutton" id="16">
 					<description>PartyMode</description>
-					<left>6</left>
+					<left>9</left>
 					<include>ButtonCommonValues</include>
 					<label>589</label>
 				</control>
 				<control type="radiobutton" id="11">
 					<description>Unlock Shares</description>
-					<left>4</left>
+					<left>6</left>
 					<include>ButtonCommonValues</include>
 					<label>20336</label>
 					<onclick>MasterMode</onclick>
@@ -114,8 +114,8 @@
 				</control>
 			</control>
 			<include content="CommonPlayerControls">
-				<param name="left" value="100" />
-				<param name="top" value="140" />
+				<param name="left" value="150" />
+				<param name="top" value="210" />
 			</include>
 		</control>
 		<include>AllViewCommonPageControls</include>

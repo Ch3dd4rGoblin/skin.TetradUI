@@ -5,48 +5,49 @@
 	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(Visualisation)</visible>
 	<coordinates>
 		<system>1</system>
-		<left>340</left>
-		<top>210</top>
+		<left>510</left>
+		<top>315</top>
 	</coordinates>
 	<controls>
 		<control type="image">
-			<width>600</width>
-			<height>300</height>
-			<texture border="50,100,50,50">dialogs/Dialog.png</texture>
+			<width>900</width>
+			<height>450</height>
+			<texture border="50,150,50,50">dialogs/Dialog.png</texture>
+			<bordersize>19</bordersize>
 		</control>
 		<control type="group">
-			<left>50</left>
-			<top>50</top>
+			<left>75</left>
+			<top>75</top>
 			<visible>Player.HasAudio</visible>
 			<control type="image">
 				<description>Cover image</description>
-				<top>10</top>
-				<width>160</width>
-				<height>130</height>
+				<top>15</top>
+				<width>240</width>
+				<height>195</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$INFO[MusicPlayer.Cover]</texture>
-				<bordertexture border="19,3,19,3">thumb-border.png</bordertexture>
+				<bordertexture border="28.5,4,28.5,4" infill="false">thumb-border.png</bordertexture>
 				<bordersize>18,2,18,2</bordersize>
 			</control>
 			<control type="label">
 				<description>Artist label</description>
-				<left>160</left>
-				<top>10</top>
-				<height>25</height>
-				<width>325</width>
+				<left>240</left>
+				<top>15</top>
+				<height>37.5</height>
+				<width>487.5</width>
 				<label>$INFO[MusicPlayer.Artist]</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>13</font>
+				<font>font13</font>
 				<textcolor>grey2</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="fadelabel">
 				<description>Title label</description>
-				<left>160</left>
-				<top>43</top>
-				<height>30</height>
-				<width>325</width>
+				<left>240</left>
+				<top>64.5</top>
+				<height>45</height>
+				<width>487.5</width>
 				<label>$INFO[MusicPlayer.Title]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -58,10 +59,10 @@
 			</control>
 			<control type="label">
 				<description>Album Label</description>
-				<left>160</left>
-				<top>70</top>
-				<height>30</height>
-				<width>325</width>
+				<left>240</left>
+				<top>105</top>
+				<height>45</height>
+				<width>487.5</width>
 				<label>$INFO[MusicPlayer.Album]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -71,10 +72,10 @@
 			</control>
 			<control type="label">
 				<description>Time Label</description>
-				<left>160</left>
-				<top>115</top>
-				<height>25</height>
-				<width>325</width>
+				<left>240</left>
+				<top>172.5</top>
+				<height>37.5</height>
+				<width>487.5</width>
 				<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -84,40 +85,40 @@
 			</control>
 		</control>
 		<control type="group">
-			<left>50</left>
-			<top>50</top>
+			<left>75</left>
+			<top>75</top>
 			<visible>Player.HasVideo</visible>
 			<control type="group">
 				<visible>VideoPlayer.Content(Movies)</visible>
 				<control type="image">
 					<description>Cover image</description>
-					<top>5</top>
-					<width>140</width>
-					<height>145</height>
+					<top>7.5</top>
+					<width>210</width>
+					<height>218</height>
 					<aspectratio>keep</aspectratio>
 					<texture background="true">$INFO[VideoPlayer.Cover]</texture>
-					<bordertexture border="19,3,19,3">thumb-border.png</bordertexture>
+					<bordertexture border="28.5,4,28.5,4" infill="false">thumb-border.png</bordertexture>
 					<bordersize>18,2,18,2</bordersize>
 				</control>
 				<control type="label">
 					<description>Studio label</description>
-					<left>140</left>
-					<top>10</top>
-					<height>25</height>
-					<width>345</width>
+					<left>210</left>
+					<top>15</top>
+					<height>37.5</height>
+					<width>518</width>
 					<label>$INFO[VideoPlayer.Studio]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>13</font>
+					<font>font13</font>
 					<textcolor>grey2</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="fadelabel">
 					<description>Title label</description>
-					<left>140</left>
-					<top>43</top>
-					<height>30</height>
-					<width>345</width>
+					<left>210</left>
+					<top>64.5</top>
+					<height>45</height>
+					<width>518</width>
 					<label>$INFO[VideoPlayer.Title]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -129,10 +130,10 @@
 				</control>
 				<control type="label">
 					<description>Year Label</description>
-					<left>140</left>
-					<top>70</top>
-					<height>30</height>
-					<width>345</width>
+					<left>210</left>
+					<top>105</top>
+					<height>45</height>
+					<width>518</width>
 					<label>$INFO[VideoPlayer.year]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -142,10 +143,10 @@
 				</control>
 				<control type="label">
 					<description>Time Label</description>
-					<left>140</left>
-					<top>115</top>
-					<height>25</height>
-					<width>345</width>
+					<left>210</left>
+					<top>172.5</top>
+					<height>37.5</height>
+					<width>518</width>
 					<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -158,60 +159,60 @@
 				<visible>!VideoPlayer.Content(Movies)</visible>
 				<control type="image">
 					<description>Cover image</description>
-					<top>10</top>
-					<width>200</width>
-					<height>130</height>
+					<top>15</top>
+					<width>300</width>
+					<height>195</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true">$INFO[VideoPlayer.Cover]</texture>
-					<bordertexture border="19,3,19,3">thumb-border.png</bordertexture>
+					<bordertexture border="28.5,4,28.5,4" infill="false">thumb-border.png</bordertexture>
 					<bordersize>18,2,18,2</bordersize>
 					<visible>VideoPlayer.Content(Episodes)</visible>
 				</control>
 				<control type="image">
 					<description>Cover image</description>
-					<top>10</top>
-					<width>200</width>
-					<height>130</height>
+					<top>15</top>
+					<width>300</width>
+					<height>195</height>
 					<aspectratio>keep</aspectratio>
 					<texture background="true">$INFO[VideoPlayer.Cover]</texture>
-					<bordertexture border="19,3,19,3">thumb-border.png</bordertexture>
+					<bordertexture border="28.5,4,28.5,4" infill="false">thumb-border.png</bordertexture>
 					<bordersize>18,2,18,2</bordersize>
 					<visible>!VideoPlayer.Content(Episodes)</visible>
 				</control>
 				<control type="label">
 					<description>Show label</description>
-					<left>200</left>
-					<top>10</top>
-					<height>25</height>
-					<width>285</width>
+					<left>300</left>
+					<top>15</top>
+					<height>37.5</height>
+					<width>427.5</width>
 					<label>$INFO[VideoPlayer.TVShowTitle]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>13</font>
+					<font>font13</font>
 					<textcolor>grey2</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<visible>VideoPlayer.Content(Episodes)</visible>
 				</control>
 				<control type="label">
 					<description>Artist label</description>
-					<left>200</left>
-					<top>10</top>
-					<height>25</height>
-					<width>285</width>
+					<left>300</left>
+					<top>15</top>
+					<height>37.5</height>
+					<width>427.5</width>
 					<label>$INFO[VideoPlayer.Artist]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>13</font>
+					<font>font13</font>
 					<textcolor>grey2</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<visible>VideoPlayer.Content(MusicVideos)</visible>
 				</control>
 				<control type="fadelabel">
 					<description>Title label</description>
-					<left>200</left>
-					<top>43</top>
-					<height>30</height>
-					<width>285</width>
+					<left>300</left>
+					<top>64.5</top>
+					<height>45</height>
+					<width>427.5</width>
 					<label>$INFO[VideoPlayer.Title]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -223,10 +224,10 @@
 				</control>
 				<control type="label">
 					<description>Season - Episode Label</description>
-					<left>200</left>
-					<top>70</top>
-					<height>30</height>
-					<width>285</width>
+					<left>300</left>
+					<top>105</top>
+					<height>45</height>
+					<width>427.5</width>
 					<label>$INFO[VideoPlayer.Season,$LOCALIZE[20373]: ] - $INFO[VideoPlayer.Episode,$LOCALIZE[20359]: ]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -237,10 +238,10 @@
 				</control>
 				<control type="label">
 					<description>Season - Episode Label</description>
-					<left>200</left>
-					<top>70</top>
-					<height>30</height>
-					<width>285</width>
+					<left>300</left>
+					<top>105</top>
+					<height>45</height>
+					<width>427.5</width>
 					<label>$INFO[VideoPlayer.Album]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -251,10 +252,10 @@
 				</control>
 				<control type="label">
 					<description>Time Label</description>
-					<left>200</left>
-					<top>115</top>
-					<height>25</height>
-					<width>285</width>
+					<left>300</left>
+					<top>172.5</top>
+					<height>37.5</height>
+					<width>427.5</width>
 					<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -265,11 +266,11 @@
 			</control>
 		</control>
 		<control type="group" id="100">
-			<left>50</left>
-			<top>210</top>
+			<left>75</left>
+			<top>315</top>
 			<control type="button" id="600">
-				<width>40</width>
-				<height>40</height>
+				<width>60</width>
+				<height>60</height>
 				<label />
 				<texturefocus>osd/OSDPrevTrackFO.png</texturefocus>
 				<texturenofocus>osd/OSDPrevTrackNF.png</texturenofocus>
@@ -280,9 +281,9 @@
 				<onclick>PlayerControl(Previous)</onclick>
 			</control>
 			<control type="button" id="601">
-				<left>40</left>
-				<width>40</width>
-				<height>40</height>
+				<left>60</left>
+				<width>60</width>
+				<height>60</height>
 				<label />
 				<texturefocus>osd/OSDRewindFO.png</texturefocus>
 				<texturenofocus>osd/OSDRewindNF.png</texturenofocus>
@@ -293,9 +294,9 @@
 				<onclick>PlayerControl(Rewind)</onclick>
 			</control>
 			<control type="togglebutton" id="603">
-				<left>80</left>
-				<width>40</width>
-				<height>40</height>
+				<left>120</left>
+				<width>60</width>
+				<height>60</height>
 				<label />
 				<texturefocus>osd/OSDPauseFO.png</texturefocus>
 				<texturenofocus>osd/OSDPauseNF.png</texturenofocus>
@@ -309,9 +310,9 @@
 				<onclick>PlayerControl(Play)</onclick>
 			</control>
 			<control type="button" id="602">
-				<left>120</left>
-				<width>40</width>
-				<height>40</height>
+				<left>180</left>
+				<width>60</width>
+				<height>60</height>
 				<label />
 				<texturefocus>osd/OSDStopFO.png</texturefocus>
 				<texturenofocus>osd/OSDStopNF.png</texturenofocus>
@@ -323,9 +324,9 @@
 				<onclick>PlayerControl(Stop)</onclick>
 			</control>
 			<control type="button" id="604">
-				<left>160</left>
-				<width>40</width>
-				<height>40</height>
+				<left>240</left>
+				<width>60</width>
+				<height>60</height>
 				<label />
 				<texturefocus>osd/OSDForwardFO.png</texturefocus>
 				<texturenofocus>osd/OSDForwardNF.png</texturenofocus>
@@ -336,9 +337,9 @@
 				<onclick>PlayerControl(Forward)</onclick>
 			</control>
 			<control type="button" id="605">
-				<left>200</left>
-				<width>40</width>
-				<height>40</height>
+				<left>300</left>
+				<width>60</width>
+				<height>60</height>
 				<label />
 				<texturefocus>osd/OSDNextTrackFO.png</texturefocus>
 				<texturenofocus>osd/OSDNextTrackNF.png</texturenofocus>
@@ -349,9 +350,9 @@
 				<onclick>PlayerControl(Next)</onclick>
 			</control>
 			<control type="button" id="606">
-				<left>240</left>
-				<width>40</width>
-				<height>40</height>
+				<left>360</left>
+				<width>60</width>
+				<height>60</height>
 				<label />
 				<texturefocus>osd/OSDRecordFO.png</texturefocus>
 				<texturenofocus>osd/OSDRecordNF.png</texturenofocus>
@@ -364,9 +365,9 @@
 				<animation effect="fade" start="100" end="30" time="100" condition="!PVR.CanRecordPlayingChannel">Conditional</animation>
 			</control>
 			<control type="button" id="607">
-				<left>415</left>
-				<width>40</width>
-				<height>40</height>
+				<left>622.5</left>
+				<width>60</width>
+				<height>60</height>
 				<label />
 				<texturefocus />
 				<texturenofocus />
@@ -377,57 +378,57 @@
 				<ondown>100</ondown>
 			</control>
 			<control type="image">
-				<left>415</left>
-				<width>40</width>
-				<height>40</height>
+				<left>622.5</left>
+				<width>60</width>
+				<height>60</height>
 				<texture>osd/OSDRepeatNF.png</texture>
 				<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
 				<visible>!Control.HasFocus(607)</visible>
 			</control>
 			<control type="image">
-				<left>415</left>
-				<width>40</width>
-				<height>40</height>
+				<left>622.5</left>
+				<width>60</width>
+				<height>60</height>
 				<texture>osd/OSDRepeatFO.png</texture>
 				<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
 				<visible>Control.HasFocus(607)</visible>
 			</control>
 			<control type="image">
-				<left>415</left>
-				<width>40</width>
-				<height>40</height>
+				<left>622.5</left>
+				<width>60</width>
+				<height>60</height>
 				<texture>osd/OSDRepeatOneNF.png</texture>
 				<visible>Playlist.IsRepeatOne</visible>
 				<visible>!Control.HasFocus(607)</visible>
 			</control>
 			<control type="image">
-				<left>415</left>
-				<width>40</width>
-				<height>40</height>
+				<left>622.5</left>
+				<width>60</width>
+				<height>60</height>
 				<texture>osd/OSDRepeatOneFO.png</texture>
 				<visible>Playlist.IsRepeatOne</visible>
 				<visible>Control.HasFocus(607)</visible>
 			</control>
 			<control type="image">
-				<left>415</left>
-				<width>40</width>
-				<height>40</height>
+				<left>622.5</left>
+				<width>60</width>
+				<height>60</height>
 				<texture>osd/OSDRepeatAllNF.png</texture>
 				<visible>Playlist.IsRepeat</visible>
 				<visible>!Control.HasFocus(607)</visible>
 			</control>
 			<control type="image">
-				<left>415</left>
-				<width>40</width>
-				<height>40</height>
+				<left>622.5</left>
+				<width>60</width>
+				<height>60</height>
 				<texture>osd/OSDRepeatAllFO.png</texture>
 				<visible>Playlist.IsRepeat</visible>
 				<visible>Control.HasFocus(607)</visible>
 			</control>
 			<control type="togglebutton" id="608">
-				<left>455</left>
-				<width>40</width>
-				<height>40</height>
+				<left>682.5</left>
+				<width>60</width>
+				<height>60</height>
 				<label />
 				<texturefocus>osd/OSDRandomOffFO.png</texturefocus>
 				<texturenofocus>osd/OSDRandomOffNF.png</texturenofocus>

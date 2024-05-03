@@ -5,32 +5,33 @@
 	<coordinates>
 		<system>1</system>
 		<left>0</left>
-		<top>45</top>
+		<top>67.5</top>
 	</coordinates>
 	<controls>
 		<control type="image" id="999">
 			<description>background image</description>
-			<top>-45</top>
-			<width>380</width>
-			<height max="720">auto</height>
+			<top>-67.5</top>
+			<width>570</width>
+			<height max="1080">auto</height>
 			<texture border="40,45,45,55">dialogs/context_menu.png</texture>
+			<bordersize>16</bordersize>
 		</control>
 		<control type="grouplist" id="996">
 			<description>grouplist for context buttons</description>
 			<left>0</left>
 			<top>0</top>
-			<width>380</width>
-			<height max="620">auto</height>
+			<width>570</width>
+			<height max="930">auto</height>
 			<usecontrolcoords>true</usecontrolcoords>
 		</control>
 		<control type="button" id="1000">
 			<description>button template</description>
-			<left>35</left>
-			<width>305</width>
-			<height>40</height>
+			<left>52.5</left>
+			<width>457.5</width>
+			<height>60</height>
 			<align>center</align>
 			<focusedcolor>orange</focusedcolor>
-			<texturefocus border="10">buttons/context-button-focus.png</texturefocus>
+			<texturefocus border="15">buttons/context-button-focus.png</texturefocus>
 			<texturenofocus />
 		</control>
 	</controls>

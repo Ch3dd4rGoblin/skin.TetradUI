@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Kodi Addons\n"
-"Report-Msgid-Bugs-To: https://forum.kodi.tv/\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kodi Translation Team\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgctxt "Addon Summary"
-msgid "TetradUI is a skin Addon for Kodi media center"
+msgid "TetradUI is a skin add-on for Kodi media center"
 msgstr ""
 
 msgctxt "Addon Description"
-msgid "TetradUI is a skin add-on for Kodi media center. TetradUI is based on JX720 by Jezz_X.[CR]This add-on was created by TeamUI."
+msgid "TetradUI is a skin add-on for Kodi media center. The aim with TetradUI is to create a fresh modern homage of the classic blades-style UI found in the original Xbox360 dashboard. Also seen in the works of Team Blackbolt and Jezz_X with projects MC360 and JX720 respectively. TetradUI is based on JX720 by Jezz_X.[CR]This add-on was created by Jezz_X and TeamUI."
 msgstr ""
 
 msgctxt "#31001"
@@ -54,15 +54,7 @@ msgctxt "#31011"
 msgid "Applications"
 msgstr ""
 
-# empty strings from id 31012 to 31019
-
-msgctxt "#31020"
-msgid "Weather Conditions"
-msgstr ""
-
-msgctxt "#31021"
-msgid "Current Temp"
-msgstr ""
+# empty strings from id 31012 to 31021
 
 msgctxt "#31022"
 msgid "Forecast"
@@ -76,23 +68,13 @@ msgctxt "#31024"
 msgid "Current Temperature"
 msgstr ""
 
-msgctxt "#31025"
-msgid "Add-on manager"
-msgstr ""
+# empty string with id 31025
 
 msgctxt "#31026"
 msgid "Current"
 msgstr ""
 
-# empty strings from id 31027 to 31099
-
-msgctxt "#31100"
-msgid "Video - Files"
-msgstr ""
-
-msgctxt "#31101"
-msgid "Music - Files"
-msgstr ""
+# empty strings from id 31027 to 31101
 
 msgctxt "#31102"
 msgid "Power Options"
@@ -320,25 +302,13 @@ msgctxt "#31307"
 msgid "Quit Kodi"
 msgstr ""
 
-msgctxt "#31308"
-msgid "IP:"
-msgstr ""
+# empty string with id 31308
 
 msgctxt "#31309"
 msgid "Hide Button - "
 msgstr ""
 
-msgctxt "#31310"
-msgid "Set Smart Playlist Shortcut"
-msgstr ""
-
-msgctxt "#31311"
-msgid "Set Button Label"
-msgstr ""
-
-msgctxt "#31312"
-msgid "Set Button Icon"
-msgstr ""
+# empty strings from id 31310 to 31312
 
 msgctxt "#31313"
 msgid "No Weather add-on enabled go to Settings/Weather to enable weather forecast"
@@ -490,7 +460,11 @@ msgctxt "#31510"
 msgid "Video playlist"
 msgstr ""
 
-# empty strings from id 31511 to 31517
+msgctxt "#31511"
+msgid "Select default background"
+msgstr ""
+
+# empty strings from id 31512 to 31517
 
 msgctxt "#31518"
 msgid "Game Settings Menu"
@@ -516,9 +490,7 @@ msgctxt "#31523"
 msgid "Hide rain drop animation in the background"
 msgstr ""
 
-msgctxt "#31524"
-msgid "Don't blend background with fanart,visualization,video"
-msgstr ""
+# empty string with id 31524
 
 msgctxt "#31525"
 msgid "Select rating"
@@ -536,7 +508,27 @@ msgctxt "#31528"
 msgid "Enable Artist Slideshow fanart backgrounds"
 msgstr ""
 
-# empty strings from id 31529 to 31537
+msgctxt "#31529"
+msgid "Blur backgrounds"
+msgstr ""
+
+msgctxt "#31530"
+msgid "Fanart only"
+msgstr ""
+
+msgctxt "#31531"
+msgid "Backgrounds only"
+msgstr ""
+
+msgctxt "#31532"
+msgid "Fanart and backgrounds"
+msgstr ""
+
+# empty strings from id 31533 to 31536
+
+msgctxt "#31537"
+msgid "Movie set information"
+msgstr ""
 
 msgctxt "#31538"
 msgid "About"
@@ -572,15 +564,11 @@ msgctxt "#31546"
 msgid "Random movies"
 msgstr ""
 
-# empty strings from id 31547 to 31550
-
-msgctxt "#31551"
-msgid "Window custom smart playlist shortcuts"
+msgctxt "#31547"
+msgid "Premiered"
 msgstr ""
 
-msgctxt "#31552"
-msgid "Window custom add-on shortcuts"
-msgstr ""
+# empty strings from id 31548 to 31552
 
 msgctxt "#31553"
 msgid "Settings level"

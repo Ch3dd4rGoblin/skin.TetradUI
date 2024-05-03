@@ -5,7 +5,8 @@
 		<value condition="!Container.Content(Episodes) + !String.IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
 		<value condition="!Container.Content(Episodes) + !String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
-		<value>$INFO[ListItem.Icon]</value>
+		<value condition="![Container.Content(favourites) + String.IsEmpty(ListItem.Icon)]">$INFO[ListItem.Icon]</value>
+		<value condition="Container.Content(favourites)">DefaultFavourites.png</value>
 	</variable>
 	<variable name="ListItemBannerVar">
 		<value condition="!String.IsEmpty(ListItem.Art(season.banner))">$INFO[ListItem.Art(season.banner)]</value>
@@ -23,7 +24,7 @@
 	<variable name="SeekBarLabels">
 		<value condition="Player.Caching">$LOCALIZE[31234] $INFO[Player.CacheLevel]%</value>
 		<value condition="!String.IsEmpty(Player.SeekStepSize)">$LOCALIZE[773] $INFO[Player.SeekStepSize]</value>
-		<value condition="!String.IsEmpty(Player.SeekOffset) + Player.DisplayAfterSeek">$LOCALIZE[773] $INFO[Player.SeekOffset]</value>
+		<value condition="!String.IsEmpty(Player.SeekOffset) + Player.HasPerformedSeek(3)">$LOCALIZE[773] $INFO[Player.SeekOffset]</value>
 		<value condition="Player.Paused">$LOCALIZE[31231]</value>
 		<value condition="Player.Forwarding2x">$LOCALIZE[31232] x2</value>
 		<value condition="Player.Forwarding4x">$LOCALIZE[31232] x4</value>
@@ -66,6 +67,7 @@
 		<value condition="RDS.HasRadioText">$LOCALIZE[14304]: $INFO[RDS.GetLine(0)]</value>
 	</variable>
 	<variable name="DialogInfoTitleLabel">
+		<value condition="String.IsEqual(ListItem.DBTYPE,set)">$LOCALIZE[31537]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,movie)">$LOCALIZE[13346]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,tvshow)">$LOCALIZE[20351]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,episode)">$LOCALIZE[20352]</value>
@@ -150,6 +152,10 @@
 		<value condition="Player.Process(videohwdecoder)">$LOCALIZE[13281]</value>
 		<value>$LOCALIZE[13419]</value>
 	</variable>
+	<variable name="FileBrowserContainerInfo">
+		<value condition="Control.IsVisible(450)">$INFO[Container(450).NumItems] $LOCALIZE[31200] - $LOCALIZE[31201] $INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages]</value>
+		<value condition="Control.IsVisible(451)">$INFO[Container(451).NumItems] $LOCALIZE[31200] - $LOCALIZE[31201] $INFO[Container(451).CurrentPage]/$INFO[Container(451).NumPages]</value>
+	</variable>
 	<variable name="DialogSelectContainerInfo">
 		<value condition="Control.IsVisible(3)">$LOCALIZE[31201] $INFO[Container(3).CurrentPage]/$INFO[Container(3).NumPages]</value>
 		<value>$LOCALIZE[31201] $INFO[Container(6).CurrentPage]/$INFO[Container(6).NumPages]</value>
@@ -229,18 +235,23 @@
 		<value condition="System.HasAddon(plugin.video.youtube) + !System.AddonIsEnabled(plugin.video.youtube)">$LOCALIZE[24023]</value>
 		<value>$LOCALIZE[31499]</value>
 	</variable>
+	<variable name="StatusLiteboxVar">
+		<value condition="System.AddonIsEnabled(script.litebox)">$INFO[System.AddonVersion(script.litebox)] $LOCALIZE[39019]</value>
+		<value condition="System.HasAddon(script.litebox) + !System.AddonIsEnabled(script.litebox)">$LOCALIZE[24023]</value>
+		<value>$LOCALIZE[31499]</value>
+	</variable>
 	<variable name="WeatherIconsAddonNameVar">
-        <value condition="!String.IsEmpty(Skin.String(WeatherIconsAddon.name))">$INFO[Skin.String(WeatherIconsAddon.name)]</value>
-        <value>$LOCALIZE[571]</value>
-    </variable>
+		<value condition="!String.IsEmpty(Skin.String(WeatherIconsAddon.name))">$INFO[Skin.String(WeatherIconsAddon.name)]</value>
+		<value>$LOCALIZE[571]</value>
+	</variable>
 	<variable name="WeatherFanartAddonNameVar">
-        <value condition="!String.IsEmpty(Skin.String(WeatherFanartAddon.name))">$INFO[Skin.String(WeatherFanartAddon.name)]</value>
-        <value>$LOCALIZE[231]</value>
-    </variable>
+		<value condition="!String.IsEmpty(Skin.String(WeatherFanartAddon.name))">$INFO[Skin.String(WeatherFanartAddon.name)]</value>
+		<value>$LOCALIZE[231]</value>
+	</variable>
 	<variable name="WeatherIconsAddonPathVar">
-        <value condition="!String.IsEmpty(Skin.String(WeatherIconsAddon.path))">$INFO[Skin.String(WeatherIconsAddon.path)]</value>
-        <value>resource://resource.images.weathericons.default/</value>
-    </variable>
+		<value condition="!String.IsEmpty(Skin.String(WeatherIconsAddon.path))">$INFO[Skin.String(WeatherIconsAddon.path)]</value>
+		<value>resource://resource.images.weathericons.default/</value>
+	</variable>
 	<variable name="MovieSetLabel">
 		<value condition="[Container.Content(Movies) | Container.Content(Sets)] + !Integer.IsEqual(Container(3650).NumItems,0)">$INFO[ListItem.Label][COLOR=grey]$INFO[Container(3650).NumItems, (, $LOCALIZE[342])][/COLOR]</value>
 		<value>$INFO[ListItem.Label][COLOR=grey]$INFO[ListItem.Year, (,)][/COLOR]</value>
@@ -410,5 +421,29 @@
 	<variable name="PVRChannelsOSDHeader">
 		<value condition="PVR.IsPlayingRadio">$LOCALIZE[19023] - $INFO[MusicPlayer.ChannelGroup]</value>
 		<value>$LOCALIZE[19023] - $INFO[VideoPlayer.ChannelGroup]</value>
+	</variable>
+	<variable name="FiveImage">
+		<value condition="Skin.HasSetting(BlurFanart) + !String.IsEqual(Window(home).Property(FIVE_daemon_set),None) + !String.IsEmpty(Window(home).Property(ImageFilterFIVE))">$INFO[Window(home).Property(ImageFilterFIVE)]</value>
+		<value>$INFO[ListItem.Art(fanart)]</value>
+	</variable>
+	<variable name="Background_Weather">
+		<value condition="!String.IsEmpty(Skin.String(Background_Weather))">$INFO[Skin.String(Background_Weather)]</value>
+		<value condition="Skin.HasSetting(UseDefaultBackground2)">backgrounds/weather.png</value>
+		<value>backgrounds/weather2.png</value>
+	</variable>
+	<variable name="Background_Apps">
+		<value condition="!String.IsEmpty(Skin.String(Background_Apps))">$INFO[Skin.String(Background_Apps)]</value>
+		<value condition="Skin.HasSetting(UseDefaultBackground2)">backgrounds/apps.png</value>
+		<value>backgrounds/apps2.png</value>
+	</variable>
+	<variable name="Background_Media">
+		<value condition="!String.IsEmpty(Skin.String(Background_Media))">$INFO[Skin.String(Background_Media)]</value>
+		<value condition="Skin.HasSetting(UseDefaultBackground2)">backgrounds/media.png</value>
+		<value>backgrounds/media2.png</value>
+	</variable>
+	<variable name="Background_System">
+		<value condition="!String.IsEmpty(Skin.String(Background_System))">$INFO[Skin.String(Background_System)]</value>
+		<value condition="Skin.HasSetting(UseDefaultBackground2)">backgrounds/system.png</value>
+		<value>backgrounds/system2.png</value>
 	</variable>
 </includes>

@@ -3,24 +3,25 @@
 	<defaultcontrol>5</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<left>62.5</left>
-		<top>30</top>
+		<left>94</left>
+		<top>45</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
 		<control type="image">
 			<description>background image</description>
-			<width>1155</width>
-			<height>660</height>
-			<texture border="50,100,50,50">dialogs/Dialog.png</texture>
+			<width>1732.5</width>
+			<height>990</height>
+			<texture border="50,150,50,50">dialogs/Dialog.png</texture>
+			<bordersize>19</bordersize>
 			<animation effect="fade" start="90" end="90" time="0" condition="Window.IsVisible(Visualisation)">Conditional</animation>
 		</control>
 		<control type="label" id="2">
 			<description>Heading label</description>
-			<left>50</left>
-			<top>50</top>
-			<width>1055</width>
-			<height>30</height>
+			<left>75</left>
+			<top>75</top>
+			<width>1582.5</width>
+			<height>45</height>
 			<align>center</align>
 			<font>font16</font>
 			<label>13406</label>
@@ -29,19 +30,19 @@
 		</control>
 		<control type="grouplist" id="3">
 			<description>Button area</description>
-			<left>50</left>
-			<top>100</top>
-			<width>200</width>
-			<height>450</height>
-			<itemgap>0</itemgap>
+			<left>75</left>
+			<top>150</top>
+			<width>300</width>
+			<height>675</height>
+			<itemgap>2</itemgap>
 			<onup>20</onup>
 			<ondown>20</ondown>
 			<onleft>9001</onleft>
 			<onright>5</onright>
 		</control>
 		<control type="button" id="20">
-			<left>50</left>
-			<top>550</top>
+			<left>75</left>
+			<top>825</top>
 			<include>DialogButton2CommonValues</include>
 			<onclick>SettingsLevelChange</onclick>
 			<onup>3</onup>
@@ -51,11 +52,11 @@
 		</control>
 		<control type="grouplist" id="5">
 			<description>control area</description>
-			<left>260</left>
-			<top>100</top>
-			<width>635</width>
-			<height>450</height>
-			<itemgap>0</itemgap>
+			<left>390</left>
+			<top>150</top>
+			<width>952.5</width>
+			<height>675</height>
+			<itemgap>2</itemgap>
 			<pagecontrol>60</pagecontrol>
 			<onup>60</onup>
 			<ondown>60</ondown>
@@ -64,12 +65,12 @@
 		</control>
 		<control type="spincontrol" id="60">
 			<description>Next page Spinner</description>
-			<left>640</left>
-			<top>575</top>
+			<left>960</left>
+			<top>862.5</top>
 			<subtype>page</subtype>
-			<textoffsetx>80</textoffsetx>
-			<textoffsety>3</textoffsety>
-			<textwidth>200</textwidth>
+			<textoffsetx>120</textoffsetx>
+			<textoffsety>4.5</textoffsety>
+			<textwidth>300</textwidth>
 			<font>font12</font>
 			<align>left</align>
 			<onleft>20</onleft>
@@ -79,10 +80,10 @@
 			<showonepage>false</showonepage>
 		</control>
 		<control type="grouplist" id="9001">
-			<left>905</left>
-			<top>100</top>
+			<left>1357.5</left>
+			<top>150</top>
 			<orientation>vertical</orientation>
-			<itemgap>0</itemgap>
+			<itemgap>2</itemgap>
 			<onleft>5</onleft>
 			<onright>3</onright>
 			<control type="button" id="28">
@@ -95,7 +96,6 @@
 				<include>DialogButton2CommonValues</include>
 			</control>
 		</control>
-
 		<control type="button" id="10">
 			<description>Default Category Button</description>
 			<include>DialogButton2CommonValues</include>
@@ -127,7 +127,7 @@
 		<control type="label" id="14">
 			<description>Separator label</description>
 			<label />
-			<height>45</height>
+			<height>65.5</height>
 			<font>font12</font>
 			<align>center</align>
 			<aligny>center</aligny>

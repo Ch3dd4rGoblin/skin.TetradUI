@@ -3,60 +3,63 @@
 	<defaultcontrol always="true">9050</defaultcontrol>
 	<previouswindow>home</previouswindow>
 	<onload>SetProperty(RefreshList,1,Home)</onload>
-	<onload condition="!String.IsEmpty(SubBladeType))">Skin.Reset(SubBladeType)</onload>
+	<onload condition="!String.IsEmpty(Skin.String(SubBladeType))">Skin.Reset(SubBladeType)</onload>
 	<onload condition="Window.Previous(startup) + !Skin.HasSetting(DialogFirstRun)">AlarmClock(DialogFirstTime,ActivateWindow(1105),00:03,silent)</onload>
+	<onload condition="!String.IsEmpty(Skin.String(StartupAnimation))">AlarmClock(StartupAnimation,Skin.Reset(StartupAnimation),00:08,true)</onload>
 	<animation effect="fade" start="100" end="100" time="30" condition="Control.HasFocus(1)">WindowClose</animation>
 	<animation effect="fade" start="100" end="100" time="30" condition="Control.HasFocus(2)">WindowClose</animation>
 	<controls>
-		<include condition="!Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
+		<include>CommonVideoVizBackground</include>
 		<control type="group">
-			<animation effect="slide" start="0,0" end="-1280,0" time="HomeBladeAnimationSpeed" condition="Control.HasFocus(2)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="1280,0" time="HomeBladeAnimationSpeed" condition="Control.HasFocus(1)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-1920,0" time="HomeBladeAnimationSpeed" condition="Control.HasFocus(2)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="1920,0" time="HomeBladeAnimationSpeed" condition="Control.HasFocus(1)">Conditional</animation>
 			<include>CommonMediaBackground</include>
 		</control>
 		<control type="group">
 			<visible>Control.HasFocus(2)</visible>
-			<animation effect="slide" start="1280,0" end="0,0" time="HomeBladeAnimationSpeed" condition="Control.HasFocus(2)">Conditional</animation>
+			<animation effect="slide" start="1920,0" end="0,0" time="HomeBladeAnimationSpeed" condition="Control.HasFocus(2)">Conditional</animation>
 			<include>CommonSystemBackground</include>
 		</control>
 		<control type="group">
 			<visible>Control.HasFocus(1)</visible>
-			<animation effect="slide" start="-1280,0" end="0,0" time="HomeBladeAnimationSpeed" condition="Control.HasFocus(1)">Conditional</animation>
+			<animation effect="slide" start="-1920,0" end="0,0" time="HomeBladeAnimationSpeed" condition="Control.HasFocus(1)">Conditional</animation>
 			<include>CommonAppsBackground</include>
 		</control>
-		<include condition="Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
-<!-- Blackwash Background -->
+		<!-- Blackwash Background -->
 		<control type="group">
-			<animation effect="slide" end="-50,0" time="0" condition="Control.HasFocus(1)">Conditional</animation>
-			<animation effect="slide" end="50,0" time="0" condition="Control.HasFocus(2)">Conditional</animation>
-			<top>-95</top>
+			<animation effect="slide" end="-75,0" time="0" condition="Control.HasFocus(1)">Conditional</animation>
+			<animation effect="slide" end="75,0" time="0" condition="Control.HasFocus(2)">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="200" condition="Window.Previous(FullScreenVideo) + String.IsEqual(Skin.String(StartupAnimation),true)">WindowOpen</animation>
+			<top>-142.5</top>
 			<control type="image">
 				<description>Background</description>
-				<left>141</left>
-				<width>68</width>
-				<height>910</height>
+				<left>211.5</left>
+				<width>102</width>
+				<height>1365</height>
 				<texture>background-overlay-blackwash-left-ws.png</texture>
 			</control>
 			<control type="image">
 				<description>Background</description>
-				<left>105r</left>
-				<width>68</width>
-				<height>910</height>
+				<left>157.5r</left>
+				<width>102</width>
+				<height>1365</height>
 				<texture>background-overlay-blackwash-right-ws.png</texture>
 			</control>
 			<control type="image">
 				<description>Background</description>
-				<left>209</left>
-				<width>966</width>
-				<height>910</height>
+				<left>313.5</left>
+				<width>1449</width>
+				<height>1365</height>
 				<texture>background-overlay-blackwash-centertile-ws.png</texture>
 			</control>
 		</control>
-<!-- Blackwash Background End-->
+		<!-- Blackwash Background End-->
 		<control type="group">
-			<left>230</left>
+			<left>345</left>
 			<visible>!Control.HasFocus(1) + !Control.HasFocus(2)</visible>
-			<animation effect="fade" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
+			<animation effect="fade" time="HomeVisibleFadeAnimationSpeed" condition="!Window.Previous(startup) + String.IsEmpty(Skin.String(StartupAnimation))">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500" condition="Window.Previous(startup)">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="500" delay="500" condition="Window.Previous(FullScreenVideo) + String.IsEqual(Skin.String(StartupAnimation),true)">WindowOpen</animation>
 			<include>HomeLogoButton</include>
 			<control type="label">
 				<description>Header label</description>
@@ -64,13 +67,13 @@
 				<include>HeaderTextCommons</include>
 			</control>
 			<include content="ClockTextCommons">
-				<param name="left" value="540" />
+				<param name="left" value="810" />
 			</include>
 			<control type="group">
-				<top>130</top>
+				<top>195</top>
 				<control type="list" id="9000">
-					<width>450</width>
-					<height>314</height>
+					<width>675</width>
+					<height>471</height>
 					<onleft condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(2)">501</onleft>
 					<onleft condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(3)">505</onleft>
 					<onleft condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(6)">509</onleft>
@@ -83,20 +86,20 @@
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>60</pagecontrol>
 					<scrolltime>200</scrolltime>
-					<animation effect="slide" end="0,-30" condition="Integer.IsGreater(Container(9000).NumItems,5)">Conditional</animation>
-					<itemlayout height="52" width="450" condition="Integer.IsLessOrEqual(Container(9000).NumItems,5)">
+					<animation effect="slide" end="0,-45" condition="Integer.IsGreater(Container(9000).NumItems,5)">Conditional</animation>
+					<itemlayout height="78" width="675" condition="Integer.IsLessOrEqual(Container(9000).NumItems,5)">
 						<control type="image">
 							<description>Icon</description>
-							<left>50</left>
-							<top>4</top>
-							<width>43</width>
-							<height>43</height>
+							<left>75</left>
+							<top>6</top>
+							<width>64.5</width>
+							<height>64.5</height>
 							<texture>$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
-							<left>120</left>
-							<width>330</width>
-							<height>45</height>
+							<left>180</left>
+							<width>495</width>
+							<height>67.5</height>
 							<font>font30</font>
 							<aligny>center</aligny>
 							<textcolor>white2</textcolor>
@@ -104,32 +107,32 @@
 							<info>ListItem.Label</info>
 						</control>
 					</itemlayout>
-					<focusedlayout height="52" width="450" condition="Integer.IsLessOrEqual(Container(9000).NumItems,5)">
+					<focusedlayout height="78" width="675" condition="Integer.IsLessOrEqual(Container(9000).NumItems,5)">
 						<control type="image">
 							<description>Button focus</description>
-							<left>30</left>
-							<width>397</width>
-							<height>50</height>
+							<left>45</left>
+							<width>595.5</width>
+							<height>75</height>
 							<texture>buttons/button.png</texture>
-							<animation effect="slide" start="0,-52" time="200" tween="sine" easing="out" condition="Container(9000).OnNext" reversible="false">Focus</animation>
-							<animation effect="slide" start="0,52" time="200" tween="sine" easing="out" condition="Container(9000).OnPrevious" reversible="false">Focus</animation>
+							<animation effect="slide" start="0,-78" time="200" tween="sine" easing="out" condition="Container(9000).OnNext" reversible="false">Focus</animation>
+							<animation effect="slide" start="0,78" time="200" tween="sine" easing="out" condition="Container(9000).OnPrevious" reversible="false">Focus</animation>
 							<animation effect="fade" start="100" end="25" time="200" condition="!Control.HasFocus(9000) + !Control.HasFocus(9050)">Conditional</animation>
 							<animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(9050)">Conditional</animation>
 							<visible>!Control.HasFocus(9050)</visible>
 						</control>
 						<control type="image">
 							<description>Icon</description>
-							<left>50</left>
-							<top>4</top>
-							<width>43</width>
-							<height>43</height>
+							<left>75</left>
+							<top>6</top>
+							<width>64.5</width>
+							<height>64.5</height>
 							<texture>$INFO[ListItem.Icon]</texture>
 							<animation effect="slide" end="ButtonSlideBackDistance,0" time="ButtonSlideBackTime" reversible="false">focus</animation>
 						</control>
 						<control type="label">
-							<left>120</left>
-							<width>330</width>
-							<height>45</height>
+							<left>180</left>
+							<width>495</width>
+							<height>67.5</height>
 							<font>font30</font>
 							<aligny>center</aligny>
 							<textcolor>white</textcolor>
@@ -139,32 +142,32 @@
 						</control>
 						<control type="image">
 							<description>Button shine animation</description>
-							<left>20</left>
-							<top>3</top>
-							<width>80</width>
-							<height>50</height>
+							<left>30</left>
+							<top>4.5</top>
+							<width>120</width>
+							<height>75</height>
 							<texture>shine-animation.png</texture>
 							<visible>System.IdleTime(5) + Control.HasFocus(9000)</visible>
 							<animation type="visible" reversible="false">
-								<effect type="fade" start="0" end="100" time="200"/>
-								<effect type="fade" start="100" end="0" delay="800" time="200"/>
-								<effect type="slide" start="0,0" end="350,0" delay="0" time="1000"/>
+								<effect type="fade" start="0" end="100" time="200" />
+								<effect type="fade" start="100" end="0" delay="800" time="200" />
+								<effect type="slide" start="0,0" end="525,0" delay="0" time="1000" />
 							</animation>
 						</control>
 					</focusedlayout>
-					<itemlayout height="42" width="450" condition="Integer.IsGreater(Container(9000).NumItems,5)">
+					<itemlayout height="63" width="675" condition="Integer.IsGreater(Container(9000).NumItems,5)">
 						<control type="image">
 							<description>Icon</description>
-							<left>50</left>
-							<top>2</top>
-							<width>38</width>
-							<height>38</height>
+							<left>75</left>
+							<top>3</top>
+							<width>57</width>
+							<height>57</height>
 							<texture>$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
-							<left>120</left>
-							<width>330</width>
-							<height>38</height>
+							<left>180</left>
+							<width>495</width>
+							<height>57</height>
 							<font>font30</font>
 							<aligny>center</aligny>
 							<textcolor>white2</textcolor>
@@ -172,32 +175,32 @@
 							<info>ListItem.Label</info>
 						</control>
 					</itemlayout>
-					<focusedlayout height="42" width="450" condition="Integer.IsGreater(Container(9000).NumItems,5)">
+					<focusedlayout height="63" width="675" condition="Integer.IsGreater(Container(9000).NumItems,5)">
 						<control type="image">
 							<description>Button focus</description>
-							<left>30</left>
-							<width>397</width>
-							<height>42</height>
+							<left>45</left>
+							<width>595.5</width>
+							<height>63</height>
 							<texture>buttons/button.png</texture>
-							<animation effect="slide" start="0,-42" time="200" tween="sine" easing="out" condition="Container(9000).OnNext" reversible="false">Focus</animation>
-							<animation effect="slide" start="0,42" time="200" tween="sine" easing="out" condition="Container(9000).OnPrevious" reversible="false">Focus</animation>
+							<animation effect="slide" start="0,-63" time="200" tween="sine" easing="out" condition="Container(9000).OnNext" reversible="false">Focus</animation>
+							<animation effect="slide" start="0,63" time="200" tween="sine" easing="out" condition="Container(9000).OnPrevious" reversible="false">Focus</animation>
 							<animation effect="fade" start="100" end="25" time="200" condition="!Control.HasFocus(9000) + !Control.HasFocus(9050)">Conditional</animation>
 							<animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(9050)">Conditional</animation>
 							<visible>!Control.HasFocus(9050)</visible>
 						</control>
 						<control type="image">
 							<description>Icon</description>
-							<left>50</left>
-							<top>2</top>
-							<width>38</width>
-							<height>38</height>
+							<left>75</left>
+							<top>3</top>
+							<width>57</width>
+							<height>57</height>
 							<texture>$INFO[ListItem.Icon]</texture>
 							<animation effect="slide" end="ButtonSlideBackDistance,0" time="ButtonSlideBackTime" reversible="false">focus</animation>
 						</control>
 						<control type="label">
-							<left>120</left>
-							<width>330</width>
-							<height>38</height>
+							<left>180</left>
+							<width>495</width>
+							<height>57</height>
 							<font>font30</font>
 							<aligny>center</aligny>
 							<textcolor>white</textcolor>
@@ -207,16 +210,16 @@
 						</control>
 						<control type="image">
 							<description>Button shine animation</description>
-							<left>20</left>
-							<top>5</top>
-							<width>80</width>
-							<height>40</height>
+							<left>30</left>
+							<top>7.5</top>
+							<width>120</width>
+							<height>60</height>
 							<texture>shine-animation.png</texture>
 							<visible>System.IdleTime(5) + Control.HasFocus(9000)</visible>
 							<animation type="visible" reversible="false">
-								<effect type="fade" start="0" end="100" time="200"/>
-								<effect type="fade" start="100" end="0" delay="800" time="200"/>
-								<effect type="slide" start="0,0" end="350,0" delay="0" time="1000"/>
+								<effect type="fade" start="0" end="100" time="200" />
+								<effect type="fade" start="100" end="0" delay="800" time="200" />
+								<effect type="slide" start="0,0" end="525,0" delay="0" time="1000" />
 							</animation>
 						</control>
 					</focusedlayout>
@@ -267,9 +270,9 @@
 					</content>
 				</control>
 				<control type="list" id="9100">
-					<left>475</left>
-					<width>450</width>
-					<height>204</height>
+					<left>712.5</left>
+					<width>675</width>
+					<height>306</height>
 					<onleft>9000</onleft>
 					<onright condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(2)">501</onright>
 					<onright condition="!Skin.HasSetting(Blades_HideWidgets) + Container(9000).HasFocus(3)">505</onright>
@@ -287,20 +290,20 @@
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>60</pagecontrol>
 					<scrolltime>200</scrolltime>
-					<animation effect="slide" end="0,-30" condition="Integer.IsGreater(Container(9000).NumItems,5)">Conditional</animation>
-					<itemlayout height="34" width="450">
+					<animation effect="slide" end="0,-45" condition="Integer.IsGreater(Container(9000).NumItems,5)">Conditional</animation>
+					<itemlayout height="51" width="675">
 						<control type="image">
 							<description>Icon</description>
-							<left>40</left>
-							<top>1</top>
-							<width>32</width>
-							<height>32</height>
+							<left>60</left>
+							<top>1.5</top>
+							<width>48</width>
+							<height>48</height>
 							<texture>$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
-							<left>100</left>
-							<width>340</width>
-							<height>32</height>
+							<left>150</left>
+							<width>510</width>
+							<height>48</height>
 							<font>font13</font>
 							<aligny>center</aligny>
 							<textcolor>white2</textcolor>
@@ -308,31 +311,31 @@
 							<info>ListItem.Label</info>
 						</control>
 					</itemlayout>
-					<focusedlayout height="34" width="450">
+					<focusedlayout height="51" width="675">
 						<control type="image">
 							<description>Button focus</description>
-							<left>20</left>
-							<width>397</width>
-							<height>34</height>
+							<left>30</left>
+							<width>595.5</width>
+							<height>51</height>
 							<texture>buttons/button.png</texture>
-							<animation effect="slide" start="0,-34" time="200" tween="sine" easing="out" condition="Container(9100).OnNext" reversible="false">Focus</animation>
-							<animation effect="slide" start="0,34" time="200" tween="sine" easing="out" condition="Container(9100).OnPrevious" reversible="false">Focus</animation>
+							<animation effect="slide" start="0,-51" time="200" tween="sine" easing="out" condition="Container(9100).OnNext" reversible="false">Focus</animation>
+							<animation effect="slide" start="0,51" time="200" tween="sine" easing="out" condition="Container(9100).OnPrevious" reversible="false">Focus</animation>
 							<animation effect="fade" start="100" end="0" time="200" condition="!Control.HasFocus(9100)">Conditional</animation>
 							<visible>!Control.HasFocus(9050) + !Control.HasFocus(9000)</visible>
 						</control>
 						<control type="image">
 							<description>Icon</description>
-							<left>40</left>
-							<top>1</top>
-							<width>32</width>
-							<height>32</height>
+							<left>60</left>
+							<top>1.5</top>
+							<width>48</width>
+							<height>48</height>
 							<texture>$INFO[ListItem.Icon]</texture>
 							<animation effect="slide" end="ButtonSlideBackDistance,0" time="ButtonSlideBackTime" reversible="false">focus</animation>
 						</control>
 						<control type="label">
-							<left>100</left>
-							<width>340</width>
-							<height>32</height>
+							<left>150</left>
+							<width>510</width>
+							<height>48</height>
 							<font>font13</font>
 							<aligny>center</aligny>
 							<textcolor>white</textcolor>
@@ -342,15 +345,15 @@
 						</control>
 						<control type="image">
 							<description>Button shine animation</description>
-							<top>1</top>
-							<width>80</width>
-							<height>32</height>
+							<top>1.5</top>
+							<width>120</width>
+							<height>48</height>
 							<texture>shine-animation.png</texture>
 							<visible>System.IdleTime(5) + Control.HasFocus(9100)</visible>
 							<animation type="visible" reversible="false">
-								<effect type="fade" start="0" end="100" time="200"/>
-								<effect type="fade" start="100" end="0" delay="800" time="200"/>
-								<effect type="slide" start="0,0" end="350,0" delay="0" time="1000"/>
+								<effect type="fade" start="0" end="100" time="200" />
+								<effect type="fade" start="100" end="0" delay="800" time="200" />
+								<effect type="slide" start="0,0" end="525,0" delay="0" time="1000" />
 							</animation>
 						</control>
 					</focusedlayout>
@@ -480,44 +483,69 @@
 						</item>
 						<item>
 							<label>14301</label>
-							<onclick condition="Container(9000).HasFocus(8)">ActivateWindow(TVChannels)</onclick>
-							<onclick condition="Container(9000).HasFocus(9)">ActivateWindow(RadioChannels)</onclick>
-							<icon>DefaultAddon.png</icon>
-							<visible>Container(9000).HasFocus(8) | Container(9000).HasFocus(9)</visible>
+							<onclick>ActivateWindow(TVChannels)</onclick>
+							<icon>button_icons/icon-pvrtv.png</icon>
+							<visible>Container(9000).HasFocus(8)</visible>
 						</item>
 						<item>
 							<label>22020</label>
-							<onclick condition="Container(9000).HasFocus(8)">ActivateWindow(TVGuide)</onclick>
-							<onclick condition="Container(9000).HasFocus(9)">ActivateWindow(RadioGuide)</onclick>
-							<icon>DefaultAddon.png</icon>
-							<visible>Container(9000).HasFocus(8) | Container(9000).HasFocus(9)</visible>
+							<onclick>ActivateWindow(TVGuide)</onclick>
+							<icon>button_icons/icon-pvrtv.png</icon>
+							<visible>Container(9000).HasFocus(8)</visible>
 						</item>
 						<item>
 							<label>19163</label>
-							<onclick condition="Container(9000).HasFocus(8)">ActivateWindow(TVRecordings)</onclick>
-							<onclick condition="Container(9000).HasFocus(9)">ActivateWindow(RadioRecordings)</onclick>
-							<icon>DefaultAddon.png</icon>
-							<visible>Container(9000).HasFocus(8) | Container(9000).HasFocus(9)</visible>
+							<onclick>ActivateWindow(TVRecordings)</onclick>
+							<icon>button_icons/icon-pvrtv.png</icon>
+							<visible>Container(9000).HasFocus(8)</visible>
 						</item>
 						<item>
 							<label>19138</label>
-							<onclick condition="Container(9000).HasFocus(8)">ActivateWindow(TVTimerRules)</onclick>
-							<onclick condition="Container(9000).HasFocus(9)">ActivateWindow(RadioTimerRules)</onclick>
-							<icon>DefaultAddon.png</icon>
-							<visible>Container(9000).HasFocus(8) | Container(9000).HasFocus(9)</visible>
+							<onclick>ActivateWindow(TVTimerRules)</onclick>
+							<icon>button_icons/icon-pvrtv.png</icon>
+							<visible>Container(9000).HasFocus(8)</visible>
 						</item>
 						<item>
 							<label>19040</label>
-							<onclick condition="Container(9000).HasFocus(8)">ActivateWindow(TVTimers)</onclick>
-							<onclick condition="Container(9000).HasFocus(9)">ActivateWindow(RadioTimers)</onclick>
-							<icon>DefaultAddon.png</icon>
-							<visible>Container(9000).HasFocus(8) | Container(9000).HasFocus(9)</visible>
+							<onclick>ActivateWindow(TVTimers)</onclick>
+							<icon>button_icons/icon-pvrtv.png</icon>
+							<visible>Container(9000).HasFocus(8)</visible>
+						</item>
+						<item>
+							<label>14301</label>
+							<onclick>ActivateWindow(RadioChannels)</onclick>
+							<icon>button_icons/icon-pvrradio.png</icon>
+							<visible>Container(9000).HasFocus(9)</visible>
+						</item>
+						<item>
+							<label>22020</label>
+							<onclick>ActivateWindow(RadioGuide)</onclick>
+							<icon>button_icons/icon-pvrradio.png</icon>
+							<visible>Container(9000).HasFocus(9)</visible>
+						</item>
+						<item>
+							<label>19163</label>
+							<onclick>ActivateWindow(RadioRecordings)</onclick>
+							<icon>button_icons/icon-pvrradio.png</icon>
+							<visible>Container(9000).HasFocus(9)</visible>
+						</item>
+						<item>
+							<label>19138</label>
+							<onclick>ActivateWindow(RadioTimerRules)</onclick>
+							<icon>button_icons/icon-pvrradio.png</icon>
+							<visible>Container(9000).HasFocus(9)</visible>
+						</item>
+						<item>
+							<label>19040</label>
+							<onclick>ActivateWindow(RadioTimers)</onclick>
+							<icon>button_icons/icon-pvrradio.png</icon>
+							<visible>Container(9000).HasFocus(9)</visible>
 						</item>
 						<item>
 							<label>137</label>
 							<onclick condition="Container(9000).HasFocus(8)">ActivateWindow(TVSearch)</onclick>
 							<onclick condition="Container(9000).HasFocus(9)">ActivateWindow(RadioSearch)</onclick>
-							<icon>DefaultAddon.png</icon>
+							<icon>DefaultAddonsSearch.png</icon>
 							<visible>Container(9000).HasFocus(8) | Container(9000).HasFocus(9)</visible>
 						</item>
 						<item>
@@ -539,7 +567,7 @@
 				<include>MediaInfoCard</include>
 				<include content="HomeWidget" condition="Library.HasContent(Movies) + !Skin.HasSetting(Blades_HideWidgets)">
 					<param name="visible" value="Container(9000).HasFocus(2)" />
-					<param name="left" value="40" />
+					<param name="left" value="60" />
 					<param name="header" value="20382" />
 					<param name="id" value="501" />
 					<param name="label" value="$INFO[Container(501).ListItem.Title]" />
@@ -552,7 +580,7 @@
 				</include>
 				<include content="HomeWidget" condition="Library.HasContent(Movies) + !Skin.HasSetting(Blades_HideWidgets)">
 					<param name="visible" value="Container(9000).HasFocus(2)" />
-					<param name="left" value="255" />
+					<param name="left" value="382.5" />
 					<param name="header" value="31542" />
 					<param name="id" value="502" />
 					<param name="label" value="$INFO[Container(502).ListItem.Title]" />
@@ -565,7 +593,7 @@
 				</include>
 				<include content="HomeWidget" condition="Library.HasContent(Movies) + !Skin.HasSetting(Blades_HideWidgets)">
 					<param name="visible" value="Container(9000).HasFocus(2)" />
-					<param name="left" value="470" />
+					<param name="left" value="705" />
 					<param name="header" value="$VAR[MovieWidget3Label]" />
 					<param name="id" value="503" />
 					<param name="label" value="$INFO[Container(503).ListItem.Title]" />
@@ -578,7 +606,7 @@
 				</include>
 				<include content="HomeWidget" condition="Library.HasContent(Movies) + !Skin.HasSetting(Blades_HideWidgets)">
 					<param name="visible" value="Container(9000).HasFocus(2)" />
-					<param name="left" value="685" />
+					<param name="left" value="1027.5" />
 					<param name="header" value="$VAR[MovieWidget4Label]" />
 					<param name="id" value="504" />
 					<param name="label" value="$INFO[Container(504).ListItem.Title]" />
@@ -591,7 +619,7 @@
 				</include>
 				<include content="HomeWidget" condition="Library.HasContent(TVShows) + !Skin.HasSetting(Blades_HideWidgets)">
 					<param name="visible" value="Container(9000).HasFocus(3)" />
-					<param name="left" value="245" />
+					<param name="left" value="367.5" />
 					<param name="header" value="20382" />
 					<param name="id" value="505" />
 					<param name="label" value="$INFO[Container(505).ListItem.Label]" />
@@ -604,7 +632,7 @@
 				</include>
 				<include content="HomeWidget" condition="Library.HasContent(TVShows) + !Skin.HasSetting(Blades_HideWidgets)">
 					<param name="visible" value="Container(9000).HasFocus(3)" />
-					<param name="left" value="490" />
+					<param name="left" value="735" />
 					<param name="header" value="31542" />
 					<param name="id" value="506" />
 					<param name="label" value="$INFO[Container(506).ListItem.Label]" />
@@ -617,7 +645,7 @@
 				</include>
 				<include content="HomeWidget" condition="Library.HasContent(Music) + !Skin.HasSetting(Blades_HideWidgets)">
 					<param name="visible" value="Container(9000).HasFocus(6)" />
-					<param name="left" value="117" />
+					<param name="left" value="175.5" />
 					<param name="header" value="359" />
 					<param name="id" value="509" />
 					<param name="label" value="$INFO[Container(509).ListItem.Album]" />
@@ -630,7 +658,7 @@
 				</include>
 				<include content="HomeWidget" condition="Library.HasContent(Music) + !Skin.HasSetting(Blades_HideWidgets)">
 					<param name="visible" value="Container(9000).HasFocus(6)" />
-					<param name="left" value="362.5" />
+					<param name="left" value="544" />
 					<param name="header" value="517" />
 					<param name="id" value="510" />
 					<param name="label" value="$INFO[Container(510).ListItem.Album]" />
@@ -643,7 +671,7 @@
 				</include>
 				<include content="HomeWidget" condition="Library.HasContent(Music) + !Skin.HasSetting(Blades_HideWidgets)">
 					<param name="visible" value="Container(9000).HasFocus(6)" />
-					<param name="left" value="608" />
+					<param name="left" value="912" />
 					<param name="header" value="31501" />
 					<param name="id" value="511" />
 					<param name="label" value="$INFO[Container(511).ListItem.Album]" />
@@ -656,7 +684,7 @@
 				</include>
 				<include content="HomeWidget" condition="!Skin.HasSetting(Blades_HideWidgets) + System.HasPVRAddon">
 					<param name="visible" value="Container(9000).HasFocus(8)" />
-					<param name="left" value="40" />
+					<param name="left" value="60" />
 					<param name="header" value="31249" />
 					<param name="id" value="513" />
 					<param name="label" value="$INFO[Container(513).ListItem.Label]" />
@@ -669,7 +697,7 @@
 				</include>
 				<include content="HomeWidget" condition="!Skin.HasSetting(Blades_HideWidgets) + System.HasPVRAddon">
 					<param name="visible" value="Container(9000).HasFocus(8)" />
-					<param name="left" value="255" />
+					<param name="left" value="382.5" />
 					<param name="header" value="19163" />
 					<param name="id" value="514" />
 					<param name="label" value="$INFO[Container(514).ListItem.Label]" />
@@ -682,7 +710,7 @@
 				</include>
 				<include content="HomeWidget" condition="!Skin.HasSetting(Blades_HideWidgets) + System.HasPVRAddon">
 					<param name="visible" value="Container(9000).HasFocus(8)" />
-					<param name="left" value="470" />
+					<param name="left" value="705" />
 					<param name="header" value="19040" />
 					<param name="id" value="515" />
 					<param name="label" value="$INFO[Container(515).ListItem.Label]" />
@@ -695,7 +723,7 @@
 				</include>
 				<include content="HomeWidget" condition="!Skin.HasSetting(Blades_HideWidgets) + System.HasPVRAddon">
 					<param name="visible" value="Container(9000).HasFocus(8)" />
-					<param name="left" value="685" />
+					<param name="left" value="1027.5" />
 					<param name="header" value="19019" />
 					<param name="id" value="516" />
 					<param name="label" value="$INFO[Container(516).ListItem.Label]" />
@@ -708,7 +736,7 @@
 				</include>
 				<include content="HomeWidget" condition="!Skin.HasSetting(Blades_HideWidgets) + System.HasPVRAddon">
 					<param name="visible" value="Container(9000).HasFocus(9)" />
-					<param name="left" value="40" />
+					<param name="left" value="60" />
 					<param name="header" value="31249" />
 					<param name="id" value="517" />
 					<param name="label" value="$INFO[Container(517).ListItem.Label]" />
@@ -721,7 +749,7 @@
 				</include>
 				<include content="HomeWidget" condition="!Skin.HasSetting(Blades_HideWidgets) + System.HasPVRAddon">
 					<param name="visible" value="Container(9000).HasFocus(9)" />
-					<param name="left" value="255" />
+					<param name="left" value="382.5" />
 					<param name="header" value="19163" />
 					<param name="id" value="518" />
 					<param name="label" value="$INFO[Container(518).ListItem.Label]" />
@@ -733,7 +761,7 @@
 				</include>
 				<include content="HomeWidget" condition="!Skin.HasSetting(Blades_HideWidgets) + System.HasPVRAddon">
 					<param name="visible" value="Container(9000).HasFocus(9)" />
-					<param name="left" value="470" />
+					<param name="left" value="705" />
 					<param name="header" value="19040" />
 					<param name="id" value="519" />
 					<param name="label" value="$INFO[Container(519).ListItem.Label]" />
@@ -746,7 +774,7 @@
 				</include>
 				<include content="HomeWidget" condition="!Skin.HasSetting(Blades_HideWidgets) + System.HasPVRAddon">
 					<param name="visible" value="Container(9000).HasFocus(9)" />
-					<param name="left" value="685" />
+					<param name="left" value="1027.5" />
 					<param name="header" value="19019" />
 					<param name="id" value="520" />
 					<param name="label" value="$INFO[Container(520).ListItem.Label]" />
@@ -760,7 +788,6 @@
 			</control>
 			<include condition="System.GetBool(LookAndFeel.EnableRSSFeeds)">CommonRSSFeed</include>
 		</control>
-
 		<include content="BlankBladeSlideRight">
 			<param name="id" value="1" />
 			<param name="action" value="ActivateWindow(1111)" />
@@ -772,58 +799,69 @@
 		<control type="group">
 			<visible>!Control.HasFocus(1) + !Control.HasFocus(2)</visible>
 			<!-- Left side -->
-			<include content="BladesImagesLeft">
-				<param name="texture" value="blades-size2-left-NF.png" />
-			</include>
-			<control type="label">
-				<description>weather Label</description>
-				<label>31004</label>
-				<left>90</left>
-				<top>200</top>
-				<include>BladesLabelLeft</include>
+			<control type="group">
+				<animation effect="slide" start="-150,0" end="0,0" time="100" delay="200" condition="Window.Previous(FullScreenVideo) + String.IsEqual(Skin.String(StartupAnimation),true)">WindowOpen</animation>
+				<include content="BladesImagesLeft">
+					<param name="texture" value="blades-size2-left-NF.png" />
+				</include>
+				<control type="label">
+					<description>weather Label</description>
+					<label>31004</label>
+					<left>135</left>
+					<top>300</top>
+					<include>BladesLabelLeft</include>
+				</control>
 			</control>
-			<control type="image">
-				<left>50</left>
-				<top>-40</top>
-				<width>115</width>
-				<height>800</height>
-				<texture>blades-size3-left-NF.png</texture>
+			<control type="group">
+				<animation effect="slide" start="-150,0" end="0,0" time="100" delay="100" condition="Window.Previous(FullScreenVideo) + String.IsEqual(Skin.String(StartupAnimation),true)">WindowOpen</animation>
+				<control type="image">
+					<left>75</left>
+					<top>-60</top>
+					<width>172.5</width>
+					<height>1200</height>
+					<texture>blades-size3-left-NF.png</texture>
+				</control>
+				<control type="label">
+					<description>Applications Label</description>
+					<label>31002</label>
+					<left>210</left>
+					<top>285</top>
+					<include>BladesLabelLeft</include>
+				</control>
 			</control>
-			<control type="label">
-				<description>Applications Label</description>
-				<label>31002</label>
-				<left>140</left>
-				<top>190</top>
-				<include>BladesLabelLeft</include>
-			</control>
-			<control type="image">
-				<left>100</left>
-				<top>-40</top>
-				<width>115</width>
-				<height>800</height>
-				<texture>blades-size4-header.png</texture>
-			</control>
-			<control type="label">
-				<description>Media Label</description>
-				<label>31001</label>
-				<left>188</left>
-				<top>170</top>
-				<include>BladesLabelLeft</include>
+			<control type="group">
+				<animation effect="slide" start="-150,0" end="0,0" time="100" condition="Window.Previous(FullScreenVideo) + String.IsEqual(Skin.String(StartupAnimation),true)">WindowOpen</animation>
+				<control type="image">
+					<left>150</left>
+					<top>-60</top>
+					<width>172.5</width>
+					<height>1200</height>
+					<texture>blades-size4-header.png</texture>
+				</control>
+				<control type="label">
+					<description>Media Label</description>
+					<label>31001</label>
+					<left>282</left>
+					<top>255</top>
+					<include>BladesLabelLeft</include>
+				</control>
 			</control>
 			<!-- Right side -->
-			<include content="BladesImagesRight">
-				<param name="texture" value="blades-size3-right-NF.png" />
-			</include>
-			<control type="label">
-				<description>System Label</description>
-				<label>31003</label>
-				<left>48r</left>
-				<top>190</top>
-				<width>200</width>
-				<include>BladesLabelRight</include>
+			<control type="group">
+				<animation effect="slide" start="150,0" end="0,0" time="100" condition="Window.Previous(FullScreenVideo) + String.IsEqual(Skin.String(StartupAnimation),true)">WindowOpen</animation>
+				<include content="BladesImagesRight">
+					<param name="texture" value="blades-size3-right-NF.png" />
+				</include>
+				<control type="label">
+					<description>System Label</description>
+					<label>31003</label>
+					<left>72r</left>
+					<top>285</top>
+					<width>300</width>
+					<include>BladesLabelRight</include>
+				</control>
 			</control>
 		</control>
-
 		<control type="group">
 			<description>Application Blades</description>
 			<visible>Control.HasFocus(1)</visible>
@@ -834,22 +872,22 @@
 			<control type="label">
 				<description>weather Label</description>
 				<label>31004</label>
-				<left>88</left>
-				<top>190</top>
+				<left>132</left>
+				<top>285</top>
 				<include>BladesLabelLeft</include>
 			</control>
 			<control type="image">
-				<left>50</left>
-				<top>-40</top>
-				<width>115</width>
-				<height>800</height>
+				<left>75</left>
+				<top>-60</top>
+				<width>172.5</width>
+				<height>1200</height>
 				<texture>blades-size4-header.png</texture>
 			</control>
 			<control type="label">
 				<description>Applications Label</description>
 				<label>31002</label>
-				<left>140</left>
-				<top>170</top>
+				<left>210</left>
+				<top>255</top>
 				<include>BladesLabelLeft</include>
 			</control>
 			<!-- Right side -->
@@ -859,16 +897,16 @@
 			<control type="label">
 				<description>System Label</description>
 				<label>31003</label>
-				<left>48r</left>
-				<top>200</top>
-				<width>200</width>
+				<left>72r</left>
+				<top>300</top>
+				<width>300</width>
 				<include>BladesLabelRight</include>
 			</control>
 			<control type="image">
-				<left>165r</left>
-				<top>-40</top>
-				<width>115</width>
-				<height>800</height>
+				<left>247.5r</left>
+				<top>-60</top>
+				<width>172.5</width>
+				<height>1200</height>
 				<texture>blades-size3-right-NF.png</texture>
 				<visible>Control.HasFocus(1)</visible>
 				<animation effect="fade" time="HomeBladeAnimationSpeed">visible</animation>
@@ -876,14 +914,13 @@
 			<control type="label">
 				<description>Media Label</description>
 				<label>31001</label>
-				<left>99r</left>
-				<top>190</top>
+				<left>147.5r</left>
+				<top>285</top>
 				<include>BladesLabelRight</include>
 				<visible>Control.HasFocus(1)</visible>
 				<animation effect="fade" time="HomeBladeAnimationSpeed">visible</animation>
 			</control>
 		</control>
-
 		<control type="group">
 			<description>System Blades</description>
 			<visible>Control.HasFocus(2)</visible>
@@ -894,43 +931,43 @@
 			<control type="label">
 				<description>weather Label</description>
 				<label>31004</label>
-				<left>90</left>
-				<top>210</top>
+				<left>135</left>
+				<top>315</top>
 				<include>BladesLabelLeft</include>
 			</control>
 			<control type="image">
-				<left>50</left>
-				<top>-40</top>
-				<width>115</width>
-				<height>800</height>
+				<left>75</left>
+				<top>-60</top>
+				<width>172.5</width>
+				<height>1200</height>
 				<texture>blades-size2-left-NF.png</texture>
 			</control>
 			<control type="label">
 				<description>Apps Label</description>
 				<label>31002</label>
-				<left>142</left>
-				<top>200</top>
+				<left>213</left>
+				<top>300</top>
 				<include>BladesLabelLeft</include>
 			</control>
 			<control type="image">
-				<left>100</left>
-				<top>-40</top>
-				<width>115</width>
-				<height>800</height>
+				<left>150</left>
+				<top>-60</top>
+				<width>172.5</width>
+				<height>1200</height>
 				<texture>blades-size3-left-NF.png</texture>
 			</control>
 			<control type="label">
 				<description>Media Label</description>
 				<label>31001</label>
-				<left>188</left>
-				<top>190</top>
+				<left>282</left>
+				<top>285</top>
 				<include>BladesLabelLeft</include>
 			</control>
 			<control type="image">
-				<left>150</left>
-				<top>-40</top>
-				<width>115</width>
-				<height>800</height>
+				<left>225</left>
+				<top>-60</top>
+				<width>172.5</width>
+				<height>1200</height>
 				<texture>blades-size4-header.png</texture>
 				<visible>Control.HasFocus(2)</visible>
 				<animation effect="fade" time="HomeBladeAnimationSpeed">visible</animation>
@@ -938,23 +975,23 @@
 			<control type="label">
 				<description>System Label</description>
 				<label>31003</label>
-				<left>238</left>
-				<top>170</top>
-				<width>200</width>
+				<left>357</left>
+				<top>255</top>
+				<width>300</width>
 				<include>BladesLabelLeft</include>
 				<visible>Control.HasFocus(2)</visible>
 				<animation effect="fade" time="HomeBladeAnimationSpeed">visible</animation>
 			</control>
 			<!-- Right side -->
 			<control type="image">
-				<left>55r</left>
-				<top>-40</top>
-				<width>180</width>
-				<height>800</height>
+				<left>82.5r</left>
+				<top>-60</top>
+				<width>270</width>
+				<height>1200</height>
 				<texture>blades-runner-right.png</texture>
 			</control>
 		</control>
 		<include>Common_Now_Playing</include>
 		<include>BackgroundDim</include>
-	</controls>	
+	</controls>
 </window>

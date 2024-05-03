@@ -3,8 +3,8 @@
 	<defaultcontrol always="true">11</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<left>210</left>
-		<top>90</top>
+		<left>315</left>
+		<top>135</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
@@ -13,16 +13,17 @@
 			<include>VisibleFadeEffect</include>
 			<control type="image">
 				<description>background image</description>
-				<width>860</width>
-				<height>540</height>
-				<texture border="50,100,50,50">dialogs/Dialog.png</texture>
+				<width>1290</width>
+				<height>810</height>
+				<texture border="50,150,50,50">dialogs/Dialog.png</texture>
+				<bordersize>19</bordersize>
 			</control>
 			<control type="label" id="2">
 				<description>heading label</description>
-				<left>50</left>
-				<top>50</top>
-				<width>760</width>
-				<height>30</height>
+				<left>75</left>
+				<top>75</top>
+				<width>1140</width>
+				<height>45</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font16</font>
@@ -31,10 +32,10 @@
 			</control>
 			<control type="label">
 				<description>path label</description>
-				<left>50</left>
-				<top>100</top>
-				<width>760</width>
-				<height>30</height>
+				<left>75</left>
+				<top>150</top>
+				<width>1140</width>
+				<height>45</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font12</font>
@@ -42,47 +43,47 @@
 				<textcolor>grey2</textcolor>
 			</control>
 			<control type="list" id="10">
-				<left>50</left>
-				<top>140</top>
-				<width>565</width>
-				<height>180</height>
+				<left>75</left>
+				<top>210</top>
+				<width>847.5</width>
+				<height>270</height>
 				<onup>9001</onup>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
 				<ondown>12</ondown>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="45">
+				<itemlayout height="67.5">
 					<control type="image">
-						<width>565</width>
-						<height>45</height>
-						<texture border="10">buttons/list-nofocus.png</texture>
+						<width>847.5</width>
+						<height>65.5</height>
+						<texture border="15">buttons/list-nofocus.png</texture>
 					</control>
 					<control type="label">
-						<left>10</left>
-						<width>545</width>
-						<height>45</height>
+						<left>15</left>
+						<width>817.5</width>
+						<height>65.5</height>
 						<font>font12</font>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
 					</control>
 				</itemlayout>
-				<focusedlayout height="45">
+				<focusedlayout height="67.5">
 					<control type="image">
-						<width>565</width>
-						<height>45</height>
-						<texture border="10">buttons/list-nofocus.png</texture>
+						<width>847.5</width>
+						<height>65.5</height>
+						<texture border="15">buttons/list-nofocus.png</texture>
 						<visible>!Control.HasFocus(10)</visible>
 					</control>
 					<control type="image">
-						<width>565</width>
-						<height>45</height>
-						<texture border="10">buttons/list-focus.png</texture>
+						<width>847.5</width>
+						<height>65.5</height>
+						<texture border="15">buttons/list-focus.png</texture>
 						<visible>Control.HasFocus(10)</visible>
 					</control>
 					<control type="label">
-						<left>10</left>
-						<width>545</width>
-						<height>45</height>
+						<left>15</left>
+						<width>817.5</width>
+						<height>65.5</height>
 						<font>font12</font>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
@@ -90,11 +91,11 @@
 				</focusedlayout>
 			</control>
 			<control type="group" id="9000">
-				<left>620</left>
-				<top>140</top>
+				<left>930</left>
+				<top>210</top>
 				<control type="button" id="11">
 					<description>Browse Button</description>
-					<width>190</width>
+					<width>285</width>
 					<label>1024</label>
 					<include>DialogButton2CommonValues</include>
 					<onup>18</onup>
@@ -104,8 +105,8 @@
 				</control>
 				<control type="button" id="13">
 					<description>Add Path Button</description>
-					<top>45</top>
-					<width>190</width>
+					<top>67.5</top>
+					<width>285</width>
 					<label>15019</label>
 					<include>DialogButton2CommonValues</include>
 					<onup>11</onup>
@@ -115,8 +116,8 @@
 				</control>
 				<control type="button" id="14">
 					<description>Remove Path Button</description>
-					<top>90</top>
-					<width>190</width>
+					<top>135</top>
+					<width>285</width>
 					<label>1210</label>
 					<include>DialogButton2CommonValues</include>
 					<onup>13</onup>
@@ -126,18 +127,18 @@
 				</control>
 			</control>
 			<control type="image">
-				<left>50</left>
-				<top>328</top>
-				<width>760</width>
-				<height>5</height>
+				<left>75</left>
+				<top>492</top>
+				<width>1140</width>
+				<height>7.5</height>
 				<texture>separator.png</texture>
 			</control>
 			<control type="label">
 				<description>Name label</description>
-				<left>50</left>
-				<top>335</top>
-				<width>760</width>
-				<height>30</height>
+				<left>75</left>
+				<top>502.5</top>
+				<width>1140</width>
+				<height>45</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font12</font>
@@ -146,27 +147,27 @@
 			</control>
 			<control type="edit" id="12">
 				<description>Name Button</description>
-				<left>50</left>
-				<top>370</top>
-				<width>760</width>
-				<height>45</height>
+				<left>75</left>
+				<top>555</top>
+				<width>1140</width>
+				<height>67.5</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label />
-				<texturefocus border="10">buttons/list-focus.png</texturefocus>
-				<texturenofocus border="10">buttons/list-nofocus.png</texturenofocus>
+				<texturefocus border="15">buttons/list-focus.png</texturefocus>
+				<texturenofocus border="15">buttons/list-nofocus.png</texturenofocus>
 				<onup>10</onup>
 				<onleft>12</onleft>
 				<onright>19</onright>
 				<ondown>9001</ondown>
 			</control>
 			<control type="grouplist" id="9001">
-				<left>127</left>
-				<top>440</top>
-				<width>606</width>
+				<left>190.5</left>
+				<top>660</top>
+				<width>909</width>
 				<align>center</align>
 				<orientation>horizontal</orientation>
-				<itemgap>2</itemgap>
+				<itemgap>3</itemgap>
 				<onup>12</onup>
 				<ondown>10</ondown>
 				<control type="button" id="18">

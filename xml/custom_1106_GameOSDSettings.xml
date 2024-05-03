@@ -5,21 +5,22 @@
 	<controls>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(DialogSelect.xml) | Window.IsVisible(GameControllers) | Window.IsActive(AddonSettings) | Window.IsActive(OKDialog)">Conditional</animation>
-			<left>340</left>
-			<top>151</top>
+			<left>510</left>
+			<top>193.5</top>
 			<control type="image">
 				<description>background image</description>
-				<width>600</width>
-				<height>418</height>
+				<width>900</width>
+				<height>694.5</height>
 				<colordiffuse>EEFFFFFF</colordiffuse>
-				<texture border="50,100,50,50">dialogs/Dialog.png</texture>
+				<texture border="50,150,50,50">dialogs/Dialog.png</texture>
+				<bordersize>19</bordersize>
 			</control>
 			<control type="label">
 				<description>heading label</description>
-				<left>50</left>
-				<top>50</top>
-				<width>500</width>
-				<height>30</height>
+				<left>75</left>
+				<top>75</top>
+				<width>750</width>
+				<height>45</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font16</font>
@@ -27,31 +28,31 @@
 				<textcolor>orange</textcolor>
 			</control>
 			<control type="list" id="9010">
-				<left>50</left>
-				<top>100</top>
-				<width>500</width>
+				<left>75</left>
+				<top>150</top>
+				<width>750</width>
 				<ondown>9011</ondown>
 				<onup>9011</onup>
 				<onleft>9011</onleft>
 				<onright>9011</onright>
-				<itemlayout height="45">
+				<itemlayout height="67.5">
 					<control type="image">
-						<height>45</height>
-						<width>500</width>
-						<texture border="10">buttons/list-nofocus.png</texture>
+						<height>65.5</height>
+						<width>750</width>
+						<texture border="15">buttons/list-nofocus.png</texture>
 					</control>
 					<control type="label">
-						<left>15</left>
-						<width>300</width>
-						<height>45</height>
+						<left>22.5</left>
+						<width>450</width>
+						<height>65.5</height>
 						<aligny>center</aligny>
 						<font>font12</font>
 						<info>ListItem.Label</info>
 					</control>
 					<control type="label">
-						<left>315</left>
-						<width>170</width>
-						<height>45</height>
+						<left>472.5</left>
+						<width>255</width>
+						<height>65.5</height>
 						<align>right</align>
 						<aligny>center</aligny>
 						<font>font12</font>
@@ -59,31 +60,31 @@
 						<info>ListItem.Label2</info>
 					</control>
 				</itemlayout>
-				<focusedlayout height="45">
+				<focusedlayout height="67.5">
 					<control type="image">
-						<height>45</height>
-						<width>500</width>
-						<texture border="10">buttons/list-nofocus.png</texture>
+						<height>65.5</height>
+						<width>750</width>
+						<texture border="15">buttons/list-nofocus.png</texture>
 						<visible>!Control.HasFocus(9010)</visible>
 					</control>
 					<control type="image">
-						<height>45</height>
-						<width>500</width>
-						<texture border="10">buttons/list-focus.png</texture>
+						<height>65.5</height>
+						<width>750</width>
+						<texture border="15">buttons/list-focus.png</texture>
 						<visible>Control.HasFocus(9010)</visible>
 					</control>
 					<control type="label">
-						<left>15</left>
-						<width>300</width>
-						<height>45</height>
+						<left>22.5</left>
+						<width>450</width>
+						<height>65.5</height>
 						<aligny>center</aligny>
 						<font>font12</font>
 						<info>ListItem.Label</info>
 					</control>
 					<control type="label">
-						<left>315</left>
-						<width>170</width>
-						<height>45</height>
+						<left>472.5</left>
+						<width>255</width>
+						<height>65.5</height>
 						<align>right</align>
 						<aligny>center</aligny>
 						<font>font12</font>
@@ -109,16 +110,18 @@
 						<onclick>ActivateWindow(GameControllers)</onclick>
 					</item>
 					<item>
+						<label>$LOCALIZE[35110]</label>
+						<onclick>ActivateWindow(GamePorts)</onclick>
+					</item>
+					<item>
 						<label>$LOCALIZE[10140]</label>
 						<onclick>ActivateWindow(GameAdvancedSettings)</onclick>
 					</item>
 				</content>
 			</control>
 			<control type="button" id="9011">
-				<left>200</left>
-				<top>328</top>
-				<left>200</left>
-				<top>470</top>
+				<left>300</left>
+				<top>559.5</top>
 				<label>15067</label>
 				<include>DialogButton2CommonValues</include>
 				<font>font12</font>

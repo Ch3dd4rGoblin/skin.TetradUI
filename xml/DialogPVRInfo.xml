@@ -5,7 +5,7 @@
 	<controls>
 		<control type="group">
 			<animation type="conditional" condition="Window.IsVisible(DialogSettings.xml)">
-				<effect type="slide" start="0,0" end="1095,0" delay="DialogVisibleFadeAnimationSpeed" time="500" tween="quadratic" easing="in"/>
+				<effect type="slide" start="0,0" end="1642.5,0" delay="DialogVisibleFadeAnimationSpeed" time="500" tween="quadratic" easing="in" />
 				<effect type="fade" start="100" end="0" delay="800" time="100" />
 			</animation>
 			<include>BladesRunnerRight</include>
@@ -14,16 +14,16 @@
 				<animation effect="fade" delay="100" time="DialogVisibleFadeAnimationSpeed">WindowClose</animation>
 				<control type="label">
 					<description>Title label Normal</description>
-					<left>200</left>
+					<left>300</left>
 					<label>$VAR[BreadcrumbsPVRInfoVar]</label>
 					<include>DialogHeaderTextCommons</include>
 				</control>
 				<control type="label">
 					<description>Title value</description>
-					<left>200</left>
-					<top>70</top>
-					<width>1000</width>
-					<height>25</height>
+					<left>300</left>
+					<top>105</top>
+					<width>1500</width>
+					<height>37.5</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<textcolor>orange</textcolor>
@@ -33,29 +33,29 @@
 				</control>
 				<control type="image">
 					<description>Cover image</description>
-					<left>200</left>
-					<top>112</top>
-					<width>300</width>
-					<height>300</height>
+					<left>300</left>
+					<top>168</top>
+					<width>450</width>
+					<height>450</height>
 					<texture background="true">$INFO[Listitem.Icon]</texture>
 					<aspectratio>keep</aspectratio>
-					<bordertexture border="19,3,19,3">thumb-border.png</bordertexture>
+					<bordertexture border="28.5,4,28.5,4" infill="false">thumb-border.png</bordertexture>
 					<bordersize>18,2,18,2</bordersize>
 				</control>
 				<control type="panel" id="9001">
-					<left>540</left>
-					<top>120</top>
-					<width>700</width>
-					<height>300</height>
+					<left>810</left>
+					<top>180</top>
+					<width>1050</width>
+					<height>450</height>
 					<onleft>9000</onleft>
 					<onright>9000</onright>
 					<onup>9000</onup>
 					<ondown>9000</ondown>
 					<scrolltime>200</scrolltime>
-					<itemlayout height="30" width="700">
+					<itemlayout height="45" width="1050">
 						<control type="label">
-							<width>140</width>
-							<height>30</height>
+							<width>210</width>
+							<height>45</height>
 							<font>font12</font>
 							<align>right</align>
 							<aligny>center</aligny>
@@ -63,25 +63,25 @@
 							<info>ListItem.Label</info>
 						</control>
 						<control type="label">
-							<left>160</left>
-							<width>540</width>
-							<height>30</height>
+							<left>240</left>
+							<width>810</width>
+							<height>45</height>
 							<font>font12</font>
 							<aligny>center</aligny>
 							<scroll>true</scroll>
 							<info>ListItem.Label2</info>
 						</control>
 					</itemlayout>
-					<focusedlayout height="30" width="700">
+					<focusedlayout height="45" width="1050">
 						<control type="image">
-							<width>700</width>
-							<height>33</height>
+							<width>1050</width>
+							<height>49.5</height>
 							<visible>Control.HasFocus(49)</visible>
-							<texture border="10">buttons/list-focus.png</texture>
+							<texture border="15">buttons/list-focus.png</texture>
 						</control>
 						<control type="label">
-							<width>140</width>
-							<height>30</height>
+							<width>210</width>
+							<height>45</height>
 							<font>font12</font>
 							<align>right</align>
 							<aligny>center</aligny>
@@ -89,9 +89,9 @@
 							<info>ListItem.Label</info>
 						</control>
 						<control type="label">
-							<left>160</left>
-							<width>540</width>
-							<height>30</height>
+							<left>240</left>
+							<width>810</width>
+							<height>45</height>
 							<font>font12</font>
 							<aligny>center</aligny>
 							<info>ListItem.Label2</info>
@@ -148,7 +148,7 @@
 						</item>
 						<item id="10">
 							<description>Premiered</description>
-							<label>$LOCALIZE[31936]:</label>
+							<label>$LOCALIZE[31547]:</label>
 							<label2>$INFO[ListItem.Premiered]</label2>
 							<visible>!String.IsEmpty(ListItem.Premiered)</visible>
 						</item>
@@ -168,10 +168,10 @@
 				</control>
 				<control type="textbox" id="400">
 					<description>Description</description>
-					<left>540</left>
-					<top>320</top>
-					<width>700</width>
-					<height>260</height>
+					<left>810</left>
+					<top>480</top>
+					<width>1050</width>
+					<height>390</height>
 					<font>font12</font>
 					<align>justify</align>
 					<textcolor>white</textcolor>
@@ -180,10 +180,10 @@
 				</control>
 				<control type="label">
 					<description>Description Page Count</description>
-					<left>120r</left>
-					<top>120r</top>
-					<width>300</width>
-					<height>25</height>
+					<left>180r</left>
+					<top>180r</top>
+					<width>450</width>
+					<height>37.5</height>
 					<label>$LOCALIZE[31201] $INFO[Container(400).CurrentPage]/$INFO[Container(400).NumPages]</label>
 					<align>right</align>
 					<aligny>center</aligny>
@@ -192,8 +192,8 @@
 				</control>
 				<control type="spincontrol" id="60">
 					<description>Next page button</description>
-					<left>100r</left>
-					<top>120r</top>
+					<left>150r</left>
+					<top>180r</top>
 					<subtype>page</subtype>
 					<font>font12</font>
 					<onleft condition="Control.IsVisible(50)">50</onleft>
@@ -205,10 +205,10 @@
 				</control>
 				<control type="grouplist">
 					<description>Media Codec Flagging Images</description>
-					<left>640r</left>
-					<top>20</top>
-					<width>620</width>
-					<itemgap>5</itemgap>
+					<left>960r</left>
+					<top>30</top>
+					<width>930</width>
+					<itemgap>7.5</itemgap>
 					<align>right</align>
 					<orientation>horizontal</orientation>
 					<include>VideoCodecFlagging</include>
@@ -217,10 +217,10 @@
 					<include>AspectCodecFlagging</include>
 				</control>
 				<control type="grouplist" id="9000">
-					<left>195</left>
-					<top>70r</top>
-					<width>1060</width>
-					<height>50</height>
+					<left>292.5</left>
+					<top>105r</top>
+					<width>1590</width>
+					<height>75</height>
 					<onleft>9000</onleft>
 					<onright>9000</onright>
 					<onup condition="Control.IsVisible(50)">50</onup>
@@ -235,7 +235,7 @@
 						<label>19165</label>
 						<visible>Window.IsVisible(PVRGuideInfo)</visible>
 					</control>
-					<control type="button" id="12">
+					<control type="button" id="10">
 						<description>Play programme</description>
 						<include>InfoDialogButtonCommonValues</include>
 						<label>19190</label>

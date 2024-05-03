@@ -3,24 +3,25 @@
 	<defaultcontrol always="true">5</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<left>185</left>
-		<top>38</top>
+		<left>277.5</left>
+		<top>57</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
 		<control type="image">
 			<description>background image</description>
-			<width>910</width>
-			<height>643</height>
-			<texture border="50,100,50,50">dialogs/Dialog.png</texture>
+			<width>1365</width>
+			<height>964.5</height>
+			<texture border="50,150,50,50">dialogs/Dialog.png</texture>
+			<bordersize>19</bordersize>
 			<animation effect="fade" start="90" end="90" time="0" condition="Window.IsVisible(Slideshow)">Conditional</animation>
 		</control>
 		<control type="label" id="1">
 			<description>heading label</description>
-			<left>50</left>
-			<top>50</top>
-			<width>810</width>
-			<height>30</height>
+			<left>75</left>
+			<top>75</top>
+			<width>1215</width>
+			<height>45</height>
 			<align>center</align>
 			<aligny>center</aligny>
 			<font>font16</font>
@@ -28,26 +29,26 @@
 			<textcolor>orange</textcolor>
 		</control>
 		<control type="list" id="5">
-			<left>50</left>
-			<top>100</top>
-			<width>550</width>
-			<height>450</height>
+			<left>75</left>
+			<top>150</top>
+			<width>825</width>
+			<height>675</height>
 			<onup>5</onup>
 			<ondown>60</ondown>
 			<onleft>5</onleft>
 			<onright>9001</onright>
 			<pagecontrol>60</pagecontrol>
 			<scrolltime>200</scrolltime>
-			<itemlayout height="45">
+			<itemlayout height="67.5">
 				<control type="image">
-					<width>550</width>
-					<height>45</height>
-					<texture border="10">buttons/list-nofocus.png</texture>
+					<width>825</width>
+					<height>65.5</height>
+					<texture border="15">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="label">
-					<left>10</left>
-					<width>200</width>
-					<height>45</height>
+					<left>15</left>
+					<width>300</width>
+					<height>65.5</height>
 					<font>font12</font>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -55,31 +56,31 @@
 					<info>ListItem.Label</info>
 				</control>
 				<control type="label">
-					<left>215</left>
-					<width>325</width>
-					<height>45</height>
+					<left>322.5</left>
+					<width>487.5</width>
+					<height>65.5</height>
 					<font>font12</font>
 					<aligny>center</aligny>
 					<info>ListItem.Label2</info>
 				</control>
 			</itemlayout>
-			<focusedlayout height="45">
+			<focusedlayout height="67.5">
 				<control type="image">
-					<width>550</width>
-					<height>45</height>
+					<width>825</width>
+					<height>65.5</height>
 					<visible>!Control.HasFocus(5)</visible>
-					<texture border="10">buttons/list-nofocus.png</texture>
+					<texture border="15">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="image">
-					<width>550</width>
-					<height>45</height>
+					<width>825</width>
+					<height>65.5</height>
 					<visible>Control.HasFocus(5)</visible>
-					<texture border="10">buttons/list-focus.png</texture>
+					<texture border="15">buttons/list-focus.png</texture>
 				</control>
 				<control type="label">
-					<left>10</left>
-					<width>200</width>
-					<height>45</height>
+					<left>15</left>
+					<width>300</width>
+					<height>65.5</height>
 					<font>font12</font>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -87,9 +88,9 @@
 					<info>ListItem.Label</info>
 				</control>
 				<control type="label">
-					<left>215</left>
-					<width>325</width>
-					<height>45</height>
+					<left>322.5</left>
+					<width>487.5</width>
+					<height>65.5</height>
 					<font>font12</font>
 					<aligny>center</aligny>
 					<info>ListItem.Label2</info>
@@ -98,8 +99,8 @@
 		</control>
 		<control type="spincontrol" id="60">
 			<description>Next page Spinner</description>
-			<left>540</left>
-			<top>560</top>
+			<left>810</left>
+			<top>840</top>
 			<subtype>page</subtype>
 			<font />
 			<onleft>5</onleft>
@@ -109,50 +110,29 @@
 			<textcolor>white</textcolor>
 			<showonepage>true</showonepage>
 		</control>
-		<control type="label">
-			<description>number of files/pages in list text label</description>
-			<left>215</left>
-			<top>558</top>
-			<width>320</width>
-			<height>35</height>
-			<font>font12</font>
-			<align>right</align>
-			<aligny>center</aligny>
-			<scroll>true</scroll>
-			<textcolor>grey2</textcolor>
-			<label>$LOCALIZE[31201] $INFO[Container(5).CurrentPage]/$INFO[Container(5).NumPages]</label>
-			<visible>!Control.HasFocus(60)</visible>
-		</control>
-		<control type="label">
-			<description>number of files/pages in list text label</description>
-			<left>215</left>
-			<top>558</top>
-			<width>320</width>
-			<height>35</height>
-			<font>font12</font>
-			<align>right</align>
-			<aligny>center</aligny>
-			<scroll>true</scroll>
-			<textcolor>orange</textcolor>
-			<label>$LOCALIZE[31201] $INFO[Container(5).CurrentPage]/$INFO[Container(5).NumPages]</label>
-			<visible>Control.HasFocus(60)</visible>
-		</control>
+		<include content="PageLabel">
+			<param name="left" value="322.5" />
+			<param name="top" value="837" />
+			<param name="width" value="480" />
+			<param name="label" value="$LOCALIZE[31201] $INFO[Container(5).CurrentPage]/$INFO[Container(5).NumPages]" />
+			<param name="id" value="60" />
+		</include>
 		<control type="image">
-			<left>610</left>
-			<top>100</top>
-			<width>250</width>
-			<height>250</height>
+			<left>915</left>
+			<top>150</top>
+			<width>375</width>
+			<height>375</height>
 			<texture fallback="DefaultPicture.png">$INFO[ListItem.Art(thumb)]</texture>
-			<bordertexture border="3">black-back.png</bordertexture>
-			<bordersize>2</bordersize>
+			<bordertexture border="4">black-back.png</bordertexture>
+			<bordersize>3</bordersize>
 			<aspectratio aligny="top">keep</aspectratio>
 		</control>
 		<control type="button" id="9001">
-			<left>610</left>
-			<bottom>125</bottom>
+			<left>915</left>
+			<bottom>187.5</bottom>
 			<textcolor>grey2</textcolor>
 			<label>$LOCALIZE[15067]</label>
-			<width>250</width>
+			<width>375</width>
 			<include>DialogButton2CommonValues</include>
 			<onclick>PreviousMenu</onclick>
 			<onleft>60</onleft>

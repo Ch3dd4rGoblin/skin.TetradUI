@@ -6,7 +6,7 @@
 	<controls>
 		<include>CommonMediaBackgrounds</include>
 		<control type="group">
-			<left>130</left>
+			<left>195</left>
 			<animation effect="fade" delay="500" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
 			<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 			<control type="label">
@@ -15,35 +15,35 @@
 				<include>HeaderTextCommons</include>
 			</control>
 			<control type="group">
-				<top>80</top>
+				<top>120</top>
 				<control type="list" id="50">
-					<top>5</top>
-					<width>616</width>
-					<height>504</height>
+					<top>7.5</top>
+					<width>924</width>
+					<height>756</height>
 					<onleft>9000</onleft>
 					<onright>60</onright>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>60</pagecontrol>
 					<scrolltime>200</scrolltime>
-					<itemlayout height="63" width="616">
+					<itemlayout height="94.5" width="924">
 						<control type="image">
-							<width>616</width>
-							<height>63</height>
-							<texture border="10">buttons/list-nofocus.png</texture>
+							<width>924</width>
+							<height>94.5</height>
+							<texture border="15">buttons/list-nofocus.png</texture>
 							<include>VisibleFadeEffect</include>
 						</control>
 						<control type="image">
-							<left>6</left>
-							<top>6</top>
-							<width>50</width>
-							<height>50</height>
+							<left>9</left>
+							<top>9</top>
+							<width>75</width>
+							<height>75</height>
 							<aspectratio>keep</aspectratio>
 							<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
-							<left>61</left>
-							<width>370</width>
-							<height>35</height>
+							<left>91.5</left>
+							<width>555</width>
+							<height>52.5</height>
 							<font>font13</font>
 							<textcolor>grey2</textcolor>
 							<selectedcolor>orange</selectedcolor>
@@ -51,9 +51,9 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-							<left>436</left>
-							<width>175</width>
-							<height>35</height>
+							<left>654</left>
+							<width>262.5</width>
+							<height>52.5</height>
 							<font>font12</font>
 							<textcolor>grey2</textcolor>
 							<selectedcolor>grey2</selectedcolor>
@@ -62,10 +62,10 @@
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 						<control type="label">
-							<left>61</left>
-							<top>33</top>
-							<width>550</width>
-							<height>20</height>
+							<left>91.5</left>
+							<top>49.5</top>
+							<width>825</width>
+							<height>30</height>
 							<font>font12</font>
 							<textcolor>grey</textcolor>
 							<selectedcolor>grey</selectedcolor>
@@ -73,58 +73,58 @@
 							<label>$VAR[PVRListItemSubLabel]</label>
 						</control>
 						<control type="image">
-							<left>730</left>
-							<top>14</top>
-							<width>20</width>
-							<height>16</height>
+							<left>1095</left>
+							<top>21</top>
+							<width>30</width>
+							<height>24</height>
 							<texture>$INFO[ListItem.Overlay]</texture>
 							<visible>!ListItem.IsResumable</visible>
 						</control>
 						<control type="image">
-							<left>730</left>
-							<top>14</top>
-							<width>16</width>
-							<height>16</height>
-							<texture>OverlayWatching.png</texture>
+							<left>1095</left>
+							<top>21</top>
+							<width>24</width>
+							<height>24</height>
+							<texture>pvr/PVR-HasRecording.png</texture>
 							<visible>ListItem.IsResumable</visible>
 						</control>
 					</itemlayout>
-					<focusedlayout height="63" width="616">
+					<focusedlayout height="94" width="924">
 						<control type="image">
-							<width>616</width>
-							<height>63</height>
-							<texture border="10">buttons/list-focus.png</texture>
+							<width>924</width>
+							<height>94.5</height>
+							<texture border="15">buttons/list-focus.png</texture>
 							<include>VisibleFadeEffect</include>
 							<visible>Control.HasFocus(50)</visible>
 						</control>
 						<control type="image">
-							<width>616</width>
-							<height>63</height>
-							<texture border="10">buttons/list-nofocus.png</texture>
+							<width>924</width>
+							<height>94.5</height>
+							<texture border="15">buttons/list-nofocus.png</texture>
 							<include>VisibleFadeEffect</include>
 							<visible>!Control.HasFocus(50)</visible>
 						</control>
 						<control type="image">
-							<left>6</left>
-							<top>6</top>
-							<width>50</width>
-							<height>50</height>
+							<left>9</left>
+							<top>9</top>
+							<width>75</width>
+							<height>75</height>
 							<aspectratio>keep</aspectratio>
 							<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
-							<left>61</left>
-							<width>370</width>
-							<height>35</height>
+							<left>91.5</left>
+							<width>555</width>
+							<height>52.5</height>
 							<font>font13</font>
 							<selectedcolor>orange</selectedcolor>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-							<left>436</left>
-							<width>175</width>
-							<height>35</height>
+							<left>654</left>
+							<width>262.5</width>
+							<height>52.5</height>
 							<font>font12</font>
 							<textcolor>grey2</textcolor>
 							<selectedcolor>grey2</selectedcolor>
@@ -133,10 +133,10 @@
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 						<control type="label">
-							<left>61</left>
-							<top>33</top>
-							<width>550</width>
-							<height>20</height>
+							<left>91.5</left>
+							<top>49.5</top>
+							<width>825</width>
+							<height>30</height>
 							<font>font12</font>
 							<textcolor>grey2</textcolor>
 							<selectedcolor>grey2</selectedcolor>
@@ -144,29 +144,29 @@
 							<label>$VAR[PVRListItemSubLabel]</label>
 						</control>
 						<control type="image">
-							<left>730</left>
-							<top>14</top>
-							<width>20</width>
-							<height>16</height>
+							<left>1095</left>
+							<top>21</top>
+							<width>30</width>
+							<height>24</height>
 							<texture>$INFO[ListItem.Overlay]</texture>
 							<visible>!ListItem.IsResumable</visible>
 						</control>
 						<control type="image">
-							<left>730</left>
-							<top>14</top>
-							<width>16</width>
-							<height>16</height>
-							<texture>OverlayWatching.png</texture>
+							<left>1095</left>
+							<top>21</top>
+							<width>24</width>
+							<height>24</height>
+							<texture>pvr/PVR-HasRecording.png</texture>
 							<visible>ListItem.IsResumable</visible>
 						</control>
 					</focusedlayout>
 				</control>
 				<control type="group">
-					<left>645</left>
-					<top>10</top>
+					<left>967.5</left>
+					<top>15</top>
 					<control type="fadelabel">
-						<width>420</width>
-						<height>20</height>
+						<width>630</width>
+						<height>30</height>
 						<font>font16</font>
 						<textcolor>orange</textcolor>
 						<shadowcolor>black</shadowcolor>
@@ -177,9 +177,9 @@
 						<pauseatend>2000</pauseatend>
 					</control>
 					<control type="fadelabel" id="999">
-						<top>35</top>
-						<width>420</width>
-						<height>20</height>
+						<top>52.5</top>
+						<width>630</width>
+						<height>30</height>
 						<font>font13</font>
 						<textcolor>white</textcolor>
 						<shadowcolor>black</shadowcolor>
@@ -191,24 +191,24 @@
 					</control>
 					<control type="textbox" id="400">
 						<description>textarea</description>
-						<top>70</top>
-						<width>420</width>
-						<height>416</height>
+						<top>105</top>
+						<width>630</width>
+						<height>624</height>
 						<font>font12</font>
 						<label>$INFO[ListItem.Plot]</label>
 						<textcolor>white</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>justify</align>
-						<animation effect="slide" end="0,-35" condition="String.IsEmpty(Control.GetLabel(999))">Conditional</animation>
+						<animation effect="slide" end="0,-52" condition="String.IsEmpty(Control.GetLabel(999))">Conditional</animation>
 					</control>
 				</control>
 			</control>
 			<control type="grouplist">
 				<description>Media Codec Flagging Images</description>
-				<left>-10</left>
-				<top>120r</top>
-				<width>620</width>
-				<itemgap>5</itemgap>
+				<left>-15</left>
+				<top>180r</top>
+				<width>930</width>
+				<itemgap>7.5</itemgap>
 				<orientation>horizontal</orientation>
 				<include>VideoCodecFlagging</include>
 				<include>AudioCodecFlagging</include>
@@ -220,61 +220,61 @@
 		<control type="group" id="9000">
 			<include>Container9000BladesRunner</include>
 			<control type="grouplist" id="610">
-				<itemgap>-8</itemgap>
+				<itemgap>-12</itemgap>
 				<include content="Container9000Header">
-					<param name="left" value="90" />
-					<param name="top" value="25" />
+					<param name="left" value="135" />
+					<param name="top" value="37.5" />
 				</include>
 				<control type="button" id="3">
 					<description>Sort by button</description>
-					<left>-1</left>
+					<left>-1.5</left>
 					<label>103</label>
 					<include>ButtonCommonValues</include>
 				</control>
 				<control type="togglebutton" id="4">
 					<description>Sort asc</description>
-					<left>4</left>
+					<left>6</left>
 					<include>SortAscendingButton</include>
 				</control>
 				<control type="button" id="28">
 					<description>Channel groups button</description>
-					<left>7</left>
+					<left>10.5</left>
 					<label />
 					<include>ButtonCommonValues</include>
 				</control>
 				<control type="button" id="10">
 					<description>All videos / watched / unwatched button</description>
-					<left>10</left>
+					<left>15</left>
 					<label>20367</label>
 					<include>ButtonCommonValues</include>
 				</control>
 				<control type="radiobutton" id="5">
 					<description>Group items by folder structure button</description>
-					<left>12</left>
+					<left>18</left>
 					<label>19270</label>
 					<include>ButtonCommonValues</include>
 				</control>
 				<control type="radiobutton" id="7">
 					<description>Show deleted recordings button</description>
-					<left>14</left>
+					<left>21</left>
 					<include>ButtonCommonValues</include>
 					<label>19184</label>
 				</control>
 				<control type="button" id="9002">
 					<description>Settings button</description>
-					<left>17</left>
+					<left>26</left>
 					<include>ButtonCommonValues</include>
 					<onclick>ActivateWindow(PVRSettings,pvrrecord)</onclick>
 					<label>10004</label>
 				</control>
 			</control>
 			<include content="NavigationGrouplist">
-				<param name="left" value="92" />
-				<param name="top" value="350" />
+				<param name="left" value="138" />
+				<param name="top" value="525" />
 			</include>
 			<include content="CommonPlayerControls">
-				<param name="left" value="92" />
-				<param name="top" value="235" />
+				<param name="left" value="138" />
+				<param name="top" value="352.5" />
 			</include>
 		</control>
 		<include>AllViewCommonPageControls</include>

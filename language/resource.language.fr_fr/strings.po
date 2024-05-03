@@ -5,24 +5,25 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Kodi Addons\n"
-"Report-Msgid-Bugs-To: https://forum.kodi.tv/\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Kodi Translation Team\n"
-"Language-Team: Team-Kodi\n"
+"PO-Revision-Date: 2023-04-27 07:56+0000\n"
+"Last-Translator: skypichat <skypichat@hotmail.fr>\n"
+"Language-Team: French (France) <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-tetradui/fr_fr/>\n"
+"Language: fr_fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fr_FR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.15.2\n"
 
 msgctxt "Addon Summary"
-msgid "TetradUI is a skin Addon for Kodi media center"
-msgstr ""
+msgid "TetradUI is a skin add-on for Kodi media center"
+msgstr "TetradUI est un skin pour Kodi"
 
 msgctxt "Addon Description"
-msgid "TetradUI is a skin add-on for Kodi media center. TetradUI is based on JX720 by Jezz_X.[CR]This add-on was created by TeamUI."
-msgstr ""
+msgid "TetradUI is a skin add-on for Kodi media center. The aim with TetradUI is to create a fresh modern homage of the classic blades-style UI found in the original Xbox360 dashboard. Also seen in the works of Team Blackbolt and Jezz_X with projects MC360 and JX720 respectively. TetradUI is based on JX720 by Jezz_X.[CR]This add-on was created by Jezz_X and TeamUI."
+msgstr "TetradUI est un skin pour Kodi. L'objectif de TetradUI est de créer un nouvel hommage moderne à l'interface utilisateur de style lame classique trouvée dans le tableau de bord Xbox360 d'origine. Également vu dans les travaux de Team Blackbolt et Jezz_X avec les projets MC360 et JX720 respectivement. TetradUI est basé sur JX720 par Jezz_X.[CR]Ce skin a été créé par Jezz_X et TeamUI."
 
 msgctxt "#31001"
 msgid "media"
@@ -44,65 +45,30 @@ msgctxt "#31005"
 msgid "Apps"
 msgstr "Apps"
 
-msgctxt "#31006"
-msgid "Media"
-msgstr "Média"
-
+# empty strings from id 31006 to 31009
 msgctxt "#31010"
-msgid "Media"
-msgstr "Média"
+msgid "TetradUI is a passion project made by TeamUI.[CR]It's a big project and it takes a [I]lot[/I] of effort to develop and maintain.[CR]Consider scanning this QR and make a donation to help keep this project healthy.[CR]Any amount helps greatly and is much appreciated."
+msgstr "TetradUI est un projet passionné réalisé par TeamUI.[CR]C'est un gros projet et il faut [I]beaucoup[/I] d'efforts pour le développer et le maintenir.[CR]Envisager de scanner ce QR et de faire un don pour aider à le conserver le projet sain.[CR]Tout montant aide grandement et est très apprécié."
 
 msgctxt "#31011"
 msgid "Applications"
 msgstr "Applications"
-
-msgctxt "#31012"
-msgid "System Settings"
-msgstr "Paramètres système"
-
-msgctxt "#31013"
-msgid "Weather Forecast"
-msgstr "Prévisions météo"
-
-msgctxt "#31014"
-msgid "Video Bookmarks"
-msgstr "Signets vidéo"
-
-msgctxt "#31020"
-msgid "Weather Conditions"
-msgstr "Conditions météo"
-
-msgctxt "#31021"
-msgid "Current Temp"
-msgstr "Temp. actuelle"
 
 msgctxt "#31022"
 msgid "Forecast"
 msgstr "Prévisions"
 
 msgctxt "#31023"
-msgid "Updated :"
-msgstr "Mise à jour :"
+msgid "Updated:"
+msgstr "Mis à jour :"
 
 msgctxt "#31024"
 msgid "Current Temperature"
 msgstr "Température actuelle"
 
-msgctxt "#31025"
-msgid "Add-on manager"
-msgstr "Gestionnaire add-ons"
-
 msgctxt "#31026"
 msgid "Current"
 msgstr "Actuel"
-
-msgctxt "#31100"
-msgid "Video - Files"
-msgstr "Video - Fichiers"
-
-msgctxt "#31101"
-msgid "Music - Files"
-msgstr "Music - Fichiers"
 
 msgctxt "#31102"
 msgid "Power Options"
@@ -118,11 +84,92 @@ msgstr "Page"
 
 msgctxt "#31202"
 msgid "VIEW OPTIONS"
-msgstr "OPTIONS DE VUE"
+msgstr "OPTIONS DES VUES"
 
 msgctxt "#31203"
 msgid "PLAYER OPTIONS"
-msgstr "OPTIONS DE JEU"
+msgstr "OPTIONS DU LECTEUR"
+
+# empty strings from id 31204 to 31209
+msgctxt "#31210"
+msgid "Contributors"
+msgstr "Contributeurs"
+
+msgctxt "#31211"
+msgid "Rendering speed"
+msgstr "Vitesse de rendu"
+
+msgctxt "#31212"
+msgid "Memory used"
+msgstr "Mémoire utilisée"
+
+msgctxt "#31213"
+msgid "Hardware decoding"
+msgstr "Décodage matériel"
+
+msgctxt "#31214"
+msgid "Pixel format"
+msgstr "Format de pixel"
+
+msgctxt "#31215"
+msgid "Frames per second"
+msgstr "Trames par seconde"
+
+msgctxt "#31216"
+msgid "aspect ratio"
+msgstr "Rapport hauteur largeur"
+
+msgctxt "#31217"
+msgid "Decoder"
+msgstr "Décodeur"
+
+msgctxt "#31218"
+msgid "Codec"
+msgstr "Codec"
+
+msgctxt "#31219"
+msgid "Video process information"
+msgstr "Informations de traitement vidéo"
+
+msgctxt "#31220"
+msgid "Audio process information"
+msgstr "Informations de traitement audio"
+
+msgctxt "#31221"
+msgid "Location"
+msgstr "Emplacement"
+
+msgctxt "#31222"
+msgid "Play speed"
+msgstr "Vitesse de lecture"
+
+msgctxt "#31223"
+msgid "Select Resolution"
+msgstr "Sélectionner la résolution"
+
+msgctxt "#31224"
+msgid "Select Program"
+msgstr "Sélectionner un programme"
+
+msgctxt "#31225"
+msgid "Toggle subtitle"
+msgstr "Changer de sous-titres"
+
+msgctxt "#31226"
+msgid "Toggle audio stream"
+msgstr "Changer le flux audio"
+
+msgctxt "#31227"
+msgid "available"
+msgstr "disponible"
+
+msgctxt "#31228"
+msgid "Add-on shortcut"
+msgstr "Raccourci complémentaire"
+
+msgctxt "#31229"
+msgid "Play speed"
+msgstr "Vitesse de lecture"
 
 msgctxt "#31230"
 msgid "Playing"
@@ -150,23 +197,76 @@ msgstr "En lecture"
 
 msgctxt "#31236"
 msgid "End Time:"
-msgstr "Fin:"
+msgstr "Heure de fin :"
+
+msgctxt "#31237"
+msgid "Welcome to TetradUI"
+msgstr "Bienvenue sur TetradUI"
+
+msgctxt "#31238"
+msgid "Navigation is done using the top logo button.[CR]Using the skin setting it can either be placed top left or center.[CR][CR][B]Top logo button[/B][CR]Navigating between the blades is done using [I]left[/I] and [I]right[/I].[CR]Clicking the logo button will open a shortcuts sideblade.[CR][CR][B]Menu lists[/B][CR]If no widgets or submenus are present, you can navigate between the blades using [I]left[/I] and [I]right[/I] from the menu lists.[CR][CR][B]Widgets[/B][CR]If widgets are present, [I]left[/I] from the menu lists will take you to the widgets.[CR][I]Left[/I] or [I]right[/I] will take you back to the menu lists.[CR][CR][B]Submenu lists[/B][CR]If submenus are present, [I]right[/I] from the menu lists will take you there.[CR][I]Left[/I] from the submenus will take you back to the menu and [I]right[/I] will take you to the widgets.[CR]If no widgets are present, [I]right[/I] will switch blade."
+msgstr "La navigation s'effectue à l'aide du bouton du logo supérieur.[CR]En utilisant le paramètre skin, il peut être placé en haut à gauche ou au centre.[CR][CR][B]Bouton du logo supérieur[/B][CR]La navigation entre les lames est faites en utilisant [I]gauche[/I] et [I]droite[/I].[CR]Cliquer sur le bouton du logo pour ouvrir une lame latérale de raccourcis.[CR][CR][B]Listes de menus[/B][CR ]Si aucun widget ou sous-menu n'est présent, vous pouvez naviguer entre les lames en utilisant [I]gauche[/I] et [I]droite[/I] dans les listes de menus.[CR][CR][B]Widgets[/B][CR]Si des widgets sont présents, [I]gauche[/I] dans les listes de menus vous amènera aux widgets.[CR][I]Gauche[/I] ou [I]droite[/I] vous ramènera aux listes de menus.[CR][CR][B]Listes de sous-menus[/B][CR]Si des sous-menus sont présents, [I]à droite[/I] des listes de menus vous y emmènera.[CR] ][I]Gauche[/I] depuis les sous-menus vous ramènera au menu et [I]droite[/I] vous ramènera aux widgets.[CR]Si aucun widget n'est présent, [I]droite[/I] changera de lame."
+
+msgctxt "#31239"
+msgid "Never show again"
+msgstr "Ne plus afficher"
+
+msgctxt "#31240"
+msgid "Hidden channels"
+msgstr "Chaînes masquées"
+
+msgctxt "#31241"
+msgid "Navigation"
+msgstr "Navigation"
+
+msgctxt "#31242"
+msgid "Available groups"
+msgstr "Groupes disponibles"
+
+msgctxt "#31243"
+msgid "Hidden channels"
+msgstr "Chaînes masquées"
+
+msgctxt "#31244"
+msgid "Add group"
+msgstr "Ajouter un groupe"
+
+msgctxt "#31245"
+msgid "Rename group"
+msgstr "Renommer groupe"
+
+msgctxt "#31246"
+msgid "Delete group"
+msgstr "Supprimer groupe"
+
+msgctxt "#31247"
+msgid "Timeshift"
+msgstr "Différé"
+
+msgctxt "#31248"
+msgid "Channel group"
+msgstr "Groupe de chaînes"
+
+msgctxt "#31249"
+msgid "Recently played"
+msgstr "Lu récemment"
 
 msgctxt "#31250"
 msgid "Poster Big"
-msgstr "Poster grand"
+msgstr "Grande affiche"
 
 msgctxt "#31251"
 msgid "Thumb Info"
-msgstr "Info vignette"
+msgstr "vignette info"
 
+# empty strings from id 31252 to 31299
 msgctxt "#31300"
-msgid "No Optical Media Detected, click to Open/Close tray"
-msgstr "Aucun média optique détecté, cliquer pour Ouvrir/Fermer le tiroir"
+msgid "Please setup a music source!"
+msgstr "Merci de configurer une source de musique !"
 
 msgctxt "#31301"
-msgid "Play : "
-msgstr "Lire : "
+msgid "Please setup[CR]movie and tv show sources!"
+msgstr "Veuillez configurer[CR]les sources de films et de séries TV !"
 
 msgctxt "#31302"
 msgid "Working"
@@ -192,93 +292,164 @@ msgctxt "#31307"
 msgid "Quit Kodi"
 msgstr "Quitter Kodi"
 
-msgctxt "#31308"
-msgid "IP:"
-msgstr "IP:"
-
 msgctxt "#31309"
 msgid "Hide Button - "
 msgstr "Masquer Bouton - "
 
-msgctxt "#31310"
-msgid "Set Smart Playlist Shortcut"
-msgstr "Définir le raccourci de la playliste intelligente"
+msgctxt "#31313"
+msgid "No Weather add-on enabled go to Settings/Weather to enable weather forecast"
+msgstr "Aucun module complémentaire Météo n'est activé, accéder aux paramètres/Météo pour activer les prévisions météorologiques"
 
-msgctxt "#31311"
-msgid "Set Button Label"
-msgstr "Définir l'étiquette du bouton"
+msgctxt "#31314"
+msgid "Hide widgets"
+msgstr "Masquer les widgets"
 
-msgctxt "#31312"
-msgid "Set Button Icon"
-msgstr "Définir l'icône du bouton"
+msgctxt "#31315"
+msgid "Install add-ons"
+msgstr "Installer des modules complémentaires"
 
+msgctxt "#31316"
+msgid "Search add-ons"
+msgstr "Rechercher des extensions"
+
+msgctxt "#31317"
+msgid "Center top logo button"
+msgstr "Bouton logo supérieur central"
+
+msgctxt "#31318"
+msgid "RDS"
+msgstr "RDS"
+
+# empty strings from id 31319 to 31389
+msgctxt "#31390"
+msgid "Skin default"
+msgstr "Prédéfini par l'habillage"
+
+msgctxt "#31391"
+msgid "Arial based (best for Non-English)"
+msgstr "Basé sur Arial (meilleur pour les non-anglais)"
+
+# empty strings from id 31392 to 31399
 msgctxt "#31400"
-msgid "Edit your Display settings, Including:[CR][CR]* Skin Selection[CR]* View Options[CR]* Screensaver[CR]* Date & Time"
-msgstr "Editer vos paramètres d'affichage, comprenant:[CR][CR]* Choix du thème[CR]* Options de vues[CR]* Ecran de veille[CR]* Date & heure"
+msgid "Edit your display settings, including:[CR][CR]* Skin selection[CR]* View options[CR]* Screensaver[CR]* Date & time"
+msgstr "Modifier vos paramètres d'affichage, notamment :[CR][CR]* Sélection d'habillage[CR]* Options d'affichage[CR]* Écran de veille[CR]* Date et heure"
 
-msgctxt "#31401"
-msgid "-"
-msgstr "-"
-
+# empty string with id 31401
 msgctxt "#31402"
-msgid "Choose Weather Display, Including:[CR][CR]* 3 Cities[CR]* Wind Speed[CR]* Temperature"
-msgstr "Choisir l'affichage de la météo, comprenant:[CR][CR]* 3 villes[CR]* Vitesse du vent[CR]* Température"
+msgid "Watch and manage the logging of Kodi events, including:[CR][CR]* Failed video library scraping[CR]* Add-on updates[CR]* PVR activities"
+msgstr "Surveiller et gérer la journalisation des événements Kodi, y compris :[CR][CR]* Échec du scan de la vidéothèque[CR]* Mises à jour des modules complémentaires[CR]* Activités PVR"
 
 msgctxt "#31403"
-msgid "Configure Network and sharing settings, Including:[CR][CR]* Proxy & DNS[CR]* Samba File Sharing[CR]* UPNP Server[CR]* Web Server[CR]* External App Control"
-msgstr "Configurer les paramètres de réseau et de partage, comprenant:[CR][CR]* Proxy & DNS[CR]* Partage de fichiers Samba[CR]* Serveur UPNP[CR]* Serveur Web[CR]* Contrôle d'applications externes"
+msgid "Configure network and sharing settings, including:[CR][CR]* Proxy & DNS[CR]* Samba file sharing[CR]* UPNP server[CR]* Web server[CR]* External app control"
+msgstr "Configurer les paramètres de réseau et de partage, y compris :[CR][CR]* Proxy et DNS[CR]* Partage de fichiers Samba[CR]* Serveur UPNP[CR]* Serveur Web[CR]* Contrôle d'application externe"
 
 msgctxt "#31404"
-msgid "Important System Settings, Including:[CR][CR]* Hardware[CR]* Power Saving[CR]* Input Devices[CR]* Master User Locking"
-msgstr "Paramètres système importants, comprenant:[CR][CR]* Matériel[CR]* Economie d'énergie[CR]* Périphériques d'entrée[CR]* Verrouillage utilisateur maître"
+msgid "Important system settings, including:[CR][CR]* Hardware[CR]* Power saving[CR]* Input devices[CR]* Master user locking"
+msgstr "Paramètres système importants, notamment :[CR][CR]* Matériel[CR]* Économie d'énergie[CR]* Périphériques d'entrée[CR]* Verrouillage de l'utilisateur principal"
 
 msgctxt "#31405"
-msgid "Manage User Profiles, Including:[CR][CR]* Creating Profiles[CR]* Deleting Profiles[CR]* Changing User Settings"
-msgstr "Gérer les profils utilisateur, comprenant:[CR][CR]* Création de profils[CR]* Suppression de profils[CR]* Modification des paramètres utilisateur"
+msgid "Manage user profiles, including:[CR][CR]* Creating profiles[CR]* Deleting profiles[CR]* Changing user settings"
+msgstr "Gérer les profils utilisateur, notamment :[CR][CR]* Créer des profils[CR]* Supprimer des profils[CR]* Modifier les paramètres utilisateur"
 
 msgctxt "#31406"
-msgid "Change Skin Specific Settings, Including:[CR][CR]* Window Backgrounds[CR]* Media View Options[CR]* Other Misc Options"
-msgstr "Modifier les paramètres spécifiques du thème, comprenant:[CR][CR]* Arrière-plans de fenêtre[CR]* Options de vues des médiathèques[CR]* Autres options"
+msgid "Change skin specific settings, including:[CR][CR]* Window backgrounds[CR]* Media view options[CR]* Image packs[CR]* Other misc. options"
+msgstr "Modifier les paramètres spécifiques à l'habillage, notamment :[CR][CR]* Arrière-plans des fenêtres[CR]* Options d'affichage multimédia[CR]* Packs d'images[CR]* Autres diverses options"
 
 msgctxt "#31407"
-msgid "-"
-msgstr "-"
+msgid "Configure PVR settings, including:[CR][CR]* Channels[CR]* Guide[CR]* Playback[CR]* Recordings[CR]* Reminders"
+msgstr "Configurer les paramètres du PVR, y compris :[CR][CR]* Chaînes[CR]* Guide[CR]* Lecture[CR]* Enregistrements[CR]* Rappels"
 
 msgctxt "#31408"
-msgid "Configure Video settings, Including:[CR][CR]* Library Options[CR]* Hardware Acceleration[CR]* Subtitles[CR]* DVD Playback"
-msgstr "Configurer les paramètres vidéo, comprenant:[CR][CR]* Options des médiathèques[CR]* Accélération matérielle[CR]* Sous-titres[CR]* Lecture DVD"
+msgid "Configure player settings, including:[CR][CR]* Library options[CR]* Hardware acceleration[CR]* Subtitles[CR]* DVD playback"
+msgstr "Configurer les paramètres du lecteur, notamment :[CR][CR]* Options de la bibliothèque[CR]* Accélération matérielle[CR]* Sous-titres[CR]* Lecture de DVD"
 
 msgctxt "#31409"
-msgid "Configure Audio settings, Including:[CR][CR]* Visualisations[CR]* Playlists[CR]* CD Ripping[CR]* Karaoke"
-msgstr "Configurer les paramètres audio, comprenant:[CR][CR]* Visualisations[CR]* Playlistes[CR]* Extraction de CD[CR]* Karaoké"
+msgid "Configure media settings, including:[CR][CR]* Library options[CR]* File management[CR]* Videos, music, pictures options"
+msgstr "Configurer les paramètres multimédias, notamment :[CR][CR]* Options de la bibliothèque[CR]* Gestion des fichiers[CR]* Options des vidéos, de la musique et des images"
 
 msgctxt "#31410"
-msgid "Arrange Pictures settings, Including:[CR][CR]* Slideshows[CR]* Thumbnails"
-msgstr "Arranger les paramètres d'image, comprenant:[CR][CR]* Diaporamas[CR]* Vignettes"
+msgid "Information on Kodi and your hardware, including:[CR][CR]* Storage[CR]* Network[CR]* Video[CR]* Hardware"
+msgstr "Informations sur Kodi et votre matériel, y compris :[CR][CR]* Stockage[CR]* Réseau[CR]* Vidéo[CR]* Matériel"
+
+msgctxt "#31411"
+msgid "Configure game settings, including:[CR][CR]* Gameplay options[CR]* RetroAchievements management"
+msgstr "Configurer les paramètres de jeux, y compris :[CR][CR]* Options de jeux[CR]* Gestion des RetroAchievements"
 
 msgctxt "#31460"
 msgid "Welcome to Kodi[CR]Please choose your profile and log in"
-msgstr "Bienvenue Ã Kodi[CR]Veuillez choisir votre profil et vous identifier"
+msgstr "Bienvenue dans Kodi[CR]Veuillez choisir votre profil et vous identifier"
 
+msgctxt "#31461"
+msgid "Install add-ons"
+msgstr "Installer des modules complémentaires"
+
+# empty strings from id 31462 to 31479
 msgctxt "#31480"
-msgid "[COLOR=orange][B]WARNING[/B] !![/COLOR][CR]Hiding all buttons will cause Navigation issues when switching between blades.  Having more than 6 buttons visible at once will also cause weird animation and scrolling effects"
-msgstr "[COLOR=orange][B]ATTENTION[/B] !![/COLOR][CR]Masquer tous les boutons va générer des problèmes de navigation en basculant entres les volets.  Avoir plus de 6 boutons visibles simultanémant va aussi générer des effets d'animations et de défilements incohérents"
+msgid "[COLOR=orange][B]WARNING[/B] !![/COLOR][CR]Hiding all buttons will cause Navigation issues when switching between blades."
+msgstr "[COLOR=orange][B]ATTENTION[/B] !![/COLOR][CR]Masquer tous les boutons entraînera des problèmes de navigation lors du passage d'une lame à l'autre."
 
-msgctxt "#31500"
-msgid "General"
-msgstr "Général"
+msgctxt "#31481"
+msgid "These add-ons will improve the features and overall experience of the skin."
+msgstr "Ces addons amélioreront les fonctionnalités et l'expérience globale du skin."
 
+# empty strings from id 31482 to 31498
+msgctxt "#31499"
+msgid "Not installed"
+msgstr "Non installé"
+
+# empty string with id 31500
 msgctxt "#31501"
-msgid "Backgrounds"
-msgstr "Arrière-plans"
+msgid "Featured"
+msgstr "Suggestions"
 
 msgctxt "#31502"
-msgid "Media Blade"
-msgstr "Volet Média"
+msgid "Blades"
+msgstr "Lames"
 
 msgctxt "#31503"
-msgid "Apps Blade"
-msgstr "Volet Apps"
+msgid "Image packs"
+msgstr "Packs d'images"
+
+msgctxt "#31504"
+msgid "Change mode"
+msgstr "Changer de mode"
+
+msgctxt "#31505"
+msgid "Watch as 2D"
+msgstr "Voir en 2D"
+
+msgctxt "#31506"
+msgid "Local subtitle available"
+msgstr "Sous-titres locaux disponibles"
+
+msgctxt "#31507"
+msgid "Search local library"
+msgstr "Rechercher dans la bibliothèque locale"
+
+msgctxt "#31508"
+msgid "Search YouTube"
+msgstr "Rechercher sur YouTube"
+
+msgctxt "#31509"
+msgid "Search add-ons"
+msgstr "Rechercher des extensions"
+
+msgctxt "#31510"
+msgid "Video playlist"
+msgstr "Liste de lecture vidéo"
+
+msgctxt "#31511"
+msgid "Select default background"
+msgstr "Sélectionner l'arrière-plan par défaut"
+
+# empty strings from id 31511 to 31517
+msgctxt "#31518"
+msgid "Game Settings Menu"
+msgstr "Menu des Paramètres de Jeu"
+
+msgctxt "#31519"
+msgid "Show splash screen"
+msgstr "Afficher l'écran de démarrage"
 
 msgctxt "#31520"
 msgid "Show now playing video in the background"
@@ -294,29 +465,238 @@ msgstr "Montrer les fanarts spécifiques au média en arrière-plan"
 
 msgctxt "#31523"
 msgid "Hide rain drop animation in the background"
-msgstr "Masquer l'animation Gouttes de pluie en arrièrre-plan"
+msgstr "Masquer l'animation Gouttes de pluie en arrière-plan"
 
 msgctxt "#31524"
 msgid "Don't blend background with fanart,visualization,video"
 msgstr "Ne pas mélanger l'arrière-plan avec les fanarts, les visualisations et les vidéos"
 
+msgctxt "#31525"
+msgid "Select rating"
+msgstr "Sélectionner une note"
+
+msgctxt "#31526"
+msgid "Animate all fanart backgrounds"
+msgstr "Animer tous les arrière-plans"
+
+msgctxt "#31527"
+msgid "Animate fanart backgrounds for music playing"
+msgstr "Animer des arrière-plans à la lecture de la musique"
+
+msgctxt "#31528"
+msgid "Enable Artist Slideshow fanart backgrounds"
+msgstr "Activer le diaporama des fanarts des artistes"
+
+msgctxt "#31529"
+msgid "Blur backgrounds"
+msgstr "Arrière-plans floutés"
+
+msgctxt "#31530"
+msgid "Fanart only"
+msgstr "Fanart uniquement"
+
+msgctxt "#31531"
+msgid "Backgrounds only"
+msgstr "Arrière-plans uniquement"
+
+msgctxt "#31532"
+msgid "Fanart and backgrounds"
+msgstr "Fanart et arrière-plans"
+
+# empty strings from id 31533 to 31536
+msgctxt "#31537"
+msgid "Movie set information"
+msgstr "Informations sur le tournage du film"
+
+msgctxt "#31538"
+msgid "About"
+msgstr "À propos"
+
+msgctxt "#31539"
+msgid "Supported add-ons"
+msgstr "Modules complémentaires pris en charge"
+
 msgctxt "#31540"
 msgid "Set Default Lyric fetching add-on for Music OSD"
-msgstr "Définir l'add-on de paroles par défaut pour l'OSD musique"
+msgstr "Définir l'addon de paroles par défaut pour l'OSD musique"
 
-msgctxt "#31541"
-msgid "Set Default Subtitle fetching add-on for Video OSD"
-msgstr "Définir l'add-on de sous-titres par défaut pour l'OSD vidéo"
+# empty string with id 31543
+msgctxt "#31542"
+msgid "In progress"
+msgstr "En cours"
 
-msgctxt "#31550"
-msgid "Window default buttons"
-msgstr "Boutons par défaut de l'écran"
+msgctxt "#31543"
+msgid "In cinemas"
+msgstr "À l'affiche"
 
-msgctxt "#31551"
-msgid "Window custom smart playlist shortcuts"
-msgstr "Raccourcis de playliste intelligente personnalisés de l'écran"
+msgctxt "#31544"
+msgid "Upcoming movies"
+msgstr "Films à venir"
 
-msgctxt "#31552"
-msgid "Window custom add-on shortcuts"
-msgstr "Raccourcis d'add-on personnalisés de l'écran"
+msgctxt "#31545"
+msgid "Unwatched movies"
+msgstr "Films non vus"
 
+msgctxt "#31546"
+msgid "Random movies"
+msgstr "Suggestions de films"
+
+msgctxt "#31547"
+msgid "Premiered"
+msgstr "1ère diffusion"
+
+msgctxt "#31553"
+msgid "Settings level"
+msgstr "Niveau de paramétrage"
+
+msgctxt "#31554"
+msgid "Autologin"
+msgstr "Connexion auto."
+
+#~ msgctxt "#31551"
+#~ msgid "Window custom smart playlist shortcuts"
+#~ msgstr "Raccourcis de playliste intelligente personnalisés de l'écran"
+
+#~ msgctxt "#31552"
+#~ msgid "Window custom add-on shortcuts"
+#~ msgstr "Raccourcis d'add-on personnalisés de l'écran"
+
+#~ msgctxt "#31020"
+#~ msgid "Weather Conditions"
+#~ msgstr "Conditions météo"
+
+#~ msgctxt "#31021"
+#~ msgid "Current Temp"
+#~ msgstr "Temp. actuelle"
+
+#~ msgctxt "#31025"
+#~ msgid "Add-on manager"
+#~ msgstr "Gestionnaire add-ons"
+
+#~ msgctxt "#31100"
+#~ msgid "Video - Files"
+#~ msgstr "Video - Fichiers"
+
+#~ msgctxt "#31101"
+#~ msgid "Music - Files"
+#~ msgstr "Music - Fichiers"
+
+#~ msgctxt "#31310"
+#~ msgid "Set Smart Playlist Shortcut"
+#~ msgstr "Définir le raccourci de la playliste intelligente"
+
+#~ msgctxt "#31311"
+#~ msgid "Set Button Label"
+#~ msgstr "Définir l'étiquette du bouton"
+
+#~ msgctxt "#31312"
+#~ msgid "Set Button Icon"
+#~ msgstr "Définir l'icône du bouton"
+
+#~ msgctxt "#31006"
+#~ msgid "Media"
+#~ msgstr "Média"
+
+#~ msgctxt "#31010"
+#~ msgid "Media"
+#~ msgstr "Média"
+
+#~ msgctxt "#31012"
+#~ msgid "System Settings"
+#~ msgstr "Paramètres système"
+
+#~ msgctxt "#31013"
+#~ msgid "Weather Forecast"
+#~ msgstr "Prévisions météo"
+
+#~ msgctxt "#31014"
+#~ msgid "Video Bookmarks"
+#~ msgstr "Signets vidéo"
+
+#~ msgctxt "#31023"
+#~ msgid "Updated :"
+#~ msgstr "Mise à jour :"
+
+#~ msgctxt "#31300"
+#~ msgid "No Optical Media Detected, click to Open/Close tray"
+#~ msgstr "Aucun média optique détecté, cliquer pour Ouvrir/Fermer le tiroir"
+
+#~ msgctxt "#31301"
+#~ msgid "Play : "
+#~ msgstr "Lire : "
+
+#~ msgctxt "#31308"
+#~ msgid "IP:"
+#~ msgstr "IP:"
+
+#~ msgctxt "#31400"
+#~ msgid "Edit your Display settings, Including:[CR][CR]* Skin Selection[CR]* View Options[CR]* Screensaver[CR]* Date & Time"
+#~ msgstr "Editer vos paramètres d'affichage, comprenant:[CR][CR]* Choix du thème[CR]* Options de vues[CR]* Ecran de veille[CR]* Date & heure"
+
+#~ msgctxt "#31401"
+#~ msgid "-"
+#~ msgstr "-"
+
+#~ msgctxt "#31402"
+#~ msgid "Choose Weather Display, Including:[CR][CR]* 3 Cities[CR]* Wind Speed[CR]* Temperature"
+#~ msgstr "Choisir l'affichage de la météo, comprenant:[CR][CR]* 3 villes[CR]* Vitesse du vent[CR]* Température"
+
+#~ msgctxt "#31403"
+#~ msgid "Configure Network and sharing settings, Including:[CR][CR]* Proxy & DNS[CR]* Samba File Sharing[CR]* UPNP Server[CR]* Web Server[CR]* External App Control"
+#~ msgstr "Configurer les paramètres de réseau et de partage, comprenant:[CR][CR]* Proxy & DNS[CR]* Partage de fichiers Samba[CR]* Serveur UPNP[CR]* Serveur Web[CR]* Contrôle d'applications externes"
+
+#~ msgctxt "#31404"
+#~ msgid "Important System Settings, Including:[CR][CR]* Hardware[CR]* Power Saving[CR]* Input Devices[CR]* Master User Locking"
+#~ msgstr "Paramètres système importants, comprenant:[CR][CR]* Matériel[CR]* Economie d'énergie[CR]* Périphériques d'entrée[CR]* Verrouillage utilisateur maître"
+
+#~ msgctxt "#31405"
+#~ msgid "Manage User Profiles, Including:[CR][CR]* Creating Profiles[CR]* Deleting Profiles[CR]* Changing User Settings"
+#~ msgstr "Gérer les profils utilisateur, comprenant:[CR][CR]* Création de profils[CR]* Suppression de profils[CR]* Modification des paramètres utilisateur"
+
+#~ msgctxt "#31406"
+#~ msgid "Change Skin Specific Settings, Including:[CR][CR]* Window Backgrounds[CR]* Media View Options[CR]* Other Misc Options"
+#~ msgstr "Modifier les paramètres spécifiques du thème, comprenant:[CR][CR]* Arrière-plans de fenêtre[CR]* Options de vues des médiathèques[CR]* Autres options"
+
+#~ msgctxt "#31407"
+#~ msgid "-"
+#~ msgstr "-"
+
+#~ msgctxt "#31408"
+#~ msgid "Configure Video settings, Including:[CR][CR]* Library Options[CR]* Hardware Acceleration[CR]* Subtitles[CR]* DVD Playback"
+#~ msgstr "Configurer les paramètres vidéo, comprenant:[CR][CR]* Options des médiathèques[CR]* Accélération matérielle[CR]* Sous-titres[CR]* Lecture DVD"
+
+#~ msgctxt "#31409"
+#~ msgid "Configure Audio settings, Including:[CR][CR]* Visualisations[CR]* Playlists[CR]* CD Ripping[CR]* Karaoke"
+#~ msgstr "Configurer les paramètres audio, comprenant:[CR][CR]* Visualisations[CR]* Playlistes[CR]* Extraction de CD[CR]* Karaoké"
+
+#~ msgctxt "#31410"
+#~ msgid "Arrange Pictures settings, Including:[CR][CR]* Slideshows[CR]* Thumbnails"
+#~ msgstr "Arranger les paramètres d'image, comprenant:[CR][CR]* Diaporamas[CR]* Vignettes"
+
+#~ msgctxt "#31480"
+#~ msgid "[COLOR=orange][B]WARNING[/B] !![/COLOR][CR]Hiding all buttons will cause Navigation issues when switching between blades.  Having more than 6 buttons visible at once will also cause weird animation and scrolling effects"
+#~ msgstr "[COLOR=orange][B]ATTENTION[/B] !![/COLOR][CR]Masquer tous les boutons va générer des problèmes de navigation en basculant entres les volets.  Avoir plus de 6 boutons visibles simultanémant va aussi générer des effets d'animations et de défilements incohérents"
+
+#~ msgctxt "#31500"
+#~ msgid "General"
+#~ msgstr "Général"
+
+#~ msgctxt "#31501"
+#~ msgid "Backgrounds"
+#~ msgstr "Arrière-plans"
+
+#~ msgctxt "#31502"
+#~ msgid "Media Blade"
+#~ msgstr "Volet Média"
+
+#~ msgctxt "#31503"
+#~ msgid "Apps Blade"
+#~ msgstr "Volet Apps"
+
+#~ msgctxt "#31541"
+#~ msgid "Set Default Subtitle fetching add-on for Video OSD"
+#~ msgstr "Définir l'add-on de sous-titres par défaut pour l'OSD vidéo"
+
+#~ msgctxt "#31550"
+#~ msgid "Window default buttons"
+#~ msgstr "Boutons par défaut de l'écran"

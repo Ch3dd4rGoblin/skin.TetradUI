@@ -3,56 +3,64 @@
 	<include name="VideoCodecFlagging">
 		<control type="image">
 			<description>Collection</description>
-			<width>80</width>
-			<height>35</height>
+			<width>120</width>
+			<height>52.5</height>
 			<texture colordiffuse="ddffffff">flagging/videocodec/collection.png</texture>
 			<visible>ListItem.IsCollection</visible>
 		</control>
 		<control type="image">
 			<description>Video rez Image</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>$INFO[ListItem.VideoResolution,flagging/videoresolution/,.png]</texture>
+			<width>120</width>
+			<height>52.5</height>
+			<texture colordiffuse="ddffffff">$INFO[ListItem.VideoResolution,flagging/videoresolution/,.png]</texture>
 			<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 		</control>
 		<control type="image">
 			<description>Common Codec Image</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>$INFO[ListItem.VideoCodec,flagging/videocodec/,.png]</texture>
+			<width>120</width>
+			<height>52.5</height>
+			<texture colordiffuse="ddffffff">$INFO[ListItem.VideoCodec,flagging/videocodec/,.png]</texture>
 			<!-- Don't show if its one of the 500 divx codecs -->
-			<visible>![String.StartsWith(ListItem.VideoCodec,div) | String.IsEqual(ListItem.VideoCodec,dx50)]</visible>
+			<visible>!String.IsEmpty(ListItem.VideoCodec) + ![String.StartsWith(ListItem.VideoCodec,div) | String.IsEqual(ListItem.VideoCodec,dx50)]</visible>
 		</control>
 		<control type="image">
 			<description>Divx Codec Image</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>flagging/videocodec/divx.png</texture>
-			<visible>[String.StartsWith(ListItem.VideoCodec,div) | String.IsEqual(ListItem.VideoCodec,dx50)]</visible>
+			<width>120</width>
+			<height>52.5</height>
+			<texture colordiffuse="ddffffff">flagging/videocodec/divx.png</texture>
+			<visible>String.StartsWith(ListItem.VideoCodec,div) | String.IsEqual(ListItem.VideoCodec,dx50)</visible>
 		</control>
+		<include content="CodecFlaggingImage">
+			<param name="visible" value="!String.IsEmpty(ListItem.HdrType) + !String.IsEqual(ListItem.HdrType,dolbyvision)" />
+			<param name="info" value="[UPPERCASE]$INFO[ListItem.HdrType][/UPPERCASE]" />
+		</include>
+		<include content="CodecFlaggingXtraSmallImage">
+			<param name="visible" value="String.IsEqual(ListItem.HdrType,dolbyvision)" />
+			<param name="info" value="$INFO[ListItem.HdrType]" />
+		</include>
 	</include>
 	<include name="AudioCodecFlagging">
 		<control type="image">
 			<description>Audio Codec Image</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>$INFO[ListItem.AudioCodec,flagging/audiocodec/,.png]</texture>
+			<width>120</width>
+			<height>52.5</height>
+			<texture colordiffuse="ddffffff">$INFO[ListItem.AudioCodec,flagging/audiocodec/,.png]</texture>
 			<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 		</control>
 		<control type="image">
 			<description>Audio Channels Image</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>$INFO[ListItem.AudioChannels,flagging/audiochannel/,.png]</texture>
+			<width>120</width>
+			<height>52.5</height>
+			<texture colordiffuse="ddffffff">$INFO[ListItem.AudioChannels,flagging/audiochannel/,.png]</texture>
 			<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
 		</control>
 	</include>
 	<include name="AspectCodecFlagging">
 		<control type="image">
 			<description>Aspectratio Image</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>$INFO[ListItem.VideoAspect,flagging/aspectratio/,.png]</texture>
+			<width>120</width>
+			<height>52.5</height>
+			<texture colordiffuse="ddffffff">$INFO[ListItem.VideoAspect,flagging/aspectratio/,.png]</texture>
 			<visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
 		</control>
 	</include>
@@ -66,16 +74,16 @@
 	<include name="VideoTypeHackFlaggingConditions">
 		<control type="image">
 			<description>Bluray Image</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>$VAR[VideoCodecImage]</texture>
+			<width>120</width>
+			<height>52.5</height>
+			<texture colordiffuse="ddffffff">$VAR[VideoCodecImage]</texture>
 			<visible>String.Contains(ListItem.FilenameAndPath,bluray) | String.Contains(ListItem.FilenameAndPath,bdrip) | String.Contains(ListItem.FilenameAndPath,brrip) | String.Contains(ListItem.FilenameAndPath,hddvd) | String.Contains(ListItem.FilenameAndPath,dvd) | String.Contains(ListItem.FileExtension,img) | String.Contains(ListItem.FileExtension,ifo) | String.Contains(ListItem.FileExtension,vob) | String.Contains(ListItem.FilenameAndPath,pdtv) | String.Contains(ListItem.FilenameAndPath,hdtv) | String.Contains(ListItem.FilenameAndPath,dsr) | String.Contains(ListItem.FilenameAndPath,vhs)</visible>
 		</control>
 		<control type="image">
 			<description>3D</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>flagging/videoresolution/3D.png</texture>
+			<width>120</width>
+			<height>52.5</height>
+			<texture colordiffuse="ddffffff">flagging/videoresolution/3D.png</texture>
 			<visible>ListItem.IsStereoscopic</visible>
 		</control>
 	</include>
@@ -90,17 +98,17 @@
 	<include name="AudioTypeHackFlaggingConditions">
 		<control type="image">
 			<description>Codec Image</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>$VAR[AudioCodecImage]</texture>
+			<width>120</width>
+			<height>52.5</height>
+			<texture colordiffuse="ddffffff">$VAR[AudioCodecImage]</texture>
 			<visible>!String.IsEmpty(ListItem.Filename)</visible>
 		</control>
 		<control type="image">
 			<description>Audio Channels Image</description>
-			<width>80</width>
-			<height>35</height>
+			<width>120</width>
+			<height>52.5</height>
 			<aspectratio align="right">keep</aspectratio>
-			<texture>$INFO[ListItem.MusicChannels,flagging/audiochannel/,.png]</texture>
+			<texture colordiffuse="ddffffff">$INFO[ListItem.MusicChannels,flagging/audiochannel/,.png]</texture>
 			<visible>!String.IsEmpty(ListItem.MusicChannels)</visible>
 		</control>
 		<include content="CodecFlaggingImage">
@@ -115,57 +123,69 @@
 			<param name="visible" value="!String.IsEmpty(ListItem.Year)" />
 			<param name="info" value="$INFO[ListItem.Year]" />
 		</include>
-		<include content="CodecFlaggingRating">
-			<param name="visible" value="![String.IsEmpty(ListItem.Rating) + String.IsEmpty(ListItem.UserRating)]" />
-			<param name="info" value="$VAR[StarRating]" />
-		</include>
+		<control type="image">
+			<description>Ratings Image</description>
+			<width>120</width>
+			<height>52.5</height>
+			<aspectratio align="right">keep</aspectratio>
+			<texture colordiffuse="ddffffff">$VAR[StarRating]</texture>
+			<visible>![String.IsEmpty(ListItem.Rating) + String.IsEmpty(ListItem.UserRating)]</visible>
+		</control>
 	</include>
 	<include name="VideoPlayerVideoCodecFlagging">
 		<control type="image" id="1">
 			<description>Video rez Image</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>$INFO[VideoPlayer.VideoResolution,flagging/videoresolution/,.png]</texture>
+			<width>120</width>
+			<height>52.5</height>
+			<texture colordiffuse="ddffffff">$INFO[VideoPlayer.VideoResolution,flagging/videoresolution/,.png]</texture>
 			<visible>!String.IsEmpty(VideoPlayer.VideoResolution)</visible>
 		</control>
 		<control type="image" id="1">
 			<description>Common Codec Image</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>$INFO[VideoPlayer.VideoCodec,flagging/videocodec/,.png]</texture>
+			<width>120</width>
+			<height>52.5</height>
+			<texture colordiffuse="ddffffff">$INFO[VideoPlayer.VideoCodec,flagging/videocodec/,.png]</texture>
 			<!-- Don't show if its one of the 500 divx codecs -->
-			<visible>![String.StartsWith(VideoPlayer.VideoCodec,div) | String.IsEqual(VideoPlayer.VideoCodec,dx50)]</visible>
+			<visible>!String.IsEmpty(VideoPlayer.VideoCodec) + ![String.StartsWith(VideoPlayer.VideoCodec,div) | String.IsEqual(VideoPlayer.VideoCodec,dx50)]</visible>
 		</control>
 		<control type="image" id="1">
 			<description>Divx Codec Image</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>flagging/videocodec/divx.png</texture>
-			<visible>[String.StartsWith(VideoPlayer.VideoCodec,div) | String.IsEqual(VideoPlayer.VideoCodec,dx50)]</visible>
+			<width>120</width>
+			<height>52.5</height>
+			<texture colordiffuse="ddffffff">flagging/videocodec/divx.png</texture>
+			<visible>String.StartsWith(VideoPlayer.VideoCodec,div) | String.IsEqual(VideoPlayer.VideoCodec,dx50)</visible>
 		</control>
+		<include content="CodecFlaggingImage">
+			<param name="visible" value="!String.IsEmpty(VideoPlayer.HdrType) + !String.IsEqual(VideoPlayer.HdrType,dolbyvision)" />
+			<param name="info" value="[UPPERCASE]$INFO[VideoPlayer.HdrType][/UPPERCASE]" />
+		</include>
+		<include content="CodecFlaggingXtraSmallImage">
+			<param name="visible" value="String.IsEqual(VideoPlayer.HdrType,dolbyvision)" />
+			<param name="info" value="$INFO[VideoPlayer.HdrType]" />
+		</include>
 	</include>
 	<include name="VideoPlayerAudioCodecFlagging">
 		<control type="image" id="1">
 			<description>Audio Codec Image</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>$INFO[VideoPlayer.AudioCodec,flagging/audiocodec/,.png]</texture>
+			<width>120</width>
+			<height>52.5</height>
+			<texture colordiffuse="ddffffff">$INFO[VideoPlayer.AudioCodec,flagging/audiocodec/,.png]</texture>
 			<visible>!String.IsEmpty(VideoPlayer.AudioCodec)</visible>
 		</control>
 		<control type="image" id="1">
 			<description>Audio Channels Image</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>$INFO[VideoPlayer.AudioChannels,flagging/audiochannel/,.png]</texture>
+			<width>120</width>
+			<height>52.5</height>
+			<texture colordiffuse="ddffffff">$INFO[VideoPlayer.AudioChannels,flagging/audiochannel/,.png]</texture>
 			<visible>!String.IsEmpty(VideoPlayer.AudioChannels)</visible>
 		</control>
 	</include>
 	<include name="VideoPlayerAspectCodecFlagging">
 		<control type="image" id="1">
 			<description>Aspectratio Image</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>$INFO[VideoPlayer.VideoAspect,flagging/aspectratio/,.png]</texture>
+			<width>120</width>
+			<height>52.5</height>
+			<texture colordiffuse="ddffffff">$INFO[VideoPlayer.VideoAspect,flagging/aspectratio/,.png]</texture>
 			<visible>!String.IsEmpty(VideoPlayer.VideoAspect)</visible>
 		</control>
 	</include>
@@ -179,34 +199,33 @@
 	<include name="VideoPlayerVideoTypeHackFlaggingConditions">
 		<control type="image" id="1">
 			<description>Bluray Image</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>$VAR[VideoPlayerCodecImage]</texture>
+			<width>120</width>
+			<height>52.5</height>
+			<texture colordiffuse="ddffffff">$VAR[VideoPlayerCodecImage]</texture>
 			<visible>String.Contains(Player.FilenameAndPath,bluray) | String.Contains(Player.FilenameAndPath,bdrip) | String.Contains(Player.FilenameAndPath,brrip) | String.Contains(Player.FilenameAndPath,hddvd) | String.Contains(Player.FilenameAndPath,dvd) | String.EndsWith(Player.FilenameAndPath,.img) | String.EndsWith(Player.FilenameAndPath,.ifo) | String.EndsWith(Player.FilenameAndPath,.vob) | String.Contains(Player.FilenameAndPath,pdtv) | String.Contains(Player.FilenameAndPath,hdtv) | String.Contains(Player.FilenameAndPath,dsr) | String.Contains(Player.FilenameAndPath,vhs)</visible>
 		</control>
 		<control type="image" id="1">
 			<description>3D</description>
-			<width>80</width>
-			<height>35</height>
-			<texture>flagging/videoresolution/3D.png</texture>
+			<width>120</width>
+			<height>52.5</height>
+			<texture colordiffuse="ddffffff">flagging/videoresolution/3D.png</texture>
 			<visible>VideoPlayer.IsStereoscopic</visible>
 		</control>
 	</include>
-
 	<include name="PictureTypeHackFlaggingConditions">
 		<control type="group">
 			<visible>!String.IsEmpty(ListItem.Date)</visible>
 			<animation effect="fade" end="80" condition="true">Conditional</animation>
-			<width>100</width>
+			<width>150</width>
 			<control type="image">
-				<width>100</width>
-				<height>35</height>
+				<width>150</width>
+				<height>52.5</height>
 				<texture>flagging/blank.png</texture>
 			</control>
 			<control type="label">
-				<left>10</left>
-				<width>80</width>
-				<height>35</height>
+				<left>15</left>
+				<width>120</width>
+				<height>52.5</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>codecflagging</font>
@@ -217,16 +236,16 @@
 		<control type="group">
 			<visible>!String.IsEmpty(ListItem.PictureResolution)</visible>
 			<animation effect="fade" end="80" condition="true">Conditional</animation>
-			<width>100</width>
+			<width>150</width>
 			<control type="image">
-				<width>100</width>
-				<height>35</height>
+				<width>150</width>
+				<height>52.5</height>
 				<texture>flagging/blank.png</texture>
 			</control>
 			<control type="label">
-				<left>10</left>
-				<width>80</width>
-				<height>35</height>
+				<left>15</left>
+				<width>120</width>
+				<height>52.5</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>codecflagging</font>

@@ -4,24 +4,25 @@
 	<include>dialogeffect</include>
 	<coordinates>
 		<system>2</system>
-		<left>165</left>
-		<top>110</top>
+		<left>118.5</left>
+		<top>120</top>
 	</coordinates>
 	<controls>
 		<control type="group">
-			<animation effect="slide" end="0,-62.5" condition="Control.IsVisible(313)">Conditional</animation>
+			<animation effect="slide" end="0,-94" condition="Control.IsVisible(313)">Conditional</animation>
 			<control type="image">
 				<description>background image</description>
-				<width>950</width>
-				<height>500</height>
-				<texture border="50,100,50,50">dialogs/Dialog.png</texture>
+				<width>1680</width>
+				<height>840</height>
+				<texture border="50,150,50,50">dialogs/Dialog.png</texture>
+				<bordersize>19</bordersize>
 			</control>
 			<control type="label" id="311">
 				<description>heading label</description>
-				<left>50</left>
-				<top>50</top>
-				<width>850</width>
-				<height>30</height>
+				<left>75</left>
+				<top>75</top>
+				<width>1530</width>
+				<height>45</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font16</font>
@@ -30,18 +31,18 @@
 			</control>
 			<control type="image">
 				<description>edit text underlay Image</description>
-				<left>50</left>
-				<top>100</top>
-				<width>850</width>
-				<height>45</height>
+				<left>75</left>
+				<top>150</top>
+				<width>1530</width>
+				<height>67.5</height>
 				<texture border="10">buttons/list-nofocus.png</texture>
 			</control>
 			<control type="edit" id="312">
 				<description>Edit Text</description>
-				<left>60</left>
-				<top>100</top>
-				<width>830</width>
-				<height>40</height>
+				<left>90</left>
+				<top>150</top>
+				<width>1500</width>
+				<height>60</height>
 				<font>font13</font>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -49,51 +50,73 @@
 				<texturenofocus />
 			</control>
 			<control type="grouplist">
-				<left>250</left>
-				<top>150</top>
+				<left>75</left>
+				<top>225</top>
+				<width>1530</width>
+				<align>center</align>
 				<orientation>horizontal</orientation>
-				<itemgap>0</itemgap>
+				<itemgap>2</itemgap>
 				<control type="button" id="309">
 					<description>Layout button</description>
-					<width>200</width>
+					<width>360</width>
+					<include>KeyboardButton</include>
+					<label>20177</label>
+					<onup condition="!Control.IsVisible(310)">32</onup>
+					<onup condition="Control.IsVisible(310)">307</onup>
+					<ondown condition="!Control.IsVisible(310)">100</ondown>
+					<ondown condition="Control.IsVisible(310)">300</ondown>
+				</control>
+				<control type="image" id="9009">
+					<width>90</width>
+					<height>90</height>
+					<texture />
+				</control>
+				<control type="button" id="310">
+					<description>Hide/show password button</description>
+					<width>360</width>
 					<include>KeyboardButton</include>
 					<label>20177</label>
 					<onup>32</onup>
-					<ondown>100</ondown>
+					<ondown>103</ondown>
 				</control>
-				<control type="image" id="9009">
-					<width>50</width>
-					<height>50</height>
+				<control type="image" id="9010">
+					<width>90</width>
+					<height>90</height>
 					<texture />
+					<visible>Control.IsVisible(310)</visible>
 				</control>
 				<control type="button" id="305">
 					<description>previous button</description>
-					<width>100</width>
+					<width>180</width>
 					<label>&lt;&lt;</label>
 					<onup>32</onup>
-					<ondown>105</ondown>
+					<ondown condition="!Control.IsVisible(310)">105</ondown>
+					<ondown condition="Control.IsVisible(310)">108</ondown>
 					<include>KeyboardButton</include>
 				</control>
 				<control type="button" id="306">
 					<description>next button</description>
-					<width>100</width>
+					<width>180</width>
 					<label>&gt;&gt;</label>
-					<onup>32</onup>
-					<ondown>107</ondown>
+					<onup condition="!Control.IsVisible(310)">32</onup>
+					<onup condition="Control.IsVisible(310)">8</onup>
+					<ondown condition="!Control.IsVisible(310)">107</ondown>
+					<ondown condition="Control.IsVisible(310)">109</ondown>
 					<include>KeyboardButton</include>
 				</control>
 			</control>
 			<control type="grouplist">
-				<left>50</left>
-				<top>200</top>
+				<left>75</left>
+				<top>315</top>
 				<orientation>horizontal</orientation>
-				<itemgap>0</itemgap>
+				<itemgap>2</itemgap>
 				<control type="button" id="300">
 					<description>DONE button</description>
-					<width>200</width>
+					<width>360</width>
 					<include>KeyboardButton</include>
 					<label>20177</label>
-					<onup>307</onup>
+					<onup condition="!Control.IsVisible(310)">307</onup>
+					<onup condition="Control.IsVisible(310)">309</onup>
 					<ondown>302</ondown>
 				</control>
 				<control type="button" id="100">
@@ -110,61 +133,71 @@
 				</control>
 				<control type="button" id="102">
 					<description>(0,2) button</description>
-					<onup>309</onup>
+					<onup condition="!Control.IsVisible(310)">309</onup>
+					<onup condition="Control.IsVisible(310)">310</onup>
 					<ondown>122</ondown>
 					<include>KeyboardButton</include>
 				</control>
 				<control type="button" id="103">
 					<description>(0,3) button</description>
-					<onup>309</onup>
+					<onup condition="!Control.IsVisible(310)">309</onup>
+					<onup condition="Control.IsVisible(310)">310</onup>
 					<ondown>123</ondown>
 					<include>KeyboardButton</include>
 				</control>
 				<control type="button" id="104">
 					<description>(0,4) button</description>
-					<onup>32</onup>
+					<onup condition="!Control.IsVisible(310)">32</onup>
+					<onup condition="Control.IsVisible(310)">310</onup>
 					<ondown>124</ondown>
 					<include>KeyboardButton</include>
 				</control>
 				<control type="button" id="105">
 					<description>(0,5) button</description>
-					<onup>305</onup>
+					<onup condition="!Control.IsVisible(310)">305</onup>
+					<onup condition="Control.IsVisible(310)">310</onup>
 					<ondown>125</ondown>
 					<include>KeyboardButton</include>
 				</control>
 				<control type="button" id="106">
 					<description>(0,6) button</description>
-					<onup>305</onup>
+					<onup condition="!Control.IsVisible(310)">305</onup>
+					<onup condition="Control.IsVisible(310)">310</onup>
 					<ondown>126</ondown>
 					<include>KeyboardButton</include>
 				</control>
 				<control type="button" id="107">
 					<description>(0,7) button</description>
-					<onup>306</onup>
+					<onup condition="!Control.IsVisible(310)">306</onup>
+					<onup condition="Control.IsVisible(310)">305</onup>
 					<ondown>127</ondown>
 					<include>KeyboardButton</include>
 				</control>
 				<control type="button" id="108">
 					<description>(0,8) button</description>
-					<onup>306</onup>
+					<onup condition="!Control.IsVisible(310)">306</onup>
+					<onup condition="Control.IsVisible(310)">305</onup>
 					<ondown>128</ondown>
 					<include>KeyboardButton</include>
 				</control>
 				<control type="button" id="109">
 					<description>(0,9) button</description>
-					<onup>8</onup>
+					<onup condition="!Control.IsVisible(310)">8</onup>
+					<onup condition="Control.IsVisible(310)">306</onup>
 					<ondown>129</ondown>
 					<include>KeyboardButton</include>
 				</control>
 				<control type="button" id="110">
 					<description>(0,10) button</description>
-					<onup>8</onup>
+					<onup condition="!Control.IsVisible(310)">8</onup>
+					<onup condition="Control.IsVisible(310)">306</onup>
 					<ondown>130</ondown>
 					<include>KeyboardButton</include>
 				</control>
 				<control type="button" id="111">
 					<description>(0,11) button</description>
-					<onup>8</onup>
+					<onup condition="!Control.IsVisible(310)">8</onup>
+					<onup condition="Control.IsVisible(310)">306</onup>
 					<ondown>131</ondown>
 					<include>KeyboardButton</include>
 				</control>
@@ -176,19 +209,19 @@
 				</control>
 			</control>
 			<control type="grouplist">
-				<left>50</left>
-				<top>250</top>
+				<left>75</left>
+				<top>405</top>
 				<orientation>horizontal</orientation>
-				<itemgap>0</itemgap>
+				<itemgap>2</itemgap>
 				<control type="radiobutton" id="302">
 					<description>SHIFT button</description>
-					<width>200</width>
+					<width>360</width>
 					<label>20178</label>
 					<onup>300</onup>
 					<ondown>303</ondown>
-					<radioposy>5</radioposy>
-					<radiowidth>17</radiowidth>
-					<radioheight>17</radioheight>
+					<radioposy>7.5</radioposy>
+					<radiowidth>25.5</radiowidth>
+					<radioheight>25.5</radioheight>
 					<include>KeyboardButton</include>
 				</control>
 				<control type="button" id="120">
@@ -271,19 +304,19 @@
 				</control>
 			</control>
 			<control type="grouplist">
-				<left>50</left>
-				<top>300</top>
+				<left>75</left>
+				<top>495</top>
 				<orientation>horizontal</orientation>
-				<itemgap>0</itemgap>
+				<itemgap>2</itemgap>
 				<control type="radiobutton" id="303">
 					<description>CAPS LOCK button</description>
-					<width>200</width>
+					<width>360</width>
 					<label>20179</label>
 					<onup>302</onup>
 					<ondown>304</ondown>
-					<radioposy>5</radioposy>
-					<radiowidth>17</radiowidth>
-					<radioheight>17</radioheight>
+					<radioposy>7.5</radioposy>
+					<radiowidth>25.5</radiowidth>
+					<radioheight>25.5</radioheight>
 					<include>KeyboardButton</include>
 				</control>
 				<control type="button" id="140">
@@ -366,19 +399,19 @@
 				</control>
 			</control>
 			<control type="grouplist">
-				<left>50</left>
-				<top>350</top>
+				<left>75</left>
+				<top>585</top>
 				<orientation>horizontal</orientation>
-				<itemgap>0</itemgap>
+				<itemgap>2</itemgap>
 				<control type="radiobutton" id="304">
 					<description>Symbols button</description>
-					<width>200</width>
+					<width>360</width>
 					<label>20180</label>
 					<onup>303</onup>
 					<ondown>307</ondown>
-					<radioposy>5</radioposy>
-					<radiowidth>17</radiowidth>
-					<radioheight>17</radioheight>
+					<radioposy>7.5</radioposy>
+					<radiowidth>25.5</radiowidth>
+					<radioheight>25.5</radioheight>
 					<include>KeyboardButton</include>
 				</control>
 				<control type="button" id="160">
@@ -461,29 +494,31 @@
 				</control>
 			</control>
 			<control type="grouplist">
-				<left>50</left>
-				<top>400</top>
+				<left>75</left>
+				<top>675</top>
 				<orientation>horizontal</orientation>
-				<itemgap>0</itemgap>
+				<itemgap>2</itemgap>
 				<control type="button" id="307">
 					<description>IP Input button</description>
-					<width>200</width>
+					<width>360</width>
 					<label>1006</label>
 					<onup>304</onup>
-					<ondown>300</ondown>
+					<ondown condition="!Control.IsVisible(310)">300</ondown>
+					<ondown condition="Control.IsVisible(310)">309</ondown>
 					<include>KeyboardButton</include>
 				</control>
 				<control type="button" id="32">
 					<description>SPACE button</description>
-					<width>450</width>
+					<width>810</width>
 					<label>20182</label>
 					<onup>160</onup>
-					<ondown>309</ondown>
+					<ondown condition="!Control.IsVisible(310)">309</ondown>
+					<ondown condition="Control.IsVisible(310)">310</ondown>
 					<include>KeyboardButton</include>
 				</control>
 				<control type="button" id="8">
 					<description>BACKSPACE button</description>
-					<width>200</width>
+					<width>360</width>
 					<label>20181</label>
 					<onup>169</onup>
 					<ondown>306</ondown>
@@ -492,37 +527,38 @@
 			</control>
 			<control type="group">
 				<visible>Control.IsVisible(313)</visible>
-				<top>445</top>
+				<top>908</top>
 				<control type="image">
 					<description>background image</description>
-					<width>950</width>
-					<height>180</height>
-					<texture border="50,50,50,50">dialogs/Dialog.png</texture>
+					<width>1680</width>
+					<height>270</height>
+					<texture border="50,150,50,50">dialogs/Dialog.png</texture>
+					<bordersize>19</bordersize>
 				</control>
 				<control type="image">
 					<description>edit text underlay Image</description>
-					<left>50</left>
-					<top>50</top>
-					<width>850</width>
-					<height>45</height>
-					<texture border="10">buttons/list-nofocus.png</texture>
+					<left>75</left>
+					<top>75</top>
+					<width>1530</width>
+					<height>67.5</height>
+					<texture border="15">buttons/list-nofocus.png</texture>
 				</control>
 				<control type="label" id="313">
 					<description>HZCODE label</description>
-					<left>50</left>
-					<top>50</top>
-					<width>850</width>
-					<height>45</height>
+					<left>75</left>
+					<top>75</top>
+					<width>1530</width>
+					<height>67.5</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font12</font>
 				</control>
 				<control type="label" id="314">
 					<description>HZLIST label</description>
-					<left>60</left>
-					<top>95</top>
-					<width>830</width>
-					<height>40</height>
+					<left>90</left>
+					<top>142.5</top>
+					<width>1530</width>
+					<height>60</height>
 					<font>font12</font>
 					<align>center</align>
 					<aligny>center</aligny>

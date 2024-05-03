@@ -4,13 +4,11 @@
 	<menucontrol>9000</menucontrol>
 	<views>50,52,55</views>
 	<controls>
-		<include condition="!Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
+		<include>CommonVideoVizBackground</include>
 		<include>CommonAppsBackground</include>
-		<include condition="Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
 		<include>CommonAppsBlackwash</include>
-
 		<control type="group">
-			<left>130</left>
+			<left>195</left>
 			<animation effect="fade" delay="500" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
 			<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 			<control type="label">
@@ -20,7 +18,7 @@
 			</control>
 			<control type="group">
 				<left>0</left>
-				<top>110</top>
+				<top>165</top>
 				<include>ListViewCommons</include> <!-- View ID 50 -->
 				<include>ThumbnailInfoView</include> <!-- View ID 55 -->
 				<include>ThumbnailView</include> <!-- View ID 52 -->
@@ -31,8 +29,8 @@
 			<include>Container9000BladesRunner</include>
 			<control type="grouplist" id="610">
 				<include content="Container9000Header">
-					<param name="left" value="100" />
-					<param name="top" value="100" />
+					<param name="left" value="150" />
+					<param name="top" value="150" />
 				</include>
 				<control type="button" id="2">
 					<description>View As button</description>
@@ -40,7 +38,7 @@
 				</control>
 				<control type="button" id="3">
 					<description>Sort by button</description>
-					<left>2</left>
+					<left>3</left>
 					<label>103</label>
 					<include>ButtonCommonValues</include>
 				</control>
@@ -50,14 +48,14 @@
 				</control>
 				<control type="button" id="620">
 					<description>Settings Button</description>
-					<left>7</left>
+					<left>10.5</left>
 					<include>ButtonCommonValues</include>
 					<label>10004</label>
 					<onclick>ActivateWindow(GameSettings)</onclick>
 				</control>
 				<control type="button" id="621">
 					<description>Add-on settings Button</description>
-					<left>8</left>
+					<left>12</left>
 					<include>ButtonCommonValues</include>
 					<label>10140</label>
 					<onclick>Addon.OpenSettings($INFO[Container.PluginName])</onclick>
@@ -65,8 +63,8 @@
 				</control>
 			</control>
 			<include content="CommonPlayerControls">
-				<param name="left" value="100" />
-				<param name="top" value="140" />
+				<param name="left" value="150" />
+				<param name="top" value="210" />
 			</include>
 		</control>
 		<include>AllViewCommonPageControls</include>

@@ -4,23 +4,24 @@
 	<onload>SetFocus(9051)</onload>
 	<coordinates>
 		<system>1</system>
-		<left>190</left>
-		<top>40</top>
+		<left>285</left>
+		<top>60</top>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
 		<control type="image">
 			<description>Dialog Back</description>
-			<width>900</width>
-			<height>660</height>
-			<texture border="50,100,50,50">dialogs/Dialog.png</texture>
+			<width>1350</width>
+			<height>990</height>
+			<texture border="50,150,50,50">dialogs/Dialog.png</texture>
+			<bordersize>19</bordersize>
 		</control>
 		<control type="label">
 			<description>Heading label</description>
-			<left>50</left>
-			<top>50</top>
-			<width>800</width>
-			<height>30</height>
+			<left>75</left>
+			<top>75</top>
+			<width>1200</width>
+			<height>45</height>
 			<align>center</align>
 			<font>font16</font>
 			<label>31237</label>
@@ -29,22 +30,22 @@
 		</control>
 		<control type="textbox">
 			<description>text</description>
-			<left>50</left>
-			<top>105</top>
-			<width>800</width>
-			<height>440</height>
+			<left>75</left>
+			<top>157.5</top>
+			<width>1200</width>
+			<height>660</height>
 			<aligny>center</aligny>
 			<font>font12</font>
 			<label>31238</label>
 			<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 		</control>
 		<control type="grouplist">
-			<top>555</top>
-			<left>147</left>
-			<width>606</width>
+			<top>832</top>
+			<left>220.5</left>
+			<width>909</width>
 			<align>center</align>
 			<orientation>horizontal</orientation>
-			<itemgap>2</itemgap>
+			<itemgap>3</itemgap>
 			<control type="button" id="9051">
 				<description>Ok button</description>
 				<label>15067</label>

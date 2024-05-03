@@ -2,12 +2,11 @@
 <window>
 	<defaultcontrol always="true">3</defaultcontrol>
 	<controls>
-		<include condition="!Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
+		<include>CommonVideoVizBackground</include>
 		<include>CommonSystemBackground</include>
-		<include condition="Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
 		<include>CommonSystemBlackwash</include>
 		<control type="group">
-			<left>130</left>
+			<left>195</left>
 			<animation effect="fade" delay="500" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
 			<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 			<control type="label">
@@ -17,9 +16,9 @@
 			</control>
 			<control type="textbox">
 				<description>textarea</description>
-				<top>470</top>
-				<width>250</width>
-				<height>250</height>
+				<top>705</top>
+				<width>375</width>
+				<height>375</height>
 				<font>font10</font>
 				<label>$VAR[SkinSettingsHelpText]</label>
 				<align>right</align>
@@ -29,96 +28,95 @@
 			<control type="grouplist" id="3">
 				<description>button area</description>
 				<left>0</left>
-				<top>115</top>
-				<width>250</width>
-				<height>350</height>
-				<itemgap>-2</itemgap>
+				<top>172.5</top>
+				<width>375</width>
+				<height>525</height>
+				<itemgap>-3</itemgap>
 				<onleft condition="!Skin.String(SkinSettings,7)">5</onleft>
 				<onright condition="!Skin.String(SkinSettings,7)">5</onright>
 				<control type="button" id="10">
 					<description>General Category Button</description>
-					<height>50</height>
-					<width>250</width>
+					<height>75</height>
+					<width>375</width>
 					<textcolor>white</textcolor>
-					<texturefocus border="10">buttons/button-focus.png</texturefocus>
-					<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
+					<texturefocus border="15">buttons/button-focus.png</texturefocus>
+					<texturenofocus border="15">buttons/button-nofocus.png</texturenofocus>
 					<label>128</label>
 					<onfocus>Skin.SetString(SkinSettings,1)</onfocus>
 				</control>
 				<control type="button" id="12">
 					<description>Blades Category Button</description>
-					<height>50</height>
-					<width>250</width>
+					<height>75</height>
+					<width>375</width>
 					<textcolor>white</textcolor>
-					<texturefocus border="10">buttons/button-focus.png</texturefocus>
-					<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
+					<texturefocus border="15">buttons/button-focus.png</texturefocus>
+					<texturenofocus border="15">buttons/button-nofocus.png</texturenofocus>
 					<label>31502</label>
 					<onfocus>Skin.SetString(SkinSettings,3)</onfocus>
 				</control>
-				<control type="button" id="13">
-					<description>Image Packs Category Button</description>
-					<height>50</height>
-					<width>250</width>
-					<textcolor>white</textcolor>
-					<texturefocus border="10">buttons/button-focus.png</texturefocus>
-					<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
-					<label>31503</label>
-					<onfocus>Skin.SetString(SkinSettings,4)</onfocus>
-				</control>
 				<control type="button" id="14">
 					<description>Backgrounds Category Button</description>
-					<height>50</height>
-					<width>250</width>
+					<height>75</height>
+					<width>375</width>
 					<textcolor>white</textcolor>
-					<texturefocus border="10">buttons/button-focus.png</texturefocus>
-					<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
+					<texturefocus border="15">buttons/button-focus.png</texturefocus>
+					<texturenofocus border="15">buttons/button-nofocus.png</texturenofocus>
 					<label>33069</label>
 					<onfocus>Skin.SetString(SkinSettings,5)</onfocus>
 				</control>
+				<control type="button" id="13">
+					<description>Image Packs Category Button</description>
+					<height>75</height>
+					<width>375</width>
+					<textcolor>white</textcolor>
+					<texturefocus border="15">buttons/button-focus.png</texturefocus>
+					<texturenofocus border="15">buttons/button-nofocus.png</texturenofocus>
+					<label>31503</label>
+					<onfocus>Skin.SetString(SkinSettings,4)</onfocus>
+				</control>
 				<control type="button" id="11">
 					<description>Addon Category Button</description>
-					<height>50</height>
-					<width>250</width>
+					<height>75</height>
+					<width>375</width>
 					<textcolor>white</textcolor>
-					<texturefocus border="10">buttons/button-focus.png</texturefocus>
-					<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
+					<texturefocus border="15">buttons/button-focus.png</texturefocus>
+					<texturenofocus border="15">buttons/button-nofocus.png</texturenofocus>
 					<label>24001</label>
 					<onfocus>Skin.SetString(SkinSettings,2)</onfocus>
 				</control>
 				<control type="button" id="15">
 					<description>Supported Addons Category Button</description>
-					<height>50</height>
-					<width>250</width>
+					<height>75</height>
+					<width>375</width>
 					<textcolor>white</textcolor>
-					<texturefocus border="10">buttons/button-focus.png</texturefocus>
-					<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
+					<texturefocus border="15">buttons/button-focus.png</texturefocus>
+					<texturenofocus border="15">buttons/button-nofocus.png</texturenofocus>
 					<label>31539</label>
 					<onfocus>Skin.SetString(SkinSettings,6)</onfocus>
 				</control>
 				<control type="button" id="16">
 					<description>About Category Button</description>
-					<height>50</height>
-					<width>250</width>
+					<height>75</height>
+					<width>375</width>
 					<textcolor>white</textcolor>
-					<texturefocus border="10">buttons/button-focus.png</texturefocus>
-					<texturenofocus border="10">buttons/button-nofocus.png</texturenofocus>
+					<texturefocus border="15">buttons/button-focus.png</texturefocus>
+					<texturenofocus border="15">buttons/button-nofocus.png</texturenofocus>
 					<label>31538</label>
 					<onfocus>Skin.SetString(SkinSettings,7)</onfocus>
 				</control>
 			</control>
+			
 			<control type="group" id="5">
 				<description>control area</description>
 				<control type="grouplist" id="100">
 					<visible>Skin.String(SkinSettings,1)</visible>
 					<description>control area</description>
-					<left>270</left>
-					<top>115</top>
-					<width>790</width>
-					<height>500</height>
-					<itemgap>-2</itemgap>
-					<pagecontrol>90</pagecontrol>
+					<left>405</left>
+					<top>172.5</top>
+					<width>1185</width>
+					<height>750</height>
+					<itemgap>-3</itemgap>
 					<onleft>3</onleft>
-					<onright>90</onright>
 					<onup>100</onup>
 					<ondown>100</ondown>
 					<control type="radiobutton" id="101">
@@ -145,12 +143,6 @@
 						<onclick>Skin.ToggleSetting(Back_Fanart)</onclick>
 						<selected>!Skin.HasSetting(Back_Fanart)</selected>
 					</control>
-					<control type="radiobutton" id="105">
-						<include>SkinSettingsRadioButtonCommonValues</include>
-						<label>31524</label>
-						<onclick>Skin.ToggleSetting(DontBlendBackground)</onclick>
-						<selected>Skin.HasSetting(DontBlendBackground)</selected>
-					</control>
 					<control type="radiobutton" id="106">
 						<include>SkinSettingsRadioButtonCommonValues</include>
 						<label>31526</label>
@@ -166,28 +158,43 @@
 					</control>
 					<control type="radiobutton" id="108">
 						<include>SkinSettingsRadioButtonCommonValues</include>
+						<label>31529</label>
+						<onclick condition="System.AddonIsEnabled(script.litebox)">Skin.ToggleSetting(BlurFanart)</onclick>
+						<onclick condition="System.AddonIsEnabled(script.litebox) + !Skin.HasSetting(BlurFanart)">Skin.SetString(litebox_effect,blur)</onclick>
+						<onclick condition="System.AddonIsEnabled(script.litebox) + !Skin.HasSetting(BlurFanart)">Skin.SetString(litebox_quality,4)</onclick>
+						<onclick condition="System.AddonIsEnabled(script.litebox) + !Skin.HasSetting(BlurFanart)">Skin.SetString(litebox_blursize,5)</onclick>
+						<onclick condition="System.AddonIsEnabled(script.litebox) + !Skin.HasSetting(BlurFanart)">Skin.SetString(litebox_main,main:fhls*-;0.45;0.9)</onclick>
+						<onclick condition="System.AddonIsEnabled(script.litebox) + !Skin.HasSetting(BlurFanart)">Skin.SetString(litebox_comp,main:hls*0.75;0;0@fhls*-;0.45;0.9)</onclick>
+						<onclick condition="System.AddonIsEnabled(script.litebox) + !Skin.HasSetting(BlurFanart)">RunScript(script.litebox,daemon=True)</onclick>
+						<onclick condition="System.AddonIsEnabled(script.litebox) + !Skin.HasSetting(BlurFanart)">SetProperty(FIVE_daemon_set,$INFO[Skin.String(litebox_effect)],home)</onclick>
+						<onclick condition="System.AddonIsEnabled(script.litebox) + !Skin.HasSetting(BlurFanart)">AlarmClock(nms1,SetProperty(NINE_manual_set,"var=main,set=$INFO[Skin.String(litebox_main)]|var=comp,set=$INFO[Skin.String(litebox_comp)]|var=quality,set=$INFO[Skin.String(litebox_quality)]|var=blursize,set=$INFO[Skin.String(litebox_blursize)]]",home),00:05,true)</onclick>
+						<onclick condition="System.AddonIsEnabled(script.litebox) + Skin.HasSetting(BlurFanart)">StopScript(script.litebox)</onclick>
+						<onclick condition="!System.HasAddon(script.litebox)">InstallAddon(script.litebox)</onclick>
+						<onclick condition="System.HasAddon(script.litebox) + !System.AddonIsEnabled(script.litebox)">EnableAddon(script.litebox)</onclick>
+						<selected>Skin.HasSetting(BlurFanart)</selected>
+					</control>
+					<control type="radiobutton" id="109">
+						<include>SkinSettingsRadioButtonCommonValues</include>
 						<label>31523</label>
 						<onclick>Skin.ToggleSetting(HideRainDrops)</onclick>
 						<selected>Skin.HasSetting(HideRainDrops)</selected>
 					</control>
-					<control type="button" id="109">
+					<control type="button" id="110">
 						<include>SkinSettingsButtonCommonValues</include>
 						<label>$LOCALIZE[31525]: $VAR[RatingTypeLabel]</label>
 						<onclick>Skin.SelectBool(31525, 38018|RatingTypeUser, 571|RatingTypeDefault)</onclick>
 					</control>
 				</control>
-
+				
 				<control type="grouplist" id="200">
 					<visible>Skin.String(SkinSettings,2)</visible>
 					<description>control area</description>
-					<left>270</left>
-					<top>115</top>
-					<width>790</width>
-					<height>500</height>
-					<itemgap>-2</itemgap>
-					<pagecontrol>90</pagecontrol>
+					<left>405</left>
+					<top>172.5</top>
+					<width>1185</width>
+					<height>750</height>
+					<itemgap>-3</itemgap>
 					<onleft>3</onleft>
-					<onright>90</onright>
 					<onup>200</onup>
 					<ondown>200</ondown>
 					<control type="button" id="201">
@@ -204,24 +211,24 @@
 						<selected>Skin.HasSetting(EnableArtistSlideshow)</selected>
 					</control>
 				</control>
-
+				
 				<control type="grouplist" id="300">
 					<visible>Skin.String(SkinSettings,3)</visible>
 					<description>control area</description>
-					<left>270</left>
-					<top>115</top>
-					<width>790</width>
-					<height>480</height>
-					<itemgap>-2</itemgap>
+					<left>405</left>
+					<top>172.5</top>
+					<width>1185</width>
+					<height>720</height>
+					<itemgap>-3</itemgap>
 					<pagecontrol>90</pagecontrol>
 					<onleft>3</onleft>
-					<onright>90</onright>
+					<onright condition="Control.IsVisible(90)">90</onright>
 					<onup>300</onup>
 					<ondown>300</ondown>
 					<control type="label" id="301">
 						<description>Heading label</description>
-						<width>790</width>
-						<height>30</height>
+						<width>1185</width>
+						<height>45</height>
 						<align>center</align>
 						<font>font13</font>
 						<label>128</label>
@@ -232,7 +239,7 @@
 						<include>SkinSettingsRadioButtonCommonValues</include>
 						<label>$LOCALIZE[31317]</label>
 						<onclick>Skin.ToggleSetting(Blades_CenterLogoButton)</onclick>
-						<selected>Skin.HasSetting(Blades_CenterLogoButton)</selected>
+						<selected>!Skin.HasSetting(Blades_CenterLogoButton)</selected>
 					</control>
 					<control type="radiobutton" id="303">
 						<include>SkinSettingsRadioButtonCommonValues</include>
@@ -242,8 +249,8 @@
 					</control>
 					<control type="label" id="311">
 						<description>Heading label</description>
-						<width>790</width>
-						<height>30</height>
+						<width>1185</width>
+						<height>45</height>
 						<align>center</align>
 						<font>font13</font>
 						<label>14211</label>
@@ -261,35 +268,35 @@
 						<label>$LOCALIZE[31309]$LOCALIZE[342]</label>
 						<onclick>Skin.ToggleSetting(MediaBlade_HideMovies)</onclick>
 						<selected>Skin.HasSetting(MediaBlade_HideMovies)</selected>
-						<enabled>Library.HasContent(Movies)</enabled>
+						<enable>Library.HasContent(Movies)</enable>
 					</control>
 					<control type="radiobutton" id="314">
 						<include>SkinSettingsRadioButtonCommonValues</include>
 						<label>$LOCALIZE[31309]$LOCALIZE[20343]</label>
 						<onclick>Skin.ToggleSetting(MediaBlade_HideTVShows)</onclick>
 						<selected>Skin.HasSetting(MediaBlade_HideTVShows)</selected>
-						<enabled>Library.HasContent(TVShows)</enabled>
+						<enable>Library.HasContent(TVShows)</enable>
 					</control>
 					<control type="radiobutton" id="315">
 						<include>SkinSettingsRadioButtonCommonValues</include>
 						<label>$LOCALIZE[31309]$LOCALIZE[2]</label>
 						<onclick>Skin.ToggleSetting(MediaBlade_HideMusic)</onclick>
 						<selected>Skin.HasSetting(MediaBlade_HideMusic)</selected>
-						<enabled>Library.HasContent(Music)</enabled>
+						<enable>Library.HasContent(Music)</enable>
 					</control>
 					<control type="radiobutton" id="316">
 						<include>SkinSettingsRadioButtonCommonValues</include>
 						<label>$LOCALIZE[31309]$LOCALIZE[19020]</label>
 						<onclick>Skin.ToggleSetting(MediaBlade_HideTV)</onclick>
 						<selected>Skin.HasSetting(MediaBlade_HideTV)</selected>
-						<enabled>System.HasPVRAddon</enabled>
+						<enable>System.HasPVRAddon</enable>
 					</control>
 					<control type="radiobutton" id="317">
 						<include>SkinSettingsRadioButtonCommonValues</include>
 						<label>$LOCALIZE[31309]$LOCALIZE[19021]</label>
 						<onclick>Skin.ToggleSetting(MediaBlade_HideRadio)</onclick>
 						<selected>Skin.HasSetting(MediaBlade_HideRadio)</selected>
-						<enabled>System.HasPVRAddon</enabled>
+						<enable>System.HasPVRAddon</enable>
 					</control>
 					<control type="radiobutton" id="318">
 						<include>SkinSettingsRadioButtonCommonValues</include>
@@ -299,8 +306,8 @@
 					</control>
 					<control type="label" id="331">
 						<description>Heading label</description>
-						<width>790</width>
-						<height>30</height>
+						<width>1185</width>
+						<height>45</height>
 						<align>center</align>
 						<font>font13</font>
 						<label>31005</label>
@@ -361,20 +368,18 @@
 				<control type="grouplist" id="400">
 					<visible>Skin.String(SkinSettings,4)</visible>
 					<description>control area</description>
-					<left>270</left>
-					<top>115</top>
-					<width>790</width>
-					<height>480</height>
-					<itemgap>-2</itemgap>
-					<pagecontrol>90</pagecontrol>
+					<left>405</left>
+					<top>172.5</top>
+					<width>1185</width>
+					<height>720</height>
+					<itemgap>-3</itemgap>
 					<onleft>3</onleft>
-					<onright>90</onright>
 					<onup>300</onup>
 					<ondown>300</ondown>
 					<control type="label" id="401">
 						<description>Heading label</description>
-						<width>790</width>
-						<height>30</height>
+						<width>1185</width>
+						<height>45</height>
 						<align>center</align>
 						<font>font13</font>
 						<label>8</label>
@@ -396,90 +401,85 @@
 						<onclick condition="System.HasAddon(script.image.resource.select) + !System.AddonIsEnabled(script.image.resource.select)">EnableAddon(script.image.resource.select)</onclick>
 					</control>
 				</control>
-
+				
 				<control type="group" id="500">
 					<visible>Skin.String(SkinSettings,5)</visible>
 					<description>control area</description>
-					<left>290</left>
-					<top>75</top>
-					<width>790</width>
-					<height>500</height>
-					<control type="group">
-						<left>0</left>
-						<top>0</top>
-						<control type="image">
-							<width>370</width>
-							<height>280</height>
-							<colordiffuse>BBFFFFFF</colordiffuse>
-							<texture>back-fade.png</texture>
-						</control>
-						<control type="label">
-							<description>number of files/pages in list text label</description>
-							<left>10</left>
-							<top>5</top>
-							<width>350</width>
-							<height>20</height>
-							<font>font12</font>
-							<align>center</align>
-							<aligny>center</aligny>
-							<textcolor>white</textcolor>
-							<label>$LOCALIZE[8]</label>
-						</control>
-						<control type="image">
-							<left>10</left>
-							<top>25</top>
-							<width>350</width>
-							<height>196</height>
-							<aspectratio>keep</aspectratio>
-							<texture background="true" fallback="backgrounds/weather.png">$INFO[Skin.String(Background_Weather)]</texture>
-							<bordertexture border="19,3,19,3">thumb-border.png</bordertexture>
-							<bordersize>18,2,18,2</bordersize>
-							<fadetime>IconCrossfadeTime</fadetime>
-						</control>
-						<control type="button" id="501">
-							<left>10</left>
-							<top>225</top>
-							<width>173</width>
-							<align>center</align>
-							<aligny>center</aligny>
-							<include>DialogButtonCommonValues</include>
-							<label>1024</label>
-							<onclick>Skin.SetImage(Background_Weather)</onclick>
-							<onleft>3</onleft>
-							<onright>502</onright>
-							<onup>521</onup>
-							<ondown>521</ondown>
-						</control>
-						<control type="button" id="502">
-							<left>189</left>
-							<top>225</top>
-							<width>173</width>
-							<align>center</align>
-							<aligny>center</aligny>
-							<include>DialogButtonCommonValues</include>
-							<label>31305</label>
-							<onclick>Skin.Reset(Background_Weather)</onclick>
-							<onleft>501</onleft>
-							<onright>511</onright>
-							<onup>522</onup>
-							<ondown>522</ondown>
-						</control>
+					<left>435</left>
+					<top>112.5</top>
+					<width>1185</width>
+					<height>750</height>
+					<control type="image">
+						<width>555</width>
+						<height>420</height>
+						<colordiffuse>BBFFFFFF</colordiffuse>
+						<texture>back-fade.png</texture>
+					</control>
+					<control type="label">
+						<left>15</left>
+						<top>7.5</top>
+						<width>525</width>
+						<height>30</height>
+						<font>font12</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<label>$LOCALIZE[8]</label>
+					</control>
+					<control type="image">
+						<left>18</left>
+						<top>50</top>
+						<width>520</width>
+						<height>270</height>
+						<aspectratio>keep</aspectratio>
+						<texture background="true">$VAR[Background_Weather]</texture>
+						<bordertexture border="19,3,19,3" infill="false">thumb-border.png</bordertexture>
+						<bordersize>18,2,18,2</bordersize>
+						<fadetime>IconCrossfadeTime</fadetime>
+					</control>
+					<control type="button" id="501">
+						<left>15</left>
+						<top>337.5</top>
+						<width>259.5</width>
+						<align>center</align>
+						<aligny>center</aligny>
+						<include>DialogButtonCommonValues</include>
+						<label>1024</label>
+						<onclick>Skin.SetImage(Background_Weather)</onclick>
+						<onleft>3</onleft>
+						<onright>502</onright>
+						<onup>521</onup>
+						<ondown>521</ondown>
+					</control>
+					<control type="button" id="502">
+						<left>283.5</left>
+						<top>337.5</top>
+						<width>259.5</width>
+						<align>center</align>
+						<aligny>center</aligny>
+						<include>DialogButtonCommonValues</include>
+						<label>31305</label>
+						<onclick>Skin.Reset(Background_Weather)</onclick>
+						<onclick>ActivateWindow(1107)</onclick>
+						<onleft>501</onleft>
+						<onright>511</onright>
+						<onup>522</onup>
+						<ondown>522</ondown>
 					</control>
 					<control type="group">
-						<left>390</left>
+						<left>585</left>
 						<top>0</top>
 						<control type="image">
-							<width>370</width>
-							<height>280</height>
+							<width>555</width>
+							<height>420</height>
 							<colordiffuse>BBFFFFFF</colordiffuse>
 							<texture>back-fade.png</texture>
 						</control>
 						<control type="label">
-							<description>number of files/pages in list text label</description>
-							<left>10</left>
-							<top>5</top>
-							<width>350</width>
-							<height>20</height>
+							<left>15</left>
+							<top>7.5</top>
+							<width>525</width>
+							<height>30</height>
 							<font>font12</font>
 							<align>center</align>
 							<aligny>center</aligny>
@@ -487,20 +487,20 @@
 							<label>$LOCALIZE[31005]</label>
 						</control>
 						<control type="image">
-							<left>10</left>
-							<top>25</top>
-							<width>350</width>
-							<height>196</height>
+							<left>18</left>
+							<top>50</top>
+							<width>520</width>
+							<height>270</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true" fallback="backgrounds/apps.png">$INFO[Skin.String(Background_Apps)]</texture>
-							<bordertexture border="19,3,19,3">thumb-border.png</bordertexture>
+							<texture background="true">$VAR[Background_Apps]</texture>
+							<bordertexture border="19,3,19,3" infill="false">thumb-border.png</bordertexture>
 							<bordersize>18,2,18,2</bordersize>
 							<fadetime>IconCrossfadeTime</fadetime>
 						</control>
 						<control type="button" id="511">
-							<left>10</left>
-							<top>225</top>
-							<width>173</width>
+							<left>15</left>
+							<top>337.5</top>
+							<width>259.5</width>
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>DialogButtonCommonValues</include>
@@ -512,9 +512,9 @@
 							<ondown>531</ondown>
 						</control>
 						<control type="button" id="512">
-							<left>189</left>
-							<top>225</top>
-							<width>173</width>
+							<left>283.5</left>
+							<top>337.5</top>
+							<width>259.5</width>
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>DialogButtonCommonValues</include>
@@ -528,19 +528,18 @@
 					</control>
 					<control type="group">
 						<left>0</left>
-						<top>290</top>
+						<top>435</top>
 						<control type="image">
-							<width>370</width>
-							<height>280</height>
+							<width>555</width>
+							<height>420</height>
 							<colordiffuse>BBFFFFFF</colordiffuse>
 							<texture>back-fade.png</texture>
 						</control>
 						<control type="label">
-							<description>number of files/pages in list text label</description>
-							<left>10</left>
-							<top>5</top>
-							<width>350</width>
-							<height>20</height>
+							<left>15</left>
+							<top>7.5</top>
+							<width>525</width>
+							<height>30</height>
 							<font>font12</font>
 							<align>center</align>
 							<aligny>center</aligny>
@@ -548,20 +547,20 @@
 							<label>$LOCALIZE[14211]</label>
 						</control>
 						<control type="image">
-							<left>10</left>
-							<top>25</top>
-							<width>350</width>
-							<height>196</height>
+							<left>18</left>
+							<top>50</top>
+							<width>520</width>
+							<height>270</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true" fallback="backgrounds/media.png">$INFO[Skin.String(Background_Media)]</texture>
-							<bordertexture border="19,3,19,3">thumb-border.png</bordertexture>
+							<texture background="true">$VAR[Background_Media]</texture>
+							<bordertexture border="19,3,19,3" infill="false">thumb-border.png</bordertexture>
 							<bordersize>18,2,18,2</bordersize>
 							<fadetime>IconCrossfadeTime</fadetime>
 						</control>
 						<control type="button" id="521">
-							<left>10</left>
-							<top>225</top>
-							<width>173</width>
+							<left>15</left>
+							<top>337.5</top>
+							<width>259.5</width>
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>DialogButtonCommonValues</include>
@@ -573,9 +572,9 @@
 							<ondown>501</ondown>
 						</control>
 						<control type="button" id="522">
-							<left>189</left>
-							<top>225</top>
-							<width>173</width>
+							<left>283.5</left>
+							<top>337.5</top>
+							<width>259.5</width>
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>DialogButtonCommonValues</include>
@@ -588,20 +587,19 @@
 						</control>
 					</control>
 					<control type="group">
-						<left>390</left>
-						<top>290</top>
+						<left>585</left>
+						<top>435</top>
 						<control type="image">
-							<width>370</width>
-							<height>280</height>
+							<width>555</width>
+							<height>420</height>
 							<colordiffuse>BBFFFFFF</colordiffuse>
 							<texture>back-fade.png</texture>
 						</control>
 						<control type="label">
-							<description>number of files/pages in list text label</description>
-							<left>10</left>
-							<top>5</top>
-							<width>350</width>
-							<height>20</height>
+							<left>15</left>
+							<top>7.5</top>
+							<width>525</width>
+							<height>30</height>
 							<font>font12</font>
 							<align>center</align>
 							<aligny>center</aligny>
@@ -609,20 +607,20 @@
 							<label>$LOCALIZE[13000]</label>
 						</control>
 						<control type="image">
-							<left>10</left>
-							<top>25</top>
-							<width>350</width>
-							<height>196</height>
+							<left>18</left>
+							<top>50</top>
+							<width>520</width>
+							<height>270</height>
 							<aspectratio>keep</aspectratio>
-							<texture background="true" fallback="backgrounds/system.png">$INFO[Skin.String(Background_System)]</texture>
-							<bordertexture border="19,3,19,3">thumb-border.png</bordertexture>
+							<texture background="true">$VAR[Background_System]</texture>
+							<bordertexture border="19,3,19,3" infill="false">thumb-border.png</bordertexture>
 							<bordersize>18,2,18,2</bordersize>
 							<fadetime>IconCrossfadeTime</fadetime>
 						</control>
 						<control type="button" id="531">
-							<left>10</left>
-							<top>225</top>
-							<width>173</width>
+							<left>15</left>
+							<top>337.5</top>
+							<width>259.5</width>
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>DialogButtonCommonValues</include>
@@ -634,9 +632,9 @@
 							<ondown>511</ondown>
 						</control>
 						<control type="button" id="532">
-							<left>189</left>
-							<top>225</top>
-							<width>173</width>
+							<left>283.5</left>
+							<top>337.5</top>
+							<width>259.5</width>
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>DialogButtonCommonValues</include>
@@ -653,14 +651,12 @@
 				<control type="grouplist" id="600">
 					<visible>Skin.String(SkinSettings,6)</visible>
 					<description>control area</description>
-					<left>270</left>
-					<top>115</top>
-					<width>790</width>
-					<height>500</height>
-					<itemgap>-2</itemgap>
-					<pagecontrol>90</pagecontrol>
+					<left>405</left>
+					<top>172.5</top>
+					<width>1185</width>
+					<height>750</height>
+					<itemgap>-3</itemgap>
 					<onleft>3</onleft>
-					<onright>90</onright>
 					<control type="button" id="601">
 						<include>SkinSettingsButtonCommonValues</include>
 						<label>Embuary Helper</label>
@@ -717,25 +713,33 @@
 						<onclick condition="!System.HasAddon(plugin.video.youtube)">InstallAddon(plugin.video.youtube)</onclick>
 						<onclick condition="System.HasAddon(plugin.video.youtube) + !System.AddonIsEnabled(plugin.video.youtube)">EnableAddon(plugin.video.youtube)</onclick>
 					</control>
+					<control type="button" id="608">
+						<include>SkinSettingsButtonCommonValues</include>
+						<label>litebox Script</label>
+						<label2>$VAR[StatusLiteboxVar]</label2>
+						<onclick condition="System.AddonIsEnabled(script.litebox)">Addon.OpenSettings(script.litebox)</onclick>
+						<onclick condition="!System.HasAddon(script.litebox)">InstallAddon(script.litebox)</onclick>
+						<onclick condition="System.HasAddon(script.litebox) + !System.AddonIsEnabled(script.litebox)">EnableAddon(script.litebox)</onclick>
+					</control>
 				</control>
 				
 				<control type="grouplist" id="700">
 					<visible>Skin.String(SkinSettings,7)</visible>
 					<description>control area</description>
-					<left>270</left>
-					<top>115</top>
-					<width>790</width>
-					<height>500</height>
-					<itemgap>-2</itemgap>
+					<left>405</left>
+					<top>162.5</top>
+					<width>1185</width>
+					<height>750</height>
+					<itemgap>-3</itemgap>
 					<control type="image">
-						<height>80</height>
-						<width>790</width>
+						<height>130</height>
+						<width>1185</width>
 						<aspectratio align="center">keep</aspectratio>
 						<texture>tetradui_logo.png</texture>
 					</control>
 					<control type="label">
-						<width>790</width>
-						<height>30</height>
+						<width>1185</width>
+						<height>45</height>
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font10</font>
@@ -743,19 +747,19 @@
 						<label>$INFO[System.AddonVersion(skin.tetradui)]</label>
 					</control>
 					<control type="image">
-						<height>20</height>
+						<height>30</height>
 						<texture />
 					</control>
 					<control type="label">
-						<width>790</width>
-						<height>130</height>
+						<width>1185</width>
+						<height>195</height>
 						<align>center</align>
 						<font>font10</font>
 						<label>$LOCALIZE[31010]</label>
 					</control>
 					<control type="image">
-						<height>200</height>
-						<width>790</width>
+						<height>300</height>
+						<width>1185</width>
 						<aspectratio align="center">keep</aspectratio>
 						<texture>qr.png</texture>
 					</control>
@@ -763,19 +767,19 @@
 			</control>
 			<control type="spincontrol" id="90">
 				<description>Next page button</description>
-				<left>1000</left>
-				<top>120r</top>
+				<left>1500</left>
+				<top>180r</top>
 				<subtype>page</subtype>
-				<font>font13</font>
+				<font>font12</font>
 				<onleft>5</onleft>
-				<onright>3</onright>
-				<ondown>90</ondown>
-				<onup>90</onup>
-				<textcolor>white2</textcolor>
+				<onright>5</onright>
+				<onup>5</onup>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>orange</focusedcolor>
 				<showonepage>false</showonepage>
-				<animation effect="slide" start="0,0" end="-100,0" time="200" condition="Player.HasAudio">Conditional</animation>
-				<animation effect="slide" start="0,0" end="-100,0" time="200" condition="Player.HasVideo + VideoPlayer.Content(Movies)">Conditional</animation>
-				<animation effect="slide" start="0,0" end="-160,0" time="200" condition="Player.HasVideo + !VideoPlayer.Content(Movies)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-150,0" time="200" condition="Player.HasAudio | [Player.HasVideo + VideoPlayer.Content(Movies)]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-240,0" time="200" condition="Player.HasVideo + !VideoPlayer.Content(Movies)">Conditional</animation>
+				<visible>Control.IsVisible(300)</visible>
 			</control>
 		</control>
 		<control type="group">

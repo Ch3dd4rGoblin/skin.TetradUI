@@ -6,7 +6,7 @@
 	<controls>
 		<include>CommonMediaBackgrounds</include>
 		<control type="group">
-			<left>130</left>
+			<left>195</left>
 			<animation effect="fade" delay="500" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
 			<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 			<control type="label">
@@ -16,7 +16,7 @@
 			</control>
 			<control type="group">
 				<left>0</left>
-				<top>110</top>
+				<top>165</top>
 				<include>ListViewCommons</include> <!-- View ID 50 -->
 				<include>ThumbnailView</include> <!-- View ID 52 -->
 			</control>
@@ -26,8 +26,8 @@
 			<include>Container9000BladesRunner</include>
 			<control type="grouplist" id="610">
 				<include content="Container9000Header">
-					<param name="left" value="100" />
-					<param name="top" value="100" />
+					<param name="left" value="150" />
+					<param name="top" value="150" />
 				</include>
 				<control type="button" id="2">
 					<description>View As button</description>
@@ -35,33 +35,33 @@
 				</control>
 				<control type="radiobutton" id="20">
 					<description>Shuffle button</description>
-					<left>2</left>
+					<left>3</left>
 					<include>ButtonCommonValues</include>
 					<label>191</label>
 				</control>
 				<control type="button" id="26">
 					<description>Repeat button</description>
-					<left>5</left>
+					<left>7.5</left>
 					<label />
 					<include>ButtonCommonValues</include>
 				</control>
 				<control type="button" id="21">
 					<description>Save</description>
-					<left>7</left>
+					<left>10.5</left>
 					<include>ButtonCommonValues</include>
 					<label>190</label>
 				</control>
 				<control type="button" id="22">
 					<description>Clear button</description>
-					<left>9</left>
+					<left>13.5</left>
 					<label>192</label>
 					<onclick>ReplaceWindow(Video)</onclick>
 					<include>ButtonCommonValues</include>
 				</control>
 			</control>
 			<include content="CommonPlayerControls">
-				<param name="left" value="100" />
-				<param name="top" value="140" />
+				<param name="left" value="150" />
+				<param name="top" value="210" />
 			</include>
 		</control>
 		<include>AllViewCommonPageControls</include>

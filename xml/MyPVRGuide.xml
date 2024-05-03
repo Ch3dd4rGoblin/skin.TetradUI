@@ -9,7 +9,7 @@
 			<visible>false</visible>
 		</control>
 		<control type="group">
-			<left>130</left>
+			<left>195</left>
 			<animation effect="fade" delay="500" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
 			<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 			<control type="label">
@@ -18,47 +18,47 @@
 				<include>HeaderTextCommons</include>
 			</control>
 			<control type="group">
-				<top>100</top>
-				<left>-2</left>
+				<top>150</top>
+				<left>-3</left>
 				<control type="epggrid" id="50">
 					<description>EPG Grid</description>
-					<width>1120</width>
-					<height>505</height>
+					<width>1680</width>
+					<height>757.5</height>
 					<pagecontrol>50</pagecontrol>
 					<scrolltime>350</scrolltime>
 					<timeblocks>30</timeblocks>
 					<rulerunit>6</rulerunit>
 					<onup>9000</onup>
 					<ondown>9000</ondown>
-					<progresstexture border="0,45,20,3">pvr/EpgProgressIndicator.png</progresstexture>
-					<rulerlayout height="37" width="40">
+					<progresstexture border="0,67.5,30,4.5">pvr/EpgProgressIndicator.png</progresstexture>
+					<rulerlayout height="56" width="60">
 						<control type="image" id="1">
-							<width>40</width>
-							<height>37</height>
-							<texture border="5">buttons/button-nofocus.png</texture>
+							<width>60</width>
+							<height>55.5</height>
+							<texture border="7.5">buttons/button-nofocus.png</texture>
 						</control>
 						<control type="label" id="2">
-							<left>10</left>
-							<width>34</width>
-							<height>37</height>
+							<left>15</left>
+							<width>51</width>
+							<height>55.5</height>
 							<font>font12</font>
 							<aligny>center</aligny>
 							<selectedcolor>orange</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</rulerlayout>
-					<channellayout height="52" width="280">
+					<channellayout height="78" width="420">
 						<animation effect="fade" start="110" time="200">UnFocus</animation>
 						<control type="image" id="1">
-							<top>-3</top>
-							<width>279</width>
-							<height>58</height>
-							<texture border="5">buttons/button-nofocus.png</texture>
+							<top>-4.5</top>
+							<width>418.5</width>
+							<height>87</height>
+							<texture border="7.5">buttons/button-nofocus.png</texture>
 						</control>
 						<control type="label">
-							<left>7</left>
-							<width>40</width>
-							<height>50</height>
+							<left>10.5</left>
+							<width>60</width>
+							<height>75</height>
 							<font>font12</font>
 							<aligny>center</aligny>
 							<textcolor>grey</textcolor>
@@ -66,79 +66,79 @@
 							<info>ListItem.ChannelNumberLabel</info>
 						</control>
 						<control type="image">
-							<left>45</left>
-							<top>5</top>
-							<width>42</width>
-							<height>42</height>
+							<left>67.5</left>
+							<top>7.5</top>
+							<width>63</width>
+							<height>63</height>
 							<aspectratio>keep</aspectratio>
 							<texture>$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label" id="1">
-							<left>94</left>
-							<width>178</width>
-							<height>50</height>
-							<font>special12</font>
+							<left>141</left>
+							<width>267</width>
+							<height>75</height>
+							<font>font12</font>
 							<aligny>center</aligny>
 							<selectedcolor>orange</selectedcolor>
 							<label>$INFO[ListItem.ChannelName]</label>
 						</control>
 					</channellayout>
-					<focusedchannellayout height="52" width="280">
+					<focusedchannellayout height="78" width="420">
 						<animation effect="fade" start="110" time="200">Focus</animation>
 						<control type="image" id="1">
-							<top>-3</top>
-							<width>279</width>
-							<height>58</height>
-							<texture border="5">buttons/button-focus.png</texture>
+							<top>-4.5</top>
+							<width>418.5</width>
+							<height>87</height>
+							<texture border="7.5">buttons/button-focus.png</texture>
 						</control>
 						<control type="label">
-							<left>7</left>
-							<width>40</width>
-							<height>50</height>
+							<left>10.5</left>
+							<width>60</width>
+							<height>75</height>
 							<font>font12</font>
 							<aligny>center</aligny>
 							<selectedcolor>grey</selectedcolor>
 							<info>ListItem.ChannelNumberLabel</info>
 						</control>
 						<control type="image">
-							<left>45</left>
-							<top>5</top>
-							<width>42</width>
-							<height>42</height>
+							<left>67.5</left>
+							<top>7.5</top>
+							<width>63</width>
+							<height>63</height>
 							<texture>$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label" id="1">
-							<left>94</left>
-							<width>178</width>
-							<height>50</height>
-							<font>special12</font>
+							<left>141</left>
+							<width>267</width>
+							<height>75</height>
+							<font>font12</font>
 							<aligny>center</aligny>
 							<selectedcolor>orange</selectedcolor>
 							<label>$INFO[ListItem.ChannelName]</label>
 						</control>
 					</focusedchannellayout>
-					<itemlayout height="52" width="40">
+					<itemlayout height="78" width="60">
 						<control type="image" id="2">
-							<width>40</width>
-							<height>52</height>
+							<width>60</width>
+							<height>78</height>
 							<aspectratio>stretch</aspectratio>
-							<texture border="3">pvr/epg-genres/$INFO[ListItem.Property(GenreType)].png</texture>
+							<texture border="4">pvr/epg-genres/$INFO[ListItem.Property(GenreType)].png</texture>
 						</control>
 						<control type="label" id="1">
-							<left>6</left>
-							<top>2</top>
-							<width>30</width>
-							<height>25</height>
+							<left>9</left>
+							<top>3</top>
+							<width>45</width>
+							<height>37.5</height>
 							<font>font12</font>
 							<aligny>center</aligny>
 							<selectedcolor>orange</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
 						<control type="label" id="1">
-							<left>6</left>
-							<top>25</top>
-							<width>30</width>
-							<height>25</height>
+							<left>9</left>
+							<top>37.5</top>
+							<width>45</width>
+							<height>37.5</height>
 							<font>font10</font>
 							<textcolor>grey2</textcolor>
 							<aligny>center</aligny>
@@ -146,73 +146,73 @@
 							<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,]</label>
 						</control>
 						<control type="image" id="1">
-							<left>6</left>
-							<top>28</top>
-							<width>20</width>
-							<height>20</height>
+							<left>9</left>
+							<top>42</top>
+							<width>30</width>
+							<height>30</height>
 							<aspectratio align="right">keep</aspectratio>
 							<texture colordiffuse="FF12A0C7">pvr/premiere.png</texture>
 							<visible>ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive</visible>
 						</control>
 						<control type="image" id="1">
-							<left>6</left>
-							<top>28</top>
-							<width>28</width>
-							<height>20</height>
+							<left>9</left>
+							<top>42</top>
+							<width>42</width>
+							<height>30</height>
 							<aspectratio align="right">keep</aspectratio>
 							<texture>$VAR[PVRTimerIcon]</texture>
-							<animation effect="slide" end="-53,0" condition="ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive">Conditional</animation>
+							<animation effect="slide" end="-80,0" condition="ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive">Conditional</animation>
 						</control>
 					</itemlayout>
-					<focusedlayout height="52" width="40">
+					<focusedlayout height="78" width="60">
 						<control type="image" id="2">
-							<top>-3</top>
-							<width>40</width>
-							<height>58</height>
-							<texture border="5">buttons/button-focus.png</texture>
+							<top>-4.5</top>
+							<width>60</width>
+							<height>87</height>
+							<texture border="7.5">buttons/button-focus.png</texture>
 						</control>
 						<control type="image" id="2">
-							<width>40</width>
-							<height>52</height>
-							<texture border="3">pvr/epg-genres/$INFO[ListItem.Property(GenreType)].png</texture>
+							<width>60</width>
+							<height>78</height>
+							<texture border="4">pvr/epg-genres/$INFO[ListItem.Property(GenreType)].png</texture>
 						</control>
 						<control type="label" id="1">
-							<left>6</left>
-							<top>2</top>
-							<width>30</width>
-							<height>25</height>
+							<left>9</left>
+							<top>3</top>
+							<width>45</width>
+							<height>37.5</height>
 							<font>font12</font>
 							<aligny>center</aligny>
 							<selectedcolor>orange</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
 						<control type="label" id="1">
-							<left>6</left>
-							<top>25</top>
-							<width>30</width>
-							<height>25</height>
+							<left>9</left>
+							<top>37.5</top>
+							<width>45</width>
+							<height>37.5</height>
 							<font>font10</font>
 							<aligny>center</aligny>
 							<selectedcolor>white</selectedcolor>
 							<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,]</label>
 						</control>
 						<control type="image" id="1">
-							<left>6</left>
-							<top>28</top>
-							<width>20</width>
-							<height>20</height>
+							<left>9</left>
+							<top>42</top>
+							<width>30</width>
+							<height>30</height>
 							<aspectratio align="right">keep</aspectratio>
 							<texture colordiffuse="FF12A0C7">pvr/premiere.png</texture>
 							<visible>ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive</visible>
 						</control>
 						<control type="image" id="1">
-							<left>6</left>
-							<top>28</top>
-							<width>28</width>
-							<height>20</height>
+							<left>9</left>
+							<top>42</top>
+							<width>42</width>
+							<height>30</height>
 							<aspectratio align="right">keep</aspectratio>
 							<texture>$VAR[PVRTimerIcon]</texture>
-							<animation effect="slide" end="-53,0" condition="ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive">Conditional</animation>
+							<animation effect="slide" end="-80,0" condition="ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive">Conditional</animation>
 						</control>
 					</focusedlayout>
 				</control>
@@ -222,43 +222,43 @@
 		<control type="group" id="9000">
 			<include>Container9000BladesRunner</include>
 			<control type="grouplist" id="610">
-				<itemgap>-8</itemgap>
+				<itemgap>-12</itemgap>
 				<include content="Container9000Header">
-					<param name="left" value="95" />
-					<param name="top" value="60" />
+					<param name="left" value="142.5" />
+					<param name="top" value="90" />
 				</include>
 				<control type="button" id="3">
 					<description>Sort by button</description>
-					<left>-1</left>
+					<left>-1.5</left>
 					<label>103</label>
 					<include>ButtonCommonValues</include>
 				</control>
 				<control type="togglebutton" id="4">
 					<description>Sort asc</description>
-					<left>3</left>
+					<left>4.5</left>
 					<include>SortAscendingButton</include>
 				</control>
 				<control type="button" id="28">
 					<description>Channel groups button</description>
-					<left>6</left>
+					<left>9</left>
 					<label />
 					<include>ButtonCommonValues</include>
 				</control>
 				<control type="button" id="9002">
 					<description>Settings button</description>
-					<left>8</left>
+					<left>12</left>
 					<include>ButtonCommonValues</include>
 					<onclick>ActivateWindow(PVRSettings,epg)</onclick>
 					<label>10004</label>
 				</control>
 			</control>
 			<include content="NavigationGrouplist">
-				<param name="left" value="94" />
-				<param name="top" value="295" />
+				<param name="left" value="141" />
+				<param name="top" value="442.5" />
 			</include>
 			<include content="CommonPlayerControls">
-				<param name="left" value="96" />
-				<param name="top" value="200" />
+				<param name="left" value="144" />
+				<param name="top" value="300" />
 			</include>
 		</control>
 		<control type="group">
